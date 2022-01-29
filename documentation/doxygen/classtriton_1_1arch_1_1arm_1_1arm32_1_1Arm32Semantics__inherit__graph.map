@@ -1,0 +1,4 @@
+<map id="triton::arch::arm::arm32::Arm32Semantics" name="triton::arch::arm::arm32::Arm32Semantics">
+<area shape="rect" id="node1" title="The Arm32 ISA semantics." alt="" coords="27,80,210,121"/>
+<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1SemanticsInterface.html" title="This interface is used as abstract semantics interface. All ISA semantics must use this interface." alt="" coords="5,5,232,32"/>
+</map>

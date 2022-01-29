@@ -1,0 +1,9 @@
+@inproceedings{SSTIC2017-Salwan-Bardin-Potet,
+  author    = {Jonathan Salwan and S{\'{e}}bastien Bardin and Marie-Laure Potet},
+  title     = {Deobfuscation of VM based software protection},
+  booktitle = {Symposium sur la s{\'{e}}curit{\'{e}} des technologies de l'information
+               et des communications, SSTIC, France, Rennes, June 7-9 2017},
+  publisher = {SSTIC},
+  pages     = {119--142},
+  year      = {2017},
+}

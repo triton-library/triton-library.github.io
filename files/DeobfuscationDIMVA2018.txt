@@ -1,0 +1,8 @@
+@inproceedings{salwan2018symbolic,
+  title={Symbolic Deobfuscation: From Virtualized Code Back to the Original},
+  author={Jonathan Salwan and S{\'{e}}bastien Bardin and Marie-Laure Potet},
+  booktitle={International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment},
+  pages={372--392},
+  year={2018},
+  organization={Springer}
+}
