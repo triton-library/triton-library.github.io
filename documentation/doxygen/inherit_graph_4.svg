@@ -114,9 +114,9 @@
 <path fill="none" stroke="midnightblue" d="M133.51,-54.4C145.45,-51.26 158.21,-47.83 170,-44.5 185.34,-40.16 201.99,-35.2 217.02,-30.62"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="132.51,-51.04 123.72,-56.95 134.28,-57.82 132.51,-51.04"/>
 </g>
-<!-- Node154 -->
+<!-- Node160 -->
 <g id="node8" class="node">
-<title>Node154</title>
+<title>Node160</title>
 <g id="a_node8"><a xlink:href="classtriton_1_1arch_1_1x86_1_1x86Specifications.html" target="_top" xlink:title="The x86Specifications class defines specifications about the x86 and x86_64 CPU.">
 <polygon fill="white" stroke="black" points="34,-5.5 34,-35.5 136,-35.5 136,-5.5 34,-5.5"/>
 <text text-anchor="start" x="42" y="-23.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::arch::x86::</text>
@@ -124,15 +124,15 @@
 </a>
 </g>
 </g>
-<!-- Node154&#45;&gt;Node24 -->
+<!-- Node160&#45;&gt;Node24 -->
 <g id="edge7" class="edge">
-<title>Node154&#45;&gt;Node24</title>
+<title>Node160&#45;&gt;Node24</title>
 <path fill="none" stroke="midnightblue" d="M145.95,-35.19C168.83,-40.8 194.63,-47.13 216.39,-52.46"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="146.55,-31.74 136,-32.76 144.88,-38.54 146.55,-31.74"/>
 </g>
-<!-- Node154&#45;&gt;Node25 -->
+<!-- Node160&#45;&gt;Node25 -->
 <g id="edge8" class="edge">
-<title>Node154&#45;&gt;Node25</title>
+<title>Node160&#45;&gt;Node25</title>
 <path fill="none" stroke="midnightblue" d="M146.25,-18.82C169.06,-18.19 194.73,-17.47 216.39,-16.87"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="145.9,-15.33 136,-19.11 146.09,-22.33 145.9,-15.33"/>
 </g>

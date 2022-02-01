@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 0.9 build 1513</span>
+   &#160;<span id="projectnumber">version 0.9 build 1515</span>
    </div>
   </td>
  </tr>
@@ -130,7 +130,7 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">const</span> BitwuzlaTerm* TritonToBitwuzlaAst::translate(<span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">SharedAbstractNode</a>&amp; node, Bitwuzla* bzla) {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">if</span> (node == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1AstTranslations.html">triton::exceptions::AstTranslations</a>(<span class="stringliteral">&quot;TritonToBitwuzlaAst::translate(): node cannot be null.&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1AstLifting.html">triton::exceptions::AstLifting</a>(<span class="stringliteral">&quot;TritonToBitwuzlaAst::translate(): node cannot be null.&quot;</span>);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      std::vector&lt;const BitwuzlaTerm*&gt; children;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp;&amp; n : node-&gt;getChildren()) {</div>
@@ -265,7 +265,7 @@ $(function() {
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        }</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa732fb63ac41d0be9f0af81f223994800">FORALL_NODE</a>:</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;          <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1AstTranslations.html">triton::exceptions::AstTranslations</a>(<span class="stringliteral">&quot;TritonToBitwuzlaAst::translate(): FORALL node can&#39;t be converted due to a Bitwuzla issue (see #1062).&quot;</span>);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;          <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1AstLifting.html">triton::exceptions::AstLifting</a>(<span class="stringliteral">&quot;TritonToBitwuzlaAst::translate(): FORALL node can&#39;t be converted due to a Bitwuzla issue (see #1062).&quot;</span>);</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa37a9d156c161a9b914426d92d8c3c3e4">IFF_NODE</a>:</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;          <span class="keywordflow">return</span> bitwuzla_mk_term2(bzla, BITWUZLA_KIND_IFF, children[0], children[1]);</div>
@@ -304,7 +304,7 @@ $(function() {
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;          <span class="keyword">auto</span> it = symbols.find(value);</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;          <span class="keywordflow">if</span> (it == symbols.end())</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1AstTranslations.html">triton::exceptions::AstTranslations</a>(<span class="stringliteral">&quot;TritonToBitwuzlaAst::translate(): [STRING_NODE] Symbols not found.&quot;</span>);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1AstLifting.html">triton::exceptions::AstLifting</a>(<span class="stringliteral">&quot;TritonToBitwuzlaAst::translate(): [STRING_NODE] Symbols not found.&quot;</span>);</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;          <span class="keywordflow">return</span> translatedNodes.at(it-&gt;second);</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
@@ -344,7 +344,7 @@ $(function() {
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        }</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;          <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1AstTranslations.html">triton::exceptions::AstTranslations</a>(<span class="stringliteral">&quot;TritonToBitwuzlaAst::translate(): Invalid kind of node.&quot;</span>);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;          <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1AstLifting.html">triton::exceptions::AstLifting</a>(<span class="stringliteral">&quot;TritonToBitwuzlaAst::translate(): Invalid kind of node.&quot;</span>);</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      }</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
@@ -357,7 +357,7 @@ $(function() {
 <div class="ttc" id="aclasstriton_1_1ast_1_1TritonToBitwuzlaAst_html_a9438f7e2229cafb189b96efd008f8440"><div class="ttname"><a href="classtriton_1_1ast_1_1TritonToBitwuzlaAst.html#a9438f7e2229cafb189b96efd008f8440">triton::ast::TritonToBitwuzlaAst::~TritonToBitwuzlaAst</a></div><div class="ttdeci">TRITON_EXPORT ~TritonToBitwuzlaAst()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="tritonToBitwuzlaAst_8cpp_source.html#l00026">tritonToBitwuzlaAst.cpp:26</a></div></div>
 <div class="ttc" id="aclasstriton_1_1ast_1_1TritonToBitwuzlaAst_html_aabd3530c391df45d602f1cb1ecc01d81"><div class="ttname"><a href="classtriton_1_1ast_1_1TritonToBitwuzlaAst.html#aabd3530c391df45d602f1cb1ecc01d81">triton::ast::TritonToBitwuzlaAst::TritonToBitwuzlaAst</a></div><div class="ttdeci">TRITON_EXPORT TritonToBitwuzlaAst(bool eval=false)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="tritonToBitwuzlaAst_8cpp_source.html#l00021">tritonToBitwuzlaAst.cpp:21</a></div></div>
 <div class="ttc" id="aclasstriton_1_1ast_1_1VariableNode_html"><div class="ttname"><a href="classtriton_1_1ast_1_1VariableNode.html">triton::ast::VariableNode</a></div><div class="ttdoc">Variable node.</div><div class="ttdef"><b>Definition:</b> <a href="ast_8hpp_source.html#l00773">ast.hpp:773</a></div></div>
-<div class="ttc" id="aclasstriton_1_1exceptions_1_1AstTranslations_html"><div class="ttname"><a href="classtriton_1_1exceptions_1_1AstTranslations.html">triton::exceptions::AstTranslations</a></div><div class="ttdoc">The exception class used by all AST translations (z3 &lt;-&gt; triton).</div><div class="ttdef"><b>Definition:</b> <a href="exceptions_8hpp_source.html#l00389">exceptions.hpp:389</a></div></div>
+<div class="ttc" id="aclasstriton_1_1exceptions_1_1AstLifting_html"><div class="ttname"><a href="classtriton_1_1exceptions_1_1AstLifting.html">triton::exceptions::AstLifting</a></div><div class="ttdoc">The exception class used by all AST lifting (e.g z3 &lt;-&gt; triton).</div><div class="ttdef"><b>Definition:</b> <a href="exceptions_8hpp_source.html#l00401">exceptions.hpp:401</a></div></div>
 <div class="ttc" id="acpuSize_8hpp_html"><div class="ttname"><a href="cpuSize_8hpp.html">cpuSize.hpp</a></div></div>
 <div class="ttc" id="aexceptions_8hpp_html"><div class="ttname"><a href="exceptions_8hpp.html">exceptions.hpp</a></div></div>
 <div class="ttc" id="agroup__ast_html_ga2d86ebcc0438b7c3b0e5388efa617a89"><div class="ttname"><a href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a></div><div class="ttdeci">std::shared_ptr&lt; triton::ast::AbstractNode &gt; SharedAbstractNode</div><div class="ttdoc">Shared Abstract Node.</div><div class="ttdef"><b>Definition:</b> <a href="ast_8hpp_source.html#l00057">ast.hpp:57</a></div></div>

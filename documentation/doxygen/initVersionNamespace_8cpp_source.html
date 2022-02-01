@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 0.9 build 1513</span>
+   &#160;<span id="projectnumber">version 0.9 build 1515</span>
    </div>
   </td>
  </tr>
@@ -84,28 +84,47 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">**  This program is under the terms of the Apache License 2.0.</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="pythonBindings_8hpp.html">triton/pythonBindings.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="pythonUtils_8hpp.html">triton/pythonUtils.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="pythonXFunctions_8hpp.html">triton/pythonXFunctions.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;triton/version.hpp&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;triton/config.hpp&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="pythonBindings_8hpp.html">triton/pythonBindings.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="pythonUtils_8hpp.html">triton/pythonUtils.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="pythonXFunctions_8hpp.html">triton/pythonXFunctions.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;triton/version.hpp&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetriton.html">triton</a> {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">namespace </span>bindings {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">namespace </span>python {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="group__python.html#gaf3fefb680cf668fb8fc47dd2dcc58b77">   40</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="group__python.html#gaf3fefb680cf668fb8fc47dd2dcc58b77">initVersionNamespace</a>(PyObject* versionDict) {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">xPyDict_SetItemString</a>(versionDict, <span class="stringliteral">&quot;MAJOR&quot;</span>, <a class="code" href="group__python.html#gae982e58838ff32ee450beb716bdb562a">PyLong_FromUint32</a>(triton::MAJOR));</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">xPyDict_SetItemString</a>(versionDict, <span class="stringliteral">&quot;MINOR&quot;</span>, <a class="code" href="group__python.html#gae982e58838ff32ee450beb716bdb562a">PyLong_FromUint32</a>(triton::MINOR));</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">xPyDict_SetItemString</a>(versionDict, <span class="stringliteral">&quot;BUILD&quot;</span>, <a class="code" href="group__python.html#gae982e58838ff32ee450beb716bdb562a">PyLong_FromUint32</a>(triton::BUILD));</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }; <span class="comment">/* python namespace */</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }; <span class="comment">/* bindings namespace */</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetriton.html">triton</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">namespace </span>bindings {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">namespace </span>python {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="group__python.html#gaf3fefb680cf668fb8fc47dd2dcc58b77">   44</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="group__python.html#gaf3fefb680cf668fb8fc47dd2dcc58b77">initVersionNamespace</a>(PyObject* versionDict) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">xPyDict_SetItemString</a>(versionDict, <span class="stringliteral">&quot;MAJOR&quot;</span>, <a class="code" href="group__python.html#gae982e58838ff32ee450beb716bdb562a">PyLong_FromUint32</a>(triton::MAJOR));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">xPyDict_SetItemString</a>(versionDict, <span class="stringliteral">&quot;MINOR&quot;</span>, <a class="code" href="group__python.html#gae982e58838ff32ee450beb716bdb562a">PyLong_FromUint32</a>(triton::MINOR));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">xPyDict_SetItemString</a>(versionDict, <span class="stringliteral">&quot;BUILD&quot;</span>, <a class="code" href="group__python.html#gae982e58838ff32ee450beb716bdb562a">PyLong_FromUint32</a>(triton::BUILD));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">        #ifdef TRITON_Z3_INTERFACE</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          <a class="code" href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">xPyDict_SetItemString</a>(versionDict, <span class="stringliteral">&quot;Z3_INTERFACE&quot;</span>, Py_True);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">        #else</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;          <a class="code" href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">xPyDict_SetItemString</a>(versionDict, <span class="stringliteral">&quot;Z3_INTERFACE&quot;</span>, Py_False);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">        #ifdef TRITON_BITWUZLA_INTERFACE</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          <a class="code" href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">xPyDict_SetItemString</a>(versionDict, <span class="stringliteral">&quot;BITWUZLA_INTERFACE&quot;</span>, Py_True);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">        #else</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;          <a class="code" href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">xPyDict_SetItemString</a>(versionDict, <span class="stringliteral">&quot;BITWUZLA_INTERFACE&quot;</span>, Py_False);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">        #ifdef TRITON_LLVM_INTERFACE</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;          <a class="code" href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">xPyDict_SetItemString</a>(versionDict, <span class="stringliteral">&quot;LLVM_INTERFACE&quot;</span>, Py_True);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">        #else</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          <a class="code" href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">xPyDict_SetItemString</a>(versionDict, <span class="stringliteral">&quot;LLVM_INTERFACE&quot;</span>, Py_False);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }; <span class="comment">/* python namespace */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }; <span class="comment">/* bindings namespace */</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
 <div class="ttc" id="agroup__python_html_gae982e58838ff32ee450beb716bdb562a"><div class="ttname"><a href="group__python.html#gae982e58838ff32ee450beb716bdb562a">triton::bindings::python::PyLong_FromUint32</a></div><div class="ttdeci">PyObject * PyLong_FromUint32(triton::uint32 value)</div><div class="ttdoc">Returns a pyObject from a triton::uint32.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8cpp_source.html#l00297">utils.cpp:297</a></div></div>
-<div class="ttc" id="agroup__python_html_gaf3fefb680cf668fb8fc47dd2dcc58b77"><div class="ttname"><a href="group__python.html#gaf3fefb680cf668fb8fc47dd2dcc58b77">triton::bindings::python::initVersionNamespace</a></div><div class="ttdeci">void initVersionNamespace(PyObject *versionDict)</div><div class="ttdoc">Initializes the VERSION python namespace.</div><div class="ttdef"><b>Definition:</b> <a href="initVersionNamespace_8cpp_source.html#l00040">initVersionNamespace.cpp:40</a></div></div>
+<div class="ttc" id="agroup__python_html_gaf3fefb680cf668fb8fc47dd2dcc58b77"><div class="ttname"><a href="group__python.html#gaf3fefb680cf668fb8fc47dd2dcc58b77">triton::bindings::python::initVersionNamespace</a></div><div class="ttdeci">void initVersionNamespace(PyObject *versionDict)</div><div class="ttdoc">Initializes the VERSION python namespace.</div><div class="ttdef"><b>Definition:</b> <a href="initVersionNamespace_8cpp_source.html#l00044">initVersionNamespace.cpp:44</a></div></div>
 <div class="ttc" id="agroup__python_html_gaf7c85bc14007355379862c4366c03f4d"><div class="ttname"><a href="group__python.html#gaf7c85bc14007355379862c4366c03f4d">triton::bindings::python::xPyDict_SetItemString</a></div><div class="ttdeci">int xPyDict_SetItemString(PyObject *p, const char *key, PyObject *val)</div><div class="ttdoc">Same as PyDict_SetItemString but decrements reference on object.</div><div class="ttdef"><b>Definition:</b> <a href="pyXFunctions_8cpp_source.html#l00072">pyXFunctions.cpp:72</a></div></div>
 <div class="ttc" id="anamespacetriton_html"><div class="ttname"><a href="namespacetriton.html">triton</a></div><div class="ttdoc">The Triton namespace.</div><div class="ttdef"><b>Definition:</b> <a href="api_8cpp_source.html#l00236">api.cpp:236</a></div></div>
 <div class="ttc" id="apythonBindings_8hpp_html"><div class="ttname"><a href="pythonBindings_8hpp.html">pythonBindings.hpp</a></div></div>

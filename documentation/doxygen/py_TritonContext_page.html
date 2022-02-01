@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 0.9 build 1513</span>
+   &#160;<span id="projectnumber">version 0.9 build 1515</span>
    </div>
   </td>
  </tr>
@@ -253,14 +253,20 @@ Methods</h2>
  Returns true if the taint engine is enabled.</li>
 <li><b>bool isThumb(void)</b><br  />
  Returns true if execution mode is Thumb (only valid for ARM32).</li>
+<li><b>string liftToLLVM(<a class="el" href="py_AstNode_page.html">AstNode</a> node)</b><br  />
+ Lifts an AST node and all its references to LLVM IR.</li>
+<li><b>string liftToLLVM(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr)</b><br  />
+ Lifts a symbolic expression and all its references to LLVM IR.</li>
+<li><b>string liftToPython(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr)</b><br  />
+ Lifts a symbolic expression and all its references to Python format.</li>
+<li><b>string liftToSMT(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr, bool assert_=False)</b><br  />
+ Lifts a symbolic expression and all its references to SMT format. If <code>assert_</code> is true, then (assert &lt;expr&gt;).</li>
 <li><b><a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> newSymbolicExpression(<a class="el" href="py_AstNode_page.html">AstNode</a> node, string comment)</b><br  />
  Returns a new symbolic expression. Note that if there are simplification passes recorded, simplifications will be applied.</li>
 <li><b><a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> newSymbolicVariable(integer varSize, string alias)</b><br  />
  Returns a new symbolic variable.</li>
 <li><b>void popPathConstraint(void)</b><br  />
  Pops the last constraints added to the path predicate.</li>
-<li><b>void printSlicedExpressions(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr, bool assert_=False)</b><br  />
- Prints symbolic expression with used references and symbolic variables in AST representation mode. If <code>assert_</code> is true, then (assert &lt;expr&gt;).</li>
 <li><b>bool processing(<a class="el" href="py_Instruction_page.html">Instruction</a> inst)</b><br  />
  Processes an instruction and updates engines according to the instruction semantics. Returns true if the instruction is supported. You must define an architecture before.</li>
 <li><b>void pushPathConstraint(<a class="el" href="py_AstNode_page.html">AstNode</a> node)</b><br  />
@@ -272,7 +278,7 @@ Methods</h2>
 <li><b>void setArchitecture(<a class="el" href="py_ARCH_page.html">ARCH</a> arch)</b><br  />
  Initializes an architecture. This function must be called before any call to the rest of the API.</li>
 <li><b>void setAstRepresentationMode(<a class="el" href="py_AST_REPRESENTATION_page.html">AST_REPRESENTATION</a> mode)</b><br  />
- Sets the AST representation mode.</li>
+ Sets the AST representation.</li>
 <li><b>void setConcreteMemoryAreaValue(integer baseAddr, [integer,])</b><br  />
  Sets the concrete value of a memory area. Note that setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this.</li>
 <li><b>void setConcreteMemoryAreaValue(integer baseAddr, bytes opcodes)</b><br  />

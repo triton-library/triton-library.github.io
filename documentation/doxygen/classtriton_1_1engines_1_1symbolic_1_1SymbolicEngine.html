@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 0.9 build 1513</span>
+   &#160;<span id="projectnumber">version 0.9 build 1515</span>
    </div>
   </td>
  </tr>
@@ -90,7 +90,8 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for triton::engines::symbolic::SymbolicEngine:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine__inherit__graph.svg" width="424" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine__inherit__graph.svg" width="424" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -231,10 +232,6 @@ TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="
 TRITON_EXPORT std::unordered_map&lt; <a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a>, <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ada78fb92795aad95b5cde68bfd470ce0">sliceExpressions</a> (const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &amp;expr)</td></tr>
 <tr class="memdesc:ada78fb92795aad95b5cde68bfd470ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slices all expressions from a given one. <br /></td></tr>
 <tr class="separator:ada78fb92795aad95b5cde68bfd470ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01d6e893f6a0494beb25dec630c326ec"><td class="memItemLeft" align="right" valign="top"><a id="a01d6e893f6a0494beb25dec630c326ec"></a>
-TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a01d6e893f6a0494beb25dec630c326ec">printSlicedExpressions</a> (std::ostream &amp;stream, const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &amp;expr, bool assert_=false)</td></tr>
-<tr class="memdesc:a01d6e893f6a0494beb25dec630c326ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints symbolic expression with used references and symbolic variables in AST representation mode. If <code>assert_</code> is true, then (assert &lt;expr&gt;). <br /></td></tr>
-<tr class="separator:a01d6e893f6a0494beb25dec630c326ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacb990d6b41bf03b003c7330cf32a0e7"><td class="memItemLeft" align="right" valign="top"><a id="aacb990d6b41bf03b003c7330cf32a0e7"></a>
 TRITON_EXPORT std::vector&lt; <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#aacb990d6b41bf03b003c7330cf32a0e7">getTaintedSymbolicExpressions</a> (void) const</td></tr>
 <tr class="memdesc:aacb990d6b41bf03b003c7330cf32a0e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector of the tainted symbolic expressions. <br /></td></tr>
@@ -433,7 +430,7 @@ std::vector&lt; <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathCo
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The symbolic engine class. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00059">59</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00060">60</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a8da460c8ede33ee3ae27f885959022fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8da460c8ede33ee3ae27f885959022fa">&#9670;&nbsp;</a></span>alignedMemoryReference</h2>
@@ -459,7 +456,7 @@ std::vector&lt; <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathCo
 <p><b>item1</b>: &lt;addr:size&gt;<br  />
  <b>item2</b>: shared symbolic expression </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00098">98</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00099">99</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>
@@ -487,7 +484,7 @@ std::vector&lt; <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathCo
 <p><b>item1</b>: memory address<br  />
  <b>item2</b>: shared symbolic expression </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00106">106</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00107">107</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>
@@ -515,7 +512,7 @@ std::vector&lt; <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathCo
 <p><b>item1</b>: symbolic reference id<br  />
  <b>item2</b>: symbolic expression </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00090">90</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00091">91</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>
@@ -543,7 +540,7 @@ std::vector&lt; <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathCo
 <p><b>item1</b>: variable id<br  />
  <b>item2</b>: symbolic variable </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00082">82</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00083">83</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>
