@@ -719,7 +719,7 @@ section {
 
 @media (max-width: 768px) {
   .about {
-    text-align: center;
+    text-align: left;
   }
 }
 
