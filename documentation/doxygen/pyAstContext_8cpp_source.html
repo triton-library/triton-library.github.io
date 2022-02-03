@@ -92,8 +92,8 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="exceptions_8hpp.html">triton/exceptions.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="register_8hpp.html">triton/register.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifdef TRITON_Z3_INTERFACE</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">  #include &lt;<a class="code" href="tritonToZ3Ast_8hpp.html">triton/tritonToZ3Ast.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">  #include &lt;<a class="code" href="z3ToTritonAst_8hpp.html">triton/z3ToTritonAst.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">  #include &lt;<a class="code" href="tritonToZ3_8hpp.html">triton/tritonToZ3.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">  #include &lt;<a class="code" href="z3ToTriton_8hpp.html">triton/z3ToTriton.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
@@ -1367,7 +1367,7 @@ $(function() {
 <div class="line"><a name="l01581"></a><span class="lineno"> 1581</span>&#160; </div>
 <div class="line"><a name="l01582"></a><span class="lineno"> 1582</span>&#160;<span class="preprocessor">      #ifdef TRITON_Z3_INTERFACE</span></div>
 <div class="line"><a name="l01583"></a><span class="lineno"> 1583</span>&#160;      <span class="keyword">static</span> PyObject* AstContext_tritonToZ3(PyObject* <span class="keyword">self</span>, PyObject* node) {</div>
-<div class="line"><a name="l01584"></a><span class="lineno"> 1584</span>&#160;        <a class="code" href="classtriton_1_1ast_1_1TritonToZ3Ast.html">triton::ast::TritonToZ3Ast</a> tritonToZ3Ast{<span class="keyword">false</span>};</div>
+<div class="line"><a name="l01584"></a><span class="lineno"> 1584</span>&#160;        <a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html">triton::ast::TritonToZ3</a> tritonToZ3{<span class="keyword">false</span>};</div>
 <div class="line"><a name="l01585"></a><span class="lineno"> 1585</span>&#160; </div>
 <div class="line"><a name="l01586"></a><span class="lineno"> 1586</span>&#160;        <span class="keywordflow">if</span> (node == <span class="keyword">nullptr</span> || (!<a class="code" href="pythonObjects_8hpp.html#a83ee34b26680ff62af704970fbc0d759">PyAstNode_Check</a>(node)))</div>
 <div class="line"><a name="l01587"></a><span class="lineno"> 1587</span>&#160;          <span class="keywordflow">return</span> PyErr_Format(PyExc_TypeError, <span class="stringliteral">&quot;tritonToZ3(): Expects a AstNode as argument.&quot;</span>);</div>
@@ -1387,7 +1387,7 @@ $(function() {
 <div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160; </div>
 <div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;        <span class="comment">// Convert the node to a Z3++ expression and translate it into</span></div>
 <div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;        <span class="comment">// python&#39;s z3 main context</span></div>
-<div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;        z3::expr expr = tritonToZ3Ast.convert(<a class="code" href="pythonObjects_8hpp.html#ae3ebf4893b60cc3f56cec1f8d0ae1eaa">PyAstNode_AsAstNode</a>(node));</div>
+<div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;        z3::expr expr = tritonToZ3.convert(<a class="code" href="pythonObjects_8hpp.html#ae3ebf4893b60cc3f56cec1f8d0ae1eaa">PyAstNode_AsAstNode</a>(node));</div>
 <div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;        Z3_ast ast    = Z3_translate(expr.ctx(), expr, z3Ctx);</div>
 <div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160; </div>
 <div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;        <span class="comment">// Check that everything went fine</span></div>
@@ -1418,8 +1418,8 @@ $(function() {
 <div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160; </div>
 <div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160; </div>
 <div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;      <span class="keyword">static</span> PyObject* AstContext_z3ToTriton(PyObject* <span class="keyword">self</span>, PyObject* expr) {</div>
-<div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;        <a class="code" href="classtriton_1_1ast_1_1Z3ToTritonAst.html">triton::ast::Z3ToTritonAst</a>  z3ToTritonAst{<a class="code" href="pythonObjects_8hpp.html#a621c94720acba2c97362052c9ff30f46">PyAstContext_AsAstContext</a>(<span class="keyword">self</span>)};</div>
-<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;        z3::context                 z3Ctx;</div>
+<div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;        <a class="code" href="classtriton_1_1ast_1_1Z3ToTriton.html">triton::ast::Z3ToTriton</a> z3ToTritonAst{<a class="code" href="pythonObjects_8hpp.html#a621c94720acba2c97362052c9ff30f46">PyAstContext_AsAstContext</a>(<span class="keyword">self</span>)};</div>
+<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;        z3::context z3Ctx;</div>
 <div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160; </div>
 <div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;        <span class="keywordflow">if</span> (std::strcmp(Py_TYPE(expr)-&gt;tp_name, <span class="stringliteral">&quot;ExprRef&quot;</span>) &amp;&amp; std::strcmp(Py_TYPE(expr)-&gt;tp_name, <span class="stringliteral">&quot;BitVecRef&quot;</span>))</div>
 <div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160;          <span class="keywordflow">return</span> PyErr_Format(PyExc_TypeError, <span class="stringliteral">&quot;z3ToTriton(): expected an ExprRef as argument&quot;</span>);</div>
@@ -1601,8 +1601,8 @@ $(function() {
 <div class="line"><a name="l01817"></a><span class="lineno"> 1817</span>&#160;  }; <span class="comment">/* bindings namespace */</span></div>
 <div class="line"><a name="l01818"></a><span class="lineno"> 1818</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
 <div class="ttc" id="aastContext_8hpp_html"><div class="ttname"><a href="astContext_8hpp.html">astContext.hpp</a></div></div>
-<div class="ttc" id="aclasstriton_1_1ast_1_1TritonToZ3Ast_html"><div class="ttname"><a href="classtriton_1_1ast_1_1TritonToZ3Ast.html">triton::ast::TritonToZ3Ast</a></div><div class="ttdoc">Converts a Triton's AST to Z3's AST.</div><div class="ttdef"><b>Definition:</b> <a href="tritonToZ3Ast_8hpp_source.html#l00037">tritonToZ3Ast.hpp:37</a></div></div>
-<div class="ttc" id="aclasstriton_1_1ast_1_1Z3ToTritonAst_html"><div class="ttname"><a href="classtriton_1_1ast_1_1Z3ToTritonAst.html">triton::ast::Z3ToTritonAst</a></div><div class="ttdoc">Converts a Z3's AST to a Triton's AST.</div><div class="ttdef"><b>Definition:</b> <a href="z3ToTritonAst_8hpp_source.html#l00036">z3ToTritonAst.hpp:36</a></div></div>
+<div class="ttc" id="aclasstriton_1_1ast_1_1TritonToZ3_html"><div class="ttname"><a href="classtriton_1_1ast_1_1TritonToZ3.html">triton::ast::TritonToZ3</a></div><div class="ttdoc">Converts a Triton's AST to Z3's AST.</div><div class="ttdef"><b>Definition:</b> <a href="tritonToZ3_8hpp_source.html#l00037">tritonToZ3.hpp:37</a></div></div>
+<div class="ttc" id="aclasstriton_1_1ast_1_1Z3ToTriton_html"><div class="ttname"><a href="classtriton_1_1ast_1_1Z3ToTriton.html">triton::ast::Z3ToTriton</a></div><div class="ttdoc">Converts a Z3's AST to a Triton's AST.</div><div class="ttdef"><b>Definition:</b> <a href="z3ToTriton_8hpp_source.html#l00036">z3ToTriton.hpp:36</a></div></div>
 <div class="ttc" id="aclasstriton_1_1exceptions_1_1Exception_html"><div class="ttname"><a href="classtriton_1_1exceptions_1_1Exception.html">triton::exceptions::Exception</a></div><div class="ttdoc">The root class of all exceptions.</div><div class="ttdef"><b>Definition:</b> <a href="exceptions_8hpp_source.html#l00036">exceptions.hpp:36</a></div></div>
 <div class="ttc" id="aclasstriton_1_1exceptions_1_1Exception_html_a97b35417442e2af67d6000215eb6e853"><div class="ttname"><a href="classtriton_1_1exceptions_1_1Exception.html#a97b35417442e2af67d6000215eb6e853">triton::exceptions::Exception::what</a></div><div class="ttdeci">TRITON_EXPORT const char * what() const</div><div class="ttdoc">Returns the exception message.</div><div class="ttdef"><b>Definition:</b> <a href="exceptions_8hpp_source.html#l00057">exceptions.hpp:57</a></div></div>
 <div class="ttc" id="aexceptions_8hpp_html"><div class="ttname"><a href="exceptions_8hpp.html">exceptions.hpp</a></div></div>
@@ -1634,8 +1634,8 @@ $(function() {
 <div class="ttc" id="apythonXFunctions_8hpp_html"><div class="ttname"><a href="pythonXFunctions_8hpp.html">pythonXFunctions.hpp</a></div></div>
 <div class="ttc" id="aregister_8hpp_html"><div class="ttname"><a href="register_8hpp.html">register.hpp</a></div></div>
 <div class="ttc" id="astructtriton_1_1bindings_1_1python_1_1AstContext__Object_html"><div class="ttname"><a href="structtriton_1_1bindings_1_1python_1_1AstContext__Object.html">triton::bindings::python::AstContext_Object</a></div><div class="ttdoc">pyAstContext object.</div><div class="ttdef"><b>Definition:</b> <a href="pythonObjects_8hpp_source.html#l00197">pythonObjects.hpp:197</a></div></div>
-<div class="ttc" id="atritonToZ3Ast_8hpp_html"><div class="ttname"><a href="tritonToZ3Ast_8hpp.html">tritonToZ3Ast.hpp</a></div></div>
-<div class="ttc" id="az3ToTritonAst_8hpp_html"><div class="ttname"><a href="z3ToTritonAst_8hpp.html">z3ToTritonAst.hpp</a></div></div>
+<div class="ttc" id="atritonToZ3_8hpp_html"><div class="ttname"><a href="tritonToZ3_8hpp.html">tritonToZ3.hpp</a></div></div>
+<div class="ttc" id="az3ToTriton_8hpp_html"><div class="ttname"><a href="z3ToTriton_8hpp.html">z3ToTriton.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.14-->
 <!-- start footer part -->

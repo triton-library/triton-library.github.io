@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classtriton_1_1engines_1_1solver_1_1SolverEngine.html" title="This class is used to interface with solvers." alt="" coords="5,5,169,47"/>
+<area shape="rect" id="node1" href="$classtriton_1_1engines_1_1lifters_1_1LiftingToPython.html" title="The lifting to Python class." alt="" coords="5,5,167,47"/>
+<area shape="rect" id="node2" href="$classtriton_1_1engines_1_1lifters_1_1LiftingEngine.html" title="The lifting engine class." alt="" coords="215,39,376,80"/>
+<area shape="rect" id="node3" href="$classtriton_1_1engines_1_1lifters_1_1LiftingToSMT.html" title="The lifting to SMT class." alt="" coords="5,71,167,112"/>
 </map>

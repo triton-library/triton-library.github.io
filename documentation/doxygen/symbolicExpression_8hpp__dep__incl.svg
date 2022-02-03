@@ -24,120 +24,120 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="ast_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="838.5,-496 838.5,-537 971.5,-537 971.5,-496 838.5,-496"/>
-<text text-anchor="start" x="846.5" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
-<text text-anchor="start" x="846.5" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
-<text text-anchor="middle" x="905" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/ast.cpp</text>
+<polygon fill="white" stroke="black" points="858.5,-496 858.5,-537 991.5,-537 991.5,-496 858.5,-496"/>
+<text text-anchor="start" x="866.5" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
+<text text-anchor="start" x="866.5" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
+<text text-anchor="middle" x="925" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/ast.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M2384.18,-599.08C2077.39,-598.59 1248.89,-592.56 980,-543 972.16,-541.55 964.02,-539.45 956.12,-537.07"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2384.42,-602.58 2394.43,-599.09 2384.43,-595.58 2384.42,-602.58"/>
+<path fill="none" stroke="midnightblue" d="M2384.34,-599.01C2080.51,-598.34 1264.95,-591.91 1000,-543 992.16,-541.55 984.02,-539.45 976.12,-537.07"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2384.49,-602.51 2394.5,-599.03 2384.5,-595.51 2384.49,-602.51"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="astContext_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="989.5,-496 989.5,-537 1122.5,-537 1122.5,-496 989.5,-496"/>
-<text text-anchor="start" x="997.5" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
-<text text-anchor="start" x="997.5" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
-<text text-anchor="middle" x="1056" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/astContext.cpp</text>
+<polygon fill="white" stroke="black" points="1009.5,-496 1009.5,-537 1142.5,-537 1142.5,-496 1009.5,-496"/>
+<text text-anchor="start" x="1017.5" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
+<text text-anchor="start" x="1017.5" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
+<text text-anchor="middle" x="1076" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/astContext.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M2383.97,-598.52C2098.84,-596.65 1369.78,-587.52 1131,-543 1123.16,-541.54 1115.02,-539.43 1107.12,-537.04"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2384.31,-602.02 2394.33,-598.58 2384.35,-595.02 2384.31,-602.02"/>
+<path fill="none" stroke="midnightblue" d="M2384.13,-598.44C2102.09,-596.38 1385.86,-586.86 1151,-543 1143.16,-541.54 1135.02,-539.43 1127.12,-537.04"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2384.36,-601.94 2394.38,-598.51 2384.41,-594.94 2384.36,-601.94"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="tritonToBitwuzlaAst_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="1140.5,-496 1140.5,-537 1337.5,-537 1337.5,-496 1140.5,-496"/>
-<text text-anchor="start" x="1148.5" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
-<text text-anchor="start" x="1148.5" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
-<text text-anchor="middle" x="1239" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/bitwuzla/tritonToBitwuzlaAst.cpp</text>
+<g id="a_node4"><a xlink:href="tritonToBitwuzla_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="1160.5,-496 1160.5,-537 1341.5,-537 1341.5,-496 1160.5,-496"/>
+<text text-anchor="start" x="1168.5" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
+<text text-anchor="start" x="1168.5" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
+<text text-anchor="middle" x="1251" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/bitwuzla/tritonToBitwuzla.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M2384.14,-596.11C2132.72,-589.39 1543.83,-571.12 1346,-543 1335.32,-541.48 1324.14,-539.39 1313.2,-537.06"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2384.31,-599.62 2394.39,-596.38 2384.49,-592.62 2384.31,-599.62"/>
+<path fill="none" stroke="midnightblue" d="M2384.03,-596.35C2133.15,-590.13 1546.76,-572.81 1350,-543 1340,-541.48 1329.54,-539.38 1319.33,-537.02"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2384.19,-599.85 2394.27,-596.6 2384.36,-592.86 2384.19,-599.85"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:href="tritonToLLVM_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="1355.5,-496 1355.5,-537 1500.5,-537 1500.5,-496 1355.5,-496"/>
-<text text-anchor="start" x="1363.5" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
-<text text-anchor="start" x="1363.5" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
-<text text-anchor="middle" x="1428" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/llvm/tritonToLLVM.cpp</text>
+<polygon fill="white" stroke="black" points="1359.5,-496 1359.5,-537 1504.5,-537 1504.5,-496 1359.5,-496"/>
+<text text-anchor="start" x="1367.5" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
+<text text-anchor="start" x="1367.5" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
+<text text-anchor="middle" x="1432" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/llvm/tritonToLLVM.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M2384.18,-596.01C2160.06,-589.63 1674.65,-572.79 1510,-543 1501.64,-541.49 1492.93,-539.38 1484.46,-537.03"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2384.23,-599.51 2394.33,-596.29 2384.43,-592.51 2384.23,-599.51"/>
+<path fill="none" stroke="midnightblue" d="M2384.22,-595.98C2160.82,-589.56 1677.87,-572.67 1514,-543 1505.64,-541.49 1496.93,-539.38 1488.46,-537.03"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2384.24,-599.48 2394.34,-596.27 2384.44,-592.48 2384.24,-599.48"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:href="astPythonRepresentation_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="1519,-496 1519,-537 1779,-537 1779,-496 1519,-496"/>
-<text text-anchor="start" x="1527" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
-<text text-anchor="start" x="1527" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
-<text text-anchor="middle" x="1649" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/representations/astPythonRepresentation.cpp</text>
+<polygon fill="white" stroke="black" points="1523,-496 1523,-537 1783,-537 1783,-496 1523,-496"/>
+<text text-anchor="start" x="1531" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
+<text text-anchor="start" x="1531" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
+<text text-anchor="middle" x="1653" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/representations/astPythonRepresentation.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M2383.99,-593.55C2242.75,-586.07 1997.16,-570.34 1788,-543 1775.23,-541.33 1761.85,-539.27 1748.65,-537.06"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2384.22,-597.07 2394.39,-594.1 2384.59,-590.08 2384.22,-597.07"/>
+<path fill="none" stroke="midnightblue" d="M2384.03,-593.48C2243.49,-585.95 1999.68,-570.19 1792,-543 1779.23,-541.33 1765.85,-539.27 1752.65,-537.05"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2384.22,-597 2394.39,-594.03 2384.59,-590.01 2384.22,-597"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:href="astSmtRepresentation_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="1797,-496 1797,-537 2043,-537 2043,-496 1797,-496"/>
-<text text-anchor="start" x="1805" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
-<text text-anchor="start" x="1805" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
-<text text-anchor="middle" x="1920" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/representations/astSmtRepresentation.cpp</text>
+<polygon fill="white" stroke="black" points="1801,-496 1801,-537 2047,-537 2047,-496 1801,-496"/>
+<text text-anchor="start" x="1809" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
+<text text-anchor="start" x="1809" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
+<text text-anchor="middle" x="1924" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/representations/astSmtRepresentation.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M2384.24,-586.67C2293.6,-576.5 2164.48,-560.87 2052,-543 2040.7,-541.21 2028.9,-539.16 2017.19,-537.03"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2383.94,-590.16 2394.27,-587.79 2384.72,-583.2 2383.94,-590.16"/>
+<path fill="none" stroke="midnightblue" d="M2384.11,-586.48C2294.34,-576.28 2167,-560.7 2056,-543 2044.71,-541.2 2032.9,-539.15 2021.19,-537.02"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2383.98,-589.99 2394.32,-587.64 2384.77,-583.04 2383.98,-589.99"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="tritonToZ3Ast_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="2061.5,-496 2061.5,-537 2198.5,-537 2198.5,-496 2061.5,-496"/>
-<text text-anchor="start" x="2069.5" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
-<text text-anchor="start" x="2069.5" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
-<text text-anchor="middle" x="2130" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/z3/tritonToZ3Ast.cpp</text>
+<g id="a_node8"><a xlink:href="tritonToZ3_8cpp.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="2065.5,-496 2065.5,-537 2198.5,-537 2198.5,-496 2065.5,-496"/>
+<text text-anchor="start" x="2073.5" y="-525" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
+<text text-anchor="start" x="2073.5" y="-514" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
+<text text-anchor="middle" x="2132" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00">/ast/z3/tritonToZ3.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node8 -->
 <g id="edge7" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M2384.26,-580.28C2330.34,-570.67 2265.52,-557.85 2208,-543 2201.1,-541.22 2193.92,-539.16 2186.84,-537"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2383.75,-583.74 2394.2,-582.04 2384.96,-576.85 2383.75,-583.74"/>
+<path fill="none" stroke="midnightblue" d="M2384.54,-580.54C2330.54,-570.97 2265.58,-558.11 2208,-543 2201.27,-541.23 2194.27,-539.18 2187.36,-537.03"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2384.04,-584.01 2394.49,-582.29 2385.25,-577.11 2384.04,-584.01"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">

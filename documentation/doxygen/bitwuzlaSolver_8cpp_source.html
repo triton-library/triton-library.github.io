@@ -94,7 +94,7 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="solverModel_8hpp.html">triton/solverModel.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="symbolicExpression_8hpp.html">triton/symbolicExpression.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="symbolicVariable_8hpp.html">triton/symbolicVariable.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="tritonToBitwuzlaAst_8hpp.html">triton/tritonToBitwuzlaAst.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="tritonToBitwuzla_8hpp.html">triton/tritonToBitwuzla.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="tritonTypes_8hpp.html">triton/tritonTypes.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
@@ -185,7 +185,7 @@ $(function() {
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment">// Convert Triton&#39; AST to solver terms.</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">auto</span> bzlaAst = <a class="code" href="classtriton_1_1ast_1_1TritonToBitwuzlaAst.html">triton::ast::TritonToBitwuzlaAst</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">auto</span> bzlaAst = <a class="code" href="classtriton_1_1ast_1_1TritonToBitwuzla.html">triton::ast::TritonToBitwuzla</a>();</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        bitwuzla_assert(bzla, bzlaAst.convert(node, bzla));</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">// Set solving params.</span></div>
@@ -302,7 +302,7 @@ $(function() {
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        }</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="comment">// Evaluate concrete AST in solver.</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keyword">auto</span> bzlaAst = <a class="code" href="classtriton_1_1ast_1_1TritonToBitwuzlaAst.html">triton::ast::TritonToBitwuzlaAst</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keyword">auto</span> bzlaAst = <a class="code" href="classtriton_1_1ast_1_1TritonToBitwuzla.html">triton::ast::TritonToBitwuzla</a>(<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keyword">auto</span> bv_value = bitwuzla_get_bv_value(bzla, bitwuzla_get_value(bzla, bzlaAst.convert(node, bzla)));</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keyword">auto</span> res = this-&gt;fromBvalueToUint512(bv_value);</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
@@ -354,7 +354,7 @@ $(function() {
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;};</div>
 <div class="ttc" id="aastContext_8hpp_html"><div class="ttname"><a href="astContext_8hpp.html">astContext.hpp</a></div></div>
 <div class="ttc" id="abitwuzlaSolver_8hpp_html"><div class="ttname"><a href="bitwuzlaSolver_8hpp.html">bitwuzlaSolver.hpp</a></div></div>
-<div class="ttc" id="aclasstriton_1_1ast_1_1TritonToBitwuzlaAst_html"><div class="ttname"><a href="classtriton_1_1ast_1_1TritonToBitwuzlaAst.html">triton::ast::TritonToBitwuzlaAst</a></div><div class="ttdoc">Converts a Triton's AST to Bitwuzla's AST.</div><div class="ttdef"><b>Definition:</b> <a href="tritonToBitwuzlaAst_8hpp_source.html#l00039">tritonToBitwuzlaAst.hpp:39</a></div></div>
+<div class="ttc" id="aclasstriton_1_1ast_1_1TritonToBitwuzla_html"><div class="ttname"><a href="classtriton_1_1ast_1_1TritonToBitwuzla.html">triton::ast::TritonToBitwuzla</a></div><div class="ttdoc">Converts a Triton's AST to Bitwuzla's AST.</div><div class="ttdef"><b>Definition:</b> <a href="tritonToBitwuzla_8hpp_source.html#l00039">tritonToBitwuzla.hpp:39</a></div></div>
 <div class="ttc" id="aclasstriton_1_1engines_1_1solver_1_1BitwuzlaSolver_html_a1dab04eb613bdfde61672a91f50344e9"><div class="ttname"><a href="classtriton_1_1engines_1_1solver_1_1BitwuzlaSolver.html#a1dab04eb613bdfde61672a91f50344e9">triton::engines::solver::BitwuzlaSolver::getModel</a></div><div class="ttdeci">TRITON_EXPORT std::unordered_map&lt; triton::usize, SolverModel &gt; getModel(const triton::ast::SharedAbstractNode &amp;node, triton::engines::solver::status_e *status=nullptr, triton::uint32 timeout=0, triton::uint32 *solvingTime=nullptr) const</div><div class="ttdoc">Computes and returns a model from a symbolic constraint.</div><div class="ttdef"><b>Definition:</b> <a href="bitwuzlaSolver_8cpp_source.html#l00205">bitwuzlaSolver.cpp:205</a></div></div>
 <div class="ttc" id="aclasstriton_1_1engines_1_1solver_1_1BitwuzlaSolver_html_a33682cfc4a8e7893fcb15fcaea466b60"><div class="ttname"><a href="classtriton_1_1engines_1_1solver_1_1BitwuzlaSolver.html#a33682cfc4a8e7893fcb15fcaea466b60">triton::engines::solver::BitwuzlaSolver::getName</a></div><div class="ttdeci">TRITON_EXPORT std::string getName(void) const</div><div class="ttdoc">Returns the name of this solver.</div><div class="ttdef"><b>Definition:</b> <a href="bitwuzlaSolver_8cpp_source.html#l00235">bitwuzlaSolver.cpp:235</a></div></div>
 <div class="ttc" id="aclasstriton_1_1engines_1_1solver_1_1BitwuzlaSolver_html_a3d17398c885e4976baf8f70d08dd31ae"><div class="ttname"><a href="classtriton_1_1engines_1_1solver_1_1BitwuzlaSolver.html#a3d17398c885e4976baf8f70d08dd31ae">triton::engines::solver::BitwuzlaSolver::getModels</a></div><div class="ttdeci">TRITON_EXPORT std::vector&lt; std::unordered_map&lt; triton::usize, SolverModel &gt; &gt; getModels(const triton::ast::SharedAbstractNode &amp;node, triton::uint32 limit, triton::engines::solver::status_e *status=nullptr, triton::uint32 timeout=0, triton::uint32 *solvingTime=nullptr) const</div><div class="ttdoc">Computes and returns several models from a symbolic constraint. The limit is the number of models ret...</div><div class="ttdef"><b>Definition:</b> <a href="bitwuzlaSolver_8cpp_source.html#l00090">bitwuzlaSolver.cpp:90</a></div></div>
@@ -382,7 +382,7 @@ $(function() {
 <div class="ttc" id="asolverModel_8hpp_html"><div class="ttname"><a href="solverModel_8hpp.html">solverModel.hpp</a></div></div>
 <div class="ttc" id="asymbolicExpression_8hpp_html"><div class="ttname"><a href="symbolicExpression_8hpp.html">symbolicExpression.hpp</a></div></div>
 <div class="ttc" id="asymbolicVariable_8hpp_html"><div class="ttname"><a href="symbolicVariable_8hpp.html">symbolicVariable.hpp</a></div></div>
-<div class="ttc" id="atritonToBitwuzlaAst_8hpp_html"><div class="ttname"><a href="tritonToBitwuzlaAst_8hpp.html">tritonToBitwuzlaAst.hpp</a></div></div>
+<div class="ttc" id="atritonToBitwuzla_8hpp_html"><div class="ttname"><a href="tritonToBitwuzla_8hpp.html">tritonToBitwuzla.hpp</a></div></div>
 <div class="ttc" id="atritonTypes_8hpp_html"><div class="ttname"><a href="tritonTypes_8hpp.html">tritonTypes.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.14-->
