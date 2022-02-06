@@ -102,6 +102,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1AssertNode.html">AssertNode</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>(assert &lt;expr&gt;)</code> node  <a href="classtriton_1_1ast_1_1AssertNode.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1BswapNode.html">BswapNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>(bswap &lt;expr&gt;)</code> node  <a href="classtriton_1_1ast_1_1BswapNode.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1BvaddNode.html">BvaddNode</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>(bvadd &lt;expr1&gt; &lt;expr2&gt;)</code> node  <a href="classtriton_1_1ast_1_1BvaddNode.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -292,69 +295,70 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa5e613a229957ec32032992c7f25326e9">INVALID_NODE</a> = 0
 , <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa30bf9a1e17f752067050fb41dd43b33d">ANY_NODE</a> = 0
 , <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fafa1e8135c4b9d4349facf8ff48b53904">ASSERT_NODE</a> = 3
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa22beeac1af01bf2db88df9c6bcb46991">BVADD_NODE</a> = 5
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fae2740a111a4276c3b0cbdfa8d27bc78b">BSWAP_NODE</a> = 5
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa68a45bb74682993d259b8c494d727c8d">BVAND_NODE</a> = 7
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa77acbfbd675b1901616ca766c8a99227">BVASHR_NODE</a> = 12
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa260f418505858753595da05e74db4f55">BVLSHR_NODE</a> = 17
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa194ca0131c232f848857d47d7e2fe23c">BVMUL_NODE</a> = 19
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa22beeac1af01bf2db88df9c6bcb46991">BVADD_NODE</a> = 7
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa68a45bb74682993d259b8c494d727c8d">BVAND_NODE</a> = 12
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa77acbfbd675b1901616ca766c8a99227">BVASHR_NODE</a> = 17
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa260f418505858753595da05e74db4f55">BVLSHR_NODE</a> = 19
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fabf66f1ef7b77ce46edebf6cc69c3019c">BVNAND_NODE</a> = 23
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faa1b12f2111acf2c28f537816fc6dcaaf">BVNEG_NODE</a> = 29
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa6d774167a0a830167efae86f0dc2cfc1">BVNOR_NODE</a> = 31
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa19659996d45610a70c5ea8baefd6cbc7">BVNOT_NODE</a> = 37
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa194ca0131c232f848857d47d7e2fe23c">BVMUL_NODE</a> = 23
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fabf66f1ef7b77ce46edebf6cc69c3019c">BVNAND_NODE</a> = 29
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faa1b12f2111acf2c28f537816fc6dcaaf">BVNEG_NODE</a> = 31
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa6d774167a0a830167efae86f0dc2cfc1">BVNOR_NODE</a> = 37
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa4f401be5f34349c5a14337859386cc38">BVOR_NODE</a> = 41
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa1829b7d6106307610ad25c7c3b995148">BVROL_NODE</a> = 43
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fae6b16ac8007ea0262b8f4f996ba1c131">BVROR_NODE</a> = 47
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa136440dbecbc8a5663ac95c7f4b4d42e">BVSDIV_NODE</a> = 53
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa19659996d45610a70c5ea8baefd6cbc7">BVNOT_NODE</a> = 41
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa4f401be5f34349c5a14337859386cc38">BVOR_NODE</a> = 43
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa1829b7d6106307610ad25c7c3b995148">BVROL_NODE</a> = 47
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fae6b16ac8007ea0262b8f4f996ba1c131">BVROR_NODE</a> = 52
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa5c34964459e57c68d433490eda43e146">BVSGE_NODE</a> = 59
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa7e7bdb89e1fe2dbf0f937efc47bed3ed">BVSGT_NODE</a> = 61
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faf5bc1a3fbb949b5458c9562b16f8c29d">BVSHL_NODE</a> = 67
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa2f3f3d51cabfa026abde4696e0b31989">BVSLE_NODE</a> = 71
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa136440dbecbc8a5663ac95c7f4b4d42e">BVSDIV_NODE</a> = 59
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa5c34964459e57c68d433490eda43e146">BVSGE_NODE</a> = 61
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa7e7bdb89e1fe2dbf0f937efc47bed3ed">BVSGT_NODE</a> = 67
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faf5bc1a3fbb949b5458c9562b16f8c29d">BVSHL_NODE</a> = 71
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa4838c00ccebdbc3cca0356eb3247b707">BVSLT_NODE</a> = 73
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa013f43c79fcb762f930751714f0920cb">BVSMOD_NODE</a> = 79
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fafceca589f7047cf5c280e0f71004dc44">BVSREM_NODE</a> = 83
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fad09562cf9e8e171b363a44e26958dae8">BVSUB_NODE</a> = 89
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa2f3f3d51cabfa026abde4696e0b31989">BVSLE_NODE</a> = 73
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa4838c00ccebdbc3cca0356eb3247b707">BVSLT_NODE</a> = 79
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa013f43c79fcb762f930751714f0920cb">BVSMOD_NODE</a> = 83
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fafceca589f7047cf5c280e0f71004dc44">BVSREM_NODE</a> = 89
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa9716a69e03885d3b293aef7b40a9239d">BVUDIV_NODE</a> = 97
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fab87df09ffadd74dd3d792cf1f67ff5d3">BVUGE_NODE</a> = 101
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa45a808e28c15c0539bebd5fc2f55503c">BVUGT_NODE</a> = 103
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa4d69f8ef11676a7898683720582bd539">BVULE_NODE</a> = 107
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fad09562cf9e8e171b363a44e26958dae8">BVSUB_NODE</a> = 97
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa9716a69e03885d3b293aef7b40a9239d">BVUDIV_NODE</a> = 101
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fab87df09ffadd74dd3d792cf1f67ff5d3">BVUGE_NODE</a> = 103
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa45a808e28c15c0539bebd5fc2f55503c">BVUGT_NODE</a> = 107
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa6ec069b5f8b40b204f8c33eac17f7c80">BVULT_NODE</a> = 109
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa9253d0f9524e8f8db76062bf8080f829">BVUREM_NODE</a> = 113
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fac5147d4b7349562b626592adc0f5095e">BVXNOR_NODE</a> = 127
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa24548568d732d9e25d885c01d0ff9e31">BVXOR_NODE</a> = 131
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa4d69f8ef11676a7898683720582bd539">BVULE_NODE</a> = 109
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa6ec069b5f8b40b204f8c33eac17f7c80">BVULT_NODE</a> = 113
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa9253d0f9524e8f8db76062bf8080f829">BVUREM_NODE</a> = 127
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fac5147d4b7349562b626592adc0f5095e">BVXNOR_NODE</a> = 131
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa518e3a6619a2d08ea49578122f1b62cc">BV_NODE</a> = 137
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa24fd1841cbba492930197bcc26c1b0bc">COMPOUND_NODE</a> = 139
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fab35b99d5b47004cc0b94b631f29c5a34">CONCAT_NODE</a> = 149
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fab99a90023d0adf2e09effe1ef6182076">DECLARE_NODE</a> = 151
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa24548568d732d9e25d885c01d0ff9e31">BVXOR_NODE</a> = 137
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa518e3a6619a2d08ea49578122f1b62cc">BV_NODE</a> = 139
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa24fd1841cbba492930197bcc26c1b0bc">COMPOUND_NODE</a> = 149
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fab35b99d5b47004cc0b94b631f29c5a34">CONCAT_NODE</a> = 151
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fab458ea1d548be93c7ce653ffb5c50d8d">DISTINCT_NODE</a> = 157
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa0c61d3097fe1375eca757a3440a84419">EQUAL_NODE</a> = 163
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa22f5fd95ee2087704659ea49ce8e9892">EXTRACT_NODE</a> = 167
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa732fb63ac41d0be9f0af81f223994800">FORALL_NODE</a> = 173
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fab99a90023d0adf2e09effe1ef6182076">DECLARE_NODE</a> = 157
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fab458ea1d548be93c7ce653ffb5c50d8d">DISTINCT_NODE</a> = 163
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa0c61d3097fe1375eca757a3440a84419">EQUAL_NODE</a> = 167
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa22f5fd95ee2087704659ea49ce8e9892">EXTRACT_NODE</a> = 173
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa37a9d156c161a9b914426d92d8c3c3e4">IFF_NODE</a> = 179
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa11a0ed0ef43fef0013069e9a7164a248">INTEGER_NODE</a> = 181
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fab0d316fcc885ebeb5b578f1e5b506472">ITE_NODE</a> = 191
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa70918020e5a916c3b855c9e90e5ebe78">LAND_NODE</a> = 193
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa732fb63ac41d0be9f0af81f223994800">FORALL_NODE</a> = 179
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa37a9d156c161a9b914426d92d8c3c3e4">IFF_NODE</a> = 181
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa11a0ed0ef43fef0013069e9a7164a248">INTEGER_NODE</a> = 191
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fab0d316fcc885ebeb5b578f1e5b506472">ITE_NODE</a> = 193
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa38f100b118af30941a7300746bd0bc35">LET_NODE</a> = 197
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa7fa4772c273bd11883e2350313753722">LNOT_NODE</a> = 199
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa7d33b569c119d54f13856b64cf13759f">LOR_NODE</a> = 211
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fafb446d8abf8cabe598c76d0d306ab1a7">LXOR_NODE</a> = 223
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa70918020e5a916c3b855c9e90e5ebe78">LAND_NODE</a> = 197
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa38f100b118af30941a7300746bd0bc35">LET_NODE</a> = 199
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa7fa4772c273bd11883e2350313753722">LNOT_NODE</a> = 211
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa7d33b569c119d54f13856b64cf13759f">LOR_NODE</a> = 223
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faeed75b6519f5f7f8ad767237d29067d0">REFERENCE_NODE</a> = 227
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa5899f475cfbd2da5ba4124367aff78e3">STRING_NODE</a> = 229
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faec32514f996cdfb18713640a2645c2e7">SX_NODE</a> = 233
-, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa1c21cae130c094aac225df42d632828e">VARIABLE_NODE</a> = 239
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fafb446d8abf8cabe598c76d0d306ab1a7">LXOR_NODE</a> = 227
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faeed75b6519f5f7f8ad767237d29067d0">REFERENCE_NODE</a> = 229
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa5899f475cfbd2da5ba4124367aff78e3">STRING_NODE</a> = 233
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faec32514f996cdfb18713640a2645c2e7">SX_NODE</a> = 239
 , <br />
-&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faa604a8d1e790603c116b4e8dd7904b77">ZX_NODE</a> = 241
+&#160;&#160;<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa1c21cae130c094aac225df42d632828e">VARIABLE_NODE</a> = 241
+, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faa604a8d1e790603c116b4e8dd7904b77">ZX_NODE</a> = 251
 <br />
  }</td></tr>
 <tr class="separator:ga2b93cc7e19032f733c001c96530ef64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
