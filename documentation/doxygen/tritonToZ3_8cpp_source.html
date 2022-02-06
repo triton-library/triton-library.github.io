@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 0.9 build 1515</span>
+   &#160;<span id="projectnumber">version 0.9 build 1516</span>
    </div>
   </td>
  </tr>
@@ -159,10 +159,10 @@ $(function() {
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> index = 8 ; index != bvsize ; index += <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>) {</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            retval = to_expr(this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>, Z3_mk_bvshl(this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>, retval, this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>.bv_val(8, bvsize)));</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            retval = to_expr(this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>, Z3_mk_bvor(this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>, retval,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                              Z3_mk_bvand(this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>,</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                                Z3_mk_bvlshr(this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>, children[0], this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>.bv_val(index, bvsize)),</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                       to_expr(this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>, Z3_mk_bvand(this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                         to_expr(this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>, Z3_mk_bvlshr(this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>, children[0], this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>.bv_val(index, bvsize))),</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                                                this-&gt;context.bv_val(0xff, bvsize)</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                              )</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                              ))</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                            ));</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;          }</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          <span class="keywordflow">return</span> to_expr(this-&gt;<a class="code" href="classtriton_1_1ast_1_1TritonToZ3.html#a9b4157955800f58e6ade522a5995f0ac">context</a>, retval);</div>
