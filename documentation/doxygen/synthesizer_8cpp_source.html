@@ -270,254 +270,259 @@ $(function() {
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;          <a class="code" href="group__ast.html#ga2b93cc7e19032f733c001c96530ef64f">triton::ast::ast_e</a> op = it.first;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;          std::array&lt;UnaryEntry, 40&gt; oracles = it.second;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;          <span class="keywordtype">bool</span> found = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; oracle : oracles) {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="comment">// Ignore oracle that is not on same size</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">if</span> (oracle.bits != bits) {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;              <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            }</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="comment">// Inject value</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            actx-&gt;updateVariable(var_x-&gt;getName(), oracle.x);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordflow">if</span> (node-&gt;evaluate() != oracle.r) {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;              found = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;              <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;          }</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;          <span class="comment">// If an oracle is found, we craft a synthesized node.</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;          <span class="keywordflow">if</span> (found) {</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordflow">switch</span> (op) {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fae2740a111a4276c3b0cbdfa8d27bc78b">triton::ast::BSWAP_NODE</a>: result.setOutput(actx-&gt;bswap(actx-&gt;variable(var_x))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faa1b12f2111acf2c28f537816fc6dcaaf">triton::ast::BVNEG_NODE</a>: result.setOutput(actx-&gt;bvneg(actx-&gt;variable(var_x))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa19659996d45610a70c5ea8baefd6cbc7">triton::ast::BVNOT_NODE</a>: result.setOutput(actx-&gt;bvnot(actx-&gt;variable(var_x))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;              <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1SynthesizerEngine.html">triton::exceptions::SynthesizerEngine</a>(<span class="stringliteral">&quot;Synthesizer::unaryOperatorSynthesis(): Invalid type of operator.&quot;</span>);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            }</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="comment">// Adjust the size of the destination</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keyword">auto</span> out     = result.getOutput();</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keyword">auto</span> in      = node;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keyword">auto</span> outsize = out-&gt;getBitvectorSize();</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keyword">auto</span> insize  = in-&gt;getBitvectorSize();</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">if</span> (insize &gt; outsize) {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;              result.setOutput(actx-&gt;zx(insize - outsize, out));</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            }</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="comment">// Stop iterating over oracles</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            result.setSuccess(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;          }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;          <span class="comment">// If not found, continuing to iterate over oracles</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        }</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="comment">// Whatever the result, we must restore orignal value of the symbolic variable</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        actx-&gt;updateVariable(var_x-&gt;getName(), save_x);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">return</span> result.successful();</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      }</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      <span class="keywordtype">bool</span> Synthesizer::binaryOperatorSynthesis(<span class="keyword">const</span> std::deque&lt;triton::ast::SharedAbstractNode&gt;&amp; vars, <span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; node, SynthesisResult&amp; result) {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="comment">/* We start by saving orignal value of symbolic variables */</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keyword">auto</span> var_x = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classtriton_1_1ast_1_1VariableNode.html">triton::ast::VariableNode</a>*<span class="keyword">&gt;</span>(vars[0].get())-&gt;getSymbolicVariable();</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keyword">auto</span> var_y = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classtriton_1_1ast_1_1VariableNode.html">triton::ast::VariableNode</a>*<span class="keyword">&gt;</span>(vars[1].get())-&gt;getSymbolicVariable();</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keyword">auto</span> actx  = node-&gt;<a class="code" href="classtriton_1_1ast_1_1AbstractNode.html#a2d5819a091068eff580cf99a3b8c6f7f">getContext</a>();</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <a class="code" href="group__triton.html#ga934595e3b389ea950980e6dc8f68ec92">triton::uint512</a> save_x = actx-&gt;getVariableValue(var_x-&gt;getName());</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <a class="code" href="group__triton.html#ga934595e3b389ea950980e6dc8f68ec92">triton::uint512</a> save_y = actx-&gt;getVariableValue(var_y-&gt;getName());</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <a class="code" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>  bits   = var_x-&gt;getSize();</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="comment">/* We suppose variables are on a same size */</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">if</span> (var_x-&gt;getSize() != var_y-&gt;getSize())</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="comment">/* We suppose variables are 8, 16, 32 or 64-bit long */</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">if</span> (bits != 8 &amp;&amp; bits != 16 &amp;&amp; bits != 32 &amp;&amp; bits != 64)</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; it : <a class="code" href="group__oracles.html#gade9d54d082360ec88bf75a2a83b8b86c">triton::engines::synthesis::oracles::binopTable</a>) {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;          <a class="code" href="group__ast.html#ga2b93cc7e19032f733c001c96530ef64f">triton::ast::ast_e</a> op = it.first;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;          std::array&lt;BinaryEntry, 40&gt; oracles = it.second;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;          <span class="keywordtype">bool</span> found = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; oracle : oracles) {</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="comment">// Ignore oracle that is not on same size</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordflow">if</span> (oracle.bits != bits) {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;              <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="comment">// Inject values</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            actx-&gt;updateVariable(var_x-&gt;getName(), oracle.x);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            actx-&gt;updateVariable(var_y-&gt;getName(), oracle.y);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="keywordflow">if</span> (node-&gt;evaluate() != oracle.r) {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;              found = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;              <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            }</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;          }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;          <span class="comment">// If an oracle is found, we craft a synthesized node.</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;          <span class="keywordflow">if</span> (found) {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">switch</span> (op) {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa22beeac1af01bf2db88df9c6bcb46991">triton::ast::BVADD_NODE</a>:   result.setOutput(actx-&gt;bvadd(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa68a45bb74682993d259b8c494d727c8d">triton::ast::BVAND_NODE</a>:   result.setOutput(actx-&gt;bvand(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa194ca0131c232f848857d47d7e2fe23c">triton::ast::BVMUL_NODE</a>:   result.setOutput(actx-&gt;bvmul(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fabf66f1ef7b77ce46edebf6cc69c3019c">triton::ast::BVNAND_NODE</a>:  result.setOutput(actx-&gt;bvnand(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa6d774167a0a830167efae86f0dc2cfc1">triton::ast::BVNOR_NODE</a>:   result.setOutput(actx-&gt;bvnor(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa4f401be5f34349c5a14337859386cc38">triton::ast::BVOR_NODE</a>:    result.setOutput(actx-&gt;bvor(actx-&gt;variable(var_x),   actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa1829b7d6106307610ad25c7c3b995148">triton::ast::BVROL_NODE</a>:   result.setOutput(actx-&gt;bvrol(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fae6b16ac8007ea0262b8f4f996ba1c131">triton::ast::BVROR_NODE</a>:   result.setOutput(actx-&gt;bvror(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa136440dbecbc8a5663ac95c7f4b4d42e">triton::ast::BVSDIV_NODE</a>:  result.setOutput(actx-&gt;bvsdiv(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa013f43c79fcb762f930751714f0920cb">triton::ast::BVSMOD_NODE</a>:  result.setOutput(actx-&gt;bvsmod(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fafceca589f7047cf5c280e0f71004dc44">triton::ast::BVSREM_NODE</a>:  result.setOutput(actx-&gt;bvsrem(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fad09562cf9e8e171b363a44e26958dae8">triton::ast::BVSUB_NODE</a>:   result.setOutput(actx-&gt;bvsub(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa9716a69e03885d3b293aef7b40a9239d">triton::ast::BVUDIV_NODE</a>:  result.setOutput(actx-&gt;bvudiv(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa9253d0f9524e8f8db76062bf8080f829">triton::ast::BVUREM_NODE</a>:  result.setOutput(actx-&gt;bvurem(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fac5147d4b7349562b626592adc0f5095e">triton::ast::BVXNOR_NODE</a>:  result.setOutput(actx-&gt;bvxnor(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa24548568d732d9e25d885c01d0ff9e31">triton::ast::BVXOR_NODE</a>:   result.setOutput(actx-&gt;bvxor(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;              <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1SynthesizerEngine.html">triton::exceptions::SynthesizerEngine</a>(<span class="stringliteral">&quot;Synthesizer::binaryOperatorSynthesis(): Invalid type of operator.&quot;</span>);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="comment">// Adjust the size of the destination</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="keyword">auto</span> out     = result.getOutput();</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keyword">auto</span> in      = node;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="keyword">auto</span> outsize = out-&gt;getBitvectorSize();</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keyword">auto</span> insize  = in-&gt;getBitvectorSize();</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">if</span> (insize &gt; outsize) {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;              result.setOutput(actx-&gt;zx(insize - outsize, out));</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            <span class="comment">// Stop iterating over oracles</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            result.setSuccess(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;          }</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;          <span class="comment">// If not found, continuing to iterate over oracles</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        }</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="comment">// Whatever the result, we must restore orignal value of symbolic variables</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        actx-&gt;updateVariable(var_x-&gt;getName(), save_x);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        actx-&gt;updateVariable(var_y-&gt;getName(), save_y);</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">return</span> result.successful();</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      }</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <span class="keywordtype">bool</span> Synthesizer::childrenSynthesis(<span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; node, <span class="keywordtype">bool</span> constant, <span class="keywordtype">bool</span> opaque, SynthesisResult&amp; result) {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        std::stack&lt;triton::ast::AbstractNode*&gt;                worklist;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        std::unordered_set&lt;const triton::ast::AbstractNode*&gt;  visited;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;          <span class="comment">// Ignore bswap oracle for 8 bit value.</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;          <span class="keywordflow">if</span> (bits == 8 &amp;&amp; op == <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fae2740a111a4276c3b0cbdfa8d27bc78b">triton::ast::BSWAP_NODE</a>) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;          }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;          <span class="keywordtype">bool</span> found = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; oracle : oracles) {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="comment">// Ignore oracle that is not on same size</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordflow">if</span> (oracle.bits != bits) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;              <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="comment">// Inject value</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            actx-&gt;updateVariable(var_x-&gt;getName(), oracle.x);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">if</span> (node-&gt;evaluate() != oracle.r) {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;              found = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;              <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;          }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;          <span class="comment">// If an oracle is found, we craft a synthesized node.</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;          <span class="keywordflow">if</span> (found) {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordflow">switch</span> (op) {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fae2740a111a4276c3b0cbdfa8d27bc78b">triton::ast::BSWAP_NODE</a>: result.setOutput(actx-&gt;bswap(actx-&gt;variable(var_x))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faa1b12f2111acf2c28f537816fc6dcaaf">triton::ast::BVNEG_NODE</a>: result.setOutput(actx-&gt;bvneg(actx-&gt;variable(var_x))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa19659996d45610a70c5ea8baefd6cbc7">triton::ast::BVNOT_NODE</a>: result.setOutput(actx-&gt;bvnot(actx-&gt;variable(var_x))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;              <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1SynthesizerEngine.html">triton::exceptions::SynthesizerEngine</a>(<span class="stringliteral">&quot;Synthesizer::unaryOperatorSynthesis(): Invalid type of operator.&quot;</span>);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="comment">// Adjust the size of the destination</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <span class="keyword">auto</span> out     = result.getOutput();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keyword">auto</span> in      = node;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keyword">auto</span> outsize = out-&gt;getBitvectorSize();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keyword">auto</span> insize  = in-&gt;getBitvectorSize();</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">if</span> (insize &gt; outsize) {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;              result.setOutput(actx-&gt;zx(insize - outsize, out));</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="comment">// Stop iterating over oracles</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            result.setSuccess(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;          }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;          <span class="comment">// If not found, continuing to iterate over oracles</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="comment">// Whatever the result, we must restore orignal value of the symbolic variable</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        actx-&gt;updateVariable(var_x-&gt;getName(), save_x);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">return</span> result.successful();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      <span class="keywordtype">bool</span> Synthesizer::binaryOperatorSynthesis(<span class="keyword">const</span> std::deque&lt;triton::ast::SharedAbstractNode&gt;&amp; vars, <span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; node, SynthesisResult&amp; result) {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="comment">/* We start by saving orignal value of symbolic variables */</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keyword">auto</span> var_x = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classtriton_1_1ast_1_1VariableNode.html">triton::ast::VariableNode</a>*<span class="keyword">&gt;</span>(vars[0].get())-&gt;getSymbolicVariable();</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keyword">auto</span> var_y = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classtriton_1_1ast_1_1VariableNode.html">triton::ast::VariableNode</a>*<span class="keyword">&gt;</span>(vars[1].get())-&gt;getSymbolicVariable();</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keyword">auto</span> actx  = node-&gt;<a class="code" href="classtriton_1_1ast_1_1AbstractNode.html#a2d5819a091068eff580cf99a3b8c6f7f">getContext</a>();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <a class="code" href="group__triton.html#ga934595e3b389ea950980e6dc8f68ec92">triton::uint512</a> save_x = actx-&gt;getVariableValue(var_x-&gt;getName());</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="group__triton.html#ga934595e3b389ea950980e6dc8f68ec92">triton::uint512</a> save_y = actx-&gt;getVariableValue(var_y-&gt;getName());</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <a class="code" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>  bits   = var_x-&gt;getSize();</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="comment">/* We suppose variables are on a same size */</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">if</span> (var_x-&gt;getSize() != var_y-&gt;getSize())</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="comment">/* We suppose variables are 8, 16, 32 or 64-bit long */</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">if</span> (bits != 8 &amp;&amp; bits != 16 &amp;&amp; bits != 32 &amp;&amp; bits != 64)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; it : <a class="code" href="group__oracles.html#gade9d54d082360ec88bf75a2a83b8b86c">triton::engines::synthesis::oracles::binopTable</a>) {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;          <a class="code" href="group__ast.html#ga2b93cc7e19032f733c001c96530ef64f">triton::ast::ast_e</a> op = it.first;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;          std::array&lt;BinaryEntry, 40&gt; oracles = it.second;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;          <span class="keywordtype">bool</span> found = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; oracle : oracles) {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="comment">// Ignore oracle that is not on same size</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="keywordflow">if</span> (oracle.bits != bits) {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;              <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="comment">// Inject values</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            actx-&gt;updateVariable(var_x-&gt;getName(), oracle.x);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            actx-&gt;updateVariable(var_y-&gt;getName(), oracle.y);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="keywordflow">if</span> (node-&gt;evaluate() != oracle.r) {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;              found = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;              <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;          }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;          <span class="comment">// If an oracle is found, we craft a synthesized node.</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;          <span class="keywordflow">if</span> (found) {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            <span class="keywordflow">switch</span> (op) {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa22beeac1af01bf2db88df9c6bcb46991">triton::ast::BVADD_NODE</a>:   result.setOutput(actx-&gt;bvadd(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa68a45bb74682993d259b8c494d727c8d">triton::ast::BVAND_NODE</a>:   result.setOutput(actx-&gt;bvand(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa194ca0131c232f848857d47d7e2fe23c">triton::ast::BVMUL_NODE</a>:   result.setOutput(actx-&gt;bvmul(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fabf66f1ef7b77ce46edebf6cc69c3019c">triton::ast::BVNAND_NODE</a>:  result.setOutput(actx-&gt;bvnand(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa6d774167a0a830167efae86f0dc2cfc1">triton::ast::BVNOR_NODE</a>:   result.setOutput(actx-&gt;bvnor(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa4f401be5f34349c5a14337859386cc38">triton::ast::BVOR_NODE</a>:    result.setOutput(actx-&gt;bvor(actx-&gt;variable(var_x),   actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa1829b7d6106307610ad25c7c3b995148">triton::ast::BVROL_NODE</a>:   result.setOutput(actx-&gt;bvrol(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fae6b16ac8007ea0262b8f4f996ba1c131">triton::ast::BVROR_NODE</a>:   result.setOutput(actx-&gt;bvror(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa136440dbecbc8a5663ac95c7f4b4d42e">triton::ast::BVSDIV_NODE</a>:  result.setOutput(actx-&gt;bvsdiv(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa013f43c79fcb762f930751714f0920cb">triton::ast::BVSMOD_NODE</a>:  result.setOutput(actx-&gt;bvsmod(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fafceca589f7047cf5c280e0f71004dc44">triton::ast::BVSREM_NODE</a>:  result.setOutput(actx-&gt;bvsrem(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fad09562cf9e8e171b363a44e26958dae8">triton::ast::BVSUB_NODE</a>:   result.setOutput(actx-&gt;bvsub(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa9716a69e03885d3b293aef7b40a9239d">triton::ast::BVUDIV_NODE</a>:  result.setOutput(actx-&gt;bvudiv(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa9253d0f9524e8f8db76062bf8080f829">triton::ast::BVUREM_NODE</a>:  result.setOutput(actx-&gt;bvurem(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fac5147d4b7349562b626592adc0f5095e">triton::ast::BVXNOR_NODE</a>:  result.setOutput(actx-&gt;bvxnor(actx-&gt;variable(var_x), actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;              <span class="keywordflow">case</span> <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa24548568d732d9e25d885c01d0ff9e31">triton::ast::BVXOR_NODE</a>:   result.setOutput(actx-&gt;bvxor(actx-&gt;variable(var_x),  actx-&gt;variable(var_y))); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;              <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1SynthesizerEngine.html">triton::exceptions::SynthesizerEngine</a>(<span class="stringliteral">&quot;Synthesizer::binaryOperatorSynthesis(): Invalid type of operator.&quot;</span>);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="comment">// Adjust the size of the destination</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keyword">auto</span> out     = result.getOutput();</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            <span class="keyword">auto</span> in      = node;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            <span class="keyword">auto</span> outsize = out-&gt;getBitvectorSize();</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            <span class="keyword">auto</span> insize  = in-&gt;getBitvectorSize();</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">if</span> (insize &gt; outsize) {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;              result.setOutput(actx-&gt;zx(insize - outsize, out));</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="comment">// Stop iterating over oracles</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            result.setSuccess(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;          }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;          <span class="comment">// If not found, continuing to iterate over oracles</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="comment">// Whatever the result, we must restore orignal value of symbolic variables</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        actx-&gt;updateVariable(var_x-&gt;getName(), save_x);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        actx-&gt;updateVariable(var_y-&gt;getName(), save_y);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordflow">return</span> result.successful();</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      }</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordtype">bool</span> ret = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        worklist.push(node.get());</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordflow">while</span> (!worklist.empty()) {</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;          <span class="keyword">auto</span> current = worklist.top();</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;          worklist.pop();</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;          <span class="comment">// This means that node is already visited and we will not need to visited it second time</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;          <span class="keywordflow">if</span> (visited.find(current) != visited.end()) {</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;          }</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;          visited.insert(current);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;          <span class="comment">// Unroll reference</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;          <span class="keywordflow">if</span> (current-&gt;getType() == <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faeed75b6519f5f7f8ad767237d29067d0">triton::ast::REFERENCE_NODE</a>) {</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            worklist.push(<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classtriton_1_1ast_1_1ReferenceNode.html">triton::ast::ReferenceNode</a>*<span class="keyword">&gt;</span>(current)-&gt;getSymbolicExpression()-&gt;getAst().get());</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;          }</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;          <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            <a class="code" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> index = 0;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            <span class="comment">// Apply synthesis on every child</span></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : current-&gt;getChildren()) {</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;              SynthesisResult tmp;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;              <span class="keywordflow">if</span> (this-&gt;do_synthesize(child, constant, opaque, tmp)) {</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                <span class="comment">/* Symbolize the sub expression */</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> subvar = this-&gt;symbolizeSubExpression(child, tmp);</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                <span class="comment">/* Replace the child on the fly */</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                current-&gt;setChild(index++, subvar);</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                <span class="comment">/* Set true because we synthesized at least one child */</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                result.setSuccess(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                ret = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;              }</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;              worklist.push(child.get());</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;              index++;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            }</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;          }</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        }</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="comment">/*</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment">         * If we synthesized at least one child, we set the output as &#39;node&#39;</span></div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="comment">         * because it has been modified on the fly</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="comment">         */</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="keywordflow">if</span> (result.successful()) {</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;          result.setOutput(node);</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        }</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;      }</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> Synthesizer::symbolizeSubExpression(<span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; node, SynthesisResult&amp; tmpResult) {</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <a class="code" href="group__ast.html#gafd6a94ab829d378f1270057ea80f2d05">triton::ast::SharedAstContext</a> actx      = node-&gt;getContext();</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> subvar  = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      <span class="keywordtype">bool</span> Synthesizer::childrenSynthesis(<span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; node, <span class="keywordtype">bool</span> constant, <span class="keywordtype">bool</span> opaque, SynthesisResult&amp; result) {</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        std::stack&lt;triton::ast::AbstractNode*&gt;                worklist;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        std::unordered_set&lt;const triton::ast::AbstractNode*&gt;  visited;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keywordtype">bool</span> ret = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        worklist.push(node.get());</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordflow">while</span> (!worklist.empty()) {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;          <span class="keyword">auto</span> current = worklist.top();</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;          worklist.pop();</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;          <span class="comment">// This means that node is already visited and we will not need to visited it second time</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;          <span class="keywordflow">if</span> (visited.find(current) != visited.end()) {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;          }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;          visited.insert(current);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;          <span class="comment">// Unroll reference</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;          <span class="keywordflow">if</span> (current-&gt;getType() == <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faeed75b6519f5f7f8ad767237d29067d0">triton::ast::REFERENCE_NODE</a>) {</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            worklist.push(<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classtriton_1_1ast_1_1ReferenceNode.html">triton::ast::ReferenceNode</a>*<span class="keyword">&gt;</span>(current)-&gt;getSymbolicExpression()-&gt;getAst().get());</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;          }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;          <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            <a class="code" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> index = 0;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            <span class="comment">// Apply synthesis on every child</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : current-&gt;getChildren()) {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;              SynthesisResult tmp;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;              <span class="keywordflow">if</span> (this-&gt;do_synthesize(child, constant, opaque, tmp)) {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                <span class="comment">/* Symbolize the sub expression */</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> subvar = this-&gt;symbolizeSubExpression(child, tmp);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                <span class="comment">/* Replace the child on the fly */</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                current-&gt;setChild(index++, subvar);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                <span class="comment">/* Set true because we synthesized at least one child */</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                result.setSuccess(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                ret = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;              }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;              worklist.push(child.get());</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;              index++;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;          }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="comment">         * If we synthesized at least one child, we set the output as &#39;node&#39;</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="comment">         * because it has been modified on the fly</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordflow">if</span> (result.successful()) {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;          result.setOutput(node);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        }</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      }</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="keyword">auto</span> it =  this-&gt;hash2var.find(tmpResult.getOutput()-&gt;getHash());</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keywordflow">if</span> (it != this-&gt;hash2var.end()) {</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;          <span class="comment">/* If we already symbolized the node, return its symbolic variable */</span></div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;          subvar = it-&gt;second;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        }</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;          <span class="comment">/* Otherwise we create a new symbolic variable for this sub expression */</span></div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;          subvar = actx-&gt;variable(this-&gt;symbolic-&gt;<a class="code" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#acd8487cbfcc9deb8a0ae5692259a7924">newSymbolicVariable</a>(<a class="code" href="group__symbolic.html#ggadbf01c67aa57b3840f5e4211c754a87eac3582ba887ff92128054929ca425e8df">triton::engines::symbolic::UNDEFINED_VARIABLE</a>, 0, node-&gt;getBitvectorSize()));</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;          this-&gt;hash2var.insert({tmpResult.getOutput()-&gt;getHash(), subvar});</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;          this-&gt;var2expr.insert({subvar, tmpResult.getOutput()});</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        }</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <span class="keywordflow">return</span> subvar;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;      }</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;      <span class="keywordtype">void</span> Synthesizer::substituteSubExpression(<span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; node) {</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        std::stack&lt;triton::ast::AbstractNode*&gt;                worklist;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        std::unordered_set&lt;const triton::ast::AbstractNode*&gt;  visited;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> Synthesizer::symbolizeSubExpression(<span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; node, SynthesisResult&amp; tmpResult) {</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <a class="code" href="group__ast.html#gafd6a94ab829d378f1270057ea80f2d05">triton::ast::SharedAstContext</a> actx      = node-&gt;getContext();</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> subvar  = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160; </div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keyword">auto</span> it =  this-&gt;hash2var.find(tmpResult.getOutput()-&gt;getHash());</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">if</span> (it != this-&gt;hash2var.end()) {</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;          <span class="comment">/* If we already symbolized the node, return its symbolic variable */</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;          subvar = it-&gt;second;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        }</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;          <span class="comment">/* Otherwise we create a new symbolic variable for this sub expression */</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;          subvar = actx-&gt;variable(this-&gt;symbolic-&gt;<a class="code" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#acd8487cbfcc9deb8a0ae5692259a7924">newSymbolicVariable</a>(<a class="code" href="group__symbolic.html#ggadbf01c67aa57b3840f5e4211c754a87eac3582ba887ff92128054929ca425e8df">triton::engines::symbolic::UNDEFINED_VARIABLE</a>, 0, node-&gt;getBitvectorSize()));</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;          this-&gt;hash2var.insert({tmpResult.getOutput()-&gt;getHash(), subvar});</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;          this-&gt;var2expr.insert({subvar, tmpResult.getOutput()});</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        }</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">return</span> subvar;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;      }</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        worklist.push(node.get());</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordflow">while</span> (!worklist.empty()) {</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;          <span class="keyword">auto</span> current = worklist.top();</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;          worklist.pop();</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      <span class="keywordtype">void</span> Synthesizer::substituteSubExpression(<span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; node) {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        std::stack&lt;triton::ast::AbstractNode*&gt;                worklist;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        std::unordered_set&lt;const triton::ast::AbstractNode*&gt;  visited;</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;          <span class="comment">// This means that node is already visited and we will not need to visited it second time</span></div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;          <span class="keywordflow">if</span> (visited.find(current) != visited.end()) {</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;          }</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;          visited.insert(current);</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;          <span class="comment">// Unroll reference</span></div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;          <span class="keywordflow">if</span> (current-&gt;getType() == <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faeed75b6519f5f7f8ad767237d29067d0">triton::ast::REFERENCE_NODE</a>) {</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            worklist.push(<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classtriton_1_1ast_1_1ReferenceNode.html">triton::ast::ReferenceNode</a>*<span class="keyword">&gt;</span>(current)-&gt;getSymbolicExpression()-&gt;getAst().get());</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;          }</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;          <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            <a class="code" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> index = 0;</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : current-&gt;getChildren()) {</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;              <span class="keywordflow">if</span> (child-&gt;getType() == <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa1c21cae130c094aac225df42d632828e">triton::ast::VARIABLE_NODE</a>) {</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                <span class="keyword">auto</span> it =  this-&gt;var2expr.find(child);</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                <span class="keywordflow">if</span> (it != this-&gt;var2expr.end()) {</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                  <span class="keyword">auto</span> subexpr = this-&gt;var2expr[child];</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                  current-&gt;setChild(index, subexpr);</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                  worklist.push(subexpr.get());</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                }</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;              }</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;              <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;                worklist.push(child.get());</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;              }</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;              index++;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            }</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;          }</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        }</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;      }</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    }; <span class="comment">/* synthesis namespace */</span></div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  }; <span class="comment">/* engines namespace */</span></div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        worklist.push(node.get());</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keywordflow">while</span> (!worklist.empty()) {</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;          <span class="keyword">auto</span> current = worklist.top();</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;          worklist.pop();</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;          <span class="comment">// This means that node is already visited and we will not need to visited it second time</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;          <span class="keywordflow">if</span> (visited.find(current) != visited.end()) {</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;          }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;          visited.insert(current);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;          <span class="comment">// Unroll reference</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;          <span class="keywordflow">if</span> (current-&gt;getType() == <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faeed75b6519f5f7f8ad767237d29067d0">triton::ast::REFERENCE_NODE</a>) {</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            worklist.push(<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classtriton_1_1ast_1_1ReferenceNode.html">triton::ast::ReferenceNode</a>*<span class="keyword">&gt;</span>(current)-&gt;getSymbolicExpression()-&gt;getAst().get());</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;          }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;          <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            <a class="code" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> index = 0;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : current-&gt;getChildren()) {</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;              <span class="keywordflow">if</span> (child-&gt;getType() == <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa1c21cae130c094aac225df42d632828e">triton::ast::VARIABLE_NODE</a>) {</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                <span class="keyword">auto</span> it =  this-&gt;var2expr.find(child);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                <span class="keywordflow">if</span> (it != this-&gt;var2expr.end()) {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;                  <span class="keyword">auto</span> subexpr = this-&gt;var2expr[child];</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;                  current-&gt;setChild(index, subexpr);</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;                  worklist.push(subexpr.get());</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                }</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;              }</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;              <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                worklist.push(child.get());</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;              }</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;              index++;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            }</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;          }</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        }</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;      }</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    }; <span class="comment">/* synthesis namespace */</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  }; <span class="comment">/* engines namespace */</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
 <div class="ttc" id="aast_8hpp_html"><div class="ttname"><a href="ast_8hpp.html">ast.hpp</a></div></div>
 <div class="ttc" id="aclasstriton_1_1ast_1_1AbstractNode_html_a2d5819a091068eff580cf99a3b8c6f7f"><div class="ttname"><a href="classtriton_1_1ast_1_1AbstractNode.html#a2d5819a091068eff580cf99a3b8c6f7f">triton::ast::AbstractNode::getContext</a></div><div class="ttdeci">TRITON_EXPORT SharedAstContext getContext(void) const</div><div class="ttdoc">Access to its context.</div><div class="ttdef"><b>Definition:</b> <a href="ast_8cpp_source.html#l00049">ast.cpp:49</a></div></div>
 <div class="ttc" id="aclasstriton_1_1ast_1_1ReferenceNode_html"><div class="ttname"><a href="classtriton_1_1ast_1_1ReferenceNode.html">triton::ast::ReferenceNode</a></div><div class="ttdoc">Reference node.</div><div class="ttdef"><b>Definition:</b> <a href="ast_8hpp_source.html#l00743">ast.hpp:743</a></div></div>
