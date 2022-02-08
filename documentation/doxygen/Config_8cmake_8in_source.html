@@ -82,17 +82,22 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;include(&quot;${CMAKE_CURRENT_LIST_DIR}/tritonTargets.cmake&quot;)</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;set(TRITON_VERSION              @VERSION_MAJOR@.@VERSION_MINOR@)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;set(TRITON_ARCHIVE              &quot;@CMAKE_INSTALL_PREFIX@/lib/@CMAKE_STATIC_LIBRARY_PREFIX@triton@CMAKE_STATIC_LIBRARY_SUFFIX@&quot;)</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;set(TRITON_BITWUZLA_INTERFACE   @BITWUZLA_INTERFACE@)</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;set(TRITON_LLVM_INTERFACE       @LLVM_INTERFACE@)</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;set(TRITON_Z3_INTERFACE         @Z3_INTERFACE@)</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;set(TRITON_INCLUDE_DIRS         &quot;@CMAKE_INSTALL_PREFIX@/include&quot;)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;set(TRITON_BUILD_SHARED_LIBS    @BUILD_SHARED_LIBS@)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;set(TRITON_INCLUDE_DIRS         &quot;@CMAKE_INSTALL_PREFIX@/include&quot;)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;set(TRITON_INSTALL_PREFIX       @CMAKE_INSTALL_PREFIX@)</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;set(TRITON_LIBRARY              &quot;@CMAKE_INSTALL_PREFIX@/lib/@CMAKE_SHARED_LIBRARY_PREFIX@triton@CMAKE_SHARED_LIBRARY_SUFFIX@&quot;)</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;message(STATUS &quot;Found Triton: ${CMAKE_CURRENT_LIST_DIR}/tritonConfig.cmake (found version ${TRITON_VERSION})&quot;)</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;include(CMakeFindDependencyMacro)</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;find_dependency(Boost)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;set(TRITON_LLVM_INTERFACE       @LLVM_INTERFACE@)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;set(TRITON_MSVC_STATIC          @MSVC_STATIC@)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;set(TRITON_PYTHON_BINDINGS      @PYTHON_BINDINGS@)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;set(TRITON_VERSION              @VERSION_MAJOR@.@VERSION_MINOR@)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;set(TRITON_Z3_INTERFACE         @Z3_INTERFACE@)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;message(STATUS &quot;Found Triton: ${CMAKE_CURRENT_LIST_DIR}/tritonConfig.cmake (found version ${TRITON_VERSION})&quot;)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;include(CMakeFindDependencyMacro)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;find_dependency(Boost)</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.14-->
 <!-- start footer part -->

@@ -119,10 +119,22 @@ TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="
 TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#ae83ecb14fd367536c3d7b60d87df1d8a">isMMX</a> (<a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a> regId) const</td></tr>
 <tr class="memdesc:ae83ecb14fd367536c3d7b60d87df1d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if regId is a MMX register. <br /></td></tr>
 <tr class="separator:ae83ecb14fd367536c3d7b60d87df1d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ddf6792cc3e52e5146bf8bf444cc893"><td class="memItemLeft" align="right" valign="top"><a id="a1ddf6792cc3e52e5146bf8bf444cc893"></a>
+TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a1ddf6792cc3e52e5146bf8bf444cc893">isSTX</a> (<a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a> regId) const</td></tr>
+<tr class="memdesc:a1ddf6792cc3e52e5146bf8bf444cc893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if regId is a STX register. <br /></td></tr>
+<tr class="separator:a1ddf6792cc3e52e5146bf8bf444cc893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b8109325c9fffdbae85ed92bace2cab"><td class="memItemLeft" align="right" valign="top"><a id="a6b8109325c9fffdbae85ed92bace2cab"></a>
 TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a6b8109325c9fffdbae85ed92bace2cab">isSSE</a> (<a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a> regId) const</td></tr>
 <tr class="memdesc:a6b8109325c9fffdbae85ed92bace2cab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if regId is a SSE register. <br /></td></tr>
 <tr class="separator:a6b8109325c9fffdbae85ed92bace2cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0b4755e55b68fb4962ed0eb645b6025"><td class="memItemLeft" align="right" valign="top"><a id="ad0b4755e55b68fb4962ed0eb645b6025"></a>
+TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#ad0b4755e55b68fb4962ed0eb645b6025">isFPU</a> (<a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a> regId) const</td></tr>
+<tr class="memdesc:ad0b4755e55b68fb4962ed0eb645b6025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if regId is a FPU register. <br /></td></tr>
+<tr class="separator:ad0b4755e55b68fb4962ed0eb645b6025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2b8659bba92625b8f3c21a47adfc25"><td class="memItemLeft" align="right" valign="top"><a id="a3d2b8659bba92625b8f3c21a47adfc25"></a>
+TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a3d2b8659bba92625b8f3c21a47adfc25">isEFER</a> (<a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a> regId) const</td></tr>
+<tr class="memdesc:a3d2b8659bba92625b8f3c21a47adfc25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if regId is an EFER register. <br /></td></tr>
+<tr class="separator:a3d2b8659bba92625b8f3c21a47adfc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a571e79a7aaec687f68575a57307b23d3"><td class="memItemLeft" align="right" valign="top"><a id="a571e79a7aaec687f68575a57307b23d3"></a>
 TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a571e79a7aaec687f68575a57307b23d3">isAVX256</a> (<a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a> regId) const</td></tr>
 <tr class="memdesc:a571e79a7aaec687f68575a57307b23d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if regId is a AVX-256 (YMM) register. <br /></td></tr>
@@ -338,38 +350,38 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#afd86e3849e54fb60dedaeb1a771e0d88">eflags</a> [<a class="el" href="group__size.html#ga3767b52e059640458d61798d32dd91cf">triton::size::dword</a>]</td></tr>
 <tr class="memdesc:afd86e3849e54fb60dedaeb1a771e0d88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of eflags. <br /></td></tr>
 <tr class="separator:afd86e3849e54fb60dedaeb1a771e0d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada451d71d871c67b33175591aa7c19ef"><td class="memItemLeft" align="right" valign="top"><a id="ada451d71d871c67b33175591aa7c19ef"></a>
-<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#ada451d71d871c67b33175591aa7c19ef">mm0</a> [<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td></tr>
-<tr class="memdesc:ada451d71d871c67b33175591aa7c19ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of mm0. <br /></td></tr>
-<tr class="separator:ada451d71d871c67b33175591aa7c19ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fdc884a46ac66f52d05b0ef30f8c2f3"><td class="memItemLeft" align="right" valign="top"><a id="a8fdc884a46ac66f52d05b0ef30f8c2f3"></a>
-<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a8fdc884a46ac66f52d05b0ef30f8c2f3">mm1</a> [<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td></tr>
-<tr class="memdesc:a8fdc884a46ac66f52d05b0ef30f8c2f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of mm1. <br /></td></tr>
-<tr class="separator:a8fdc884a46ac66f52d05b0ef30f8c2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c6a716eeca537d32bd7d1093bf44a67"><td class="memItemLeft" align="right" valign="top"><a id="a8c6a716eeca537d32bd7d1093bf44a67"></a>
-<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a8c6a716eeca537d32bd7d1093bf44a67">mm2</a> [<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td></tr>
-<tr class="memdesc:a8c6a716eeca537d32bd7d1093bf44a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of mm2. <br /></td></tr>
-<tr class="separator:a8c6a716eeca537d32bd7d1093bf44a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17c08c0f4d19cc38a5a683e6acf02281"><td class="memItemLeft" align="right" valign="top"><a id="a17c08c0f4d19cc38a5a683e6acf02281"></a>
-<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a17c08c0f4d19cc38a5a683e6acf02281">mm3</a> [<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td></tr>
-<tr class="memdesc:a17c08c0f4d19cc38a5a683e6acf02281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of mm3. <br /></td></tr>
-<tr class="separator:a17c08c0f4d19cc38a5a683e6acf02281"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49257c26834e2a70742cd2db068a9e64"><td class="memItemLeft" align="right" valign="top"><a id="a49257c26834e2a70742cd2db068a9e64"></a>
-<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a49257c26834e2a70742cd2db068a9e64">mm4</a> [<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td></tr>
-<tr class="memdesc:a49257c26834e2a70742cd2db068a9e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of mm4. <br /></td></tr>
-<tr class="separator:a49257c26834e2a70742cd2db068a9e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1a22dd09b0896f179adf5cf8f6cc402"><td class="memItemLeft" align="right" valign="top"><a id="ae1a22dd09b0896f179adf5cf8f6cc402"></a>
-<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#ae1a22dd09b0896f179adf5cf8f6cc402">mm5</a> [<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td></tr>
-<tr class="memdesc:ae1a22dd09b0896f179adf5cf8f6cc402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of mm5. <br /></td></tr>
-<tr class="separator:ae1a22dd09b0896f179adf5cf8f6cc402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91f41a9d0f9ce92165669759d07f4881"><td class="memItemLeft" align="right" valign="top"><a id="a91f41a9d0f9ce92165669759d07f4881"></a>
-<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a91f41a9d0f9ce92165669759d07f4881">mm6</a> [<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td></tr>
-<tr class="memdesc:a91f41a9d0f9ce92165669759d07f4881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of mm6. <br /></td></tr>
-<tr class="separator:a91f41a9d0f9ce92165669759d07f4881"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a213e5985ef5767717a4dc2dd6b03ac85"><td class="memItemLeft" align="right" valign="top"><a id="a213e5985ef5767717a4dc2dd6b03ac85"></a>
-<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a213e5985ef5767717a4dc2dd6b03ac85">mm7</a> [<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td></tr>
-<tr class="memdesc:a213e5985ef5767717a4dc2dd6b03ac85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of mm7. <br /></td></tr>
-<tr class="separator:a213e5985ef5767717a4dc2dd6b03ac85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa7e8a7a1b999975f7d908038893400"><td class="memItemLeft" align="right" valign="top"><a id="aafa7e8a7a1b999975f7d908038893400"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#aafa7e8a7a1b999975f7d908038893400">st0</a> [<a class="el" href="group__size.html#ga2537cbbe77b9f4e76a3e77877e6bb985">triton::size::fword</a>]</td></tr>
+<tr class="memdesc:aafa7e8a7a1b999975f7d908038893400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of st0. <br /></td></tr>
+<tr class="separator:aafa7e8a7a1b999975f7d908038893400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a2e2dd1407fa34e67bd367e36801f27"><td class="memItemLeft" align="right" valign="top"><a id="a0a2e2dd1407fa34e67bd367e36801f27"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a0a2e2dd1407fa34e67bd367e36801f27">st1</a> [<a class="el" href="group__size.html#ga2537cbbe77b9f4e76a3e77877e6bb985">triton::size::fword</a>]</td></tr>
+<tr class="memdesc:a0a2e2dd1407fa34e67bd367e36801f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of st1. <br /></td></tr>
+<tr class="separator:a0a2e2dd1407fa34e67bd367e36801f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ff84bcec9615cdd56a1ab491a50830"><td class="memItemLeft" align="right" valign="top"><a id="a97ff84bcec9615cdd56a1ab491a50830"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a97ff84bcec9615cdd56a1ab491a50830">st2</a> [<a class="el" href="group__size.html#ga2537cbbe77b9f4e76a3e77877e6bb985">triton::size::fword</a>]</td></tr>
+<tr class="memdesc:a97ff84bcec9615cdd56a1ab491a50830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of st2. <br /></td></tr>
+<tr class="separator:a97ff84bcec9615cdd56a1ab491a50830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf8c8b099d28c3026af41c57a1062b9f"><td class="memItemLeft" align="right" valign="top"><a id="aaf8c8b099d28c3026af41c57a1062b9f"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#aaf8c8b099d28c3026af41c57a1062b9f">st3</a> [<a class="el" href="group__size.html#ga2537cbbe77b9f4e76a3e77877e6bb985">triton::size::fword</a>]</td></tr>
+<tr class="memdesc:aaf8c8b099d28c3026af41c57a1062b9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of st3. <br /></td></tr>
+<tr class="separator:aaf8c8b099d28c3026af41c57a1062b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48fe4055edf50c38d834bad3f07ae5bf"><td class="memItemLeft" align="right" valign="top"><a id="a48fe4055edf50c38d834bad3f07ae5bf"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a48fe4055edf50c38d834bad3f07ae5bf">st4</a> [<a class="el" href="group__size.html#ga2537cbbe77b9f4e76a3e77877e6bb985">triton::size::fword</a>]</td></tr>
+<tr class="memdesc:a48fe4055edf50c38d834bad3f07ae5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of st4. <br /></td></tr>
+<tr class="separator:a48fe4055edf50c38d834bad3f07ae5bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a715725b338c8eb39375c83da169fcad7"><td class="memItemLeft" align="right" valign="top"><a id="a715725b338c8eb39375c83da169fcad7"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a715725b338c8eb39375c83da169fcad7">st5</a> [<a class="el" href="group__size.html#ga2537cbbe77b9f4e76a3e77877e6bb985">triton::size::fword</a>]</td></tr>
+<tr class="memdesc:a715725b338c8eb39375c83da169fcad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of st5. <br /></td></tr>
+<tr class="separator:a715725b338c8eb39375c83da169fcad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b4751fc59776b0637771f02f624071"><td class="memItemLeft" align="right" valign="top"><a id="a33b4751fc59776b0637771f02f624071"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a33b4751fc59776b0637771f02f624071">st6</a> [<a class="el" href="group__size.html#ga2537cbbe77b9f4e76a3e77877e6bb985">triton::size::fword</a>]</td></tr>
+<tr class="memdesc:a33b4751fc59776b0637771f02f624071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of st6. <br /></td></tr>
+<tr class="separator:a33b4751fc59776b0637771f02f624071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30da5f318cf78b9fccdb5d3279c1c1a2"><td class="memItemLeft" align="right" valign="top"><a id="a30da5f318cf78b9fccdb5d3279c1c1a2"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a30da5f318cf78b9fccdb5d3279c1c1a2">st7</a> [<a class="el" href="group__size.html#ga2537cbbe77b9f4e76a3e77877e6bb985">triton::size::fword</a>]</td></tr>
+<tr class="memdesc:a30da5f318cf78b9fccdb5d3279c1c1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of st7. <br /></td></tr>
+<tr class="separator:a30da5f318cf78b9fccdb5d3279c1c1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e6df5a9aa9aa22f35c153436c35010d"><td class="memItemLeft" align="right" valign="top"><a id="a8e6df5a9aa9aa22f35c153436c35010d"></a>
 <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a8e6df5a9aa9aa22f35c153436c35010d">ymm0</a> [<a class="el" href="group__size.html#gafb9ef9cbb5dbd3a8a5d470d3ef932ad5">triton::size::qqword</a>]</td></tr>
 <tr class="memdesc:a8e6df5a9aa9aa22f35c153436c35010d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of ymm0. <br /></td></tr>
@@ -402,10 +414,6 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a77b7b3dd22259ac10131b6648ae4e92a">ymm7</a> [<a class="el" href="group__size.html#gafb9ef9cbb5dbd3a8a5d470d3ef932ad5">triton::size::qqword</a>]</td></tr>
 <tr class="memdesc:a77b7b3dd22259ac10131b6648ae4e92a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of ymm7. <br /></td></tr>
 <tr class="separator:a77b7b3dd22259ac10131b6648ae4e92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b22a776f8d2bd773a9748e751f61509"><td class="memItemLeft" align="right" valign="top"><a id="a2b22a776f8d2bd773a9748e751f61509"></a>
-<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a2b22a776f8d2bd773a9748e751f61509">mxcsr</a> [<a class="el" href="group__size.html#ga3767b52e059640458d61798d32dd91cf">triton::size::dword</a>]</td></tr>
-<tr class="memdesc:a2b22a776f8d2bd773a9748e751f61509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of mxcsr. <br /></td></tr>
-<tr class="separator:a2b22a776f8d2bd773a9748e751f61509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af64f2f7fff144851eeb91f1bdc91fea6"><td class="memItemLeft" align="right" valign="top"><a id="af64f2f7fff144851eeb91f1bdc91fea6"></a>
 <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#af64f2f7fff144851eeb91f1bdc91fea6">cr0</a> [<a class="el" href="group__size.html#ga3767b52e059640458d61798d32dd91cf">triton::size::dword</a>]</td></tr>
 <tr class="memdesc:af64f2f7fff144851eeb91f1bdc91fea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of cr0. <br /></td></tr>
@@ -518,6 +526,50 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a0d9c7691b56b71d0c039eded6d49abc7">dr7</a> [<a class="el" href="group__size.html#ga3767b52e059640458d61798d32dd91cf">triton::size::dword</a>]</td></tr>
 <tr class="memdesc:a0d9c7691b56b71d0c039eded6d49abc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Condete value of dr7. <br /></td></tr>
 <tr class="separator:a0d9c7691b56b71d0c039eded6d49abc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a8dfca26605b69c001499cf76e85b0"><td class="memItemLeft" align="right" valign="top"><a id="a69a8dfca26605b69c001499cf76e85b0"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a69a8dfca26605b69c001499cf76e85b0">fcw</a> [<a class="el" href="group__size.html#ga662b099dc69eb803f859f457a922615a">triton::size::word</a>]</td></tr>
+<tr class="memdesc:a69a8dfca26605b69c001499cf76e85b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the x87 FPU Control Word. <br /></td></tr>
+<tr class="separator:a69a8dfca26605b69c001499cf76e85b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726dcbef62c8b6db164910878838654d"><td class="memItemLeft" align="right" valign="top"><a id="a726dcbef62c8b6db164910878838654d"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a726dcbef62c8b6db164910878838654d">fsw</a> [<a class="el" href="group__size.html#ga662b099dc69eb803f859f457a922615a">triton::size::word</a>]</td></tr>
+<tr class="memdesc:a726dcbef62c8b6db164910878838654d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the x87 FPU Status Word. <br /></td></tr>
+<tr class="separator:a726dcbef62c8b6db164910878838654d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a684dc596fe87b803d78a98e463538555"><td class="memItemLeft" align="right" valign="top"><a id="a684dc596fe87b803d78a98e463538555"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a684dc596fe87b803d78a98e463538555">ftw</a> [<a class="el" href="group__size.html#ga662b099dc69eb803f859f457a922615a">triton::size::word</a>]</td></tr>
+<tr class="memdesc:a684dc596fe87b803d78a98e463538555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the x87 FPU Tag Word. <br /></td></tr>
+<tr class="separator:a684dc596fe87b803d78a98e463538555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e15cb1a4cc76dbd520288d9e42f1f79"><td class="memItemLeft" align="right" valign="top"><a id="a4e15cb1a4cc76dbd520288d9e42f1f79"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a4e15cb1a4cc76dbd520288d9e42f1f79">fop</a> [<a class="el" href="group__size.html#ga662b099dc69eb803f859f457a922615a">triton::size::word</a>]</td></tr>
+<tr class="memdesc:a4e15cb1a4cc76dbd520288d9e42f1f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the x87 FPU Opcode. <br /></td></tr>
+<tr class="separator:a4e15cb1a4cc76dbd520288d9e42f1f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae410e61cfeb4490934a46baac45c3ece"><td class="memItemLeft" align="right" valign="top"><a id="ae410e61cfeb4490934a46baac45c3ece"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#ae410e61cfeb4490934a46baac45c3ece">fip</a> [<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td></tr>
+<tr class="memdesc:ae410e61cfeb4490934a46baac45c3ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the x87 FPU <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used when to represent an instruction.">Instruction</a> Pointer Offset. <br /></td></tr>
+<tr class="separator:ae410e61cfeb4490934a46baac45c3ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92621ecc1966f157f885905592789906"><td class="memItemLeft" align="right" valign="top"><a id="a92621ecc1966f157f885905592789906"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a92621ecc1966f157f885905592789906">fcs</a> [<a class="el" href="group__size.html#ga662b099dc69eb803f859f457a922615a">triton::size::word</a>]</td></tr>
+<tr class="memdesc:a92621ecc1966f157f885905592789906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the x87 FPU <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used when to represent an instruction.">Instruction</a> Pointer Selector. <br /></td></tr>
+<tr class="separator:a92621ecc1966f157f885905592789906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330f5ab65522e6509a045f49f50c2de2"><td class="memItemLeft" align="right" valign="top"><a id="a330f5ab65522e6509a045f49f50c2de2"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a330f5ab65522e6509a045f49f50c2de2">fdp</a> [<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td></tr>
+<tr class="memdesc:a330f5ab65522e6509a045f49f50c2de2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the x87 FPU <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used when to represent an instruction.">Instruction</a> Operand Pointer Offset. <br /></td></tr>
+<tr class="separator:a330f5ab65522e6509a045f49f50c2de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3235cbd7d5621e6feaebe94186d64169"><td class="memItemLeft" align="right" valign="top"><a id="a3235cbd7d5621e6feaebe94186d64169"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a3235cbd7d5621e6feaebe94186d64169">fds</a> [<a class="el" href="group__size.html#ga662b099dc69eb803f859f457a922615a">triton::size::word</a>]</td></tr>
+<tr class="memdesc:a3235cbd7d5621e6feaebe94186d64169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the x87 FPU <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used when to represent an instruction.">Instruction</a> Operand Pointer Selector. <br /></td></tr>
+<tr class="separator:a3235cbd7d5621e6feaebe94186d64169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098578f46fe22b87a553e7db09f7d32e"><td class="memItemLeft" align="right" valign="top"><a id="a098578f46fe22b87a553e7db09f7d32e"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a098578f46fe22b87a553e7db09f7d32e">efer</a> [<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td></tr>
+<tr class="memdesc:a098578f46fe22b87a553e7db09f7d32e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the EFER MSR <a class="el" href="classtriton_1_1arch_1_1Register.html" title="This class is used when an instruction has a register operand.">Register</a>. <br /></td></tr>
+<tr class="separator:a098578f46fe22b87a553e7db09f7d32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b22a776f8d2bd773a9748e751f61509"><td class="memItemLeft" align="right" valign="top"><a id="a2b22a776f8d2bd773a9748e751f61509"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a2b22a776f8d2bd773a9748e751f61509">mxcsr</a> [<a class="el" href="group__size.html#ga3767b52e059640458d61798d32dd91cf">triton::size::dword</a>]</td></tr>
+<tr class="memdesc:a2b22a776f8d2bd773a9748e751f61509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the SSE <a class="el" href="classtriton_1_1arch_1_1Register.html" title="This class is used when an instruction has a register operand.">Register</a> State. <br /></td></tr>
+<tr class="separator:a2b22a776f8d2bd773a9748e751f61509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860afd71ebff039c27a21aa1c3be7e76"><td class="memItemLeft" align="right" valign="top"><a id="a860afd71ebff039c27a21aa1c3be7e76"></a>
+<a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a860afd71ebff039c27a21aa1c3be7e76">mxcsr_mask</a> [<a class="el" href="group__size.html#ga3767b52e059640458d61798d32dd91cf">triton::size::dword</a>]</td></tr>
+<tr class="memdesc:a860afd71ebff039c27a21aa1c3be7e76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the SSE <a class="el" href="classtriton_1_1arch_1_1Register.html" title="This class is used when an instruction has a register operand.">Register</a> State Mask. <br /></td></tr>
+<tr class="separator:a860afd71ebff039c27a21aa1c3be7e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classtriton_1_1arch_1_1x86_1_1x86Specifications"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classtriton_1_1arch_1_1x86_1_1x86Specifications')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Specifications.html">triton::arch::x86::x86Specifications</a></td></tr>
 <tr class="memitem:a7c26e6b3a0faf09d22104503287265d2 inherit pro_attribs_classtriton_1_1arch_1_1x86_1_1x86Specifications"><td class="memItemLeft" align="right" valign="top"><a id="a7c26e6b3a0faf09d22104503287265d2"></a>
 std::unordered_map&lt; <a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a>, const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Specifications.html#a7c26e6b3a0faf09d22104503287265d2">id2reg</a></td></tr>
@@ -571,7 +623,7 @@ std::unordered_map&lt; std::string, <a class="el" href="group__arch.html#gaba5d7
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a00fa084b0cdc95ea20efeaa50dce8f01">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00689">689</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00796">796</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -620,7 +672,7 @@ std::unordered_map&lt; std::string, <a class="el" href="group__arch.html#gaba5d7
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#abc0167387c5ae1eb6fd73c3f7942f2a5">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00697">697</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00804">804</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -663,7 +715,7 @@ std::unordered_map&lt; std::string, <a class="el" href="group__arch.html#gaba5d7
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ad6f554cd771f71d5e1e3ad3dbe7bffb5">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00668">668</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00775">775</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -706,7 +758,7 @@ std::unordered_map&lt; std::string, <a class="el" href="group__arch.html#gaba5d7
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#aee1b128f7310426dd678fc4ffe7c8a41">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00661">661</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00768">768</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -749,7 +801,7 @@ std::unordered_map&lt; std::string, <a class="el" href="group__arch.html#gaba5d7
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a4437496fd5d8875c73f51da0f2150910">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00705">705</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00812">812</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
