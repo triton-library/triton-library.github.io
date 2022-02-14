@@ -93,14 +93,14 @@ Public Member Functions</h2></td></tr>
 TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1lifters_1_1LiftingToLLVM.html#a8cb125cc092798efadf24f3185a2ede6">LiftingToLLVM</a> ()</td></tr>
 <tr class="memdesc:a8cb125cc092798efadf24f3185a2ede6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
 <tr class="separator:a8cb125cc092798efadf24f3185a2ede6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22b19675fd181fba1201956111d628c5"><td class="memItemLeft" align="right" valign="top"><a id="a22b19675fd181fba1201956111d628c5"></a>
-TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1lifters_1_1LiftingToLLVM.html#a22b19675fd181fba1201956111d628c5">liftToLLVM</a> (std::ostream &amp;stream, const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a> &amp;expr)</td></tr>
-<tr class="memdesc:a22b19675fd181fba1201956111d628c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lifts a symbolic expression and all its references to LLVM format. <br /></td></tr>
-<tr class="separator:a22b19675fd181fba1201956111d628c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8679f022b7b375e8bb31a5ef8b742718"><td class="memItemLeft" align="right" valign="top"><a id="a8679f022b7b375e8bb31a5ef8b742718"></a>
-TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1lifters_1_1LiftingToLLVM.html#a8679f022b7b375e8bb31a5ef8b742718">liftToLLVM</a> (std::ostream &amp;stream, const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node)</td></tr>
-<tr class="memdesc:a8679f022b7b375e8bb31a5ef8b742718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lifts a abstract node and all its references to LLVM format. <br /></td></tr>
-<tr class="separator:a8679f022b7b375e8bb31a5ef8b742718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f1dd6a488ff53d7d691ed2f0fa1bdb"><td class="memItemLeft" align="right" valign="top"><a id="ad4f1dd6a488ff53d7d691ed2f0fa1bdb"></a>
+TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1lifters_1_1LiftingToLLVM.html#ad4f1dd6a488ff53d7d691ed2f0fa1bdb">liftToLLVM</a> (std::ostream &amp;stream, const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a> &amp;expr, const char *fname=&quot;__triton&quot;, bool optimize=false)</td></tr>
+<tr class="memdesc:ad4f1dd6a488ff53d7d691ed2f0fa1bdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lifts a symbolic expression and all its references to LLVM format. <code>fname</code> represents the name of the LLVM function. <br /></td></tr>
+<tr class="separator:ad4f1dd6a488ff53d7d691ed2f0fa1bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa640a88102c1a58c838de3f72d343fcc"><td class="memItemLeft" align="right" valign="top"><a id="aa640a88102c1a58c838de3f72d343fcc"></a>
+TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1lifters_1_1LiftingToLLVM.html#aa640a88102c1a58c838de3f72d343fcc">liftToLLVM</a> (std::ostream &amp;stream, const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node, const char *fname=&quot;__triton&quot;, bool optimize=false)</td></tr>
+<tr class="memdesc:aa640a88102c1a58c838de3f72d343fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lifts a abstract node and all its references to LLVM format. <code>fname</code> represents the name of the LLVM function. <br /></td></tr>
+<tr class="separator:aa640a88102c1a58c838de3f72d343fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The lifting to LLVM class. </p>
