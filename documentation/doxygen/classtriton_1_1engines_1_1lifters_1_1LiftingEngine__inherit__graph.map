@@ -1,5 +1,0 @@
-<map id="triton::engines::lifters::LiftingEngine" name="triton::engines::lifters::LiftingEngine">
-<area shape="rect" id="node1" title="The lifting engine class." alt="" coords="97,95,259,136"/>
-<area shape="rect" id="node2" href="$classtriton_1_1engines_1_1lifters_1_1LiftingToSMT.html" title="The lifting to SMT class." alt="" coords="5,5,167,47"/>
-<area shape="rect" id="node3" href="$classtriton_1_1engines_1_1lifters_1_1LiftingToPython.html" title="The lifting to Python class." alt="" coords="191,5,352,47"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="triton::arch::arm::aarch64::AArch64Specifications" name="triton::arch::arm::aarch64::AArch64Specifications">
-<area shape="rect" id="node1" title="The AArch64Specifications class defines specifications about the AArch64 CPU." alt="" coords="5,5,232,47"/>
-<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html" title="This class is used to describe the ARM (64&#45;bits) spec." alt="" coords="38,95,199,136"/>
-</map>

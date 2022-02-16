@@ -1,6 +1,0 @@
-<map id="triton::arch::BitsVector" name="triton::arch::BitsVector">
-<area shape="rect" id="node1" title="This class is used to deal with registers and memory as bits vector." alt="" coords="219,5,385,32"/>
-<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1Immediate.html" title="This class is used to represent an immediate." alt="" coords="5,80,177,107"/>
-<area shape="rect" id="node3" href="$classtriton_1_1arch_1_1MemoryAccess.html" title="This class is used to represent a memory access." alt="" coords="202,80,402,107"/>
-<area shape="rect" id="node4" href="$classtriton_1_1arch_1_1Register.html" title="This class is used when an instruction has a register operand." alt="" coords="426,80,581,107"/>
-</map>

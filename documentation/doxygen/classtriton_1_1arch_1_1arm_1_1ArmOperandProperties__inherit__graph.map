@@ -1,5 +1,0 @@
-<map id="triton::arch::arm::ArmOperandProperties" name="triton::arch::arm::ArmOperandProperties">
-<area shape="rect" id="node1" title="This class is used to represent specific properties of an Arm operand." alt="" coords="99,5,270,47"/>
-<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1Immediate.html" title="This class is used to represent an immediate." alt="" coords="5,95,177,121"/>
-<area shape="rect" id="node3" href="$classtriton_1_1arch_1_1Register.html" title="This class is used when an instruction has a register operand." alt="" coords="202,95,357,121"/>
-</map>
