@@ -1,0 +1,7 @@
+<map id="triton::arch::CpuInterface" name="triton::arch::CpuInterface">
+<area shape="rect" id="node1" title="This interface is used as abstract CPU interface. All CPU must use this interface." alt="" coords="5,111,189,138"/>
+<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html" title="This class is used to describe the ARM (64&#45;bits) spec." alt="" coords="237,5,399,47"/>
+<area shape="rect" id="node3" href="$classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html" title="This class is used to describe the ARM (32&#45;bits) spec." alt="" coords="248,71,388,112"/>
+<area shape="rect" id="node4" href="$classtriton_1_1arch_1_1x86_1_1x8664Cpu.html" title="This class is used to describe the x86 (64&#45;bits) spec." alt="" coords="251,136,385,177"/>
+<area shape="rect" id="node5" href="$classtriton_1_1arch_1_1x86_1_1x86Cpu.html" title="This class is used to describe the x86 (32&#45;bits) spec." alt="" coords="251,201,385,243"/>
+</map>

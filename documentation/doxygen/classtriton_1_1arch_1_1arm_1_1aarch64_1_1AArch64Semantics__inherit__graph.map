@@ -1,0 +1,4 @@
+<map id="triton::arch::arm::aarch64::AArch64Semantics" name="triton::arch::arm::aarch64::AArch64Semantics">
+<area shape="rect" id="node1" title="The AArch64 ISA semantics." alt="" coords="17,80,221,121"/>
+<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1SemanticsInterface.html" title="This interface is used as abstract semantics interface. All ISA semantics must use this interface." alt="" coords="5,5,232,32"/>
+</map>

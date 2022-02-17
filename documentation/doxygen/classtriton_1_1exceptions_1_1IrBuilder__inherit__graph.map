@@ -1,0 +1,6 @@
+<map id="triton::exceptions::IrBuilder" name="triton::exceptions::IrBuilder">
+<area shape="rect" id="node1" title="The exception class used by the IR builder." alt="" coords="5,259,141,300"/>
+<area shape="rect" id="node2" href="$classtriton_1_1exceptions_1_1Architecture.html" title="The exception class used by architectures." alt="" coords="5,169,141,211"/>
+<area shape="rect" id="node3" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="5,80,141,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="16,5,131,32"/>
+</map>

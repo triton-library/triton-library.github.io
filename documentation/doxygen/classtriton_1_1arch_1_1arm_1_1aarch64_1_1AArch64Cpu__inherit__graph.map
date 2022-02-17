@@ -1,0 +1,5 @@
+<map id="triton::arch::arm::aarch64::AArch64Cpu" name="triton::arch::arm::aarch64::AArch64Cpu">
+<area shape="rect" id="node1" title="This class is used to describe the ARM (64&#45;bits) spec." alt="" coords="131,95,293,136"/>
+<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1CpuInterface.html" title="This interface is used as abstract CPU interface. All CPU must use this interface." alt="" coords="5,13,189,39"/>
+<area shape="rect" id="node3" href="$classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Specifications.html" title="The AArch64Specifications class defines specifications about the AArch64 CPU." alt="" coords="213,5,440,47"/>
+</map>

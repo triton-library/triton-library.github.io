@@ -1,0 +1,5 @@
+<map id="triton::arch::arm::arm32::Arm32Cpu" name="triton::arch::arm::arm32::Arm32Cpu">
+<area shape="rect" id="node1" title="This class is used to describe the ARM (32&#45;bits) spec." alt="" coords="137,95,277,136"/>
+<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1CpuInterface.html" title="This interface is used as abstract CPU interface. All CPU must use this interface." alt="" coords="5,13,189,39"/>
+<area shape="rect" id="node3" href="$classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Specifications.html" title="The Arm32Specifications class defines specifications about the Arm32 CPU." alt="" coords="213,5,419,47"/>
+</map>
