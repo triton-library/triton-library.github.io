@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1521</span>
+   &#160;<span id="projectnumber">version 1.0 build 1522</span>
    </div>
   </td>
  </tr>
@@ -106,17 +106,17 @@ Description</h1>
 <div class="line">&gt;&gt;&gt; <span class="keywordflow">for</span> expr <span class="keywordflow">in</span> inst.getSymbolicExpressions():</div>
 <div class="line">...     print(expr)</div>
 <div class="line">...</div>
-<div class="line">(define-fun ref!0 () (_ BitVec 64) (bvxor (_ bv12345 64) (_ bv67890 64))) ; XOR operation - 0x400000: xor rax, rdx</div>
-<div class="line">(define-fun ref!1 () (_ BitVec 1) (_ bv0 1)) ; Clears carry flag - 0x400000: xor rax, rdx</div>
-<div class="line">(define-fun ref!2 () (_ BitVec 1) (_ bv0 1)) ; Clears overflow flag - 0x400000: xor rax, rdx</div>
-<div class="line">(define-fun ref!3 () (_ BitVec 1) (bvxor (bvxor (bvxor (bvxor (bvxor (bvxor (bvxor (bvxor (_ bv1 1) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv0 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv1 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv2 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv3 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv4 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv5 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv6 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv7 8))))) ; Parity flag - 0x400000: xor rax, rdx</div>
-<div class="line">(define-fun ref!4 () (_ BitVec 1) ((_ extract 63 63) ref!0)) ; Sign flag - 0x400000: xor rax, rdx</div>
-<div class="line">(define-fun ref!5 () (_ BitVec 1) (ite (= ref!0 (_ bv0 64)) (_ bv1 1) (_ bv0 1))) ; Zero flag - 0x400000: xor rax, rdx</div>
-<div class="line">(define-fun ref!6 () (_ BitVec 64) (_ bv4194307 64)) ; Program Counter - 0x400000: xor rax, rdx</div>
+<div class="line">(define-fun ref!0 () (_ BitVec 64) (bvxor (_ bv12345 64) (_ bv67890 64))) ; XOR operation</div>
+<div class="line">(define-fun ref!1 () (_ BitVec 1) (_ bv0 1)) ; Clears carry flag</div>
+<div class="line">(define-fun ref!2 () (_ BitVec 1) (_ bv0 1)) ; Clears overflow flag</div>
+<div class="line">(define-fun ref!3 () (_ BitVec 1) (bvxor (bvxor (bvxor (bvxor (bvxor (bvxor (bvxor (bvxor (_ bv1 1) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv0 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv1 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv2 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv3 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv4 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv5 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv6 8)))) ((_ extract 0 0) (bvlshr ((_ extract 7 0) ref!0) (_ bv7 8))))) ; Parity flag</div>
+<div class="line">(define-fun ref!4 () (_ BitVec 1) ((_ extract 63 63) ref!0)) ; Sign flag</div>
+<div class="line">(define-fun ref!5 () (_ BitVec 1) (ite (= ref!0 (_ bv0 64)) (_ bv1 1) (_ bv0 1))) ; Zero flag</div>
+<div class="line">(define-fun ref!6 () (_ BitVec 64) (_ bv4194307 64)) ; Program Counter</div>
 <div class="line"> </div>
 <div class="line">&gt;&gt;&gt; expr_1 = inst.getSymbolicExpressions()[0]</div>
 <div class="line">&gt;&gt;&gt; print(expr_1)</div>
-<div class="line">(define-fun ref!0 () (_ BitVec 64) (bvxor (_ bv12345 64) (_ bv67890 64))) ; XOR operation - 0x400000: xor rax, rdx</div>
+<div class="line">(define-fun ref!0 () (_ BitVec 64) (bvxor (_ bv12345 64) (_ bv67890 64))) ; XOR operation</div>
 <div class="line"> </div>
 <div class="line">&gt;&gt;&gt; print(expr_1.getId())</div>
 <div class="line">0</div>
@@ -134,6 +134,9 @@ Description</h1>
 <div class="line"> </div>
 <div class="line">&gt;&gt;&gt; print(expr_1.getOrigin())</div>
 <div class="line">rax:64 bv[63..0]</div>
+<div class="line"> </div>
+<div class="line">&gt;&gt;&gt; print(expr_1.getDisassembly())</div>
+<div class="line">0x400000: xor rax, rdx</div>
 </div><!-- fragment --><h1><a class="anchor" id="SymbolicExpression_py_api"></a>
 Python API - Methods of the SymbolicExpression class</h1>
 <hr  />
@@ -142,6 +145,8 @@ Python API - Methods of the SymbolicExpression class</h1>
  Returns the AST root node of the symbolic expression.</li>
 <li><b>string getComment(void)</b><br  />
  Returns the comment (if exists) of the symbolic expression.</li>
+<li><b>string getDisassembly(void)</b><br  />
+ Returns the instruction disassembly where the symbolic expression comes from.</li>
 <li><b>integer getId(void)</b><br  />
  Returns the id of the symbolic expression. This id is always unique.<br  />
  e.g: <code>2387</code></li>

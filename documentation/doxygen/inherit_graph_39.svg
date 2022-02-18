@@ -35,9 +35,9 @@
 <path fill="none" stroke="midnightblue" d="M147.1,-53.15C155.69,-51.9 164.39,-50.63 172.85,-49.39"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="146.47,-49.71 137.08,-54.62 147.48,-56.64 146.47,-49.71"/>
 </g>
-<!-- Node151 -->
+<!-- Node152 -->
 <g id="node3" class="node">
-<title>Node151</title>
+<title>Node152</title>
 <g id="a_node3"><a xlink:href="classtriton_1_1engines_1_1symbolic_1_1SymbolicSimplification.html" target="_top" xlink:title="The symbolic simplification class.">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-30.5 137,-30.5 137,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::engines::symbolic</text>
@@ -45,9 +45,9 @@
 </a>
 </g>
 </g>
-<!-- Node151&#45;&gt;Node1 -->
+<!-- Node152&#45;&gt;Node1 -->
 <g id="edge2" class="edge">
-<title>Node151&#45;&gt;Node1</title>
+<title>Node152&#45;&gt;Node1</title>
 <path fill="none" stroke="midnightblue" d="M147.1,-26.39C155.69,-27.6 164.39,-28.82 172.85,-30"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="147.47,-22.91 137.08,-24.99 146.5,-29.84 147.47,-22.91"/>
 </g>

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1521</span>
+   &#160;<span id="projectnumber">version 1.0 build 1522</span>
    </div>
   </td>
  </tr>
@@ -253,6 +253,10 @@ Methods</h2>
  Returns true if the taint engine is enabled.</li>
 <li><b>bool isThumb(void)</b><br  />
  Returns true if execution mode is Thumb (only valid for ARM32).</li>
+<li><b>string liftToDot(<a class="el" href="py_AstNode_page.html">AstNode</a> node)</b><br  />
+ Lifts an AST and all its references to Dot format.</li>
+<li><b>string liftToDot(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr)</b><br  />
+ Lifts a symbolic expression and all its references to Dot format.</li>
 <li><b>string liftToLLVM(<a class="el" href="py_AstNode_page.html">AstNode</a> node, string fname="__triton", bool optimize=False)</b><br  />
  Lifts an AST node and all its references to LLVM IR. <code>fname</code> is the name of the LLVM function, by default it's <code>__triton</code>. If <code>optimize</code> is true, perform optimizations (-O3 -Oz).</li>
 <li><b>string liftToLLVM(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr, string fname="__triton", bool optimize=False)</b><br  />

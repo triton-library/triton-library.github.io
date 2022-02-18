@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1521</span>
+   &#160;<span id="projectnumber">version 1.0 build 1522</span>
    </div>
   </td>
  </tr>
@@ -750,6 +750,14 @@ TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bott
 TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a3ebce5f266e23f0e5d26e601e1b22201">liftToSMT</a> (std::ostream &amp;stream, const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a> &amp;expr, bool assert_)</td></tr>
 <tr class="memdesc:a3ebce5f266e23f0e5d26e601e1b22201"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>lifting api</b>] - Lifts a symbolic expression and all its references to SMT format. If <code>assert_</code> is true, then (assert &lt;expr&gt;). <br /></td></tr>
 <tr class="separator:a3ebce5f266e23f0e5d26e601e1b22201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af78b4554e6a5f436365ec36503082a9f"><td class="memItemLeft" align="right" valign="top"><a id="af78b4554e6a5f436365ec36503082a9f"></a>
+TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#af78b4554e6a5f436365ec36503082a9f">liftToDot</a> (std::ostream &amp;stream, const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node)</td></tr>
+<tr class="memdesc:af78b4554e6a5f436365ec36503082a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>lifting api</b>] - Lifts an AST and all its references to Dot format. <br /></td></tr>
+<tr class="separator:af78b4554e6a5f436365ec36503082a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62795f9a86fa3808dbdff73814c8eb3c"><td class="memItemLeft" align="right" valign="top"><a id="a62795f9a86fa3808dbdff73814c8eb3c"></a>
+TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a62795f9a86fa3808dbdff73814c8eb3c">liftToDot</a> (std::ostream &amp;stream, const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a> &amp;expr)</td></tr>
+<tr class="memdesc:a62795f9a86fa3808dbdff73814c8eb3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>lifting api</b>] - Lifts a symbolic expression and all its references to Dot format. <br /></td></tr>
+<tr class="separator:a62795f9a86fa3808dbdff73814c8eb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ef1131c7b3eaf9d4d216d50018b0ad2"><td class="memItemLeft" align="right" valign="top"><a id="a6ef1131c7b3eaf9d4d216d50018b0ad2"></a>
 TRITON_EXPORT <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a6ef1131c7b3eaf9d4d216d50018b0ad2">simplifyAstViaLLVM</a> (const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node) const</td></tr>
 <tr class="memdesc:a6ef1131c7b3eaf9d4d216d50018b0ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>lifting api</b>] - Lifts and simplify an AST using LLVM <br /></td></tr>
