@@ -4,7 +4,10 @@
 <area shape="rect" id="node3" href="$synthesizer_8hpp.html" title=" " alt="" coords="307,109,533,165"/>
 <area shape="rect" id="node4" href="$synthesizer_8cpp.html" title=" " alt="" coords="177,213,425,269"/>
 <area shape="rect" id="node5" href="$api_8hpp.html" title=" " alt="" coords="450,213,627,269"/>
-<area shape="rect" id="node6" href="$api_8cpp.html" title=" " alt="" coords="246,325,423,381"/>
-<area shape="rect" id="node7" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="448,317,629,388"/>
-<area shape="rect" id="node8" href="$callbacks_8cpp.html" title=" " alt="" coords="653,325,832,381"/>
+<area shape="rect" id="node6" href="$api_8cpp.html" title=" " alt="" coords="143,325,321,381"/>
+<area shape="rect" id="node7" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="345,317,527,388"/>
+<area shape="rect" id="node8" href="$callbacks_8cpp.html" title=" " alt="" coords="551,325,729,381"/>
+<area shape="rect" id="node9" href="$llvmToTriton_8hpp.html" title=" " alt="" coords="754,325,985,381"/>
+<area shape="rect" id="node10" href="$llvmToTriton_8cpp.html" title=" " alt="" coords="656,436,845,492"/>
+<area shape="rect" id="node11" href="$liftingToLLVM_8cpp.html" title=" " alt="" coords="869,436,1104,492"/>
 </map>

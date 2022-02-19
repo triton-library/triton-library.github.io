@@ -89,19 +89,27 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:acb288a36dd14305a312f1f7445e274a2"><td class="memItemLeft" align="right" valign="top"><a id="acb288a36dd14305a312f1f7445e274a2"></a>
+TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1LLVMToTriton.html#acb288a36dd14305a312f1f7445e274a2">LLVMToTriton</a> (<a class="el" href="classtriton_1_1API.html">triton::API</a> &amp;api)</td></tr>
+<tr class="memdesc:acb288a36dd14305a312f1f7445e274a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
+<tr class="separator:acb288a36dd14305a312f1f7445e274a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4af92245a5f40a2f2dc3cbeacc2784bd"><td class="memItemLeft" align="right" valign="top"><a id="a4af92245a5f40a2f2dc3cbeacc2784bd"></a>
 TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1LLVMToTriton.html#a4af92245a5f40a2f2dc3cbeacc2784bd">LLVMToTriton</a> (const <a class="el" href="group__ast.html#gafd6a94ab829d378f1270057ea80f2d05">triton::ast::SharedAstContext</a> &amp;ctxt)</td></tr>
 <tr class="memdesc:a4af92245a5f40a2f2dc3cbeacc2784bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
 <tr class="separator:a4af92245a5f40a2f2dc3cbeacc2784bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b73bc4f8c0d3e072580652c6c5828f3"><td class="memItemLeft" align="right" valign="top"><a id="a3b73bc4f8c0d3e072580652c6c5828f3"></a>
 TRITON_EXPORT <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1LLVMToTriton.html#a3b73bc4f8c0d3e072580652c6c5828f3">convert</a> (llvm::Module *llvmModule, const char *fname=&quot;__triton&quot;)</td></tr>
-<tr class="memdesc:a3b73bc4f8c0d3e072580652c6c5828f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts to Triton's AST. <br /></td></tr>
+<tr class="memdesc:a3b73bc4f8c0d3e072580652c6c5828f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a given function from an LLVM module to a Triton AST. <br /></td></tr>
 <tr class="separator:a3b73bc4f8c0d3e072580652c6c5828f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c5338abfef036548267974afcc165e3"><td class="memItemLeft" align="right" valign="top"><a id="a8c5338abfef036548267974afcc165e3"></a>
+TRITON_EXPORT <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1LLVMToTriton.html#a8c5338abfef036548267974afcc165e3">convert</a> (llvm::Value *instruction)</td></tr>
+<tr class="memdesc:a8c5338abfef036548267974afcc165e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an LLVM instruction function to a Triton AST. <br /></td></tr>
+<tr class="separator:a8c5338abfef036548267974afcc165e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Converts a LLVM IR to a Triton AST. </p>
 
-<p class="definition">Definition at line <a class="el" href="llvmToTriton_8hpp_source.html#l00044">44</a> of file <a class="el" href="llvmToTriton_8hpp_source.html">llvmToTriton.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="llvmToTriton_8hpp_source.html#l00041">41</a> of file <a class="el" href="llvmToTriton_8hpp_source.html">llvmToTriton.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/<a class="el" href="llvmToTriton_8hpp_source.html">llvmToTriton.hpp</a></li>
 <li>/home/jonathan/Works/Tools/Triton/src/libtriton/ast/llvm/<a class="el" href="llvmToTriton_8cpp_source.html">llvmToTriton.cpp</a></li>

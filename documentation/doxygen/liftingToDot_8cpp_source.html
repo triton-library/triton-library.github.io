@@ -455,40 +455,56 @@ $(function() {
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;          <span class="comment">/* Link the current node with its children */</span></div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; child : node-&gt;getChildren()) {</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            <span class="comment">/* Custom repr for references */</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            <span class="comment">/* Handle reference repr */</span></div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            <span class="keywordflow">if</span> (child-&gt;getType() == <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64faeed75b6519f5f7f8ad767237d29067d0">triton::ast::REFERENCE_NODE</a>) {</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;              <span class="keyword">auto</span> ref = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classtriton_1_1ast_1_1ReferenceNode.html">triton::ast::ReferenceNode</a>*<span class="keyword">&gt;</span>(child.get())-&gt;getSymbolicExpression()-&gt;getAst();</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;              stream &lt;&lt; reinterpret_cast&lt;size_t&gt;(node.get()) &lt;&lt; <span class="stringliteral">&quot;-&gt;&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(ref.get()) &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;              <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            }</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            <span class="comment">/* Variables are displayed on several nodes for a better visibility */</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            <span class="keywordflow">if</span> (child-&gt;getType() == <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa1c21cae130c094aac225df42d632828e">triton::ast::VARIABLE_NODE</a>) {</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;              this-&gt;uniqueid++;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;              stream &lt;&lt; this-&gt;uniqueid &lt;&lt; <span class="stringliteral">&quot; [label=\&quot;&quot;</span> &lt;&lt; child &lt;&lt; <span class="stringliteral">&quot;\&quot; rank=max style=filled, color=black, fillcolor=lightgreen];&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;              stream &lt;&lt; reinterpret_cast&lt;size_t&gt;(node.get()) &lt;&lt; <span class="stringliteral">&quot;-&gt;&quot;</span> &lt;&lt; this-&gt;uniqueid &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;              <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            }</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;              this-&gt;handleReference(stream, node, child);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            }</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            <span class="comment">/* Handle variable repr */</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (child-&gt;getType() == <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa1c21cae130c094aac225df42d632828e">triton::ast::VARIABLE_NODE</a>) {</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;              this-&gt;handleVariable(stream, node, child);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            }</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            <span class="comment">/* Link by default */</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;              stream &lt;&lt; reinterpret_cast&lt;size_t&gt;(node.get()) &lt;&lt; <span class="stringliteral">&quot;-&gt;&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(child.get()) &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;          }</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        }</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            <span class="comment">/* Link by default */</span></div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            stream &lt;&lt; reinterpret_cast&lt;size_t&gt;(node.get()) &lt;&lt; <span class="stringliteral">&quot;-&gt;&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(child.get()) &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;          }</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="comment">/* Link the legend to the root node */</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="keywordflow">if</span> (this-&gt;expressions.empty() == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;          stream &lt;&lt; <span class="stringliteral">&quot;legend-&gt;&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(root.get()) &lt;&lt; <span class="stringliteral">&quot; [style=dotted]&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        }</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="comment">/* Link the legend to the root node */</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <span class="keywordflow">if</span> (this-&gt;expressions.empty() == <span class="keyword">false</span>) {</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;          stream &lt;&lt; <span class="stringliteral">&quot;legend-&gt;&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(root.get()) &lt;&lt; <span class="stringliteral">&quot; [style=dotted]&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        }</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="comment">/* Epilogue of Dot format */</span></div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        stream &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordflow">return</span> stream;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;      }</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    }; <span class="comment">/* lifters namespace */</span></div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  }; <span class="comment">/* engines namespace */</span></div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="comment">/* Epilogue of Dot format */</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        stream &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">return</span> stream;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;      }</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;      <span class="keywordtype">void</span> LiftingToDot::handleReference(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; parent, <span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; child) {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keyword">auto</span> ref = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classtriton_1_1ast_1_1ReferenceNode.html">triton::ast::ReferenceNode</a>*<span class="keyword">&gt;</span>(child.get())-&gt;getSymbolicExpression()-&gt;getAst();</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <span class="keywordflow">if</span> (ref-&gt;getType() == <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa1c21cae130c094aac225df42d632828e">triton::ast::VARIABLE_NODE</a>) {</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;          this-&gt;handleVariable(stream, parent, ref);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        }</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;          stream &lt;&lt; reinterpret_cast&lt;size_t&gt;(parent.get()) &lt;&lt; <span class="stringliteral">&quot;-&gt;&quot;</span> &lt;&lt; <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(ref.get()) &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        }</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;      }</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;      <span class="keywordtype">void</span> LiftingToDot::handleVariable(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; parent, <span class="keyword">const</span> <a class="code" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; child) {</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="comment">/* Variables are displayed on several nodes for a better visibility */</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        this-&gt;uniqueid++;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        stream &lt;&lt; this-&gt;uniqueid &lt;&lt; <span class="stringliteral">&quot; [label=\&quot;&quot;</span> &lt;&lt; child &lt;&lt; <span class="stringliteral">&quot;\&quot; rank=max style=filled, color=black, fillcolor=lightgreen];&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        stream &lt;&lt; reinterpret_cast&lt;size_t&gt;(parent.get()) &lt;&lt; <span class="stringliteral">&quot;-&gt;&quot;</span> &lt;&lt; this-&gt;uniqueid &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;      }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    }; <span class="comment">/* lifters namespace */</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  }; <span class="comment">/* engines namespace */</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
 <div class="ttc" id="aastEnums_8hpp_html"><div class="ttname"><a href="astEnums_8hpp.html">astEnums.hpp</a></div></div>
 <div class="ttc" id="aclasstriton_1_1ast_1_1IntegerNode_html"><div class="ttname"><a href="classtriton_1_1ast_1_1IntegerNode.html">triton::ast::IntegerNode</a></div><div class="ttdoc">Integer node.</div><div class="ttdef"><b>Definition:</b> <a href="ast_8hpp_source.html#l00644">ast.hpp:644</a></div></div>
 <div class="ttc" id="aclasstriton_1_1ast_1_1ReferenceNode_html"><div class="ttname"><a href="classtriton_1_1ast_1_1ReferenceNode.html">triton::ast::ReferenceNode</a></div><div class="ttdoc">Reference node.</div><div class="ttdef"><b>Definition:</b> <a href="ast_8hpp_source.html#l00743">ast.hpp:743</a></div></div>
