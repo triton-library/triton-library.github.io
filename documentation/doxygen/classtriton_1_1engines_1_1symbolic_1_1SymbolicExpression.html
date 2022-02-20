@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1522</span>
+   &#160;<span id="projectnumber">version 1.0 build 1524</span>
    </div>
   </td>
  </tr>
@@ -149,11 +149,11 @@ TRITON_EXPORT std::string&#160;</td><td class="memItemRight" valign="bottom"><a 
 <tr class="separator:a7240be822e180449111e1020bf34bf49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7814a240c502a9ca424a1ac845b57e20"><td class="memItemLeft" align="right" valign="top"><a id="a7814a240c502a9ca424a1ac845b57e20"></a>
 TRITON_EXPORT const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html#a7814a240c502a9ca424a1ac845b57e20">getOriginMemory</a> (void) const</td></tr>
-<tr class="memdesc:a7814a240c502a9ca424a1ac845b57e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the origin memory access if <code>kind</code> is equal to <code>triton::engines::symbolic::MEM</code>, invalid memory otherwise. <br /></td></tr>
+<tr class="memdesc:a7814a240c502a9ca424a1ac845b57e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the origin memory access if <code>kind</code> is equal to <code><a class="el" href="group__symbolic.html#gga75473b76e53f754da0affbc706468929a9e72d38056c31f07f2d9b2d653308dac" title="Assigned to a memory expression.">triton::engines::symbolic::MEMORY_EXPRESSION</a></code>, invalid memory otherwise. <br /></td></tr>
 <tr class="separator:a7814a240c502a9ca424a1ac845b57e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76865f5408b36855f3266c1ce332c4dd"><td class="memItemLeft" align="right" valign="top"><a id="a76865f5408b36855f3266c1ce332c4dd"></a>
 TRITON_EXPORT const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html#a76865f5408b36855f3266c1ce332c4dd">getOriginRegister</a> (void) const</td></tr>
-<tr class="memdesc:a76865f5408b36855f3266c1ce332c4dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the origin register if <code>kind</code> is equal to <code>triton::engines::symbolic::REG</code>, <code>REG_INVALID</code> otherwise. <br /></td></tr>
+<tr class="memdesc:a76865f5408b36855f3266c1ce332c4dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the origin register if <code>kind</code> is equal to <code><a class="el" href="group__symbolic.html#gga75473b76e53f754da0affbc706468929a2456c242d005fb5ddf9e934ed94145eb" title="Assigned to a register expression.">triton::engines::symbolic::REGISTER_EXPRESSION</a></code>, invalid register otherwise. <br /></td></tr>
 <tr class="separator:a76865f5408b36855f3266c1ce332c4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a406889f2143267b26bcd90441ed83665"><td class="memItemLeft" align="right" valign="top"><a id="a406889f2143267b26bcd90441ed83665"></a>
 TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html#a406889f2143267b26bcd90441ed83665">setAst</a> (const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node)</td></tr>
@@ -215,11 +215,11 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="separator:a2ea8313aae57ca6c9a67bcd47bee79f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa552aa1e82a1fcae68f256ac367a8332"><td class="memItemLeft" align="right" valign="top"><a id="aa552aa1e82a1fcae68f256ac367a8332"></a>
 <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html#aa552aa1e82a1fcae68f256ac367a8332">originMemory</a></td></tr>
-<tr class="memdesc:aa552aa1e82a1fcae68f256ac367a8332"><td class="mdescLeft">&#160;</td><td class="mdescRight">The origin memory address if <code>kind</code> is equal to <code>triton::engines::symbolic::MEM</code>, invalid memory otherwise. <br /></td></tr>
+<tr class="memdesc:aa552aa1e82a1fcae68f256ac367a8332"><td class="mdescLeft">&#160;</td><td class="mdescRight">The origin memory address if <code>type</code> is equal to <code>triton::engines::symbolic::MEM</code>, invalid memory otherwise. <br /></td></tr>
 <tr class="separator:aa552aa1e82a1fcae68f256ac367a8332"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a858172ab5e72c7562ef20c9b5d118b73"><td class="memItemLeft" align="right" valign="top"><a id="a858172ab5e72c7562ef20c9b5d118b73"></a>
 <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html#a858172ab5e72c7562ef20c9b5d118b73">originRegister</a></td></tr>
-<tr class="memdesc:a858172ab5e72c7562ef20c9b5d118b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">The origin register if <code>kind</code> is equal to <code>triton::engines::symbolic::REG</code>, <code>REG_INVALID</code> otherwise. <br /></td></tr>
+<tr class="memdesc:a858172ab5e72c7562ef20c9b5d118b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">The origin register if <code>type</code> is equal to <code>triton::engines::symbolic::REG</code>, <code>REG_INVALID</code> otherwise. <br /></td></tr>
 <tr class="separator:a858172ab5e72c7562ef20c9b5d118b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
