@@ -97,11 +97,12 @@ TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab7e3af21c0fe4e56e07a8a9ef5d7c35a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1synthesis_1_1ConstantEntry.html#ab7e3af21c0fe4e56e07a8a9ef5d7c35a">op</a></td></tr>
-<tr class="memdesc:ab7e3af21c0fe4e56e07a8a9ef5d7c35a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Example: bvadd.  <a href="classtriton_1_1engines_1_1synthesis_1_1ConstantEntry.html#ab7e3af21c0fe4e56e07a8a9ef5d7c35a">More...</a><br /></td></tr>
+<tr class="memitem:ab7e3af21c0fe4e56e07a8a9ef5d7c35a"><td class="memItemLeft" align="right" valign="top"><a id="ab7e3af21c0fe4e56e07a8a9ef5d7c35a"></a>
+<a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1synthesis_1_1ConstantEntry.html#ab7e3af21c0fe4e56e07a8a9ef5d7c35a">op</a></td></tr>
+<tr class="memdesc:ab7e3af21c0fe4e56e07a8a9ef5d7c35a"><td class="mdescLeft">&#160;</td><td class="mdescRight">AST operator. <br /></td></tr>
 <tr class="separator:ab7e3af21c0fe4e56e07a8a9ef5d7c35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22a89c29a5b5d381a6de30921ba9a941"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1synthesis_1_1ConstantEntry.html#a22a89c29a5b5d381a6de30921ba9a941">position</a></td></tr>
-<tr class="memdesc:a22a89c29a5b5d381a6de30921ba9a941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Example 1: c - x -&gt; 0 Example 2: x - c -&gt; 1.  <a href="classtriton_1_1engines_1_1synthesis_1_1ConstantEntry.html#a22a89c29a5b5d381a6de30921ba9a941">More...</a><br /></td></tr>
+<tr class="memdesc:a22a89c29a5b5d381a6de30921ba9a941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant position in the AST.  <a href="classtriton_1_1engines_1_1synthesis_1_1ConstantEntry.html#a22a89c29a5b5d381a6de30921ba9a941">More...</a><br /></td></tr>
 <tr class="separator:a22a89c29a5b5d381a6de30921ba9a941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -109,25 +110,6 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="oracleEntry_8hpp_source.html#l00042">42</a> of file <a class="el" href="oracleEntry_8hpp_source.html">oracleEntry.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="ab7e3af21c0fe4e56e07a8a9ef5d7c35a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7e3af21c0fe4e56e07a8a9ef5d7c35a">&#9670;&nbsp;</a></span>op</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> triton::engines::synthesis::ConstantEntry::op</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Example: bvadd. </p>
-<p>AST operator </p>
-
-<p class="definition">Definition at line <a class="el" href="oracleEntry_8hpp_source.html#l00046">46</a> of file <a class="el" href="oracleEntry_8hpp_source.html">oracleEntry.hpp</a>.</p>
-
-</div>
-</div>
 <a id="a22a89c29a5b5d381a6de30921ba9a941"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22a89c29a5b5d381a6de30921ba9a941">&#9670;&nbsp;</a></span>position</h2>
 
@@ -140,10 +122,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Example 1: c - x -&gt; 0 Example 2: x - c -&gt; 1. </p>
-<p>Constant position in the AST </p>
-
-<p class="definition">Definition at line <a class="el" href="oracleEntry_8hpp_source.html#l00053">53</a> of file <a class="el" href="oracleEntry_8hpp_source.html">oracleEntry.hpp</a>.</p>
+<p>Constant position in the AST. </p>
+<pre>
+Example 1: c - x -&gt; 0
+Example 2: x - c -&gt; 1
+</pre> 
+<p class="definition">Definition at line <a class="el" href="oracleEntry_8hpp_source.html#l00054">54</a> of file <a class="el" href="oracleEntry_8hpp_source.html">oracleEntry.hpp</a>.</p>
 
 </div>
 </div>

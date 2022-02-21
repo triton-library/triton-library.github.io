@@ -77,11 +77,6 @@ $(function() {
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#description_sec">Description</a></li>
 <li class="level1"><a href="#publications_sec">Presentations and Publications</a></li>
-<li class="level1"><a href="#install_sec">Installation</a><ul><li class="level2"><a href="#linux_install_sec">Linux Installation</a></li>
-<li class="level2"><a href="#osx_install_sec">OSX Installation</a></li>
-<li class="level2"><a href="#windows_install_sec">Windows Installation</a></li>
-</ul>
-</li>
 </ul>
 </div>
 <div class="textblock"><h1><a class="anchor" id="description_sec"></a>
@@ -176,64 +171,6 @@ Presentations and Publications</h1>
  <b>Auhtors</b>: Jonathan Salwan<br  />
  <b>Abstract</b>: <em>This talk is about binary analysis and instrumentation. We will see how it's possible to target a specific function, snapshot the context memory/registers before the function, translate the instrumentation into an intermediate representation,apply a taint analysis based on this IR, build/keep formulas for a Dynamic Symbolic Execution (DSE), generate a concrete value to go through a specific path, restore the context memory/register and generate another concrete value to go through another path then repeat this operation until the target function is covered.</em>  </li>
 </ul>
-<p><br  />
- </p><hr  />
- <h1><a class="anchor" id="install_sec"></a>
-Installation</h1>
-<p>To be able to compile Triton, you must install these libraries before:</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">lib name   </th><th class="markdownTableHeadNone">version    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a href="http://www.boost.org/">libboost</a>   </td><td class="markdownTableBodyNone">&gt;= 1.68    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a href="https://www.python.org/">libpython</a>   </td><td class="markdownTableBodyNone">&gt;= 3.6    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a href="https://github.com/Z3Prover/z3">libz3</a>   </td><td class="markdownTableBodyNone">&gt;= 4.6.0    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a href="http://www.capstone-engine.org/">libcapstone</a>   </td><td class="markdownTableBodyNone">&gt;= 4.0.x   </td></tr>
-</table>
-<p><br  />
- </p><hr  />
- <h2><a class="anchor" id="linux_install_sec"></a>
-Linux Installation</h2>
-<p>Once the libraries are installed, you can use <code>cmake</code> and <code>make</code> to build <code>libTriton</code>.</p>
-<div class="fragment"><div class="line">$ git clone https://github.com/JonathanSalwan/Triton.git</div>
-<div class="line">$ cd Triton</div>
-<div class="line">$ mkdir build</div>
-<div class="line">$ cd build</div>
-<div class="line">$ cmake ..</div>
-<div class="line">$ sudo make -j2 install</div>
-</div><!-- fragment --><p><br  />
- </p><hr  />
- <h2><a class="anchor" id="osx_install_sec"></a>
-OSX Installation</h2>
-<p>On OSX <code>cmake</code> might have some difficulties finding the correct Python include/library paths. You can run the following to build independent of your Python version:</p>
-<div class="fragment"><div class="line">$ brew install boost capstone z3</div>
-<div class="line">$ git clone https://github.com/JonathanSalwan/Triton.git</div>
-<div class="line">$ cd Triton</div>
-<div class="line">$ mkdir build</div>
-<div class="line">$ cd build</div>
-<div class="line">$ cmake $(echo &#39;from os.path import abspath, join; from sysconfig import get_path; print(&quot;-DPYTHON_INCLUDE_DIR=%s -DPYTHON_LIBRARY=%s&quot; % (get_path(&quot;include&quot;), abspath(join(get_path(&quot;platlib&quot;), &quot;../../libpython3.7.dylib&quot;))))&#39; | python3) ..</div>
-<div class="line">$ sudo make -j2 install</div>
-</div><!-- fragment --><p><br  />
- </p><hr  />
- <h2><a class="anchor" id="windows_install_sec"></a>
-Windows Installation</h2>
-<p>Once libraries installed, you can use <code>cmake</code> to generate the <code>.sln</code> file of <code>libTriton</code>.</p>
-<div class="fragment"><div class="line">&gt; git clone https://github.com/JonathanSalwan/Triton.git</div>
-<div class="line">&gt; cd Triton</div>
-<div class="line">&gt; mkdir build</div>
-<div class="line">&gt; cd build</div>
-<div class="line">&gt; cmake -G &quot;Visual Studio 14 2015 Win64&quot; \</div>
-<div class="line">  -DBOOST_ROOT=&quot;C:/Users/jonathan/Works/Tools/boost_1_61_0&quot; \</div>
-<div class="line">  -DPYTHON_INCLUDE_DIRS=&quot;C:/Python36/include&quot; \</div>
-<div class="line">  -DPYTHON_LIBRARIES=&quot;C:/Python36/libs/python36.lib&quot; \</div>
-<div class="line">  -DZ3_INCLUDE_DIRS=&quot;C:/Users/jonathan/Works/Tools/z3-4.6.0-x64-win/include&quot; \</div>
-<div class="line">  -DZ3_LIBRARIES=&quot;C:/Users/jonathan/Works/Tools/z3-4.6.0-x64-win/bin/libz3.lib&quot; \</div>
-<div class="line">  -DCAPSTONE_INCLUDE_DIRS=&quot;C:/Users/jonathan/Works/Tools/capstone-4.0.2-win64/include&quot; \</div>
-<div class="line">  -DCAPSTONE_LIBRARIES=&quot;C:/Users/jonathan/Works/Tools/capstone-4.0.2-win64/capstone.lib&quot; ..</div>
-</div><!-- fragment --><p>However, if you prefer to directly download precompiled libraries, check out our <a href="https://ci.appveyor.com/project/JonathanSalwan/triton/history">AppVeyor's artefacts</a>. Note that if you use AppVeyor's artefacts, you probably have to install the <a href="https://www.microsoft.com/en-US/download/details.aspx?id=30679">Visual C++ Redistributable</a> packages for Visual Studio 2012. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.14-->

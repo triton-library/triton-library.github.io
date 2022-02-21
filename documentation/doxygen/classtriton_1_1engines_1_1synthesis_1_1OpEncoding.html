@@ -98,10 +98,10 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ad7a7f37b696a767714a1e6f8c7d7d65b"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="group__ast.html#ga2b93cc7e19032f733c001c96530ef64f">triton::ast::ast_e</a>, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1synthesis_1_1OpEncoding.html#ad7a7f37b696a767714a1e6f8c7d7d65b">ops</a></td></tr>
-<tr class="memdesc:ad7a7f37b696a767714a1e6f8c7d7d65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Example 1: ((a + b) * a) -&gt; {BVADD, BVMUL} Example 2: (a + (b * a)) -&gt; {BVMUL, BVADD} Example 3: (a + (b + a)) -&gt; {BVADD, BVADD}.  <a href="classtriton_1_1engines_1_1synthesis_1_1OpEncoding.html#ad7a7f37b696a767714a1e6f8c7d7d65b">More...</a><br /></td></tr>
+<tr class="memdesc:ad7a7f37b696a767714a1e6f8c7d7d65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordering of operators.  <a href="classtriton_1_1engines_1_1synthesis_1_1OpEncoding.html#ad7a7f37b696a767714a1e6f8c7d7d65b">More...</a><br /></td></tr>
 <tr class="separator:ad7a7f37b696a767714a1e6f8c7d7d65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8771fdae1d0a04709f7a713c89e24674"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>, N+1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1synthesis_1_1OpEncoding.html#a8771fdae1d0a04709f7a713c89e24674">vars</a></td></tr>
-<tr class="memdesc:a8771fdae1d0a04709f7a713c89e24674"><td class="mdescLeft">&#160;</td><td class="mdescRight">Example 1: ((a + b) * a) -&gt; {0, 1, 0} Example 2: ((a + a) * a) -&gt; {0, 0, 0} Example 3: ((b + b) * a) -&gt; {1, 1, 0} Example 4: ((b + a) * b) -&gt; {1, 0, 1} Example 4: (b + (a * b)) -&gt; {0, 1, 1}.  <a href="classtriton_1_1engines_1_1synthesis_1_1OpEncoding.html#a8771fdae1d0a04709f7a713c89e24674">More...</a><br /></td></tr>
+<tr class="memdesc:a8771fdae1d0a04709f7a713c89e24674"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordering of variables.  <a href="classtriton_1_1engines_1_1synthesis_1_1OpEncoding.html#a8771fdae1d0a04709f7a713c89e24674">More...</a><br /></td></tr>
 <tr class="separator:a8771fdae1d0a04709f7a713c89e24674"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -109,12 +109,28 @@ Public Attributes</h2></td></tr>
 class triton::engines::synthesis::OpEncoding&lt; N &gt;</h3>
 
 <p>This class is used to encode operators and variables ordering. </p>
-<p>Example 1: ((a + b) * a) -&gt; OpEncoding&lt;2&gt;({BVADD, BVMUL}, {0, 1, 0})</p>
-<p>Example 2: (a + (b * a)) -&gt; OpEncoding&lt;2&gt;({BVMUL, BVADD}, {1, 0, 0})</p>
-<p>Example 3: (a + b) * (a - b) -&gt; OpEncoding&lt;3&gt;({BVMUL, BVADD, BVSUB}, {0, 1, 0, 1})</p>
-<p>Example for a trinary operator like bvadd(bvmul(x, x), y): { OpEncoding&lt;2&gt;({<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa22beeac1af01bf2db88df9c6bcb46991">triton::ast::BVADD_NODE</a>, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa194ca0131c232f848857d47d7e2fe23c">triton::ast::BVMUL_NODE</a>}, {0, 0, 1}), { BinaryEntry(8, 0x74, 0xe7, 0x77), BinaryEntry(16, 0x04c3, 0xd4d4, 0x815d), ... BinaryEntry(8, 0x98, 0x13, 0x53), BinaryEntry(16, 0x46dd, 0xc2dd, 0x5da6), ... BinaryEntry(8, 0x3f, 0xf4, 0x75), BinaryEntry(16, 0xa6b7, 0xac75, 0x8346), ... BinaryEntry(8, 0x26, 0xf0, 0x94), BinaryEntry(16, 0x31cd, 0x33c5, 0x51ee), ... BinaryEntry(8, 0x8e, 0x5e, 0x22), BinaryEntry(16, 0x77b8, 0xbba1, 0x4fe1), ... BinaryEntry(8, 0x48, 0x7c, 0xbc), BinaryEntry(16, 0x1c89, 0xed45, 0x2e96), ... BinaryEntry(8, 0x9f, 0x7b, 0x3c), BinaryEntry(16, 0xbfcc, 0xd906, 0xe396), ... BinaryEntry(8, 0x45, 0xe3, 0x7c), BinaryEntry(16, 0xd200, 0xb90c, 0xb90c), ... BinaryEntry(8, 0x16, 0x0a, 0xee), BinaryEntry(16, 0xd946, 0x9d22, 0x5c46), ... BinaryEntry(8, 0xed, 0x59, 0xc2), BinaryEntry(16, 0x1c7b, 0x810c, 0xa425), ... } } </p>
+<pre>
+ Example 1: ((a + b) * a)     -&gt; OpEncoding&lt;2&gt;({BVADD, BVMUL}, {0, 1, 0})
+ Example 2: (a + (b * a))     -&gt; OpEncoding&lt;2&gt;({BVMUL, BVADD}, {1, 0, 0})
+ Example 3: (a + b) * (a - b) -&gt; OpEncoding&lt;3&gt;({BVMUL, BVADD, BVSUB}, {0, 1, 0, 1})
 
-<p class="definition">Definition at line <a class="el" href="oracleEntry_8hpp_source.html#l00125">125</a> of file <a class="el" href="oracleEntry_8hpp_source.html">oracleEntry.hpp</a>.</p>
+ Example for a trinary operator like bvadd(bvmul(x, x), y):
+ {
+   OpEncoding&lt;2&gt;({<a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa22beeac1af01bf2db88df9c6bcb46991">triton::ast::BVADD_NODE</a>, <a class="el" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa194ca0131c232f848857d47d7e2fe23c">triton::ast::BVMUL_NODE</a>}, {0, 0, 1}), {
+     BinaryEntry(8, 0x74, 0xe7, 0x77), BinaryEntry(16, 0x04c3, 0xd4d4, 0x815d), ...
+     BinaryEntry(8, 0x98, 0x13, 0x53), BinaryEntry(16, 0x46dd, 0xc2dd, 0x5da6), ...
+     BinaryEntry(8, 0x3f, 0xf4, 0x75), BinaryEntry(16, 0xa6b7, 0xac75, 0x8346), ...
+     BinaryEntry(8, 0x26, 0xf0, 0x94), BinaryEntry(16, 0x31cd, 0x33c5, 0x51ee), ...
+     BinaryEntry(8, 0x8e, 0x5e, 0x22), BinaryEntry(16, 0x77b8, 0xbba1, 0x4fe1), ...
+     BinaryEntry(8, 0x48, 0x7c, 0xbc), BinaryEntry(16, 0x1c89, 0xed45, 0x2e96), ...
+     BinaryEntry(8, 0x9f, 0x7b, 0x3c), BinaryEntry(16, 0xbfcc, 0xd906, 0xe396), ...
+     BinaryEntry(8, 0x45, 0xe3, 0x7c), BinaryEntry(16, 0xd200, 0xb90c, 0xb90c), ...
+     BinaryEntry(8, 0x16, 0x0a, 0xee), BinaryEntry(16, 0xd946, 0x9d22, 0x5c46), ...
+     BinaryEntry(8, 0xed, 0x59, 0xc2), BinaryEntry(16, 0x1c7b, 0x810c, 0xa425), ...
+   }
+ }
+ </pre> 
+<p class="definition">Definition at line <a class="el" href="oracleEntry_8hpp_source.html#l00129">129</a> of file <a class="el" href="oracleEntry_8hpp_source.html">oracleEntry.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="ad7a7f37b696a767714a1e6f8c7d7d65b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7a7f37b696a767714a1e6f8c7d7d65b">&#9670;&nbsp;</a></span>ops</h2>
@@ -130,10 +146,13 @@ template&lt;std::size_t N&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Example 1: ((a + b) * a) -&gt; {BVADD, BVMUL} Example 2: (a + (b * a)) -&gt; {BVMUL, BVADD} Example 3: (a + (b + a)) -&gt; {BVADD, BVADD}. </p>
-<p>Ordering of operators </p>
-
-<p class="definition">Definition at line <a class="el" href="oracleEntry_8hpp_source.html#l00133">133</a> of file <a class="el" href="oracleEntry_8hpp_source.html">oracleEntry.hpp</a>.</p>
+<p>Ordering of operators. </p>
+<pre>
+Example 1: ((a + b) * a) -&gt; {BVADD, BVMUL}
+Example 2: (a + (b * a)) -&gt; {BVMUL, BVADD}
+Example 3: (a + (b + a)) -&gt; {BVADD, BVADD}
+</pre> 
+<p class="definition">Definition at line <a class="el" href="oracleEntry_8hpp_source.html#l00139">139</a> of file <a class="el" href="oracleEntry_8hpp_source.html">oracleEntry.hpp</a>.</p>
 
 </div>
 </div>
@@ -151,10 +170,15 @@ template&lt;std::size_t N&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Example 1: ((a + b) * a) -&gt; {0, 1, 0} Example 2: ((a + a) * a) -&gt; {0, 0, 0} Example 3: ((b + b) * a) -&gt; {1, 1, 0} Example 4: ((b + a) * b) -&gt; {1, 0, 1} Example 4: (b + (a * b)) -&gt; {0, 1, 1}. </p>
-<p>Ordering of variables </p>
-
-<p class="definition">Definition at line <a class="el" href="oracleEntry_8hpp_source.html#l00143">143</a> of file <a class="el" href="oracleEntry_8hpp_source.html">oracleEntry.hpp</a>.</p>
+<p>Ordering of variables. </p>
+<pre>
+Example 1: ((a + b) * a) -&gt; {0, 1, 0}
+Example 2: ((a + a) * a) -&gt; {0, 0, 0}
+Example 3: ((b + b) * a) -&gt; {1, 1, 0}
+Example 4: ((b + a) * b) -&gt; {1, 0, 1}
+Example 4: (b + (a * b)) -&gt; {0, 1, 1}
+</pre> 
+<p class="definition">Definition at line <a class="el" href="oracleEntry_8hpp_source.html#l00151">151</a> of file <a class="el" href="oracleEntry_8hpp_source.html">oracleEntry.hpp</a>.</p>
 
 </div>
 </div>
