@@ -131,10 +131,6 @@ Methods</h2>
  Disassembles a concrete memory area from <code>addr</code> and returns a list of at most <code>count</code> disassembled instructions.</li>
 <li><b>[<a class="el" href="py_Instruction_page.html">Instruction</a> inst, ...] disassembly(integer addr)</b><br  />
  Disassembles a concrete memory area from <code>addr</code> to control flow instruction and returns a list of disassembled instructions.</li>
-<li><b>void enableSymbolicEngine(bool flag)</b><br  />
- Enables or disables the symbolic execution engine.</li>
-<li><b>void enableTaintEngine(bool flag)</b><br  />
- Enables or disables the taint engine.</li>
 <li><b>integer evaluateAstViaSolver(<a class="el" href="py_AstNode_page.html">AstNode</a> node)</b><br  />
  Evaluates an AST via the solver and returns the concrete value.</li>
 <li><b>[<a class="el" href="py_Register_page.html">Register</a>, ...] getAllRegisters(void)</b><br  />
@@ -245,12 +241,8 @@ Methods</h2>
  Returns true if the register is valid.</li>
 <li><b>bool isSat(<a class="el" href="py_AstNode_page.html">AstNode</a> node)</b><br  />
  Returns true if an expression is satisfiable.</li>
-<li><b>bool isSymbolicEngineEnabled(void)</b><br  />
- Returns true if the symbolic execution engine is enabled.</li>
 <li><b>bool isSymbolicExpressionExists(integer symExprId)</b><br  />
  Returns true if the symbolic expression id exists.</li>
-<li><b>bool isTaintEngineEnabled(void)</b><br  />
- Returns true if the taint engine is enabled.</li>
 <li><b>bool isThumb(void)</b><br  />
  Returns true if execution mode is Thumb (only valid for ARM32).</li>
 <li><b>string liftToDot(<a class="el" href="py_AstNode_page.html">AstNode</a> node)</b><br  />

@@ -275,14 +275,6 @@ TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="
 TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af157a1cdfdf29392f82ceebfd41b0aba">concretizeRegister</a> (const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &amp;reg)</td></tr>
 <tr class="memdesc:af157a1cdfdf29392f82ceebfd41b0aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concretizes a specific symbolic register reference. <br /></td></tr>
 <tr class="separator:af157a1cdfdf29392f82ceebfd41b0aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17f7c629e5114fe5a082003d1cfcdcbf"><td class="memItemLeft" align="right" valign="top"><a id="a17f7c629e5114fe5a082003d1cfcdcbf"></a>
-TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a17f7c629e5114fe5a082003d1cfcdcbf">enable</a> (bool flag)</td></tr>
-<tr class="memdesc:a17f7c629e5114fe5a082003d1cfcdcbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the symbolic execution engine. <br /></td></tr>
-<tr class="separator:a17f7c629e5114fe5a082003d1cfcdcbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af74315dddbc9d5248d78ebd6acdb753f"><td class="memItemLeft" align="right" valign="top"><a id="af74315dddbc9d5248d78ebd6acdb753f"></a>
-TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af74315dddbc9d5248d78ebd6acdb753f">isEnabled</a> (void) const</td></tr>
-<tr class="memdesc:af74315dddbc9d5248d78ebd6acdb753f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the symbolic execution engine is enabled. <br /></td></tr>
-<tr class="separator:af74315dddbc9d5248d78ebd6acdb753f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31990d0571c389ca338055628f093a5b"><td class="memItemLeft" align="right" valign="top"><a id="a31990d0571c389ca338055628f093a5b"></a>
 TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a31990d0571c389ca338055628f093a5b">isSymbolicExpressionExists</a> (<a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> symExprId) const</td></tr>
 <tr class="memdesc:a31990d0571c389ca338055628f093a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the symbolic expression ID exists. <br /></td></tr>
@@ -388,10 +380,6 @@ TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a97e6227446b41c1e013bc4586d053700"><td class="memItemLeft" align="right" valign="top"><a id="a97e6227446b41c1e013bc4586d053700"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a97e6227446b41c1e013bc4586d053700">enableFlag</a></td></tr>
-<tr class="memdesc:a97e6227446b41c1e013bc4586d053700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines if the engine is enable or disable. <br /></td></tr>
-<tr class="separator:a97e6227446b41c1e013bc4586d053700"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb0d0793f364f36cfb37d575119d7d8e"><td class="memItemLeft" align="right" valign="top"><a id="adb0d0793f364f36cfb37d575119d7d8e"></a>
 <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#adb0d0793f364f36cfb37d575119d7d8e">numberOfRegisters</a></td></tr>
 <tr class="memdesc:adb0d0793f364f36cfb37d575119d7d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of registers. <br /></td></tr>
@@ -455,7 +443,7 @@ std::vector&lt; <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathCo
 <p><b>item1</b>: &lt;addr:size&gt;<br  />
  <b>item2</b>: shared symbolic expression </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00099">99</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00096">96</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>
@@ -483,7 +471,7 @@ std::vector&lt; <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathCo
 <p><b>item1</b>: memory address<br  />
  <b>item2</b>: shared symbolic expression </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00107">107</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00104">104</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>
@@ -511,7 +499,7 @@ std::vector&lt; <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathCo
 <p><b>item1</b>: symbolic reference id<br  />
  <b>item2</b>: symbolic expression </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00091">91</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00088">88</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>
@@ -539,7 +527,7 @@ std::vector&lt; <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathCo
 <p><b>item1</b>: variable id<br  />
  <b>item2</b>: symbolic variable </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00083">83</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00080">80</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>

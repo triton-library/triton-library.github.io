@@ -117,251 +117,209 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keywordflow">if</span> (taintEngine == <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1IrBuilder.html">triton::exceptions::IrBuilder</a>(<span class="stringliteral">&quot;IrBuilder::IrBuilder(): The taint engines API must be defined.&quot;</span>);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      this-&gt;architecture              = architecture;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      this-&gt;backupSymbolicEngine      = <span class="keyword">new</span>(std::nothrow) <a class="code" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html">triton::engines::symbolic::SymbolicEngine</a>(architecture, modes, astCtxt, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      this-&gt;symbolicEngine            = symbolicEngine;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      this-&gt;taintEngine               = taintEngine;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a478b360ea2e19e7abcb4a75d6427174e">aarch64Isa</a>                = <span class="keyword">new</span>(std::nothrow) <a class="code" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Semantics.html">triton::arch::arm::aarch64::AArch64Semantics</a>(architecture, symbolicEngine, taintEngine, astCtxt);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a43abc5be50cf6b4360981d5f2d86c632">arm32Isa</a>                  = <span class="keyword">new</span>(std::nothrow) <a class="code" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Semantics.html">triton::arch::arm::arm32::Arm32Semantics</a>(architecture, symbolicEngine, taintEngine, astCtxt);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#aed37facc6a55a840ecec3fb233d9e1d4">x86Isa</a>                    = <span class="keyword">new</span>(std::nothrow) <a class="code" href="classtriton_1_1arch_1_1x86_1_1x86Semantics.html">triton::arch::x86::x86Semantics</a>(architecture, symbolicEngine, taintEngine, modes, astCtxt);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordflow">if</span> (this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#aed37facc6a55a840ecec3fb233d9e1d4">x86Isa</a> == <span class="keyword">nullptr</span> || this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a478b360ea2e19e7abcb4a75d6427174e">aarch64Isa</a> == <span class="keyword">nullptr</span> || this-&gt;backupSymbolicEngine == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1IrBuilder.html">triton::exceptions::IrBuilder</a>(<span class="stringliteral">&quot;IrBuilder::IrBuilder(): Not enough memory.&quot;</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      this-&gt;architecture         = architecture;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      this-&gt;symbolicEngine       = symbolicEngine;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      this-&gt;taintEngine          = taintEngine;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a478b360ea2e19e7abcb4a75d6427174e">aarch64Isa</a>           = <span class="keyword">new</span>(std::nothrow) <a class="code" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Semantics.html">triton::arch::arm::aarch64::AArch64Semantics</a>(architecture, symbolicEngine, taintEngine, astCtxt);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a43abc5be50cf6b4360981d5f2d86c632">arm32Isa</a>             = <span class="keyword">new</span>(std::nothrow) <a class="code" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Semantics.html">triton::arch::arm::arm32::Arm32Semantics</a>(architecture, symbolicEngine, taintEngine, astCtxt);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#aed37facc6a55a840ecec3fb233d9e1d4">x86Isa</a>               = <span class="keyword">new</span>(std::nothrow) <a class="code" href="classtriton_1_1arch_1_1x86_1_1x86Semantics.html">triton::arch::x86::x86Semantics</a>(architecture, symbolicEngine, taintEngine, modes, astCtxt);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keywordflow">if</span> (this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#aed37facc6a55a840ecec3fb233d9e1d4">x86Isa</a> == <span class="keyword">nullptr</span> || this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a478b360ea2e19e7abcb4a75d6427174e">aarch64Isa</a> == <span class="keyword">nullptr</span> || this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a43abc5be50cf6b4360981d5f2d86c632">arm32Isa</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1IrBuilder.html">triton::exceptions::IrBuilder</a>(<span class="stringliteral">&quot;IrBuilder::IrBuilder(): Not enough memory.&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1IrBuilder.html#a2021a834c1a27c18a212df5a41ac374c">   54</a></span>&#160;    <a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a2021a834c1a27c18a212df5a41ac374c">IrBuilder::~IrBuilder</a>() {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keyword">delete</span> this-&gt;backupSymbolicEngine;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">delete</span> this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a478b360ea2e19e7abcb4a75d6427174e">aarch64Isa</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">delete</span> this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a43abc5be50cf6b4360981d5f2d86c632">arm32Isa</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">delete</span> this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#aed37facc6a55a840ecec3fb233d9e1d4">x86Isa</a>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1IrBuilder.html#a8afb33ac9e2f001f904d06ee0fbccf10">   62</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a8afb33ac9e2f001f904d06ee0fbccf10">IrBuilder::buildSemantics</a>(<a class="code" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <a class="code" href="group__arch.html#ga72199f3206aa1c9b09b2688cb8d3e7ab">triton::arch::architecture_e</a> arch = this-&gt;architecture-&gt;<a class="code" href="classtriton_1_1arch_1_1Architecture.html#ae475d23954ee817cb0af63c9e90f4d85">getArchitecture</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordtype">bool</span> ret = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">if</span> (arch == <a class="code" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba0128222a49ca35296d494e80ddcad079">triton::arch::ARCH_INVALID</a>)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1IrBuilder.html">triton::exceptions::IrBuilder</a>(<span class="stringliteral">&quot;IrBuilder::buildSemantics(): You must define an architecture.&quot;</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="comment">/* Initialize the target address of memory operands */</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; operand : inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (operand.getType() == <a class="code" href="group__arch.html#gga7367948c404e09e0b1951f65ca92a095a7939d1e352561da78ae5310d59be8b6d">triton::arch::OP_MEM</a>) {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;          this-&gt;symbolicEngine-&gt;<a class="code" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a82ffb8385b8762f173deaa25241c9ae1">initLeaAst</a>(operand.getMemory());</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="comment">/* Pre IR processing */</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a99fc496a00f282885957fb351a15f429">preIrInit</a>(inst);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="comment">/* Processing */</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keywordflow">switch</span> (arch) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba191636225c9d04d95c978f6924c738c0">triton::arch::ARCH_AARCH64</a>:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;          ret = this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a478b360ea2e19e7abcb4a75d6427174e">aarch64Isa</a>-&gt;<a class="code" href="classtriton_1_1arch_1_1SemanticsInterface.html#af3e4ab7da492cf5887b5bbcad5a7b50d">buildSemantics</a>(inst);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba3c564763da6fd94a92890df943576b92">triton::arch::ARCH_ARM32</a>:</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;          ret = this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a43abc5be50cf6b4360981d5f2d86c632">arm32Isa</a>-&gt;<a class="code" href="classtriton_1_1arch_1_1SemanticsInterface.html#af3e4ab7da492cf5887b5bbcad5a7b50d">buildSemantics</a>(inst);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba10e18912ade0655b8c7478604c2f7978">triton::arch::ARCH_X86</a>:</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7abab393aeaa6839546f2eb6fee0e961a8d1">triton::arch::ARCH_X86_64</a>:</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          ret = this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#aed37facc6a55a840ecec3fb233d9e1d4">x86Isa</a>-&gt;<a class="code" href="classtriton_1_1arch_1_1SemanticsInterface.html#af3e4ab7da492cf5887b5bbcad5a7b50d">buildSemantics</a>(inst);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1IrBuilder.html">triton::exceptions::IrBuilder</a>(<span class="stringliteral">&quot;IrBuilder::buildSemantics(): Architecture not supported.&quot;</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <span class="comment">/* Post IR processing */</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#aaf4a75b7aa2e418f98273aaa5bd4bb36">postIrInit</a>(inst);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1IrBuilder.html#a99fc496a00f282885957fb351a15f429">  106</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a99fc496a00f282885957fb351a15f429">IrBuilder::preIrInit</a>(<a class="code" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="comment">/* Clear previous expressions if exist */</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9157644a9072323f5c439f70c58350a">symbolicExpressions</a>.clear();</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="comment">/* Clear implicit and explicit semantics */</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a4f40020ab3359472ff0fb4ce623a3688">getLoadAccess</a>().clear();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a02a8f82c928d9526ab557391c7eee9d8">getReadRegisters</a>().clear();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9c3698cc6066b30765459a1619a364a">getReadImmediates</a>().clear();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a3f13a43af6b167fbac24fd1c1444ecfe">getStoreAccess</a>().clear();</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ab655083d08f0a9cd302c3ecee01290a0">getWrittenRegisters</a>().clear();</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="comment">/* Update instruction address if undefined */</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordflow">if</span> (!inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a85ded606ddf4eeb4469f2f89a3dc9ed2">getAddress</a>()) {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a4cb8f478f4b16f46966327ff1dcebace">setAddress</a>(this-&gt;architecture-&gt;<a class="code" href="classtriton_1_1arch_1_1Architecture.html#abe1da3d2d01b842556113a477655d7a2">getConcreteRegisterValue</a>(this-&gt;architecture-&gt;getProgramCounter()).convert_to&lt;<a class="code" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>&gt;());</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      }</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1IrBuilder.html#a2021a834c1a27c18a212df5a41ac374c">   53</a></span>&#160;    <a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a2021a834c1a27c18a212df5a41ac374c">IrBuilder::~IrBuilder</a>() {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keyword">delete</span> this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a478b360ea2e19e7abcb4a75d6427174e">aarch64Isa</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keyword">delete</span> this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a43abc5be50cf6b4360981d5f2d86c632">arm32Isa</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">delete</span> this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#aed37facc6a55a840ecec3fb233d9e1d4">x86Isa</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1IrBuilder.html#a8afb33ac9e2f001f904d06ee0fbccf10">   60</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a8afb33ac9e2f001f904d06ee0fbccf10">IrBuilder::buildSemantics</a>(<a class="code" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <a class="code" href="group__arch.html#ga72199f3206aa1c9b09b2688cb8d3e7ab">triton::arch::architecture_e</a> arch = this-&gt;architecture-&gt;<a class="code" href="classtriton_1_1arch_1_1Architecture.html#ae475d23954ee817cb0af63c9e90f4d85">getArchitecture</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordtype">bool</span> ret = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordflow">if</span> (arch == <a class="code" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba0128222a49ca35296d494e80ddcad079">triton::arch::ARCH_INVALID</a>)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1IrBuilder.html">triton::exceptions::IrBuilder</a>(<span class="stringliteral">&quot;IrBuilder::buildSemantics(): You must define an architecture.&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="comment">/* Initialize the target address of memory operands */</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; operand : inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (operand.getType() == <a class="code" href="group__arch.html#gga7367948c404e09e0b1951f65ca92a095a7939d1e352561da78ae5310d59be8b6d">triton::arch::OP_MEM</a>) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;          this-&gt;symbolicEngine-&gt;<a class="code" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a82ffb8385b8762f173deaa25241c9ae1">initLeaAst</a>(operand.getMemory());</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="comment">/* Pre IR processing */</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a99fc496a00f282885957fb351a15f429">preIrInit</a>(inst);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="comment">/* Processing */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">switch</span> (arch) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba191636225c9d04d95c978f6924c738c0">triton::arch::ARCH_AARCH64</a>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          ret = this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a478b360ea2e19e7abcb4a75d6427174e">aarch64Isa</a>-&gt;<a class="code" href="classtriton_1_1arch_1_1SemanticsInterface.html#af3e4ab7da492cf5887b5bbcad5a7b50d">buildSemantics</a>(inst);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba3c564763da6fd94a92890df943576b92">triton::arch::ARCH_ARM32</a>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;          ret = this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a43abc5be50cf6b4360981d5f2d86c632">arm32Isa</a>-&gt;<a class="code" href="classtriton_1_1arch_1_1SemanticsInterface.html#af3e4ab7da492cf5887b5bbcad5a7b50d">buildSemantics</a>(inst);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba10e18912ade0655b8c7478604c2f7978">triton::arch::ARCH_X86</a>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7abab393aeaa6839546f2eb6fee0e961a8d1">triton::arch::ARCH_X86_64</a>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          ret = this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#aed37facc6a55a840ecec3fb233d9e1d4">x86Isa</a>-&gt;<a class="code" href="classtriton_1_1arch_1_1SemanticsInterface.html#af3e4ab7da492cf5887b5bbcad5a7b50d">buildSemantics</a>(inst);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          <span class="keywordflow">throw</span> <a class="code" href="classtriton_1_1exceptions_1_1IrBuilder.html">triton::exceptions::IrBuilder</a>(<span class="stringliteral">&quot;IrBuilder::buildSemantics(): Architecture not supported.&quot;</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="comment">/* Post IR processing */</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      this-&gt;<a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#aaf4a75b7aa2e418f98273aaa5bd4bb36">postIrInit</a>(inst);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1IrBuilder.html#a99fc496a00f282885957fb351a15f429">  104</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#a99fc496a00f282885957fb351a15f429">IrBuilder::preIrInit</a>(<a class="code" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="comment">/* Clear previous expressions if exist */</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9157644a9072323f5c439f70c58350a">symbolicExpressions</a>.clear();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="comment">/* Clear implicit and explicit previous semantics */</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a4f40020ab3359472ff0fb4ce623a3688">getLoadAccess</a>().clear();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a02a8f82c928d9526ab557391c7eee9d8">getReadRegisters</a>().clear();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9c3698cc6066b30765459a1619a364a">getReadImmediates</a>().clear();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a3f13a43af6b167fbac24fd1c1444ecfe">getStoreAccess</a>().clear();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ab655083d08f0a9cd302c3ecee01290a0">getWrittenRegisters</a>().clear();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <span class="comment">/* Update instruction address if undefined */</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keywordflow">if</span> (!inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a85ded606ddf4eeb4469f2f89a3dc9ed2">getAddress</a>()) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a4cb8f478f4b16f46966327ff1dcebace">setAddress</a>(this-&gt;architecture-&gt;<a class="code" href="classtriton_1_1arch_1_1Architecture.html#abe1da3d2d01b842556113a477655d7a2">getConcreteRegisterValue</a>(this-&gt;architecture-&gt;getProgramCounter()).convert_to&lt;<a class="code" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>&gt;());</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="comment">/* Backup the symbolic engine in the case where only the taint is available. */</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keywordflow">if</span> (!this-&gt;symbolicEngine-&gt;<a class="code" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af74315dddbc9d5248d78ebd6acdb753f">isEnabled</a>()) {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        *this-&gt;backupSymbolicEngine = *this-&gt;symbolicEngine;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1IrBuilder.html#aaf4a75b7aa2e418f98273aaa5bd4bb36">  122</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#aaf4a75b7aa2e418f98273aaa5bd4bb36">IrBuilder::postIrInit</a>(<a class="code" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      std::vector&lt;triton::engines::symbolic::SharedSymbolicExpression&gt; newVector;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="comment">/* Set the taint */</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a86571a4d1d49138391325117adb1f6f1">setTaint</a>();</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1IrBuilder.html#aaf4a75b7aa2e418f98273aaa5bd4bb36">  129</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtriton_1_1arch_1_1IrBuilder.html#aaf4a75b7aa2e418f98273aaa5bd4bb36">IrBuilder::postIrInit</a>(<a class="code" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      std::vector&lt;triton::engines::symbolic::SharedSymbolicExpression&gt; newVector;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <span class="keyword">auto</span>&amp; loadAccess        = inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a4f40020ab3359472ff0fb4ce623a3688">getLoadAccess</a>();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keyword">auto</span>&amp; readRegisters     = inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a02a8f82c928d9526ab557391c7eee9d8">getReadRegisters</a>();</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      <span class="keyword">auto</span>&amp; readImmediates    = inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9c3698cc6066b30765459a1619a364a">getReadImmediates</a>();</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="keyword">auto</span>&amp; storeAccess       = inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a3f13a43af6b167fbac24fd1c1444ecfe">getStoreAccess</a>();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keyword">auto</span>&amp; writtenRegisters  = inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ab655083d08f0a9cd302c3ecee01290a0">getWrittenRegisters</a>();</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <span class="comment">/* Set the taint */</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a86571a4d1d49138391325117adb1f6f1">setTaint</a>();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      <span class="comment">// ----------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="comment">/*</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">       * If the symbolic engine is defined to process symbolic</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">       * execution only on symbolized expressions, we delete all</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">       * concrete expressions and their AST nodes.</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">       */</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keywordflow">if</span> (this-&gt;modes-&gt;isModeEnabled(<a class="code" href="group__modes.html#gga58ef498152df1bde838c96411d13af2faa5b19e7c4c72cc8bba6ee2097cc0fb7f">triton::modes::ONLY_ON_SYMBOLIZED</a>)) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="comment">/* Clear memory operands */</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        this-&gt;collectUnsymbolizedNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="comment">/* Clear implicit and explicit semantics - MEM */</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        this-&gt;collectUnsymbolizedNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a4f40020ab3359472ff0fb4ce623a3688">getLoadAccess</a>());</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="comment">/* Clear implicit and explicit semantics - REG */</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        this-&gt;collectUnsymbolizedNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a02a8f82c928d9526ab557391c7eee9d8">getReadRegisters</a>());</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      <span class="comment">/*</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">       * If the symbolic engine is disable we delete symbolic</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">       * expressions and AST nodes. Note that if the taint engine</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">       * is enable we must compute semanitcs to spread the taint.</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">       */</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      <span class="keywordflow">if</span> (!this-&gt;symbolicEngine-&gt;<a class="code" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af74315dddbc9d5248d78ebd6acdb753f">isEnabled</a>()) {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="comment">/* Clear memory operands */</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        this-&gt;collectNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="comment">/* Clear implicit and explicit semantics - IMM */</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        this-&gt;collectUnsymbolizedNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9c3698cc6066b30765459a1619a364a">getReadImmediates</a>());</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="comment">/* Clear implicit and explicit semantics - MEM */</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        this-&gt;collectUnsymbolizedNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a3f13a43af6b167fbac24fd1c1444ecfe">getStoreAccess</a>());</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="comment">/* Clear implicit and explicit semantics - REG */</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        this-&gt;collectUnsymbolizedNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ab655083d08f0a9cd302c3ecee01290a0">getWrittenRegisters</a>());</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="comment">/* Clear implicit and explicit semantics */</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        loadAccess.clear();</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        readRegisters.clear();</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        readImmediates.clear();</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        storeAccess.clear();</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        writtenRegisters.clear();</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="comment">/* Symbolic Expressions */</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        this-&gt;removeSymbolicExpressions(inst);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="comment">/* Restore backup */</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        *this-&gt;symbolicEngine = *this-&gt;backupSymbolicEngine;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="comment">// ----------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="comment">/*</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">       * If the symbolic engine is defined to process symbolic</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">       * execution only on symbolized expressions, we delete all</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">       * concrete expressions and their AST nodes.</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">       */</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="keywordflow">if</span> (this-&gt;symbolicEngine-&gt;<a class="code" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af74315dddbc9d5248d78ebd6acdb753f">isEnabled</a>() &amp;&amp; this-&gt;modes-&gt;isModeEnabled(<a class="code" href="group__modes.html#gga58ef498152df1bde838c96411d13af2faa5b19e7c4c72cc8bba6ee2097cc0fb7f">triton::modes::ONLY_ON_SYMBOLIZED</a>)) {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="comment">/* Clear memory operands */</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        this-&gt;collectUnsymbolizedNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="comment">/* Clear implicit and explicit semantics - MEM */</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        this-&gt;collectUnsymbolizedNodes(loadAccess);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="comment">/* Clear implicit and explicit semantics - REG */</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        this-&gt;collectUnsymbolizedNodes(readRegisters);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">/* Clear implicit and explicit semantics - IMM */</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        this-&gt;collectUnsymbolizedNodes(readImmediates);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="comment">/* Clear implicit and explicit semantics - MEM */</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        this-&gt;collectUnsymbolizedNodes(storeAccess);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="comment">/* Clear implicit and explicit semantics - REG */</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        this-&gt;collectUnsymbolizedNodes(writtenRegisters);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">/* Clear symbolic expressions */</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; se : inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9157644a9072323f5c439f70c58350a">symbolicExpressions</a>) {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;          <span class="keywordflow">if</span> (se-&gt;isSymbolized() == <span class="keyword">false</span>) {</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            this-&gt;symbolicEngine-&gt;<a class="code" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad8edee9779a90939a2d01289219c8511">removeSymbolicExpression</a>(se);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;          }</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;          <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            newVector.push_back(se);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        }</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9157644a9072323f5c439f70c58350a">symbolicExpressions</a> = newVector;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="comment">/* Clear symbolic expressions */</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; se : inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9157644a9072323f5c439f70c58350a">symbolicExpressions</a>) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;          <span class="keywordflow">if</span> (se-&gt;isSymbolized() == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            this-&gt;symbolicEngine-&gt;<a class="code" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad8edee9779a90939a2d01289219c8511">removeSymbolicExpression</a>(se);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;          }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;          <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            newVector.push_back(se);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9157644a9072323f5c439f70c58350a">symbolicExpressions</a> = newVector;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      <span class="comment">/*</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">       * If the symbolic engine is defined to process symbolic</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">       * execution only on tainted instructions, we delete all</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">       * expressions untainted and their AST nodes.</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">       */</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;modes-&gt;isModeEnabled(<a class="code" href="group__modes.html#gga58ef498152df1bde838c96411d13af2fa5d1741cfb30dadf0c2173cdfc8d930fd">triton::modes::ONLY_ON_TAINTED</a>) &amp;&amp; !inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a7d349b1a8b1554f8d867f3671f7ac06d">isTainted</a>()) {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="comment">/* Memory operands */</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        this-&gt;collectNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="comment">/* Implicit and explicit semantics - MEM */</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        this-&gt;collectNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a4f40020ab3359472ff0fb4ce623a3688">getLoadAccess</a>());</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="comment">/* Implicit and explicit semantics - REG */</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        this-&gt;collectNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a02a8f82c928d9526ab557391c7eee9d8">getReadRegisters</a>());</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="comment">/* Implicit and explicit semantics - IMM */</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        this-&gt;collectNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9c3698cc6066b30765459a1619a364a">getReadImmediates</a>());</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="comment">/* Implicit and explicit semantics - MEM */</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        this-&gt;collectNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a3f13a43af6b167fbac24fd1c1444ecfe">getStoreAccess</a>());</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="comment">/* Implicit and explicit semantics - REG */</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        this-&gt;collectNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ab655083d08f0a9cd302c3ecee01290a0">getWrittenRegisters</a>());</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="comment">/* Symbolic Expressions */</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        this-&gt;removeSymbolicExpressions(inst);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      this-&gt;astCtxt-&gt;garbage();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">void</span> IrBuilder::removeSymbolicExpressions(<a class="code" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; se : inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9157644a9072323f5c439f70c58350a">symbolicExpressions</a>) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        this-&gt;symbolicEngine-&gt;<a class="code" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad8edee9779a90939a2d01289219c8511">removeSymbolicExpression</a>(se);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9157644a9072323f5c439f70c58350a">symbolicExpressions</a>.clear();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      <span class="comment">// ----------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="comment">/*</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">       * If the symbolic engine is defined to process symbolic</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment">       * execution only on tainted instructions, we delete all</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment">       * expressions untainted and their AST nodes.</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">       */</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;modes-&gt;isModeEnabled(<a class="code" href="group__modes.html#gga58ef498152df1bde838c96411d13af2fa5d1741cfb30dadf0c2173cdfc8d930fd">triton::modes::ONLY_ON_TAINTED</a>) &amp;&amp; !inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#a7d349b1a8b1554f8d867f3671f7ac06d">isTainted</a>()) {</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="comment">/* Memory operands */</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        this-&gt;collectNodes(inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="comment">/* Implicit and explicit semantics - MEM */</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        this-&gt;collectNodes(loadAccess);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">void</span> IrBuilder::collectNodes(T&amp; items)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      items.clear();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordtype">void</span> IrBuilder::collectNodes(std::vector&lt;triton::arch::OperandWrapper&gt;&amp; operands)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; operand : operands) {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">if</span> (operand.getType() == <a class="code" href="group__arch.html#gga7367948c404e09e0b1951f65ca92a095a7939d1e352561da78ae5310d59be8b6d">triton::arch::OP_MEM</a>) {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;          operand.getMemory().setLeaAst(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="comment">/* Implicit and explicit semantics - REG */</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        this-&gt;collectNodes(readRegisters);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="comment">/* Implicit and explicit semantics - IMM */</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        this-&gt;collectNodes(readImmediates);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="comment">/* Implicit and explicit semantics - MEM */</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        this-&gt;collectNodes(storeAccess);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="comment">/* Implicit and explicit semantics - REG */</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        this-&gt;collectNodes(writtenRegisters);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="comment">/* Symbolic Expressions */</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        this-&gt;removeSymbolicExpressions(inst);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      this-&gt;astCtxt-&gt;garbage();</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">void</span> IrBuilder::removeSymbolicExpressions(<a class="code" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; se : inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9157644a9072323f5c439f70c58350a">symbolicExpressions</a>) {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        this-&gt;symbolicEngine-&gt;<a class="code" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad8edee9779a90939a2d01289219c8511">removeSymbolicExpression</a>(se);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      }</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      inst.<a class="code" href="classtriton_1_1arch_1_1Instruction.html#ad9157644a9072323f5c439f70c58350a">symbolicExpressions</a>.clear();</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">void</span> IrBuilder::collectNodes(T&amp; items)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      items.clear();</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">void</span> IrBuilder::collectNodes(std::vector&lt;triton::arch::OperandWrapper&gt;&amp; operands)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; operand : operands) {</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">if</span> (operand.getType() == <a class="code" href="group__arch.html#gga7367948c404e09e0b1951f65ca92a095a7939d1e352561da78ae5310d59be8b6d">triton::arch::OP_MEM</a>) {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;          operand.getMemory().setLeaAst(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">void</span> IrBuilder::collectUnsymbolizedNodes(T&amp; items)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      T newItems;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; item : items) {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">if</span> (std::get&lt;1&gt;(item) &amp;&amp; std::get&lt;1&gt;(item)-&gt;isSymbolized() == <span class="keyword">true</span>)</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;          newItems.insert(item);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      }</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      items.clear();</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      items = newItems;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">void</span> IrBuilder::collectUnsymbolizedNodes(std::vector&lt;triton::arch::OperandWrapper&gt;&amp; operands)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; operand : operands) {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">if</span> (operand.getType() == <a class="code" href="group__arch.html#gga7367948c404e09e0b1951f65ca92a095a7939d1e352561da78ae5310d59be8b6d">triton::arch::OP_MEM</a>) {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;          <span class="keywordflow">if</span> (operand.getMemory().getLeaAst() &amp;&amp; operand.getMemory().getLeaAst()-&gt;isSymbolized() == <span class="keyword">false</span>) {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            operand.getMemory().setLeaAst(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;          }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        }</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  }; <span class="comment">/* arch namespace */</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordtype">void</span> IrBuilder::collectUnsymbolizedNodes(T&amp; items)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      T newItems;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; item : items) {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">if</span> (std::get&lt;1&gt;(item) &amp;&amp; std::get&lt;1&gt;(item)-&gt;isSymbolized() == <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;          newItems.insert(item);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      items.clear();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      items = newItems;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">void</span> IrBuilder::collectUnsymbolizedNodes(std::vector&lt;triton::arch::OperandWrapper&gt;&amp; operands)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; operand : operands) {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">if</span> (operand.getType() == <a class="code" href="group__arch.html#gga7367948c404e09e0b1951f65ca92a095a7939d1e352561da78ae5310d59be8b6d">triton::arch::OP_MEM</a>) {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;          <span class="keywordflow">if</span> (operand.getMemory().getLeaAst() &amp;&amp; operand.getMemory().getLeaAst()-&gt;isSymbolized() == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            operand.getMemory().setLeaAst(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;          }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  }; <span class="comment">/* arch namespace */</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
 <div class="ttc" id="aaarch64Semantics_8hpp_html"><div class="ttname"><a href="aarch64Semantics_8hpp.html">aarch64Semantics.hpp</a></div></div>
 <div class="ttc" id="aarm32Semantics_8hpp_html"><div class="ttname"><a href="arm32Semantics_8hpp.html">arm32Semantics.hpp</a></div></div>
 <div class="ttc" id="aastContext_8hpp_html"><div class="ttname"><a href="astContext_8hpp.html">astContext.hpp</a></div></div>
@@ -380,22 +338,21 @@ $(function() {
 <div class="ttc" id="aclasstriton_1_1arch_1_1Instruction_html_ab7257793ebd3a4ab4f691eb0213c9261"><div class="ttname"><a href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">triton::arch::Instruction::operands</a></div><div class="ttdeci">std::vector&lt; triton::arch::OperandWrapper &gt; operands</div><div class="ttdoc">A list of operands.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00119">instruction.hpp:119</a></div></div>
 <div class="ttc" id="aclasstriton_1_1arch_1_1Instruction_html_ad9157644a9072323f5c439f70c58350a"><div class="ttname"><a href="classtriton_1_1arch_1_1Instruction.html#ad9157644a9072323f5c439f70c58350a">triton::arch::Instruction::symbolicExpressions</a></div><div class="ttdeci">std::vector&lt; triton::engines::symbolic::SharedSymbolicExpression &gt; symbolicExpressions</div><div class="ttdoc">The semantics set of the instruction.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00122">instruction.hpp:122</a></div></div>
 <div class="ttc" id="aclasstriton_1_1arch_1_1Instruction_html_ad9c3698cc6066b30765459a1619a364a"><div class="ttname"><a href="classtriton_1_1arch_1_1Instruction.html#ad9c3698cc6066b30765459a1619a364a">triton::arch::Instruction::getReadImmediates</a></div><div class="ttdeci">TRITON_EXPORT std::set&lt; std::pair&lt; triton::arch::Immediate, triton::ast::SharedAbstractNode &gt; &gt; &amp; getReadImmediates(void)</div><div class="ttdoc">Returns the list of all implicit and explicit immediate inputs (read)</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8cpp_source.html#l00184">instruction.cpp:184</a></div></div>
-<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_a2021a834c1a27c18a212df5a41ac374c"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#a2021a834c1a27c18a212df5a41ac374c">triton::arch::IrBuilder::~IrBuilder</a></div><div class="ttdeci">virtual TRITON_EXPORT ~IrBuilder()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8cpp_source.html#l00054">irBuilder.cpp:54</a></div></div>
+<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_a2021a834c1a27c18a212df5a41ac374c"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#a2021a834c1a27c18a212df5a41ac374c">triton::arch::IrBuilder::~IrBuilder</a></div><div class="ttdeci">virtual TRITON_EXPORT ~IrBuilder()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8cpp_source.html#l00053">irBuilder.cpp:53</a></div></div>
 <div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_a3612d6fff4470c585af02cd9f8e0e2bf"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#a3612d6fff4470c585af02cd9f8e0e2bf">triton::arch::IrBuilder::IrBuilder</a></div><div class="ttdeci">TRITON_EXPORT IrBuilder(triton::arch::Architecture *architecture, const triton::modes::SharedModes &amp;modes, const triton::ast::SharedAstContext &amp;astCtxt, triton::engines::symbolic::SymbolicEngine *symbolicEngine, triton::engines::taint::TaintEngine *taintEngine)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8cpp_source.html#l00025">irBuilder.cpp:25</a></div></div>
-<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_a43abc5be50cf6b4360981d5f2d86c632"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#a43abc5be50cf6b4360981d5f2d86c632">triton::arch::IrBuilder::arm32Isa</a></div><div class="ttdeci">triton::arch::SemanticsInterface * arm32Isa</div><div class="ttdoc">ARM32 ISA builder.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8hpp_source.html#l00078">irBuilder.hpp:78</a></div></div>
-<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_a478b360ea2e19e7abcb4a75d6427174e"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#a478b360ea2e19e7abcb4a75d6427174e">triton::arch::IrBuilder::aarch64Isa</a></div><div class="ttdeci">triton::arch::SemanticsInterface * aarch64Isa</div><div class="ttdoc">AArch64 ISA builder.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8hpp_source.html#l00075">irBuilder.hpp:75</a></div></div>
-<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_a8afb33ac9e2f001f904d06ee0fbccf10"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#a8afb33ac9e2f001f904d06ee0fbccf10">triton::arch::IrBuilder::buildSemantics</a></div><div class="ttdeci">TRITON_EXPORT bool buildSemantics(triton::arch::Instruction &amp;inst)</div><div class="ttdoc">Builds the semantics of the instruction. Returns true if the instruction is supported.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8cpp_source.html#l00062">irBuilder.cpp:62</a></div></div>
-<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_a99fc496a00f282885957fb351a15f429"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#a99fc496a00f282885957fb351a15f429">triton::arch::IrBuilder::preIrInit</a></div><div class="ttdeci">TRITON_EXPORT void preIrInit(triton::arch::Instruction &amp;inst)</div><div class="ttdoc">Everything which must be done before buiding the semantics.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8cpp_source.html#l00106">irBuilder.cpp:106</a></div></div>
-<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_aaf4a75b7aa2e418f98273aaa5bd4bb36"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#aaf4a75b7aa2e418f98273aaa5bd4bb36">triton::arch::IrBuilder::postIrInit</a></div><div class="ttdeci">TRITON_EXPORT void postIrInit(triton::arch::Instruction &amp;inst)</div><div class="ttdoc">Everything which must be done after building the semantics.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8cpp_source.html#l00129">irBuilder.cpp:129</a></div></div>
-<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_aed37facc6a55a840ecec3fb233d9e1d4"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#aed37facc6a55a840ecec3fb233d9e1d4">triton::arch::IrBuilder::x86Isa</a></div><div class="ttdeci">triton::arch::SemanticsInterface * x86Isa</div><div class="ttdoc">x86 ISA builder.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8hpp_source.html#l00081">irBuilder.hpp:81</a></div></div>
+<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_a43abc5be50cf6b4360981d5f2d86c632"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#a43abc5be50cf6b4360981d5f2d86c632">triton::arch::IrBuilder::arm32Isa</a></div><div class="ttdeci">triton::arch::SemanticsInterface * arm32Isa</div><div class="ttdoc">ARM32 ISA builder.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8hpp_source.html#l00075">irBuilder.hpp:75</a></div></div>
+<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_a478b360ea2e19e7abcb4a75d6427174e"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#a478b360ea2e19e7abcb4a75d6427174e">triton::arch::IrBuilder::aarch64Isa</a></div><div class="ttdeci">triton::arch::SemanticsInterface * aarch64Isa</div><div class="ttdoc">AArch64 ISA builder.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8hpp_source.html#l00072">irBuilder.hpp:72</a></div></div>
+<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_a8afb33ac9e2f001f904d06ee0fbccf10"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#a8afb33ac9e2f001f904d06ee0fbccf10">triton::arch::IrBuilder::buildSemantics</a></div><div class="ttdeci">TRITON_EXPORT bool buildSemantics(triton::arch::Instruction &amp;inst)</div><div class="ttdoc">Builds the semantics of the instruction. Returns true if the instruction is supported.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8cpp_source.html#l00060">irBuilder.cpp:60</a></div></div>
+<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_a99fc496a00f282885957fb351a15f429"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#a99fc496a00f282885957fb351a15f429">triton::arch::IrBuilder::preIrInit</a></div><div class="ttdeci">TRITON_EXPORT void preIrInit(triton::arch::Instruction &amp;inst)</div><div class="ttdoc">Everything which must be done before buiding the semantics.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8cpp_source.html#l00104">irBuilder.cpp:104</a></div></div>
+<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_aaf4a75b7aa2e418f98273aaa5bd4bb36"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#aaf4a75b7aa2e418f98273aaa5bd4bb36">triton::arch::IrBuilder::postIrInit</a></div><div class="ttdeci">TRITON_EXPORT void postIrInit(triton::arch::Instruction &amp;inst)</div><div class="ttdoc">Everything which must be done after building the semantics.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8cpp_source.html#l00122">irBuilder.cpp:122</a></div></div>
+<div class="ttc" id="aclasstriton_1_1arch_1_1IrBuilder_html_aed37facc6a55a840ecec3fb233d9e1d4"><div class="ttname"><a href="classtriton_1_1arch_1_1IrBuilder.html#aed37facc6a55a840ecec3fb233d9e1d4">triton::arch::IrBuilder::x86Isa</a></div><div class="ttdeci">triton::arch::SemanticsInterface * x86Isa</div><div class="ttdoc">x86 ISA builder.</div><div class="ttdef"><b>Definition:</b> <a href="irBuilder_8hpp_source.html#l00078">irBuilder.hpp:78</a></div></div>
 <div class="ttc" id="aclasstriton_1_1arch_1_1SemanticsInterface_html_af3e4ab7da492cf5887b5bbcad5a7b50d"><div class="ttname"><a href="classtriton_1_1arch_1_1SemanticsInterface.html#af3e4ab7da492cf5887b5bbcad5a7b50d">triton::arch::SemanticsInterface::buildSemantics</a></div><div class="ttdeci">virtual TRITON_EXPORT bool buildSemantics(triton::arch::Instruction &amp;inst)=0</div><div class="ttdoc">Builds the semantics of the instruction. Returns true if the instruction is supported.</div></div>
 <div class="ttc" id="aclasstriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Semantics_html"><div class="ttname"><a href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Semantics.html">triton::arch::arm::aarch64::AArch64Semantics</a></div><div class="ttdoc">The AArch64 ISA semantics.</div><div class="ttdef"><b>Definition:</b> <a href="aarch64Semantics_8hpp_source.html#l00053">aarch64Semantics.hpp:53</a></div></div>
 <div class="ttc" id="aclasstriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Semantics_html"><div class="ttname"><a href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Semantics.html">triton::arch::arm::arm32::Arm32Semantics</a></div><div class="ttdoc">The Arm32 ISA semantics.</div><div class="ttdef"><b>Definition:</b> <a href="arm32Semantics_8hpp_source.html#l00053">arm32Semantics.hpp:53</a></div></div>
 <div class="ttc" id="aclasstriton_1_1arch_1_1x86_1_1x86Semantics_html"><div class="ttname"><a href="classtriton_1_1arch_1_1x86_1_1x86Semantics.html">triton::arch::x86::x86Semantics</a></div><div class="ttdoc">The x86 ISA semantics.</div><div class="ttdef"><b>Definition:</b> <a href="x86Semantics_8hpp_source.html#l00046">x86Semantics.hpp:46</a></div></div>
 <div class="ttc" id="aclasstriton_1_1engines_1_1symbolic_1_1SymbolicEngine_html"><div class="ttname"><a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html">triton::engines::symbolic::SymbolicEngine</a></div><div class="ttdoc">The symbolic engine class.</div><div class="ttdef"><b>Definition:</b> <a href="symbolicEngine_8hpp_source.html#l00060">symbolicEngine.hpp:62</a></div></div>
-<div class="ttc" id="aclasstriton_1_1engines_1_1symbolic_1_1SymbolicEngine_html_a82ffb8385b8762f173deaa25241c9ae1"><div class="ttname"><a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a82ffb8385b8762f173deaa25241c9ae1">triton::engines::symbolic::SymbolicEngine::initLeaAst</a></div><div class="ttdeci">TRITON_EXPORT void initLeaAst(triton::arch::MemoryAccess &amp;mem, bool force=true)</div><div class="ttdoc">Initializes the memory access AST (LOAD and STORE).</div><div class="ttdef"><b>Definition:</b> <a href="symbolicEngine_8cpp_source.html#l01186">symbolicEngine.cpp:1186</a></div></div>
-<div class="ttc" id="aclasstriton_1_1engines_1_1symbolic_1_1SymbolicEngine_html_ad8edee9779a90939a2d01289219c8511"><div class="ttname"><a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad8edee9779a90939a2d01289219c8511">triton::engines::symbolic::SymbolicEngine::removeSymbolicExpression</a></div><div class="ttdeci">TRITON_EXPORT void removeSymbolicExpression(const SharedSymbolicExpression &amp;expr)</div><div class="ttdoc">Removes the symbolic expression corresponding to the id.</div><div class="ttdef"><b>Definition:</b> <a href="symbolicEngine_8cpp_source.html#l00405">symbolicEngine.cpp:405</a></div></div>
-<div class="ttc" id="aclasstriton_1_1engines_1_1symbolic_1_1SymbolicEngine_html_af74315dddbc9d5248d78ebd6acdb753f"><div class="ttname"><a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af74315dddbc9d5248d78ebd6acdb753f">triton::engines::symbolic::SymbolicEngine::isEnabled</a></div><div class="ttdeci">TRITON_EXPORT bool isEnabled(void) const</div><div class="ttdoc">Returns true if the symbolic execution engine is enabled.</div><div class="ttdef"><b>Definition:</b> <a href="symbolicEngine_8cpp_source.html#l01131">symbolicEngine.cpp:1131</a></div></div>
+<div class="ttc" id="aclasstriton_1_1engines_1_1symbolic_1_1SymbolicEngine_html_a82ffb8385b8762f173deaa25241c9ae1"><div class="ttname"><a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a82ffb8385b8762f173deaa25241c9ae1">triton::engines::symbolic::SymbolicEngine::initLeaAst</a></div><div class="ttdeci">TRITON_EXPORT void initLeaAst(triton::arch::MemoryAccess &amp;mem, bool force=true)</div><div class="ttdoc">Initializes the memory access AST (LOAD and STORE).</div><div class="ttdef"><b>Definition:</b> <a href="symbolicEngine_8cpp_source.html#l01171">symbolicEngine.cpp:1171</a></div></div>
+<div class="ttc" id="aclasstriton_1_1engines_1_1symbolic_1_1SymbolicEngine_html_ad8edee9779a90939a2d01289219c8511"><div class="ttname"><a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad8edee9779a90939a2d01289219c8511">triton::engines::symbolic::SymbolicEngine::removeSymbolicExpression</a></div><div class="ttdeci">TRITON_EXPORT void removeSymbolicExpression(const SharedSymbolicExpression &amp;expr)</div><div class="ttdoc">Removes the symbolic expression corresponding to the id.</div><div class="ttdef"><b>Definition:</b> <a href="symbolicEngine_8cpp_source.html#l00402">symbolicEngine.cpp:402</a></div></div>
 <div class="ttc" id="aclasstriton_1_1engines_1_1taint_1_1TaintEngine_html"><div class="ttname"><a href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html">triton::engines::taint::TaintEngine</a></div><div class="ttdoc">The taint engine class.</div><div class="ttdef"><b>Definition:</b> <a href="taintEngine_8hpp_source.html#l00053">taintEngine.hpp:53</a></div></div>
 <div class="ttc" id="aclasstriton_1_1exceptions_1_1IrBuilder_html"><div class="ttname"><a href="classtriton_1_1exceptions_1_1IrBuilder.html">triton::exceptions::IrBuilder</a></div><div class="ttdoc">The exception class used by the IR builder.</div><div class="ttdef"><b>Definition:</b> <a href="exceptions_8hpp_source.html#l00341">exceptions.hpp:341</a></div></div>
 <div class="ttc" id="aexceptions_8hpp_html"><div class="ttname"><a href="exceptions_8hpp.html">exceptions.hpp</a></div></div>

@@ -102,10 +102,6 @@ TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 TRITON_EXPORT <a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html">TaintEngine</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#afe1c45b47dd5450b5ec4d0bc6ea2a115">operator=</a> (const <a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html">TaintEngine</a> &amp;other)</td></tr>
 <tr class="memdesc:afe1c45b47dd5450b5ec4d0bc6ea2a115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a <a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html" title="The taint engine class.">TaintEngine</a>. <br /></td></tr>
 <tr class="separator:afe1c45b47dd5450b5ec4d0bc6ea2a115"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95a9aac2fd4611c5ae56cfe19ba48fd0"><td class="memItemLeft" align="right" valign="top"><a id="a95a9aac2fd4611c5ae56cfe19ba48fd0"></a>
-TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a95a9aac2fd4611c5ae56cfe19ba48fd0">enable</a> (bool flag)</td></tr>
-<tr class="memdesc:a95a9aac2fd4611c5ae56cfe19ba48fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the taint engine. <br /></td></tr>
-<tr class="separator:a95a9aac2fd4611c5ae56cfe19ba48fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af36fbf84b0c3978c696175b155d4ff7b"><td class="memItemLeft" align="right" valign="top"><a id="af36fbf84b0c3978c696175b155d4ff7b"></a>
 TRITON_EXPORT const std::unordered_set&lt; <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#af36fbf84b0c3978c696175b155d4ff7b">getTaintedMemory</a> (void) const</td></tr>
 <tr class="memdesc:af36fbf84b0c3978c696175b155d4ff7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the tainted addresses. <br /></td></tr>
@@ -114,10 +110,6 @@ TRITON_EXPORT const std::unordered_set&lt; <a class="el" href="group__triton.htm
 TRITON_EXPORT std::unordered_set&lt; const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a5978b6fea6d7f11d1ff0b64ed55b8d2a">getTaintedRegisters</a> (void) const</td></tr>
 <tr class="memdesc:a5978b6fea6d7f11d1ff0b64ed55b8d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the tainted registers. <br /></td></tr>
 <tr class="separator:a5978b6fea6d7f11d1ff0b64ed55b8d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab04d1e6deb3f8862f804e3e98fe7bbed"><td class="memItemLeft" align="right" valign="top"><a id="ab04d1e6deb3f8862f804e3e98fe7bbed"></a>
-TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#ab04d1e6deb3f8862f804e3e98fe7bbed">isEnabled</a> (void) const</td></tr>
-<tr class="memdesc:ab04d1e6deb3f8862f804e3e98fe7bbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the taint engine is enabled. <br /></td></tr>
-<tr class="separator:ab04d1e6deb3f8862f804e3e98fe7bbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e0e5959c987f10ebe65e0f0aa31cb06"><td class="memItemLeft" align="right" valign="top"><a id="a5e0e5959c987f10ebe65e0f0aa31cb06"></a>
 TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a5e0e5959c987f10ebe65e0f0aa31cb06">isMemoryTainted</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr, <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> size=1) const</td></tr>
 <tr class="memdesc:a5e0e5959c987f10ebe65e0f0aa31cb06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the addr is tainted. <br /></td></tr>
@@ -229,10 +221,6 @@ TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a4907f077f5439003d38f78dd20f3951f"><td class="memItemLeft" align="right" valign="top"><a id="a4907f077f5439003d38f78dd20f3951f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a4907f077f5439003d38f78dd20f3951f">enableFlag</a></td></tr>
-<tr class="memdesc:a4907f077f5439003d38f78dd20f3951f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines if the taint engine is enabled or disabled. <br /></td></tr>
-<tr class="separator:a4907f077f5439003d38f78dd20f3951f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8391a6954d3493cff36daeac35978413"><td class="memItemLeft" align="right" valign="top"><a id="a8391a6954d3493cff36daeac35978413"></a>
 std::unordered_set&lt; <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a8391a6954d3493cff36daeac35978413">taintedMemory</a></td></tr>
 <tr class="memdesc:a8391a6954d3493cff36daeac35978413"><td class="mdescLeft">&#160;</td><td class="mdescRight">The set of tainted addresses. <br /></td></tr>
