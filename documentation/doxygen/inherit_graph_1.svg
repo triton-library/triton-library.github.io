@@ -9,9 +9,9 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 84)">
 <title>Graphical Class Hierarchy</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-84 186,-84 186,4 -4,4"/>
-<!-- Node115 -->
+<!-- Node118 -->
 <g id="node1" class="node">
-<title>Node115</title>
+<title>Node118</title>
 <g id="a_node1"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="0,-30 0,-49 40,-49 40,-30 0,-30"/>
 <text text-anchor="middle" x="20" y="-37" font-family="Helvetica,sans-Serif" font-size="10.00">hash</text>
@@ -28,15 +28,15 @@
 </a>
 </g>
 </g>
-<!-- Node115&#45;&gt;Node0 -->
+<!-- Node118&#45;&gt;Node0 -->
 <g id="edge1" class="edge">
-<title>Node115&#45;&gt;Node0</title>
+<title>Node118&#45;&gt;Node0</title>
 <path fill="none" stroke="midnightblue" d="M50.04,-46.29C58.35,-48.23 67.67,-50.4 76.89,-52.56"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="50.66,-42.84 40.13,-43.97 49.07,-49.65 50.66,-42.84"/>
 </g>
-<!-- Node117 -->
+<!-- Node120 -->
 <g id="node3" class="node">
-<title>Node117</title>
+<title>Node120</title>
 <g id="a_node3"><a xlink:href="structstd_1_1hash_3_01triton_1_1modes_1_1mode__e_01_4.html" target="_top" xlink:title="Define the hash function for mode_e to be use in stl containers like unordered_set.">
 <polygon fill="white" stroke="black" points="76,-0.5 76,-30.5 182,-30.5 182,-0.5 76,-0.5"/>
 <text text-anchor="start" x="84" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">std::hash&lt; triton::</text>
@@ -44,9 +44,9 @@
 </a>
 </g>
 </g>
-<!-- Node115&#45;&gt;Node117 -->
+<!-- Node118&#45;&gt;Node120 -->
 <g id="edge2" class="edge">
-<title>Node115&#45;&gt;Node117</title>
+<title>Node118&#45;&gt;Node120</title>
 <path fill="none" stroke="midnightblue" d="M50.07,-32.98C58.1,-31.18 67.07,-29.17 75.98,-27.17"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="49.12,-29.61 40.13,-35.21 50.65,-36.44 49.12,-29.61"/>
 </g>

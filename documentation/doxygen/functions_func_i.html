@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1524</span>
+   &#160;<span id="projectnumber">version 1.0 build 1526</span>
    </div>
   </td>
  </tr>
@@ -77,12 +77,13 @@ $(function() {
 : <a class="el" href="classtriton_1_1ast_1_1AstContext.html#a35c7d539aaef0182d4c38076ca0c5168">triton::ast::AstContext</a>
 </li>
 <li>Immediate()
-: <a class="el" href="classtriton_1_1arch_1_1Immediate.html#af90ba953f30987ee4d50305dc257afc6">triton::arch::Immediate</a>
+: <a class="el" href="classtriton_1_1arch_1_1Immediate.html#a94fbdf9c9830fae71d2cd1767af371b9">triton::arch::Immediate</a>
 , <a class="el" href="classtriton_1_1exceptions_1_1Immediate.html#aa1c800d5cef25cd666b7110ad07e9024">triton::exceptions::Immediate</a>
 </li>
 <li>init()
 : <a class="el" href="classtriton_1_1arch_1_1ShortcutRegister.html#a29df018586668717cd0f89c073823010">triton::arch::ShortcutRegister</a>
 , <a class="el" href="classtriton_1_1ast_1_1AbstractNode.html#ab03da2fcd4e95aaa8c59dc38b3023fb5">triton::ast::AbstractNode</a>
+, <a class="el" href="classtriton_1_1ast_1_1ArrayNode.html#aecc4950d8fac91f34b5fbc194a61d249">triton::ast::ArrayNode</a>
 , <a class="el" href="classtriton_1_1ast_1_1AssertNode.html#a233e51e648a9aac046c51a91e0523d0a">triton::ast::AssertNode</a>
 , <a class="el" href="classtriton_1_1ast_1_1BswapNode.html#a1512b7b0670d34b4ee141189ebb46ce1">triton::ast::BswapNode</a>
 , <a class="el" href="classtriton_1_1ast_1_1BvaddNode.html#a345cc6694dbfefb802b79018eed0e037">triton::ast::BvaddNode</a>
@@ -131,6 +132,8 @@ $(function() {
 , <a class="el" href="classtriton_1_1ast_1_1LorNode.html#aca9775b4a974ec86ca3144d7c4e9c00e">triton::ast::LorNode</a>
 , <a class="el" href="classtriton_1_1ast_1_1LxorNode.html#a05ca801c69d88607354cebdeb7e30d8c">triton::ast::LxorNode</a>
 , <a class="el" href="classtriton_1_1ast_1_1ReferenceNode.html#a2c932ef8e7425942c4ea0ed83f65162c">triton::ast::ReferenceNode</a>
+, <a class="el" href="classtriton_1_1ast_1_1SelectNode.html#a364a494baa97fa477529b327a0001d45">triton::ast::SelectNode</a>
+, <a class="el" href="classtriton_1_1ast_1_1StoreNode.html#a4a801b6e59419ebc17edaa75127d29c8">triton::ast::StoreNode</a>
 , <a class="el" href="classtriton_1_1ast_1_1StringNode.html#afa2f4902839d53fe7c955d4fb3a4da1a">triton::ast::StringNode</a>
 , <a class="el" href="classtriton_1_1ast_1_1SxNode.html#a78ea67c0de8539d3130320446dee81e1">triton::ast::SxNode</a>
 , <a class="el" href="classtriton_1_1ast_1_1VariableNode.html#aaadbe0334e76489c6c470cd41c3b4d7c">triton::ast::VariableNode</a>
@@ -162,6 +165,9 @@ $(function() {
 <li>isArchitectureValid()
 : <a class="el" href="classtriton_1_1API.html#a42478c059700e0ac1c9b94b09eb48548">triton::API</a>
 </li>
+<li>isArray()
+: <a class="el" href="classtriton_1_1ast_1_1AbstractNode.html#aa7ca03a9175e061d9882d4c42911de85">triton::ast::AbstractNode</a>
+</li>
 <li>isAVX256()
 : <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a48f10428a704255e01c5398cfa75a2d0">triton::arch::x86::x8664Cpu</a>
 , <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a571e79a7aaec687f68575a57307b23d3">triton::arch::x86::x86Cpu</a>
@@ -173,12 +179,12 @@ $(function() {
 : <a class="el" href="classtriton_1_1arch_1_1Instruction.html#a9f7a0de379b38b558058f1686b715fe5">triton::arch::Instruction</a>
 </li>
 <li>isConcreteMemoryValueDefined()
-: <a class="el" href="classtriton_1_1API.html#a86a326b2042d4ab1b0145c30a43bb2ae">triton::API</a>
+: <a class="el" href="classtriton_1_1API.html#a23a22d6e27a2ffff64cd7bb805a3dea4">triton::API</a>
 , <a class="el" href="classtriton_1_1arch_1_1Architecture.html#a773c753004e97fc1fd759012892a58db">triton::arch::Architecture</a>
 , <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a996ef2cca4b7d4ffc3f03c57efd5e5a6">triton::arch::arm::aarch64::AArch64Cpu</a>
 , <a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a56d622ff16aec0308ae04ea1bca91401">triton::arch::arm::arm32::Arm32Cpu</a>
 , <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a8c7730f098fa7c587016f0ea1b3dead9">triton::arch::CpuInterface</a>
-, <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a821f14b5c558c88cb6f678516ad59093">triton::arch::x86::x8664Cpu</a>
+, <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a9fa45f2142a3c0f0f39afe265a898dc7">triton::arch::x86::x8664Cpu</a>
 , <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#ab91dfd32420cab73db18a5c769068b04">triton::arch::x86::x86Cpu</a>
 </li>
 <li>isConditionTaken()
@@ -244,7 +250,7 @@ $(function() {
 </li>
 <li>isMemoryTainted()
 : <a class="el" href="classtriton_1_1API.html#a841fa419267e65b751b1bbbfb94269c2">triton::API</a>
-, <a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#ac94d83dd02111145b604fa5c13e01cb2">triton::engines::taint::TaintEngine</a>
+, <a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a5e0e5959c987f10ebe65e0f0aa31cb06">triton::engines::taint::TaintEngine</a>
 </li>
 <li>isMemoryWrite()
 : <a class="el" href="classtriton_1_1arch_1_1Instruction.html#a9057a65c1cb4ca6fd507c9c2f258604a">triton::arch::Instruction</a>

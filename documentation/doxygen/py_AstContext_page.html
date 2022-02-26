@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1524</span>
+   &#160;<span id="projectnumber">version 1.0 build 1526</span>
    </div>
   </td>
  </tr>
@@ -92,6 +92,9 @@ Description</h1>
 Python API - Methods of the AstContext class</h1>
 <hr  />
 <ul>
+<li><b><a class="el" href="py_AstNode_page.html">AstNode</a> array(integer addrSize)</b><br  />
+ Creates an <code>array</code> node.<br  />
+ e.g: <code>(Array (_ BitVec addrSize) (_ BitVec 8))</code>.</li>
 <li><b><a class="el" href="py_AstNode_page.html">AstNode</a> assert_(<a class="el" href="py_AstNode_page.html">AstNode</a> node)</b><br  />
  Creates a <code>assert</code> node. e.g: <code>(assert node)</code>.</li>
 <li><b><a class="el" href="py_AstNode_page.html">AstNode</a> bswap(<a class="el" href="py_AstNode_page.html">AstNode</a> node)</b><br  />
@@ -193,6 +196,9 @@ Python API - Methods of the AstContext class</h1>
  e.g: <code>(bvxor node1 epxr2)</code>.</li>
 <li><b><a class="el" href="py_AstNode_page.html">AstNode</a> concat([<a class="el" href="py_AstNode_page.html">AstNode</a>, ...])</b><br  />
  Concatenates several nodes.</li>
+<li><b><a class="el" href="py_AstNode_page.html">AstNode</a> declare(<a class="el" href="py_AstNode_page.html">AstNode</a> sort)</b><br  />
+ Declare a function without argument. Mainly used to delcare a variable or an array.<br  />
+ e.g: <code>(declare-fun SymVar_0 () (_ BitVec 64))</code></li>
 <li><b><a class="el" href="py_AstNode_page.html">AstNode</a> distinct(<a class="el" href="py_AstNode_page.html">AstNode</a> node1, <a class="el" href="py_AstNode_page.html">AstNode</a> node2)</b><br  />
  Creates a <code>distinct</code> node.<br  />
  e.g: <code>(distinct node1 node2)</code></li>
@@ -226,6 +232,12 @@ Python API - Methods of the AstContext class</h1>
 <li><b><a class="el" href="py_AstNode_page.html">AstNode</a> reference(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr)</b><br  />
  Creates a reference node (SSA-based).<br  />
  e.g: <code>ref!123</code>.</li>
+<li><b><a class="el" href="py_AstNode_page.html">AstNode</a> select(<a class="el" href="py_AstNode_page.html">AstNode</a> array, <a class="el" href="py_AstNode_page.html">AstNode</a> index)</b><br  />
+ Creates a <code>select</code> node.<br  />
+ e.g: <code>(select array index)</code>.</li>
+<li><b><a class="el" href="py_AstNode_page.html">AstNode</a> store(<a class="el" href="py_AstNode_page.html">AstNode</a> array, <a class="el" href="py_AstNode_page.html">AstNode</a> index, <a class="el" href="py_AstNode_page.html">AstNode</a> expr)</b><br  />
+ Creates a <code>store</code> node.<br  />
+ e.g: <code>(store array index expr)</code>.</li>
 <li><b><a class="el" href="py_AstNode_page.html">AstNode</a> string(string s)</b><br  />
  Creates a <code>string</code> node.</li>
 <li><b><a class="el" href="py_AstNode_page.html">AstNode</a> sx(integer sizeExt, <a class="el" href="py_AstNode_page.html">AstNode</a> node1)</b><br  />
