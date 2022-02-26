@@ -94,12 +94,12 @@ $(function() {
 <code>#include &lt;<a class="el" href="astEnums_8hpp_source.html">triton/astEnums.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="cpuSize_8hpp_source.html">triton/cpuSize.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="dllexport_8hpp_source.html">triton/dllexport.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="exceptions_8hpp_source.html">triton/exceptions.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="tritonTypes_8hpp_source.html">triton/tritonTypes.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="ast_8hpp__dep__incl.svg" width="5499" height="1166"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="ast_8hpp__dep__incl.svg" width="5499" height="1166"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="ast_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -110,7 +110,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract node.  <a href="classtriton_1_1ast_1_1AbstractNode.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1ArrayNode.html">triton::ast::ArrayNode</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>(Array (_ BitVec addrSize) (_ BitVec 8))</code> node  <a href="classtriton_1_1ast_1_1ArrayNode.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>(Array (_ BitVec indexSize) (_ BitVec 8))</code> node  <a href="classtriton_1_1ast_1_1ArrayNode.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1AssertNode.html">triton::ast::AssertNode</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>(assert &lt;expr&gt;)</code> node  <a href="classtriton_1_1ast_1_1AssertNode.html#details">More...</a><br /></td></tr>
@@ -355,6 +355,15 @@ std::deque&lt; SharedAbstractNode &gt;&#160;</td><td class="memItemRight" valign
 SharedAbstractNode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ast.html#ga3ea0d380e320d693ad1b39ffd6dcea11">triton::ast::dereference</a> (const SharedAbstractNode &amp;node)</td></tr>
 <tr class="memdesc:ga3ea0d380e320d693ad1b39ffd6dcea11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first non referene node encountered. <br /></td></tr>
 <tr class="separator:ga3ea0d380e320d693ad1b39ffd6dcea11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27e6314bb01a4c3c2e72620e4096df57"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ast.html#ga27e6314bb01a4c3c2e72620e4096df57">triton::ast::getIndexSize</a> (const SharedAbstractNode &amp;node)</td></tr>
+<tr class="memdesc:ga27e6314bb01a4c3c2e72620e4096df57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index size of an array. <br /></td></tr>
+<tr class="separator:ga27e6314bb01a4c3c2e72620e4096df57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8cd70657ac2aef7c637cc3bde5f953ae"><td class="memTemplParams" colspan="2">
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga8cd70657ac2aef7c637cc3bde5f953ae"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__ast.html#ga8cd70657ac2aef7c637cc3bde5f953ae">triton::ast::getInteger</a> (const SharedAbstractNode &amp;node)</td></tr>
+<tr class="memdesc:ga8cd70657ac2aef7c637cc3bde5f953ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an integer node. <br /></td></tr>
+<tr class="separator:ga8cd70657ac2aef7c637cc3bde5f953ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.14-->

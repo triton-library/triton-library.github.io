@@ -57,7 +57,7 @@
 <!-- Node1 -->
 <g id="node3" class="node">
 <title>Node1</title>
-<g id="a_node3"><a xlink:href="classtriton_1_1ast_1_1ArrayNode.html" target="_top" xlink:title="(Array (_ BitVec addrSize) (_ BitVec 8)) node">
+<g id="a_node3"><a xlink:href="classtriton_1_1ast_1_1ArrayNode.html" target="_top" xlink:title="(Array (_ BitVec indexSize) (_ BitVec 8)) node">
 <polygon fill="white" stroke="black" points="350,-2014.5 350,-2033.5 472,-2033.5 472,-2014.5 350,-2014.5"/>
 <text text-anchor="middle" x="411" y="-2021.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::ast::ArrayNode</text>
 </a>

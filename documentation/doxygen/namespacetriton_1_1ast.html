@@ -100,7 +100,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract node.  <a href="classtriton_1_1ast_1_1AbstractNode.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1ArrayNode.html">ArrayNode</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>(Array (_ BitVec addrSize) (_ BitVec 8))</code> node  <a href="classtriton_1_1ast_1_1ArrayNode.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>(Array (_ BitVec indexSize) (_ BitVec 8))</code> node  <a href="classtriton_1_1ast_1_1ArrayNode.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1AssertNode.html">AssertNode</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>(assert &lt;expr&gt;)</code> node  <a href="classtriton_1_1ast_1_1AssertNode.html#details">More...</a><br /></td></tr>
@@ -418,6 +418,15 @@ std::deque&lt; <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa6
 <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">SharedAbstractNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ast.html#ga3ea0d380e320d693ad1b39ffd6dcea11">dereference</a> (const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">SharedAbstractNode</a> &amp;node)</td></tr>
 <tr class="memdesc:ga3ea0d380e320d693ad1b39ffd6dcea11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first non referene node encountered. <br /></td></tr>
 <tr class="separator:ga3ea0d380e320d693ad1b39ffd6dcea11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27e6314bb01a4c3c2e72620e4096df57"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ast.html#ga27e6314bb01a4c3c2e72620e4096df57">getIndexSize</a> (const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">SharedAbstractNode</a> &amp;node)</td></tr>
+<tr class="memdesc:ga27e6314bb01a4c3c2e72620e4096df57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index size of an array. <br /></td></tr>
+<tr class="separator:ga27e6314bb01a4c3c2e72620e4096df57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8cd70657ac2aef7c637cc3bde5f953ae"><td class="memTemplParams" colspan="2">
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga8cd70657ac2aef7c637cc3bde5f953ae"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__ast.html#ga8cd70657ac2aef7c637cc3bde5f953ae">getInteger</a> (const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">SharedAbstractNode</a> &amp;node)</td></tr>
+<tr class="memdesc:ga8cd70657ac2aef7c637cc3bde5f953ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an integer node. <br /></td></tr>
+<tr class="separator:ga8cd70657ac2aef7c637cc3bde5f953ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The AST namespace. </p>

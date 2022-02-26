@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" href="$classtriton_1_1ast_1_1BvudivNode.html" title="(bvudiv &lt;expr1&gt; &lt;expr2&gt;) node" alt="" coords="5,1348,177,1375"/>
 <area shape="rect" id="node2" href="$classtriton_1_1ast_1_1AbstractNode.html" title="Abstract node." alt="" coords="225,1348,407,1375"/>
 <area shape="rect" id="node57" href="$classtriton_1_1ast_1_1AstContext.html" title="AST Context &#45; Used as AST builder." alt="" coords="233,1399,399,1425"/>
-<area shape="rect" id="node3" href="$classtriton_1_1ast_1_1ArrayNode.html" title="(Array (_ BitVec addrSize) (_ BitVec 8)) node" alt="" coords="472,5,635,32"/>
+<area shape="rect" id="node3" href="$classtriton_1_1ast_1_1ArrayNode.html" title="(Array (_ BitVec indexSize) (_ BitVec 8)) node" alt="" coords="472,5,635,32"/>
 <area shape="rect" id="node4" href="$classtriton_1_1ast_1_1AssertNode.html" title="(assert &lt;expr&gt;) node" alt="" coords="469,56,637,83"/>
 <area shape="rect" id="node5" href="$classtriton_1_1ast_1_1BswapNode.html" title="(bswap &lt;expr&gt;) node" alt="" coords="468,107,639,133"/>
 <area shape="rect" id="node6" href="$classtriton_1_1ast_1_1BvNode.html" title="(_ bv&lt;value&gt; &lt;size&gt;) node" alt="" coords="481,157,625,184"/>

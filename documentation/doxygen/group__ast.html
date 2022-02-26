@@ -83,8 +83,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Ast:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="group__ast.svg" width="336" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__ast.svg" width="336" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
@@ -98,7 +97,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract node.  <a href="classtriton_1_1ast_1_1AbstractNode.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1ArrayNode.html">triton::ast::ArrayNode</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>(Array (_ BitVec addrSize) (_ BitVec 8))</code> node  <a href="classtriton_1_1ast_1_1ArrayNode.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>(Array (_ BitVec indexSize) (_ BitVec 8))</code> node  <a href="classtriton_1_1ast_1_1ArrayNode.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1AssertNode.html">triton::ast::AssertNode</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>(assert &lt;expr&gt;)</code> node  <a href="classtriton_1_1ast_1_1AssertNode.html#details">More...</a><br /></td></tr>
@@ -416,6 +415,15 @@ std::deque&lt; <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa6
 <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">SharedAbstractNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ast.html#ga3ea0d380e320d693ad1b39ffd6dcea11">triton::ast::dereference</a> (const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">SharedAbstractNode</a> &amp;node)</td></tr>
 <tr class="memdesc:ga3ea0d380e320d693ad1b39ffd6dcea11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first non referene node encountered. <br /></td></tr>
 <tr class="separator:ga3ea0d380e320d693ad1b39ffd6dcea11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27e6314bb01a4c3c2e72620e4096df57"><td class="memItemLeft" align="right" valign="top"><a id="ga27e6314bb01a4c3c2e72620e4096df57"></a>
+<a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ast.html#ga27e6314bb01a4c3c2e72620e4096df57">triton::ast::getIndexSize</a> (const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">SharedAbstractNode</a> &amp;node)</td></tr>
+<tr class="memdesc:ga27e6314bb01a4c3c2e72620e4096df57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index size of an array. <br /></td></tr>
+<tr class="separator:ga27e6314bb01a4c3c2e72620e4096df57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8cd70657ac2aef7c637cc3bde5f953ae"><td class="memTemplParams" colspan="2"><a id="ga8cd70657ac2aef7c637cc3bde5f953ae"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga8cd70657ac2aef7c637cc3bde5f953ae"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__ast.html#ga8cd70657ac2aef7c637cc3bde5f953ae">triton::ast::getInteger</a> (const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">SharedAbstractNode</a> &amp;node)</td></tr>
+<tr class="memdesc:ga8cd70657ac2aef7c637cc3bde5f953ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an integer node. <br /></td></tr>
+<tr class="separator:ga8cd70657ac2aef7c637cc3bde5f953ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Enumeration Type Documentation</h2>

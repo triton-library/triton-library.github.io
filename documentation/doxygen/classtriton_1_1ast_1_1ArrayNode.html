@@ -82,7 +82,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>(Array (_ BitVec addrSize) (_ BitVec 8))</code> node  
+<p><code>(Array (_ BitVec indexSize) (_ BitVec 8))</code> node  
  <a href="classtriton_1_1ast_1_1ArrayNode.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ast_8hpp_source.html">ast.hpp</a>&gt;</code></p>
@@ -95,9 +95,9 @@ Inheritance diagram for triton::ast::ArrayNode:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acbac2d09e16d5d01a1eb4c233b00f4f3"><td class="memItemLeft" align="right" valign="top"><a id="acbac2d09e16d5d01a1eb4c233b00f4f3"></a>
-TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><b>ArrayNode</b> (<a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> addrSize, const <a class="el" href="group__ast.html#gafd6a94ab829d378f1270057ea80f2d05">SharedAstContext</a> &amp;<a class="el" href="classtriton_1_1ast_1_1AbstractNode.html#aa293a13f75e45c593f48b14b2054a411">ctxt</a>)</td></tr>
-<tr class="separator:acbac2d09e16d5d01a1eb4c233b00f4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5200e42bbc6a399b2c8c1ffc446c66c8"><td class="memItemLeft" align="right" valign="top"><a id="a5200e42bbc6a399b2c8c1ffc446c66c8"></a>
+TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><b>ArrayNode</b> (<a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> indexSize, const <a class="el" href="group__ast.html#gafd6a94ab829d378f1270057ea80f2d05">SharedAstContext</a> &amp;<a class="el" href="classtriton_1_1ast_1_1AbstractNode.html#aa293a13f75e45c593f48b14b2054a411">ctxt</a>)</td></tr>
+<tr class="separator:a5200e42bbc6a399b2c8c1ffc446c66c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecc4950d8fac91f34b5fbc194a61d249"><td class="memItemLeft" align="right" valign="top"><a id="aecc4950d8fac91f34b5fbc194a61d249"></a>
 TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1ArrayNode.html#aecc4950d8fac91f34b5fbc194a61d249">init</a> (bool withParents=false)</td></tr>
 <tr class="memdesc:aecc4950d8fac91f34b5fbc194a61d249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init properties of the node. If withParents is true, init also properties of parents. <br /></td></tr>
@@ -122,6 +122,10 @@ TRITON_EXPORT <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b
 TRITON_EXPORT std::unordered_map&lt; <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>, <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1ArrayNode.html#ab6d721f565e26134300025cfd6ef184d">getMemory</a> (void)</td></tr>
 <tr class="memdesc:ab6d721f565e26134300025cfd6ef184d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the concrete memory array. <br /></td></tr>
 <tr class="separator:ab6d721f565e26134300025cfd6ef184d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7795553b1d26b18c26339822e309db7e"><td class="memItemLeft" align="right" valign="top"><a id="a7795553b1d26b18c26339822e309db7e"></a>
+TRITON_EXPORT <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1ArrayNode.html#a7795553b1d26b18c26339822e309db7e">getIndexSize</a> (void) const</td></tr>
+<tr class="memdesc:a7795553b1d26b18c26339822e309db7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the index size. <br /></td></tr>
+<tr class="separator:a7795553b1d26b18c26339822e309db7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classtriton_1_1ast_1_1AbstractNode"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classtriton_1_1ast_1_1AbstractNode')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classtriton_1_1ast_1_1AbstractNode.html">triton::ast::AbstractNode</a></td></tr>
 <tr class="memitem:a3baa3f1d951525ad76303ece45a8ebb6 inherit pub_methods_classtriton_1_1ast_1_1AbstractNode"><td class="memItemLeft" align="right" valign="top"><a id="a3baa3f1d951525ad76303ece45a8ebb6"></a>
 TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1ast_1_1AbstractNode.html#a3baa3f1d951525ad76303ece45a8ebb6">AbstractNode</a> (<a class="el" href="group__ast.html#ga2b93cc7e19032f733c001c96530ef64f">triton::ast::ast_e</a> <a class="el" href="classtriton_1_1ast_1_1AbstractNode.html#a46c8ef1e1e32ccc9305d8160146fabfc">type</a>, const <a class="el" href="group__ast.html#gafd6a94ab829d378f1270057ea80f2d05">SharedAstContext</a> &amp;<a class="el" href="classtriton_1_1ast_1_1AbstractNode.html#aa293a13f75e45c593f48b14b2054a411">ctxt</a>)</td></tr>
@@ -276,9 +280,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:aa293a13f75e45c593f48b14b2054a411 inherit pro_attribs_classtriton_1_1ast_1_1AbstractNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><code>(Array (_ BitVec addrSize) (_ BitVec 8))</code> node </p>
+<div class="textblock"><p><code>(Array (_ BitVec indexSize) (_ BitVec 8))</code> node </p>
 
-<p class="definition">Definition at line <a class="el" href="ast_8hpp_source.html#l00191">191</a> of file <a class="el" href="ast_8hpp_source.html">ast.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ast_8hpp_source.html#l00192">192</a> of file <a class="el" href="ast_8hpp_source.html">ast.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/<a class="el" href="ast_8hpp_source.html">ast.hpp</a></li>
 <li>/home/jonathan/Works/Tools/Triton/src/libtriton/ast/<a class="el" href="ast_8cpp_source.html">ast.cpp</a></li>
