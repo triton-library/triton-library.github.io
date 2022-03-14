@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1526</span>
+   &#160;<span id="projectnumber">version 1.0 build 1529</span>
    </div>
   </td>
  </tr>
@@ -119,6 +119,8 @@ Python API - Methods of the PathConstraint class</h1>
 <ul>
 <li><b>dict getBranchConstraints(void)</b><br  />
  Returns the branch constraints as list of dictionary <code>{isTaken, srcAddr, dstAddr, constraint}</code>. The source address is the location of the branch instruction and the destination address is the destination of the jump. E.g: <code>"0x11223344: jne 0x55667788"</code>, 0x11223344 is the source address and 0x55667788 is the destination if and only if the branch is taken, otherwise the destination is the next instruction address.</li>
+<li><b>string getComment(void)</b><br  />
+ Returns the comment (if exists) of the path constraint.</li>
 <li><b>integer getTakenAddress(void)</b><br  />
  Returns the address of the taken branch.</li>
 <li><b><a class="el" href="py_AstNode_page.html">AstNode</a> getTakenPredicate(void)</b><br  />
@@ -126,7 +128,9 @@ Python API - Methods of the PathConstraint class</h1>
 <li><b>integer getThreadId(void)</b><br  />
  Returns the thread id of the constraint. Returns -1 if thread id is undefined.</li>
 <li><b>bool isMultipleBranches(void)</b><br  />
- Returns true if it is not a direct jump. </li>
+ Returns true if it is not a direct jump.</li>
+<li><b>void setComment(string comment)</b><br  />
+ Sets comment of the path constraint. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
