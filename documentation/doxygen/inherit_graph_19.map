@@ -1,3 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structtriton_1_1bindings_1_1python_1_1AstContext__Object.html" title="pyAstContext object." alt="" coords="5,5,179,47"/>
+<area shape="rect" id="node1" href="$classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Specifications.html" title="The AArch64Specifications class defines specifications about the AArch64 CPU." alt="" coords="5,5,232,47"/>
+<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html" title="This class is used to describe the ARM (64&#45;bits) spec." alt="" coords="280,5,441,47"/>
+<area shape="rect" id="node3" href="$classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Specifications.html" title="The Arm32Specifications class defines specifications about the Arm32 CPU." alt="" coords="16,71,221,112"/>
+<area shape="rect" id="node4" href="$classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html" title="This class is used to describe the ARM (32&#45;bits) spec." alt="" coords="291,71,431,112"/>
+<area shape="rect" id="node5" href="$classtriton_1_1arch_1_1CpuInterface.html" title="This interface is used as abstract CPU interface. All CPU must use this interface." alt="" coords="27,141,211,167"/>
+<area shape="rect" id="node6" href="$classtriton_1_1arch_1_1x86_1_1x8664Cpu.html" title="This class is used to describe the x86 (64&#45;bits) spec." alt="" coords="294,136,427,177"/>
+<area shape="rect" id="node7" href="$classtriton_1_1arch_1_1x86_1_1x86Cpu.html" title="This class is used to describe the x86 (32&#45;bits) spec." alt="" coords="294,201,427,243"/>
+<area shape="rect" id="node8" href="$classtriton_1_1arch_1_1x86_1_1x86Specifications.html" title="The x86Specifications class defines specifications about the x86 and x86_64 CPU." alt="" coords="51,195,187,236"/>
 </map>

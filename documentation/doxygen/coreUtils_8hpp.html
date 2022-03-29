@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1529</span>
+   &#160;<span id="projectnumber">version 1.0 build 1530</span>
    </div>
   </td>
  </tr>
@@ -81,12 +81,16 @@ $(function() {
 <div class="title">coreUtils.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="tritonTypes_8hpp_source.html">triton/tritonTypes.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;triton/config.hpp&gt;</code><br />
 <code>#include &lt;<a class="el" href="dllexport_8hpp_source.html">triton/dllexport.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="tritonTypes_8hpp_source.html">triton/tritonTypes.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="coreUtils_8hpp__dep__incl.svg" width="1419" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="coreUtils_8hpp__dep__incl.svg" width="5719" height="824"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -103,31 +107,31 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga13de8c6df8359e05cda3d0d913876ced"><td class="memItemLeft" align="right" valign="top">
-TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">triton::utils::fromUintToBuffer</a> (<a class="el" href="group__triton.html#ga090674366912ddd4be6f96701b51143d">triton::uint80</a> value, <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> *buffer)</td></tr>
-<tr class="memdesc:ga13de8c6df8359e05cda3d0d913876ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject the value into the buffer. Make sure that the <code>buffer</code> contains at least 10 allocated bytes. <br /></td></tr>
-<tr class="separator:ga13de8c6df8359e05cda3d0d913876ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1110254e4a671c4c6e70171b50d86f13"><td class="memItemLeft" align="right" valign="top">
-TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#ga1110254e4a671c4c6e70171b50d86f13">triton::utils::fromUintToBuffer</a> (<a class="el" href="group__triton.html#ga08f1d579975de7dc9260f08512b8dc26">triton::uint128</a> value, <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> *buffer)</td></tr>
-<tr class="memdesc:ga1110254e4a671c4c6e70171b50d86f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject the value into the buffer. Make sure that the <code>buffer</code> contains at least 16 allocated bytes. <br /></td></tr>
-<tr class="separator:ga1110254e4a671c4c6e70171b50d86f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4b3cde87657b345887e940f68d4d350d"><td class="memItemLeft" align="right" valign="top">
-TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#ga4b3cde87657b345887e940f68d4d350d">triton::utils::fromUintToBuffer</a> (<a class="el" href="group__triton.html#ga673fc8d1c269d63cb5a8e10861e56bc0">triton::uint256</a> value, <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> *buffer)</td></tr>
-<tr class="memdesc:ga4b3cde87657b345887e940f68d4d350d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject the value into the buffer. Make sure that the <code>buffer</code> contains at least 32 allocated bytes. <br /></td></tr>
-<tr class="separator:ga4b3cde87657b345887e940f68d4d350d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac3883b8a0773fd40a991424d9d15573b"><td class="memItemLeft" align="right" valign="top">
-TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#gac3883b8a0773fd40a991424d9d15573b">triton::utils::fromUintToBuffer</a> (<a class="el" href="group__triton.html#ga934595e3b389ea950980e6dc8f68ec92">triton::uint512</a> value, <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> *buffer)</td></tr>
-<tr class="memdesc:gac3883b8a0773fd40a991424d9d15573b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject the value into the buffer. Make sure that the <code>buffer</code> contains at least 64 allocated bytes. <br /></td></tr>
-<tr class="separator:gac3883b8a0773fd40a991424d9d15573b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8d0522408e3654acd1ea44820922f74c"><td class="memTemplParams" colspan="2">
+<tr class="memitem:gaf551c7ab56c2b5feb29d309be7bae0eb"><td class="memTemplParams" colspan="2">
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ga8d0522408e3654acd1ea44820922f74c"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__utils.html#ga8d0522408e3654acd1ea44820922f74c">triton::utils::fromBufferToUint</a> (const <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> *buffer)</td></tr>
-<tr class="memdesc:ga8d0522408e3654acd1ea44820922f74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value located into the buffer. <br /></td></tr>
-<tr class="separator:ga8d0522408e3654acd1ea44820922f74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1c001b2602208ee6ef8f2a3f2c1a47f7"><td class="memItemLeft" align="right" valign="top">
+<tr class="memitem:gaf551c7ab56c2b5feb29d309be7bae0eb"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__utils.html#gaf551c7ab56c2b5feb29d309be7bae0eb">triton::utils::toString</a> (const T &amp;obj)</td></tr>
+<tr class="memdesc:gaf551c7ab56c2b5feb29d309be7bae0eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an object to a string. <br /></td></tr>
+<tr class="separator:gaf551c7ab56c2b5feb29d309be7bae0eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13de8c6df8359e05cda3d0d913876ced"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">triton::utils::fromUintToBuffer</a> (<a class="el" href="group__triton.html#ga8413e5c80ebc52ff3f51eecef990f1f5">triton::uint80</a> value, <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> *buffer)</td></tr>
+<tr class="memdesc:ga13de8c6df8359e05cda3d0d913876ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject the value into the buffer. Make sure that the <code>buffer</code> contains at least 10 allocated bytes.  <a href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">More...</a><br /></td></tr>
+<tr class="separator:ga13de8c6df8359e05cda3d0d913876ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf266698124032edf17dffa85f48a8d2c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gaf266698124032edf17dffa85f48a8d2c"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__utils.html#gaf266698124032edf17dffa85f48a8d2c">triton::utils::cast</a> (const <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680">triton::uint512</a> &amp;value)</td></tr>
+<tr class="memdesc:gaf266698124032edf17dffa85f48a8d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts an <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680" title="unsigned 512-bits">triton::uint512</a> to T.  <a href="group__utils.html#gaf266698124032edf17dffa85f48a8d2c">More...</a><br /></td></tr>
+<tr class="separator:gaf266698124032edf17dffa85f48a8d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8dcc4309e1e9477d02866d60a7331ab4"><td class="memTemplParams" colspan="2">
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga8dcc4309e1e9477d02866d60a7331ab4"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__utils.html#ga8dcc4309e1e9477d02866d60a7331ab4">triton::utils::cast</a> (const <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> *buffer)</td></tr>
+<tr class="memdesc:ga8dcc4309e1e9477d02866d60a7331ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value located into the buffer. <br /></td></tr>
+<tr class="separator:ga8dcc4309e1e9477d02866d60a7331ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb7419440674160818793f1d08653f63"><td class="memItemLeft" align="right" valign="top">
 template&lt;&gt; </td></tr>
-<tr class="memitem:ga1c001b2602208ee6ef8f2a3f2c1a47f7"><td class="memTemplItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__triton.html#ga090674366912ddd4be6f96701b51143d">triton::uint80</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>triton::utils::fromBufferToUint</b> (const <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> *buffer)</td></tr>
-<tr class="separator:ga1c001b2602208ee6ef8f2a3f2c1a47f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb7419440674160818793f1d08653f63"><td class="memTemplItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__triton.html#ga8413e5c80ebc52ff3f51eecef990f1f5">triton::uint80</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>triton::utils::cast</b> (const <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> *buffer)</td></tr>
+<tr class="separator:gabb7419440674160818793f1d08653f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b1257f451b0f01b2de7608d14eb8f5f"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ga5b1257f451b0f01b2de7608d14eb8f5f"><td class="memTemplItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__triton.html#ga8413e5c80ebc52ff3f51eecef990f1f5">triton::uint80</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__utils.html#ga5b1257f451b0f01b2de7608d14eb8f5f">triton::utils::cast</a> (const <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680">triton::uint512</a> &amp;value)</td></tr>
+<tr class="memdesc:ga5b1257f451b0f01b2de7608d14eb8f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast an uint512 to an uint80 according to the multiprecision library.  <a href="group__utils.html#ga5b1257f451b0f01b2de7608d14eb8f5f">More...</a><br /></td></tr>
+<tr class="separator:ga5b1257f451b0f01b2de7608d14eb8f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.14-->

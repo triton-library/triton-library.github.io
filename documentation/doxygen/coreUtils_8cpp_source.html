@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1529</span>
+   &#160;<span id="projectnumber">version 1.0 build 1530</span>
    </div>
   </td>
  </tr>
@@ -89,78 +89,131 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * Note: We must use generic methods to deal with big int and arrays.</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetriton.html">triton</a> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">namespace </span>utils {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">   20</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">fromUintToBuffer</a>(<a class="code" href="group__triton.html#ga090674366912ddd4be6f96701b51143d">triton::uint80</a> value, <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> i = 0; i &lt; <a class="code" href="group__size.html#ga2537cbbe77b9f4e76a3e77877e6bb985">triton::size::fword</a>; i++) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        buffer[i] = (value &amp; 0xff).convert_to&lt;triton::uint8&gt;();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        value &gt;&gt;= <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="group__utils.html#ga1110254e4a671c4c6e70171b50d86f13">   28</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">fromUintToBuffer</a>(<a class="code" href="group__triton.html#ga08f1d579975de7dc9260f08512b8dc26">triton::uint128</a> value, <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> i = 0; i &lt; <a class="code" href="group__size.html#ga715b61bef582834b9bf74a8235422989">triton::size::dqword</a>; i++) {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        buffer[i] = (value &amp; 0xff).convert_to&lt;triton::uint8&gt;();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        value &gt;&gt;= <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="group__utils.html#ga4b3cde87657b345887e940f68d4d350d">   36</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">fromUintToBuffer</a>(<a class="code" href="group__triton.html#ga673fc8d1c269d63cb5a8e10861e56bc0">triton::uint256</a> value, <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> i = 0; i &lt; <a class="code" href="group__size.html#gafb9ef9cbb5dbd3a8a5d470d3ef932ad5">triton::size::qqword</a>; i++) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        buffer[i] = (value &amp; 0xff).convert_to&lt;triton::uint8&gt;();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        value &gt;&gt;= <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="group__utils.html#gac3883b8a0773fd40a991424d9d15573b">   44</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">fromUintToBuffer</a>(<a class="code" href="group__triton.html#ga934595e3b389ea950980e6dc8f68ec92">triton::uint512</a> value, <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> i = 0; i &lt; <a class="code" href="group__size.html#ga58b648513a93bb6bcf000b5d20abd296">triton::size::dqqword</a>; i++) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        buffer[i] = (value &amp; 0xff).convert_to&lt;triton::uint8&gt;();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        value &gt;&gt;= <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">template</span> &lt;&gt; <a class="code" href="group__triton.html#ga090674366912ddd4be6f96701b51143d">triton::uint80</a> fromBufferToUint&lt;&gt;(<span class="keyword">const</span> <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <a class="code" href="group__triton.html#ga090674366912ddd4be6f96701b51143d">triton::uint80</a> value = 0;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a> i = <a class="code" href="group__size.html#ga2537cbbe77b9f4e76a3e77877e6bb985">triton::size::fword</a>-1; i &gt;= 0; i--)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        value = ((value &lt;&lt; <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>) | buffer[i]);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">template</span> &lt;&gt; <a class="code" href="group__triton.html#ga08f1d579975de7dc9260f08512b8dc26">triton::uint128</a> fromBufferToUint&lt;&gt;(<span class="keyword">const</span> <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <a class="code" href="group__triton.html#ga08f1d579975de7dc9260f08512b8dc26">triton::uint128</a> value = 0;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a> i = <a class="code" href="group__size.html#ga715b61bef582834b9bf74a8235422989">triton::size::dqword</a>-1; i &gt;= 0; i--)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        value = ((value &lt;&lt; <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>) | buffer[i]);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">template</span> &lt;&gt; <a class="code" href="group__triton.html#ga673fc8d1c269d63cb5a8e10861e56bc0">triton::uint256</a> fromBufferToUint&lt;&gt;(<span class="keyword">const</span> <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <a class="code" href="group__triton.html#ga673fc8d1c269d63cb5a8e10861e56bc0">triton::uint256</a> value = 0;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a> i = <a class="code" href="group__size.html#gafb9ef9cbb5dbd3a8a5d470d3ef932ad5">triton::size::qqword</a>-1; i &gt;= 0; i--)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        value = ((value &lt;&lt; <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>) | buffer[i]);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">template</span> &lt;&gt; <a class="code" href="group__triton.html#ga934595e3b389ea950980e6dc8f68ec92">triton::uint512</a> fromBufferToUint&lt;&gt;(<span class="keyword">const</span> <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <a class="code" href="group__triton.html#ga934595e3b389ea950980e6dc8f68ec92">triton::uint512</a> value = 0;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a> i = <a class="code" href="group__size.html#ga58b648513a93bb6bcf000b5d20abd296">triton::size::dqqword</a>-1; i &gt;= 0; i--)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        value = ((value &lt;&lt; <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>) | buffer[i]);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }; <span class="comment">/* utils namespace */</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetriton.html">triton</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">namespace </span>utils {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">   16</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">fromUintToBuffer</a>(<a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint80</a> value, <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> i = 0; i &lt; <a class="code" href="group__size.html#ga2537cbbe77b9f4e76a3e77877e6bb985">triton::size::fword</a>; i++) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        buffer[i] = <span class="keyword">static_cast&lt;</span><a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a><span class="keyword">&gt;</span>(value &amp; 0xff);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        value &gt;&gt;= <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">fromUintToBuffer</a>(<a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint128</a> value, <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> i = 0; i &lt; <a class="code" href="group__size.html#ga715b61bef582834b9bf74a8235422989">triton::size::dqword</a>; i++) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        buffer[i] = <span class="keyword">static_cast&lt;</span><a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a><span class="keyword">&gt;</span>(value &amp; 0xff);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        value &gt;&gt;= <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">fromUintToBuffer</a>(<a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint256</a> value, <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> i = 0; i &lt; <a class="code" href="group__size.html#gafb9ef9cbb5dbd3a8a5d470d3ef932ad5">triton::size::qqword</a>; i++) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        buffer[i] = <span class="keyword">static_cast&lt;</span><a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a><span class="keyword">&gt;</span>(value &amp; 0xff);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        value &gt;&gt;= <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">fromUintToBuffer</a>(<a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint512</a> value, <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> i = 0; i &lt; <a class="code" href="group__size.html#ga58b648513a93bb6bcf000b5d20abd296">triton::size::dqqword</a>; i++) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        buffer[i] = <span class="keyword">static_cast&lt;</span><a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a><span class="keyword">&gt;</span>(value &amp; 0xff);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        value &gt;&gt;= <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">template</span> &lt;&gt; <a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint80</a> cast&lt;&gt;(<span class="keyword">const</span> <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint80</a> value = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a> i = <a class="code" href="group__size.html#ga2537cbbe77b9f4e76a3e77877e6bb985">triton::size::fword</a>-1; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        value = ((value &lt;&lt; <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>) | buffer[i]);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">template</span> &lt;&gt; <a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint128</a> cast&lt;&gt;(<span class="keyword">const</span> <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint128</a> value = 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a> i = <a class="code" href="group__size.html#ga715b61bef582834b9bf74a8235422989">triton::size::dqword</a>-1; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        value = ((value &lt;&lt; <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>) | buffer[i]);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">template</span> &lt;&gt; <a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint256</a> cast&lt;&gt;(<span class="keyword">const</span> <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint256</a> value = 0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a> i = <a class="code" href="group__size.html#gafb9ef9cbb5dbd3a8a5d470d3ef932ad5">triton::size::qqword</a>-1; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        value = ((value &lt;&lt; <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>) | buffer[i]);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">template</span> &lt;&gt; <a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint512</a> cast&lt;&gt;(<span class="keyword">const</span> <a class="code" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* buffer) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint512</a> value = 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">for</span> (<a class="code" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a> i = <a class="code" href="group__size.html#ga58b648513a93bb6bcf000b5d20abd296">triton::size::dqqword</a>-1; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        value = ((value &lt;&lt; <a class="code" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a>) | buffer[i]);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="group__utils.html#ga5b1257f451b0f01b2de7608d14eb8f5f">   81</a></span>&#160;    <span class="keyword">template</span> &lt;&gt; <a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint80</a> cast&lt;&gt;(<span class="keyword">const</span> <a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint512</a>&amp; value) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">      #ifdef TRITON_BOOST_INTERFACE</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint80</a><span class="keyword">&gt;</span>(value);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">      #else</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">        #if defined(WIDE_INTEGER_NAMESPACE)</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">using</span> WIDE_INTEGER_NAMESPACE::math::wide_integer::detail::make_lo;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">using</span> WIDE_INTEGER_NAMESPACE::math::wide_integer::detail::make_hi;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">        #else</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">using</span> math::wide_integer::detail::make_lo;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">using</span> math::wide_integer::detail::make_hi;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        static_assert(</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          std::numeric_limits&lt;typename triton::uint80::limb_type&gt;::digits * 2 == std::numeric_limits&lt;typename triton::uint512::limb_type&gt;::digits,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          <span class="stringliteral">&quot;Error: Wrong input/output limb types for this conversion&quot;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">using</span> local_value_type = <span class="keyword">typename</span> triton::uint80::representation_type::value_type;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> triton::uint80::from_rep({</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                 make_lo&lt;local_value_type&gt;(*(value.crepresentation().data() + 0U)),</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                 make_hi&lt;local_value_type&gt;(*(value.crepresentation().data() + 0U)),</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                 make_lo&lt;local_value_type&gt;(*(value.crepresentation().data() + 1U)),</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                 make_hi&lt;local_value_type&gt;(*(value.crepresentation().data() + 1U)),</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                 make_lo&lt;local_value_type&gt;(*(value.crepresentation().data() + 2U))</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;               });</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">      #endif</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">template</span> &lt;&gt; <a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint512</a> cast&lt;&gt;(<span class="keyword">const</span> <a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint80</a>&amp; value) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">      #ifdef TRITON_BOOST_INTERFACE</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="classmath_1_1wide__integer_1_1uintwide__t.html">triton::uint512</a><span class="keyword">&gt;</span>(value);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">      #else</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">        #if defined(WIDE_INTEGER_NAMESPACE)</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keyword">using</span> WIDE_INTEGER_NAMESPACE::math::wide_integer::detail::make_large;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">        #else</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">using</span> math::wide_integer::detail::make_large;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        static_assert(</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;          std::numeric_limits&lt;typename triton::uint80::limb_type&gt;::digits * 2 == std::numeric_limits&lt;typename triton::uint512::limb_type&gt;::digits,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;          <span class="stringliteral">&quot;Error: Wrong input/output limb types for this conversion&quot;</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        );</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keyword">using</span> local_value_type = <span class="keyword">typename</span> triton::uint80::representation_type::value_type;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">return</span> triton::uint512::from_rep({</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                 make_large(*(value.crepresentation().data() + 0U), *(value.crepresentation().data() + 1U)),</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                 make_large(*(value.crepresentation().data() + 2U), *(value.crepresentation().data() + 3U)),</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                 make_large(*(value.crepresentation().data() + 4U), <span class="keyword">static_cast&lt;</span>local_value_type<span class="keyword">&gt;</span>(0U))</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;               });</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">      #endif</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  }; <span class="comment">/* utils namespace */</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
+<div class="ttc" id="aclassmath_1_1wide__integer_1_1uintwide__t_html"><div class="ttname"><a href="classmath_1_1wide__integer_1_1uintwide__t.html">math::wide_integer::uintwide_t</a></div><div class="ttdef"><b>Definition:</b> <a href="uintwide__t_8h_source.html#l01273">uintwide_t.h:1274</a></div></div>
 <div class="ttc" id="acoreUtils_8hpp_html"><div class="ttname"><a href="coreUtils_8hpp.html">coreUtils.hpp</a></div></div>
 <div class="ttc" id="acpuSize_8hpp_html"><div class="ttname"><a href="cpuSize_8hpp.html">cpuSize.hpp</a></div></div>
 <div class="ttc" id="agroup__bitsize_html_ga02676529149bfbc32ed8367e871d1f5a"><div class="ttname"><a href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">triton::bitsize::byte</a></div><div class="ttdeci">constexpr triton::uint32 byte</div><div class="ttdoc">byte size in bit</div><div class="ttdef"><b>Definition:</b> <a href="cpuSize_8hpp_source.html#l00060">cpuSize.hpp:60</a></div></div>
@@ -168,14 +221,10 @@ $(function() {
 <div class="ttc" id="agroup__size_html_ga58b648513a93bb6bcf000b5d20abd296"><div class="ttname"><a href="group__size.html#ga58b648513a93bb6bcf000b5d20abd296">triton::size::dqqword</a></div><div class="ttdeci">constexpr triton::uint32 dqqword</div><div class="ttdoc">dqqword size in byte</div><div class="ttdef"><b>Definition:</b> <a href="cpuSize_8hpp_source.html#l00044">cpuSize.hpp:44</a></div></div>
 <div class="ttc" id="agroup__size_html_ga715b61bef582834b9bf74a8235422989"><div class="ttname"><a href="group__size.html#ga715b61bef582834b9bf74a8235422989">triton::size::dqword</a></div><div class="ttdeci">constexpr triton::uint32 dqword</div><div class="ttdoc">dqword size in byte</div><div class="ttdef"><b>Definition:</b> <a href="cpuSize_8hpp_source.html#l00040">cpuSize.hpp:40</a></div></div>
 <div class="ttc" id="agroup__size_html_gafb9ef9cbb5dbd3a8a5d470d3ef932ad5"><div class="ttname"><a href="group__size.html#gafb9ef9cbb5dbd3a8a5d470d3ef932ad5">triton::size::qqword</a></div><div class="ttdeci">constexpr triton::uint32 qqword</div><div class="ttdoc">qqword size in byte</div><div class="ttdef"><b>Definition:</b> <a href="cpuSize_8hpp_source.html#l00042">cpuSize.hpp:42</a></div></div>
-<div class="ttc" id="agroup__triton_html_ga08f1d579975de7dc9260f08512b8dc26"><div class="ttname"><a href="group__triton.html#ga08f1d579975de7dc9260f08512b8dc26">triton::uint128</a></div><div class="ttdeci">boost::multiprecision::uint128_t uint128</div><div class="ttdoc">unsigned 128-bits</div><div class="ttdef"><b>Definition:</b> <a href="tritonTypes_8hpp_source.html#l00041">tritonTypes.hpp:41</a></div></div>
-<div class="ttc" id="agroup__triton_html_ga090674366912ddd4be6f96701b51143d"><div class="ttname"><a href="group__triton.html#ga090674366912ddd4be6f96701b51143d">triton::uint80</a></div><div class="ttdeci">boost::multiprecision::number&lt; boost::multiprecision::cpp_int_backend&lt; 80, 80, boost::multiprecision::unsigned_magnitude, boost::multiprecision::unchecked, void &gt; &gt; uint80</div><div class="ttdoc">unsigned 80-bits</div><div class="ttdef"><b>Definition:</b> <a href="tritonTypes_8hpp_source.html#l00038">tritonTypes.hpp:38</a></div></div>
-<div class="ttc" id="agroup__triton_html_ga3288b7070d9460c26144c2873cdf287b"><div class="ttname"><a href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a></div><div class="ttdeci">std::int32_t sint32</div><div class="ttdoc">signed 32-bits</div><div class="ttdef"><b>Definition:</b> <a href="tritonTypes_8hpp_source.html#l00056">tritonTypes.hpp:56</a></div></div>
-<div class="ttc" id="agroup__triton_html_ga673fc8d1c269d63cb5a8e10861e56bc0"><div class="ttname"><a href="group__triton.html#ga673fc8d1c269d63cb5a8e10861e56bc0">triton::uint256</a></div><div class="ttdeci">boost::multiprecision::uint256_t uint256</div><div class="ttdoc">unsigned 256-bits</div><div class="ttdef"><b>Definition:</b> <a href="tritonTypes_8hpp_source.html#l00044">tritonTypes.hpp:44</a></div></div>
-<div class="ttc" id="agroup__triton_html_ga934595e3b389ea950980e6dc8f68ec92"><div class="ttname"><a href="group__triton.html#ga934595e3b389ea950980e6dc8f68ec92">triton::uint512</a></div><div class="ttdeci">boost::multiprecision::uint512_t uint512</div><div class="ttdoc">unsigned 512-bits</div><div class="ttdef"><b>Definition:</b> <a href="tritonTypes_8hpp_source.html#l00047">tritonTypes.hpp:47</a></div></div>
-<div class="ttc" id="agroup__triton_html_gaf268b500e0439d03342a0e6b369bca7e"><div class="ttname"><a href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a></div><div class="ttdeci">std::uint32_t uint32</div><div class="ttdoc">unisgned 32-bits</div><div class="ttdef"><b>Definition:</b> <a href="tritonTypes_8hpp_source.html#l00032">tritonTypes.hpp:32</a></div></div>
-<div class="ttc" id="agroup__triton_html_gafa8bb8d2296248581f899fe3b63ca357"><div class="ttname"><a href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a></div><div class="ttdeci">std::uint8_t uint8</div><div class="ttdoc">unisgned 8-bits</div><div class="ttdef"><b>Definition:</b> <a href="tritonTypes_8hpp_source.html#l00026">tritonTypes.hpp:26</a></div></div>
-<div class="ttc" id="agroup__utils_html_ga13de8c6df8359e05cda3d0d913876ced"><div class="ttname"><a href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">triton::utils::fromUintToBuffer</a></div><div class="ttdeci">TRITON_EXPORT void fromUintToBuffer(triton::uint80 value, triton::uint8 *buffer)</div><div class="ttdoc">Inject the value into the buffer. Make sure that the buffer contains at least 10 allocated bytes.</div><div class="ttdef"><b>Definition:</b> <a href="coreUtils_8cpp_source.html#l00020">coreUtils.cpp:20</a></div></div>
+<div class="ttc" id="agroup__triton_html_ga3288b7070d9460c26144c2873cdf287b"><div class="ttname"><a href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a></div><div class="ttdeci">std::int32_t sint32</div><div class="ttdoc">signed 32-bits</div><div class="ttdef"><b>Definition:</b> <a href="tritonTypes_8hpp_source.html#l00079">tritonTypes.hpp:79</a></div></div>
+<div class="ttc" id="agroup__triton_html_gaf268b500e0439d03342a0e6b369bca7e"><div class="ttname"><a href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a></div><div class="ttdeci">std::uint32_t uint32</div><div class="ttdoc">unisgned 32-bits</div><div class="ttdef"><b>Definition:</b> <a href="tritonTypes_8hpp_source.html#l00039">tritonTypes.hpp:39</a></div></div>
+<div class="ttc" id="agroup__triton_html_gafa8bb8d2296248581f899fe3b63ca357"><div class="ttname"><a href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a></div><div class="ttdeci">std::uint8_t uint8</div><div class="ttdoc">unisgned 8-bits</div><div class="ttdef"><b>Definition:</b> <a href="tritonTypes_8hpp_source.html#l00033">tritonTypes.hpp:33</a></div></div>
+<div class="ttc" id="agroup__utils_html_ga13de8c6df8359e05cda3d0d913876ced"><div class="ttname"><a href="group__utils.html#ga13de8c6df8359e05cda3d0d913876ced">triton::utils::fromUintToBuffer</a></div><div class="ttdeci">TRITON_EXPORT void fromUintToBuffer(triton::uint80 value, triton::uint8 *buffer)</div><div class="ttdoc">Inject the value into the buffer. Make sure that the buffer contains at least 10 allocated bytes.</div><div class="ttdef"><b>Definition:</b> <a href="coreUtils_8cpp_source.html#l00016">coreUtils.cpp:16</a></div></div>
 <div class="ttc" id="anamespacetriton_html"><div class="ttname"><a href="namespacetriton.html">triton</a></div><div class="ttdoc">The Triton namespace.</div><div class="ttdef"><b>Definition:</b> <a href="api_8cpp_source.html#l00165">api.cpp:165</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.14-->
