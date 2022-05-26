@@ -84,7 +84,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This class is used when to represent an instruction.  
+<p>This class is used to represent an instruction.  
  <a href="classtriton_1_1arch_1_1Instruction.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="instruction_8hpp_source.html">instruction.hpp</a>&gt;</code></p>
@@ -109,12 +109,16 @@ TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="separator:acab5a79233dfce7a487f910a08686fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a032ac52a507c3a4aa5487841cd7d02c5"><td class="memItemLeft" align="right" valign="top"><a id="a032ac52a507c3a4aa5487841cd7d02c5"></a>
 TRITON_EXPORT <a class="el" href="classtriton_1_1arch_1_1Instruction.html">Instruction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Instruction.html#a032ac52a507c3a4aa5487841cd7d02c5">operator=</a> (const <a class="el" href="classtriton_1_1arch_1_1Instruction.html">Instruction</a> &amp;other)</td></tr>
-<tr class="memdesc:a032ac52a507c3a4aa5487841cd7d02c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies an <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used when to represent an instruction.">Instruction</a>. <br /></td></tr>
+<tr class="memdesc:a032ac52a507c3a4aa5487841cd7d02c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies an <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used to represent an instruction.">Instruction</a>. <br /></td></tr>
 <tr class="separator:a032ac52a507c3a4aa5487841cd7d02c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf5507462d8a24474c908f200caa005d"><td class="memItemLeft" align="right" valign="top"><a id="acf5507462d8a24474c908f200caa005d"></a>
 TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Instruction.html#acf5507462d8a24474c908f200caa005d">~Instruction</a> ()</td></tr>
 <tr class="memdesc:acf5507462d8a24474c908f200caa005d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:acf5507462d8a24474c908f200caa005d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a082aea503bdc253e836b4eb703f409cf"><td class="memItemLeft" align="right" valign="top"><a id="a082aea503bdc253e836b4eb703f409cf"></a>
+TRITON_EXPORT <a class="el" href="group__arch.html#ga72199f3206aa1c9b09b2688cb8d3e7ab">triton::arch::architecture_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Instruction.html#a082aea503bdc253e836b4eb703f409cf">getArchitecture</a> (void) const</td></tr>
+<tr class="memdesc:a082aea503bdc253e836b4eb703f409cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the instruction's architecture. <br /></td></tr>
+<tr class="separator:a082aea503bdc253e836b4eb703f409cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a927d38ba19cb8e01abc6d2536bf46f71"><td class="memItemLeft" align="right" valign="top"><a id="a927d38ba19cb8e01abc6d2536bf46f71"></a>
 TRITON_EXPORT <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Instruction.html#a927d38ba19cb8e01abc6d2536bf46f71">getThreadId</a> (void) const</td></tr>
 <tr class="memdesc:a927d38ba19cb8e01abc6d2536bf46f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the thread id of the instruction. <br /></td></tr>
@@ -239,6 +243,10 @@ TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="
 TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Instruction.html#aa8f89b04c01b7b9e840fa6d0577e13b3">setSize</a> (<a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> <a class="el" href="classtriton_1_1arch_1_1Instruction.html#a214fcd776510eee58218908be265ebab">size</a>)</td></tr>
 <tr class="memdesc:aa8f89b04c01b7b9e840fa6d0577e13b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size of the instruction. <br /></td></tr>
 <tr class="separator:aa8f89b04c01b7b9e840fa6d0577e13b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b0bb3e30c4e267bc160d7e52dc7651c"><td class="memItemLeft" align="right" valign="top"><a id="a7b0bb3e30c4e267bc160d7e52dc7651c"></a>
+TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Instruction.html#a7b0bb3e30c4e267bc160d7e52dc7651c">setArchitecture</a> (<a class="el" href="group__arch.html#ga72199f3206aa1c9b09b2688cb8d3e7ab">triton::arch::architecture_e</a> <a class="el" href="classtriton_1_1arch_1_1Instruction.html#ace5d0b6534f554289bc0b65a45d7eef0">arch</a>)</td></tr>
+<tr class="memdesc:a7b0bb3e30c4e267bc160d7e52dc7651c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the instruction's architecture. <br /></td></tr>
+<tr class="separator:a7b0bb3e30c4e267bc160d7e52dc7651c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f3e17806505e6ad7deaf9e675a84d07"><td class="memItemLeft" align="right" valign="top"><a id="a3f3e17806505e6ad7deaf9e675a84d07"></a>
 TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Instruction.html#a3f3e17806505e6ad7deaf9e675a84d07">setType</a> (<a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> <a class="el" href="classtriton_1_1arch_1_1Instruction.html#a7f2d3c7f6c6642a434e3bc431b6350b5">type</a>)</td></tr>
 <tr class="memdesc:a3f3e17806505e6ad7deaf9e675a84d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the type of the instruction. <br /></td></tr>
@@ -361,6 +369,10 @@ std::vector&lt; <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f1
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:ace5d0b6534f554289bc0b65a45d7eef0"><td class="memItemLeft" align="right" valign="top"><a id="ace5d0b6534f554289bc0b65a45d7eef0"></a>
+<a class="el" href="group__arch.html#ga72199f3206aa1c9b09b2688cb8d3e7ab">triton::arch::architecture_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Instruction.html#ace5d0b6534f554289bc0b65a45d7eef0">arch</a></td></tr>
+<tr class="memdesc:ace5d0b6534f554289bc0b65a45d7eef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The instruction's architecture. <br /></td></tr>
+<tr class="separator:ace5d0b6534f554289bc0b65a45d7eef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af015cdf2fc9660080ad20f7b87fc6b5c"><td class="memItemLeft" align="right" valign="top"><a id="af015cdf2fc9660080ad20f7b87fc6b5c"></a>
 <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Instruction.html#af015cdf2fc9660080ad20f7b87fc6b5c">tid</a></td></tr>
 <tr class="memdesc:af015cdf2fc9660080ad20f7b87fc6b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The thread id of the instruction. <br /></td></tr>
@@ -443,11 +455,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ac98a6898d3fadb4e763a2ab5f4204192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2926c434287bbd906e2e847e98fce9e1"><td class="memItemLeft" align="right" valign="top"><a id="a2926c434287bbd906e2e847e98fce9e1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Instruction.html#a2926c434287bbd906e2e847e98fce9e1">thumb</a></td></tr>
-<tr class="memdesc:a2926c434287bbd906e2e847e98fce9e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this is a Thumb instruction. (Note that <a class="el" href="classtriton_1_1arch_1_1Instruction.html#a3d7bdef62b2e73d1bda8a020e0f43958" title="Returns true if it is a Thumb instruction.">isThumb()</a> in Arm32Cpu is used to determine the current execution mode, while in <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used when to represent an instruction.">Instruction</a> it indicates whether the instruction itself is a Thumb instruction.) <br /></td></tr>
+<tr class="memdesc:a2926c434287bbd906e2e847e98fce9e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this is a Thumb instruction. (Note that <a class="el" href="classtriton_1_1arch_1_1Instruction.html#a3d7bdef62b2e73d1bda8a020e0f43958" title="Returns true if it is a Thumb instruction.">isThumb()</a> in Arm32Cpu is used to determine the current execution mode, while in <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used to represent an instruction.">Instruction</a> it indicates whether the instruction itself is a Thumb instruction.) <br /></td></tr>
 <tr class="separator:a2926c434287bbd906e2e847e98fce9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class is used when to represent an instruction. </p>
+<div class="textblock"><p>This class is used to represent an instruction. </p>
 
 <p class="definition">Definition at line <a class="el" href="instruction_8hpp_source.html#l00048">48</a> of file <a class="el" href="instruction_8hpp_source.html">instruction.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>

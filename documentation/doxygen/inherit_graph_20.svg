@@ -49,39 +49,39 @@
 <path fill="none" stroke="midnightblue" d="M138.62,-86C152.75,-86 167.35,-86 180.87,-86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="138.44,-82.5 128.44,-86 138.44,-89.5 138.44,-82.5"/>
 </g>
-<!-- Node19 -->
+<!-- Node21 -->
 <g id="node4" class="node">
-<title>Node19</title>
+<title>Node21</title>
 <g id="a_node4"><a xlink:href="classtriton_1_1arch_1_1BitsVector.html" target="_top" xlink:title="This class is used to deal with registers and memory as bits vector.">
 <polygon fill="white" stroke="black" points="1.5,-32.5 1.5,-51.5 126.5,-51.5 126.5,-32.5 1.5,-32.5"/>
 <text text-anchor="middle" x="64" y="-39.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::arch::BitsVector</text>
 </a>
 </g>
 </g>
-<!-- Node19&#45;&gt;Node1 -->
+<!-- Node21&#45;&gt;Node1 -->
 <g id="edge3" class="edge">
-<title>Node19&#45;&gt;Node1</title>
+<title>Node21&#45;&gt;Node1</title>
 <path fill="none" stroke="midnightblue" d="M137.22,-44.5C149.57,-44.93 162.32,-45.38 174.42,-45.8"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="137.08,-41 126.97,-44.15 136.84,-47.99 137.08,-41"/>
 </g>
-<!-- Node19&#45;&gt;Node2 -->
+<!-- Node21&#45;&gt;Node2 -->
 <g id="edge5" class="edge">
-<title>Node19&#45;&gt;Node2</title>
+<title>Node21&#45;&gt;Node2</title>
 <path fill="none" stroke="midnightblue" d="M112.42,-54.06C140.17,-61.12 174.71,-69.9 200.53,-76.47"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="113.09,-50.62 102.54,-51.55 111.37,-57.4 113.09,-50.62"/>
 </g>
-<!-- Node20 -->
+<!-- Node22 -->
 <g id="node5" class="node">
-<title>Node20</title>
+<title>Node22</title>
 <g id="a_node5"><a xlink:href="classtriton_1_1arch_1_1MemoryAccess.html" target="_top" xlink:title="This class is used to represent a memory access.">
 <polygon fill="white" stroke="black" points="164,-0.5 164,-19.5 314,-19.5 314,-0.5 164,-0.5"/>
 <text text-anchor="middle" x="239" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::arch::MemoryAccess</text>
 </a>
 </g>
 </g>
-<!-- Node19&#45;&gt;Node20 -->
+<!-- Node21&#45;&gt;Node22 -->
 <g id="edge4" class="edge">
-<title>Node19&#45;&gt;Node20</title>
+<title>Node21&#45;&gt;Node22</title>
 <path fill="none" stroke="midnightblue" d="M126.5,-30.62C146.12,-26.99 167.62,-23.02 186.46,-19.53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="125.63,-27.23 116.44,-32.49 126.91,-34.11 125.63,-27.23"/>
 </g>

@@ -102,6 +102,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html">Architecture</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The abstract architecture class.  <a href="classtriton_1_1arch_1_1Architecture.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">BasicBlock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is used to represent a basic block.  <a href="classtriton_1_1arch_1_1BasicBlock.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1BitsVector.html">BitsVector</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is used to deal with registers and memory as bits vector.  <a href="classtriton_1_1arch_1_1BitsVector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,7 +115,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is used to represent an immediate.  <a href="classtriton_1_1arch_1_1Immediate.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Instruction.html">Instruction</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is used when to represent an instruction.  <a href="classtriton_1_1arch_1_1Instruction.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is used to represent an instruction.  <a href="classtriton_1_1arch_1_1Instruction.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1IrBuilder.html">IrBuilder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IR builder.  <a href="classtriton_1_1arch_1_1IrBuilder.html#details">More...</a><br /></td></tr>
@@ -163,6 +166,14 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga9aaa863d63b9f86b720433ff617544d0"><td class="memItemLeft" align="right" valign="top">
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__arch.html#ga9aaa863d63b9f86b720433ff617544d0">operator&lt;&lt;</a> (std::ostream &amp;stream, <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">BasicBlock</a> &amp;block)</td></tr>
+<tr class="memdesc:ga9aaa863d63b9f86b720433ff617544d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays an <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html" title="This class is used to represent a basic block.">BasicBlock</a>. <br /></td></tr>
+<tr class="separator:ga9aaa863d63b9f86b720433ff617544d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad9718307e8b8a2f28b581ff7312ff805"><td class="memItemLeft" align="right" valign="top">
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__arch.html#gad9718307e8b8a2f28b581ff7312ff805">operator&lt;&lt;</a> (std::ostream &amp;stream, <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">BasicBlock</a> *block)</td></tr>
+<tr class="memdesc:gad9718307e8b8a2f28b581ff7312ff805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays an <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html" title="This class is used to represent a basic block.">BasicBlock</a>. <br /></td></tr>
+<tr class="separator:gad9718307e8b8a2f28b581ff7312ff805"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga196491efa063930d246745bbd5f9e351"><td class="memItemLeft" align="right" valign="top">
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__arch.html#ga196491efa063930d246745bbd5f9e351">operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classtriton_1_1arch_1_1BitsVector.html">BitsVector</a> &amp;bv)</td></tr>
 <tr class="memdesc:ga196491efa063930d246745bbd5f9e351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a <a class="el" href="classtriton_1_1arch_1_1BitsVector.html" title="This class is used to deal with registers and memory as bits vector.">BitsVector</a>. <br /></td></tr>
@@ -193,11 +204,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <tr class="separator:gaa62326711a2333e8e4f62e27c0a5f839"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga74a00bc900dd419c049de68502c24e53"><td class="memItemLeft" align="right" valign="top">
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__arch.html#ga74a00bc900dd419c049de68502c24e53">operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classtriton_1_1arch_1_1Instruction.html">Instruction</a> &amp;inst)</td></tr>
-<tr class="memdesc:ga74a00bc900dd419c049de68502c24e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays an <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used when to represent an instruction.">Instruction</a>. <br /></td></tr>
+<tr class="memdesc:ga74a00bc900dd419c049de68502c24e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays an <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used to represent an instruction.">Instruction</a>. <br /></td></tr>
 <tr class="separator:ga74a00bc900dd419c049de68502c24e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabf199b0a37a3c0700698dbb3bfa08deb"><td class="memItemLeft" align="right" valign="top">
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__arch.html#gabf199b0a37a3c0700698dbb3bfa08deb">operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classtriton_1_1arch_1_1Instruction.html">Instruction</a> *inst)</td></tr>
-<tr class="memdesc:gabf199b0a37a3c0700698dbb3bfa08deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays an <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used when to represent an instruction.">Instruction</a>. <br /></td></tr>
+<tr class="memdesc:gabf199b0a37a3c0700698dbb3bfa08deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays an <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used to represent an instruction.">Instruction</a>. <br /></td></tr>
 <tr class="separator:gabf199b0a37a3c0700698dbb3bfa08deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae925a2946069e9f2c2fe44e2b23383c0"><td class="memItemLeft" align="right" valign="top">
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__arch.html#gae925a2946069e9f2c2fe44e2b23383c0">operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">MemoryAccess</a> &amp;mem)</td></tr>

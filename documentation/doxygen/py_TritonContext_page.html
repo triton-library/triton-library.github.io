@@ -127,10 +127,12 @@ Methods</h2>
  Returns the new symbolic volatile expression and links this expression to the instruction.</li>
 <li><b>void disassembly(<a class="el" href="py_Instruction_page.html">Instruction</a> inst)</b><br  />
  Disassembles the instruction and sets up operands. You must define an architecture before.</li>
+<li><b>void disassembly(<a class="el" href="py_BasicBlock_page.html">BasicBlock</a> block, integer addr=0)</b><br  />
+ Disassembles a basic block with a potential given base address. You must define an architecture before.</li>
 <li><b>[<a class="el" href="py_Instruction_page.html">Instruction</a> inst, ...] disassembly(integer addr, integer count)</b><br  />
  Disassembles a concrete memory area from <code>addr</code> and returns a list of at most <code>count</code> disassembled instructions.</li>
-<li><b>[<a class="el" href="py_Instruction_page.html">Instruction</a> inst, ...] disassembly(integer addr)</b><br  />
- Disassembles a concrete memory area from <code>addr</code> to control flow instruction and returns a list of disassembled instructions.</li>
+<li><b><a class="el" href="py_BasicBlock_page.html">BasicBlock</a> disassembly(integer addr)</b><br  />
+ Disassembles a concrete memory area from <code>addr</code> to control flow instruction and returns a <a class="el" href="py_BasicBlock_page.html">BasicBlock</a>.</li>
 <li><b>integer evaluateAstViaSolver(<a class="el" href="py_AstNode_page.html">AstNode</a> node)</b><br  />
  Evaluates an AST via the solver and returns the concrete value.</li>
 <li><b>[<a class="el" href="py_Register_page.html">Register</a>, ...] getAllRegisters(void)</b><br  />
@@ -265,6 +267,8 @@ Methods</h2>
  Pops the last constraints added to the path predicate.</li>
 <li><b>bool processing(<a class="el" href="py_Instruction_page.html">Instruction</a> inst)</b><br  />
  Processes an instruction and updates engines according to the instruction semantics. Returns true if the instruction is supported. You must define an architecture before.</li>
+<li><b>bool processing(<a class="el" href="py_BasicBlock_page.html">BasicBlock</a> block, integer addr=0)</b><br  />
+ Processes a basic block with a potential given base address and updates engines according to the instructions semantics.</li>
 <li><b>void pushPathConstraint(<a class="el" href="py_AstNode_page.html">AstNode</a> node, string comment="")</b><br  />
  Pushs constraints to the current path predicate.</li>
 <li><b>void removeCallback(<a class="el" href="py_CALLBACK_page.html">CALLBACK</a> kind, function cb)</b><br  />
@@ -303,6 +307,8 @@ Methods</h2>
  Sets CPU state to Thumb mode (only valid for ARM32).</li>
 <li><b><a class="el" href="py_AstNode_page.html">AstNode</a> simplify(<a class="el" href="py_AstNode_page.html">AstNode</a> node, bool solver=False, bool llvm=False)</b><br  />
  Calls all simplification callbacks recorded and returns a new simplified node. If the <code>solver</code> flag is set to True, Triton will use the current solver instance to simplify the given <code>node</code>. If <code>llvm</code> is true, we use LLVM to simplify node.</li>
+<li><b><a class="el" href="py_BasicBlock_page.html">BasicBlock</a> simplify(<a class="el" href="py_BasicBlock_page.html">BasicBlock</a> block)</b><br  />
+ Performs a dead store elimination simplification on a given block.</li>
 <li><b>dict sliceExpressions(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr)</b><br  />
  Slices expressions from a given one (backward slicing) and returns all symbolic expressions as a dictionary of {integer SymExprId : <a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr}.</li>
 <li><b><a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> symbolizeExpression(integer symExprId, integer symVarSize, string symVarAlias)</b><br  />

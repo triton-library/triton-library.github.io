@@ -95,6 +95,7 @@ $(function() {
 <li>getArchitecture()
 : <a class="el" href="classtriton_1_1API.html#a556239ff736d0ee4a157228b6a15162c">triton::API</a>
 , <a class="el" href="classtriton_1_1arch_1_1Architecture.html#ae475d23954ee817cb0af63c9e90f4d85">triton::arch::Architecture</a>
+, <a class="el" href="classtriton_1_1arch_1_1Instruction.html#a082aea503bdc253e836b4eb703f409cf">triton::arch::Instruction</a>
 </li>
 <li>getArraySize()
 : <a class="el" href="classtriton_1_1ast_1_1AstContext.html#a01043069be65d5443ba6f6de206508e0">triton::ast::AstContext</a>
@@ -224,6 +225,9 @@ $(function() {
 <li>getExtendType()
 : <a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a56da03e71d9d80f6300dde235df25b94">triton::arch::arm::ArmOperandProperties</a>
 </li>
+<li>getFirstAddress()
+: <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html#a3f176b9e4f61c6eda4c7580cd60e23e2">triton::arch::BasicBlock</a>
+</li>
 <li>getFormattedComment()
 : <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html#a362dd038d587f3fbada786ae7d0ef6b5">triton::engines::symbolic::SymbolicExpression</a>
 </li>
@@ -269,6 +273,12 @@ $(function() {
 <li>getInput()
 : <a class="el" href="classtriton_1_1engines_1_1synthesis_1_1SynthesisResult.html#afe951d9896508fb02d55272dc0c6542a">triton::engines::synthesis::SynthesisResult</a>
 </li>
+<li>getInstructions()
+: <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html#adc14f5ab7e7aea9dea3f7b7529122e4a">triton::arch::BasicBlock</a>
+</li>
+<li>getLastAddress()
+: <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html#a757d26c4d1e5d3afbab7092d1687f837">triton::arch::BasicBlock</a>
+</li>
 <li>getLeaAst()
 : <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html#a24e7575d2f8f30c5a1be3074171f87d5">triton::arch::MemoryAccess</a>
 </li>
@@ -291,8 +301,8 @@ $(function() {
 , <a class="el" href="classtriton_1_1ast_1_1StoreNode.html#a4a9b243a5b660af1c584e59d0642702e">triton::ast::StoreNode</a>
 </li>
 <li>getMemoryAst()
-: <a class="el" href="classtriton_1_1API.html#ad0cff1e48974492ba5457102b794496b">triton::API</a>
-, <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a9ac5498dab23ad6d068223631d319609">triton::engines::symbolic::SymbolicEngine</a>
+: <a class="el" href="classtriton_1_1API.html#a1deadcba58661b56c216634eb81febe9">triton::API</a>
+, <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a8a0bc604ec5a4e6ddb0d5c34ece91513">triton::engines::symbolic::SymbolicEngine</a>
 </li>
 <li>getMode()
 : <a class="el" href="classtriton_1_1ast_1_1representations_1_1AstRepresentation.html#aef12143e74b634e38affd06316919294">triton::ast::representations::AstRepresentation</a>
@@ -351,8 +361,8 @@ $(function() {
 : <a class="el" href="classtriton_1_1arch_1_1Register.html#a5d22f088b99d525bd33b2a5a9d1d9f16">triton::arch::Register</a>
 </li>
 <li>getParentRegister()
-: <a class="el" href="classtriton_1_1API.html#a0c0a8be6ad8dea8e04c1066534e83cba">triton::API</a>
-, <a class="el" href="classtriton_1_1arch_1_1Architecture.html#a62ed09ff0dbbd7c772d99736d3acdd29">triton::arch::Architecture</a>
+: <a class="el" href="classtriton_1_1API.html#a670355a2564b9be06dbc5f2180da3307">triton::API</a>
+, <a class="el" href="classtriton_1_1arch_1_1Architecture.html#af9308b8bffaddf2a2b736fea588e30c0">triton::arch::Architecture</a>
 , <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a977dd6228b5e6fa439f70d77a6d186d9">triton::arch::arm::aarch64::AArch64Cpu</a>
 , <a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#adefbf4919beca5d953283b647d3680ae">triton::arch::arm::arm32::Arm32Cpu</a>
 , <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#afe85cf5e8491cc41a8e53177ceff913e">triton::arch::CpuInterface</a>
@@ -443,7 +453,8 @@ $(function() {
 : <a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a0d9d199660c96d8dfb4c5bb3b06f9e87">triton::arch::arm::ArmOperandProperties</a>
 </li>
 <li>getSize()
-: <a class="el" href="classtriton_1_1arch_1_1Immediate.html#a0fb128654a72f9caabf60e441a22bd68">triton::arch::Immediate</a>
+: <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html#a0a486ad43d4ef396c85a1161bc2bc2fb">triton::arch::BasicBlock</a>
+, <a class="el" href="classtriton_1_1arch_1_1Immediate.html#a0fb128654a72f9caabf60e441a22bd68">triton::arch::Immediate</a>
 , <a class="el" href="classtriton_1_1arch_1_1Instruction.html#a0e0c6cf3332f50b3dd7007f02536345f">triton::arch::Instruction</a>
 , <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html#aa26086b23f46298a0b6e8590a8cda865">triton::arch::MemoryAccess</a>
 , <a class="el" href="classtriton_1_1arch_1_1OperandWrapper.html#a73421c91c53cbec8963cd883c9ce49c5">triton::arch::OperandWrapper</a>
@@ -510,7 +521,7 @@ $(function() {
 , <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#aac7b201c70ddd981c46f2c78ab557e50">triton::engines::symbolic::SymbolicEngine</a>
 </li>
 <li>getSymbolicVariable()
-: <a class="el" href="classtriton_1_1API.html#ad73c0aef0775d08e01509476e3eedb30">triton::API</a>
+: <a class="el" href="classtriton_1_1API.html#a8f4d894d5bdd13aacfa96248a9db0fd1">triton::API</a>
 , <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a6ba3a354d7d5f049193850ccb93dd3eb">triton::engines::symbolic::SymbolicEngine</a>
 </li>
 <li>getSymbolicVariables()

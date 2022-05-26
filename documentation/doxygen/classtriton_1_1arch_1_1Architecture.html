@@ -206,14 +206,18 @@ TRITON_EXPORT const <a class="el" href="classtriton_1_1arch_1_1Register.html">tr
 TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html#a44fc6db30ed675eb6970eee3d0dd13d2">disassembly</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst) const</td></tr>
 <tr class="memdesc:a44fc6db30ed675eb6970eee3d0dd13d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disassembles the instruction according to the architecture. <br /></td></tr>
 <tr class="separator:a44fc6db30ed675eb6970eee3d0dd13d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e2db522871495cdff32ddd28910fc5"><td class="memItemLeft" align="right" valign="top"><a id="a82e2db522871495cdff32ddd28910fc5"></a>
+TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html#a82e2db522871495cdff32ddd28910fc5">disassembly</a> (<a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block, <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr=0) const</td></tr>
+<tr class="memdesc:a82e2db522871495cdff32ddd28910fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disassembles a block of instructions according to the architecture. <br /></td></tr>
+<tr class="separator:a82e2db522871495cdff32ddd28910fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a044226ef01a0764aa4d15171713f1402"><td class="memItemLeft" align="right" valign="top"><a id="a044226ef01a0764aa4d15171713f1402"></a>
 TRITON_EXPORT std::vector&lt; <a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html#a044226ef01a0764aa4d15171713f1402">disassembly</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr, <a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> count) const</td></tr>
 <tr class="memdesc:a044226ef01a0764aa4d15171713f1402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disassembles a concrete memory area and returns a list of at most <code>count</code> disassembled instructions. <br /></td></tr>
 <tr class="separator:a044226ef01a0764aa4d15171713f1402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a464ab2811c1f7f181568d1566d3b96ee"><td class="memItemLeft" align="right" valign="top"><a id="a464ab2811c1f7f181568d1566d3b96ee"></a>
-TRITON_EXPORT std::vector&lt; <a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html#a464ab2811c1f7f181568d1566d3b96ee">disassembly</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr) const</td></tr>
-<tr class="memdesc:a464ab2811c1f7f181568d1566d3b96ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disassembles a concrete memory area from <code>addr</code> to control flow instruction and returns a list of disassembled instructions. <br /></td></tr>
-<tr class="separator:a464ab2811c1f7f181568d1566d3b96ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0ee11747e9236db0bb47bbf58b4a826"><td class="memItemLeft" align="right" valign="top"><a id="aa0ee11747e9236db0bb47bbf58b4a826"></a>
+TRITON_EXPORT <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html#aa0ee11747e9236db0bb47bbf58b4a826">disassembly</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr) const</td></tr>
+<tr class="memdesc:aa0ee11747e9236db0bb47bbf58b4a826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disassembles a concrete memory area from <code>addr</code> to control flow instruction and returns a <code><a class="el" href="classtriton_1_1arch_1_1BasicBlock.html" title="This class is used to represent a basic block.">BasicBlock</a></code>. <br /></td></tr>
+<tr class="separator:aa0ee11747e9236db0bb47bbf58b4a826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a859403f64ffd243ca2af2e44e952f1"><td class="memItemLeft" align="right" valign="top"><a id="a7a859403f64ffd243ca2af2e44e952f1"></a>
 TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html#a7a859403f64ffd243ca2af2e44e952f1">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst)</td></tr>
 <tr class="memdesc:a7a859403f64ffd243ca2af2e44e952f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the instruction semantics according to the architecture. Returns true if the instruction is supported. <br /></td></tr>
@@ -280,7 +284,7 @@ std::unique_ptr&lt; <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The abstract architecture class. </p>
 
-<p class="definition">Definition at line <a class="el" href="architecture_8hpp_source.html#l00044">44</a> of file <a class="el" href="architecture_8hpp_source.html">architecture.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="architecture_8hpp_source.html#l00045">45</a> of file <a class="el" href="architecture_8hpp_source.html">architecture.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a18132faa1cc1d3ca277cd61dd31226af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18132faa1cc1d3ca277cd61dd31226af">&#9670;&nbsp;</a></span>setConcreteMemoryAreaValue() <span class="overload">[1/2]</span></h2>
@@ -311,7 +315,7 @@ std::unique_ptr&lt; <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html
 <p>[<b>architecture api</b>] - Sets the concrete value of a memory area. </p>
 <p>Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p class="definition">Definition at line <a class="el" href="architecture_8cpp_source.html#l00329">329</a> of file <a class="el" href="architecture_8cpp_source.html">architecture.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="architecture_8cpp_source.html#l00341">341</a> of file <a class="el" href="architecture_8cpp_source.html">architecture.cpp</a>.</p>
 
 </div>
 </div>
@@ -350,7 +354,7 @@ std::unique_ptr&lt; <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html
 <p>[<b>architecture api</b>] - Sets the concrete value of a memory area. </p>
 <p>Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p class="definition">Definition at line <a class="el" href="architecture_8cpp_source.html#l00336">336</a> of file <a class="el" href="architecture_8cpp_source.html">architecture.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="architecture_8cpp_source.html#l00348">348</a> of file <a class="el" href="architecture_8cpp_source.html">architecture.cpp</a>.</p>
 
 </div>
 </div>
@@ -383,7 +387,7 @@ std::unique_ptr&lt; <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html
 <p>[<b>architecture api</b>] - Sets the concrete value of memory cells. </p>
 <p>Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p class="definition">Definition at line <a class="el" href="architecture_8cpp_source.html#l00322">322</a> of file <a class="el" href="architecture_8cpp_source.html">architecture.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="architecture_8cpp_source.html#l00334">334</a> of file <a class="el" href="architecture_8cpp_source.html">architecture.cpp</a>.</p>
 
 </div>
 </div>
@@ -416,7 +420,7 @@ std::unique_ptr&lt; <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html
 <p>[<b>architecture api</b>] - Sets the concrete value of a memory cell. </p>
 <p>Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p class="definition">Definition at line <a class="el" href="architecture_8cpp_source.html#l00315">315</a> of file <a class="el" href="architecture_8cpp_source.html">architecture.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="architecture_8cpp_source.html#l00327">327</a> of file <a class="el" href="architecture_8cpp_source.html">architecture.cpp</a>.</p>
 
 </div>
 </div>
@@ -449,7 +453,7 @@ std::unique_ptr&lt; <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html
 <p>[<b>architecture api</b>] - Sets the concrete value of a register. </p>
 <p>Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p class="definition">Definition at line <a class="el" href="architecture_8cpp_source.html#l00343">343</a> of file <a class="el" href="architecture_8cpp_source.html">architecture.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="architecture_8cpp_source.html#l00355">355</a> of file <a class="el" href="architecture_8cpp_source.html">architecture.cpp</a>.</p>
 
 </div>
 </div>

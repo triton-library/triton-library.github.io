@@ -1,5 +1,5 @@
 <map id="/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/pythonXFunctions.hpp" name="/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/pythonXFunctions.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="3706,5,3973,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3829,5,4095,61"/>
 <area shape="rect" id="node2" href="$init_8cpp.html" title=" " alt="" coords="5,117,188,173"/>
 <area shape="rect" id="node3" href="$tritonCallbacks_8cpp.html" title=" " alt="" coords="212,109,403,180"/>
 <area shape="rect" id="node4" href="$initArchNamespace_8cpp.html" title=" " alt="" coords="427,109,643,180"/>
@@ -21,15 +21,16 @@
 <area shape="rect" id="node20" href="$initVersionNamespace_8cpp.html" title=" " alt="" coords="4339,109,4555,180"/>
 <area shape="rect" id="node21" href="$pyAstContext_8cpp.html" title=" " alt="" coords="4579,109,4761,180"/>
 <area shape="rect" id="node22" href="$pyAstNode_8cpp.html" title=" " alt="" coords="4785,109,4966,180"/>
-<area shape="rect" id="node23" href="$pyBitsVector_8cpp.html" title=" " alt="" coords="4990,109,5171,180"/>
-<area shape="rect" id="node24" href="$pyImmediate_8cpp.html" title=" " alt="" coords="5195,109,5377,180"/>
-<area shape="rect" id="node25" href="$pyInstruction_8cpp.html" title=" " alt="" coords="5401,109,5582,180"/>
-<area shape="rect" id="node26" href="$pyMemoryAccess_8cpp.html" title=" " alt="" coords="5606,109,5787,180"/>
-<area shape="rect" id="node27" href="$pyPathConstraint_8cpp.html" title=" " alt="" coords="5811,109,5993,180"/>
-<area shape="rect" id="node28" href="$pyRegister_8cpp.html" title=" " alt="" coords="6017,109,6198,180"/>
-<area shape="rect" id="node29" href="$pySolverModel_8cpp.html" title=" " alt="" coords="6222,109,6403,180"/>
-<area shape="rect" id="node30" href="$pySymbolicExpression_8cpp.html" title=" " alt="" coords="6427,109,6627,180"/>
-<area shape="rect" id="node31" href="$pySymbolicVariable_8cpp.html" title=" " alt="" coords="6652,109,6835,180"/>
-<area shape="rect" id="node32" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="6859,109,7041,180"/>
-<area shape="rect" id="node33" href="$pyXFunctions_8cpp.html" title=" " alt="" coords="7065,117,7313,173"/>
+<area shape="rect" id="node23" href="$pyBasicBlock_8cpp.html" title=" " alt="" coords="4990,109,5171,180"/>
+<area shape="rect" id="node24" href="$pyBitsVector_8cpp.html" title=" " alt="" coords="5195,109,5377,180"/>
+<area shape="rect" id="node25" href="$pyImmediate_8cpp.html" title=" " alt="" coords="5401,109,5582,180"/>
+<area shape="rect" id="node26" href="$pyInstruction_8cpp.html" title=" " alt="" coords="5606,109,5787,180"/>
+<area shape="rect" id="node27" href="$pyMemoryAccess_8cpp.html" title=" " alt="" coords="5811,109,5993,180"/>
+<area shape="rect" id="node28" href="$pyPathConstraint_8cpp.html" title=" " alt="" coords="6017,109,6198,180"/>
+<area shape="rect" id="node29" href="$pyRegister_8cpp.html" title=" " alt="" coords="6222,109,6403,180"/>
+<area shape="rect" id="node30" href="$pySolverModel_8cpp.html" title=" " alt="" coords="6427,109,6609,180"/>
+<area shape="rect" id="node31" href="$pySymbolicExpression_8cpp.html" title=" " alt="" coords="6633,109,6833,180"/>
+<area shape="rect" id="node32" href="$pySymbolicVariable_8cpp.html" title=" " alt="" coords="6857,109,7040,180"/>
+<area shape="rect" id="node33" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="7065,109,7246,180"/>
+<area shape="rect" id="node34" href="$pyXFunctions_8cpp.html" title=" " alt="" coords="7270,117,7518,173"/>
 </map>

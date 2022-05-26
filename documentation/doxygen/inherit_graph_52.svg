@@ -12,10 +12,10 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="classtriton_1_1engines_1_1solver_1_1SolverModel.html" target="_top" xlink:title="This class is used to represent a constraint model solved.">
+<g id="a_node1"><a xlink:href="classtriton_1_1engines_1_1solver_1_1SolverEngine.html" target="_top" xlink:title="This class is used to interface with solvers.">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-30.5 123,-30.5 123,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::engines::solver</text>
-<text text-anchor="middle" x="61.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::SolverModel</text>
+<text text-anchor="middle" x="61.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::SolverEngine</text>
 </a>
 </g>
 </g>

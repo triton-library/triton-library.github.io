@@ -1,3 +1,37 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classtriton_1_1modes_1_1Modes.html" title="The modes class." alt="" coords="5,5,165,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,781,120,807"/>
+<area shape="rect" id="node2" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="168,773,304,815"/>
+<area shape="rect" id="node3" href="$classtriton_1_1exceptions_1_1API.html" title="The exception class used by the Triton&#39;s API." alt="" coords="352,333,517,359"/>
+<area shape="rect" id="node4" href="$classtriton_1_1exceptions_1_1Architecture.html" title="The exception class used by architectures." alt="" coords="367,384,503,425"/>
+<area shape="rect" id="node18" href="$classtriton_1_1exceptions_1_1Ast.html" title="The exception class used by all AST nodes." alt="" coords="352,722,517,749"/>
+<area shape="rect" id="node21" href="$classtriton_1_1exceptions_1_1Bindings.html" title="The exception class used by bindings." alt="" coords="367,773,503,815"/>
+<area shape="rect" id="node22" href="$classtriton_1_1exceptions_1_1Callbacks.html" title="The exception class used by callbacks." alt="" coords="367,839,503,880"/>
+<area shape="rect" id="node23" href="$classtriton_1_1exceptions_1_1Engines.html" title="The exception class used by all engines." alt="" coords="367,907,503,948"/>
+<area shape="rect" id="node35" href="$classtriton_1_1exceptions_1_1PyCallbacks.html" title=" " alt="" coords="367,972,503,1013"/>
+<area shape="rect" id="node5" href="$classtriton_1_1exceptions_1_1AArch64OperandProperties.html" title="The exception class used by shift mode." alt="" coords="565,5,771,47"/>
+<area shape="rect" id="node6" href="$classtriton_1_1exceptions_1_1ArmOperandProperties.html" title="The exception class used by shift mode." alt="" coords="579,71,757,112"/>
+<area shape="rect" id="node7" href="$classtriton_1_1exceptions_1_1BasicBlock.html" title="The exception class used by a basic block." alt="" coords="600,136,736,177"/>
+<area shape="rect" id="node8" href="$classtriton_1_1exceptions_1_1BitsVector.html" title="The exception class used by bitvectors." alt="" coords="600,201,736,243"/>
+<area shape="rect" id="node9" href="$classtriton_1_1exceptions_1_1Cpu.html" title="The exception class used by all CPUs." alt="" coords="583,267,753,294"/>
+<area shape="rect" id="node12" href="$classtriton_1_1exceptions_1_1Immediate.html" title="The exception class used by immediates." alt="" coords="600,319,736,360"/>
+<area shape="rect" id="node13" href="$classtriton_1_1exceptions_1_1Instruction.html" title="The exception class used by an instruction." alt="" coords="600,384,736,425"/>
+<area shape="rect" id="node14" href="$classtriton_1_1exceptions_1_1IrBuilder.html" title="The exception class used by the IR builder." alt="" coords="600,449,736,491"/>
+<area shape="rect" id="node15" href="$classtriton_1_1exceptions_1_1MemoryAccess.html" title="The exception class used by memory access." alt="" coords="600,515,736,556"/>
+<area shape="rect" id="node16" href="$classtriton_1_1exceptions_1_1OperandWrapper.html" title="The exception class used by operand wrappers." alt="" coords="598,580,738,621"/>
+<area shape="rect" id="node17" href="$classtriton_1_1exceptions_1_1Register.html" title="The exception class used by register operands." alt="" coords="600,645,736,687"/>
+<area shape="rect" id="node10" href="$classtriton_1_1exceptions_1_1Disassembly.html" title="The exception class used by the disassembler." alt="" coords="840,228,976,269"/>
+<area shape="rect" id="node11" href="$classtriton_1_1exceptions_1_1Semantics.html" title="The exception class used by all semantics." alt="" coords="840,293,976,335"/>
+<area shape="rect" id="node19" href="$classtriton_1_1exceptions_1_1AstLifting.html" title="The exception class used by all AST lifting (e.g z3 &lt;&#45;&gt; triton)." alt="" coords="600,711,736,752"/>
+<area shape="rect" id="node20" href="$classtriton_1_1exceptions_1_1AstRepresentation.html" title="The exception class used by all AST node representations." alt="" coords="593,776,743,817"/>
+<area shape="rect" id="node24" href="$classtriton_1_1exceptions_1_1LiftingEngine.html" title="The exception class used by the lifting engine." alt="" coords="600,841,736,883"/>
+<area shape="rect" id="node25" href="$classtriton_1_1exceptions_1_1SolverEngine.html" title="The exception class used by the solver engine." alt="" coords="600,907,736,948"/>
+<area shape="rect" id="node27" href="$classtriton_1_1exceptions_1_1SymbolicEngine.html" title="The exception class used by the symbolic engine." alt="" coords="600,972,736,1013"/>
+<area shape="rect" id="node33" href="$classtriton_1_1exceptions_1_1SynthesizerEngine.html" title="The exception class used by the synthesizer engine." alt="" coords="593,1037,743,1079"/>
+<area shape="rect" id="node34" href="$classtriton_1_1exceptions_1_1TaintEngine.html" title="The exception class used by the taint engine." alt="" coords="600,1103,736,1144"/>
+<area shape="rect" id="node26" href="$classtriton_1_1exceptions_1_1SolverModel.html" title="The exception class used by solver models." alt="" coords="840,809,976,851"/>
+<area shape="rect" id="node28" href="$classtriton_1_1exceptions_1_1PathConstraint.html" title="The exception class used by path constraints." alt="" coords="840,875,976,916"/>
+<area shape="rect" id="node29" href="$classtriton_1_1exceptions_1_1PathManager.html" title="The exception class used by the path manager." alt="" coords="840,940,976,981"/>
+<area shape="rect" id="node30" href="$classtriton_1_1exceptions_1_1SymbolicExpression.html" title="The exception class used by symbolic expressions." alt="" coords="827,1005,989,1047"/>
+<area shape="rect" id="node31" href="$classtriton_1_1exceptions_1_1SymbolicSimplification.html" title="The exception class used by symbolic simplifications." alt="" coords="819,1071,997,1112"/>
+<area shape="rect" id="node32" href="$classtriton_1_1exceptions_1_1SymbolicVariable.html" title="The exception class used by symbolic variables." alt="" coords="837,1136,979,1177"/>
 </map>

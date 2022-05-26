@@ -94,6 +94,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtriton_1_1bindings_1_1python_1_1BitsVector__Object.html">BitsVector_Object</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">pyBitsVector object.  <a href="structtriton_1_1bindings_1_1python_1_1BitsVector__Object.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtriton_1_1bindings_1_1python_1_1BasicBlock__Object.html">BasicBlock_Object</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">pyBasicBlock object.  <a href="structtriton_1_1bindings_1_1python_1_1BasicBlock__Object.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtriton_1_1bindings_1_1python_1_1Immediate__Object.html">Immediate_Object</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">pyImmediate object.  <a href="structtriton_1_1bindings_1_1python_1_1Immediate__Object.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,6 +221,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#gaf11d380ade0201c8bac8761e3a3b2b55">PyAstNode</a> (const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node)</td></tr>
 <tr class="memdesc:gaf11d380ade0201c8bac8761e3a3b2b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the AstNode python class. <br /></td></tr>
 <tr class="separator:gaf11d380ade0201c8bac8761e3a3b2b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8f1e4876bbf50d708b28b96ffb6858b"><td class="memItemLeft" align="right" valign="top"><a id="aa8f1e4876bbf50d708b28b96ffb6858b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetriton_1_1bindings_1_1python.html#aa8f1e4876bbf50d708b28b96ffb6858b">BasicBlock_dealloc</a> (PyObject *self)</td></tr>
+<tr class="memdesc:aa8f1e4876bbf50d708b28b96ffb6858b"><td class="mdescLeft">&#160;</td><td class="mdescRight">BasicBlock destructor. <br /></td></tr>
+<tr class="separator:aa8f1e4876bbf50d708b28b96ffb6858b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0e7c060c3fce6a31d99768676e48814"><td class="memItemLeft" align="right" valign="top">
+PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#gac0e7c060c3fce6a31d99768676e48814">PyBasicBlock</a> (const <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block)</td></tr>
+<tr class="memdesc:gac0e7c060c3fce6a31d99768676e48814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the BasicBlock python class. <br /></td></tr>
+<tr class="separator:gac0e7c060c3fce6a31d99768676e48814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabfe7c6e47a6211e5bd753fcf94a974e9"><td class="memItemLeft" align="right" valign="top">
+PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#gabfe7c6e47a6211e5bd753fcf94a974e9">PyBasicBlock</a> (std::vector&lt; <a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &gt; &amp;insts)</td></tr>
+<tr class="memdesc:gabfe7c6e47a6211e5bd753fcf94a974e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the BasicBlock python class. <br /></td></tr>
+<tr class="separator:gabfe7c6e47a6211e5bd753fcf94a974e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97aee730626d202a48b8e94b6c329cad"><td class="memItemLeft" align="right" valign="top">
+PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#ga97aee730626d202a48b8e94b6c329cad">PyBasicBlock</a> (void)</td></tr>
+<tr class="memdesc:ga97aee730626d202a48b8e94b6c329cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the BasicBlock python class. <br /></td></tr>
+<tr class="separator:ga97aee730626d202a48b8e94b6c329cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a761a1d01a12e938624dd76be26a99ec8"><td class="memItemLeft" align="right" valign="top"><a id="a761a1d01a12e938624dd76be26a99ec8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetriton_1_1bindings_1_1python.html#a761a1d01a12e938624dd76be26a99ec8">BitsVector_dealloc</a> (PyObject *self)</td></tr>
 <tr class="memdesc:a761a1d01a12e938624dd76be26a99ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">BitsVector destructor. <br /></td></tr>
@@ -444,6 +463,13 @@ PyNumberMethods&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 PyTypeObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#ga037ebc50a0d18294098187bcc329731d">AstNode_Type</a></td></tr>
 <tr class="memdesc:ga037ebc50a0d18294098187bcc329731d"><td class="mdescLeft">&#160;</td><td class="mdescRight">pyAstNode type. <br /></td></tr>
 <tr class="separator:ga037ebc50a0d18294098187bcc329731d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2638ea7157a5559d07cd898ad063127e"><td class="memItemLeft" align="right" valign="top">PyMethodDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetriton_1_1bindings_1_1python.html#a2638ea7157a5559d07cd898ad063127e">BasicBlock_callbacks</a> []</td></tr>
+<tr class="memdesc:a2638ea7157a5559d07cd898ad063127e"><td class="mdescLeft">&#160;</td><td class="mdescRight">BasicBlock methods.  <a href="namespacetriton_1_1bindings_1_1python.html#a2638ea7157a5559d07cd898ad063127e">More...</a><br /></td></tr>
+<tr class="separator:a2638ea7157a5559d07cd898ad063127e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga166a82baa54df8e1efc07facf2b5f27e"><td class="memItemLeft" align="right" valign="top">
+PyTypeObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#ga166a82baa54df8e1efc07facf2b5f27e">BasicBlock_Type</a></td></tr>
+<tr class="memdesc:ga166a82baa54df8e1efc07facf2b5f27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">pyBasicBlock type. <br /></td></tr>
+<tr class="separator:ga166a82baa54df8e1efc07facf2b5f27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ce288e57137f2736180b61836d89e40"><td class="memItemLeft" align="right" valign="top">PyMethodDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetriton_1_1bindings_1_1python.html#a5ce288e57137f2736180b61836d89e40">BitsVector_callbacks</a> []</td></tr>
 <tr class="memdesc:a5ce288e57137f2736180b61836d89e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">BitsVector methods.  <a href="namespacetriton_1_1bindings_1_1python.html#a5ce288e57137f2736180b61836d89e40">More...</a><br /></td></tr>
 <tr class="separator:a5ce288e57137f2736180b61836d89e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -564,6 +590,33 @@ PyTypeObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <p>AstNode methods. </p>
 
 <p class="definition">Definition at line <a class="el" href="pyAstNode_8cpp_source.html#l00839">839</a> of file <a class="el" href="pyAstNode_8cpp_source.html">pyAstNode.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2638ea7157a5559d07cd898ad063127e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2638ea7157a5559d07cd898ad063127e">&#9670;&nbsp;</a></span>BasicBlock_callbacks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyMethodDef triton::bindings::python::BasicBlock_callbacks[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        {<span class="stringliteral">&quot;add&quot;</span>,               BasicBlock_add,               METH_O,         <span class="stringliteral">&quot;&quot;</span>},</div>
+<div class="line">        {<span class="stringliteral">&quot;getFirstAddress&quot;</span>,   BasicBlock_getFirstAddress,   METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
+<div class="line">        {<span class="stringliteral">&quot;getInstructions&quot;</span>,   BasicBlock_getInstructions,   METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
+<div class="line">        {<span class="stringliteral">&quot;getLastAddress&quot;</span>,    BasicBlock_getLastAddress,    METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
+<div class="line">        {<span class="stringliteral">&quot;getSize&quot;</span>,           BasicBlock_getSize,           METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
+<div class="line">        {<span class="stringliteral">&quot;remove&quot;</span>,            BasicBlock_remove,            METH_O,         <span class="stringliteral">&quot;&quot;</span>},</div>
+<div class="line">        {<span class="keyword">nullptr</span>,             <span class="keyword">nullptr</span>,                      0,              <span class="keyword">nullptr</span>}</div>
+<div class="line">      }</div>
+</div><!-- fragment -->
+<p>BasicBlock methods. </p>
+
+<p class="definition">Definition at line <a class="el" href="pyBasicBlock_8cpp_source.html#l00236">236</a> of file <a class="el" href="pyBasicBlock_8cpp_source.html">pyBasicBlock.cpp</a>.</p>
 
 </div>
 </div>
