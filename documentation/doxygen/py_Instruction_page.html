@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1531</span>
+   &#160;<span id="projectnumber">version 1.0 build 1532</span>
    </div>
   </td>
  </tr>
@@ -87,7 +87,7 @@ Description</h1>
 <hr  />
 <p>This object is used to represent an Instruction.</p>
 <div class="fragment"><div class="line">&gt;&gt;&gt; <span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</div>
-<div class="line">&gt;&gt;&gt; <span class="keyword">from</span> triton <span class="keyword">import</span> TritonContext, ARCH, Instruction, OPERAND</div>
+<div class="line">&gt;&gt;&gt; <span class="keyword">from</span> triton <span class="keyword">import</span> TritonContext, ARCH, Instruction, OPERAND, EXCEPTION</div>
 <div class="line"> </div>
 <div class="line">&gt;&gt;&gt; trace = [</div>
 <div class="line">...     (0x400000, b<span class="stringliteral">&quot;\x48\x8b\x05\xb8\x13\x00\x00&quot;</span>), <span class="comment"># mov        rax, QWORD PTR [rip+0x13b8]</span></div>
@@ -115,7 +115,7 @@ Description</h1>
 <div class="line">...     inst.setAddress(addr)</div>
 <div class="line">...</div>
 <div class="line">...     <span class="comment"># Process everything</span></div>
-<div class="line">...     <span class="keywordflow">if</span> <span class="keywordflow">not</span> ctxt.processing(inst):</div>
+<div class="line">...     <span class="keywordflow">if</span> ctxt.processing(inst) == EXCEPTION.FAULT_UD:</div>
 <div class="line">...         print(<span class="stringliteral">&quot;Fail an instruction&quot;</span>)</div>
 <div class="line">...</div>
 <div class="line">...     print(inst)</div>
@@ -169,18 +169,18 @@ Constructor</h2>
 <div class="line">&gt;&gt;&gt; inst.setAddress(0x40000)</div>
 <div class="line">&gt;&gt;&gt; inst.setOpcode(b<span class="stringliteral">&quot;\x48\xC7\xC0\x01\x00\x00\x00&quot;</span>)</div>
 <div class="line">&gt;&gt;&gt; ctxt.processing(inst)</div>
-<div class="line"><span class="keyword">True</span></div>
+<div class="line">0</div>
 <div class="line">&gt;&gt;&gt; print(inst)</div>
 <div class="line">0x40000: mov rax, 1</div>
 </div><!-- fragment --><div class="fragment"><div class="line">&gt;&gt;&gt; inst = Instruction(b<span class="stringliteral">&quot;\x48\xC7\xC0\x01\x00\x00\x00&quot;</span>)</div>
 <div class="line">&gt;&gt;&gt; inst.setAddress(0x40000)</div>
 <div class="line">&gt;&gt;&gt; ctxt.processing(inst)</div>
-<div class="line"><span class="keyword">True</span></div>
+<div class="line">0</div>
 <div class="line">&gt;&gt;&gt; print(inst)</div>
 <div class="line">0x40000: mov rax, 1</div>
 </div><!-- fragment --><div class="fragment"><div class="line">&gt;&gt;&gt; inst = Instruction(0x40000, b<span class="stringliteral">&quot;\x48\xC7\xC0\x01\x00\x00\x00&quot;</span>)</div>
 <div class="line">&gt;&gt;&gt; ctxt.processing(inst)</div>
-<div class="line"><span class="keyword">True</span></div>
+<div class="line">0</div>
 <div class="line">&gt;&gt;&gt; print(inst)</div>
 <div class="line">0x40000: mov rax, 1</div>
 </div><!-- fragment --><h1><a class="anchor" id="Instruction_py_api"></a>

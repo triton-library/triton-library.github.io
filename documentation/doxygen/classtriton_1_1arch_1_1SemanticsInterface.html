@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1531</span>
+   &#160;<span id="projectnumber">version 1.0 build 1532</span>
    </div>
   </td>
  </tr>
@@ -89,7 +89,8 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for triton::arch::SemanticsInterface:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classtriton_1_1arch_1_1SemanticsInterface__inherit__graph.svg" width="490" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classtriton_1_1arch_1_1SemanticsInterface__inherit__graph.svg" width="490" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -98,15 +99,15 @@ Public Member Functions</h2></td></tr>
 virtual TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1SemanticsInterface.html#a315b2aa5e318f6e5a54b635b9bb8f024">~SemanticsInterface</a> ()</td></tr>
 <tr class="memdesc:a315b2aa5e318f6e5a54b635b9bb8f024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a315b2aa5e318f6e5a54b635b9bb8f024"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3e4ab7da492cf5887b5bbcad5a7b50d"><td class="memItemLeft" align="right" valign="top"><a id="af3e4ab7da492cf5887b5bbcad5a7b50d"></a>
-virtual TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1SemanticsInterface.html#af3e4ab7da492cf5887b5bbcad5a7b50d">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst)=0</td></tr>
-<tr class="memdesc:af3e4ab7da492cf5887b5bbcad5a7b50d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the semantics of the instruction. Returns true if the instruction is supported. <br /></td></tr>
-<tr class="separator:af3e4ab7da492cf5887b5bbcad5a7b50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a73d10f85a987c720439279bfc96e3"><td class="memItemLeft" align="right" valign="top"><a id="a09a73d10f85a987c720439279bfc96e3"></a>
+virtual TRITON_EXPORT <a class="el" href="group__arch.html#gaf3dfe23a6e443de4ddb1d67fe39c80c6">triton::arch::exception_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1SemanticsInterface.html#a09a73d10f85a987c720439279bfc96e3">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst)=0</td></tr>
+<tr class="memdesc:a09a73d10f85a987c720439279bfc96e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the semantics of the instruction. Returns <code><a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a></code> if succeed. <br /></td></tr>
+<tr class="separator:a09a73d10f85a987c720439279bfc96e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This interface is used as abstract semantics interface. All ISA semantics must use this interface. </p>
 
-<p class="definition">Definition at line <a class="el" href="semanticsInterface_8hpp_source.html#l00033">33</a> of file <a class="el" href="semanticsInterface_8hpp_source.html">semanticsInterface.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="semanticsInterface_8hpp_source.html#l00034">34</a> of file <a class="el" href="semanticsInterface_8hpp_source.html">semanticsInterface.hpp</a>.</p>
 </div><hr/>The documentation for this interface was generated from the following file:<ul>
 <li>/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/<a class="el" href="semanticsInterface_8hpp_source.html">semanticsInterface.hpp</a></li>
 </ul>

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1531</span>
+   &#160;<span id="projectnumber">version 1.0 build 1532</span>
    </div>
   </td>
  </tr>
@@ -89,7 +89,8 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for triton::arch::x86::x86Semantics:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classtriton_1_1arch_1_1x86_1_1x86Semantics__inherit__graph.svg" width="238" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classtriton_1_1arch_1_1x86_1_1x86Semantics__inherit__graph.svg" width="238" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -98,10 +99,10 @@ Public Member Functions</h2></td></tr>
 TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Semantics.html#a2d6d1baf2cd490eef3ed0707a9879e38">x86Semantics</a> (<a class="el" href="classtriton_1_1arch_1_1Architecture.html">triton::arch::Architecture</a> *architecture, <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html">triton::engines::symbolic::SymbolicEngine</a> *symbolicEngine, <a class="el" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html">triton::engines::taint::TaintEngine</a> *taintEngine, const <a class="el" href="group__modes.html#ga9f243ef4e5324867a1cdba17b9ceba9d">triton::modes::SharedModes</a> &amp;modes, const <a class="el" href="group__ast.html#gafd6a94ab829d378f1270057ea80f2d05">triton::ast::SharedAstContext</a> &amp;astCtxt)</td></tr>
 <tr class="memdesc:a2d6d1baf2cd490eef3ed0707a9879e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
 <tr class="separator:a2d6d1baf2cd490eef3ed0707a9879e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac522b70c6123206581671eefc8241de6"><td class="memItemLeft" align="right" valign="top"><a id="ac522b70c6123206581671eefc8241de6"></a>
-TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Semantics.html#ac522b70c6123206581671eefc8241de6">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst)</td></tr>
-<tr class="memdesc:ac522b70c6123206581671eefc8241de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the semantics of the instruction. Returns true if the instruction is supported. <br /></td></tr>
-<tr class="separator:ac522b70c6123206581671eefc8241de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb6fb92e697ea0795c31467c01d626bb"><td class="memItemLeft" align="right" valign="top"><a id="adb6fb92e697ea0795c31467c01d626bb"></a>
+TRITON_EXPORT <a class="el" href="group__arch.html#gaf3dfe23a6e443de4ddb1d67fe39c80c6">triton::arch::exception_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Semantics.html#adb6fb92e697ea0795c31467c01d626bb">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst)</td></tr>
+<tr class="memdesc:adb6fb92e697ea0795c31467c01d626bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the semantics of the instruction. Returns <code><a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a></code> if succeed. <br /></td></tr>
+<tr class="separator:adb6fb92e697ea0795c31467c01d626bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classtriton_1_1arch_1_1SemanticsInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classtriton_1_1arch_1_1SemanticsInterface')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classtriton_1_1arch_1_1SemanticsInterface.html">triton::arch::SemanticsInterface</a></td></tr>
 <tr class="memitem:a315b2aa5e318f6e5a54b635b9bb8f024 inherit pub_methods_classtriton_1_1arch_1_1SemanticsInterface"><td class="memItemLeft" align="right" valign="top"><a id="a315b2aa5e318f6e5a54b635b9bb8f024"></a>
 virtual TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1SemanticsInterface.html#a315b2aa5e318f6e5a54b635b9bb8f024">~SemanticsInterface</a> ()</td></tr>
@@ -111,7 +112,7 @@ virtual TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a clas
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="namespacetriton_1_1arch_1_1x86.html" title="The x86 namespace.">x86</a> ISA semantics. </p>
 
-<p class="definition">Definition at line <a class="el" href="x86Semantics_8hpp_source.html#l00046">46</a> of file <a class="el" href="x86Semantics_8hpp_source.html">x86Semantics.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Semantics_8hpp_source.html#l00047">47</a> of file <a class="el" href="x86Semantics_8hpp_source.html">x86Semantics.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/<a class="el" href="x86Semantics_8hpp_source.html">x86Semantics.hpp</a></li>
 <li>/home/jonathan/Works/Tools/Triton/src/libtriton/arch/x86/<a class="el" href="x86Semantics_8cpp_source.html">x86Semantics.cpp</a></li>

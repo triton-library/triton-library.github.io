@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['immediate_7095',['Immediate',['../py_Immediate_page.html',1,'']]],
-  ['instruction_7096',['Instruction',['../py_Instruction_page.html',1,'']]]
+  ['immediate_7114',['Immediate',['../py_Immediate_page.html',1,'']]],
+  ['instruction_7115',['Instruction',['../py_Instruction_page.html',1,'']]]
 ];

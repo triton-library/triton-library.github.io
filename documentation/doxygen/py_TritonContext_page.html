@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1531</span>
+   &#160;<span id="projectnumber">version 1.0 build 1532</span>
    </div>
   </td>
  </tr>
@@ -97,8 +97,8 @@ Methods</h2>
  Assigns a <a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> to a <a class="el" href="py_MemoryAccess_page.html">MemoryAccess</a> area. <b>Be careful</b>, use this function only if you know what you are doing. The symbolic expression (<code>symExpr</code>) must be aligned to the memory access.</li>
 <li><b>void assignSymbolicExpressionToRegister(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> symExpr, <a class="el" href="py_Register_page.html">Register</a> reg)</b><br  />
  Assigns a <a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> to a <a class="el" href="py_Register_page.html">Register</a>. <b>Be careful</b>, use this function only if you know what you are doing. The symbolic expression (<code>symExpr</code>) must be aligned to the targeted size register. The register must be a parent register.</li>
-<li><b>bool buildSemantics(<a class="el" href="py_Instruction_page.html">Instruction</a> inst)</b><br  />
- Builds the instruction semantics. Returns true if the instruction is supported. You must define an architecture before.</li>
+<li><b><a class="el" href="py_EXCEPTION_page.html">EXCEPTION</a> buildSemantics(<a class="el" href="py_Instruction_page.html">Instruction</a> inst)</b><br  />
+ Builds the instruction semantics. Returns <code>EXCEPTION.NO_FAULT</code> if the instruction is supported.</li>
 <li><b>void clearCallbacks(void)</b><br  />
  Clears recorded callbacks.</li>
 <li><b>void clearModes(void)</b><br  />
@@ -126,9 +126,9 @@ Methods</h2>
 <li><b><a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> createSymbolicVolatileExpression (<a class="el" href="py_Instruction_page.html">Instruction</a> inst, <a class="el" href="py_AstNode_page.html">AstNode</a> node, string comment)</b><br  />
  Returns the new symbolic volatile expression and links this expression to the instruction.</li>
 <li><b>void disassembly(<a class="el" href="py_Instruction_page.html">Instruction</a> inst)</b><br  />
- Disassembles the instruction and sets up operands. You must define an architecture before.</li>
+ Disassembles the instruction and sets up operands.</li>
 <li><b>void disassembly(<a class="el" href="py_BasicBlock_page.html">BasicBlock</a> block, integer addr=0)</b><br  />
- Disassembles a basic block with a potential given base address. You must define an architecture before.</li>
+ Disassembles a basic block with a potential given base address.</li>
 <li><b>[<a class="el" href="py_Instruction_page.html">Instruction</a> inst, ...] disassembly(integer addr, integer count)</b><br  />
  Disassembles a concrete memory area from <code>addr</code> and returns a list of at most <code>count</code> disassembled instructions.</li>
 <li><b><a class="el" href="py_BasicBlock_page.html">BasicBlock</a> disassembly(integer addr)</b><br  />
@@ -255,19 +255,19 @@ Methods</h2>
  Lifts an AST node and all its references to LLVM IR. <code>fname</code> is the name of the LLVM function, by default it's <code>__triton</code>. If <code>optimize</code> is true, perform optimizations (-O3 -Oz).</li>
 <li><b>string liftToLLVM(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr, string fname="__triton", bool optimize=False)</b><br  />
  Lifts a symbolic expression and all its references to LLVM IR. <code>fname</code> is the name of the LLVM function, by default it's <code>__triton</code>. If <code>optimize</code> is true, perform optimizations (-O3 -Oz).</li>
-<li><b>string liftToPython(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr)</b><br  />
- Lifts a symbolic expression and all its references to Python format.</li>
-<li><b>string liftToSMT(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr, bool assert_=False)</b><br  />
- Lifts a symbolic expression and all its references to SMT format. If <code>assert_</code> is true, then (assert &lt;expr&gt;).</li>
+<li><b>string liftToPython(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr, bool icomment=False)</b><br  />
+ Lifts a symbolic expression and all its references to Python format. If <code>icomment</code> is true, then print instructions assembly in expression comments.</li>
+<li><b>string liftToSMT(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr, bool assert_=False, bool icomment=False)</b><br  />
+ Lifts a symbolic expression and all its references to SMT format. If <code>assert_</code> is true, then (assert &lt;expr&gt;). If <code>icomment</code> is true, then print instructions assembly in expression comments.</li>
 <li><b><a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> newSymbolicExpression(<a class="el" href="py_AstNode_page.html">AstNode</a> node, string comment)</b><br  />
  Returns a new symbolic expression. Note that if there are simplification passes recorded, simplifications will be applied.</li>
 <li><b><a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> newSymbolicVariable(integer varSize, string alias)</b><br  />
  Returns a new symbolic variable.</li>
 <li><b>void popPathConstraint(void)</b><br  />
  Pops the last constraints added to the path predicate.</li>
-<li><b>bool processing(<a class="el" href="py_Instruction_page.html">Instruction</a> inst)</b><br  />
- Processes an instruction and updates engines according to the instruction semantics. Returns true if the instruction is supported. You must define an architecture before.</li>
-<li><b>bool processing(<a class="el" href="py_BasicBlock_page.html">BasicBlock</a> block, integer addr=0)</b><br  />
+<li><b><a class="el" href="py_EXCEPTION_page.html">EXCEPTION</a> processing(<a class="el" href="py_Instruction_page.html">Instruction</a> inst)</b><br  />
+ Processes an instruction and updates engines according to the instruction semantics. Returns <code>EXCEPTION.NO_FAULT</code> if the instruction is supported.</li>
+<li><b><a class="el" href="py_EXCEPTION_page.html">EXCEPTION</a> processing(<a class="el" href="py_BasicBlock_page.html">BasicBlock</a> block, integer addr=0)</b><br  />
  Processes a basic block with a potential given base address and updates engines according to the instructions semantics.</li>
 <li><b>void pushPathConstraint(<a class="el" href="py_AstNode_page.html">AstNode</a> node, string comment="")</b><br  />
  Pushs constraints to the current path predicate.</li>

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1531</span>
+   &#160;<span id="projectnumber">version 1.0 build 1532</span>
    </div>
   </td>
  </tr>
@@ -98,14 +98,14 @@ TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 virtual TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1IrBuilder.html#a2021a834c1a27c18a212df5a41ac374c">~IrBuilder</a> ()</td></tr>
 <tr class="memdesc:a2021a834c1a27c18a212df5a41ac374c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a2021a834c1a27c18a212df5a41ac374c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8afb33ac9e2f001f904d06ee0fbccf10"><td class="memItemLeft" align="right" valign="top"><a id="a8afb33ac9e2f001f904d06ee0fbccf10"></a>
-TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1IrBuilder.html#a8afb33ac9e2f001f904d06ee0fbccf10">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst)</td></tr>
-<tr class="memdesc:a8afb33ac9e2f001f904d06ee0fbccf10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the semantics of the instruction. Returns true if the instruction is supported. <br /></td></tr>
-<tr class="separator:a8afb33ac9e2f001f904d06ee0fbccf10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefdc180a72384ffecb0121a1c2aedf2c"><td class="memItemLeft" align="right" valign="top"><a id="aefdc180a72384ffecb0121a1c2aedf2c"></a>
-TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1IrBuilder.html#aefdc180a72384ffecb0121a1c2aedf2c">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block)</td></tr>
-<tr class="memdesc:aefdc180a72384ffecb0121a1c2aedf2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the semantics of instructions in a block. Returns false if an instruction is not supported. <br /></td></tr>
-<tr class="separator:aefdc180a72384ffecb0121a1c2aedf2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63aa06bc47939dad4be6edd3465494dc"><td class="memItemLeft" align="right" valign="top"><a id="a63aa06bc47939dad4be6edd3465494dc"></a>
+TRITON_EXPORT <a class="el" href="group__arch.html#gaf3dfe23a6e443de4ddb1d67fe39c80c6">triton::arch::exception_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1IrBuilder.html#a63aa06bc47939dad4be6edd3465494dc">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst)</td></tr>
+<tr class="memdesc:a63aa06bc47939dad4be6edd3465494dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the semantics of the instruction. Returns <code><a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a></code> if succeed. <br /></td></tr>
+<tr class="separator:a63aa06bc47939dad4be6edd3465494dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6612dfb7328bc76a5e6b4296fc2eb467"><td class="memItemLeft" align="right" valign="top"><a id="a6612dfb7328bc76a5e6b4296fc2eb467"></a>
+TRITON_EXPORT <a class="el" href="group__arch.html#gaf3dfe23a6e443de4ddb1d67fe39c80c6">triton::arch::exception_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1IrBuilder.html#a6612dfb7328bc76a5e6b4296fc2eb467">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block)</td></tr>
+<tr class="memdesc:a6612dfb7328bc76a5e6b4296fc2eb467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the semantics of instructions in a block. Returns <code><a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a></code> if succeed. <br /></td></tr>
+<tr class="separator:a6612dfb7328bc76a5e6b4296fc2eb467"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99fc496a00f282885957fb351a15f429"><td class="memItemLeft" align="right" valign="top"><a id="a99fc496a00f282885957fb351a15f429"></a>
 TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1IrBuilder.html#a99fc496a00f282885957fb351a15f429">preIrInit</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst)</td></tr>
 <tr class="memdesc:a99fc496a00f282885957fb351a15f429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Everything which must be done before buiding the semantics. <br /></td></tr>
@@ -133,7 +133,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The IR builder. </p>
 
-<p class="definition">Definition at line <a class="el" href="irBuilder_8hpp_source.html#l00039">39</a> of file <a class="el" href="irBuilder_8hpp_source.html">irBuilder.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="irBuilder_8hpp_source.html#l00040">40</a> of file <a class="el" href="irBuilder_8hpp_source.html">irBuilder.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/<a class="el" href="irBuilder_8hpp_source.html">irBuilder.hpp</a></li>
 <li>/home/jonathan/Works/Tools/Triton/src/libtriton/arch/<a class="el" href="irBuilder_8cpp_source.html">irBuilder.cpp</a></li>

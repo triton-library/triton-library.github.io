@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1531</span>
+   &#160;<span id="projectnumber">version 1.0 build 1532</span>
    </div>
   </td>
  </tr>
@@ -193,7 +193,7 @@ $(function() {
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      }</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classtriton_1_1engines_1_1lifters_1_1LiftingToSMT.html#a10bbba99a244f0f3652ac921cddd8001">  117</a></span>&#160;      std::ostream&amp; <a class="code" href="classtriton_1_1engines_1_1lifters_1_1LiftingToSMT.html#a10bbba99a244f0f3652ac921cddd8001">LiftingToSMT::liftToSMT</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a>&amp; expr, <span class="keywordtype">bool</span> assert_) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classtriton_1_1engines_1_1lifters_1_1LiftingToSMT.html#af08b9f16d17a8d8618909d252a335e14">  117</a></span>&#160;      std::ostream&amp; <a class="code" href="classtriton_1_1engines_1_1lifters_1_1LiftingToSMT.html#af08b9f16d17a8d8618909d252a335e14">LiftingToSMT::liftToSMT</a>(std::ostream&amp; stream, <span class="keyword">const</span> <a class="code" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a>&amp; expr, <span class="keywordtype">bool</span> assert_, <span class="keywordtype">bool</span> icomment) {</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="comment">/* Save the AST representation mode */</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="group__representations.html#ga18af80487be7d16a7a8f9a3071920ff9">triton::ast::representations::mode_e</a> mode = this-&gt;astCtxt-&gt;getRepresentationMode();</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        this-&gt;astCtxt-&gt;setRepresentationMode(<a class="code" href="group__representations.html#gga18af80487be7d16a7a8f9a3071920ff9abb395098164be09bff331625072e0ff8">triton::ast::representations::SMT_REPRESENTATION</a>);</div>
@@ -236,49 +236,60 @@ $(function() {
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="comment">/* Print symbolic expressions */</span></div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <span class="keywordtype">id</span> : symExprs) {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;          stream &lt;&lt; ssa[id]-&gt;getFormattedExpression() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span> (assert_) {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;          <span class="comment">/* Print conjuncts in separate asserts */</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;          std::vector&lt;triton::ast::SharedAbstractNode&gt; exprs;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;          std::vector&lt;triton::ast::SharedAbstractNode&gt; wl{expr-&gt;getAst()};</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;          <span class="keywordflow">while</span> (!wl.empty()) {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keyword">auto</span> n = wl.back();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            wl.pop_back();</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">if</span> (n-&gt;getType() != <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa70918020e5a916c3b855c9e90e5ebe78">ast::LAND_NODE</a>) {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;              exprs.push_back(n);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;              <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            }</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : n-&gt;getChildren()) {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;              wl.push_back(child);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;          }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = exprs.crbegin(); it != exprs.crend(); ++it) {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            stream &lt;&lt; this-&gt;astCtxt-&gt;assert_(*it) &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;          }</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;          stream &lt;&lt; <span class="stringliteral">&quot;(check-sat)&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;          stream &lt;&lt; <span class="stringliteral">&quot;(get-model)&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="comment">/* Restore the AST representation mode */</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        this-&gt;astCtxt-&gt;setRepresentationMode(mode);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;          <span class="keyword">auto</span>&amp; e = ssa[id];</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;          stream &lt;&lt; e-&gt;getFormattedExpression();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;          <span class="keywordflow">if</span> (icomment &amp;&amp; !e-&gt;getDisassembly().empty()) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">if</span> (e-&gt;getComment().empty()) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;              stream &lt;&lt; <span class="stringliteral">&quot; ; &quot;</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;              stream &lt;&lt; <span class="stringliteral">&quot; - &quot;</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            stream &lt;&lt; e-&gt;getDisassembly();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;          }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;          stream &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">if</span> (assert_) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;          <span class="comment">/* Print conjuncts in separate asserts */</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;          std::vector&lt;triton::ast::SharedAbstractNode&gt; exprs;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;          std::vector&lt;triton::ast::SharedAbstractNode&gt; wl{expr-&gt;getAst()};</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;          <span class="keywordflow">while</span> (!wl.empty()) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keyword">auto</span> n = wl.back();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            wl.pop_back();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordflow">if</span> (n-&gt;getType() != <a class="code" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa70918020e5a916c3b855c9e90e5ebe78">ast::LAND_NODE</a>) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;              exprs.push_back(n);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;              <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : n-&gt;getChildren()) {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;              wl.push_back(child);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;          }</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">return</span> stream;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }; <span class="comment">/* lifters namespace */</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  }; <span class="comment">/* engines namespace */</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = exprs.crbegin(); it != exprs.crend(); ++it) {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            stream &lt;&lt; this-&gt;astCtxt-&gt;assert_(*it) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;          }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;          stream &lt;&lt; <span class="stringliteral">&quot;(check-sat)&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;          stream &lt;&lt; <span class="stringliteral">&quot;(get-model)&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="comment">/* Restore the AST representation mode */</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        this-&gt;astCtxt-&gt;setRepresentationMode(mode);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">return</span> stream;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }; <span class="comment">/* lifters namespace */</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  }; <span class="comment">/* engines namespace */</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}; <span class="comment">/* triton namespace */</span></div>
 <div class="ttc" id="aastEnums_8hpp_html"><div class="ttname"><a href="astEnums_8hpp.html">astEnums.hpp</a></div></div>
 <div class="ttc" id="aclasstriton_1_1ast_1_1VariableNode_html"><div class="ttname"><a href="classtriton_1_1ast_1_1VariableNode.html">triton::ast::VariableNode</a></div><div class="ttdoc">Variable node.</div><div class="ttdef"><b>Definition:</b> <a href="ast_8hpp_source.html#l00878">ast.hpp:878</a></div></div>
-<div class="ttc" id="aclasstriton_1_1engines_1_1lifters_1_1LiftingToSMT_html_a10bbba99a244f0f3652ac921cddd8001"><div class="ttname"><a href="classtriton_1_1engines_1_1lifters_1_1LiftingToSMT.html#a10bbba99a244f0f3652ac921cddd8001">triton::engines::lifters::LiftingToSMT::liftToSMT</a></div><div class="ttdeci">TRITON_EXPORT std::ostream &amp; liftToSMT(std::ostream &amp;stream, const triton::engines::symbolic::SharedSymbolicExpression &amp;expr, bool assert_)</div><div class="ttdoc">Lifts a symbolic expression and all its references to SMT format. If assert_ is true,...</div><div class="ttdef"><b>Definition:</b> <a href="liftingToSMT_8cpp_source.html#l00117">liftingToSMT.cpp:117</a></div></div>
 <div class="ttc" id="aclasstriton_1_1engines_1_1lifters_1_1LiftingToSMT_html_a2024b65a49cc721f7a948a2278326a0c"><div class="ttname"><a href="classtriton_1_1engines_1_1lifters_1_1LiftingToSMT.html#a2024b65a49cc721f7a948a2278326a0c">triton::engines::lifters::LiftingToSMT::LiftingToSMT</a></div><div class="ttdeci">TRITON_EXPORT LiftingToSMT(const triton::ast::SharedAstContext &amp;astCtxt, triton::engines::symbolic::SymbolicEngine *symbolic)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="liftingToSMT_8cpp_source.html#l00022">liftingToSMT.cpp:22</a></div></div>
+<div class="ttc" id="aclasstriton_1_1engines_1_1lifters_1_1LiftingToSMT_html_af08b9f16d17a8d8618909d252a335e14"><div class="ttname"><a href="classtriton_1_1engines_1_1lifters_1_1LiftingToSMT.html#af08b9f16d17a8d8618909d252a335e14">triton::engines::lifters::LiftingToSMT::liftToSMT</a></div><div class="ttdeci">TRITON_EXPORT std::ostream &amp; liftToSMT(std::ostream &amp;stream, const triton::engines::symbolic::SharedSymbolicExpression &amp;expr, bool assert_=false, bool icomment=false)</div><div class="ttdoc">Lifts a symbolic expression and all its references to SMT format. If assert_ is true,...</div><div class="ttdef"><b>Definition:</b> <a href="liftingToSMT_8cpp_source.html#l00117">liftingToSMT.cpp:117</a></div></div>
 <div class="ttc" id="aclasstriton_1_1engines_1_1symbolic_1_1SymbolicEngine_html"><div class="ttname"><a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html">triton::engines::symbolic::SymbolicEngine</a></div><div class="ttdoc">The symbolic engine class.</div><div class="ttdef"><b>Definition:</b> <a href="symbolicEngine_8hpp_source.html#l00060">symbolicEngine.hpp:62</a></div></div>
 <div class="ttc" id="aclasstriton_1_1engines_1_1symbolic_1_1SymbolicEngine_html_ada78fb92795aad95b5cde68bfd470ce0"><div class="ttname"><a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ada78fb92795aad95b5cde68bfd470ce0">triton::engines::symbolic::SymbolicEngine::sliceExpressions</a></div><div class="ttdeci">TRITON_EXPORT std::unordered_map&lt; triton::usize, SharedSymbolicExpression &gt; sliceExpressions(const SharedSymbolicExpression &amp;expr)</div><div class="ttdoc">Slices all expressions from a given one.</div><div class="ttdef"><b>Definition:</b> <a href="symbolicEngine_8cpp_source.html#l00460">symbolicEngine.cpp:460</a></div></div>
 <div class="ttc" id="agroup__ast_html_gaf52efa4d17eca0afedfc7604a7f6e4c9"><div class="ttname"><a href="group__ast.html#gaf52efa4d17eca0afedfc7604a7f6e4c9">triton::ast::search</a></div><div class="ttdeci">std::deque&lt; SharedAbstractNode &gt; search(const SharedAbstractNode &amp;node, triton::ast::ast_e match)</div><div class="ttdoc">Returns a deque of collected matched nodes via a depth-first pre order traversal.</div><div class="ttdef"><b>Definition:</b> <a href="ast_8cpp_source.html#l03697">ast.cpp:3697</a></div></div>

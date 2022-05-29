@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1531</span>
+   &#160;<span id="projectnumber">version 1.0 build 1532</span>
    </div>
   </td>
  </tr>
@@ -236,8 +236,9 @@ TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="
 TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a617c75e9b7bcd018bd165dba5febcf2e">clearConcreteMemoryValue</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> baseAddr, <a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> size=1)</td></tr>
 <tr class="memdesc:a617c75e9b7bcd018bd165dba5febcf2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears concrete values assigned to the memory cells. <br /></td></tr>
 <tr class="separator:a617c75e9b7bcd018bd165dba5febcf2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98f2f895bead72e105f281431b0d4845"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a98f2f895bead72e105f281431b0d4845">disassembly</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst) const</td></tr>
-<tr class="memdesc:a98f2f895bead72e105f281431b0d4845"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Disassembles the instruction and setup operands. You must define an architecture before.  <a href="classtriton_1_1API.html#a98f2f895bead72e105f281431b0d4845">More...</a><br /></td></tr>
+<tr class="memitem:a98f2f895bead72e105f281431b0d4845"><td class="memItemLeft" align="right" valign="top"><a id="a98f2f895bead72e105f281431b0d4845"></a>
+TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a98f2f895bead72e105f281431b0d4845">disassembly</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst) const</td></tr>
+<tr class="memdesc:a98f2f895bead72e105f281431b0d4845"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Disassembles the instruction and setup operands. <br /></td></tr>
 <tr class="separator:a98f2f895bead72e105f281431b0d4845"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03ae3544bfbe1a5403213b14ccd7e043"><td class="memItemLeft" align="right" valign="top"><a id="a03ae3544bfbe1a5403213b14ccd7e043"></a>
 TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a03ae3544bfbe1a5403213b14ccd7e043">disassembly</a> (<a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block, <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr=0) const</td></tr>
@@ -251,14 +252,14 @@ TRITON_EXPORT std::vector&lt; <a class="el" href="classtriton_1_1arch_1_1Instruc
 TRITON_EXPORT <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a6ee3858cd0c0728253a809a4e57923eb">disassembly</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr) const</td></tr>
 <tr class="memdesc:a6ee3858cd0c0728253a809a4e57923eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Disassembles a concrete memory area from <code>addr</code> to control flow instruction and returns a <code>BasicBlock</code>. <br /></td></tr>
 <tr class="separator:a6ee3858cd0c0728253a809a4e57923eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a809fd3e5ef2411cbe73d5f3145483977"><td class="memItemLeft" align="right" valign="top"><a id="a809fd3e5ef2411cbe73d5f3145483977"></a>
-TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a809fd3e5ef2411cbe73d5f3145483977">processing</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst)</td></tr>
-<tr class="memdesc:a809fd3e5ef2411cbe73d5f3145483977"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>proccesing api</b>] - Processes an instruction and updates engines according to the instruction semantics. Returns true if the instruction is supported. <br /></td></tr>
-<tr class="separator:a809fd3e5ef2411cbe73d5f3145483977"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af420a81110c0c46dbd8182d5716b94e5"><td class="memItemLeft" align="right" valign="top"><a id="af420a81110c0c46dbd8182d5716b94e5"></a>
-TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#af420a81110c0c46dbd8182d5716b94e5">processing</a> (<a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block, <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr=0)</td></tr>
-<tr class="memdesc:af420a81110c0c46dbd8182d5716b94e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>proccesing api</b>] - Processes a block of instructions and updates engines according to instructions semantics. Returns false if an instruction is not supported. <br /></td></tr>
-<tr class="separator:af420a81110c0c46dbd8182d5716b94e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6893f759cb1d1ad57e1d58c25aeee0"><td class="memItemLeft" align="right" valign="top"><a id="a4f6893f759cb1d1ad57e1d58c25aeee0"></a>
+TRITON_EXPORT <a class="el" href="group__arch.html#gaf3dfe23a6e443de4ddb1d67fe39c80c6">triton::arch::exception_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a4f6893f759cb1d1ad57e1d58c25aeee0">processing</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst)</td></tr>
+<tr class="memdesc:a4f6893f759cb1d1ad57e1d58c25aeee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>proccesing api</b>] - Processes an instruction and updates engines according to the instruction semantics. Returns <code><a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a></code> if succeed. <br /></td></tr>
+<tr class="separator:a4f6893f759cb1d1ad57e1d58c25aeee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed42d669043b22c6c0073490ea4737aa"><td class="memItemLeft" align="right" valign="top"><a id="aed42d669043b22c6c0073490ea4737aa"></a>
+TRITON_EXPORT <a class="el" href="group__arch.html#gaf3dfe23a6e443de4ddb1d67fe39c80c6">triton::arch::exception_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#aed42d669043b22c6c0073490ea4737aa">processing</a> (<a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block, <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr=0)</td></tr>
+<tr class="memdesc:aed42d669043b22c6c0073490ea4737aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>proccesing api</b>] - Processes a block of instructions and updates engines according to instructions semantics. Returns <code><a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a></code> if succeed. <br /></td></tr>
+<tr class="separator:aed42d669043b22c6c0073490ea4737aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9503752abd1b15cafa4a477ab57b565a"><td class="memItemLeft" align="right" valign="top"><a id="a9503752abd1b15cafa4a477ab57b565a"></a>
 TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a9503752abd1b15cafa4a477ab57b565a">initEngines</a> (void)</td></tr>
 <tr class="memdesc:a9503752abd1b15cafa4a477ab57b565a"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>proccesing api</b>] - Initializes everything. <br /></td></tr>
@@ -271,13 +272,14 @@ TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="
 TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a5246db9ad642384ffc06ed46888f7ca0">reset</a> (void)</td></tr>
 <tr class="memdesc:a5246db9ad642384ffc06ed46888f7ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>proccesing api</b>] - Resets everything. <br /></td></tr>
 <tr class="separator:a5246db9ad642384ffc06ed46888f7ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae895f9992e46e9f333a8ff1a51599011"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#ae895f9992e46e9f333a8ff1a51599011">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst)</td></tr>
-<tr class="memdesc:ae895f9992e46e9f333a8ff1a51599011"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>IR builder api</b>] - Builds the instruction semantics. Returns true if the instruction is supported. You must define an architecture before.  <a href="classtriton_1_1API.html#ae895f9992e46e9f333a8ff1a51599011">More...</a><br /></td></tr>
-<tr class="separator:ae895f9992e46e9f333a8ff1a51599011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a727c13587e8a8e1d867e2dd004aee434"><td class="memItemLeft" align="right" valign="top"><a id="a727c13587e8a8e1d867e2dd004aee434"></a>
-TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a727c13587e8a8e1d867e2dd004aee434">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block)</td></tr>
-<tr class="memdesc:a727c13587e8a8e1d867e2dd004aee434"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>IR builder api</b>] - Builds the instructions semantics of a block. Returns false if an instruction is not supported. You must define an architecture before. <br /></td></tr>
-<tr class="separator:a727c13587e8a8e1d867e2dd004aee434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a306947b2c0619170803f4f4e883a2616"><td class="memItemLeft" align="right" valign="top"><a id="a306947b2c0619170803f4f4e883a2616"></a>
+TRITON_EXPORT <a class="el" href="group__arch.html#gaf3dfe23a6e443de4ddb1d67fe39c80c6">triton::arch::exception_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a306947b2c0619170803f4f4e883a2616">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst)</td></tr>
+<tr class="memdesc:a306947b2c0619170803f4f4e883a2616"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>IR builder api</b>] - Builds the instruction semantics. Returns <code><a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a></code> if succeed. <br /></td></tr>
+<tr class="separator:a306947b2c0619170803f4f4e883a2616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64fb7470968aa4bb0958f50c3468c363"><td class="memItemLeft" align="right" valign="top"><a id="a64fb7470968aa4bb0958f50c3468c363"></a>
+TRITON_EXPORT <a class="el" href="group__arch.html#gaf3dfe23a6e443de4ddb1d67fe39c80c6">triton::arch::exception_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a64fb7470968aa4bb0958f50c3468c363">buildSemantics</a> (<a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block)</td></tr>
+<tr class="memdesc:a64fb7470968aa4bb0958f50c3468c363"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>IR builder api</b>] - Builds the instructions semantics of a block. Returns <code><a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a></code> if succeed. <br /></td></tr>
+<tr class="separator:a64fb7470968aa4bb0958f50c3468c363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeea954410b7db37d9a21e13893c7fbce"><td class="memItemLeft" align="right" valign="top"><a id="aeea954410b7db37d9a21e13893c7fbce"></a>
 TRITON_EXPORT <a class="el" href="group__ast.html#gafd6a94ab829d378f1270057ea80f2d05">triton::ast::SharedAstContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#aeea954410b7db37d9a21e13893c7fbce">getAstContext</a> (void)</td></tr>
 <tr class="memdesc:aeea954410b7db37d9a21e13893c7fbce"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>IR builder api</b>] - Returns the AST context. Used as AST builder. <br /></td></tr>
@@ -742,14 +744,14 @@ TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bott
 TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#aaed356bead16ed5e5c1cbf8f7c8a3a20">liftToLLVM</a> (std::ostream &amp;stream, const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a> &amp;expr, const char *fname=&quot;__triton&quot;, bool optimize=false)</td></tr>
 <tr class="memdesc:aaed356bead16ed5e5c1cbf8f7c8a3a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>lifting api</b>] - Lifts a symbolic expression and all its references to LLVM format. <code>fname</code> represents the name of the LLVM function. <br /></td></tr>
 <tr class="separator:aaed356bead16ed5e5c1cbf8f7c8a3a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac73ba54369a1e571c0979b5c44c243db"><td class="memItemLeft" align="right" valign="top"><a id="ac73ba54369a1e571c0979b5c44c243db"></a>
-TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#ac73ba54369a1e571c0979b5c44c243db">liftToPython</a> (std::ostream &amp;stream, const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a> &amp;expr)</td></tr>
-<tr class="memdesc:ac73ba54369a1e571c0979b5c44c243db"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>lifting api</b>] - Lifts a symbolic expression and all its references to Python format. <br /></td></tr>
-<tr class="separator:ac73ba54369a1e571c0979b5c44c243db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ebce5f266e23f0e5d26e601e1b22201"><td class="memItemLeft" align="right" valign="top"><a id="a3ebce5f266e23f0e5d26e601e1b22201"></a>
-TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a3ebce5f266e23f0e5d26e601e1b22201">liftToSMT</a> (std::ostream &amp;stream, const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a> &amp;expr, bool assert_)</td></tr>
-<tr class="memdesc:a3ebce5f266e23f0e5d26e601e1b22201"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>lifting api</b>] - Lifts a symbolic expression and all its references to SMT format. If <code>assert_</code> is true, then (assert &lt;expr&gt;). <br /></td></tr>
-<tr class="separator:a3ebce5f266e23f0e5d26e601e1b22201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9adf06f6e188159d9721c3362062f099"><td class="memItemLeft" align="right" valign="top"><a id="a9adf06f6e188159d9721c3362062f099"></a>
+TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a9adf06f6e188159d9721c3362062f099">liftToPython</a> (std::ostream &amp;stream, const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a> &amp;expr, bool icomment=false)</td></tr>
+<tr class="memdesc:a9adf06f6e188159d9721c3362062f099"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>lifting api</b>] - Lifts a symbolic expression and all its references to Python format. If <code>icomment</code> is true, then print instructions assembly in expression comments. <br /></td></tr>
+<tr class="separator:a9adf06f6e188159d9721c3362062f099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5d16e412e50c1ce1604133fdb2e744e"><td class="memItemLeft" align="right" valign="top"><a id="ad5d16e412e50c1ce1604133fdb2e744e"></a>
+TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#ad5d16e412e50c1ce1604133fdb2e744e">liftToSMT</a> (std::ostream &amp;stream, const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a> &amp;expr, bool assert_=false, bool icomment=false)</td></tr>
+<tr class="memdesc:ad5d16e412e50c1ce1604133fdb2e744e"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>lifting api</b>] - Lifts a symbolic expression and all its references to SMT format. If <code>assert_</code> is true, then (assert &lt;expr&gt;). If <code>icomment</code> is true, then print instructions assembly in expression comments. <br /></td></tr>
+<tr class="separator:ad5d16e412e50c1ce1604133fdb2e744e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af78b4554e6a5f436365ec36503082a9f"><td class="memItemLeft" align="right" valign="top"><a id="af78b4554e6a5f436365ec36503082a9f"></a>
 TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#af78b4554e6a5f436365ec36503082a9f">liftToDot</a> (std::ostream &amp;stream, const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node)</td></tr>
 <tr class="memdesc:af78b4554e6a5f436365ec36503082a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>lifting api</b>] - Lifts an AST and all its references to Dot format. <br /></td></tr>
@@ -814,52 +816,6 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="api_8hpp_source.html#l00045">45</a> of file <a class="el" href="api_8hpp_source.html">api.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae895f9992e46e9f333a8ff1a51599011"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae895f9992e46e9f333a8ff1a51599011">&#9670;&nbsp;</a></span>buildSemantics()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool triton::API::buildSemantics </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;&#160;</td>
-          <td class="paramname"><em>inst</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>[<b>IR builder api</b>] - Builds the instruction semantics. Returns true if the instruction is supported. You must define an architecture before. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classtriton_1_1API.html#a809fd3e5ef2411cbe73d5f3145483977" title="[proccesing api] - Processes an instruction and updates engines according to the instruction semantic...">processing()</a>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00564">564</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a98f2f895bead72e105f281431b0d4845"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98f2f895bead72e105f281431b0d4845">&#9670;&nbsp;</a></span>disassembly()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void triton::API::disassembly </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;&#160;</td>
-          <td class="paramname"><em>inst</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>[<b>architecture api</b>] - Disassembles the instruction and setup operands. You must define an architecture before. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classtriton_1_1API.html#a809fd3e5ef2411cbe73d5f3145483977" title="[proccesing api] - Processes an instruction and updates engines according to the instruction semantic...">processing()</a>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00457">457</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
-
-</div>
-</div>
 <a id="ac3ad999884832c6699386be87f12d5b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3ad999884832c6699386be87f12d5b3">&#9670;&nbsp;</a></span>getAllRegisters()</h2>
 

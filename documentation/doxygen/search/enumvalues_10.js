@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['variable_5fnode_7028',['VARIABLE_NODE',['../group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa1c21cae130c094aac225df42d632828e',1,'triton::ast']]],
-  ['volatile_5fexpression_7029',['VOLATILE_EXPRESSION',['../group__symbolic.html#gga75473b76e53f754da0affbc706468929adb2bd71849fd2d98c951e611e93994fa',1,'triton::engines::symbolic']]]
+  ['undefined_5fvariable_7043',['UNDEFINED_VARIABLE',['../group__symbolic.html#ggadbf01c67aa57b3840f5e4211c754a87eac3582ba887ff92128054929ca425e8df',1,'triton::engines::symbolic']]],
+  ['unknown_7044',['UNKNOWN',['../group__solver.html#ggae6085987613dfcf377fdddf2dd167e4da8d4005916930d2ae464f5923f9956cc1',1,'triton::engines::solver']]],
+  ['unsat_7045',['UNSAT',['../group__solver.html#ggae6085987613dfcf377fdddf2dd167e4da8a3b67addf3ab662ac1b1673f9e85e8d',1,'triton::engines::solver']]]
 ];

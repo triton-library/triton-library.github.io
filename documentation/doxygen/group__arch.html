@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1531</span>
+   &#160;<span id="projectnumber">version 1.0 build 1532</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,8 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Arch:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="group__arch.svg" width="266" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__arch.svg" width="266" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
@@ -154,6 +155,16 @@ Enumerations</h2></td></tr>
 , <a class="el" href="group__arch.html#gga7367948c404e09e0b1951f65ca92a095ad0671b45623bfa50f19c905291361585">triton::arch::OP_REG</a>
  }</td></tr>
 <tr class="separator:ga7367948c404e09e0b1951f65ca92a095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf3dfe23a6e443de4ddb1d67fe39c80c6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__arch.html#gaf3dfe23a6e443de4ddb1d67fe39c80c6">triton::arch::exception_e</a> { <br />
+&#160;&#160;<a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a> = 0
+, <a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6af0ecda88e77a0cd375ee171e32b7237c">triton::arch::FAULT_DE</a>
+, <a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6aa06b6b723e878caa379eeb4d687fce93">triton::arch::FAULT_BP</a>
+, <a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a4f5c1395e30f2ecadb975497fb3c3bcd">triton::arch::FAULT_UD</a>
+, <br />
+&#160;&#160;<a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a5fff5edd8efc07f0850ae7c615c3c665">triton::arch::FAULT_GP</a>
+<br />
+ }</td></tr>
+<tr class="separator:gaf3dfe23a6e443de4ddb1d67fe39c80c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaba5d7908cb780b4fee8f99e77384801f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a> { <a class="el" href="group__arch.html#ggaba5d7908cb780b4fee8f99e77384801fa5d2d2183c01ded4bb52ff8ce73053f8d">triton::arch::ID_REG_INVALID</a> = 0
 , <a class="el" href="group__arch.html#ggaba5d7908cb780b4fee8f99e77384801faf0f9c8d857c45b6a8d0d9be9db0b6391">triton::arch::ID_REG_LAST_ITEM</a>
  }</td></tr>
@@ -315,6 +326,39 @@ const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 
 </div>
 </div>
+<a id="gaf3dfe23a6e443de4ddb1d67fe39c80c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf3dfe23a6e443de4ddb1d67fe39c80c6">&#9670;&nbsp;</a></span>exception_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__arch.html#gaf3dfe23a6e443de4ddb1d67fe39c80c6">triton::arch::exception_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Types of exceptions </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850"></a>NO_FAULT&#160;</td><td class="fielddoc"><p>Succeed, no fault. <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf3dfe23a6e443de4ddb1d67fe39c80c6af0ecda88e77a0cd375ee171e32b7237c"></a>FAULT_DE&#160;</td><td class="fielddoc"><p>Fault raised: Divide-by-zero. <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf3dfe23a6e443de4ddb1d67fe39c80c6aa06b6b723e878caa379eeb4d687fce93"></a>FAULT_BP&#160;</td><td class="fielddoc"><p>Fault raised: Breakpoint. <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf3dfe23a6e443de4ddb1d67fe39c80c6a4f5c1395e30f2ecadb975497fb3c3bcd"></a>FAULT_UD&#160;</td><td class="fielddoc"><p>Fault raised: <a class="el" href="classtriton_1_1arch_1_1Instruction.html" title="This class is used to represent an instruction.">Instruction</a> not supported. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf3dfe23a6e443de4ddb1d67fe39c80c6a5fff5edd8efc07f0850ae7c615c3c665"></a>FAULT_GP&#160;</td><td class="fielddoc"><p>Fault raised: General Protection Fault. <br  />
+ </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00055">55</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
+
+</div>
+</div>
 <a id="ga7367948c404e09e0b1951f65ca92a095"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga7367948c404e09e0b1951f65ca92a095">&#9670;&nbsp;</a></span>operand_e</h2>
 
@@ -328,13 +372,17 @@ const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div><div class="memdoc">
 <p>Types of operand </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga7367948c404e09e0b1951f65ca92a095a741763251dd5599b102192beda3cb903"></a>OP_INVALID&#160;</td><td class="fielddoc"><p>invalid operand </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga7367948c404e09e0b1951f65ca92a095a741763251dd5599b102192beda3cb903"></a>OP_INVALID&#160;</td><td class="fielddoc"><p>Invalid operand <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga7367948c404e09e0b1951f65ca92a095a4f1181d85c2f24889f32463ce64630a7"></a>OP_IMM&#160;</td><td class="fielddoc"><p>immediate operand </p>
+<tr><td class="fieldname"><a id="gga7367948c404e09e0b1951f65ca92a095a4f1181d85c2f24889f32463ce64630a7"></a>OP_IMM&#160;</td><td class="fielddoc"><p><a class="el" href="classtriton_1_1arch_1_1Immediate.html" title="This class is used to represent an immediate.">Immediate</a> operand <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga7367948c404e09e0b1951f65ca92a095a7939d1e352561da78ae5310d59be8b6d"></a>OP_MEM&#160;</td><td class="fielddoc"><p>memory operand </p>
+<tr><td class="fieldname"><a id="gga7367948c404e09e0b1951f65ca92a095a7939d1e352561da78ae5310d59be8b6d"></a>OP_MEM&#160;</td><td class="fielddoc"><p>Memory operand <br  />
+ </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga7367948c404e09e0b1951f65ca92a095ad0671b45623bfa50f19c905291361585"></a>OP_REG&#160;</td><td class="fielddoc"><p>register operand </p>
+<tr><td class="fieldname"><a id="gga7367948c404e09e0b1951f65ca92a095ad0671b45623bfa50f19c905291361585"></a>OP_REG&#160;</td><td class="fielddoc"><p><a class="el" href="classtriton_1_1arch_1_1Register.html" title="This class is used when an instruction has a register operand.">Register</a> operand <br  />
+ </p>
 </td></tr>
 </table>
 
@@ -362,7 +410,7 @@ const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00055">55</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00064">64</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
 
 </div>
 </div>

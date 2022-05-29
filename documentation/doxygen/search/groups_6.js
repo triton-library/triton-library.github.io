@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oracles_7071',['Oracles',['../group__oracles.html',1,'']]]
+  ['oracles_7089',['Oracles',['../group__oracles.html',1,'']]]
 ];

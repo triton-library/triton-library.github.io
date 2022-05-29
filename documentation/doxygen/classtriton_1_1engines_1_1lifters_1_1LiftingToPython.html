@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1531</span>
+   &#160;<span id="projectnumber">version 1.0 build 1532</span>
    </div>
   </td>
  </tr>
@@ -89,7 +89,8 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for triton::engines::lifters::LiftingToPython:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classtriton_1_1engines_1_1lifters_1_1LiftingToPython__inherit__graph.svg" width="172" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classtriton_1_1engines_1_1lifters_1_1LiftingToPython__inherit__graph.svg" width="172" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -98,10 +99,10 @@ Public Member Functions</h2></td></tr>
 TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1lifters_1_1LiftingToPython.html#a3025350d9c4443a58a06076247026708">LiftingToPython</a> (const <a class="el" href="group__ast.html#gafd6a94ab829d378f1270057ea80f2d05">triton::ast::SharedAstContext</a> &amp;astCtxt, <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html">triton::engines::symbolic::SymbolicEngine</a> *symbolic)</td></tr>
 <tr class="memdesc:a3025350d9c4443a58a06076247026708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
 <tr class="separator:a3025350d9c4443a58a06076247026708"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae312aa2e0d34d8c41e6875af4d6b24df"><td class="memItemLeft" align="right" valign="top"><a id="ae312aa2e0d34d8c41e6875af4d6b24df"></a>
-TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1lifters_1_1LiftingToPython.html#ae312aa2e0d34d8c41e6875af4d6b24df">liftToPython</a> (std::ostream &amp;stream, const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a> &amp;expr)</td></tr>
-<tr class="memdesc:ae312aa2e0d34d8c41e6875af4d6b24df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lifts a symbolic expression and all its references to Python format. <br /></td></tr>
-<tr class="separator:ae312aa2e0d34d8c41e6875af4d6b24df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0271b5405c90f2654676a90fbbcc241"><td class="memItemLeft" align="right" valign="top"><a id="ac0271b5405c90f2654676a90fbbcc241"></a>
+TRITON_EXPORT std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1lifters_1_1LiftingToPython.html#ac0271b5405c90f2654676a90fbbcc241">liftToPython</a> (std::ostream &amp;stream, const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a> &amp;expr, bool icomment=false)</td></tr>
+<tr class="memdesc:ac0271b5405c90f2654676a90fbbcc241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lifts a symbolic expression and all its references to Python format. If <code>icomment</code> is true, then print instructions assembly in expression comments. <br /></td></tr>
+<tr class="separator:ac0271b5405c90f2654676a90fbbcc241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The lifting to Python class. </p>

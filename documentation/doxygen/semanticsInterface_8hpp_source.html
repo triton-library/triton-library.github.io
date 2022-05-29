@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1531</span>
+   &#160;<span id="projectnumber">version 1.0 build 1532</span>
    </div>
   </td>
  </tr>
@@ -87,29 +87,32 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef TRITON_SEMANTICSINTERFACE_HPP</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define TRITON_SEMANTICSINTERFACE_HPP</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="dllexport_8hpp.html">triton/dllexport.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="instruction_8hpp.html">triton/instruction.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="archEnums_8hpp.html">triton/archEnums.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="dllexport_8hpp.html">triton/dllexport.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="instruction_8hpp.html">triton/instruction.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetriton.html">triton</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">namespace </span>arch {</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1SemanticsInterface.html">   33</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classtriton_1_1arch_1_1SemanticsInterface.html">SemanticsInterface</a> {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1SemanticsInterface.html#a315b2aa5e318f6e5a54b635b9bb8f024">   36</a></span>&#160;        TRITON_EXPORT <span class="keyword">virtual</span> <a class="code" href="classtriton_1_1arch_1_1SemanticsInterface.html#a315b2aa5e318f6e5a54b635b9bb8f024">~SemanticsInterface</a>(){};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1SemanticsInterface.html#af3e4ab7da492cf5887b5bbcad5a7b50d">   39</a></span>&#160;        TRITON_EXPORT <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classtriton_1_1arch_1_1SemanticsInterface.html#af3e4ab7da492cf5887b5bbcad5a7b50d">buildSemantics</a>(<a class="code" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) = 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  };</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* TRITON_SEMANTICSINTERFACE_HPP */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetriton.html">triton</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">namespace </span>arch {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1SemanticsInterface.html">   34</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classtriton_1_1arch_1_1SemanticsInterface.html">SemanticsInterface</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1SemanticsInterface.html#a315b2aa5e318f6e5a54b635b9bb8f024">   37</a></span>&#160;        TRITON_EXPORT <span class="keyword">virtual</span> <a class="code" href="classtriton_1_1arch_1_1SemanticsInterface.html#a315b2aa5e318f6e5a54b635b9bb8f024">~SemanticsInterface</a>(){};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1SemanticsInterface.html#a09a73d10f85a987c720439279bfc96e3">   40</a></span>&#160;        TRITON_EXPORT <span class="keyword">virtual</span> <a class="code" href="group__arch.html#gaf3dfe23a6e443de4ddb1d67fe39c80c6">triton::arch::exception_e</a> <a class="code" href="classtriton_1_1arch_1_1SemanticsInterface.html#a09a73d10f85a987c720439279bfc96e3">buildSemantics</a>(<a class="code" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* TRITON_SEMANTICSINTERFACE_HPP */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aarchEnums_8hpp_html"><div class="ttname"><a href="archEnums_8hpp.html">archEnums.hpp</a></div></div>
 <div class="ttc" id="aclasstriton_1_1arch_1_1Instruction_html"><div class="ttname"><a href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a></div><div class="ttdoc">This class is used to represent an instruction.</div><div class="ttdef"><b>Definition:</b> <a href="instruction_8hpp_source.html#l00048">instruction.hpp:48</a></div></div>
-<div class="ttc" id="aclasstriton_1_1arch_1_1SemanticsInterface_html"><div class="ttname"><a href="classtriton_1_1arch_1_1SemanticsInterface.html">triton::arch::SemanticsInterface</a></div><div class="ttdoc">This interface is used as abstract semantics interface. All ISA semantics must use this interface.</div><div class="ttdef"><b>Definition:</b> <a href="semanticsInterface_8hpp_source.html#l00033">semanticsInterface.hpp:33</a></div></div>
-<div class="ttc" id="aclasstriton_1_1arch_1_1SemanticsInterface_html_a315b2aa5e318f6e5a54b635b9bb8f024"><div class="ttname"><a href="classtriton_1_1arch_1_1SemanticsInterface.html#a315b2aa5e318f6e5a54b635b9bb8f024">triton::arch::SemanticsInterface::~SemanticsInterface</a></div><div class="ttdeci">virtual TRITON_EXPORT ~SemanticsInterface()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="semanticsInterface_8hpp_source.html#l00036">semanticsInterface.hpp:36</a></div></div>
-<div class="ttc" id="aclasstriton_1_1arch_1_1SemanticsInterface_html_af3e4ab7da492cf5887b5bbcad5a7b50d"><div class="ttname"><a href="classtriton_1_1arch_1_1SemanticsInterface.html#af3e4ab7da492cf5887b5bbcad5a7b50d">triton::arch::SemanticsInterface::buildSemantics</a></div><div class="ttdeci">virtual TRITON_EXPORT bool buildSemantics(triton::arch::Instruction &amp;inst)=0</div><div class="ttdoc">Builds the semantics of the instruction. Returns true if the instruction is supported.</div></div>
+<div class="ttc" id="aclasstriton_1_1arch_1_1SemanticsInterface_html"><div class="ttname"><a href="classtriton_1_1arch_1_1SemanticsInterface.html">triton::arch::SemanticsInterface</a></div><div class="ttdoc">This interface is used as abstract semantics interface. All ISA semantics must use this interface.</div><div class="ttdef"><b>Definition:</b> <a href="semanticsInterface_8hpp_source.html#l00034">semanticsInterface.hpp:34</a></div></div>
+<div class="ttc" id="aclasstriton_1_1arch_1_1SemanticsInterface_html_a09a73d10f85a987c720439279bfc96e3"><div class="ttname"><a href="classtriton_1_1arch_1_1SemanticsInterface.html#a09a73d10f85a987c720439279bfc96e3">triton::arch::SemanticsInterface::buildSemantics</a></div><div class="ttdeci">virtual TRITON_EXPORT triton::arch::exception_e buildSemantics(triton::arch::Instruction &amp;inst)=0</div><div class="ttdoc">Builds the semantics of the instruction. Returns triton::arch::NO_FAULT if succeed.</div></div>
+<div class="ttc" id="aclasstriton_1_1arch_1_1SemanticsInterface_html_a315b2aa5e318f6e5a54b635b9bb8f024"><div class="ttname"><a href="classtriton_1_1arch_1_1SemanticsInterface.html#a315b2aa5e318f6e5a54b635b9bb8f024">triton::arch::SemanticsInterface::~SemanticsInterface</a></div><div class="ttdeci">virtual TRITON_EXPORT ~SemanticsInterface()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="semanticsInterface_8hpp_source.html#l00037">semanticsInterface.hpp:37</a></div></div>
 <div class="ttc" id="adllexport_8hpp_html"><div class="ttname"><a href="dllexport_8hpp.html">dllexport.hpp</a></div></div>
+<div class="ttc" id="agroup__arch_html_gaf3dfe23a6e443de4ddb1d67fe39c80c6"><div class="ttname"><a href="group__arch.html#gaf3dfe23a6e443de4ddb1d67fe39c80c6">triton::arch::exception_e</a></div><div class="ttdeci">exception_e</div><div class="ttdef"><b>Definition:</b> <a href="archEnums_8hpp_source.html#l00055">archEnums.hpp:55</a></div></div>
 <div class="ttc" id="ainstruction_8hpp_html"><div class="ttname"><a href="instruction_8hpp.html">instruction.hpp</a></div></div>
 <div class="ttc" id="anamespacetriton_html"><div class="ttname"><a href="namespacetriton.html">triton</a></div><div class="ttdoc">The Triton namespace.</div><div class="ttdef"><b>Definition:</b> <a href="api_8cpp_source.html#l00165">api.cpp:165</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
