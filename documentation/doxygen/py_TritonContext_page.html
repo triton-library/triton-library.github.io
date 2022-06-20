@@ -307,8 +307,8 @@ Methods</h2>
  Sets CPU state to Thumb mode (only valid for ARM32).</li>
 <li><b><a class="el" href="py_AstNode_page.html">AstNode</a> simplify(<a class="el" href="py_AstNode_page.html">AstNode</a> node, bool solver=False, bool llvm=False)</b><br  />
  Calls all simplification callbacks recorded and returns a new simplified node. If the <code>solver</code> flag is set to True, Triton will use the current solver instance to simplify the given <code>node</code>. If <code>llvm</code> is true, we use LLVM to simplify node.</li>
-<li><b><a class="el" href="py_BasicBlock_page.html">BasicBlock</a> simplify(<a class="el" href="py_BasicBlock_page.html">BasicBlock</a> block)</b><br  />
- Performs a dead store elimination simplification on a given block.</li>
+<li><b><a class="el" href="py_BasicBlock_page.html">BasicBlock</a> simplify(<a class="el" href="py_BasicBlock_page.html">BasicBlock</a> block, bool padding=False)</b><br  />
+ Performs a dead store elimination simplification on a given block. If <code>padding</code> is true, keep the same block size and padds with NOP instructions.</li>
 <li><b>dict sliceExpressions(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr)</b><br  />
  Slices expressions from a given one (backward slicing) and returns all symbolic expressions as a dictionary of {integer SymExprId : <a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr}.</li>
 <li><b><a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> symbolizeExpression(integer symExprId, integer symVarSize, string symVarAlias)</b><br  />

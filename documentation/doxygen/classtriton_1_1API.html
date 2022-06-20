@@ -163,6 +163,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afe0e6ae0cb817d2d0a3e5d9e308e13d0"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#afe0e6ae0cb817d2d0a3e5d9e308e13d0">getNumberOfRegisters</a> (void) const</td></tr>
 <tr class="memdesc:afe0e6ae0cb817d2d0a3e5d9e308e13d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Returns the number of registers according to the CPU architecture.  <a href="classtriton_1_1API.html#afe0e6ae0cb817d2d0a3e5d9e308e13d0">More...</a><br /></td></tr>
 <tr class="separator:afe0e6ae0cb817d2d0a3e5d9e308e13d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07e0f5723c0bcfd49a63d044b8696823"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT const <a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a07e0f5723c0bcfd49a63d044b8696823">getNopInstruction</a> (void) const</td></tr>
+<tr class="memdesc:a07e0f5723c0bcfd49a63d044b8696823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a NOP instruction according to the architecture.  <a href="classtriton_1_1API.html#a07e0f5723c0bcfd49a63d044b8696823">More...</a><br /></td></tr>
+<tr class="separator:a07e0f5723c0bcfd49a63d044b8696823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3ad999884832c6699386be87f12d5b3"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT const std::unordered_map&lt; <a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a>, const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#ac3ad999884832c6699386be87f12d5b3">getAllRegisters</a> (void) const</td></tr>
 <tr class="memdesc:ac3ad999884832c6699386be87f12d5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Returns all registers.  <a href="classtriton_1_1API.html#ac3ad999884832c6699386be87f12d5b3">More...</a><br /></td></tr>
 <tr class="separator:ac3ad999884832c6699386be87f12d5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -360,9 +363,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0178f0a31b8289d61b996b6e117f81c7"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a0178f0a31b8289d61b996b6e117f81c7">simplify</a> (const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node, bool usingSolver=false, bool usingLLVM=false) const</td></tr>
 <tr class="memdesc:a0178f0a31b8289d61b996b6e117f81c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Processes all recorded AST simplifications, uses solver's simplifications if <code>usingSolver</code> is true or LLVM is <code>usingLLVM</code> is true. Returns the simplified AST.  <a href="classtriton_1_1API.html#a0178f0a31b8289d61b996b6e117f81c7">More...</a><br /></td></tr>
 <tr class="separator:a0178f0a31b8289d61b996b6e117f81c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbf52941a056ac907aca796dd1f37cb3"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#abbf52941a056ac907aca796dd1f37cb3">simplify</a> (const <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block) const</td></tr>
-<tr class="memdesc:abbf52941a056ac907aca796dd1f37cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block.  <a href="classtriton_1_1API.html#abbf52941a056ac907aca796dd1f37cb3">More...</a><br /></td></tr>
-<tr class="separator:abbf52941a056ac907aca796dd1f37cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e4d388e0447c85842fa6c1b323af13"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a47e4d388e0447c85842fa6c1b323af13">simplify</a> (const <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block, bool padding=false) const</td></tr>
+<tr class="memdesc:a47e4d388e0447c85842fa6c1b323af13"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block. If <code>padding</code> is true, keep the same block size and padds with NOP instructions.  <a href="classtriton_1_1API.html#a47e4d388e0447c85842fa6c1b323af13">More...</a><br /></td></tr>
+<tr class="separator:a47e4d388e0447c85842fa6c1b323af13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad367996881e9606a1a3a01498fb37e7b"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#ad367996881e9606a1a3a01498fb37e7b">getSymbolicExpression</a> (<a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> symExprId) const</td></tr>
 <tr class="memdesc:ad367996881e9606a1a3a01498fb37e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Returns the shared symbolic expression corresponding to an id.  <a href="classtriton_1_1API.html#ad367996881e9606a1a3a01498fb37e7b">More...</a><br /></td></tr>
 <tr class="separator:ad367996881e9606a1a3a01498fb37e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -751,7 +754,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>callbacks api</b>] - Adds a callback. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8hpp_source.html#l00304">304</a> of file <a class="el" href="api_8hpp_source.html">api.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8hpp_source.html#l00307">307</a> of file <a class="el" href="api_8hpp_source.html">api.hpp</a>.</p>
 
 </div>
 </div>
@@ -783,7 +786,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Assigns a symbolic expression to a memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00772">772</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00777">777</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -815,7 +818,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Assigns a symbolic expression to a register. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00778">778</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00783">783</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -837,7 +840,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>IR builder api</b>] - Builds the instructions semantics of a block. Returns <code><a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a></code> if succeed. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00570">570</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00575">575</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -859,7 +862,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>IR builder api</b>] - Builds the instruction semantics. Returns <code><a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a></code> if succeed. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00564">564</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00569">569</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -903,7 +906,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>callbacks api</b>] - Clears recorded callbacks. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00610">610</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00615">615</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -925,7 +928,7 @@ template&lt;typename T &gt; </div>
 
 <p>Clears concrete values assigned to the memory cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00445">445</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00450">450</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -957,7 +960,7 @@ template&lt;typename T &gt; </div>
 
 <p>Clears concrete values assigned to the memory cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00451">451</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00456">456</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -979,7 +982,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>modes api</b>] - Clears recorded modes. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00650">650</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00655">655</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +1004,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Clears the current path predicate. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00936">936</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00941">941</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1023,7 +1026,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Concretizes all symbolic memory references. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00966">966</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00971">971</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1045,7 +1048,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Concretizes all symbolic register references. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00972">972</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00977">977</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1067,7 +1070,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Concretizes a specific symbolic memory reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00978">978</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00983">983</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1089,7 +1092,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Concretizes a specific symbolic memory reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00984">984</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00989">989</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1111,7 +1114,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Concretizes a specific symbolic register reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00990">990</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00995">995</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1155,7 +1158,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the new shared symbolic abstract expression and links this expression to the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00748">748</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00753">753</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1199,7 +1202,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the new shared symbolic memory expression and links this expression to the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00754">754</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00759">759</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1243,7 +1246,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the new shared symbolic register expression and links this expression to the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00760">760</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00765">765</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1281,7 +1284,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the new shared symbolic volatile expression and links this expression to the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00766">766</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00771">771</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1313,7 +1316,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>architecture api</b>] - Disassembles a block of instructions. You must define an architecture before. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00463">463</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00468">468</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1335,7 +1338,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>architecture api</b>] - Disassembles the instruction and setup operands. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00457">457</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00462">462</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1357,7 +1360,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>architecture api</b>] - Disassembles a concrete memory area from <code>addr</code> to control flow instruction and returns a <code>BasicBlock</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00475">475</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00480">480</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1389,7 +1392,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>architecture api</b>] - Disassembles a concrete memory area and returns a list of at most <code>count</code> disassembled instructions. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00469">469</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00474">474</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1411,7 +1414,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>solver api</b>] - Evaluates a Triton's AST via the solver and returns a concrete value. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01071">1071</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01076">1076</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1434,7 +1437,7 @@ template&lt;typename T &gt; </div>
 <p>[<b>architecture api</b>] - Returns all registers. </p>
 <dl class="section see"><dt>See also</dt><dd>triton::arch::x86::register_e. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00338">338</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00343">343</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1478,7 +1481,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>IR builder api</b>] - Returns the AST context. Used as AST builder. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00576">576</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00581">581</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1500,7 +1503,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>AST representation api</b>] - Returns the AST representation as triton::ast::representation_e. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00584">584</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00589">589</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1538,7 +1541,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>architecture api</b>] - Returns the concrete value of a memory area. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00362">362</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00367">367</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1570,7 +1573,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>architecture api</b>] - Returns the concrete value of memory cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00356">356</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00361">361</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1602,7 +1605,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>architecture api</b>] - Returns the concrete value of a memory cell. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00350">350</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00355">355</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1634,7 +1637,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>architecture api</b>] - Returns the concrete value of a register. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00368">368</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00373">373</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1656,7 +1659,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Gets the concrete value of a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00858">858</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00863">863</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1766,7 +1769,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the immediate. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00694">694</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00699">699</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1798,7 +1801,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the immediate and defines the immediate as input of the instruction.. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00700">700</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00705">705</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1820,7 +1823,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00706">706</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00711">711</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1852,7 +1855,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the memory and defines the memory cell as input of the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00712">712</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00717">717</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1898,7 +1901,7 @@ template&lt;typename T &gt; </div>
 <p ><b>item1</b>: symbolic variable id<br  />
  <b>item2</b>: model </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01053">1053</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01058">1058</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1950,7 +1953,29 @@ template&lt;typename T &gt; </div>
 <p ><b>item1</b>: symbolic variable id<br  />
  <b>item2</b>: model </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01059">1059</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01064">1064</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a07e0f5723c0bcfd49a63d044b8696823" name="a07e0f5723c0bcfd49a63d044b8696823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07e0f5723c0bcfd49a63d044b8696823">&#9670;&nbsp;</a></span>getNopInstruction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> triton::API::getNopInstruction </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a NOP instruction according to the architecture. </p>
+
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00338">338</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -1994,7 +2019,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the operand. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00682">682</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00687">687</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2026,7 +2051,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the operand. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00688">688</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00693">693</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2093,7 +2118,7 @@ template&lt;typename T &gt; </div>
 <p>[<b>architecture api</b>] - Returns all parent registers. </p>
 <dl class="section see"><dt>See also</dt><dd>triton::arch::x86::register_e. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00344">344</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00349">349</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2125,7 +2150,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the logical conjunction vector of path constraints from a given range. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00888">888</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00893">893</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2147,7 +2172,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the logical conjunction vector of path constraints. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00882">882</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00887">887</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2169,7 +2194,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the logical conjunction vector of path constraint of a given thread. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00894">894</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00899">899</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2191,7 +2216,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the current path predicate as an AST of logical conjunction of each taken branch. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00906">906</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00911">911</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2213,7 +2238,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns path predicates which may reach the targeted address. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00912">912</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00917">917</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2279,7 +2304,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the register. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00718">718</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00723">723</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2311,7 +2336,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the register and defines the register as input of the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00724">724</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00729">729</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2333,7 +2358,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the size of the path constraints </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00900">900</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00905">905</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2355,7 +2380,7 @@ template&lt;typename T &gt; </div>
 
 <p>Returns the kind of solver as <a class="el" href="group__solver.html#ga30462d433d12584ba03f0496b858b6d3">triton::engines::solver::solver_e</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01023">1023</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01028">1028</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2377,7 +2402,7 @@ template&lt;typename T &gt; </div>
 
 <p>Returns the instance of the initialized solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01029">1029</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01034">1034</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2399,7 +2424,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the instance of the symbolic engine. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00658">658</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00663">663</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2421,7 +2446,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the shared symbolic expression corresponding to an id. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00852">852</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00857">857</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2443,7 +2468,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns all symbolic expressions as a map of &lt;SymExprId : SymExpr&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01008">1008</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01013">1013</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2465,7 +2490,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the shared symbolic expression corresponding to the memory address. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00784">784</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00789">789</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2487,7 +2512,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the map (&lt;Addr : SymExpr&gt;) of symbolic memory defined. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00796">796</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00801">801</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2519,7 +2544,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the symbolic values of a memory area. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00820">820</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00825">825</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2541,7 +2566,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the symbolic memory value. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00814">814</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00819">819</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2563,7 +2588,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the symbolic memory value. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00808">808</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00813">813</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2585,7 +2610,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the shared symbolic expression corresponding to the parent register. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00802">802</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00807">807</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2607,7 +2632,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the map of symbolic registers defined. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00790">790</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00795">795</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2629,7 +2654,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the symbolic register value. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00826">826</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00831">831</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2651,7 +2676,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the symbolic variable corresponding to the symbolic variable name. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00876">876</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00881">881</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2673,7 +2698,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the symbolic variable corresponding to the symbolic variable id. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00870">870</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00875">875</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2695,7 +2720,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns all symbolic variables as a map of &lt;SymVarId : SymVar&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01014">1014</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01019">1019</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2717,7 +2742,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Returns the tainted addresses. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01119">1119</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01124">1124</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2739,7 +2764,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Returns the tainted registers. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01125">1125</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01130">1130</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2761,7 +2786,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the list of the tainted symbolic expressions. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01002">1002</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01007">1007</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2783,7 +2808,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Returns the instance of the taint engine. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01113">1113</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01118">1118</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2805,7 +2830,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>proccesing api</b>] - Initializes everything. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00484">484</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00489">489</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2849,7 +2874,7 @@ template&lt;typename T &gt; </div>
 
 <p>Returns true if memory cells have a defined concrete value. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00433">433</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00438">438</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2881,7 +2906,7 @@ template&lt;typename T &gt; </div>
 
 <p>Returns true if memory cells have a defined concrete value. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00439">439</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00444">444</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2948,7 +2973,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns true if memory cell expressions contain symbolic variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00948">948</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00953">953</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -2980,7 +3005,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns true if memory cell expressions contain symbolic variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00954">954</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00959">959</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3002,7 +3027,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Returns true if the memory is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01143">1143</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01148">1148</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3034,7 +3059,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Returns true if the address:size is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01137">1137</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01142">1142</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3056,7 +3081,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>modes api</b>] - Returns true if the mode is enabled. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00645">645</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00650">650</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3123,7 +3148,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns true if the register expression contains a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00960">960</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00965">965</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3145,7 +3170,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Returns true if the register is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01149">1149</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01154">1154</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3234,7 +3259,7 @@ template&lt;typename T &gt; </div>
 
 <p>Returns true if an expression is satisfiable. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01065">1065</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01070">1070</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3256,7 +3281,7 @@ template&lt;typename T &gt; </div>
 
 <p>Returns true if the solver is valid. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01047">1047</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01052">1052</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3278,7 +3303,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns true if the symbolic expression ID exists. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00942">942</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00947">947</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3300,7 +3325,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Abstract taint verification. Returns true if the operand is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01131">1131</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01136">1136</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3354,7 +3379,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts an AST and all its references to Dot format. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01334">1334</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01339">1339</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3386,7 +3411,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts a symbolic expression and all its references to Dot format. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01340">1340</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01345">1345</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3430,7 +3455,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts an AST and all its references to LLVM format. <code>fname</code> represents the name of the LLVM function. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01308">1308</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01313">1313</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3474,7 +3499,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts a symbolic expression and all its references to LLVM format. <code>fname</code> represents the name of the LLVM function. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01317">1317</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01322">1322</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3512,7 +3537,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts a symbolic expression and all its references to Python format. If <code>icomment</code> is true, then print instructions assembly in expression comments. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01322">1322</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01327">1327</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3556,7 +3581,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts a symbolic expression and all its references to SMT format. If <code>assert_</code> is true, then (assert &lt;expr&gt;). If <code>icomment</code> is true, then print instructions assembly in expression comments. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01328">1328</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01333">1333</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3588,7 +3613,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns a new shared symbolic expression. Note that if there are simplification passes recorded, simplification will be applied. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00730">730</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00735">735</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3620,7 +3645,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns a new symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00736">736</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00741">741</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3642,7 +3667,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Pops the last constraints added to the path predicate. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00930">930</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00935">935</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3674,7 +3699,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>callbacks api</b>] - Processes callbacks according to the kind and the C++ polymorphism. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00623">623</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00628">628</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3706,7 +3731,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>callbacks api</b>] - Processes callbacks according to the kind and the C++ polymorphism. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00630">630</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00635">635</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3738,7 +3763,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>callbacks api</b>] - Processes callbacks according to the kind and the C++ polymorphism. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00615">615</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00620">620</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3770,7 +3795,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>proccesing api</b>] - Processes a block of instructions and updates engines according to instructions semantics. Returns <code><a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a></code> if succeed. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00554">554</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00559">559</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3792,7 +3817,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>proccesing api</b>] - Processes an instruction and updates engines according to the instruction semantics. Returns <code><a class="el" href="group__arch.html#ggaf3dfe23a6e443de4ddb1d67fe39c80c6a31121bae52753063817cca64f2674850">triton::arch::NO_FAULT</a></code> if succeed. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00547">547</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00552">552</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3824,7 +3849,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Pushes constraint created from node to the current path predicate. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00918">918</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00923">923</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3846,7 +3871,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Pushes constraint to the current path predicate. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00924">924</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00929">929</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3888,7 +3913,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>callbacks api</b>] - Removes a callback. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8hpp_source.html#l00309">309</a> of file <a class="el" href="api_8hpp_source.html">api.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8hpp_source.html#l00312">312</a> of file <a class="el" href="api_8hpp_source.html">api.hpp</a>.</p>
 
 </div>
 </div>
@@ -3910,7 +3935,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>proccesing api</b>] - Removes everything. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00512">512</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00517">517</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3932,7 +3957,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Removes the symbolic expression corresponding to the id. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00742">742</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00747">747</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3954,7 +3979,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>proccesing api</b>] - Resets everything. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00536">536</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00541">541</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -3999,7 +4024,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>AST representation api</b>] - Sets the AST representation. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00589">589</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00594">594</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4032,7 +4057,7 @@ template&lt;typename T &gt; </div>
 <p>[<b>architecture api</b>] - Sets the concrete value of a memory area. </p>
 <p >Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00396">396</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00401">401</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4071,7 +4096,7 @@ template&lt;typename T &gt; </div>
 <p>[<b>architecture api</b>] - Sets the concrete value of a memory area. </p>
 <p >Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00409">409</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00414">414</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4104,7 +4129,7 @@ template&lt;typename T &gt; </div>
 <p>[<b>architecture api</b>] - Sets the concrete value of memory cells. </p>
 <p >Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00385">385</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00390">390</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4137,7 +4162,7 @@ template&lt;typename T &gt; </div>
 <p>[<b>architecture api</b>] - Sets the concrete value of a memory cell. </p>
 <p >Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00374">374</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00379">379</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4170,7 +4195,7 @@ template&lt;typename T &gt; </div>
 <p>[<b>architecture api</b>] - Sets the concrete value of a register. </p>
 <p >Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00422">422</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00427">427</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4202,7 +4227,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Sets the concrete value of a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00864">864</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00869">869</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4224,7 +4249,7 @@ template&lt;typename T &gt; </div>
 
 <p>Initializes a custom solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01041">1041</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01046">1046</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4256,7 +4281,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>modes api</b>] - Enables or disables a specific mode. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00640">640</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00645">645</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4278,7 +4303,7 @@ template&lt;typename T &gt; </div>
 
 <p>Initializes a predefined solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01035">1035</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01040">1040</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4300,7 +4325,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>solver api</b>] - Defines a solver memory consumption limit (in megabytes). </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01104">1104</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01109">1109</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4322,7 +4347,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>solver api</b>] - Defines a solver timeout (in milliseconds). </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01098">1098</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01103">1103</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4354,7 +4379,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Sets the flag (taint or untaint) to an abstract operand (Register or Memory). </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01155">1155</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01160">1160</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4386,7 +4411,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Sets the flag (taint or untaint) to a memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01161">1161</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01166">1166</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4418,7 +4443,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Sets the flag (taint or untaint) to a register. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01168">1168</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01173">1173</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4444,8 +4469,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="abbf52941a056ac907aca796dd1f37cb3" name="abbf52941a056ac907aca796dd1f37cb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbf52941a056ac907aca796dd1f37cb3">&#9670;&nbsp;</a></span>simplify() <span class="overload">[1/2]</span></h2>
+<a id="a47e4d388e0447c85842fa6c1b323af13" name="a47e4d388e0447c85842fa6c1b323af13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47e4d388e0447c85842fa6c1b323af13">&#9670;&nbsp;</a></span>simplify() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4454,15 +4479,25 @@ template&lt;typename T &gt; </div>
           <td class="memname"><a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> triton::API::simplify </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;&#160;</td>
-          <td class="paramname"><em>block</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>padding</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block. </p>
+<p>[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block. If <code>padding</code> is true, keep the same block size and padds with NOP instructions. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00846">846</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00851">851</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4500,7 +4535,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Processes all recorded AST simplifications, uses solver's simplifications if <code>usingSolver</code> is true or LLVM is <code>usingLLVM</code> is true. Returns the simplified AST. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00832">832</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00837">837</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4522,7 +4557,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts and simplify an AST using LLVM </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01346">1346</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01351">1351</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4544,7 +4579,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>solver api</b>] - Converts a Triton's AST to a solver's AST, perform a simplification and returns a Triton's AST. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01087">1087</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01092">1092</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4566,7 +4601,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Slices all expressions from a given one. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00996">996</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01001">1001</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4604,7 +4639,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Converts a symbolic expression to a symbolic variable. <code>symVarSize</code> must be in bits. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00664">664</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00669">669</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4636,7 +4671,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Converts a symbolic memory expression to a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00670">670</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00675">675</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4668,7 +4703,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Converts a symbolic register expression to a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00676">676</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00681">681</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4712,7 +4747,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>synthesizer api</b>] - Synthesizes a given node. If <code>constant</code> is true, performa a constant synthesis. If <code>opaque</code> is true, perform opaque constant synthesis. If <code>subexpr</code> is true, analyze children AST. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01298">1298</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01303">1303</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4744,7 +4779,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints MemoryImmediate with assignment. Returns always false. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01259">1259</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01264">1264</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4776,7 +4811,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints MemoryMemory with assignment. Returns true if the memDst is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01265">1265</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01270">1270</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4808,7 +4843,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints MemoryRegister with assignment. Returns true if the memDst is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01271">1271</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01276">1276</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4840,7 +4875,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Abstract assignment tainting. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01253">1253</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01258">1258</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4872,7 +4907,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints RegisterImmediate with assignment. Returns always false. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01277">1277</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01282">1282</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4904,7 +4939,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints RegisterMemory with assignment. Returns true if the regDst is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01283">1283</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01288">1288</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4936,7 +4971,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints RegisterRegister with assignment. Returns true if the regDst is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01289">1289</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01294">1294</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4958,7 +4993,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints a memory. Returns TAINTED if the memory has been tainted correctly. Otherwise it returns the last defined state. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01181">1181</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01186">1186</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -4980,7 +5015,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints an address. Returns TAINTED if the address has been tainted correctly. Otherwise it returns the last defined state. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01175">1175</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01180">1180</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -5002,7 +5037,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints a register. Returns TAINTED if the register has been tainted correctly. Otherwise it returns the last defined state. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01187">1187</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01192">1192</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -5034,7 +5069,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints MemoryImmediate with union. Returns true if the memDst is TAINTED. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01217">1217</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01222">1222</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -5066,7 +5101,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints MemoryMemory with union. Returns true if the memDst or memSrc are TAINTED. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01223">1223</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01228">1228</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -5098,7 +5133,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints MemoryRegister with union. Returns true if the memDst or regSrc are TAINTED. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01229">1229</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01234">1234</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -5130,7 +5165,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Abstract union tainting. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01211">1211</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01216">1216</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -5162,7 +5197,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints RegisterImmediate with union. Returns true if the regDst is TAINTED. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01235">1235</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01240">1240</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -5194,7 +5229,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints RegisterMemory with union. Returns true if the regDst or memSrc are TAINTED. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01241">1241</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01246">1246</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -5226,7 +5261,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints RegisterRegister with union. Returns true if the regDst or regSrc are TAINTED. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01247">1247</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01252">1252</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -5248,7 +5283,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Untaints a memory. Returns !TAINTED if the memory has been untainted correctly. Otherwise it returns the last defined state. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01199">1199</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01204">1204</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -5270,7 +5305,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Untaints an address. Returns !TAINTED if the address has been untainted correctly. Otherwise it returns the last defined state. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01193">1193</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01198">1198</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>
@@ -5292,7 +5327,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Untaints a register. Returns !TAINTED if the register has been untainted correctly. Otherwise it returns the last defined state. </p>
 
-<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01205">1205</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l01210">1210</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
 </div>
 </div>

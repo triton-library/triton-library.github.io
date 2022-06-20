@@ -104,9 +104,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeac08e7c07f8b193747d89ac5553792f"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1BasicBlock.html#aeac08e7c07f8b193747d89ac5553792f">~BasicBlock</a> ()</td></tr>
 <tr class="memdesc:aeac08e7c07f8b193747d89ac5553792f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classtriton_1_1arch_1_1BasicBlock.html#aeac08e7c07f8b193747d89ac5553792f">More...</a><br /></td></tr>
 <tr class="separator:aeac08e7c07f8b193747d89ac5553792f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a119d06a8fb2e23c5bc9574fdbda31ab1"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1BasicBlock.html#a119d06a8fb2e23c5bc9574fdbda31ab1">add</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">Instruction</a> &amp;instruction)</td></tr>
-<tr class="memdesc:a119d06a8fb2e23c5bc9574fdbda31ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an instruction to the block.  <a href="classtriton_1_1arch_1_1BasicBlock.html#a119d06a8fb2e23c5bc9574fdbda31ab1">More...</a><br /></td></tr>
-<tr class="separator:a119d06a8fb2e23c5bc9574fdbda31ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60484064b4b31ed2d6c5eb9093baaf5d"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1BasicBlock.html#a60484064b4b31ed2d6c5eb9093baaf5d">add</a> (const <a class="el" href="classtriton_1_1arch_1_1Instruction.html">Instruction</a> &amp;instruction)</td></tr>
+<tr class="memdesc:a60484064b4b31ed2d6c5eb9093baaf5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an instruction to the block.  <a href="classtriton_1_1arch_1_1BasicBlock.html#a60484064b4b31ed2d6c5eb9093baaf5d">More...</a><br /></td></tr>
+<tr class="separator:a60484064b4b31ed2d6c5eb9093baaf5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b032083932e8b8fbcb76951a66ba393"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1BasicBlock.html#a2b032083932e8b8fbcb76951a66ba393">remove</a> (<a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> position)</td></tr>
 <tr class="memdesc:a2b032083932e8b8fbcb76951a66ba393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an instruction from the block at the given position. Returns true if success.  <a href="classtriton_1_1arch_1_1BasicBlock.html#a2b032083932e8b8fbcb76951a66ba393">More...</a><br /></td></tr>
 <tr class="separator:a2b032083932e8b8fbcb76951a66ba393"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,8 +215,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a119d06a8fb2e23c5bc9574fdbda31ab1" name="a119d06a8fb2e23c5bc9574fdbda31ab1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a119d06a8fb2e23c5bc9574fdbda31ab1">&#9670;&nbsp;</a></span>add()</h2>
+<a id="a60484064b4b31ed2d6c5eb9093baaf5d" name="a60484064b4b31ed2d6c5eb9093baaf5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60484064b4b31ed2d6c5eb9093baaf5d">&#9670;&nbsp;</a></span>add()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,7 +224,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void triton::arch::BasicBlock::add </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classtriton_1_1arch_1_1Instruction.html">Instruction</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classtriton_1_1arch_1_1Instruction.html">Instruction</a> &amp;&#160;</td>
           <td class="paramname"><em>instruction</em></td><td>)</td>
           <td></td>
         </tr>
@@ -255,7 +255,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the first instruction's address. </p>
 
-<p class="definition">Definition at line <a class="el" href="basicBlock_8cpp_source.html#l00067">67</a> of file <a class="el" href="basicBlock_8cpp_source.html">basicBlock.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basicBlock_8cpp_source.html#l00068">68</a> of file <a class="el" href="basicBlock_8cpp_source.html">basicBlock.cpp</a>.</p>
 
 </div>
 </div>
@@ -277,7 +277,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets all instructions of the block. </p>
 
-<p class="definition">Definition at line <a class="el" href="basicBlock_8cpp_source.html#l00057">57</a> of file <a class="el" href="basicBlock_8cpp_source.html">basicBlock.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basicBlock_8cpp_source.html#l00058">58</a> of file <a class="el" href="basicBlock_8cpp_source.html">basicBlock.cpp</a>.</p>
 
 </div>
 </div>
@@ -299,7 +299,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the last instruction's address. </p>
 
-<p class="definition">Definition at line <a class="el" href="basicBlock_8cpp_source.html#l00074">74</a> of file <a class="el" href="basicBlock_8cpp_source.html">basicBlock.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basicBlock_8cpp_source.html#l00075">75</a> of file <a class="el" href="basicBlock_8cpp_source.html">basicBlock.cpp</a>.</p>
 
 </div>
 </div>
@@ -321,7 +321,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the number of instructions in the block. </p>
 
-<p class="definition">Definition at line <a class="el" href="basicBlock_8cpp_source.html#l00062">62</a> of file <a class="el" href="basicBlock_8cpp_source.html">basicBlock.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basicBlock_8cpp_source.html#l00063">63</a> of file <a class="el" href="basicBlock_8cpp_source.html">basicBlock.cpp</a>.</p>
 
 </div>
 </div>
@@ -365,7 +365,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Remove an instruction from the block at the given position. Returns true if success. </p>
 
-<p class="definition">Definition at line <a class="el" href="basicBlock_8cpp_source.html#l00049">49</a> of file <a class="el" href="basicBlock_8cpp_source.html">basicBlock.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basicBlock_8cpp_source.html#l00050">50</a> of file <a class="el" href="basicBlock_8cpp_source.html">basicBlock.cpp</a>.</p>
 
 </div>
 </div>

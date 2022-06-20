@@ -1,12 +1,12 @@
 <map id="/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/x86Specifications.hpp" name="/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/x86Specifications.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="581,5,846,61"/>
-<area shape="rect" id="node2" href="$x86Semantics_8cpp.html" title=" " alt="" coords="5,117,211,173"/>
-<area shape="rect" id="node3" href="$x86Specifications_8cpp.html" title=" " alt="" coords="235,117,461,173"/>
-<area shape="rect" id="node4" href="$initOpcodesNamespace_8cpp.html" title=" " alt="" coords="485,109,701,180"/>
-<area shape="rect" id="node5" href="$initPrefixesNamespace_8cpp.html" title=" " alt="" coords="725,109,941,180"/>
-<area shape="rect" id="node6" href="$x8664Cpu_8hpp.html" title=" " alt="" coords="965,117,1181,173"/>
-<area shape="rect" id="node9" href="$x86Cpu_8hpp.html" title=" " alt="" coords="1205,117,1405,173"/>
-<area shape="rect" id="node7" href="$architecture_8cpp.html" title=" " alt="" coords="1101,228,1278,284"/>
-<area shape="rect" id="node8" href="$x8664Cpu_8cpp.html" title=" " alt="" coords="897,228,1076,284"/>
-<area shape="rect" id="node10" href="$x86Cpu_8cpp.html" title=" " alt="" coords="1302,228,1479,284"/>
+<area shape="rect" id="node1" title=" " alt="" coords="701,5,966,61"/>
+<area shape="rect" id="node2" href="$architecture_8cpp.html" title=" " alt="" coords="1098,228,1275,284"/>
+<area shape="rect" id="node3" href="$x86Semantics_8cpp.html" title=" " alt="" coords="245,117,451,173"/>
+<area shape="rect" id="node4" href="$x86Specifications_8cpp.html" title=" " alt="" coords="475,117,701,173"/>
+<area shape="rect" id="node5" href="$initOpcodesNamespace_8cpp.html" title=" " alt="" coords="725,109,941,180"/>
+<area shape="rect" id="node6" href="$initPrefixesNamespace_8cpp.html" title=" " alt="" coords="965,109,1181,180"/>
+<area shape="rect" id="node7" href="$x8664Cpu_8hpp.html" title=" " alt="" coords="5,117,221,173"/>
+<area shape="rect" id="node9" href="$x86Cpu_8hpp.html" title=" " alt="" coords="1256,117,1456,173"/>
+<area shape="rect" id="node8" href="$x8664Cpu_8cpp.html" title=" " alt="" coords="24,228,203,284"/>
+<area shape="rect" id="node10" href="$x86Cpu_8cpp.html" title=" " alt="" coords="1299,228,1477,284"/>
 </map>
