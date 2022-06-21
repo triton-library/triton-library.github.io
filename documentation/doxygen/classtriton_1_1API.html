@@ -364,7 +364,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0178f0a31b8289d61b996b6e117f81c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Processes all recorded AST simplifications, uses solver's simplifications if <code>usingSolver</code> is true or LLVM is <code>usingLLVM</code> is true. Returns the simplified AST.  <a href="classtriton_1_1API.html#a0178f0a31b8289d61b996b6e117f81c7">More...</a><br /></td></tr>
 <tr class="separator:a0178f0a31b8289d61b996b6e117f81c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47e4d388e0447c85842fa6c1b323af13"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#a47e4d388e0447c85842fa6c1b323af13">simplify</a> (const <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block, bool padding=false) const</td></tr>
-<tr class="memdesc:a47e4d388e0447c85842fa6c1b323af13"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block. If <code>padding</code> is true, keep the same block size and padds with NOP instructions.  <a href="classtriton_1_1API.html#a47e4d388e0447c85842fa6c1b323af13">More...</a><br /></td></tr>
+<tr class="memdesc:a47e4d388e0447c85842fa6c1b323af13"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block. If <code>padding</code> is true, keep addresses aligned and padds with NOP instructions.  <a href="classtriton_1_1API.html#a47e4d388e0447c85842fa6c1b323af13">More...</a><br /></td></tr>
 <tr class="separator:a47e4d388e0447c85842fa6c1b323af13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad367996881e9606a1a3a01498fb37e7b"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1API.html#ad367996881e9606a1a3a01498fb37e7b">getSymbolicExpression</a> (<a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> symExprId) const</td></tr>
 <tr class="memdesc:ad367996881e9606a1a3a01498fb37e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Returns the shared symbolic expression corresponding to an id.  <a href="classtriton_1_1API.html#ad367996881e9606a1a3a01498fb37e7b">More...</a><br /></td></tr>
@@ -4495,7 +4495,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block. If <code>padding</code> is true, keep the same block size and padds with NOP instructions. </p>
+<p>[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block. If <code>padding</code> is true, keep addresses aligned and padds with NOP instructions. </p>
 
 <p class="definition">Definition at line <a class="el" href="api_8cpp_source.html#l00851">851</a> of file <a class="el" href="api_8cpp_source.html">api.cpp</a>.</p>
 
