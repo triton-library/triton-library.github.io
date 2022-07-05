@@ -7,6 +7,6 @@ var searchData=
   ['indexreg_4',['indexReg',['../classtriton_1_1arch_1_1MemoryAccess.html#ab485e621405703cf7356762d429ae018',1,'triton::arch::MemoryAccess']]],
   ['instruction_5fcallbacks_5',['Instruction_callbacks',['../namespacetriton_1_1bindings_1_1python.html#a565898f57f389bfe89b640a5051c7d7a',1,'triton::bindings::python']]],
   ['instruction_5ftype_6',['Instruction_Type',['../group__python.html#ga6a43fe11395f57004b5da5b8514226c2',1,'triton::bindings::python']]],
-  ['irbuilder_7',['irBuilder',['../classtriton_1_1API.html#aeb856bb5db11f750f069035829f4402b',1,'triton::API']]],
+  ['irbuilder_7',['irBuilder',['../classtriton_1_1Context.html#a9189b37dadd20e446ba66fc97baaf5b3',1,'triton::Context']]],
   ['istainted_8',['isTainted',['../classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html#a76f8ec5ab95de4187f1dd17060517301',1,'triton::engines::symbolic::SymbolicExpression']]]
 ];

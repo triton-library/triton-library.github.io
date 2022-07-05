@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1532</span>
+   &#160;<span id="projectnumber">version 1.0 build 1536</span>
    </div>
   </td>
  </tr>
@@ -88,8 +88,8 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;list&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;<a class="code" href="api_8hpp.html">triton/api.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="archEnums_8hpp.html">triton/archEnums.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;<a class="code" href="archEnums_8hpp.html">triton/archEnums.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="context_8hpp.html">triton/context.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;<a class="code" href="exceptions_8hpp.html">triton/exceptions.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="symbolicExpression_8hpp.html">triton/symbolicExpression.hpp</a>&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="symbolicSimplification_8hpp.html">triton/symbolicSimplification.hpp</a>&gt;</span></div>
@@ -168,22 +168,22 @@ $(function() {
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">if</span> (block.<a class="code hl_function" href="classtriton_1_1arch_1_1BasicBlock.html#a0a486ad43d4ef396c85a1161bc2bc2fb">getSize</a>() == 0)</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>          <span class="keywordflow">return</span> {};</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="comment">/* Define a temporary API */</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <a class="code hl_class" href="classtriton_1_1API.html">triton::API</a> tmpapi(in.<a class="code hl_function" href="classtriton_1_1arch_1_1BasicBlock.html#adc14f5ab7e7aea9dea3f7b7529122e4a">getInstructions</a>()[0].getArchitecture());</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="comment">/* Define a temporary Context */</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <a class="code hl_class" href="classtriton_1_1Context.html">triton::Context</a> tmpctx(in.<a class="code hl_function" href="classtriton_1_1arch_1_1BasicBlock.html#adc14f5ab7e7aea9dea3f7b7529122e4a">getInstructions</a>()[0].getArchitecture());</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="comment">/* Execute the block */</span></div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        tmpapi.processing(in);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        tmpctx.processing(in);</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="comment">/* Get all symbolic registers that were written */</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; reg : tmpapi.getSymbolicRegisters()) {</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>          <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; item : tmpapi.sliceExpressions(reg.second)) {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; reg : tmpctx.getSymbolicRegisters()) {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>          <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; item : tmpctx.sliceExpressions(reg.second)) {</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            lifetime[item.first] = item.second;</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>          }</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        }</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        <span class="comment">/* Get all symbolic memory cells that were written */</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; mem : tmpapi.getSymbolicMemory()) {</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>          <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; item : tmpapi.sliceExpressions(mem.second)) {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; mem : tmpctx.getSymbolicMemory()) {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>          <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; item : tmpctx.sliceExpressions(mem.second)) {</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            lifetime[item.first] = item.second;</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>          }</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        }</div>
@@ -204,7 +204,7 @@ $(function() {
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        <span class="comment">/* Create a new block with sorted instructions */</span></div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        <span class="keyword">auto</span> lastaddr = in.<a class="code hl_function" href="classtriton_1_1arch_1_1BasicBlock.html#a3f176b9e4f61c6eda4c7580cd60e23e2">getFirstAddress</a>();</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keyword">auto</span> <a class="code hl_variable" href="group__aarch64.html#ga459187562843790200d00d7796440ca5">nop</a> = tmpapi.getNopInstruction();</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keyword">auto</span> <a class="code hl_variable" href="group__aarch64.html#ga459187562843790200d00d7796440ca5">nop</a> = tmpctx.getNopInstruction();</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; item : instructions) {</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>          <span class="keywordflow">if</span> (padding) {</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            <span class="keywordflow">while</span> (item.second.getAddress() &gt; lastaddr) {</div>
@@ -228,9 +228,8 @@ $(function() {
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    }; <span class="comment">/* symbolic namespace */</span></div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  }; <span class="comment">/* engines namespace */</span></div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>}; <span class="comment">/*triton namespace */</span></div>
-<div class="ttc" id="aapi_8hpp_html"><div class="ttname"><a href="api_8hpp.html">api.hpp</a></div></div>
 <div class="ttc" id="aarchEnums_8hpp_html"><div class="ttname"><a href="archEnums_8hpp.html">archEnums.hpp</a></div></div>
-<div class="ttc" id="aclasstriton_1_1API_html"><div class="ttname"><a href="classtriton_1_1API.html">triton::API</a></div><div class="ttdoc">This is used as C++ API.</div><div class="ttdef"><b>Definition:</b> <a href="api_8hpp_source.html#l00045">api.hpp:45</a></div></div>
+<div class="ttc" id="aclasstriton_1_1Context_html"><div class="ttname"><a href="classtriton_1_1Context.html">triton::Context</a></div><div class="ttdoc">This is the main Triton Context class.</div><div class="ttdef"><b>Definition:</b> <a href="context_8hpp_source.html#l00045">context.hpp:45</a></div></div>
 <div class="ttc" id="aclasstriton_1_1arch_1_1BasicBlock_html"><div class="ttname"><a href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a></div><div class="ttdoc">This class is used to represent a basic block.</div><div class="ttdef"><b>Definition:</b> <a href="basicBlock_8hpp_source.html#l00038">basicBlock.hpp:38</a></div></div>
 <div class="ttc" id="aclasstriton_1_1arch_1_1BasicBlock_html_a0a486ad43d4ef396c85a1161bc2bc2fb"><div class="ttname"><a href="classtriton_1_1arch_1_1BasicBlock.html#a0a486ad43d4ef396c85a1161bc2bc2fb">triton::arch::BasicBlock::getSize</a></div><div class="ttdeci">TRITON_EXPORT triton::usize getSize(void) const</div><div class="ttdoc">Returns the number of instructions in the block.</div><div class="ttdef"><b>Definition:</b> <a href="basicBlock_8cpp_source.html#l00063">basicBlock.cpp:63</a></div></div>
 <div class="ttc" id="aclasstriton_1_1arch_1_1BasicBlock_html_a3f176b9e4f61c6eda4c7580cd60e23e2"><div class="ttname"><a href="classtriton_1_1arch_1_1BasicBlock.html#a3f176b9e4f61c6eda4c7580cd60e23e2">triton::arch::BasicBlock::getFirstAddress</a></div><div class="ttdeci">TRITON_EXPORT triton::uint64 getFirstAddress(void) const</div><div class="ttdoc">Returns the first instruction's address.</div><div class="ttdef"><b>Definition:</b> <a href="basicBlock_8cpp_source.html#l00068">basicBlock.cpp:68</a></div></div>
@@ -245,13 +244,14 @@ $(function() {
 <div class="ttc" id="aclasstriton_1_1engines_1_1symbolic_1_1SymbolicSimplification_html_af3d187e6d1fbf4367c7afb5439450ab2"><div class="ttname"><a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicSimplification.html#af3d187e6d1fbf4367c7afb5439450ab2">triton::engines::symbolic::SymbolicSimplification::simplify</a></div><div class="ttdeci">TRITON_EXPORT triton::ast::SharedAbstractNode simplify(const triton::ast::SharedAbstractNode &amp;node) const</div><div class="ttdoc">Processes all recorded simplifications. Returns the simplified node.</div><div class="ttdef"><b>Definition:</b> <a href="symbolicSimplification_8cpp_source.html#l00180">symbolicSimplification.cpp:180</a></div></div>
 <div class="ttc" id="aclasstriton_1_1engines_1_1symbolic_1_1SymbolicSimplification_html_af5b84d3f5e8cbb18a11e067fc2aee433"><div class="ttname"><a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicSimplification.html#af5b84d3f5e8cbb18a11e067fc2aee433">triton::engines::symbolic::SymbolicSimplification::operator=</a></div><div class="ttdeci">TRITON_EXPORT SymbolicSimplification &amp; operator=(const SymbolicSimplification &amp;other)</div><div class="ttdoc">Copies a SymbolicSimplification.</div><div class="ttdef"><b>Definition:</b> <a href="symbolicSimplification_8cpp_source.html#l00284">symbolicSimplification.cpp:284</a></div></div>
 <div class="ttc" id="aclasstriton_1_1exceptions_1_1SymbolicSimplification_html"><div class="ttname"><a href="classtriton_1_1exceptions_1_1SymbolicSimplification.html">triton::exceptions::SymbolicSimplification</a></div><div class="ttdoc">The exception class used by symbolic simplifications.</div><div class="ttdef"><b>Definition:</b> <a href="exceptions_8hpp_source.html#l00101">exceptions.hpp:101</a></div></div>
+<div class="ttc" id="acontext_8hpp_html"><div class="ttname"><a href="context_8hpp.html">context.hpp</a></div></div>
 <div class="ttc" id="aexceptions_8hpp_html"><div class="ttname"><a href="exceptions_8hpp.html">exceptions.hpp</a></div></div>
 <div class="ttc" id="agroup__aarch64_html_ga459187562843790200d00d7796440ca5"><div class="ttname"><a href="group__aarch64.html#ga459187562843790200d00d7796440ca5">triton::arch::arm::aarch64::nop</a></div><div class="ttdeci">const triton::arch::Instruction nop</div><div class="ttdoc">AArch64 NOP instruction.</div><div class="ttdef"><b>Definition:</b> <a href="aarch64Specifications_8hpp_source.html#l00081">aarch64Specifications.hpp:81</a></div></div>
 <div class="ttc" id="agroup__ast_html_ga2d86ebcc0438b7c3b0e5388efa617a89"><div class="ttname"><a href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a></div><div class="ttdeci">std::shared_ptr&lt; triton::ast::AbstractNode &gt; SharedAbstractNode</div><div class="ttdoc">Shared Abstract Node.</div><div class="ttdef"><b>Definition:</b> <a href="ast_8hpp_source.html#l00059">ast.hpp:59</a></div></div>
 <div class="ttc" id="agroup__callbacks_html_ggaed74509a7a62f214740cdc66d247b10fa64ce19808fc172d0b8f78e230a25b4f0"><div class="ttname"><a href="group__callbacks.html#ggaed74509a7a62f214740cdc66d247b10fa64ce19808fc172d0b8f78e230a25b4f0">triton::callbacks::SYMBOLIC_SIMPLIFICATION</a></div><div class="ttdeci">@ SYMBOLIC_SIMPLIFICATION</div><div class="ttdef"><b>Definition:</b> <a href="callbacksEnums_8hpp_source.html#l00034">callbacksEnums.hpp:34</a></div></div>
 <div class="ttc" id="agroup__triton_html_gab921adae1cbbf8593719c76088193d55"><div class="ttname"><a href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a></div><div class="ttdeci">std::uint64_t uint64</div><div class="ttdoc">unisgned 64-bits</div><div class="ttdef"><b>Definition:</b> <a href="tritonTypes_8hpp_source.html#l00042">tritonTypes.hpp:42</a></div></div>
 <div class="ttc" id="agroup__triton_html_gaf268b500e0439d03342a0e6b369bca7e"><div class="ttname"><a href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a></div><div class="ttdeci">std::uint32_t uint32</div><div class="ttdoc">unisgned 32-bits</div><div class="ttdef"><b>Definition:</b> <a href="tritonTypes_8hpp_source.html#l00039">tritonTypes.hpp:39</a></div></div>
-<div class="ttc" id="anamespacetriton_html"><div class="ttname"><a href="namespacetriton.html">triton</a></div><div class="ttdoc">The Triton namespace.</div><div class="ttdef"><b>Definition:</b> <a href="api_8cpp_source.html#l00165">api.cpp:165</a></div></div>
+<div class="ttc" id="anamespacetriton_html"><div class="ttname"><a href="namespacetriton.html">triton</a></div><div class="ttdoc">The Triton namespace.</div><div class="ttdef"><b>Definition:</b> <a href="architecture_8cpp_source.html#l00022">architecture.cpp:22</a></div></div>
 <div class="ttc" id="asymbolicExpression_8hpp_html"><div class="ttname"><a href="symbolicExpression_8hpp.html">symbolicExpression.hpp</a></div></div>
 <div class="ttc" id="asymbolicSimplification_8hpp_html"><div class="ttname"><a href="symbolicSimplification_8hpp.html">symbolicSimplification.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

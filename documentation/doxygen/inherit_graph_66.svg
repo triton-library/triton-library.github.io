@@ -13,8 +13,8 @@
 <g id="node1" class="node">
 <title>Node92</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="0,-278 0,-297 86,-297 86,-278 0,-278"/>
-<text text-anchor="middle" x="43" y="-285" font-family="Helvetica,sans-Serif" font-size="10.00">std::exception</text>
+<polygon fill="white" stroke="#bfbfbf" points="0,-229 0,-248 86,-248 86,-229 0,-229"/>
+<text text-anchor="middle" x="43" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00">std::exception</text>
 </a>
 </g>
 </g>
@@ -22,364 +22,365 @@
 <g id="node2" class="node">
 <title>Node0</title>
 <g id="a_node2"><a xlink:href="classtriton_1_1exceptions_1_1Exception.html" target="_top" xlink:title="The root class of all exceptions.">
-<polygon fill="white" stroke="black" points="122,-272.5 122,-302.5 224,-302.5 224,-272.5 122,-272.5"/>
-<text text-anchor="start" x="130" y="-290.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
-<text text-anchor="middle" x="173" y="-279.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Exception</text>
+<polygon fill="white" stroke="black" points="122,-223.5 122,-253.5 224,-253.5 224,-223.5 122,-223.5"/>
+<text text-anchor="start" x="130" y="-241.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
+<text text-anchor="middle" x="173" y="-230.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Exception</text>
 </a>
 </g>
 </g>
 <!-- Node92&#45;&gt;Node0 -->
 <g id="edge1" class="edge">
 <title>Node92&#45;&gt;Node0</title>
-<path fill="none" stroke="midnightblue" d="M96.34,-287.5C104.74,-287.5 113.42,-287.5 121.77,-287.5"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="96.27,-284 86.27,-287.5 96.27,-291 96.27,-284"/>
+<path fill="none" stroke="midnightblue" d="M96.34,-238.5C104.74,-238.5 113.42,-238.5 121.77,-238.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="96.27,-235 86.27,-238.5 96.27,-242 96.27,-235"/>
 </g>
 <!-- Node1 -->
 <g id="node3" class="node">
 <title>Node1</title>
-<g id="a_node3"><a xlink:href="classtriton_1_1exceptions_1_1API.html" target="_top" xlink:title="The exception class used by the Triton&#39;s API.">
-<polygon fill="white" stroke="black" points="260,-614 260,-633 384,-633 384,-614 260,-614"/>
-<text text-anchor="middle" x="322" y="-621" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions::API</text>
+<g id="a_node3"><a xlink:href="classtriton_1_1exceptions_1_1Architecture.html" target="_top" xlink:title="The exception class used by architectures.">
+<polygon fill="white" stroke="black" points="271,-588.5 271,-618.5 373,-618.5 373,-588.5 271,-588.5"/>
+<text text-anchor="start" x="279" y="-606.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
+<text text-anchor="middle" x="322" y="-595.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Architecture</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node1 -->
 <g id="edge2" class="edge">
 <title>Node0&#45;&gt;Node1</title>
-<path fill="none" stroke="midnightblue" d="M173.2,-312.85C172.74,-372.24 180.1,-521.58 260,-604.5 263.77,-608.41 268.33,-611.53 273.25,-614"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="176.7,-312.9 173.36,-302.85 169.7,-312.79 176.7,-312.9"/>
+<path fill="none" stroke="midnightblue" d="M183.89,-263.07C212.04,-332.96 292.01,-531.53 314.84,-588.22"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="187.11,-261.69 180.13,-253.72 180.62,-264.3 187.11,-261.69"/>
 </g>
-<!-- Node2 -->
-<g id="node4" class="node">
-<title>Node2</title>
-<g id="a_node4"><a xlink:href="classtriton_1_1exceptions_1_1Architecture.html" target="_top" xlink:title="The exception class used by architectures.">
-<polygon fill="white" stroke="black" points="271,-564.5 271,-594.5 373,-594.5 373,-564.5 271,-564.5"/>
-<text text-anchor="start" x="279" y="-582.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
-<text text-anchor="middle" x="322" y="-571.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Architecture</text>
-</a>
-</g>
-</g>
-<!-- Node0&#45;&gt;Node2 -->
-<g id="edge3" class="edge">
-<title>Node0&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M186.34,-312.02C215.79,-370.51 289.47,-516.87 313.38,-564.36"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="189.32,-310.15 181.7,-302.79 183.07,-313.29 189.32,-310.15"/>
-</g>
-<!-- Node16 -->
-<g id="node18" class="node">
-<title>Node16</title>
-<g id="a_node18"><a xlink:href="classtriton_1_1exceptions_1_1Ast.html" target="_top" xlink:title="The exception class used by all AST nodes.">
+<!-- Node15 -->
+<g id="node17" class="node">
+<title>Node15</title>
+<g id="a_node17"><a xlink:href="classtriton_1_1exceptions_1_1Ast.html" target="_top" xlink:title="The exception class used by all AST nodes.">
 <polygon fill="white" stroke="black" points="260,-322 260,-341 384,-341 384,-322 260,-322"/>
 <text text-anchor="middle" x="322" y="-329" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions::Ast</text>
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node16 -->
-<g id="edge17" class="edge">
-<title>Node0&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M233.9,-305.43C252.77,-311.08 272.87,-317.09 289,-321.92"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="234.76,-302.03 224.18,-302.52 232.75,-308.74 234.76,-302.03"/>
+<!-- Node0&#45;&gt;Node15 -->
+<g id="edge16" class="edge">
+<title>Node0&#45;&gt;Node15</title>
+<path fill="none" stroke="midnightblue" d="M195.2,-261.16C211.53,-277.46 235.43,-298.87 260,-312.5 266.79,-316.26 274.43,-319.39 281.94,-321.95"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="197.31,-258.32 187.81,-253.63 192.31,-263.22 197.31,-258.32"/>
 </g>
-<!-- Node19 -->
-<g id="node21" class="node">
-<title>Node19</title>
-<g id="a_node21"><a xlink:href="classtriton_1_1exceptions_1_1Bindings.html" target="_top" xlink:title="The exception class used by bindings.">
+<!-- Node18 -->
+<g id="node20" class="node">
+<title>Node18</title>
+<g id="a_node20"><a xlink:href="classtriton_1_1exceptions_1_1Bindings.html" target="_top" xlink:title="The exception class used by bindings.">
 <polygon fill="white" stroke="black" points="271,-272.5 271,-302.5 373,-302.5 373,-272.5 271,-272.5"/>
 <text text-anchor="start" x="279" y="-290.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="322" y="-279.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Bindings</text>
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node19 -->
-<g id="edge20" class="edge">
-<title>Node0&#45;&gt;Node19</title>
-<path fill="none" stroke="midnightblue" d="M234.18,-287.5C246.26,-287.5 258.84,-287.5 270.55,-287.5"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="234.18,-284 224.18,-287.5 234.18,-291 234.18,-284"/>
+<!-- Node0&#45;&gt;Node18 -->
+<g id="edge19" class="edge">
+<title>Node0&#45;&gt;Node18</title>
+<path fill="none" stroke="midnightblue" d="M229.22,-256.91C244.6,-262.03 261.12,-267.54 275.85,-272.45"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="229.9,-253.44 219.3,-253.6 227.68,-260.08 229.9,-253.44"/>
 </g>
-<!-- Node20 -->
-<g id="node22" class="node">
-<title>Node20</title>
-<g id="a_node22"><a xlink:href="classtriton_1_1exceptions_1_1Callbacks.html" target="_top" xlink:title="The exception class used by callbacks.">
+<!-- Node19 -->
+<g id="node21" class="node">
+<title>Node19</title>
+<g id="a_node21"><a xlink:href="classtriton_1_1exceptions_1_1Callbacks.html" target="_top" xlink:title="The exception class used by callbacks.">
 <polygon fill="white" stroke="black" points="271,-223.5 271,-253.5 373,-253.5 373,-223.5 271,-223.5"/>
 <text text-anchor="start" x="279" y="-241.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="322" y="-230.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Callbacks</text>
 </a>
 </g>
 </g>
+<!-- Node0&#45;&gt;Node19 -->
+<g id="edge20" class="edge">
+<title>Node0&#45;&gt;Node19</title>
+<path fill="none" stroke="midnightblue" d="M234.18,-238.5C246.26,-238.5 258.84,-238.5 270.55,-238.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="234.18,-235 224.18,-238.5 234.18,-242 234.18,-235"/>
+</g>
+<!-- Node20 -->
+<g id="node22" class="node">
+<title>Node20</title>
+<g id="a_node22"><a xlink:href="classtriton_1_1exceptions_1_1Context.html" target="_top" xlink:title="The exception class used by the Triton&#39;s Context.">
+<polygon fill="white" stroke="black" points="271,-174.5 271,-204.5 373,-204.5 373,-174.5 271,-174.5"/>
+<text text-anchor="start" x="279" y="-192.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
+<text text-anchor="middle" x="322" y="-181.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Context</text>
+</a>
+</g>
+</g>
 <!-- Node0&#45;&gt;Node20 -->
 <g id="edge21" class="edge">
 <title>Node0&#45;&gt;Node20</title>
-<path fill="none" stroke="midnightblue" d="M229.22,-269.09C244.6,-263.97 261.12,-258.46 275.85,-253.55"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="227.68,-265.92 219.3,-272.4 229.9,-272.56 227.68,-265.92"/>
+<path fill="none" stroke="midnightblue" d="M229.22,-220.09C244.6,-214.97 261.12,-209.46 275.85,-204.55"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="227.68,-216.92 219.3,-223.4 229.9,-223.56 227.68,-216.92"/>
 </g>
 <!-- Node21 -->
 <g id="node23" class="node">
 <title>Node21</title>
 <g id="a_node23"><a xlink:href="classtriton_1_1exceptions_1_1Engines.html" target="_top" xlink:title="The exception class used by all engines.">
-<polygon fill="white" stroke="black" points="271,-172.5 271,-202.5 373,-202.5 373,-172.5 271,-172.5"/>
-<text text-anchor="start" x="279" y="-190.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
-<text text-anchor="middle" x="322" y="-179.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Engines</text>
+<polygon fill="white" stroke="black" points="271,-125.5 271,-155.5 373,-155.5 373,-125.5 271,-125.5"/>
+<text text-anchor="start" x="279" y="-143.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
+<text text-anchor="middle" x="322" y="-132.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Engines</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node21 -->
 <g id="edge22" class="edge">
 <title>Node0&#45;&gt;Node21</title>
-<path fill="none" stroke="midnightblue" d="M196.64,-265.12C213.2,-249.56 236.76,-229.08 260,-214.5 266.97,-210.13 274.76,-206.11 282.39,-202.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="193.91,-262.88 189.1,-272.31 198.75,-267.94 193.91,-262.88"/>
+<path fill="none" stroke="midnightblue" d="M196.21,-216.21C212.73,-200.52 236.42,-179.84 260,-165.5 265.97,-161.87 272.55,-158.55 279.12,-155.6"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="193.46,-213.99 188.71,-223.46 198.33,-219.03 193.46,-213.99"/>
 </g>
 <!-- Node33 -->
 <g id="node35" class="node">
 <title>Node33</title>
 <g id="a_node35"><a xlink:href="classtriton_1_1exceptions_1_1PyCallbacks.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="271,-123.5 271,-153.5 373,-153.5 373,-123.5 271,-123.5"/>
-<text text-anchor="start" x="279" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
-<text text-anchor="middle" x="322" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">::PyCallbacks</text>
+<polygon fill="white" stroke="black" points="271,-76.5 271,-106.5 373,-106.5 373,-76.5 271,-76.5"/>
+<text text-anchor="start" x="279" y="-94.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
+<text text-anchor="middle" x="322" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">::PyCallbacks</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node33 -->
 <g id="edge34" class="edge">
 <title>Node0&#45;&gt;Node33</title>
-<path fill="none" stroke="midnightblue" d="M185.48,-263.11C199.55,-235.55 225.8,-190.97 260,-163.5 264.73,-159.7 270.11,-156.4 275.68,-153.56"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="182.16,-261.92 180.85,-272.43 188.43,-265.03 182.16,-261.92"/>
+<path fill="none" stroke="midnightblue" d="M185.8,-214.07C200.01,-186.93 226.25,-143.4 260,-116.5 264.74,-112.72 270.14,-109.43 275.71,-106.6"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="182.54,-212.77 181.12,-223.27 188.77,-215.95 182.54,-212.77"/>
 </g>
-<!-- Node3 -->
-<g id="node5" class="node">
-<title>Node3</title>
-<g id="a_node5"><a xlink:href="classtriton_1_1exceptions_1_1AArch64OperandProperties.html" target="_top" xlink:title="The exception class used by shift mode.">
+<!-- Node2 -->
+<g id="node4" class="node">
+<title>Node2</title>
+<g id="a_node4"><a xlink:href="classtriton_1_1exceptions_1_1AArch64OperandProperties.html" target="_top" xlink:title="The exception class used by shift mode.">
 <polygon fill="white" stroke="black" points="420,-848.5 420,-878.5 574,-878.5 574,-848.5 420,-848.5"/>
 <text text-anchor="start" x="428" y="-866.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="497" y="-855.5" font-family="Helvetica,sans-Serif" font-size="10.00">::AArch64OperandProperties</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node3 -->
-<g id="edge4" class="edge">
-<title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M380.95,-601.05C382.03,-602.14 383.05,-603.29 384,-604.5 449.36,-687.52 351.25,-759.26 420,-839.5 422.97,-842.97 426.44,-845.94 430.23,-848.49"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="383.04,-598.23 373.09,-594.59 378.6,-603.64 383.04,-598.23"/>
+<!-- Node1&#45;&gt;Node2 -->
+<g id="edge3" class="edge">
+<title>Node1&#45;&gt;Node2</title>
+<path fill="none" stroke="midnightblue" d="M326.3,-628.85C333.9,-676.92 357.07,-781.65 420,-839.5 423.77,-842.96 428.04,-845.93 432.58,-848.47"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="329.72,-628.08 324.8,-618.7 322.8,-629.11 329.72,-628.08"/>
 </g>
-<!-- Node4 -->
-<g id="node6" class="node">
-<title>Node4</title>
-<g id="a_node6"><a xlink:href="classtriton_1_1exceptions_1_1ArmOperandProperties.html" target="_top" xlink:title="The exception class used by shift mode.">
+<!-- Node3 -->
+<g id="node5" class="node">
+<title>Node3</title>
+<g id="a_node5"><a xlink:href="classtriton_1_1exceptions_1_1ArmOperandProperties.html" target="_top" xlink:title="The exception class used by shift mode.">
 <polygon fill="white" stroke="black" points="430,-799.5 430,-829.5 564,-829.5 564,-799.5 430,-799.5"/>
 <text text-anchor="start" x="438" y="-817.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="497" y="-806.5" font-family="Helvetica,sans-Serif" font-size="10.00">::ArmOperandProperties</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node4 -->
-<g id="edge5" class="edge">
-<title>Node2&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M380.81,-601.02C381.94,-602.12 383,-603.28 384,-604.5 437.37,-669.63 363.97,-727.65 420,-790.5 423.04,-793.91 426.56,-796.84 430.38,-799.35"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="382.65,-598.01 372.65,-594.52 378.29,-603.49 382.65,-598.01"/>
+<!-- Node1&#45;&gt;Node3 -->
+<g id="edge4" class="edge">
+<title>Node1&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M329.22,-628.35C340.49,-668.33 368.09,-746.86 420,-790.5 424.13,-793.97 428.77,-796.94 433.66,-799.49"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="332.57,-627.34 326.58,-618.61 325.81,-629.17 332.57,-627.34"/>
 </g>
-<!-- Node5 -->
-<g id="node7" class="node">
-<title>Node5</title>
-<g id="a_node7"><a xlink:href="classtriton_1_1exceptions_1_1BasicBlock.html" target="_top" xlink:title="The exception class used by a basic block.">
+<!-- Node4 -->
+<g id="node6" class="node">
+<title>Node4</title>
+<g id="a_node6"><a xlink:href="classtriton_1_1exceptions_1_1BasicBlock.html" target="_top" xlink:title="The exception class used by a basic block.">
 <polygon fill="white" stroke="black" points="446,-750.5 446,-780.5 548,-780.5 548,-750.5 446,-750.5"/>
 <text text-anchor="start" x="454" y="-768.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="497" y="-757.5" font-family="Helvetica,sans-Serif" font-size="10.00">::BasicBlock</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node5 -->
-<g id="edge6" class="edge">
-<title>Node2&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M380.27,-600.71C381.59,-601.91 382.83,-603.17 384,-604.5 425.48,-651.86 376.59,-695.91 420,-741.5 426.97,-748.81 436.14,-753.91 445.69,-757.46"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="382.19,-597.77 372.09,-594.56 377.98,-603.37 382.19,-597.77"/>
+<!-- Node1&#45;&gt;Node4 -->
+<g id="edge5" class="edge">
+<title>Node1&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M334.02,-628.04C349.11,-658.92 379.06,-711.53 420,-741.5 427.7,-747.14 436.78,-751.48 445.92,-754.82"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="337.1,-626.37 329.65,-618.83 330.78,-629.37 337.1,-626.37"/>
 </g>
-<!-- Node6 -->
-<g id="node8" class="node">
-<title>Node6</title>
-<g id="a_node8"><a xlink:href="classtriton_1_1exceptions_1_1BitsVector.html" target="_top" xlink:title="The exception class used by bitvectors.">
+<!-- Node5 -->
+<g id="node7" class="node">
+<title>Node5</title>
+<g id="a_node7"><a xlink:href="classtriton_1_1exceptions_1_1BitsVector.html" target="_top" xlink:title="The exception class used by bitvectors.">
 <polygon fill="white" stroke="black" points="446,-701.5 446,-731.5 548,-731.5 548,-701.5 446,-701.5"/>
 <text text-anchor="start" x="454" y="-719.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="497" y="-708.5" font-family="Helvetica,sans-Serif" font-size="10.00">::BitsVector</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node6 -->
-<g id="edge7" class="edge">
-<title>Node2&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M379.35,-600.38C380.99,-601.67 382.54,-603.05 384,-604.5 413.64,-634.04 389.33,-663.03 420,-691.5 427.23,-698.21 436.29,-703.12 445.62,-706.71"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="380.91,-597.2 370.66,-594.51 377,-603.01 380.91,-597.2"/>
+<!-- Node1&#45;&gt;Node5 -->
+<g id="edge6" class="edge">
+<title>Node1&#45;&gt;Node5</title>
+<path fill="none" stroke="midnightblue" d="M342.9,-626.3C361.19,-646.01 389.95,-674 420,-691.5 427.92,-696.11 436.81,-700.01 445.64,-703.25"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="345.28,-623.71 335.96,-618.67 340.1,-628.43 345.28,-623.71"/>
 </g>
-<!-- Node7 -->
-<g id="node9" class="node">
-<title>Node7</title>
-<g id="a_node9"><a xlink:href="classtriton_1_1exceptions_1_1Cpu.html" target="_top" xlink:title="The exception class used by all CPUs.">
+<!-- Node6 -->
+<g id="node8" class="node">
+<title>Node6</title>
+<g id="a_node8"><a xlink:href="classtriton_1_1exceptions_1_1Cpu.html" target="_top" xlink:title="The exception class used by all CPUs.">
 <polygon fill="white" stroke="black" points="433.5,-663 433.5,-682 560.5,-682 560.5,-663 433.5,-663"/>
 <text text-anchor="middle" x="497" y="-670" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions::Cpu</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node7 -->
-<g id="edge8" class="edge">
-<title>Node2&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M376.77,-599.47C379.29,-601.04 381.72,-602.72 384,-604.5 405.3,-621.13 397.56,-638.44 420,-653.5 425.76,-657.37 432.24,-660.44 438.93,-662.9"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="378.34,-596.34 367.9,-594.53 374.93,-602.46 378.34,-596.34"/>
+<!-- Node1&#45;&gt;Node6 -->
+<g id="edge7" class="edge">
+<title>Node1&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M357.23,-623.61C375.41,-633.65 398.41,-645.36 420,-653.5 429.67,-657.15 440.3,-660.3 450.46,-662.94"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="358.63,-620.38 348.2,-618.54 355.2,-626.49 358.63,-620.38"/>
 </g>
-<!-- Node10 -->
-<g id="node12" class="node">
-<title>Node10</title>
-<g id="a_node12"><a xlink:href="classtriton_1_1exceptions_1_1Immediate.html" target="_top" xlink:title="The exception class used by immediates.">
+<!-- Node9 -->
+<g id="node11" class="node">
+<title>Node9</title>
+<g id="a_node11"><a xlink:href="classtriton_1_1exceptions_1_1Immediate.html" target="_top" xlink:title="The exception class used by immediates.">
 <polygon fill="white" stroke="black" points="446,-613.5 446,-643.5 548,-643.5 548,-613.5 446,-613.5"/>
 <text text-anchor="start" x="454" y="-631.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="497" y="-620.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Immediate</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node10 -->
-<g id="edge11" class="edge">
-<title>Node2&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M382.9,-596.47C403.41,-602.27 426.12,-608.71 445.77,-614.27"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="383.61,-593.03 373.04,-593.67 381.71,-599.77 383.61,-593.03"/>
+<!-- Node1&#45;&gt;Node9 -->
+<g id="edge10" class="edge">
+<title>Node1&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M383.18,-612.2C403.61,-615.15 426.21,-618.41 445.77,-621.24"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="383.44,-608.7 373.04,-610.73 382.44,-615.63 383.44,-608.7"/>
 </g>
-<!-- Node11 -->
-<g id="node13" class="node">
-<title>Node11</title>
-<g id="a_node13"><a xlink:href="classtriton_1_1exceptions_1_1Instruction.html" target="_top" xlink:title="The exception class used by an instruction.">
+<!-- Node10 -->
+<g id="node12" class="node">
+<title>Node10</title>
+<g id="a_node12"><a xlink:href="classtriton_1_1exceptions_1_1Instruction.html" target="_top" xlink:title="The exception class used by an instruction.">
 <polygon fill="white" stroke="black" points="446,-564.5 446,-594.5 548,-594.5 548,-564.5 446,-564.5"/>
 <text text-anchor="start" x="454" y="-582.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="497" y="-571.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Instruction</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node11 -->
-<g id="edge12" class="edge">
-<title>Node2&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M383.18,-579.5C403.61,-579.5 426.21,-579.5 445.77,-579.5"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="383.04,-576 373.04,-579.5 383.04,-583 383.04,-576"/>
+<!-- Node1&#45;&gt;Node10 -->
+<g id="edge11" class="edge">
+<title>Node1&#45;&gt;Node10</title>
+<path fill="none" stroke="midnightblue" d="M383.18,-595.15C403.61,-592.32 426.21,-589.18 445.77,-586.47"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="382.46,-591.72 373.04,-596.56 383.42,-598.65 382.46,-591.72"/>
 </g>
-<!-- Node12 -->
-<g id="node14" class="node">
-<title>Node12</title>
-<g id="a_node14"><a xlink:href="classtriton_1_1exceptions_1_1IrBuilder.html" target="_top" xlink:title="The exception class used by the IR builder.">
+<!-- Node11 -->
+<g id="node13" class="node">
+<title>Node11</title>
+<g id="a_node13"><a xlink:href="classtriton_1_1exceptions_1_1IrBuilder.html" target="_top" xlink:title="The exception class used by the IR builder.">
 <polygon fill="white" stroke="black" points="446,-515.5 446,-545.5 548,-545.5 548,-515.5 446,-515.5"/>
 <text text-anchor="start" x="454" y="-533.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="497" y="-522.5" font-family="Helvetica,sans-Serif" font-size="10.00">::IrBuilder</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node12 -->
-<g id="edge13" class="edge">
-<title>Node2&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M382.9,-562.53C403.41,-556.73 426.12,-550.29 445.77,-544.73"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="381.71,-559.23 373.04,-565.33 383.61,-565.97 381.71,-559.23"/>
+<!-- Node1&#45;&gt;Node11 -->
+<g id="edge12" class="edge">
+<title>Node1&#45;&gt;Node11</title>
+<path fill="none" stroke="midnightblue" d="M359.9,-583.7C377.77,-574.51 399.71,-563.81 420,-555.5 428.48,-552.03 437.64,-548.68 446.57,-545.63"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="358.21,-580.63 350.95,-588.35 361.44,-586.85 358.21,-580.63"/>
 </g>
-<!-- Node13 -->
-<g id="node15" class="node">
-<title>Node13</title>
-<g id="a_node15"><a xlink:href="classtriton_1_1exceptions_1_1MemoryAccess.html" target="_top" xlink:title="The exception class used by memory access.">
+<!-- Node12 -->
+<g id="node14" class="node">
+<title>Node12</title>
+<g id="a_node14"><a xlink:href="classtriton_1_1exceptions_1_1MemoryAccess.html" target="_top" xlink:title="The exception class used by memory access.">
 <polygon fill="white" stroke="black" points="446,-466.5 446,-496.5 548,-496.5 548,-466.5 446,-466.5"/>
 <text text-anchor="start" x="454" y="-484.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="497" y="-473.5" font-family="Helvetica,sans-Serif" font-size="10.00">::MemoryAccess</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node13 -->
-<g id="edge14" class="edge">
-<title>Node2&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M347.11,-557.79C365.87,-541.82 393.15,-520.53 420,-506.5 428.13,-502.25 437.11,-498.54 445.98,-495.36"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="344.64,-555.3 339.37,-564.49 349.22,-560.59 344.64,-555.3"/>
+<!-- Node1&#45;&gt;Node12 -->
+<g id="edge13" class="edge">
+<title>Node1&#45;&gt;Node12</title>
+<path fill="none" stroke="midnightblue" d="M340.73,-580.34C358.58,-558.48 387.99,-526.2 420,-506.5 427.93,-501.62 436.91,-497.59 445.85,-494.28"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="337.99,-578.16 334.47,-588.16 343.45,-582.54 337.99,-578.16"/>
 </g>
-<!-- Node14 -->
-<g id="node16" class="node">
-<title>Node14</title>
-<g id="a_node16"><a xlink:href="classtriton_1_1exceptions_1_1OperandWrapper.html" target="_top" xlink:title="The exception class used by operand wrappers.">
+<!-- Node13 -->
+<g id="node15" class="node">
+<title>Node13</title>
+<g id="a_node15"><a xlink:href="classtriton_1_1exceptions_1_1OperandWrapper.html" target="_top" xlink:title="The exception class used by operand wrappers.">
 <polygon fill="white" stroke="black" points="444.5,-417.5 444.5,-447.5 549.5,-447.5 549.5,-417.5 444.5,-417.5"/>
 <text text-anchor="start" x="452.5" y="-435.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="497" y="-424.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OperandWrapper</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node14 -->
-<g id="edge15" class="edge">
-<title>Node2&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M336.23,-555.46C352.52,-528 382.66,-483.51 420,-457.5 427.29,-452.42 435.69,-448.32 444.18,-445.02"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="333.04,-553.99 331.06,-564.4 339.1,-557.5 333.04,-553.99"/>
+<!-- Node1&#45;&gt;Node13 -->
+<g id="edge14" class="edge">
+<title>Node1&#45;&gt;Node13</title>
+<path fill="none" stroke="midnightblue" d="M333.06,-579.04C347.59,-546.67 377.44,-489.93 420,-457.5 427.18,-452.03 435.62,-447.72 444.2,-444.35"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="329.84,-577.69 329.05,-588.25 336.25,-580.48 329.84,-577.69"/>
 </g>
-<!-- Node15 -->
-<g id="node17" class="node">
-<title>Node15</title>
-<g id="a_node17"><a xlink:href="classtriton_1_1exceptions_1_1Register.html" target="_top" xlink:title="The exception class used by register operands.">
+<!-- Node14 -->
+<g id="node16" class="node">
+<title>Node14</title>
+<g id="a_node16"><a xlink:href="classtriton_1_1exceptions_1_1Register.html" target="_top" xlink:title="The exception class used by register operands.">
 <polygon fill="white" stroke="black" points="446,-368.5 446,-398.5 548,-398.5 548,-368.5 446,-368.5"/>
 <text text-anchor="start" x="454" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="497" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Register</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node15 -->
-<g id="edge16" class="edge">
-<title>Node2&#45;&gt;Node15</title>
-<path fill="none" stroke="midnightblue" d="M330.51,-554.98C343.08,-517.96 371.85,-447.94 420,-408.5 427.52,-402.34 436.61,-397.68 445.85,-394.16"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="327.18,-553.9 327.39,-564.49 333.83,-556.08 327.18,-553.9"/>
+<!-- Node1&#45;&gt;Node14 -->
+<g id="edge15" class="edge">
+<title>Node1&#45;&gt;Node14</title>
+<path fill="none" stroke="midnightblue" d="M328.73,-578.55C339.5,-537.27 366.61,-454.71 420,-408.5 427.46,-402.05 436.62,-397.25 445.98,-393.69"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="325.32,-577.8 326.29,-588.35 332.11,-579.49 325.32,-577.8"/>
 </g>
-<!-- Node8 -->
-<g id="node10" class="node">
-<title>Node8</title>
-<g id="a_node10"><a xlink:href="classtriton_1_1exceptions_1_1Disassembly.html" target="_top" xlink:title="The exception class used by the disassembler.">
+<!-- Node7 -->
+<g id="node9" class="node">
+<title>Node7</title>
+<g id="a_node9"><a xlink:href="classtriton_1_1exceptions_1_1Disassembly.html" target="_top" xlink:title="The exception class used by the disassembler.">
 <polygon fill="white" stroke="black" points="626,-681.5 626,-711.5 728,-711.5 728,-681.5 626,-681.5"/>
 <text text-anchor="start" x="634" y="-699.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="677" y="-688.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Disassembly</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node8 -->
-<g id="edge9" class="edge">
-<title>Node7&#45;&gt;Node8</title>
+<!-- Node6&#45;&gt;Node7 -->
+<g id="edge8" class="edge">
+<title>Node6&#45;&gt;Node7</title>
 <path fill="none" stroke="midnightblue" d="M570.44,-682.27C589.08,-684.78 608.73,-687.43 625.96,-689.75"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="570.88,-678.8 560.51,-680.93 569.95,-685.73 570.88,-678.8"/>
 </g>
-<!-- Node9 -->
-<g id="node11" class="node">
-<title>Node9</title>
-<g id="a_node11"><a xlink:href="classtriton_1_1exceptions_1_1Semantics.html" target="_top" xlink:title="The exception class used by all semantics.">
+<!-- Node8 -->
+<g id="node10" class="node">
+<title>Node8</title>
+<g id="a_node10"><a xlink:href="classtriton_1_1exceptions_1_1Semantics.html" target="_top" xlink:title="The exception class used by all semantics.">
 <polygon fill="white" stroke="black" points="626,-632.5 626,-662.5 728,-662.5 728,-632.5 626,-632.5"/>
 <text text-anchor="start" x="634" y="-650.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="677" y="-639.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Semantics</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node9 -->
-<g id="edge10" class="edge">
-<title>Node7&#45;&gt;Node9</title>
+<!-- Node6&#45;&gt;Node8 -->
+<g id="edge9" class="edge">
+<title>Node6&#45;&gt;Node8</title>
 <path fill="none" stroke="midnightblue" d="M570.44,-662.33C589.08,-659.71 608.73,-656.95 625.96,-654.53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="569.92,-658.86 560.51,-663.72 570.9,-665.8 569.92,-658.86"/>
 </g>
-<!-- Node17 -->
-<g id="node19" class="node">
-<title>Node17</title>
-<g id="a_node19"><a xlink:href="classtriton_1_1exceptions_1_1AstLifting.html" target="_top" xlink:title="The exception class used by all AST lifting (e.g z3 &lt;&#45;&gt; triton).">
+<!-- Node16 -->
+<g id="node18" class="node">
+<title>Node16</title>
+<g id="a_node18"><a xlink:href="classtriton_1_1exceptions_1_1AstLifting.html" target="_top" xlink:title="The exception class used by all AST lifting (e.g z3 &lt;&#45;&gt; triton).">
 <polygon fill="white" stroke="black" points="446,-319.5 446,-349.5 548,-349.5 548,-319.5 446,-319.5"/>
 <text text-anchor="start" x="454" y="-337.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="497" y="-326.5" font-family="Helvetica,sans-Serif" font-size="10.00">::AstLifting</text>
 </a>
 </g>
 </g>
-<!-- Node16&#45;&gt;Node17 -->
-<g id="edge18" class="edge">
-<title>Node16&#45;&gt;Node17</title>
+<!-- Node15&#45;&gt;Node16 -->
+<g id="edge17" class="edge">
+<title>Node15&#45;&gt;Node16</title>
 <path fill="none" stroke="midnightblue" d="M394.51,-332.74C411.75,-333.04 429.81,-333.35 445.83,-333.63"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="394.54,-329.24 384.48,-332.57 394.42,-336.24 394.54,-329.24"/>
 </g>
-<!-- Node18 -->
-<g id="node20" class="node">
-<title>Node18</title>
-<g id="a_node20"><a xlink:href="classtriton_1_1exceptions_1_1AstRepresentation.html" target="_top" xlink:title="The exception class used by all AST node representations.">
+<!-- Node17 -->
+<g id="node19" class="node">
+<title>Node17</title>
+<g id="a_node19"><a xlink:href="classtriton_1_1exceptions_1_1AstRepresentation.html" target="_top" xlink:title="The exception class used by all AST node representations.">
 <polygon fill="white" stroke="black" points="440.5,-270.5 440.5,-300.5 553.5,-300.5 553.5,-270.5 440.5,-270.5"/>
 <text text-anchor="start" x="448.5" y="-288.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="497" y="-277.5" font-family="Helvetica,sans-Serif" font-size="10.00">::AstRepresentation</text>
 </a>
 </g>
 </g>
-<!-- Node16&#45;&gt;Node18 -->
-<g id="edge19" class="edge">
-<title>Node16&#45;&gt;Node18</title>
+<!-- Node15&#45;&gt;Node17 -->
+<g id="edge18" class="edge">
+<title>Node15&#45;&gt;Node17</title>
 <path fill="none" stroke="midnightblue" d="M368.61,-319.37C390.63,-313.52 417.25,-306.44 440.44,-300.27"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="367.61,-316.02 358.85,-321.97 369.41,-322.78 367.61,-316.02"/>
 </g>
@@ -396,8 +397,8 @@
 <!-- Node21&#45;&gt;Node22 -->
 <g id="edge23" class="edge">
 <title>Node21&#45;&gt;Node22</title>
-<path fill="none" stroke="midnightblue" d="M382.9,-204.47C403.41,-210.27 426.12,-216.71 445.77,-222.27"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="383.61,-201.03 373.04,-201.67 381.71,-207.77 383.61,-201.03"/>
+<path fill="none" stroke="midnightblue" d="M376.72,-160.53C379.26,-162.08 381.7,-163.74 384,-165.5 404.9,-181.49 398.46,-197.39 420,-212.5 427.7,-217.9 436.68,-222.13 445.7,-225.42"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="378.28,-157.39 367.83,-155.62 374.9,-163.52 378.28,-157.39"/>
 </g>
 <!-- Node23 -->
 <g id="node25" class="node">
@@ -412,8 +413,8 @@
 <!-- Node21&#45;&gt;Node23 -->
 <g id="edge24" class="edge">
 <title>Node21&#45;&gt;Node23</title>
-<path fill="none" stroke="midnightblue" d="M383.18,-187.5C403.61,-187.5 426.21,-187.5 445.77,-187.5"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="383.04,-184 373.04,-187.5 383.04,-191 383.04,-184"/>
+<path fill="none" stroke="midnightblue" d="M382.9,-156.77C403.41,-162.34 426.12,-168.51 445.77,-173.85"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="383.61,-153.34 373.04,-154.09 381.77,-160.09 383.61,-153.34"/>
 </g>
 <!-- Node25 -->
 <g id="node27" class="node">
@@ -428,8 +429,8 @@
 <!-- Node21&#45;&gt;Node25 -->
 <g id="edge26" class="edge">
 <title>Node21&#45;&gt;Node25</title>
-<path fill="none" stroke="midnightblue" d="M382.9,-170.53C403.41,-164.73 426.12,-158.29 445.77,-152.73"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="381.71,-167.23 373.04,-173.33 383.61,-173.97 381.71,-167.23"/>
+<path fill="none" stroke="midnightblue" d="M383.18,-139.8C403.61,-139.57 426.21,-139.31 445.77,-139.08"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="383,-136.31 373.04,-139.92 383.08,-143.31 383,-136.31"/>
 </g>
 <!-- Node31 -->
 <g id="node33" class="node">
@@ -444,8 +445,8 @@
 <!-- Node21&#45;&gt;Node31 -->
 <g id="edge32" class="edge">
 <title>Node21&#45;&gt;Node31</title>
-<path fill="none" stroke="midnightblue" d="M378.37,-167.44C380.32,-166.19 382.2,-164.88 384,-163.5 405.41,-147.02 398.12,-130.37 420,-114.5 426.18,-110.01 433.22,-106.3 440.45,-103.24"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="376.46,-164.5 369.48,-172.47 379.91,-170.59 376.46,-164.5"/>
+<path fill="none" stroke="midnightblue" d="M382.77,-122.88C403,-116.92 425.38,-110.32 444.87,-104.57"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="381.64,-119.56 373.04,-125.75 383.62,-126.28 381.64,-119.56"/>
 </g>
 <!-- Node32 -->
 <g id="node34" class="node">
@@ -460,8 +461,8 @@
 <!-- Node21&#45;&gt;Node32 -->
 <g id="edge33" class="edge">
 <title>Node21&#45;&gt;Node32</title>
-<path fill="none" stroke="midnightblue" d="M381.06,-166.27C382.08,-165.39 383.06,-164.46 384,-163.5 416.43,-130.32 386.63,-97.74 420,-65.5 427.19,-58.55 436.35,-53.53 445.8,-49.91"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="378.65,-163.69 372.61,-172.39 382.76,-169.36 378.65,-163.69"/>
+<path fill="none" stroke="midnightblue" d="M378.96,-120.12C380.7,-118.97 382.39,-117.76 384,-116.5 405.82,-99.37 397.7,-82 420,-65.5 427.7,-59.8 436.78,-55.36 445.92,-51.91"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="376.76,-117.35 369.86,-125.39 380.27,-123.41 376.76,-117.35"/>
 </g>
 <!-- Node24 -->
 <g id="node26" class="node">

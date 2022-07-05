@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1532</span>
+   &#160;<span id="projectnumber">version 1.0 build 1536</span>
    </div>
   </td>
  </tr>
@@ -239,6 +239,8 @@ Python API - Methods of the Instruction class</h1>
  Returns true if at least one of its <a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> is tainted.</li>
 <li><b>bool isWriteBack(void)</b><br  />
  Returns true if the instruction performs a write back. Mainly used for AArch64 instructions like LDR.</li>
+<li><b>bool isUpdateFlag(void)</b><br  />
+ Returns true if the instruction updates flags. Mainly used for AArch64 instructions like ADDS.</li>
 <li><b>bool isThumb(void)</b><br  />
  Returns true if the instruction is a Thumb instruction.</li>
 <li><b>void setAddress(integer addr)</b><br  />

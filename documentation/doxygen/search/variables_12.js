@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['taint_0',['taint',['../classtriton_1_1API.html#afe21556cc38f68cf160956f6d012aefe',1,'triton::API']]],
+  ['taint_0',['taint',['../classtriton_1_1Context.html#a72d6ac99d022430c5a57ea285b6da9ce',1,'triton::Context']]],
   ['tainted_1',['tainted',['../classtriton_1_1arch_1_1Instruction.html#ab7b707e918b2a7ae2b61e4d0011773af',1,'triton::arch::Instruction']]],
   ['tainted_2',['TAINTED',['../group__taint.html#ga8994d8dcefc46150fe4f064c06d7979e',1,'triton::engines::taint']]],
   ['taintedmemory_3',['taintedMemory',['../classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a8391a6954d3493cff36daeac35978413',1,'triton::engines::taint::TaintEngine']]],

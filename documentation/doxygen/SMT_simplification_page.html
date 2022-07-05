@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1532</span>
+   &#160;<span id="projectnumber">version 1.0 build 1536</span>
    </div>
   </td>
  </tr>
@@ -85,17 +85,17 @@ $(function() {
 <h1><a class="anchor" id="SMT_simplification_description"></a>
 Description</h1>
 <hr  />
-<p >Triton allows you to optimize your AST (See: <a class="el" href="py_AstContext_page.html">AstContext</a>) just before the assignment to a register, a memory or a volatile symbolic expression. The record of a simplification pass is really straightforward. You have to record your simplification callback using the <a class="el" href="classtriton_1_1API.html#a58b63d2c879f47d2eb602060d15f2a0c" title="[callbacks api] - Adds a callback.">triton::API::addCallback()</a> function. Your simplification callback must takes as parameters a <a class="el" href="classtriton_1_1API.html" title="This is used as C++ API.">triton::API</a> and a <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89" title="Shared Abstract Node.">triton::ast::SharedAbstractNode</a>. The callback must return a <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89" title="Shared Abstract Node.">triton::ast::SharedAbstractNode</a>. Then, your callback will be called before every symbolic assignment. Note that you can record several simplification callbacks or remove a specific callback using the <a class="el" href="classtriton_1_1API.html#af41e84e0edae7643c3880bf707a646f3" title="[callbacks api] - Removes a callback.">triton::API::removeCallback()</a> function.</p>
+<p >Triton allows you to optimize your AST (See: <a class="el" href="py_AstContext_page.html">AstContext</a>) just before the assignment to a register, a memory or a volatile symbolic expression. The record of a simplification pass is really straightforward. You have to record your simplification callback using the <a class="el" href="classtriton_1_1Context.html#a6902ef376aceadf69821b91572d1669b" title="[callbacks api] - Adds a callback.">triton::Context::addCallback()</a> function. Your simplification callback must takes as parameters a <a class="el" href="classtriton_1_1Context.html" title="This is the main Triton Context class.">triton::Context</a> and a <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89" title="Shared Abstract Node.">triton::ast::SharedAbstractNode</a>. The callback must return a <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89" title="Shared Abstract Node.">triton::ast::SharedAbstractNode</a>. Then, your callback will be called before every symbolic assignment. Note that you can record several simplification callbacks or remove a specific callback using the <a class="el" href="classtriton_1_1Context.html#a5ad1c06082504917ae3da549a162e6ae" title="[callbacks api] - Removes a callback.">triton::Context::removeCallback()</a> function.</p>
 <h2><a class="anchor" id="SMT_simplification_triton"></a>
 Simplification via Triton's rules</h2>
 <hr  />
 <p >Below, a little example which replaces all \( A \oplus A \rightarrow A = 0\).</p>
 <div class="fragment"><div class="line"><span class="comment">// Rule: if (bvxor x x) -&gt; (_ bv0 x_size)</span></div>
-<div class="line"><a class="code hl_typedef" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> xor_simplification(<a class="code hl_class" href="classtriton_1_1API.html">triton::API</a>&amp; ctx, <span class="keyword">const</span> <a class="code hl_typedef" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; node) {</div>
+<div class="line"><a class="code hl_typedef" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> xor_simplification(<a class="code hl_class" href="classtriton_1_1Context.html">triton::Context</a>&amp; ctx, <span class="keyword">const</span> <a class="code hl_typedef" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&amp; node) {</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">if</span> (node-&gt;getType() == <a class="code hl_enumvalue" href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa24548568d732d9e25d885c01d0ff9e31">triton::ast::BVXOR_NODE</a>) {</div>
 <div class="line">    <span class="keywordflow">if</span> (node-&gt;getChildren()[0]-&gt;equalTo(node-&gt;getChildren()[1]))</div>
-<div class="line">      <span class="keywordflow">return</span> ctx.<a class="code hl_function" href="classtriton_1_1API.html#aeea954410b7db37d9a21e13893c7fbce">getAstContext</a>().bv(0, node-&gt;getBitvectorSize());</div>
+<div class="line">      <span class="keywordflow">return</span> ctx.<a class="code hl_function" href="classtriton_1_1Context.html#a6b84e88d3f8241ef9ec4af47e1ca00b1">getAstContext</a>().bv(0, node-&gt;getBitvectorSize());</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> node;</div>
@@ -104,11 +104,12 @@ Simplification via Triton's rules</h2>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> ac, <span class="keyword">const</span> <span class="keywordtype">char</span> *av[]) {</div>
 <div class="line">  ...</div>
 <div class="line">  <span class="comment">// Record a simplification callback</span></div>
-<div class="line">  api.addCallback(xor_simplification);</div>
+<div class="line">  ctx.<a class="code hl_function" href="classtriton_1_1Context.html#a6902ef376aceadf69821b91572d1669b">addCallback</a>(xor_simplification);</div>
 <div class="line">  ...</div>
 <div class="line">}</div>
-<div class="ttc" id="aclasstriton_1_1API_html"><div class="ttname"><a href="classtriton_1_1API.html">triton::API</a></div><div class="ttdoc">This is used as C++ API.</div><div class="ttdef"><b>Definition:</b> <a href="api_8hpp_source.html#l00045">api.hpp:45</a></div></div>
-<div class="ttc" id="aclasstriton_1_1API_html_aeea954410b7db37d9a21e13893c7fbce"><div class="ttname"><a href="classtriton_1_1API.html#aeea954410b7db37d9a21e13893c7fbce">triton::API::getAstContext</a></div><div class="ttdeci">TRITON_EXPORT triton::ast::SharedAstContext getAstContext(void)</div><div class="ttdoc">[IR builder api] - Returns the AST context. Used as AST builder.</div><div class="ttdef"><b>Definition:</b> <a href="api_8cpp_source.html#l00581">api.cpp:581</a></div></div>
+<div class="ttc" id="aclasstriton_1_1Context_html"><div class="ttname"><a href="classtriton_1_1Context.html">triton::Context</a></div><div class="ttdoc">This is the main Triton Context class.</div><div class="ttdef"><b>Definition:</b> <a href="context_8hpp_source.html#l00045">context.hpp:45</a></div></div>
+<div class="ttc" id="aclasstriton_1_1Context_html_a6902ef376aceadf69821b91572d1669b"><div class="ttname"><a href="classtriton_1_1Context.html#a6902ef376aceadf69821b91572d1669b">triton::Context::addCallback</a></div><div class="ttdeci">void addCallback(triton::callbacks::callback_e kind, T cb)</div><div class="ttdoc">[callbacks api] - Adds a callback.</div><div class="ttdef"><b>Definition:</b> <a href="context_8hpp_source.html#l00307">context.hpp:307</a></div></div>
+<div class="ttc" id="aclasstriton_1_1Context_html_a6b84e88d3f8241ef9ec4af47e1ca00b1"><div class="ttname"><a href="classtriton_1_1Context.html#a6b84e88d3f8241ef9ec4af47e1ca00b1">triton::Context::getAstContext</a></div><div class="ttdeci">TRITON_EXPORT triton::ast::SharedAstContext getAstContext(void)</div><div class="ttdoc">[IR builder api] - Returns the AST context. Used as AST builder.</div><div class="ttdef"><b>Definition:</b> <a href="context_8cpp_source.html#l00581">context.cpp:581</a></div></div>
 <div class="ttc" id="agroup__ast_html_ga2d86ebcc0438b7c3b0e5388efa617a89"><div class="ttname"><a href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a></div><div class="ttdeci">std::shared_ptr&lt; triton::ast::AbstractNode &gt; SharedAbstractNode</div><div class="ttdoc">Shared Abstract Node.</div><div class="ttdef"><b>Definition:</b> <a href="ast_8hpp_source.html#l00059">ast.hpp:59</a></div></div>
 <div class="ttc" id="agroup__ast_html_gga2b93cc7e19032f733c001c96530ef64fa24548568d732d9e25d885c01d0ff9e31"><div class="ttname"><a href="group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa24548568d732d9e25d885c01d0ff9e31">triton::ast::BVXOR_NODE</a></div><div class="ttdeci">@ BVXOR_NODE</div><div class="ttdef"><b>Definition:</b> <a href="astEnums_8hpp_source.html#l00062">astEnums.hpp:62</a></div></div>
 </div><!-- fragment --><p >Another example (this time in Python) which replaces a node with this rule \( ((A \land \lnot{B}) \lor (\lnot{A} \land B)) \rightarrow (A \oplus B) \).</p>

@@ -21,7 +21,7 @@ var searchData=
   ['esp_18',['esp',['../classtriton_1_1arch_1_1x86_1_1x86Cpu.html#aadbda0199b0fe9bb618866db97b50156',1,'triton::arch::x86::x86Cpu']]],
   ['eval_19',['eval',['../classtriton_1_1ast_1_1AbstractNode.html#ad7f8a483aea93a8dbd90306d4d17a142',1,'triton::ast::AbstractNode']]],
   ['evaluate_20',['evaluate',['../classtriton_1_1ast_1_1AbstractNode.html#aecb9d57e62e070e0e8751bf513982792',1,'triton::ast::AbstractNode::evaluate()'],['../classtriton_1_1engines_1_1solver_1_1BitwuzlaSolver.html#a6039027cc0d6c6feedb2fa8a5ccc2b6e',1,'triton::engines::solver::BitwuzlaSolver::evaluate()'],['../classtriton_1_1engines_1_1solver_1_1Z3Solver.html#a3ccfbeaf3017a04feef99267a3210df2',1,'triton::engines::solver::Z3Solver::evaluate()']]],
-  ['evaluateastviasolver_21',['evaluateAstViaSolver',['../classtriton_1_1API.html#a74272db013d677bea16f5e24b9458133',1,'triton::API']]],
+  ['evaluateastviasolver_21',['evaluateAstViaSolver',['../classtriton_1_1Context.html#a357d38c0cb194026e1b7b269bdfa746d',1,'triton::Context']]],
   ['exception_22',['Exception',['../classtriton_1_1exceptions_1_1Exception.html#a6a82b212002fba888fcadc3abef0d16a',1,'triton::exceptions::Exception::Exception(const char *message)'],['../classtriton_1_1exceptions_1_1Exception.html#a53c4342c44bff1555cf9be6b51a292b1',1,'triton::exceptions::Exception::Exception(const std::string &amp;message)']]],
   ['exception_23',['EXCEPTION',['../py_EXCEPTION_page.html',1,'']]],
   ['exception_24',['Exception',['../classtriton_1_1exceptions_1_1Exception.html',1,'triton::exceptions']]],

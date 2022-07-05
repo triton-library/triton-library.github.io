@@ -29,7 +29,7 @@ var searchData=
   ['regattr_26',['regAttr',['../structtriton_1_1bindings_1_1python_1_1TritonContext__Object.html#ae90be4b741a29e4d380e030216099cfb',1,'triton::bindings::python::TritonContext_Object']]],
   ['register_5fcallbacks_27',['Register_callbacks',['../namespacetriton_1_1bindings_1_1python.html#a36d68a785a6e23088da1b7ce46d91b76',1,'triton::bindings::python']]],
   ['register_5ftype_28',['Register_Type',['../group__python.html#gaafb8f0f3d35267e102814753003393b9',1,'triton::bindings::python']]],
-  ['registers_29',['registers',['../classtriton_1_1API.html#a16ac6d05808391c7c5dfb6bd00d43e16',1,'triton::API']]],
+  ['registers_29',['registers',['../classtriton_1_1Context.html#a28b74dd529c4e6c62d56500d2280b256',1,'triton::Context']]],
   ['representations_30',['representations',['../classtriton_1_1ast_1_1representations_1_1AstRepresentation.html#aab5a729c30b67cae79d8c8c233ce7a0d',1,'triton::ast::representations::AstRepresentation']]],
   ['rip_31',['rip',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a4402e3782b4cb353734a729ccf50f889',1,'triton::arch::x86::x8664Cpu']]],
   ['rsi_32',['rsi',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a7ed7fb79feb647a10188bb09220407c5',1,'triton::arch::x86::x8664Cpu']]],

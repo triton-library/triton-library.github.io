@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1532</span>
+   &#160;<span id="projectnumber">version 1.0 build 1536</span>
    </div>
   </td>
  </tr>
@@ -85,8 +85,8 @@ $(function() {
 <div class="textblock"><code>#include &lt;<a class="el" href="pythonObjects_8hpp_source.html">triton/pythonObjects.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="pythonUtils_8hpp_source.html">triton/pythonUtils.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="pythonXFunctions_8hpp_source.html">triton/pythonXFunctions.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="api_8hpp_source.html">triton/api.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="arm32Cpu_8hpp_source.html">triton/arm32Cpu.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="context_8hpp_source.html">triton/context.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="exceptions_8hpp_source.html">triton/exceptions.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="register_8hpp_source.html">triton/register.hpp</a>&gt;</code><br />
 </div>
@@ -112,9 +112,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga27ebd662672f0280d00e7e87b6a0a070"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#ga27ebd662672f0280d00e7e87b6a0a070">triton::bindings::python::PyTritonContext</a> (<a class="el" href="group__arch.html#ga72199f3206aa1c9b09b2688cb8d3e7ab">triton::arch::architecture_e</a> arch)</td></tr>
 <tr class="memdesc:ga27ebd662672f0280d00e7e87b6a0a070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the new TritonContext python class.  <a href="group__python.html#ga27ebd662672f0280d00e7e87b6a0a070">More...</a><br /></td></tr>
 <tr class="separator:ga27ebd662672f0280d00e7e87b6a0a070"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga08bf103c31bd6c4314272a063ba326f4"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#ga08bf103c31bd6c4314272a063ba326f4">triton::bindings::python::PyTritonContextRef</a> (<a class="el" href="classtriton_1_1API.html">triton::API</a> &amp;api)</td></tr>
-<tr class="memdesc:ga08bf103c31bd6c4314272a063ba326f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a TritonContext python class which is a reference to another Context.  <a href="group__python.html#ga08bf103c31bd6c4314272a063ba326f4">More...</a><br /></td></tr>
-<tr class="separator:ga08bf103c31bd6c4314272a063ba326f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05370f45266d2433d5d3d89022b09cd0"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#ga05370f45266d2433d5d3d89022b09cd0">triton::bindings::python::PyTritonContextRef</a> (<a class="el" href="classtriton_1_1Context.html">triton::Context</a> &amp;ctx)</td></tr>
+<tr class="memdesc:ga05370f45266d2433d5d3d89022b09cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a TritonContext python class which is a reference to another <a class="el" href="classtriton_1_1Context.html" title="This is the main Triton Context class.">Context</a>.  <a href="group__python.html#ga05370f45266d2433d5d3d89022b09cd0">More...</a><br /></td></tr>
+<tr class="separator:ga05370f45266d2433d5d3d89022b09cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>

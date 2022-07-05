@@ -12,10 +12,10 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="structtriton_1_1bindings_1_1python_1_1Immediate__Object.html" target="_top" xlink:title="pyImmediate object.">
+<g id="a_node1"><a xlink:href="structtriton_1_1bindings_1_1python_1_1Instruction__Object.html" target="_top" xlink:title="pyInstruction object.">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-30.5 130,-30.5 130,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::bindings::python</text>
-<text text-anchor="middle" x="65" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Immediate_Object</text>
+<text text-anchor="middle" x="65" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Instruction_Object</text>
 </a>
 </g>
 </g>

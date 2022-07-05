@@ -2,15 +2,15 @@
 <area shape="rect" id="node1" title=" " alt="" coords="4307,5,4565,61"/>
 <area shape="rect" id="node2" href="$irBuilder_8cpp.html" title=" " alt="" coords="3045,644,3222,700"/>
 <area shape="rect" id="node3" href="$operandWrapper_8cpp.html" title=" " alt="" coords="4273,109,4465,165"/>
-<area shape="rect" id="node4" href="$api_8hpp.html" title=" " alt="" coords="4013,644,4190,700"/>
+<area shape="rect" id="node4" href="$context_8hpp.html" title=" " alt="" coords="4001,644,4201,700"/>
 <area shape="rect" id="node12" href="$instruction_8hpp.html" title=" " alt="" coords="2735,109,2955,165"/>
-<area shape="rect" id="node5" href="$api_8cpp.html" title=" " alt="" coords="4470,755,4647,811"/>
-<area shape="rect" id="node6" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="3807,748,3988,819"/>
-<area shape="rect" id="node7" href="$callbacks_8cpp.html" title=" " alt="" coords="4012,755,4191,811"/>
+<area shape="rect" id="node5" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="3807,748,3988,819"/>
+<area shape="rect" id="node6" href="$callbacks_8cpp.html" title=" " alt="" coords="4469,755,4648,811"/>
+<area shape="rect" id="node7" href="$context_8cpp.html" title=" " alt="" coords="4013,755,4190,811"/>
 <area shape="rect" id="node8" href="$symbolicSimplification_8cpp.html" title=" " alt="" coords="3463,755,3782,811"/>
-<area shape="rect" id="node9" href="$llvmToTriton_8hpp.html" title=" " alt="" coords="4215,755,4446,811"/>
-<area shape="rect" id="node10" href="$llvmToTriton_8cpp.html" title=" " alt="" coords="4119,867,4308,923"/>
-<area shape="rect" id="node11" href="$liftingToLLVM_8cpp.html" title=" " alt="" coords="4332,867,4567,923"/>
+<area shape="rect" id="node9" href="$llvmToTriton_8hpp.html" title=" " alt="" coords="4214,755,4445,811"/>
+<area shape="rect" id="node10" href="$llvmToTriton_8cpp.html" title=" " alt="" coords="4117,867,4307,923"/>
+<area shape="rect" id="node11" href="$liftingToLLVM_8cpp.html" title=" " alt="" coords="4331,867,4565,923"/>
 <area shape="rect" id="node13" href="$instruction_8cpp.html" title=" " alt="" coords="4287,213,4465,269"/>
 <area shape="rect" id="node14" href="$pyInstruction_8cpp.html" title=" " alt="" coords="3420,421,3601,492"/>
 <area shape="rect" id="node15" href="$aarch64Cpu_8hpp.html" title=" " alt="" coords="926,540,1154,596"/>

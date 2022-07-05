@@ -7,7 +7,7 @@ var searchData=
   ['memoryreference_4',['memoryReference',['../classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a1407fd8b64fff9ae799d904e4e927ac1',1,'triton::engines::symbolic::SymbolicEngine']]],
   ['message_5',['message',['../classtriton_1_1exceptions_1_1Exception.html#aa3b0fe91fb97246fc22eec82c2b2b147',1,'triton::exceptions::Exception']]],
   ['mode_6',['mode',['../classtriton_1_1ast_1_1representations_1_1AstRepresentation.html#a68dcf7a95360d06ffb7e57cbc3846d33',1,'triton::ast::representations::AstRepresentation']]],
-  ['modes_7',['modes',['../classtriton_1_1API.html#a08d9885b0c7e5f602c70beed9735202c',1,'triton::API']]],
+  ['modes_7',['modes',['../classtriton_1_1Context.html#a7e68c7bd8fb9d2aa8573d8ab8d89bb8a',1,'triton::Context']]],
   ['mxcsr_8',['mxcsr',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a6ec018704d3d4a28e4a5674b6225140b',1,'triton::arch::x86::x8664Cpu::mxcsr()'],['../classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a2b22a776f8d2bd773a9748e751f61509',1,'triton::arch::x86::x86Cpu::mxcsr()']]],
   ['mxcsr_5fmask_9',['mxcsr_mask',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a43c8eee5f86a8c4d670b8081bd4bfea2',1,'triton::arch::x86::x8664Cpu::mxcsr_mask()'],['../classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a860afd71ebff039c27a21aa1c3be7e76',1,'triton::arch::x86::x86Cpu::mxcsr_mask()']]]
 ];

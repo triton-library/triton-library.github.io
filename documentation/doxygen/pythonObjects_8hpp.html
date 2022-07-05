@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1532</span>
+   &#160;<span id="projectnumber">version 1.0 build 1536</span>
    </div>
   </td>
  </tr>
@@ -189,11 +189,11 @@ Macros</h2></td></tr>
 <tr class="separator:a25dcbcec12fd2eba8c725e1d0846f032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a143898f073dfb06e6533035726c00d73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pythonObjects_8hpp.html#a143898f073dfb06e6533035726c00d73">PyTritonContext_Check</a>(v)&#160;&#160;&#160;((v)-&gt;ob_type == &amp;<a class="el" href="namespacetriton_1_1bindings_1_1python.html#a5d35bc79f3e999a8fc899482d3fc7504">triton::bindings::python::TritonContext_Type</a>)</td></tr>
 <tr class="separator:a143898f073dfb06e6533035726c00d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37c54dcfd2fa4f3cd447682f26e43d31"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pythonObjects_8hpp.html#a37c54dcfd2fa4f3cd447682f26e43d31">PyTritonContext_AsTritonContext</a>(v)&#160;&#160;&#160;(((<a class="el" href="structtriton_1_1bindings_1_1python_1_1TritonContext__Object.html">triton::bindings::python::TritonContext_Object</a>*)(v))-&gt;api)</td></tr>
+<tr class="memitem:a37c54dcfd2fa4f3cd447682f26e43d31"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pythonObjects_8hpp.html#a37c54dcfd2fa4f3cd447682f26e43d31">PyTritonContext_AsTritonContext</a>(v)&#160;&#160;&#160;(((<a class="el" href="structtriton_1_1bindings_1_1python_1_1TritonContext__Object.html">triton::bindings::python::TritonContext_Object</a>*)(v))-&gt;ctx)</td></tr>
 <tr class="separator:a37c54dcfd2fa4f3cd447682f26e43d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f737350253acaea6ec17f89c9628df1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pythonObjects_8hpp.html#a4f737350253acaea6ec17f89c9628df1">PyAstContext_Check</a>(v)&#160;&#160;&#160;((v)-&gt;ob_type == &amp;<a class="el" href="namespacetriton_1_1bindings_1_1python.html#ad2e3b3980ddb89f2c691eb0e10cb2f9b">triton::bindings::python::AstContext_Type</a>)</td></tr>
 <tr class="separator:a4f737350253acaea6ec17f89c9628df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a621c94720acba2c97362052c9ff30f46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pythonObjects_8hpp.html#a621c94720acba2c97362052c9ff30f46">PyAstContext_AsAstContext</a>(v)&#160;&#160;&#160;(((<a class="el" href="structtriton_1_1bindings_1_1python_1_1AstContext__Object.html">triton::bindings::python::AstContext_Object</a>*)(v))-&gt;ctxt)</td></tr>
+<tr class="memitem:a621c94720acba2c97362052c9ff30f46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pythonObjects_8hpp.html#a621c94720acba2c97362052c9ff30f46">PyAstContext_AsAstContext</a>(v)&#160;&#160;&#160;(((<a class="el" href="structtriton_1_1bindings_1_1python_1_1AstContext__Object.html">triton::bindings::python::AstContext_Object</a>*)(v))-&gt;actx)</td></tr>
 <tr class="separator:a621c94720acba2c97362052c9ff30f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcc4809913d90f71a53d8333c4cb07fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pythonObjects_8hpp.html#abcc4809913d90f71a53d8333c4cb07fd">PyRegister_Check</a>(v)&#160;&#160;&#160;((v)-&gt;ob_type == &amp;<a class="el" href="group__python.html#gaafb8f0f3d35267e102814753003393b9">triton::bindings::python::Register_Type</a>)</td></tr>
 <tr class="separator:abcc4809913d90f71a53d8333c4cb07fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -259,12 +259,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga27ebd662672f0280d00e7e87b6a0a070"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#ga27ebd662672f0280d00e7e87b6a0a070">triton::bindings::python::PyTritonContext</a> (<a class="el" href="group__arch.html#ga72199f3206aa1c9b09b2688cb8d3e7ab">triton::arch::architecture_e</a> arch)</td></tr>
 <tr class="memdesc:ga27ebd662672f0280d00e7e87b6a0a070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the new TritonContext python class.  <a href="group__python.html#ga27ebd662672f0280d00e7e87b6a0a070">More...</a><br /></td></tr>
 <tr class="separator:ga27ebd662672f0280d00e7e87b6a0a070"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga08bf103c31bd6c4314272a063ba326f4"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#ga08bf103c31bd6c4314272a063ba326f4">triton::bindings::python::PyTritonContextRef</a> (<a class="el" href="classtriton_1_1API.html">triton::API</a> &amp;api)</td></tr>
-<tr class="memdesc:ga08bf103c31bd6c4314272a063ba326f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a TritonContext python class which is a reference to another Context.  <a href="group__python.html#ga08bf103c31bd6c4314272a063ba326f4">More...</a><br /></td></tr>
-<tr class="separator:ga08bf103c31bd6c4314272a063ba326f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gade43944420132d353440204f8bbd8485"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#gade43944420132d353440204f8bbd8485">triton::bindings::python::PyAstContext</a> (const <a class="el" href="group__ast.html#gafd6a94ab829d378f1270057ea80f2d05">triton::ast::SharedAstContext</a> &amp;ctxt)</td></tr>
-<tr class="memdesc:gade43944420132d353440204f8bbd8485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an AstContext python class.  <a href="group__python.html#gade43944420132d353440204f8bbd8485">More...</a><br /></td></tr>
-<tr class="separator:gade43944420132d353440204f8bbd8485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05370f45266d2433d5d3d89022b09cd0"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#ga05370f45266d2433d5d3d89022b09cd0">triton::bindings::python::PyTritonContextRef</a> (<a class="el" href="classtriton_1_1Context.html">triton::Context</a> &amp;ctx)</td></tr>
+<tr class="memdesc:ga05370f45266d2433d5d3d89022b09cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a TritonContext python class which is a reference to another <a class="el" href="classtriton_1_1Context.html" title="This is the main Triton Context class.">Context</a>.  <a href="group__python.html#ga05370f45266d2433d5d3d89022b09cd0">More...</a><br /></td></tr>
+<tr class="separator:ga05370f45266d2433d5d3d89022b09cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f5db67fe7e85a468791370c7b84dcfd"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#ga8f5db67fe7e85a468791370c7b84dcfd">triton::bindings::python::PyAstContext</a> (const <a class="el" href="group__ast.html#gafd6a94ab829d378f1270057ea80f2d05">triton::ast::SharedAstContext</a> &amp;actx)</td></tr>
+<tr class="memdesc:ga8f5db67fe7e85a468791370c7b84dcfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an AstContext python class.  <a href="group__python.html#ga8f5db67fe7e85a468791370c7b84dcfd">More...</a><br /></td></tr>
+<tr class="separator:ga8f5db67fe7e85a468791370c7b84dcfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac8c3bded3592d018d4f84b0b2df4919c"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#gac8c3bded3592d018d4f84b0b2df4919c">triton::bindings::python::PyRegister</a> (const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &amp;reg)</td></tr>
 <tr class="memdesc:gac8c3bded3592d018d4f84b0b2df4919c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the Register python class.  <a href="group__python.html#gac8c3bded3592d018d4f84b0b2df4919c">More...</a><br /></td></tr>
 <tr class="separator:gac8c3bded3592d018d4f84b0b2df4919c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -301,7 +301,7 @@ PyTypeObject&#160;</td><td class="memItemRight" valign="bottom"><b>triton::bindi
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">v</td><td>)</td>
-          <td>&#160;&#160;&#160;(((<a class="el" href="structtriton_1_1bindings_1_1python_1_1AstContext__Object.html">triton::bindings::python::AstContext_Object</a>*)(v))-&gt;ctxt)</td>
+          <td>&#160;&#160;&#160;(((<a class="el" href="structtriton_1_1bindings_1_1python_1_1AstContext__Object.html">triton::bindings::python::AstContext_Object</a>*)(v))-&gt;actx)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -805,7 +805,7 @@ PyTypeObject&#160;</td><td class="memItemRight" valign="bottom"><b>triton::bindi
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">v</td><td>)</td>
-          <td>&#160;&#160;&#160;(((<a class="el" href="structtriton_1_1bindings_1_1python_1_1TritonContext__Object.html">triton::bindings::python::TritonContext_Object</a>*)(v))-&gt;api)</td>
+          <td>&#160;&#160;&#160;(((<a class="el" href="structtriton_1_1bindings_1_1python_1_1TritonContext__Object.html">triton::bindings::python::TritonContext_Object</a>*)(v))-&gt;ctx)</td>
         </tr>
       </table>
 </div><div class="memdoc">
