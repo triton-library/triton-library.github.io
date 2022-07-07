@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1536</span>
+   &#160;<span id="projectnumber">version 1.0 build 1537</span>
    </div>
   </td>
  </tr>
@@ -111,6 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a425cc64e63723221ed808b60d33ff541"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathConstraint.html#a425cc64e63723221ed808b60d33ff541">getTakenAddress</a> (void) const</td></tr>
 <tr class="memdesc:a425cc64e63723221ed808b60d33ff541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the address of the taken branch.  <a href="classtriton_1_1engines_1_1symbolic_1_1PathConstraint.html#a425cc64e63723221ed808b60d33ff541">More...</a><br /></td></tr>
 <tr class="separator:a425cc64e63723221ed808b60d33ff541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b5111dc3cc6fdf0573daee276c020b"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathConstraint.html#aa5b5111dc3cc6fdf0573daee276c020b">getSourceAddress</a> (void) const</td></tr>
+<tr class="memdesc:aa5b5111dc3cc6fdf0573daee276c020b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the address of the jump instruction (eg.: "A: jz B", returns A).  <a href="classtriton_1_1engines_1_1symbolic_1_1PathConstraint.html#aa5b5111dc3cc6fdf0573daee276c020b">More...</a><br /></td></tr>
+<tr class="separator:aa5b5111dc3cc6fdf0573daee276c020b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8d72bd98d3d0d234a82d1332460bb9c"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathConstraint.html#ac8d72bd98d3d0d234a82d1332460bb9c">getTakenPredicate</a> (void) const</td></tr>
 <tr class="memdesc:ac8d72bd98d3d0d234a82d1332460bb9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the predicate of the taken branch.  <a href="classtriton_1_1engines_1_1symbolic_1_1PathConstraint.html#ac8d72bd98d3d0d234a82d1332460bb9c">More...</a><br /></td></tr>
 <tr class="separator:ac8d72bd98d3d0d234a82d1332460bb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,7 +299,29 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the comment of the path constraint. </p>
 
-<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00092">92</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00101">101</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa5b5111dc3cc6fdf0573daee276c020b" name="aa5b5111dc3cc6fdf0573daee276c020b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5b5111dc3cc6fdf0573daee276c020b">&#9670;&nbsp;</a></span>getSourceAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> triton::engines::symbolic::PathConstraint::getSourceAddress </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the address of the jump instruction (eg.: "A: jz B", returns A). </p>
+
+<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00055">55</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
 
 </div>
 </div>
@@ -318,7 +343,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the address of the taken branch. </p>
 
-<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00055">55</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00064">64</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
 
 </div>
 </div>
@@ -340,7 +365,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the predicate of the taken branch. </p>
 
-<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00064">64</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00073">73</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
 
 </div>
 </div>
@@ -362,7 +387,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the thread id of the constraint. Returns -1 if thread id is undefined. </p>
 
-<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00082">82</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00091">91</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
 
 </div>
 </div>
@@ -384,7 +409,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if it is not a direct jump. </p>
 
-<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00073">73</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00082">82</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
 
 </div>
 </div>
@@ -428,7 +453,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Sets a comment to the path constraint. </p>
 
-<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00097">97</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00106">106</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
 
 </div>
 </div>
@@ -450,7 +475,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Sets the thread id of the constraint. </p>
 
-<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00087">87</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathConstraint_8cpp_source.html#l00096">96</a> of file <a class="el" href="pathConstraint_8cpp_source.html">pathConstraint.cpp</a>.</p>
 
 </div>
 </div>

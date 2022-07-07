@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1536</span>
+   &#160;<span id="projectnumber">version 1.0 build 1537</span>
    </div>
   </td>
  </tr>
@@ -423,6 +423,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a22bd4f203de02eb7247f2ab3d75b15ee"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__symbolic.html#ga64f6b6eedb05ad304d7550f39f71e6b0">triton::engines::symbolic::SharedSymbolicVariable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1Context.html#a22bd4f203de02eb7247f2ab3d75b15ee">symbolizeMemory</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem, const std::string &amp;symVarAlias=&quot;&quot;)</td></tr>
 <tr class="memdesc:a22bd4f203de02eb7247f2ab3d75b15ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Converts a symbolic memory expression to a symbolic variable.  <a href="classtriton_1_1Context.html#a22bd4f203de02eb7247f2ab3d75b15ee">More...</a><br /></td></tr>
 <tr class="separator:a22bd4f203de02eb7247f2ab3d75b15ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa60214dd8141603964cbf263429e4fc2"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1Context.html#aa60214dd8141603964cbf263429e4fc2">symbolizeMemory</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr, <a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> size)</td></tr>
+<tr class="memdesc:aa60214dd8141603964cbf263429e4fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Converts a symbolic memory area to a 8-bits symbolic variables.  <a href="classtriton_1_1Context.html#aa60214dd8141603964cbf263429e4fc2">More...</a><br /></td></tr>
+<tr class="separator:aa60214dd8141603964cbf263429e4fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24bfaf7343ad05692137955781f068c6"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__symbolic.html#ga64f6b6eedb05ad304d7550f39f71e6b0">triton::engines::symbolic::SharedSymbolicVariable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1Context.html#a24bfaf7343ad05692137955781f068c6">symbolizeRegister</a> (const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &amp;reg, const std::string &amp;symVarAlias=&quot;&quot;)</td></tr>
 <tr class="memdesc:a24bfaf7343ad05692137955781f068c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Converts a symbolic register expression to a symbolic variable.  <a href="classtriton_1_1Context.html#a24bfaf7343ad05692137955781f068c6">More...</a><br /></td></tr>
 <tr class="separator:a24bfaf7343ad05692137955781f068c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -786,7 +789,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Assigns a symbolic expression to a memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00777">777</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00783">783</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -818,7 +821,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Assigns a symbolic expression to a register. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00783">783</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00789">789</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1007,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Clears the current path predicate. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00941">941</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00947">947</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1026,7 +1029,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Concretizes all symbolic memory references. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00971">971</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00977">977</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1048,7 +1051,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Concretizes all symbolic register references. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00977">977</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00983">983</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1070,7 +1073,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Concretizes a specific symbolic memory reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00983">983</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00989">989</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1092,7 +1095,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Concretizes a specific symbolic memory reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00989">989</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00995">995</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1114,7 +1117,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Concretizes a specific symbolic register reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00995">995</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01001">1001</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1158,7 +1161,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the new shared symbolic abstract expression and links this expression to the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00753">753</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00759">759</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1202,7 +1205,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the new shared symbolic memory expression and links this expression to the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00759">759</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00765">765</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1246,7 +1249,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the new shared symbolic register expression and links this expression to the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00765">765</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00771">771</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1284,7 +1287,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the new shared symbolic volatile expression and links this expression to the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00771">771</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00777">777</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1414,7 +1417,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>solver api</b>] - Evaluates a Triton's AST via the solver and returns a concrete value. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01076">1076</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01082">1082</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1659,7 +1662,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Gets the concrete value of a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00863">863</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00869">869</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1769,7 +1772,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the immediate. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00699">699</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00705">705</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1801,7 +1804,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the immediate and defines the immediate as input of the instruction.. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00705">705</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00711">711</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1823,7 +1826,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00711">711</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00717">717</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1855,7 +1858,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the memory and defines the memory cell as input of the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00717">717</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00723">723</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1901,7 +1904,7 @@ template&lt;typename T &gt; </div>
 <p ><b>item1</b>: symbolic variable id<br  />
  <b>item2</b>: model </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01058">1058</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01064">1064</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -1953,7 +1956,7 @@ template&lt;typename T &gt; </div>
 <p ><b>item1</b>: symbolic variable id<br  />
  <b>item2</b>: model </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01064">1064</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01070">1070</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2019,7 +2022,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the operand. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00687">687</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00693">693</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2051,7 +2054,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the operand. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00693">693</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00699">699</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2150,7 +2153,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the logical conjunction vector of path constraints from a given range. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00893">893</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00899">899</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2172,7 +2175,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the logical conjunction vector of path constraints. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00887">887</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00893">893</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2194,7 +2197,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the logical conjunction vector of path constraint of a given thread. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00899">899</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00905">905</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2216,7 +2219,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the current path predicate as an AST of logical conjunction of each taken branch. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00911">911</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00917">917</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2238,7 +2241,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns path predicates which may reach the targeted address. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00917">917</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00923">923</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2304,7 +2307,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the register. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00723">723</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00729">729</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2336,7 +2339,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the AST corresponding to the register and defines the register as input of the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00729">729</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00735">735</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2358,7 +2361,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the size of the path constraints </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00905">905</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00911">911</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2380,7 +2383,7 @@ template&lt;typename T &gt; </div>
 
 <p>Returns the kind of solver as <a class="el" href="group__solver.html#ga30462d433d12584ba03f0496b858b6d3">triton::engines::solver::solver_e</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01028">1028</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01034">1034</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2402,7 +2405,7 @@ template&lt;typename T &gt; </div>
 
 <p>Returns the instance of the initialized solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01034">1034</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01040">1040</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2446,7 +2449,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the shared symbolic expression corresponding to an id. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00857">857</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00863">863</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2468,7 +2471,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns all symbolic expressions as a map of &lt;SymExprId : SymExpr&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01013">1013</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01019">1019</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2490,7 +2493,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the shared symbolic expression corresponding to the memory address. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00789">789</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00795">795</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2512,7 +2515,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the map (&lt;Addr : SymExpr&gt;) of symbolic memory defined. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00801">801</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00807">807</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2544,7 +2547,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the symbolic values of a memory area. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00825">825</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00831">831</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2566,7 +2569,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the symbolic memory value. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00819">819</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00825">825</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2588,7 +2591,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the symbolic memory value. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00813">813</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00819">819</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2610,7 +2613,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the shared symbolic expression corresponding to the parent register. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00807">807</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00813">813</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2632,7 +2635,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the map of symbolic registers defined. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00795">795</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00801">801</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2654,7 +2657,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the symbolic register value. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00831">831</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00837">837</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2676,7 +2679,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the symbolic variable corresponding to the symbolic variable name. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00881">881</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00887">887</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2698,7 +2701,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the symbolic variable corresponding to the symbolic variable id. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00875">875</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00881">881</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2720,7 +2723,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns all symbolic variables as a map of &lt;SymVarId : SymVar&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01019">1019</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01025">1025</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2742,7 +2745,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Returns the tainted addresses. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01124">1124</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01130">1130</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2764,7 +2767,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Returns the tainted registers. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01130">1130</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01136">1136</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2786,7 +2789,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns the list of the tainted symbolic expressions. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01007">1007</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01013">1013</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2808,7 +2811,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Returns the instance of the taint engine. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01118">1118</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01124">1124</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -2973,7 +2976,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns true if memory cell expressions contain symbolic variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00953">953</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00959">959</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3005,7 +3008,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns true if memory cell expressions contain symbolic variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00959">959</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00965">965</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3027,7 +3030,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Returns true if the memory is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01148">1148</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01154">1154</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3059,7 +3062,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Returns true if the address:size is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01142">1142</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01148">1148</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3148,7 +3151,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns true if the register expression contains a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00965">965</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00971">971</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3170,7 +3173,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Returns true if the register is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01154">1154</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01160">1160</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3259,7 +3262,7 @@ template&lt;typename T &gt; </div>
 
 <p>Returns true if an expression is satisfiable. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01070">1070</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01076">1076</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3281,7 +3284,7 @@ template&lt;typename T &gt; </div>
 
 <p>Returns true if the solver is valid. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01052">1052</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01058">1058</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3303,7 +3306,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns true if the symbolic expression ID exists. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00947">947</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00953">953</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3325,7 +3328,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Abstract taint verification. Returns true if the operand is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01136">1136</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01142">1142</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3379,7 +3382,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts an AST and all its references to Dot format. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01339">1339</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01345">1345</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3411,7 +3414,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts a symbolic expression and all its references to Dot format. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01345">1345</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01351">1351</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3455,7 +3458,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts an AST and all its references to LLVM format. <code>fname</code> represents the name of the LLVM function. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01313">1313</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01319">1319</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3499,7 +3502,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts a symbolic expression and all its references to LLVM format. <code>fname</code> represents the name of the LLVM function. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01322">1322</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01328">1328</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3537,7 +3540,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts a symbolic expression and all its references to Python format. If <code>icomment</code> is true, then print instructions assembly in expression comments. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01327">1327</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01333">1333</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3581,7 +3584,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts a symbolic expression and all its references to SMT format. If <code>assert_</code> is true, then (assert &lt;expr&gt;). If <code>icomment</code> is true, then print instructions assembly in expression comments. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01333">1333</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01339">1339</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3613,7 +3616,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns a new shared symbolic expression. Note that if there are simplification passes recorded, simplification will be applied. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00735">735</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00741">741</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3645,7 +3648,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Returns a new symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00741">741</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00747">747</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3667,7 +3670,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Pops the last constraints added to the path predicate. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00935">935</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00941">941</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3849,7 +3852,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Pushes constraint created from node to the current path predicate. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00923">923</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00929">929</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3871,7 +3874,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Pushes constraint to the current path predicate. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00929">929</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00935">935</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -3957,7 +3960,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Removes the symbolic expression corresponding to the id. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00747">747</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00753">753</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4227,7 +4230,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Sets the concrete value of a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00869">869</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00875">875</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4249,7 +4252,7 @@ template&lt;typename T &gt; </div>
 
 <p>Initializes a custom solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01046">1046</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01052">1052</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4303,7 +4306,7 @@ template&lt;typename T &gt; </div>
 
 <p>Initializes a predefined solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01040">1040</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01046">1046</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4325,7 +4328,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>solver api</b>] - Defines a solver memory consumption limit (in megabytes). </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01109">1109</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01115">1115</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4347,7 +4350,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>solver api</b>] - Defines a solver timeout (in milliseconds). </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01103">1103</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01109">1109</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4379,7 +4382,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Sets the flag (taint or untaint) to an abstract operand (Register or Memory). </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01160">1160</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01166">1166</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4411,7 +4414,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Sets the flag (taint or untaint) to a memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01166">1166</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01172">1172</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4443,7 +4446,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Sets the flag (taint or untaint) to a register. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01173">1173</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01179">1179</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4497,7 +4500,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block. If <code>padding</code> is true, keep addresses aligned and padds with NOP instructions. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00851">851</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00857">857</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4535,7 +4538,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Processes all recorded AST simplifications, uses solver's simplifications if <code>usingSolver</code> is true or LLVM is <code>usingLLVM</code> is true. Returns the simplified AST. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00837">837</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00843">843</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4557,7 +4560,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>lifting api</b>] - Lifts and simplify an AST using LLVM </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01351">1351</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01357">1357</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4579,7 +4582,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>solver api</b>] - Converts a Triton's AST to a solver's AST, perform a simplification and returns a Triton's AST. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01092">1092</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01098">1098</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4601,7 +4604,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Slices all expressions from a given one. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01001">1001</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01007">1007</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4644,7 +4647,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a22bd4f203de02eb7247f2ab3d75b15ee" name="a22bd4f203de02eb7247f2ab3d75b15ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22bd4f203de02eb7247f2ab3d75b15ee">&#9670;&nbsp;</a></span>symbolizeMemory()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a22bd4f203de02eb7247f2ab3d75b15ee">&#9670;&nbsp;</a></span>symbolizeMemory() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4672,6 +4675,38 @@ template&lt;typename T &gt; </div>
 <p>[<b>symbolic api</b>] - Converts a symbolic memory expression to a symbolic variable. </p>
 
 <p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00675">675</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa60214dd8141603964cbf263429e4fc2" name="aa60214dd8141603964cbf263429e4fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa60214dd8141603964cbf263429e4fc2">&#9670;&nbsp;</a></span>symbolizeMemory() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void triton::Context::symbolizeMemory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[<b>symbolic api</b>] - Converts a symbolic memory area to a 8-bits symbolic variables. </p>
+
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00681">681</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4703,7 +4738,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>symbolic api</b>] - Converts a symbolic register expression to a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00681">681</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00687">687</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4747,7 +4782,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>synthesizer api</b>] - Synthesizes a given node. If <code>constant</code> is true, performa a constant synthesis. If <code>opaque</code> is true, perform opaque constant synthesis. If <code>subexpr</code> is true, analyze children AST. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01303">1303</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01309">1309</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4779,7 +4814,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints MemoryImmediate with assignment. Returns always false. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01264">1264</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01270">1270</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4811,7 +4846,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints MemoryMemory with assignment. Returns true if the memDst is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01270">1270</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01276">1276</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4843,7 +4878,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints MemoryRegister with assignment. Returns true if the memDst is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01276">1276</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01282">1282</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4875,7 +4910,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Abstract assignment tainting. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01258">1258</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01264">1264</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4907,7 +4942,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints RegisterImmediate with assignment. Returns always false. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01282">1282</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01288">1288</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4939,7 +4974,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints RegisterMemory with assignment. Returns true if the regDst is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01288">1288</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01294">1294</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4971,7 +5006,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints RegisterRegister with assignment. Returns true if the regDst is tainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01294">1294</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01300">1300</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -4993,7 +5028,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints a memory. Returns TAINTED if the memory has been tainted correctly. Otherwise it returns the last defined state. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01186">1186</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01192">1192</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -5015,7 +5050,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints an address. Returns TAINTED if the address has been tainted correctly. Otherwise it returns the last defined state. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01180">1180</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01186">1186</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -5037,7 +5072,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints a register. Returns TAINTED if the register has been tainted correctly. Otherwise it returns the last defined state. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01192">1192</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01198">1198</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -5069,7 +5104,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints MemoryImmediate with union. Returns true if the memDst is TAINTED. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01222">1222</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01228">1228</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -5101,7 +5136,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints MemoryMemory with union. Returns true if the memDst or memSrc are TAINTED. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01228">1228</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01234">1234</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -5133,7 +5168,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints MemoryRegister with union. Returns true if the memDst or regSrc are TAINTED. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01234">1234</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01240">1240</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -5165,7 +5200,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Abstract union tainting. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01216">1216</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01222">1222</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -5197,7 +5232,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints RegisterImmediate with union. Returns true if the regDst is TAINTED. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01240">1240</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01246">1246</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -5229,7 +5264,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints RegisterMemory with union. Returns true if the regDst or memSrc are TAINTED. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01246">1246</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01252">1252</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -5261,7 +5296,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Taints RegisterRegister with union. Returns true if the regDst or regSrc are TAINTED. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01252">1252</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01258">1258</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -5283,7 +5318,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Untaints a memory. Returns !TAINTED if the memory has been untainted correctly. Otherwise it returns the last defined state. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01204">1204</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01210">1210</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -5305,7 +5340,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Untaints an address. Returns !TAINTED if the address has been untainted correctly. Otherwise it returns the last defined state. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01198">1198</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01204">1204</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
@@ -5327,7 +5362,7 @@ template&lt;typename T &gt; </div>
 
 <p>[<b>taint api</b>] - Untaints a register. Returns !TAINTED if the register has been untainted correctly. Otherwise it returns the last defined state. </p>
 
-<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01210">1210</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l01216">1216</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
 </div>
 </div>
