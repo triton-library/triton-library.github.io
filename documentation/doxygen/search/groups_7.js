@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['python_0',['Python',['../group__python.html',1,'']]]
+  ['oracles_0',['Oracles',['../group__oracles.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lifters_0',['Lifters',['../group__lifters.html',1,'']]]
+  ['i386_0',['I386',['../group__i386.html',1,'']]]
 ];

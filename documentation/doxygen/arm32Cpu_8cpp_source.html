@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1537</span>
+   &#160;<span id="projectnumber">version 1.0 build 1545</span>
    </div>
   </td>
  </tr>
@@ -767,10 +767,10 @@ $(function() {
 <div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>        }</div>
 <div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span> </div>
 <div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span> </div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a3a17d6bacd1a20cd3c74174cf5ce5324">  690</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#ab0c5dd83c12dadc8345f1603f67fec6b">Arm32Cpu::setConcreteMemoryAreaValue</a>(<a class="code hl_typedef" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> baseAddr, <span class="keyword">const</span> <a class="code hl_typedef" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* area, <a class="code hl_typedef" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> size) {</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a1df600eb00617e4617ee2b8bc4700e80">  690</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#ab0c5dd83c12dadc8345f1603f67fec6b">Arm32Cpu::setConcreteMemoryAreaValue</a>(<a class="code hl_typedef" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> baseAddr, <span class="keyword">const</span> <span class="keywordtype">void</span>* area, <a class="code hl_typedef" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> size) {</div>
 <div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>          this-&gt;<a class="code hl_variable" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a93f48be83d688a59fff483a4d37209bf">memory</a>.reserve(size + this-&gt;<a class="code hl_variable" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a93f48be83d688a59fff483a4d37209bf">memory</a>.size());</div>
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>          <span class="keywordflow">for</span> (<a class="code hl_typedef" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> index = 0; index &lt; size; index++) {</div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>            this-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#afc21c39e2e7d641a9b126da044b20170">setConcreteMemoryValue</a>(baseAddr+index, area[index]);</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>            this-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#afc21c39e2e7d641a9b126da044b20170">setConcreteMemoryValue</a>(baseAddr+index, <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_typedef" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>*<span class="keyword">&gt;</span>(area)[index]);</div>
 <div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>          }</div>
 <div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>        }</div>
 <div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span> </div>

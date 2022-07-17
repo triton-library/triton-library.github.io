@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1537</span>
+   &#160;<span id="projectnumber">version 1.0 build 1545</span>
    </div>
   </td>
  </tr>
@@ -1049,11 +1049,11 @@ $(function() {
 <div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>      }</div>
 <div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span> </div>
 <div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span> </div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a9ba5385cfabd39073a194454b29a936a">  972</a></span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a7850a61ff52c11d5ad014ab5479cf50f">x8664Cpu::setConcreteMemoryAreaValue</a>(<a class="code hl_typedef" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> baseAddr, <span class="keyword">const</span> <a class="code hl_typedef" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>* area, <a class="code hl_typedef" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> size) {</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno"><a class="line" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a986b7cbd817d358c85de25ff07706d2e">  972</a></span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a7850a61ff52c11d5ad014ab5479cf50f">x8664Cpu::setConcreteMemoryAreaValue</a>(<a class="code hl_typedef" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> baseAddr, <span class="keyword">const</span> <span class="keywordtype">void</span>* area, <a class="code hl_typedef" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> size) {</div>
 <div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>        <span class="comment">// Pre-reserving the memory. We modified the original robin_map to not force rehash on every reserve if not needed.</span></div>
 <div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>        this-&gt;<a class="code hl_variable" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a38a55299fa6488a08facfb51992fc688">memory</a>.reserve(size + this-&gt;<a class="code hl_variable" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a38a55299fa6488a08facfb51992fc688">memory</a>.size());</div>
 <div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> index = 0; index &lt; size; index++) {</div>
-<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>          this-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a9dc4cd5535840355f9497874338039b5">setConcreteMemoryValue</a>(baseAddr+index, area[index]);</div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>          this-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a9dc4cd5535840355f9497874338039b5">setConcreteMemoryValue</a>(baseAddr+index, <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_typedef" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>*<span class="keyword">&gt;</span>(area)[index]);</div>
 <div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>        }</div>
 <div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>      }</div>
 <div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span> </div>

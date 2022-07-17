@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1537</span>
+   &#160;<span id="projectnumber">version 1.0 build 1545</span>
    </div>
   </td>
  </tr>
@@ -162,7 +162,7 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classtriton_1_1Context.html#ad1f97c3d86908775fee0bf1e9590d4b5">getSymbolicRegisterValue</a>(const triton::arch::Register &amp;reg)</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classtriton_1_1Context.html#a980ea1da8623a39ecc766c539f97d42f">getSymbolicVariable</a>(triton::usize symVarId) const</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classtriton_1_1Context.html#ab5b085ca97f3e741dcc267ddaf0009ea">getSymbolicVariable</a>(const std::string &amp;symVarName) const</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classtriton_1_1Context.html#af5bb95dd282076f32c8bc9b23cc3d1a0">getSymbolicVariables</a>(void) const</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classtriton_1_1Context.html#abc88d3e473feb408490d8a8f983d6029">getSymbolicVariables</a>(void) const</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classtriton_1_1Context.html#acc6319dde116a0f9d07e35ccd7ba7713">getTaintedMemory</a>(void) const</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classtriton_1_1Context.html#a3cdbf4ecd22dac8c446efe9f2403c3e7">getTaintedRegisters</a>(void) const</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classtriton_1_1Context.html#a83a43670cfba03551499b42ce252d35b">getTaintedSymbolicExpressions</a>(void) const</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
@@ -216,7 +216,7 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classtriton_1_1Context.html#a0aced0e97f84b132580ed5605898c97d">setArchitecture</a>(triton::arch::architecture_e arch)</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classtriton_1_1Context.html#a4ae94b04b1938a23fde8e9291a755ea1">setAstRepresentationMode</a>(triton::ast::representations::mode_e mode)</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classtriton_1_1Context.html#ac64d10539e18832311b6899900179c8d">setConcreteMemoryAreaValue</a>(triton::uint64 baseAddr, const std::vector&lt; triton::uint8 &gt; &amp;values)</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classtriton_1_1Context.html#ad57f4052a05865e08d30921f58043166">setConcreteMemoryAreaValue</a>(triton::uint64 baseAddr, const triton::uint8 *area, triton::usize size)</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classtriton_1_1Context.html#a873c9dae1a11b2b6aaf1ef844858f477">setConcreteMemoryAreaValue</a>(triton::uint64 baseAddr, const void *area, triton::usize size)</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classtriton_1_1Context.html#a74c5b93883d9c44161b69aa0522b2522">setConcreteMemoryValue</a>(triton::uint64 addr, triton::uint8 value)</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classtriton_1_1Context.html#a5d10006ebecb0a40c7c693513b9922e5">setConcreteMemoryValue</a>(const triton::arch::MemoryAccess &amp;mem, const triton::uint512 &amp;value)</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classtriton_1_1Context.html#aed51d8ce1fd3ab61ff88dcd1f1c83da9">setConcreteRegisterValue</a>(const triton::arch::Register &amp;reg, const triton::uint512 &amp;value)</td><td class="entry"><a class="el" href="classtriton_1_1Context.html">triton::Context</a></td><td class="entry"></td></tr>

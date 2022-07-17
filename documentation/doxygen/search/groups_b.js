@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['utils_0',['Utils',['../group__utils.html',1,'']]]
+  ['taint_0',['Taint',['../group__taint.html',1,'']]],
+  ['triton_1',['Triton',['../group__triton.html',1,'']]]
 ];
