@@ -1,4 +1,12 @@
 <map id="/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/liftingToLLVM.hpp" name="/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/liftingToLLVM.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,241,61"/>
-<area shape="rect" id="node2" href="$liftingToLLVM_8cpp.html" title=" " alt="" coords="6,109,241,165"/>
+<area shape="rect" id="node1" title=" " alt="" coords="55,5,291,61"/>
+<area shape="rect" id="node2" href="$liftingToLLVM_8cpp.html" title=" " alt="" coords="325,436,560,492"/>
+<area shape="rect" id="node3" href="$liftingEngine_8hpp.html" title=" " alt="" coords="242,109,474,165"/>
+<area shape="rect" id="node4" href="$context_8hpp.html" title=" " alt="" coords="341,213,541,269"/>
+<area shape="rect" id="node5" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="45,317,226,388"/>
+<area shape="rect" id="node6" href="$callbacks_8cpp.html" title=" " alt="" coords="250,325,429,381"/>
+<area shape="rect" id="node7" href="$context_8cpp.html" title=" " alt="" coords="454,325,631,381"/>
+<area shape="rect" id="node8" href="$symbolicSimplification_8cpp.html" title=" " alt="" coords="655,325,974,381"/>
+<area shape="rect" id="node9" href="$llvmToTriton_8hpp.html" title=" " alt="" coords="998,325,1228,381"/>
+<area shape="rect" id="node10" href="$llvmToTriton_8cpp.html" title=" " alt="" coords="1018,436,1208,492"/>
 </map>

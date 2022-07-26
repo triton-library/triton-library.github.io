@@ -432,9 +432,9 @@
 <path fill="none" stroke="midnightblue" d="M2517.29,-818.97C2502.08,-809.66 2485.02,-798.74 2470,-788 2434.55,-762.66 2395.91,-730.14 2372.32,-709.68"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="2515.63,-822.06 2526,-824.25 2519.26,-816.07 2515.63,-822.06"/>
 </g>
-<!-- Node95 -->
+<!-- Node97 -->
 <g id="node50" class="node">
-<title>Node95</title>
+<title>Node97</title>
 <g id="a_node50"><a xlink:href="shortcutRegister_8hpp.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="3120.5,-590.5 3120.5,-631.5 3313.5,-631.5 3313.5,-590.5 3120.5,-590.5"/>
 <text text-anchor="start" x="3128.5" y="-619.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
@@ -443,9 +443,9 @@
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node95 -->
+<!-- Node1&#45;&gt;Node97 -->
 <g id="edge144" class="edge">
-<title>Node1&#45;&gt;Node95</title>
+<title>Node1&#45;&gt;Node97</title>
 <path fill="none" stroke="midnightblue" d="M2645.67,-842.15C2770.92,-838.18 2996.86,-825.86 3068,-788 3136.56,-751.51 3186.78,-669.25 3207.08,-631.55"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="2645.24,-838.66 2635.35,-842.47 2645.45,-845.66 2645.24,-838.66"/>
 </g>
@@ -1467,9 +1467,9 @@
 <path fill="none" stroke="midnightblue" d="M2466.08,-686.64C2595.68,-683.1 2811.01,-671.17 2992,-632 3046.82,-620.14 3057.13,-605.61 3111,-590 3160.98,-575.52 3217.55,-562.38 3263.74,-552.47"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="2465.65,-683.15 2455.74,-686.91 2465.83,-690.15 2465.65,-683.15"/>
 </g>
-<!-- Node95&#45;&gt;Node28 -->
+<!-- Node97&#45;&gt;Node28 -->
 <g id="edge145" class="edge">
-<title>Node95&#45;&gt;Node28</title>
+<title>Node97&#45;&gt;Node28</title>
 <path fill="none" stroke="midnightblue" d="M3196.22,-581.78C3171.95,-545.25 3137.25,-479.56 3155,-423 3175.26,-358.42 3221.74,-362.58 3242,-298 3259.43,-242.45 3281.37,-209.9 3242,-167 3210.4,-132.57 2869.12,-138.49 2823,-131 2820.51,-130.6 2817.99,-130.16 2815.45,-129.69"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="3193.59,-584.14 3202.13,-590.41 3199.37,-580.18 3193.59,-584.14"/>
 </g>

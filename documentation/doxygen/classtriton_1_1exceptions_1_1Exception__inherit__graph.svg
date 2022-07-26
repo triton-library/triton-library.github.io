@@ -118,7 +118,7 @@
 <g id="node35" class="node">
 <title>Node35</title>
 <g id="a_node35"><a xlink:href="classtriton_1_1exceptions_1_1PyCallbacks.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="271,-75.5 271,-105.5 373,-105.5 373,-75.5 271,-75.5"/>
+<polygon fill="white" stroke="#bfbfbf" points="271,-75.5 271,-105.5 373,-105.5 373,-75.5 271,-75.5"/>
 <text text-anchor="start" x="279" y="-93.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="322" y="-82.5" font-family="Helvetica,sans-Serif" font-size="10.00">::PyCallbacks</text>
 </a>
