@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1545</span>
+   &#160;<span id="projectnumber">version 1.0 build 1547</span>
    </div>
   </td>
  </tr>
@@ -405,10 +405,14 @@ $(function() {
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>REG_SPEC(GS, gs, triton::bitsize::qword-1, 0, GS, triton::bitsize::dword-1, 0, GS, true) // GS Segment</div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>REG_SPEC(SS, ss, triton::bitsize::qword-1, 0, SS, triton::bitsize::dword-1, 0, SS, true) // Stack Segment</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>#undef REG_SPEC</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>#undef REG_SPEC_NO_CAPSTONE</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>#pragma warning(default:4067)</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>/* Model-Specific Registers (MSR) */</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>REG_SPEC_NO_CAPSTONE(TSC, tsc, triton::bitsize::qword-1, 0, TSC, triton::bitsize::qword-1, 0, TSC, true) // Time-Stamp Counter</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>#undef REG_SPEC</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>#undef REG_SPEC_NO_CAPSTONE</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>#pragma warning(default:4067)</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.14-->
 <!-- start footer part -->

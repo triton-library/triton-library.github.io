@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1545</span>
+   &#160;<span id="projectnumber">version 1.0 build 1547</span>
    </div>
   </td>
  </tr>
@@ -90,7 +90,8 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for triton::arch::x86::x86Cpu:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classtriton_1_1arch_1_1x86_1_1x86Cpu__inherit__graph.svg" width="355" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classtriton_1_1arch_1_1x86_1_1x86Cpu__inherit__graph.svg" width="355" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -125,6 +126,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d2b8659bba92625b8f3c21a47adfc25"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a3d2b8659bba92625b8f3c21a47adfc25">isEFER</a> (<a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a> regId) const</td></tr>
 <tr class="memdesc:a3d2b8659bba92625b8f3c21a47adfc25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if regId is an EFER register.  <a href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a3d2b8659bba92625b8f3c21a47adfc25">More...</a><br /></td></tr>
 <tr class="separator:a3d2b8659bba92625b8f3c21a47adfc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85cf8a536f358573368f5790cd43bf85"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a85cf8a536f358573368f5790cd43bf85">isTSC</a> (<a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a> regId) const</td></tr>
+<tr class="memdesc:a85cf8a536f358573368f5790cd43bf85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if regId is an TSC register.  <a href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a85cf8a536f358573368f5790cd43bf85">More...</a><br /></td></tr>
+<tr class="separator:a85cf8a536f358573368f5790cd43bf85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a571e79a7aaec687f68575a57307b23d3"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a571e79a7aaec687f68575a57307b23d3">isAVX256</a> (<a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a> regId) const</td></tr>
 <tr class="memdesc:a571e79a7aaec687f68575a57307b23d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if regId is a AVX-256 (YMM) register.  <a href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a571e79a7aaec687f68575a57307b23d3">More...</a><br /></td></tr>
 <tr class="separator:a571e79a7aaec687f68575a57307b23d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -559,6 +563,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a860afd71ebff039c27a21aa1c3be7e76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a860afd71ebff039c27a21aa1c3be7e76">mxcsr_mask</a> [<a class="el" href="group__size.html#ga3767b52e059640458d61798d32dd91cf">triton::size::dword</a>]</td></tr>
 <tr class="memdesc:a860afd71ebff039c27a21aa1c3be7e76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the SSE <a class="el" href="classtriton_1_1arch_1_1Register.html" title="This class is used when an instruction has a register operand.">Register</a> State Mask.  <a href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a860afd71ebff039c27a21aa1c3be7e76">More...</a><br /></td></tr>
 <tr class="separator:a860afd71ebff039c27a21aa1c3be7e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e461944f65ebec592c18eddd2c3d5fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a0e461944f65ebec592c18eddd2c3d5fa">tsc</a> [<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td></tr>
+<tr class="memdesc:a0e461944f65ebec592c18eddd2c3d5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete value of the TSC <a class="el" href="classtriton_1_1arch_1_1Register.html" title="This class is used when an instruction has a register operand.">Register</a>.  <a href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a0e461944f65ebec592c18eddd2c3d5fa">More...</a><br /></td></tr>
+<tr class="separator:a0e461944f65ebec592c18eddd2c3d5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classtriton_1_1arch_1_1x86_1_1x86Specifications"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classtriton_1_1arch_1_1x86_1_1x86Specifications')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Specifications.html">triton::arch::x86::x86Specifications</a></td></tr>
 <tr class="memitem:a7c26e6b3a0faf09d22104503287265d2 inherit pro_attribs_classtriton_1_1arch_1_1x86_1_1x86Specifications"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a>, const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Specifications.html#a7c26e6b3a0faf09d22104503287265d2">id2reg</a></td></tr>
 <tr class="memdesc:a7c26e6b3a0faf09d22104503287265d2 inherit pro_attribs_classtriton_1_1arch_1_1x86_1_1x86Specifications"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of registers specification available for this architecture.  <a href="classtriton_1_1arch_1_1x86_1_1x86Specifications.html#a7c26e6b3a0faf09d22104503287265d2">More...</a><br /></td></tr>
@@ -673,7 +680,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a821c158cbb04dbe836cf8ac90ea110fa">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00133">133</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00134">134</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -705,7 +712,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a1d2acc27d27e053185e9accf5aaf0eef">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01482">1482</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01498">1498</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -747,7 +754,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a927d8ae4a3b405e5f387b86482e302e5">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01487">1487</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01503">1503</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -779,7 +786,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ab1247326d32d49d1bdecfd389ff02069">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00411">411</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00423">423</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -811,7 +818,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#af7193d093aa8638bb401cc40cdf126a7">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00314">314</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00322">322</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -859,7 +866,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ac211da8bab4f3d086018bfa5ead0d528">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00558">558</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00570">570</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -901,7 +908,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a33bd38c6a9092d9b03b9d23036ed5db1">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00537">537</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00549">549</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -943,7 +950,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ad7e06d969e1eeee1b0741bf857123dae">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00524">524</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00536">536</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -985,7 +992,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#af546439c3915bc2269a582eabd08462a">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00568">568</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00580">580</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1017,7 +1024,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a8f2095be6c5de989ca21d73b0897ffc1">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00212">212</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00214">214</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1049,7 +1056,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a4cca4979b2141eb6f2ed13f70bda6389">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00391">391</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00403">403</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1081,7 +1088,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ab4318dc7fdd36992a994d13c11212b31">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00396">396</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00408">408</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1113,7 +1120,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a6de41d3bdeb2a590417c7f261ae42f3e">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00319">319</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00327">327</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1145,7 +1152,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a5a0fe3b0b96c14f43cc5dc32cdae6aa0">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00401">401</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00413">413</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1177,7 +1184,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#af27c0c557f728b922b5ff304a152974e">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00380">380</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00392">392</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1209,7 +1216,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a68265bb44ac85eba5671a56df5d76303">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00371">371</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00383">383</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1241,7 +1248,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ad75a59d368917735292247ac70288f9e">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00406">406</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00418">418</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1273,7 +1280,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a028f9616a2ab44f3218cd36e5341935b">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00308">308</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00316">316</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1305,7 +1312,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a8e29389c5d2302065d175669cf2e4195">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00303">303</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00311">311</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1327,7 +1334,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a AVX-256 (YMM) register. </p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00278">278</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00286">286</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1359,7 +1366,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a8c7730f098fa7c587016f0ea1b3dead9">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01467">1467</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01483">1483</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1401,7 +1408,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a6aa27e79992ede45d7c3162fb3c2a881">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01472">1472</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01488">1488</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1423,7 +1430,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a control (cr) register. </p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00283">283</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00291">291</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1445,7 +1452,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a debug (dr) register. </p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00288">288</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00296">296</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1467,7 +1474,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is an EFER register. </p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00273">273</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00276">276</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1499,7 +1506,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a7c77c6c4461b0b74a1c7379c20d56f4c">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00217">217</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00219">219</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1521,7 +1528,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a FPU register. </p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00268">268</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00271">271</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1543,7 +1550,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a GRP. </p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00248">248</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00251">251</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1575,7 +1582,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a0812d3f5608f4a70711293159ed699da">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01456">1456</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01472">1472</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1597,7 +1604,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a MMX register. </p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00253">253</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00256">256</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1629,7 +1636,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ab3a2e06c69421580e575a3d4965d9eb8">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00227">227</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00229">229</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1661,7 +1668,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a513052408afd395d7572a52baa93e3f4">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00243">243</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00246">246</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1683,7 +1690,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a Segment. </p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00293">293</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00301">301</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1705,7 +1712,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a SSE register. </p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00263">263</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00266">266</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1727,7 +1734,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a STX register. </p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00258">258</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00261">261</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1759,7 +1766,29 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ab34864c9c42c870ea3b4cabf14fe2258">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01445">1445</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01461">1461</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a85cf8a536f358573368f5790cd43bf85" name="a85cf8a536f358573368f5790cd43bf85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85cf8a536f358573368f5790cd43bf85">&#9670;&nbsp;</a></span>isTSC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool triton::arch::x86::x86Cpu::isTSC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a>&#160;</td>
+          <td class="paramname"><em>regId</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if regId is an TSC register. </p>
+
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00281">281</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1791,7 +1820,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#af0219fa0b7ca00f0c312c2ed8d42cc31">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00298">298</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00306">306</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1813,7 +1842,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Copies a <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html" title="This class is used to describe the x86 (32-bits) spec.">x86Cpu</a> class. </p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00206">206</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00208">208</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1856,7 +1885,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a00fa084b0cdc95ea20efeaa50dce8f01">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00801">801</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00815">815</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1905,7 +1934,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a643017452e0e31aeaabb607a361ae07f">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00809">809</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00823">823</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1948,7 +1977,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ad6f554cd771f71d5e1e3ad3dbe7bffb5">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00780">780</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00794">794</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1991,7 +2020,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#aee1b128f7310426dd678fc4ffe7c8a41">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00773">773</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00787">787</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -2034,7 +2063,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a4437496fd5d8875c73f51da0f2150910">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00817">817</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l00831">831</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -2066,7 +2095,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a583e60863a9bce0c902d07fe4b0af29a">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01462">1462</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01478">1478</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -2098,7 +2127,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a324371b24a21a1438d4268e9ebbe9297">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01451">1451</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8cpp_source.html#l01467">1467</a> of file <a class="el" href="x86Cpu_8cpp_source.html">x86Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -3610,6 +3639,32 @@ Protected Attributes</h2></td></tr>
 <p>Concrete value of st7. </p>
 
 <p class="definition">Definition at line <a class="el" href="x86Cpu_8hpp_source.html#l00116">116</a> of file <a class="el" href="x86Cpu_8hpp_source.html">x86Cpu.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0e461944f65ebec592c18eddd2c3d5fa" name="a0e461944f65ebec592c18eddd2c3d5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e461944f65ebec592c18eddd2c3d5fa">&#9670;&nbsp;</a></span>tsc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> triton::arch::x86::x86Cpu::tsc[<a class="el" href="group__size.html#gadc8253452741a1145b00b468764e418c">triton::size::qword</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Concrete value of the TSC <a class="el" href="classtriton_1_1arch_1_1Register.html" title="This class is used when an instruction has a register operand.">Register</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="x86Cpu_8hpp_source.html#l00212">212</a> of file <a class="el" href="x86Cpu_8hpp_source.html">x86Cpu.hpp</a>.</p>
 
 </div>
 </div>

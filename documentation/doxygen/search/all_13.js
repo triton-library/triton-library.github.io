@@ -69,8 +69,9 @@ var searchData=
   ['tritontoz3_2ecpp_66',['tritonToZ3.cpp',['../tritonToZ3_8cpp.html',1,'']]],
   ['tritontoz3_2ehpp_67',['tritonToZ3.hpp',['../tritonToZ3_8hpp.html',1,'']]],
   ['tritontypes_2ehpp_68',['tritonTypes.hpp',['../tritonTypes_8hpp.html',1,'']]],
-  ['type_69',['type',['../classtriton_1_1engines_1_1symbolic_1_1SymbolicVariable.html#a89898d03f5fa96a62a136b9e1f983068',1,'triton::engines::symbolic::SymbolicVariable::type()'],['../classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html#ac8cf47e05785aa4f1d85d2e370d73fea',1,'triton::engines::symbolic::SymbolicExpression::type()'],['../classtriton_1_1arch_1_1Instruction.html#a7f2d3c7f6c6642a434e3bc431b6350b5',1,'triton::arch::Instruction::type()'],['../classtriton_1_1ast_1_1AbstractNode.html#a46c8ef1e1e32ccc9305d8160146fabfc',1,'triton::ast::AbstractNode::type()']]],
-  ['utils_70',['utils',['../namespacetriton_1_1utils.html',1,'triton']]],
-  ['x86_71',['x86',['../namespacetriton_1_1arch_1_1x86.html',1,'triton::arch']]],
-  ['x8664_72',['x8664',['../namespacetriton_1_1stubs_1_1x8664.html',1,'triton::stubs']]]
+  ['tsc_69',['tsc',['../classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a0e461944f65ebec592c18eddd2c3d5fa',1,'triton::arch::x86::x86Cpu::tsc()'],['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#ab6c8c6245f11bbe3f7c0ba819d0e6f43',1,'triton::arch::x86::x8664Cpu::tsc()']]],
+  ['type_70',['type',['../classtriton_1_1engines_1_1symbolic_1_1SymbolicVariable.html#a89898d03f5fa96a62a136b9e1f983068',1,'triton::engines::symbolic::SymbolicVariable::type()'],['../classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html#ac8cf47e05785aa4f1d85d2e370d73fea',1,'triton::engines::symbolic::SymbolicExpression::type()'],['../classtriton_1_1arch_1_1Instruction.html#a7f2d3c7f6c6642a434e3bc431b6350b5',1,'triton::arch::Instruction::type()'],['../classtriton_1_1ast_1_1AbstractNode.html#a46c8ef1e1e32ccc9305d8160146fabfc',1,'triton::ast::AbstractNode::type()']]],
+  ['utils_71',['utils',['../namespacetriton_1_1utils.html',1,'triton']]],
+  ['x86_72',['x86',['../namespacetriton_1_1arch_1_1x86.html',1,'triton::arch']]],
+  ['x8664_73',['x8664',['../namespacetriton_1_1stubs_1_1x8664.html',1,'triton::stubs']]]
 ];
