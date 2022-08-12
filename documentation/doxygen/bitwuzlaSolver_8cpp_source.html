@@ -339,20 +339,21 @@ $(function() {
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="comment">// Convert long bitvector string by 64-bit chunks.</span></div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keywordflow">while</span> (pos &lt; len) {</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>          <a class="code hl_typedef" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> sublen = std::min(len - pos, 64UL);</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>          <span class="keywordtype">char</span> substr[sublen + 1];</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>          <a class="code hl_typedef" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> sublen = std::min(len - pos, (<a class="code hl_typedef" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a>) 64UL);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>          <span class="keywordtype">char</span>* substr = <span class="keyword">new</span> <span class="keywordtype">char</span>[sublen + 1];</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>          std::memcpy(substr, value + pos, sublen);</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>          substr[sublen] = <span class="charliteral">&#39;\0&#39;</span>;</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>          res = (res &lt;&lt; sublen) + std::strtoull(substr, 0, 2L);</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>          pos += sublen;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        }</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <span class="keywordflow">return</span> res;</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>      }</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    };</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  };</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>};</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>          <span class="keyword">delete</span>[] substr;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        }</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">return</span> res;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      }</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    };</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  };</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>};</div>
 <div class="ttc" id="aastContext_8hpp_html"><div class="ttname"><a href="astContext_8hpp.html">astContext.hpp</a></div></div>
 <div class="ttc" id="abitwuzlaSolver_8hpp_html"><div class="ttname"><a href="bitwuzlaSolver_8hpp.html">bitwuzlaSolver.hpp</a></div></div>
 <div class="ttc" id="aclassmath_1_1wide__integer_1_1uintwide__t_html"><div class="ttname"><a href="classmath_1_1wide__integer_1_1uintwide__t.html">math::wide_integer::uintwide_t</a></div><div class="ttdef"><b>Definition:</b> <a href="uintwide__t_8h_source.html#l01273">uintwide_t.h:1274</a></div></div>
