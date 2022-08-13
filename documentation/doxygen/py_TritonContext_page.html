@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1547</span>
+   &#160;<span id="projectnumber">version 1.0 build 1549</span>
    </div>
   </td>
  </tr>
@@ -143,13 +143,13 @@ Methods</h2>
  Returns the AST context to create and modify nodes.</li>
 <li><b><a class="el" href="py_AST_REPRESENTATION_page.html">AST_REPRESENTATION</a> getAstRepresentationMode(void)</b><br  />
  Returns the current AST representation mode.</li>
-<li><b>bytes getConcreteMemoryAreaValue(integer baseAddr, integer size)</b><br  />
+<li><b>bytes getConcreteMemoryAreaValue(integer addr, integer size, bool callbacks=True)</b><br  />
  Returns the concrete value of a memory area.</li>
-<li><b>integer getConcreteMemoryValue(integer addr)</b><br  />
+<li><b>integer getConcreteMemoryValue(integer addr, bool callbacks=True)</b><br  />
  Returns the concrete value of a memory cell.</li>
-<li><b>integer getConcreteMemoryValue(<a class="el" href="py_MemoryAccess_page.html">MemoryAccess</a> mem)</b><br  />
+<li><b>integer getConcreteMemoryValue(<a class="el" href="py_MemoryAccess_page.html">MemoryAccess</a> mem, bool callbacks=True)</b><br  />
  Returns the concrete value of memory cells.</li>
-<li><b>integer getConcreteRegisterValue(<a class="el" href="py_Register_page.html">Register</a> reg)</b><br  />
+<li><b>integer getConcreteRegisterValue(<a class="el" href="py_Register_page.html">Register</a> reg, bool callbacks=True)</b><br  />
  Returns the concrete value of a register.</li>
 <li><b>integer getConcreteVariableValue(<a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> symVar)</b><br  />
  Returns the concrete value of a symbolic variable.</li>
@@ -279,15 +279,15 @@ Methods</h2>
  Initializes an architecture. This function must be called before any call to the rest of the API.</li>
 <li><b>void setAstRepresentationMode(<a class="el" href="py_AST_REPRESENTATION_page.html">AST_REPRESENTATION</a> mode)</b><br  />
  Sets the AST representation.</li>
-<li><b>void setConcreteMemoryAreaValue(integer baseAddr, [integer,])</b><br  />
+<li><b>void setConcreteMemoryAreaValue(integer addr, [integer,], bool callbacks=True)</b><br  />
  Sets the concrete value of a memory area. Note that setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this.</li>
-<li><b>void setConcreteMemoryAreaValue(integer baseAddr, bytes opcodes)</b><br  />
+<li><b>void setConcreteMemoryAreaValue(integer addr, bytes opcodes, bool callbacks=True)</b><br  />
  Sets the concrete value of a memory area. Note that setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this.</li>
-<li><b>void setConcreteMemoryValue(integer addr, integer value)</b><br  />
+<li><b>void setConcreteMemoryValue(integer addr, integer value, bool callbacks=True)</b><br  />
  Sets the concrete value of a memory cell. Note that setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this.</li>
-<li><b>void setConcreteMemoryValue(<a class="el" href="py_MemoryAccess_page.html">MemoryAccess</a> mem, integer value)</b><br  />
+<li><b>void setConcreteMemoryValue(<a class="el" href="py_MemoryAccess_page.html">MemoryAccess</a> mem, integer value, bool callbacks=True)</b><br  />
  Sets the concrete value of memory cells. Note that setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this.</li>
-<li><b>void setConcreteRegisterValue(<a class="el" href="py_Register_page.html">Register</a> reg, integer value)</b><br  />
+<li><b>void setConcreteRegisterValue(<a class="el" href="py_Register_page.html">Register</a> reg, integer value, bool callbacks=True)</b><br  />
  Sets the concrete value of a register. Note that setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this.</li>
 <li><b>void setConcreteVariableValue(<a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> symVar, integer value)</b><br  />
  Sets the concrete value of a symbolic variable.</li>

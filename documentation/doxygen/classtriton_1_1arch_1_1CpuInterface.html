@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1547</span>
+   &#160;<span id="projectnumber">version 1.0 build 1549</span>
    </div>
   </td>
  </tr>
@@ -173,21 +173,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af546439c3915bc2269a582eabd08462a"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680">triton::uint512</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#af546439c3915bc2269a582eabd08462a">getConcreteRegisterValue</a> (const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &amp;reg, bool execCallbacks=true) const =0</td></tr>
 <tr class="memdesc:af546439c3915bc2269a582eabd08462a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the concrete value of a register.  <a href="classtriton_1_1arch_1_1CpuInterface.html#af546439c3915bc2269a582eabd08462a">More...</a><br /></td></tr>
 <tr class="separator:af546439c3915bc2269a582eabd08462a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee1b128f7310426dd678fc4ffe7c8a41"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#aee1b128f7310426dd678fc4ffe7c8a41">setConcreteMemoryValue</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr, <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> value)=0</td></tr>
-<tr class="memdesc:aee1b128f7310426dd678fc4ffe7c8a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Sets the concrete value of a memory cell.  <a href="classtriton_1_1arch_1_1CpuInterface.html#aee1b128f7310426dd678fc4ffe7c8a41">More...</a><br /></td></tr>
-<tr class="separator:aee1b128f7310426dd678fc4ffe7c8a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6f554cd771f71d5e1e3ad3dbe7bffb5"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ad6f554cd771f71d5e1e3ad3dbe7bffb5">setConcreteMemoryValue</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem, const <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680">triton::uint512</a> &amp;value)=0</td></tr>
-<tr class="memdesc:ad6f554cd771f71d5e1e3ad3dbe7bffb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Sets the concrete value of memory cells.  <a href="classtriton_1_1arch_1_1CpuInterface.html#ad6f554cd771f71d5e1e3ad3dbe7bffb5">More...</a><br /></td></tr>
-<tr class="separator:ad6f554cd771f71d5e1e3ad3dbe7bffb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00fa084b0cdc95ea20efeaa50dce8f01"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a00fa084b0cdc95ea20efeaa50dce8f01">setConcreteMemoryAreaValue</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> baseAddr, const std::vector&lt; <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> &gt; &amp;values)=0</td></tr>
-<tr class="memdesc:a00fa084b0cdc95ea20efeaa50dce8f01"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Sets the concrete value of a memory area.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a00fa084b0cdc95ea20efeaa50dce8f01">More...</a><br /></td></tr>
-<tr class="separator:a00fa084b0cdc95ea20efeaa50dce8f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a643017452e0e31aeaabb607a361ae07f"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a643017452e0e31aeaabb607a361ae07f">setConcreteMemoryAreaValue</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> baseAddr, const void *area, <a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> size)=0</td></tr>
-<tr class="memdesc:a643017452e0e31aeaabb607a361ae07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Sets the concrete value of a memory area.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a643017452e0e31aeaabb607a361ae07f">More...</a><br /></td></tr>
-<tr class="separator:a643017452e0e31aeaabb607a361ae07f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4437496fd5d8875c73f51da0f2150910"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a4437496fd5d8875c73f51da0f2150910">setConcreteRegisterValue</a> (const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &amp;reg, const <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680">triton::uint512</a> &amp;value)=0</td></tr>
-<tr class="memdesc:a4437496fd5d8875c73f51da0f2150910"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Sets the concrete value of a register.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a4437496fd5d8875c73f51da0f2150910">More...</a><br /></td></tr>
-<tr class="separator:a4437496fd5d8875c73f51da0f2150910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d5c7bef925a3363047b1369ce1c6c4"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a30d5c7bef925a3363047b1369ce1c6c4">setConcreteMemoryValue</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr, <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> value, bool execCallbacks=true)=0</td></tr>
+<tr class="memdesc:a30d5c7bef925a3363047b1369ce1c6c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Sets the concrete value of a memory cell.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a30d5c7bef925a3363047b1369ce1c6c4">More...</a><br /></td></tr>
+<tr class="separator:a30d5c7bef925a3363047b1369ce1c6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9fc2f4efe2093024d597402e2ffe57"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a5b9fc2f4efe2093024d597402e2ffe57">setConcreteMemoryValue</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem, const <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680">triton::uint512</a> &amp;value, bool execCallbacks=true)=0</td></tr>
+<tr class="memdesc:a5b9fc2f4efe2093024d597402e2ffe57"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Sets the concrete value of memory cells.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a5b9fc2f4efe2093024d597402e2ffe57">More...</a><br /></td></tr>
+<tr class="separator:a5b9fc2f4efe2093024d597402e2ffe57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21df3a0e870f159363b7970296a6a90c"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a21df3a0e870f159363b7970296a6a90c">setConcreteMemoryAreaValue</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> baseAddr, const std::vector&lt; <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> &gt; &amp;values, bool execCallbacks=true)=0</td></tr>
+<tr class="memdesc:a21df3a0e870f159363b7970296a6a90c"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Sets the concrete value of a memory area.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a21df3a0e870f159363b7970296a6a90c">More...</a><br /></td></tr>
+<tr class="separator:a21df3a0e870f159363b7970296a6a90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a525608e3e3d0f2ba208810bf303f5"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a02a525608e3e3d0f2ba208810bf303f5">setConcreteMemoryAreaValue</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> baseAddr, const void *area, <a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> size, bool execCallbacks=true)=0</td></tr>
+<tr class="memdesc:a02a525608e3e3d0f2ba208810bf303f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Sets the concrete value of a memory area.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a02a525608e3e3d0f2ba208810bf303f5">More...</a><br /></td></tr>
+<tr class="separator:a02a525608e3e3d0f2ba208810bf303f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce7844572d39d742bf7aee2e6b4ceef"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a5ce7844572d39d742bf7aee2e6b4ceef">setConcreteRegisterValue</a> (const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &amp;reg, const <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680">triton::uint512</a> &amp;value, bool execCallbacks=true)=0</td></tr>
+<tr class="memdesc:a5ce7844572d39d742bf7aee2e6b4ceef"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>architecture api</b>] - Sets the concrete value of a register.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a5ce7844572d39d742bf7aee2e6b4ceef">More...</a><br /></td></tr>
+<tr class="separator:a5ce7844572d39d742bf7aee2e6b4ceef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c7730f098fa7c587016f0ea1b3dead9"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a8c7730f098fa7c587016f0ea1b3dead9">isConcreteMemoryValueDefined</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem) const =0</td></tr>
 <tr class="memdesc:a8c7730f098fa7c587016f0ea1b3dead9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if memory cells have a defined concrete value.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a8c7730f098fa7c587016f0ea1b3dead9">More...</a><br /></td></tr>
 <tr class="separator:a8c7730f098fa7c587016f0ea1b3dead9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1112,8 +1112,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a00fa084b0cdc95ea20efeaa50dce8f01" name="a00fa084b0cdc95ea20efeaa50dce8f01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00fa084b0cdc95ea20efeaa50dce8f01">&#9670;&nbsp;</a></span>setConcreteMemoryAreaValue() <span class="overload">[1/2]</span></h2>
+<a id="a21df3a0e870f159363b7970296a6a90c" name="a21df3a0e870f159363b7970296a6a90c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21df3a0e870f159363b7970296a6a90c">&#9670;&nbsp;</a></span>setConcreteMemoryAreaValue() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1131,7 +1131,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; <a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>values</em>&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>execCallbacks</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1149,12 +1155,12 @@ Public Member Functions</h2></td></tr>
 <p>[<b>architecture api</b>] - Sets the concrete value of a memory area. </p>
 <p >Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p>Implemented in <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#ab12f4a39b70a48f3656b15ee559e576c">triton::arch::arm::aarch64::AArch64Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#ab0c5dd83c12dadc8345f1603f67fec6b">triton::arch::arm::arm32::Arm32Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a7850a61ff52c11d5ad014ab5479cf50f">triton::arch::x86::x8664Cpu</a>, and <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a1c1c164aff5c295203f493efefdae631">triton::arch::x86::x86Cpu</a>.</p>
+<p>Implemented in <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a73bb6b1696243a03fe390d0342e28be0">triton::arch::arm::aarch64::AArch64Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#aeb25ab13ffa967855e20ce4307c41799">triton::arch::arm::arm32::Arm32Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a4c816e7f189fcf06a53390037b342bfc">triton::arch::x86::x8664Cpu</a>, and <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#ab96c4aee5e138f29a8889e6eae8f9abe">triton::arch::x86::x86Cpu</a>.</p>
 
 </div>
 </div>
-<a id="a643017452e0e31aeaabb607a361ae07f" name="a643017452e0e31aeaabb607a361ae07f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a643017452e0e31aeaabb607a361ae07f">&#9670;&nbsp;</a></span>setConcreteMemoryAreaValue() <span class="overload">[2/2]</span></h2>
+<a id="a02a525608e3e3d0f2ba208810bf303f5" name="a02a525608e3e3d0f2ba208810bf303f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a525608e3e3d0f2ba208810bf303f5">&#9670;&nbsp;</a></span>setConcreteMemoryAreaValue() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1178,7 +1184,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a>&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>execCallbacks</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1196,12 +1208,12 @@ Public Member Functions</h2></td></tr>
 <p>[<b>architecture api</b>] - Sets the concrete value of a memory area. </p>
 <p >Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p>Implemented in <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a5096692e3003f865c135f4921e559bf5">triton::arch::arm::aarch64::AArch64Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a1df600eb00617e4617ee2b8bc4700e80">triton::arch::arm::arm32::Arm32Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a986b7cbd817d358c85de25ff07706d2e">triton::arch::x86::x8664Cpu</a>, and <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#ab1bc87a98151b8aef9548b7599c1cfb0">triton::arch::x86::x86Cpu</a>.</p>
+<p>Implemented in <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#aa351c9b2288c66a36683ef2ee8aacf54">triton::arch::arm::aarch64::AArch64Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#ad6563a7979954dacf9d2c19673cf8f18">triton::arch::arm::arm32::Arm32Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a99d192cce28afd20682c9cd115d2410b">triton::arch::x86::x8664Cpu</a>, and <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a07f2cc1822b2097758e5ab52ef0a5c5f">triton::arch::x86::x86Cpu</a>.</p>
 
 </div>
 </div>
-<a id="ad6f554cd771f71d5e1e3ad3dbe7bffb5" name="ad6f554cd771f71d5e1e3ad3dbe7bffb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6f554cd771f71d5e1e3ad3dbe7bffb5">&#9670;&nbsp;</a></span>setConcreteMemoryValue() <span class="overload">[1/2]</span></h2>
+<a id="a5b9fc2f4efe2093024d597402e2ffe57" name="a5b9fc2f4efe2093024d597402e2ffe57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b9fc2f4efe2093024d597402e2ffe57">&#9670;&nbsp;</a></span>setConcreteMemoryValue() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1219,7 +1231,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680">triton::uint512</a> &amp;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>execCallbacks</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1237,12 +1255,12 @@ Public Member Functions</h2></td></tr>
 <p>[<b>architecture api</b>] - Sets the concrete value of memory cells. </p>
 <p >Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p>Implemented in <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#aebb988bd1a2c1f4edfc7b892e1f8d9a5">triton::arch::arm::aarch64::AArch64Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#afc21c39e2e7d641a9b126da044b20170">triton::arch::arm::arm32::Arm32Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a9dc4cd5535840355f9497874338039b5">triton::arch::x86::x8664Cpu</a>, and <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a7f2a171404cd1a6b3554c8624812d7f5">triton::arch::x86::x86Cpu</a>.</p>
+<p>Implemented in <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#ac7b40b00fe77f99fb938fba85a06cac0">triton::arch::arm::aarch64::AArch64Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a656cc7e37896ff4cc40225c4224a4fe1">triton::arch::arm::arm32::Arm32Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#ad35aace375e4db141ddecc49db7d7dc6">triton::arch::x86::x8664Cpu</a>, and <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a861d93e832b6e2dd0114a87548b2d124">triton::arch::x86::x86Cpu</a>.</p>
 
 </div>
 </div>
-<a id="aee1b128f7310426dd678fc4ffe7c8a41" name="aee1b128f7310426dd678fc4ffe7c8a41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee1b128f7310426dd678fc4ffe7c8a41">&#9670;&nbsp;</a></span>setConcreteMemoryValue() <span class="overload">[2/2]</span></h2>
+<a id="a30d5c7bef925a3363047b1369ce1c6c4" name="a30d5c7bef925a3363047b1369ce1c6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30d5c7bef925a3363047b1369ce1c6c4">&#9670;&nbsp;</a></span>setConcreteMemoryValue() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1260,7 +1278,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="group__triton.html#gafa8bb8d2296248581f899fe3b63ca357">triton::uint8</a>&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>execCallbacks</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1278,12 +1302,12 @@ Public Member Functions</h2></td></tr>
 <p>[<b>architecture api</b>] - Sets the concrete value of a memory cell. </p>
 <p >Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p>Implemented in <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a3edccec7d22c20b8de065172e3fb9c56">triton::arch::arm::aarch64::AArch64Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a0fdf9e5ad26a91c1b5b60308447f715b">triton::arch::arm::arm32::Arm32Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a24699db48fc25c86a62f05d0f5c0ec11">triton::arch::x86::x8664Cpu</a>, and <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a8391540dc755e90152a72c01c16e46d1">triton::arch::x86::x86Cpu</a>.</p>
+<p>Implemented in <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a43c4ef4c72cb4f2aa0a50f8539bbdf6f">triton::arch::arm::aarch64::AArch64Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a6df2730debabc71ee14d383a6547d4bf">triton::arch::arm::arm32::Arm32Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#adda1e088b0d40290fb37e1599284e288">triton::arch::x86::x8664Cpu</a>, and <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#adf6d621a4ab5d39ab545fe3d24027170">triton::arch::x86::x86Cpu</a>.</p>
 
 </div>
 </div>
-<a id="a4437496fd5d8875c73f51da0f2150910" name="a4437496fd5d8875c73f51da0f2150910"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4437496fd5d8875c73f51da0f2150910">&#9670;&nbsp;</a></span>setConcreteRegisterValue()</h2>
+<a id="a5ce7844572d39d742bf7aee2e6b4ceef" name="a5ce7844572d39d742bf7aee2e6b4ceef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce7844572d39d742bf7aee2e6b4ceef">&#9670;&nbsp;</a></span>setConcreteRegisterValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1301,7 +1325,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680">triton::uint512</a> &amp;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>execCallbacks</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1319,7 +1349,7 @@ Public Member Functions</h2></td></tr>
 <p>[<b>architecture api</b>] - Sets the concrete value of a register. </p>
 <p >Note that by setting a concrete value will probably imply a desynchronization with the symbolic state (if it exists). You should probably use the concretize functions after this. </p>
 
-<p>Implemented in <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#add5dd3118490610a8adee84aaa426e24">triton::arch::arm::aarch64::AArch64Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#ac52a0157250937c96202be9d816b1113">triton::arch::arm::arm32::Arm32Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a1374800352a4e016b0adc8b829e57cf7">triton::arch::x86::x8664Cpu</a>, and <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#ae571ff3a2aaf836c1325f868e9c26354">triton::arch::x86::x86Cpu</a>.</p>
+<p>Implemented in <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a11bf7314e0481111452528fe5f2e76ec">triton::arch::arm::aarch64::AArch64Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#adb1fd9094ef50b82257201eaf371f845">triton::arch::arm::arm32::Arm32Cpu</a>, <a class="el" href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a69f06cec5938e4ba1724c34da78eb154">triton::arch::x86::x8664Cpu</a>, and <a class="el" href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a1c745917c0a36508444049f105af1adb">triton::arch::x86::x86Cpu</a>.</p>
 
 </div>
 </div>
