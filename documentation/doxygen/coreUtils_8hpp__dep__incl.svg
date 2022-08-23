@@ -633,9 +633,9 @@
 <path fill="none" stroke="midnightblue" d="M2662.29,-509.64C2546.66,-507.59 2321.52,-497.7 2136,-454 2046.87,-433.01 1948.28,-389.78 1894.82,-364.53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="2662.4,-513.14 2672.45,-509.81 2662.51,-506.14 2662.4,-513.14"/>
 </g>
-<!-- Node88 -->
+<!-- Node84 -->
 <g id="node36" class="node">
-<title>Node88</title>
+<title>Node84</title>
 <g id="a_node36"><a xlink:href="symbolicSimplification_8hpp.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="red" points="1596,-245.5 1596,-286.5 1820,-286.5 1820,-245.5 1596,-245.5"/>
 <text text-anchor="start" x="1604" y="-274.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/jonathan/Works</text>
@@ -644,9 +644,9 @@
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node88 -->
+<!-- Node20&#45;&gt;Node84 -->
 <g id="edge106" class="edge">
-<title>Node20&#45;&gt;Node88</title>
+<title>Node20&#45;&gt;Node84</title>
 <path fill="none" stroke="midnightblue" d="M2662.28,-508.72C2427.4,-504.45 1732.05,-488.88 1699,-454 1655.63,-408.23 1683.16,-324.44 1699.04,-286.54"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="2662.38,-512.23 2672.44,-508.91 2662.51,-505.23 2662.38,-512.23"/>
 </g>
@@ -1003,15 +1003,15 @@
 <path fill="none" stroke="midnightblue" d="M1863.51,-313.42C1872.27,-277.33 1882.07,-215.17 1862,-167 1855.06,-150.35 1841.18,-135.89 1828.3,-125.18"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1860.06,-312.75 1860.97,-323.31 1866.85,-314.49 1860.06,-312.75"/>
 </g>
-<!-- Node70&#45;&gt;Node88 -->
+<!-- Node70&#45;&gt;Node84 -->
 <g id="edge55" class="edge">
-<title>Node70&#45;&gt;Node88</title>
+<title>Node70&#45;&gt;Node84</title>
 <path fill="none" stroke="midnightblue" d="M1808.13,-318.77C1787.98,-308.35 1764.74,-296.34 1745.73,-286.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1806.65,-321.94 1817.14,-323.43 1809.87,-315.73 1806.65,-321.94"/>
 </g>
-<!-- Node88&#45;&gt;Node51 -->
+<!-- Node84&#45;&gt;Node51 -->
 <g id="edge56" class="edge">
-<title>Node88&#45;&gt;Node51</title>
+<title>Node84&#45;&gt;Node51</title>
 <path fill="none" stroke="midnightblue" d="M1724.41,-236.55C1742.91,-204.47 1772.5,-153.17 1788.63,-125.22"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1721.25,-235.03 1719.28,-245.44 1727.31,-238.53 1721.25,-235.03"/>
 </g>

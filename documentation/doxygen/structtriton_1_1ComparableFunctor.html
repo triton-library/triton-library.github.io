@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1549</span>
+   &#160;<span id="projectnumber">version 1.0 build 1550</span>
    </div>
   </td>
  </tr>
@@ -92,6 +92,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac9cbedff12a66bc5243ee7de5dca8b8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtriton_1_1ComparableFunctor.html#ac9cbedff12a66bc5243ee7de5dca8b8f">ComparableFunctor</a> (Signature *F)</td></tr>
 <tr class="memdesc:ac9cbedff12a66bc5243ee7de5dca8b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="structtriton_1_1ComparableFunctor.html#ac9cbedff12a66bc5243ee7de5dca8b8f">More...</a><br /></td></tr>
 <tr class="separator:ac9cbedff12a66bc5243ee7de5dca8b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3061020b929392f0ec7a5adc2bce385"><td class="memTemplParams" colspan="2">template&lt;class apiType &gt; </td></tr>
+<tr class="memitem:ac3061020b929392f0ec7a5adc2bce385"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structtriton_1_1ComparableFunctor.html#ac3061020b929392f0ec7a5adc2bce385">operator()</a> (apiType &amp;api) const -&gt; decltype(F_(api))</td></tr>
+<tr class="memdesc:ac3061020b929392f0ec7a5adc2bce385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward call to real functor.  <a href="structtriton_1_1ComparableFunctor.html#ac3061020b929392f0ec7a5adc2bce385">More...</a><br /></td></tr>
+<tr class="separator:ac3061020b929392f0ec7a5adc2bce385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d6bcb19644dde9d232911f30c637e58"><td class="memTemplParams" colspan="2">template&lt;class apiType , class paramType &gt; </td></tr>
 <tr class="memitem:a0d6bcb19644dde9d232911f30c637e58"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structtriton_1_1ComparableFunctor.html#a0d6bcb19644dde9d232911f30c637e58">operator()</a> (apiType &amp;api, paramType &amp;param) const -&gt; decltype(F_(api, param))</td></tr>
 <tr class="memdesc:a0d6bcb19644dde9d232911f30c637e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward call to real functor.  <a href="structtriton_1_1ComparableFunctor.html#a0d6bcb19644dde9d232911f30c637e58">More...</a><br /></td></tr>
@@ -220,12 +224,46 @@ template&lt;class T &gt; </div>
 
 <p>Comparison of functor based on id. </p>
 
-<p class="definition">Definition at line <a class="el" href="comparableFunctor_8hpp_source.html#l00069">69</a> of file <a class="el" href="comparableFunctor_8hpp_source.html">comparableFunctor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="comparableFunctor_8hpp_source.html#l00075">75</a> of file <a class="el" href="comparableFunctor_8hpp_source.html">comparableFunctor.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac3061020b929392f0ec7a5adc2bce385" name="ac3061020b929392f0ec7a5adc2bce385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3061020b929392f0ec7a5adc2bce385">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Signature &gt; </div>
+<div class="memtemplate">
+template&lt;class apiType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="structtriton_1_1ComparableFunctor.html">triton::ComparableFunctor</a>&lt; Signature &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">apiType &amp;&#160;</td>
+          <td class="paramname"><em>api</em></td><td>)</td>
+          <td> const -&gt; decltype(F_(api)) </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Forward call to real functor. </p>
+
+<p class="definition">Definition at line <a class="el" href="comparableFunctor_8hpp_source.html#l00050">50</a> of file <a class="el" href="comparableFunctor_8hpp_source.html">comparableFunctor.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a0d6bcb19644dde9d232911f30c637e58" name="a0d6bcb19644dde9d232911f30c637e58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d6bcb19644dde9d232911f30c637e58">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d6bcb19644dde9d232911f30c637e58">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -264,12 +302,12 @@ template&lt;class apiType , class paramType &gt; </div>
 
 <p>Forward call to real functor. </p>
 
-<p class="definition">Definition at line <a class="el" href="comparableFunctor_8hpp_source.html#l00050">50</a> of file <a class="el" href="comparableFunctor_8hpp_source.html">comparableFunctor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="comparableFunctor_8hpp_source.html#l00056">56</a> of file <a class="el" href="comparableFunctor_8hpp_source.html">comparableFunctor.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a010f219628b1dd33e7e78ab7e8b0374d" name="a010f219628b1dd33e7e78ab7e8b0374d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a010f219628b1dd33e7e78ab7e8b0374d">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a010f219628b1dd33e7e78ab7e8b0374d">&#9670;&nbsp;</a></span>operator()() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,7 +352,7 @@ template&lt;class apiType , class paramType1 , class paramType2 &gt; </div>
 
 <p>Forward call to real functor. </p>
 
-<p class="definition">Definition at line <a class="el" href="comparableFunctor_8hpp_source.html#l00056">56</a> of file <a class="el" href="comparableFunctor_8hpp_source.html">comparableFunctor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="comparableFunctor_8hpp_source.html#l00062">62</a> of file <a class="el" href="comparableFunctor_8hpp_source.html">comparableFunctor.hpp</a>.</p>
 
 </div>
 </div>
@@ -348,7 +386,7 @@ template&lt;class T &gt; </div>
 
 <p>Comparison of functor based on id. </p>
 
-<p class="definition">Definition at line <a class="el" href="comparableFunctor_8hpp_source.html#l00063">63</a> of file <a class="el" href="comparableFunctor_8hpp_source.html">comparableFunctor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="comparableFunctor_8hpp_source.html#l00069">69</a> of file <a class="el" href="comparableFunctor_8hpp_source.html">comparableFunctor.hpp</a>.</p>
 
 </div>
 </div>
