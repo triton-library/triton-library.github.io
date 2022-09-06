@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1550</span>
+   &#160;<span id="projectnumber">version 1.0 build 1555</span>
    </div>
   </td>
  </tr>
@@ -3514,355 +3514,369 @@ $(function() {
 <div class="line"><a id="l03586" name="l03586"></a><span class="lineno"> 3586</span> </div>
 <div class="line"><a id="l03587" name="l03587"></a><span class="lineno"> 3587</span>          <span class="comment">/* Spread taint */</span></div>
 <div class="line"><a id="l03588" name="l03588"></a><span class="lineno"> 3588</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2));</div>
-<div class="line"><a id="l03589" name="l03589"></a><span class="lineno"> 3589</span>        }</div>
-<div class="line"><a id="l03590" name="l03590"></a><span class="lineno"> 3590</span> </div>
-<div class="line"><a id="l03591" name="l03591"></a><span class="lineno"> 3591</span> </div>
-<div class="line"><a id="l03592" name="l03592"></a><span class="lineno"> 3592</span>        <span class="keywordtype">void</span> AArch64Semantics::tbz_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a id="l03593" name="l03593"></a><span class="lineno"> 3593</span>          <span class="keyword">auto</span>  dst  = <a class="code hl_interface" href="classtriton_1_1arch_1_1OperandWrapper.html">triton::arch::OperandWrapper</a>(this-&gt;architecture-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1Architecture.html#a021273a80e1210875a46dd7936f4c2c9">getRegister</a>(ID_REG_AARCH64_PC));</div>
-<div class="line"><a id="l03594" name="l03594"></a><span class="lineno"> 3594</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
-<div class="line"><a id="l03595" name="l03595"></a><span class="lineno"> 3595</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
-<div class="line"><a id="l03596" name="l03596"></a><span class="lineno"> 3596</span>          <span class="keyword">auto</span>&amp; src3 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
+<div class="line"><a id="l03589" name="l03589"></a><span class="lineno"> 3589</span> </div>
+<div class="line"><a id="l03590" name="l03590"></a><span class="lineno"> 3590</span>          <span class="comment">/* Set condition flag */</span></div>
+<div class="line"><a id="l03591" name="l03591"></a><span class="lineno"> 3591</span>          <span class="keywordflow">if</span> (this-&gt;astCtxt-&gt;extract(0, 0, this-&gt;astCtxt-&gt;bvlshr(op1, op2))-&gt;evaluate() != 0)</div>
+<div class="line"><a id="l03592" name="l03592"></a><span class="lineno"> 3592</span>            inst.<a class="code hl_function" href="classtriton_1_1arch_1_1Instruction.html#a15dafadae328d2b94f152e11ffa003fe">setConditionTaken</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l03593" name="l03593"></a><span class="lineno"> 3593</span> </div>
+<div class="line"><a id="l03594" name="l03594"></a><span class="lineno"> 3594</span>          <span class="comment">/* Create the path constraint */</span></div>
+<div class="line"><a id="l03595" name="l03595"></a><span class="lineno"> 3595</span>          this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1PathManager.html#a8eb4c5780b23bbda1ac6894d728bfedb">pushPathConstraint</a>(inst, expr);</div>
+<div class="line"><a id="l03596" name="l03596"></a><span class="lineno"> 3596</span>        }</div>
 <div class="line"><a id="l03597" name="l03597"></a><span class="lineno"> 3597</span> </div>
-<div class="line"><a id="l03598" name="l03598"></a><span class="lineno"> 3598</span>          <span class="comment">/* Create symbolic operands */</span></div>
-<div class="line"><a id="l03599" name="l03599"></a><span class="lineno"> 3599</span>          <span class="keyword">auto</span> op1 = this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - src1.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>(), this-&gt;symbolicEngine-&gt;getOperandAst(inst, src1));</div>
-<div class="line"><a id="l03600" name="l03600"></a><span class="lineno"> 3600</span>          <span class="keyword">auto</span> op2 = this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - src2.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>(), this-&gt;symbolicEngine-&gt;getOperandAst(inst, src2));</div>
-<div class="line"><a id="l03601" name="l03601"></a><span class="lineno"> 3601</span>          <span class="keyword">auto</span> op3 = this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - src3.getBitSize(), this-&gt;symbolicEngine-&gt;getOperandAst(inst, src3));</div>
-<div class="line"><a id="l03602" name="l03602"></a><span class="lineno"> 3602</span> </div>
-<div class="line"><a id="l03603" name="l03603"></a><span class="lineno"> 3603</span>          <span class="comment">/* Create the semantics */</span></div>
-<div class="line"><a id="l03604" name="l03604"></a><span class="lineno"> 3604</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;ite(</div>
-<div class="line"><a id="l03605" name="l03605"></a><span class="lineno"> 3605</span>                        this-&gt;astCtxt-&gt;equal(</div>
-<div class="line"><a id="l03606" name="l03606"></a><span class="lineno"> 3606</span>                          this-&gt;astCtxt-&gt;extract(0, 0, this-&gt;astCtxt-&gt;bvlshr(op1, op2)),</div>
-<div class="line"><a id="l03607" name="l03607"></a><span class="lineno"> 3607</span>                          this-&gt;astCtxt-&gt;bvfalse()</div>
-<div class="line"><a id="l03608" name="l03608"></a><span class="lineno"> 3608</span>                        ),</div>
-<div class="line"><a id="l03609" name="l03609"></a><span class="lineno"> 3609</span>                        this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - op3-&gt;getBitvectorSize(), op3),</div>
-<div class="line"><a id="l03610" name="l03610"></a><span class="lineno"> 3610</span>                        this-&gt;astCtxt-&gt;bv(inst.<a class="code hl_function" href="classtriton_1_1arch_1_1Instruction.html#afdfe24a0b61c41106bb4c5706ffdc31d">getNextAddress</a>(), dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>())</div>
-<div class="line"><a id="l03611" name="l03611"></a><span class="lineno"> 3611</span>                      );</div>
-<div class="line"><a id="l03612" name="l03612"></a><span class="lineno"> 3612</span> </div>
-<div class="line"><a id="l03613" name="l03613"></a><span class="lineno"> 3613</span>          <span class="comment">/* Create symbolic expression */</span></div>
-<div class="line"><a id="l03614" name="l03614"></a><span class="lineno"> 3614</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;TBZ operation - Program Counter&quot;</span>);</div>
-<div class="line"><a id="l03615" name="l03615"></a><span class="lineno"> 3615</span> </div>
-<div class="line"><a id="l03616" name="l03616"></a><span class="lineno"> 3616</span>          <span class="comment">/* Spread taint */</span></div>
-<div class="line"><a id="l03617" name="l03617"></a><span class="lineno"> 3617</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2));</div>
-<div class="line"><a id="l03618" name="l03618"></a><span class="lineno"> 3618</span>        }</div>
+<div class="line"><a id="l03598" name="l03598"></a><span class="lineno"> 3598</span> </div>
+<div class="line"><a id="l03599" name="l03599"></a><span class="lineno"> 3599</span>        <span class="keywordtype">void</span> AArch64Semantics::tbz_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a id="l03600" name="l03600"></a><span class="lineno"> 3600</span>          <span class="keyword">auto</span>  dst  = <a class="code hl_interface" href="classtriton_1_1arch_1_1OperandWrapper.html">triton::arch::OperandWrapper</a>(this-&gt;architecture-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1Architecture.html#a021273a80e1210875a46dd7936f4c2c9">getRegister</a>(ID_REG_AARCH64_PC));</div>
+<div class="line"><a id="l03601" name="l03601"></a><span class="lineno"> 3601</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
+<div class="line"><a id="l03602" name="l03602"></a><span class="lineno"> 3602</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
+<div class="line"><a id="l03603" name="l03603"></a><span class="lineno"> 3603</span>          <span class="keyword">auto</span>&amp; src3 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
+<div class="line"><a id="l03604" name="l03604"></a><span class="lineno"> 3604</span> </div>
+<div class="line"><a id="l03605" name="l03605"></a><span class="lineno"> 3605</span>          <span class="comment">/* Create symbolic operands */</span></div>
+<div class="line"><a id="l03606" name="l03606"></a><span class="lineno"> 3606</span>          <span class="keyword">auto</span> op1 = this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - src1.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>(), this-&gt;symbolicEngine-&gt;getOperandAst(inst, src1));</div>
+<div class="line"><a id="l03607" name="l03607"></a><span class="lineno"> 3607</span>          <span class="keyword">auto</span> op2 = this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - src2.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>(), this-&gt;symbolicEngine-&gt;getOperandAst(inst, src2));</div>
+<div class="line"><a id="l03608" name="l03608"></a><span class="lineno"> 3608</span>          <span class="keyword">auto</span> op3 = this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - src3.getBitSize(), this-&gt;symbolicEngine-&gt;getOperandAst(inst, src3));</div>
+<div class="line"><a id="l03609" name="l03609"></a><span class="lineno"> 3609</span> </div>
+<div class="line"><a id="l03610" name="l03610"></a><span class="lineno"> 3610</span>          <span class="comment">/* Create the semantics */</span></div>
+<div class="line"><a id="l03611" name="l03611"></a><span class="lineno"> 3611</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;ite(</div>
+<div class="line"><a id="l03612" name="l03612"></a><span class="lineno"> 3612</span>                        this-&gt;astCtxt-&gt;equal(</div>
+<div class="line"><a id="l03613" name="l03613"></a><span class="lineno"> 3613</span>                          this-&gt;astCtxt-&gt;extract(0, 0, this-&gt;astCtxt-&gt;bvlshr(op1, op2)),</div>
+<div class="line"><a id="l03614" name="l03614"></a><span class="lineno"> 3614</span>                          this-&gt;astCtxt-&gt;bvfalse()</div>
+<div class="line"><a id="l03615" name="l03615"></a><span class="lineno"> 3615</span>                        ),</div>
+<div class="line"><a id="l03616" name="l03616"></a><span class="lineno"> 3616</span>                        this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - op3-&gt;getBitvectorSize(), op3),</div>
+<div class="line"><a id="l03617" name="l03617"></a><span class="lineno"> 3617</span>                        this-&gt;astCtxt-&gt;bv(inst.<a class="code hl_function" href="classtriton_1_1arch_1_1Instruction.html#afdfe24a0b61c41106bb4c5706ffdc31d">getNextAddress</a>(), dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>())</div>
+<div class="line"><a id="l03618" name="l03618"></a><span class="lineno"> 3618</span>                      );</div>
 <div class="line"><a id="l03619" name="l03619"></a><span class="lineno"> 3619</span> </div>
-<div class="line"><a id="l03620" name="l03620"></a><span class="lineno"> 3620</span> </div>
-<div class="line"><a id="l03621" name="l03621"></a><span class="lineno"> 3621</span>        <span class="keywordtype">void</span> AArch64Semantics::tst_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a id="l03622" name="l03622"></a><span class="lineno"> 3622</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
-<div class="line"><a id="l03623" name="l03623"></a><span class="lineno"> 3623</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
-<div class="line"><a id="l03624" name="l03624"></a><span class="lineno"> 3624</span> </div>
-<div class="line"><a id="l03625" name="l03625"></a><span class="lineno"> 3625</span>          <span class="comment">/* Create symbolic operands */</span></div>
-<div class="line"><a id="l03626" name="l03626"></a><span class="lineno"> 3626</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
-<div class="line"><a id="l03627" name="l03627"></a><span class="lineno"> 3627</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
-<div class="line"><a id="l03628" name="l03628"></a><span class="lineno"> 3628</span> </div>
-<div class="line"><a id="l03629" name="l03629"></a><span class="lineno"> 3629</span>          <span class="comment">/* Create the semantics */</span></div>
-<div class="line"><a id="l03630" name="l03630"></a><span class="lineno"> 3630</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;bvand(op1, op2);</div>
-<div class="line"><a id="l03631" name="l03631"></a><span class="lineno"> 3631</span> </div>
-<div class="line"><a id="l03632" name="l03632"></a><span class="lineno"> 3632</span>          <span class="comment">/* Create symbolic expression */</span></div>
-<div class="line"><a id="l03633" name="l03633"></a><span class="lineno"> 3633</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a7041100fdf28994778ea4beeaf471474">createSymbolicVolatileExpression</a>(inst, node, <span class="stringliteral">&quot;TST operation&quot;</span>);</div>
+<div class="line"><a id="l03620" name="l03620"></a><span class="lineno"> 3620</span>          <span class="comment">/* Create symbolic expression */</span></div>
+<div class="line"><a id="l03621" name="l03621"></a><span class="lineno"> 3621</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;TBZ operation - Program Counter&quot;</span>);</div>
+<div class="line"><a id="l03622" name="l03622"></a><span class="lineno"> 3622</span> </div>
+<div class="line"><a id="l03623" name="l03623"></a><span class="lineno"> 3623</span>          <span class="comment">/* Spread taint */</span></div>
+<div class="line"><a id="l03624" name="l03624"></a><span class="lineno"> 3624</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2));</div>
+<div class="line"><a id="l03625" name="l03625"></a><span class="lineno"> 3625</span> </div>
+<div class="line"><a id="l03626" name="l03626"></a><span class="lineno"> 3626</span>          <span class="comment">/* Set condition flag */</span></div>
+<div class="line"><a id="l03627" name="l03627"></a><span class="lineno"> 3627</span>          <span class="keywordflow">if</span> (this-&gt;astCtxt-&gt;extract(0, 0, this-&gt;astCtxt-&gt;bvlshr(op1, op2))-&gt;evaluate() == 0)</div>
+<div class="line"><a id="l03628" name="l03628"></a><span class="lineno"> 3628</span>            inst.<a class="code hl_function" href="classtriton_1_1arch_1_1Instruction.html#a15dafadae328d2b94f152e11ffa003fe">setConditionTaken</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l03629" name="l03629"></a><span class="lineno"> 3629</span> </div>
+<div class="line"><a id="l03630" name="l03630"></a><span class="lineno"> 3630</span>          <span class="comment">/* Create the path constraint */</span></div>
+<div class="line"><a id="l03631" name="l03631"></a><span class="lineno"> 3631</span>          this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1PathManager.html#a8eb4c5780b23bbda1ac6894d728bfedb">pushPathConstraint</a>(inst, expr);</div>
+<div class="line"><a id="l03632" name="l03632"></a><span class="lineno"> 3632</span>        }</div>
+<div class="line"><a id="l03633" name="l03633"></a><span class="lineno"> 3633</span> </div>
 <div class="line"><a id="l03634" name="l03634"></a><span class="lineno"> 3634</span> </div>
-<div class="line"><a id="l03635" name="l03635"></a><span class="lineno"> 3635</span>          <span class="comment">/* Spread taint */</span></div>
-<div class="line"><a id="l03636" name="l03636"></a><span class="lineno"> 3636</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src2);</div>
-<div class="line"><a id="l03637" name="l03637"></a><span class="lineno"> 3637</span> </div>
-<div class="line"><a id="l03638" name="l03638"></a><span class="lineno"> 3638</span>          <span class="comment">/* Update symbolic flags */</span></div>
-<div class="line"><a id="l03639" name="l03639"></a><span class="lineno"> 3639</span>          <span class="keywordflow">if</span> (inst.<a class="code hl_function" href="classtriton_1_1arch_1_1Instruction.html#ac97268e91231a4c8cdfa31b45ffaa69d">isUpdateFlag</a>() == <span class="keyword">true</span>) {</div>
-<div class="line"><a id="l03640" name="l03640"></a><span class="lineno"> 3640</span>            this-&gt;clearFlag_s(inst, this-&gt;architecture-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1Architecture.html#a021273a80e1210875a46dd7936f4c2c9">getRegister</a>(ID_REG_AARCH64_C), <span class="stringliteral">&quot;Clears carry flag&quot;</span>);</div>
-<div class="line"><a id="l03641" name="l03641"></a><span class="lineno"> 3641</span>            this-&gt;nf_s(inst, expr, src1);</div>
-<div class="line"><a id="l03642" name="l03642"></a><span class="lineno"> 3642</span>            this-&gt;clearFlag_s(inst, this-&gt;architecture-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1Architecture.html#a021273a80e1210875a46dd7936f4c2c9">getRegister</a>(ID_REG_AARCH64_V), <span class="stringliteral">&quot;Clears overflow flag&quot;</span>);</div>
-<div class="line"><a id="l03643" name="l03643"></a><span class="lineno"> 3643</span>            this-&gt;zf_s(inst, expr, src1);</div>
-<div class="line"><a id="l03644" name="l03644"></a><span class="lineno"> 3644</span>          }</div>
+<div class="line"><a id="l03635" name="l03635"></a><span class="lineno"> 3635</span>        <span class="keywordtype">void</span> AArch64Semantics::tst_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a id="l03636" name="l03636"></a><span class="lineno"> 3636</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
+<div class="line"><a id="l03637" name="l03637"></a><span class="lineno"> 3637</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
+<div class="line"><a id="l03638" name="l03638"></a><span class="lineno"> 3638</span> </div>
+<div class="line"><a id="l03639" name="l03639"></a><span class="lineno"> 3639</span>          <span class="comment">/* Create symbolic operands */</span></div>
+<div class="line"><a id="l03640" name="l03640"></a><span class="lineno"> 3640</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
+<div class="line"><a id="l03641" name="l03641"></a><span class="lineno"> 3641</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
+<div class="line"><a id="l03642" name="l03642"></a><span class="lineno"> 3642</span> </div>
+<div class="line"><a id="l03643" name="l03643"></a><span class="lineno"> 3643</span>          <span class="comment">/* Create the semantics */</span></div>
+<div class="line"><a id="l03644" name="l03644"></a><span class="lineno"> 3644</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;bvand(op1, op2);</div>
 <div class="line"><a id="l03645" name="l03645"></a><span class="lineno"> 3645</span> </div>
-<div class="line"><a id="l03646" name="l03646"></a><span class="lineno"> 3646</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
-<div class="line"><a id="l03647" name="l03647"></a><span class="lineno"> 3647</span>          this-&gt;controlFlow_s(inst);</div>
-<div class="line"><a id="l03648" name="l03648"></a><span class="lineno"> 3648</span>        }</div>
-<div class="line"><a id="l03649" name="l03649"></a><span class="lineno"> 3649</span> </div>
-<div class="line"><a id="l03650" name="l03650"></a><span class="lineno"> 3650</span> </div>
-<div class="line"><a id="l03651" name="l03651"></a><span class="lineno"> 3651</span>        <span class="keywordtype">void</span> AArch64Semantics::ubfiz_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a id="l03652" name="l03652"></a><span class="lineno"> 3652</span>          <span class="keyword">auto</span>&amp; dst   = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
-<div class="line"><a id="l03653" name="l03653"></a><span class="lineno"> 3653</span>          <span class="keyword">auto</span>&amp; src1  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
-<div class="line"><a id="l03654" name="l03654"></a><span class="lineno"> 3654</span>          <span class="keyword">auto</span>&amp; src2  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
-<div class="line"><a id="l03655" name="l03655"></a><span class="lineno"> 3655</span>          <span class="keyword">auto</span>&amp; src3  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[3];</div>
-<div class="line"><a id="l03656" name="l03656"></a><span class="lineno"> 3656</span>          <span class="keyword">auto</span>  lsb   = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">uint32</a><span class="keyword">&gt;</span>(src2.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ae80ff10f9b4e3d0dde0f0656673947d2">getImmediate</a>().<a class="code hl_function" href="classtriton_1_1arch_1_1Immediate.html#ac96c5f82b5dfe1378cf4f2b1b700ab46">getValue</a>());</div>
-<div class="line"><a id="l03657" name="l03657"></a><span class="lineno"> 3657</span>          <span class="keyword">auto</span>  width = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">uint32</a><span class="keyword">&gt;</span>(src3.getImmediate().getValue());</div>
-<div class="line"><a id="l03658" name="l03658"></a><span class="lineno"> 3658</span> </div>
-<div class="line"><a id="l03659" name="l03659"></a><span class="lineno"> 3659</span>          <span class="keywordflow">if</span> (lsb + width &gt; dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>())</div>
-<div class="line"><a id="l03660" name="l03660"></a><span class="lineno"> 3660</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classtriton_1_1exceptions_1_1Semantics.html">triton::exceptions::Semantics</a>(<span class="stringliteral">&quot;AArch64Semantics::ubfiz_s(): Invalid lsb and width.&quot;</span>);</div>
-<div class="line"><a id="l03661" name="l03661"></a><span class="lineno"> 3661</span> </div>
-<div class="line"><a id="l03662" name="l03662"></a><span class="lineno"> 3662</span>          <span class="comment">/* Create symbolic operands */</span></div>
-<div class="line"><a id="l03663" name="l03663"></a><span class="lineno"> 3663</span>          <span class="keyword">auto</span> op = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
+<div class="line"><a id="l03646" name="l03646"></a><span class="lineno"> 3646</span>          <span class="comment">/* Create symbolic expression */</span></div>
+<div class="line"><a id="l03647" name="l03647"></a><span class="lineno"> 3647</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a7041100fdf28994778ea4beeaf471474">createSymbolicVolatileExpression</a>(inst, node, <span class="stringliteral">&quot;TST operation&quot;</span>);</div>
+<div class="line"><a id="l03648" name="l03648"></a><span class="lineno"> 3648</span> </div>
+<div class="line"><a id="l03649" name="l03649"></a><span class="lineno"> 3649</span>          <span class="comment">/* Spread taint */</span></div>
+<div class="line"><a id="l03650" name="l03650"></a><span class="lineno"> 3650</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src2);</div>
+<div class="line"><a id="l03651" name="l03651"></a><span class="lineno"> 3651</span> </div>
+<div class="line"><a id="l03652" name="l03652"></a><span class="lineno"> 3652</span>          <span class="comment">/* Update symbolic flags */</span></div>
+<div class="line"><a id="l03653" name="l03653"></a><span class="lineno"> 3653</span>          <span class="keywordflow">if</span> (inst.<a class="code hl_function" href="classtriton_1_1arch_1_1Instruction.html#ac97268e91231a4c8cdfa31b45ffaa69d">isUpdateFlag</a>() == <span class="keyword">true</span>) {</div>
+<div class="line"><a id="l03654" name="l03654"></a><span class="lineno"> 3654</span>            this-&gt;clearFlag_s(inst, this-&gt;architecture-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1Architecture.html#a021273a80e1210875a46dd7936f4c2c9">getRegister</a>(ID_REG_AARCH64_C), <span class="stringliteral">&quot;Clears carry flag&quot;</span>);</div>
+<div class="line"><a id="l03655" name="l03655"></a><span class="lineno"> 3655</span>            this-&gt;nf_s(inst, expr, src1);</div>
+<div class="line"><a id="l03656" name="l03656"></a><span class="lineno"> 3656</span>            this-&gt;clearFlag_s(inst, this-&gt;architecture-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1Architecture.html#a021273a80e1210875a46dd7936f4c2c9">getRegister</a>(ID_REG_AARCH64_V), <span class="stringliteral">&quot;Clears overflow flag&quot;</span>);</div>
+<div class="line"><a id="l03657" name="l03657"></a><span class="lineno"> 3657</span>            this-&gt;zf_s(inst, expr, src1);</div>
+<div class="line"><a id="l03658" name="l03658"></a><span class="lineno"> 3658</span>          }</div>
+<div class="line"><a id="l03659" name="l03659"></a><span class="lineno"> 3659</span> </div>
+<div class="line"><a id="l03660" name="l03660"></a><span class="lineno"> 3660</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
+<div class="line"><a id="l03661" name="l03661"></a><span class="lineno"> 3661</span>          this-&gt;controlFlow_s(inst);</div>
+<div class="line"><a id="l03662" name="l03662"></a><span class="lineno"> 3662</span>        }</div>
+<div class="line"><a id="l03663" name="l03663"></a><span class="lineno"> 3663</span> </div>
 <div class="line"><a id="l03664" name="l03664"></a><span class="lineno"> 3664</span> </div>
-<div class="line"><a id="l03665" name="l03665"></a><span class="lineno"> 3665</span>          <span class="comment">/* Create the semantics */</span></div>
-<div class="line"><a id="l03666" name="l03666"></a><span class="lineno"> 3666</span>          std::vector&lt;triton::ast::SharedAbstractNode&gt; bits;</div>
-<div class="line"><a id="l03667" name="l03667"></a><span class="lineno"> 3667</span>          bits.reserve(3);</div>
-<div class="line"><a id="l03668" name="l03668"></a><span class="lineno"> 3668</span> </div>
-<div class="line"><a id="l03669" name="l03669"></a><span class="lineno"> 3669</span>          <span class="keywordflow">if</span> (lsb + width &lt; dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>()) {</div>
-<div class="line"><a id="l03670" name="l03670"></a><span class="lineno"> 3670</span>            bits.push_back(this-&gt;astCtxt-&gt;bv(0, dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - (lsb + width)));</div>
-<div class="line"><a id="l03671" name="l03671"></a><span class="lineno"> 3671</span>          }</div>
+<div class="line"><a id="l03665" name="l03665"></a><span class="lineno"> 3665</span>        <span class="keywordtype">void</span> AArch64Semantics::ubfiz_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a id="l03666" name="l03666"></a><span class="lineno"> 3666</span>          <span class="keyword">auto</span>&amp; dst   = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
+<div class="line"><a id="l03667" name="l03667"></a><span class="lineno"> 3667</span>          <span class="keyword">auto</span>&amp; src1  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
+<div class="line"><a id="l03668" name="l03668"></a><span class="lineno"> 3668</span>          <span class="keyword">auto</span>&amp; src2  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
+<div class="line"><a id="l03669" name="l03669"></a><span class="lineno"> 3669</span>          <span class="keyword">auto</span>&amp; src3  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[3];</div>
+<div class="line"><a id="l03670" name="l03670"></a><span class="lineno"> 3670</span>          <span class="keyword">auto</span>  lsb   = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">uint32</a><span class="keyword">&gt;</span>(src2.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ae80ff10f9b4e3d0dde0f0656673947d2">getImmediate</a>().<a class="code hl_function" href="classtriton_1_1arch_1_1Immediate.html#ac96c5f82b5dfe1378cf4f2b1b700ab46">getValue</a>());</div>
+<div class="line"><a id="l03671" name="l03671"></a><span class="lineno"> 3671</span>          <span class="keyword">auto</span>  width = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">uint32</a><span class="keyword">&gt;</span>(src3.getImmediate().getValue());</div>
 <div class="line"><a id="l03672" name="l03672"></a><span class="lineno"> 3672</span> </div>
-<div class="line"><a id="l03673" name="l03673"></a><span class="lineno"> 3673</span>          bits.push_back(this-&gt;astCtxt-&gt;extract(width, 0, op));</div>
-<div class="line"><a id="l03674" name="l03674"></a><span class="lineno"> 3674</span> </div>
-<div class="line"><a id="l03675" name="l03675"></a><span class="lineno"> 3675</span>          <span class="keywordflow">if</span> (lsb) {</div>
-<div class="line"><a id="l03676" name="l03676"></a><span class="lineno"> 3676</span>            bits.push_back(this-&gt;astCtxt-&gt;bv(0, lsb));</div>
-<div class="line"><a id="l03677" name="l03677"></a><span class="lineno"> 3677</span>          }</div>
+<div class="line"><a id="l03673" name="l03673"></a><span class="lineno"> 3673</span>          <span class="keywordflow">if</span> (lsb + width &gt; dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>())</div>
+<div class="line"><a id="l03674" name="l03674"></a><span class="lineno"> 3674</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classtriton_1_1exceptions_1_1Semantics.html">triton::exceptions::Semantics</a>(<span class="stringliteral">&quot;AArch64Semantics::ubfiz_s(): Invalid lsb and width.&quot;</span>);</div>
+<div class="line"><a id="l03675" name="l03675"></a><span class="lineno"> 3675</span> </div>
+<div class="line"><a id="l03676" name="l03676"></a><span class="lineno"> 3676</span>          <span class="comment">/* Create symbolic operands */</span></div>
+<div class="line"><a id="l03677" name="l03677"></a><span class="lineno"> 3677</span>          <span class="keyword">auto</span> op = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
 <div class="line"><a id="l03678" name="l03678"></a><span class="lineno"> 3678</span> </div>
-<div class="line"><a id="l03679" name="l03679"></a><span class="lineno"> 3679</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;concat(bits);</div>
-<div class="line"><a id="l03680" name="l03680"></a><span class="lineno"> 3680</span> </div>
-<div class="line"><a id="l03681" name="l03681"></a><span class="lineno"> 3681</span>          <span class="comment">/* Create symbolic expression */</span></div>
-<div class="line"><a id="l03682" name="l03682"></a><span class="lineno"> 3682</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UBFIZ operation&quot;</span>);</div>
-<div class="line"><a id="l03683" name="l03683"></a><span class="lineno"> 3683</span> </div>
-<div class="line"><a id="l03684" name="l03684"></a><span class="lineno"> 3684</span>          <span class="comment">/* Spread taint */</span></div>
-<div class="line"><a id="l03685" name="l03685"></a><span class="lineno"> 3685</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a92ece180f5f93775bbdd97b8c456d87e">taintAssignment</a>(dst, src1);</div>
+<div class="line"><a id="l03679" name="l03679"></a><span class="lineno"> 3679</span>          <span class="comment">/* Create the semantics */</span></div>
+<div class="line"><a id="l03680" name="l03680"></a><span class="lineno"> 3680</span>          std::vector&lt;triton::ast::SharedAbstractNode&gt; bits;</div>
+<div class="line"><a id="l03681" name="l03681"></a><span class="lineno"> 3681</span>          bits.reserve(3);</div>
+<div class="line"><a id="l03682" name="l03682"></a><span class="lineno"> 3682</span> </div>
+<div class="line"><a id="l03683" name="l03683"></a><span class="lineno"> 3683</span>          <span class="keywordflow">if</span> (lsb + width &lt; dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>()) {</div>
+<div class="line"><a id="l03684" name="l03684"></a><span class="lineno"> 3684</span>            bits.push_back(this-&gt;astCtxt-&gt;bv(0, dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - (lsb + width)));</div>
+<div class="line"><a id="l03685" name="l03685"></a><span class="lineno"> 3685</span>          }</div>
 <div class="line"><a id="l03686" name="l03686"></a><span class="lineno"> 3686</span> </div>
-<div class="line"><a id="l03687" name="l03687"></a><span class="lineno"> 3687</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
-<div class="line"><a id="l03688" name="l03688"></a><span class="lineno"> 3688</span>          this-&gt;controlFlow_s(inst);</div>
-<div class="line"><a id="l03689" name="l03689"></a><span class="lineno"> 3689</span>        }</div>
-<div class="line"><a id="l03690" name="l03690"></a><span class="lineno"> 3690</span> </div>
-<div class="line"><a id="l03691" name="l03691"></a><span class="lineno"> 3691</span> </div>
-<div class="line"><a id="l03692" name="l03692"></a><span class="lineno"> 3692</span>        <span class="keywordtype">void</span> AArch64Semantics::ubfx_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a id="l03693" name="l03693"></a><span class="lineno"> 3693</span>          <span class="keyword">auto</span>&amp; dst   = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
-<div class="line"><a id="l03694" name="l03694"></a><span class="lineno"> 3694</span>          <span class="keyword">auto</span>&amp; src1  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
-<div class="line"><a id="l03695" name="l03695"></a><span class="lineno"> 3695</span>          <span class="keyword">auto</span>&amp; src2  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
-<div class="line"><a id="l03696" name="l03696"></a><span class="lineno"> 3696</span>          <span class="keyword">auto</span>&amp; src3  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[3];</div>
-<div class="line"><a id="l03697" name="l03697"></a><span class="lineno"> 3697</span>          <span class="keyword">auto</span>  lsb   = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">uint32</a><span class="keyword">&gt;</span>(src2.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ae80ff10f9b4e3d0dde0f0656673947d2">getImmediate</a>().<a class="code hl_function" href="classtriton_1_1arch_1_1Immediate.html#ac96c5f82b5dfe1378cf4f2b1b700ab46">getValue</a>());</div>
-<div class="line"><a id="l03698" name="l03698"></a><span class="lineno"> 3698</span>          <span class="keyword">auto</span>  width = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">uint32</a><span class="keyword">&gt;</span>(src3.getImmediate().getValue());</div>
-<div class="line"><a id="l03699" name="l03699"></a><span class="lineno"> 3699</span> </div>
-<div class="line"><a id="l03700" name="l03700"></a><span class="lineno"> 3700</span>          <span class="keywordflow">if</span> (lsb + width &gt; dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>())</div>
-<div class="line"><a id="l03701" name="l03701"></a><span class="lineno"> 3701</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classtriton_1_1exceptions_1_1Semantics.html">triton::exceptions::Semantics</a>(<span class="stringliteral">&quot;AArch64Semantics::ubfx_s(): Invalid lsb and width.&quot;</span>);</div>
-<div class="line"><a id="l03702" name="l03702"></a><span class="lineno"> 3702</span> </div>
-<div class="line"><a id="l03703" name="l03703"></a><span class="lineno"> 3703</span>          <span class="comment">/* Create symbolic operands */</span></div>
-<div class="line"><a id="l03704" name="l03704"></a><span class="lineno"> 3704</span>          <span class="keyword">auto</span> op = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
+<div class="line"><a id="l03687" name="l03687"></a><span class="lineno"> 3687</span>          bits.push_back(this-&gt;astCtxt-&gt;extract(width, 0, op));</div>
+<div class="line"><a id="l03688" name="l03688"></a><span class="lineno"> 3688</span> </div>
+<div class="line"><a id="l03689" name="l03689"></a><span class="lineno"> 3689</span>          <span class="keywordflow">if</span> (lsb) {</div>
+<div class="line"><a id="l03690" name="l03690"></a><span class="lineno"> 3690</span>            bits.push_back(this-&gt;astCtxt-&gt;bv(0, lsb));</div>
+<div class="line"><a id="l03691" name="l03691"></a><span class="lineno"> 3691</span>          }</div>
+<div class="line"><a id="l03692" name="l03692"></a><span class="lineno"> 3692</span> </div>
+<div class="line"><a id="l03693" name="l03693"></a><span class="lineno"> 3693</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;concat(bits);</div>
+<div class="line"><a id="l03694" name="l03694"></a><span class="lineno"> 3694</span> </div>
+<div class="line"><a id="l03695" name="l03695"></a><span class="lineno"> 3695</span>          <span class="comment">/* Create symbolic expression */</span></div>
+<div class="line"><a id="l03696" name="l03696"></a><span class="lineno"> 3696</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UBFIZ operation&quot;</span>);</div>
+<div class="line"><a id="l03697" name="l03697"></a><span class="lineno"> 3697</span> </div>
+<div class="line"><a id="l03698" name="l03698"></a><span class="lineno"> 3698</span>          <span class="comment">/* Spread taint */</span></div>
+<div class="line"><a id="l03699" name="l03699"></a><span class="lineno"> 3699</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a92ece180f5f93775bbdd97b8c456d87e">taintAssignment</a>(dst, src1);</div>
+<div class="line"><a id="l03700" name="l03700"></a><span class="lineno"> 3700</span> </div>
+<div class="line"><a id="l03701" name="l03701"></a><span class="lineno"> 3701</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
+<div class="line"><a id="l03702" name="l03702"></a><span class="lineno"> 3702</span>          this-&gt;controlFlow_s(inst);</div>
+<div class="line"><a id="l03703" name="l03703"></a><span class="lineno"> 3703</span>        }</div>
+<div class="line"><a id="l03704" name="l03704"></a><span class="lineno"> 3704</span> </div>
 <div class="line"><a id="l03705" name="l03705"></a><span class="lineno"> 3705</span> </div>
-<div class="line"><a id="l03706" name="l03706"></a><span class="lineno"> 3706</span>          <span class="comment">/* Create the semantics */</span></div>
-<div class="line"><a id="l03707" name="l03707"></a><span class="lineno"> 3707</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - width, this-&gt;astCtxt-&gt;extract(lsb+width-1, lsb, op));</div>
-<div class="line"><a id="l03708" name="l03708"></a><span class="lineno"> 3708</span> </div>
-<div class="line"><a id="l03709" name="l03709"></a><span class="lineno"> 3709</span>          <span class="comment">/* Create symbolic expression */</span></div>
-<div class="line"><a id="l03710" name="l03710"></a><span class="lineno"> 3710</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UBFX operation&quot;</span>);</div>
-<div class="line"><a id="l03711" name="l03711"></a><span class="lineno"> 3711</span> </div>
-<div class="line"><a id="l03712" name="l03712"></a><span class="lineno"> 3712</span>          <span class="comment">/* Spread taint */</span></div>
-<div class="line"><a id="l03713" name="l03713"></a><span class="lineno"> 3713</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a92ece180f5f93775bbdd97b8c456d87e">taintAssignment</a>(dst, src1);</div>
-<div class="line"><a id="l03714" name="l03714"></a><span class="lineno"> 3714</span> </div>
-<div class="line"><a id="l03715" name="l03715"></a><span class="lineno"> 3715</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
-<div class="line"><a id="l03716" name="l03716"></a><span class="lineno"> 3716</span>          this-&gt;controlFlow_s(inst);</div>
-<div class="line"><a id="l03717" name="l03717"></a><span class="lineno"> 3717</span>        }</div>
-<div class="line"><a id="l03718" name="l03718"></a><span class="lineno"> 3718</span> </div>
+<div class="line"><a id="l03706" name="l03706"></a><span class="lineno"> 3706</span>        <span class="keywordtype">void</span> AArch64Semantics::ubfx_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a id="l03707" name="l03707"></a><span class="lineno"> 3707</span>          <span class="keyword">auto</span>&amp; dst   = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
+<div class="line"><a id="l03708" name="l03708"></a><span class="lineno"> 3708</span>          <span class="keyword">auto</span>&amp; src1  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
+<div class="line"><a id="l03709" name="l03709"></a><span class="lineno"> 3709</span>          <span class="keyword">auto</span>&amp; src2  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
+<div class="line"><a id="l03710" name="l03710"></a><span class="lineno"> 3710</span>          <span class="keyword">auto</span>&amp; src3  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[3];</div>
+<div class="line"><a id="l03711" name="l03711"></a><span class="lineno"> 3711</span>          <span class="keyword">auto</span>  lsb   = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">uint32</a><span class="keyword">&gt;</span>(src2.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ae80ff10f9b4e3d0dde0f0656673947d2">getImmediate</a>().<a class="code hl_function" href="classtriton_1_1arch_1_1Immediate.html#ac96c5f82b5dfe1378cf4f2b1b700ab46">getValue</a>());</div>
+<div class="line"><a id="l03712" name="l03712"></a><span class="lineno"> 3712</span>          <span class="keyword">auto</span>  width = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">uint32</a><span class="keyword">&gt;</span>(src3.getImmediate().getValue());</div>
+<div class="line"><a id="l03713" name="l03713"></a><span class="lineno"> 3713</span> </div>
+<div class="line"><a id="l03714" name="l03714"></a><span class="lineno"> 3714</span>          <span class="keywordflow">if</span> (lsb + width &gt; dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>())</div>
+<div class="line"><a id="l03715" name="l03715"></a><span class="lineno"> 3715</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classtriton_1_1exceptions_1_1Semantics.html">triton::exceptions::Semantics</a>(<span class="stringliteral">&quot;AArch64Semantics::ubfx_s(): Invalid lsb and width.&quot;</span>);</div>
+<div class="line"><a id="l03716" name="l03716"></a><span class="lineno"> 3716</span> </div>
+<div class="line"><a id="l03717" name="l03717"></a><span class="lineno"> 3717</span>          <span class="comment">/* Create symbolic operands */</span></div>
+<div class="line"><a id="l03718" name="l03718"></a><span class="lineno"> 3718</span>          <span class="keyword">auto</span> op = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
 <div class="line"><a id="l03719" name="l03719"></a><span class="lineno"> 3719</span> </div>
-<div class="line"><a id="l03720" name="l03720"></a><span class="lineno"> 3720</span>        <span class="keywordtype">void</span> AArch64Semantics::udiv_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a id="l03721" name="l03721"></a><span class="lineno"> 3721</span>          <span class="keyword">auto</span>&amp; dst  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
-<div class="line"><a id="l03722" name="l03722"></a><span class="lineno"> 3722</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
-<div class="line"><a id="l03723" name="l03723"></a><span class="lineno"> 3723</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
-<div class="line"><a id="l03724" name="l03724"></a><span class="lineno"> 3724</span> </div>
-<div class="line"><a id="l03725" name="l03725"></a><span class="lineno"> 3725</span>          <span class="comment">/* Create symbolic operands */</span></div>
-<div class="line"><a id="l03726" name="l03726"></a><span class="lineno"> 3726</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
-<div class="line"><a id="l03727" name="l03727"></a><span class="lineno"> 3727</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
+<div class="line"><a id="l03720" name="l03720"></a><span class="lineno"> 3720</span>          <span class="comment">/* Create the semantics */</span></div>
+<div class="line"><a id="l03721" name="l03721"></a><span class="lineno"> 3721</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - width, this-&gt;astCtxt-&gt;extract(lsb+width-1, lsb, op));</div>
+<div class="line"><a id="l03722" name="l03722"></a><span class="lineno"> 3722</span> </div>
+<div class="line"><a id="l03723" name="l03723"></a><span class="lineno"> 3723</span>          <span class="comment">/* Create symbolic expression */</span></div>
+<div class="line"><a id="l03724" name="l03724"></a><span class="lineno"> 3724</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UBFX operation&quot;</span>);</div>
+<div class="line"><a id="l03725" name="l03725"></a><span class="lineno"> 3725</span> </div>
+<div class="line"><a id="l03726" name="l03726"></a><span class="lineno"> 3726</span>          <span class="comment">/* Spread taint */</span></div>
+<div class="line"><a id="l03727" name="l03727"></a><span class="lineno"> 3727</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a92ece180f5f93775bbdd97b8c456d87e">taintAssignment</a>(dst, src1);</div>
 <div class="line"><a id="l03728" name="l03728"></a><span class="lineno"> 3728</span> </div>
-<div class="line"><a id="l03729" name="l03729"></a><span class="lineno"> 3729</span>          <span class="comment">/* Create the semantics */</span></div>
-<div class="line"><a id="l03730" name="l03730"></a><span class="lineno"> 3730</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;ite(</div>
-<div class="line"><a id="l03731" name="l03731"></a><span class="lineno"> 3731</span>                        this-&gt;astCtxt-&gt;equal(op2, this-&gt;astCtxt-&gt;bv(0, op2-&gt;getBitvectorSize())),</div>
-<div class="line"><a id="l03732" name="l03732"></a><span class="lineno"> 3732</span>                        this-&gt;astCtxt-&gt;bv(0, dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>()),</div>
-<div class="line"><a id="l03733" name="l03733"></a><span class="lineno"> 3733</span>                        this-&gt;astCtxt-&gt;bvudiv(op1, op2)</div>
-<div class="line"><a id="l03734" name="l03734"></a><span class="lineno"> 3734</span>                      );</div>
-<div class="line"><a id="l03735" name="l03735"></a><span class="lineno"> 3735</span> </div>
-<div class="line"><a id="l03736" name="l03736"></a><span class="lineno"> 3736</span>          <span class="comment">/* Create symbolic expression */</span></div>
-<div class="line"><a id="l03737" name="l03737"></a><span class="lineno"> 3737</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UDIV operation&quot;</span>);</div>
+<div class="line"><a id="l03729" name="l03729"></a><span class="lineno"> 3729</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
+<div class="line"><a id="l03730" name="l03730"></a><span class="lineno"> 3730</span>          this-&gt;controlFlow_s(inst);</div>
+<div class="line"><a id="l03731" name="l03731"></a><span class="lineno"> 3731</span>        }</div>
+<div class="line"><a id="l03732" name="l03732"></a><span class="lineno"> 3732</span> </div>
+<div class="line"><a id="l03733" name="l03733"></a><span class="lineno"> 3733</span> </div>
+<div class="line"><a id="l03734" name="l03734"></a><span class="lineno"> 3734</span>        <span class="keywordtype">void</span> AArch64Semantics::udiv_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a id="l03735" name="l03735"></a><span class="lineno"> 3735</span>          <span class="keyword">auto</span>&amp; dst  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
+<div class="line"><a id="l03736" name="l03736"></a><span class="lineno"> 3736</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
+<div class="line"><a id="l03737" name="l03737"></a><span class="lineno"> 3737</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
 <div class="line"><a id="l03738" name="l03738"></a><span class="lineno"> 3738</span> </div>
-<div class="line"><a id="l03739" name="l03739"></a><span class="lineno"> 3739</span>          <span class="comment">/* Spread taint */</span></div>
-<div class="line"><a id="l03740" name="l03740"></a><span class="lineno"> 3740</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2));</div>
-<div class="line"><a id="l03741" name="l03741"></a><span class="lineno"> 3741</span> </div>
-<div class="line"><a id="l03742" name="l03742"></a><span class="lineno"> 3742</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
-<div class="line"><a id="l03743" name="l03743"></a><span class="lineno"> 3743</span>          this-&gt;controlFlow_s(inst);</div>
-<div class="line"><a id="l03744" name="l03744"></a><span class="lineno"> 3744</span>        }</div>
-<div class="line"><a id="l03745" name="l03745"></a><span class="lineno"> 3745</span> </div>
-<div class="line"><a id="l03746" name="l03746"></a><span class="lineno"> 3746</span> </div>
-<div class="line"><a id="l03747" name="l03747"></a><span class="lineno"> 3747</span>        <span class="keywordtype">void</span> AArch64Semantics::umaddl_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a id="l03748" name="l03748"></a><span class="lineno"> 3748</span>          <span class="keyword">auto</span>&amp; dst  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
-<div class="line"><a id="l03749" name="l03749"></a><span class="lineno"> 3749</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
-<div class="line"><a id="l03750" name="l03750"></a><span class="lineno"> 3750</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
-<div class="line"><a id="l03751" name="l03751"></a><span class="lineno"> 3751</span>          <span class="keyword">auto</span>&amp; src3 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[3];</div>
+<div class="line"><a id="l03739" name="l03739"></a><span class="lineno"> 3739</span>          <span class="comment">/* Create symbolic operands */</span></div>
+<div class="line"><a id="l03740" name="l03740"></a><span class="lineno"> 3740</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
+<div class="line"><a id="l03741" name="l03741"></a><span class="lineno"> 3741</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
+<div class="line"><a id="l03742" name="l03742"></a><span class="lineno"> 3742</span> </div>
+<div class="line"><a id="l03743" name="l03743"></a><span class="lineno"> 3743</span>          <span class="comment">/* Create the semantics */</span></div>
+<div class="line"><a id="l03744" name="l03744"></a><span class="lineno"> 3744</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;ite(</div>
+<div class="line"><a id="l03745" name="l03745"></a><span class="lineno"> 3745</span>                        this-&gt;astCtxt-&gt;equal(op2, this-&gt;astCtxt-&gt;bv(0, op2-&gt;getBitvectorSize())),</div>
+<div class="line"><a id="l03746" name="l03746"></a><span class="lineno"> 3746</span>                        this-&gt;astCtxt-&gt;bv(0, dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>()),</div>
+<div class="line"><a id="l03747" name="l03747"></a><span class="lineno"> 3747</span>                        this-&gt;astCtxt-&gt;bvudiv(op1, op2)</div>
+<div class="line"><a id="l03748" name="l03748"></a><span class="lineno"> 3748</span>                      );</div>
+<div class="line"><a id="l03749" name="l03749"></a><span class="lineno"> 3749</span> </div>
+<div class="line"><a id="l03750" name="l03750"></a><span class="lineno"> 3750</span>          <span class="comment">/* Create symbolic expression */</span></div>
+<div class="line"><a id="l03751" name="l03751"></a><span class="lineno"> 3751</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UDIV operation&quot;</span>);</div>
 <div class="line"><a id="l03752" name="l03752"></a><span class="lineno"> 3752</span> </div>
-<div class="line"><a id="l03753" name="l03753"></a><span class="lineno"> 3753</span>          <span class="comment">/* Create symbolic operands */</span></div>
-<div class="line"><a id="l03754" name="l03754"></a><span class="lineno"> 3754</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
-<div class="line"><a id="l03755" name="l03755"></a><span class="lineno"> 3755</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
-<div class="line"><a id="l03756" name="l03756"></a><span class="lineno"> 3756</span>          <span class="keyword">auto</span> op3 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src3);</div>
-<div class="line"><a id="l03757" name="l03757"></a><span class="lineno"> 3757</span> </div>
-<div class="line"><a id="l03758" name="l03758"></a><span class="lineno"> 3758</span>          <span class="comment">/* Create the semantics */</span></div>
-<div class="line"><a id="l03759" name="l03759"></a><span class="lineno"> 3759</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;bvadd(</div>
-<div class="line"><a id="l03760" name="l03760"></a><span class="lineno"> 3760</span>                        op3,</div>
-<div class="line"><a id="l03761" name="l03761"></a><span class="lineno"> 3761</span>                        this-&gt;astCtxt-&gt;bvmul(</div>
-<div class="line"><a id="l03762" name="l03762"></a><span class="lineno"> 3762</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op1),</div>
-<div class="line"><a id="l03763" name="l03763"></a><span class="lineno"> 3763</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op2)</div>
-<div class="line"><a id="l03764" name="l03764"></a><span class="lineno"> 3764</span>                        )</div>
-<div class="line"><a id="l03765" name="l03765"></a><span class="lineno"> 3765</span>                      );</div>
+<div class="line"><a id="l03753" name="l03753"></a><span class="lineno"> 3753</span>          <span class="comment">/* Spread taint */</span></div>
+<div class="line"><a id="l03754" name="l03754"></a><span class="lineno"> 3754</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2));</div>
+<div class="line"><a id="l03755" name="l03755"></a><span class="lineno"> 3755</span> </div>
+<div class="line"><a id="l03756" name="l03756"></a><span class="lineno"> 3756</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
+<div class="line"><a id="l03757" name="l03757"></a><span class="lineno"> 3757</span>          this-&gt;controlFlow_s(inst);</div>
+<div class="line"><a id="l03758" name="l03758"></a><span class="lineno"> 3758</span>        }</div>
+<div class="line"><a id="l03759" name="l03759"></a><span class="lineno"> 3759</span> </div>
+<div class="line"><a id="l03760" name="l03760"></a><span class="lineno"> 3760</span> </div>
+<div class="line"><a id="l03761" name="l03761"></a><span class="lineno"> 3761</span>        <span class="keywordtype">void</span> AArch64Semantics::umaddl_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a id="l03762" name="l03762"></a><span class="lineno"> 3762</span>          <span class="keyword">auto</span>&amp; dst  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
+<div class="line"><a id="l03763" name="l03763"></a><span class="lineno"> 3763</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
+<div class="line"><a id="l03764" name="l03764"></a><span class="lineno"> 3764</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
+<div class="line"><a id="l03765" name="l03765"></a><span class="lineno"> 3765</span>          <span class="keyword">auto</span>&amp; src3 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[3];</div>
 <div class="line"><a id="l03766" name="l03766"></a><span class="lineno"> 3766</span> </div>
-<div class="line"><a id="l03767" name="l03767"></a><span class="lineno"> 3767</span>          <span class="comment">/* Create symbolic expression */</span></div>
-<div class="line"><a id="l03768" name="l03768"></a><span class="lineno"> 3768</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UMADDL operation&quot;</span>);</div>
-<div class="line"><a id="l03769" name="l03769"></a><span class="lineno"> 3769</span> </div>
-<div class="line"><a id="l03770" name="l03770"></a><span class="lineno"> 3770</span>          <span class="comment">/* Spread taint */</span></div>
-<div class="line"><a id="l03771" name="l03771"></a><span class="lineno"> 3771</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2) | this-&gt;taintEngine-&gt;isTainted(src3));</div>
-<div class="line"><a id="l03772" name="l03772"></a><span class="lineno"> 3772</span> </div>
-<div class="line"><a id="l03773" name="l03773"></a><span class="lineno"> 3773</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
-<div class="line"><a id="l03774" name="l03774"></a><span class="lineno"> 3774</span>          this-&gt;controlFlow_s(inst);</div>
-<div class="line"><a id="l03775" name="l03775"></a><span class="lineno"> 3775</span>        }</div>
-<div class="line"><a id="l03776" name="l03776"></a><span class="lineno"> 3776</span> </div>
-<div class="line"><a id="l03777" name="l03777"></a><span class="lineno"> 3777</span> </div>
-<div class="line"><a id="l03778" name="l03778"></a><span class="lineno"> 3778</span>        <span class="keywordtype">void</span> AArch64Semantics::umnegl_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a id="l03779" name="l03779"></a><span class="lineno"> 3779</span>          <span class="keyword">auto</span>&amp; dst  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
-<div class="line"><a id="l03780" name="l03780"></a><span class="lineno"> 3780</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
-<div class="line"><a id="l03781" name="l03781"></a><span class="lineno"> 3781</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
-<div class="line"><a id="l03782" name="l03782"></a><span class="lineno"> 3782</span> </div>
-<div class="line"><a id="l03783" name="l03783"></a><span class="lineno"> 3783</span>          <span class="comment">/* Create symbolic operands */</span></div>
-<div class="line"><a id="l03784" name="l03784"></a><span class="lineno"> 3784</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
-<div class="line"><a id="l03785" name="l03785"></a><span class="lineno"> 3785</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
+<div class="line"><a id="l03767" name="l03767"></a><span class="lineno"> 3767</span>          <span class="comment">/* Create symbolic operands */</span></div>
+<div class="line"><a id="l03768" name="l03768"></a><span class="lineno"> 3768</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
+<div class="line"><a id="l03769" name="l03769"></a><span class="lineno"> 3769</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
+<div class="line"><a id="l03770" name="l03770"></a><span class="lineno"> 3770</span>          <span class="keyword">auto</span> op3 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src3);</div>
+<div class="line"><a id="l03771" name="l03771"></a><span class="lineno"> 3771</span> </div>
+<div class="line"><a id="l03772" name="l03772"></a><span class="lineno"> 3772</span>          <span class="comment">/* Create the semantics */</span></div>
+<div class="line"><a id="l03773" name="l03773"></a><span class="lineno"> 3773</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;bvadd(</div>
+<div class="line"><a id="l03774" name="l03774"></a><span class="lineno"> 3774</span>                        op3,</div>
+<div class="line"><a id="l03775" name="l03775"></a><span class="lineno"> 3775</span>                        this-&gt;astCtxt-&gt;bvmul(</div>
+<div class="line"><a id="l03776" name="l03776"></a><span class="lineno"> 3776</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op1),</div>
+<div class="line"><a id="l03777" name="l03777"></a><span class="lineno"> 3777</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op2)</div>
+<div class="line"><a id="l03778" name="l03778"></a><span class="lineno"> 3778</span>                        )</div>
+<div class="line"><a id="l03779" name="l03779"></a><span class="lineno"> 3779</span>                      );</div>
+<div class="line"><a id="l03780" name="l03780"></a><span class="lineno"> 3780</span> </div>
+<div class="line"><a id="l03781" name="l03781"></a><span class="lineno"> 3781</span>          <span class="comment">/* Create symbolic expression */</span></div>
+<div class="line"><a id="l03782" name="l03782"></a><span class="lineno"> 3782</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UMADDL operation&quot;</span>);</div>
+<div class="line"><a id="l03783" name="l03783"></a><span class="lineno"> 3783</span> </div>
+<div class="line"><a id="l03784" name="l03784"></a><span class="lineno"> 3784</span>          <span class="comment">/* Spread taint */</span></div>
+<div class="line"><a id="l03785" name="l03785"></a><span class="lineno"> 3785</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2) | this-&gt;taintEngine-&gt;isTainted(src3));</div>
 <div class="line"><a id="l03786" name="l03786"></a><span class="lineno"> 3786</span> </div>
-<div class="line"><a id="l03787" name="l03787"></a><span class="lineno"> 3787</span>          <span class="comment">/* Create the semantics */</span></div>
-<div class="line"><a id="l03788" name="l03788"></a><span class="lineno"> 3788</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;bvneg(</div>
-<div class="line"><a id="l03789" name="l03789"></a><span class="lineno"> 3789</span>                        this-&gt;astCtxt-&gt;bvmul(</div>
-<div class="line"><a id="l03790" name="l03790"></a><span class="lineno"> 3790</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op1),</div>
-<div class="line"><a id="l03791" name="l03791"></a><span class="lineno"> 3791</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op2)</div>
-<div class="line"><a id="l03792" name="l03792"></a><span class="lineno"> 3792</span>                        )</div>
-<div class="line"><a id="l03793" name="l03793"></a><span class="lineno"> 3793</span>                      );</div>
-<div class="line"><a id="l03794" name="l03794"></a><span class="lineno"> 3794</span> </div>
-<div class="line"><a id="l03795" name="l03795"></a><span class="lineno"> 3795</span>          <span class="comment">/* Create symbolic expression */</span></div>
-<div class="line"><a id="l03796" name="l03796"></a><span class="lineno"> 3796</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UMNEGL operation&quot;</span>);</div>
-<div class="line"><a id="l03797" name="l03797"></a><span class="lineno"> 3797</span> </div>
-<div class="line"><a id="l03798" name="l03798"></a><span class="lineno"> 3798</span>          <span class="comment">/* Spread taint */</span></div>
-<div class="line"><a id="l03799" name="l03799"></a><span class="lineno"> 3799</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2));</div>
+<div class="line"><a id="l03787" name="l03787"></a><span class="lineno"> 3787</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
+<div class="line"><a id="l03788" name="l03788"></a><span class="lineno"> 3788</span>          this-&gt;controlFlow_s(inst);</div>
+<div class="line"><a id="l03789" name="l03789"></a><span class="lineno"> 3789</span>        }</div>
+<div class="line"><a id="l03790" name="l03790"></a><span class="lineno"> 3790</span> </div>
+<div class="line"><a id="l03791" name="l03791"></a><span class="lineno"> 3791</span> </div>
+<div class="line"><a id="l03792" name="l03792"></a><span class="lineno"> 3792</span>        <span class="keywordtype">void</span> AArch64Semantics::umnegl_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a id="l03793" name="l03793"></a><span class="lineno"> 3793</span>          <span class="keyword">auto</span>&amp; dst  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
+<div class="line"><a id="l03794" name="l03794"></a><span class="lineno"> 3794</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
+<div class="line"><a id="l03795" name="l03795"></a><span class="lineno"> 3795</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
+<div class="line"><a id="l03796" name="l03796"></a><span class="lineno"> 3796</span> </div>
+<div class="line"><a id="l03797" name="l03797"></a><span class="lineno"> 3797</span>          <span class="comment">/* Create symbolic operands */</span></div>
+<div class="line"><a id="l03798" name="l03798"></a><span class="lineno"> 3798</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
+<div class="line"><a id="l03799" name="l03799"></a><span class="lineno"> 3799</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
 <div class="line"><a id="l03800" name="l03800"></a><span class="lineno"> 3800</span> </div>
-<div class="line"><a id="l03801" name="l03801"></a><span class="lineno"> 3801</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
-<div class="line"><a id="l03802" name="l03802"></a><span class="lineno"> 3802</span>          this-&gt;controlFlow_s(inst);</div>
-<div class="line"><a id="l03803" name="l03803"></a><span class="lineno"> 3803</span>        }</div>
-<div class="line"><a id="l03804" name="l03804"></a><span class="lineno"> 3804</span> </div>
-<div class="line"><a id="l03805" name="l03805"></a><span class="lineno"> 3805</span> </div>
-<div class="line"><a id="l03806" name="l03806"></a><span class="lineno"> 3806</span>        <span class="keywordtype">void</span> AArch64Semantics::umsubl_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a id="l03807" name="l03807"></a><span class="lineno"> 3807</span>          <span class="keyword">auto</span>&amp; dst  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
-<div class="line"><a id="l03808" name="l03808"></a><span class="lineno"> 3808</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
-<div class="line"><a id="l03809" name="l03809"></a><span class="lineno"> 3809</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
-<div class="line"><a id="l03810" name="l03810"></a><span class="lineno"> 3810</span>          <span class="keyword">auto</span>&amp; src3 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[3];</div>
+<div class="line"><a id="l03801" name="l03801"></a><span class="lineno"> 3801</span>          <span class="comment">/* Create the semantics */</span></div>
+<div class="line"><a id="l03802" name="l03802"></a><span class="lineno"> 3802</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;bvneg(</div>
+<div class="line"><a id="l03803" name="l03803"></a><span class="lineno"> 3803</span>                        this-&gt;astCtxt-&gt;bvmul(</div>
+<div class="line"><a id="l03804" name="l03804"></a><span class="lineno"> 3804</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op1),</div>
+<div class="line"><a id="l03805" name="l03805"></a><span class="lineno"> 3805</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op2)</div>
+<div class="line"><a id="l03806" name="l03806"></a><span class="lineno"> 3806</span>                        )</div>
+<div class="line"><a id="l03807" name="l03807"></a><span class="lineno"> 3807</span>                      );</div>
+<div class="line"><a id="l03808" name="l03808"></a><span class="lineno"> 3808</span> </div>
+<div class="line"><a id="l03809" name="l03809"></a><span class="lineno"> 3809</span>          <span class="comment">/* Create symbolic expression */</span></div>
+<div class="line"><a id="l03810" name="l03810"></a><span class="lineno"> 3810</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UMNEGL operation&quot;</span>);</div>
 <div class="line"><a id="l03811" name="l03811"></a><span class="lineno"> 3811</span> </div>
-<div class="line"><a id="l03812" name="l03812"></a><span class="lineno"> 3812</span>          <span class="comment">/* Create symbolic operands */</span></div>
-<div class="line"><a id="l03813" name="l03813"></a><span class="lineno"> 3813</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
-<div class="line"><a id="l03814" name="l03814"></a><span class="lineno"> 3814</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
-<div class="line"><a id="l03815" name="l03815"></a><span class="lineno"> 3815</span>          <span class="keyword">auto</span> op3 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src3);</div>
-<div class="line"><a id="l03816" name="l03816"></a><span class="lineno"> 3816</span> </div>
-<div class="line"><a id="l03817" name="l03817"></a><span class="lineno"> 3817</span>          <span class="comment">/* Create the semantics */</span></div>
-<div class="line"><a id="l03818" name="l03818"></a><span class="lineno"> 3818</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;bvsub(</div>
-<div class="line"><a id="l03819" name="l03819"></a><span class="lineno"> 3819</span>                        op3,</div>
-<div class="line"><a id="l03820" name="l03820"></a><span class="lineno"> 3820</span>                        this-&gt;astCtxt-&gt;bvmul(</div>
-<div class="line"><a id="l03821" name="l03821"></a><span class="lineno"> 3821</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op1),</div>
-<div class="line"><a id="l03822" name="l03822"></a><span class="lineno"> 3822</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op2)</div>
-<div class="line"><a id="l03823" name="l03823"></a><span class="lineno"> 3823</span>                        )</div>
-<div class="line"><a id="l03824" name="l03824"></a><span class="lineno"> 3824</span>                      );</div>
+<div class="line"><a id="l03812" name="l03812"></a><span class="lineno"> 3812</span>          <span class="comment">/* Spread taint */</span></div>
+<div class="line"><a id="l03813" name="l03813"></a><span class="lineno"> 3813</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2));</div>
+<div class="line"><a id="l03814" name="l03814"></a><span class="lineno"> 3814</span> </div>
+<div class="line"><a id="l03815" name="l03815"></a><span class="lineno"> 3815</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
+<div class="line"><a id="l03816" name="l03816"></a><span class="lineno"> 3816</span>          this-&gt;controlFlow_s(inst);</div>
+<div class="line"><a id="l03817" name="l03817"></a><span class="lineno"> 3817</span>        }</div>
+<div class="line"><a id="l03818" name="l03818"></a><span class="lineno"> 3818</span> </div>
+<div class="line"><a id="l03819" name="l03819"></a><span class="lineno"> 3819</span> </div>
+<div class="line"><a id="l03820" name="l03820"></a><span class="lineno"> 3820</span>        <span class="keywordtype">void</span> AArch64Semantics::umsubl_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a id="l03821" name="l03821"></a><span class="lineno"> 3821</span>          <span class="keyword">auto</span>&amp; dst  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
+<div class="line"><a id="l03822" name="l03822"></a><span class="lineno"> 3822</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
+<div class="line"><a id="l03823" name="l03823"></a><span class="lineno"> 3823</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
+<div class="line"><a id="l03824" name="l03824"></a><span class="lineno"> 3824</span>          <span class="keyword">auto</span>&amp; src3 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[3];</div>
 <div class="line"><a id="l03825" name="l03825"></a><span class="lineno"> 3825</span> </div>
-<div class="line"><a id="l03826" name="l03826"></a><span class="lineno"> 3826</span>          <span class="comment">/* Create symbolic expression */</span></div>
-<div class="line"><a id="l03827" name="l03827"></a><span class="lineno"> 3827</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UMSUBL operation&quot;</span>);</div>
-<div class="line"><a id="l03828" name="l03828"></a><span class="lineno"> 3828</span> </div>
-<div class="line"><a id="l03829" name="l03829"></a><span class="lineno"> 3829</span>          <span class="comment">/* Spread taint */</span></div>
-<div class="line"><a id="l03830" name="l03830"></a><span class="lineno"> 3830</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2) | this-&gt;taintEngine-&gt;isTainted(src3));</div>
-<div class="line"><a id="l03831" name="l03831"></a><span class="lineno"> 3831</span> </div>
-<div class="line"><a id="l03832" name="l03832"></a><span class="lineno"> 3832</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
-<div class="line"><a id="l03833" name="l03833"></a><span class="lineno"> 3833</span>          this-&gt;controlFlow_s(inst);</div>
-<div class="line"><a id="l03834" name="l03834"></a><span class="lineno"> 3834</span>        }</div>
-<div class="line"><a id="l03835" name="l03835"></a><span class="lineno"> 3835</span> </div>
-<div class="line"><a id="l03836" name="l03836"></a><span class="lineno"> 3836</span> </div>
-<div class="line"><a id="l03837" name="l03837"></a><span class="lineno"> 3837</span>        <span class="keywordtype">void</span> AArch64Semantics::umulh_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a id="l03838" name="l03838"></a><span class="lineno"> 3838</span>          <span class="keyword">auto</span>&amp; dst  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
-<div class="line"><a id="l03839" name="l03839"></a><span class="lineno"> 3839</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
-<div class="line"><a id="l03840" name="l03840"></a><span class="lineno"> 3840</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
-<div class="line"><a id="l03841" name="l03841"></a><span class="lineno"> 3841</span> </div>
-<div class="line"><a id="l03842" name="l03842"></a><span class="lineno"> 3842</span>          <span class="comment">/* Create symbolic operands */</span></div>
-<div class="line"><a id="l03843" name="l03843"></a><span class="lineno"> 3843</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
-<div class="line"><a id="l03844" name="l03844"></a><span class="lineno"> 3844</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
+<div class="line"><a id="l03826" name="l03826"></a><span class="lineno"> 3826</span>          <span class="comment">/* Create symbolic operands */</span></div>
+<div class="line"><a id="l03827" name="l03827"></a><span class="lineno"> 3827</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
+<div class="line"><a id="l03828" name="l03828"></a><span class="lineno"> 3828</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
+<div class="line"><a id="l03829" name="l03829"></a><span class="lineno"> 3829</span>          <span class="keyword">auto</span> op3 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src3);</div>
+<div class="line"><a id="l03830" name="l03830"></a><span class="lineno"> 3830</span> </div>
+<div class="line"><a id="l03831" name="l03831"></a><span class="lineno"> 3831</span>          <span class="comment">/* Create the semantics */</span></div>
+<div class="line"><a id="l03832" name="l03832"></a><span class="lineno"> 3832</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;bvsub(</div>
+<div class="line"><a id="l03833" name="l03833"></a><span class="lineno"> 3833</span>                        op3,</div>
+<div class="line"><a id="l03834" name="l03834"></a><span class="lineno"> 3834</span>                        this-&gt;astCtxt-&gt;bvmul(</div>
+<div class="line"><a id="l03835" name="l03835"></a><span class="lineno"> 3835</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op1),</div>
+<div class="line"><a id="l03836" name="l03836"></a><span class="lineno"> 3836</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op2)</div>
+<div class="line"><a id="l03837" name="l03837"></a><span class="lineno"> 3837</span>                        )</div>
+<div class="line"><a id="l03838" name="l03838"></a><span class="lineno"> 3838</span>                      );</div>
+<div class="line"><a id="l03839" name="l03839"></a><span class="lineno"> 3839</span> </div>
+<div class="line"><a id="l03840" name="l03840"></a><span class="lineno"> 3840</span>          <span class="comment">/* Create symbolic expression */</span></div>
+<div class="line"><a id="l03841" name="l03841"></a><span class="lineno"> 3841</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UMSUBL operation&quot;</span>);</div>
+<div class="line"><a id="l03842" name="l03842"></a><span class="lineno"> 3842</span> </div>
+<div class="line"><a id="l03843" name="l03843"></a><span class="lineno"> 3843</span>          <span class="comment">/* Spread taint */</span></div>
+<div class="line"><a id="l03844" name="l03844"></a><span class="lineno"> 3844</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2) | this-&gt;taintEngine-&gt;isTainted(src3));</div>
 <div class="line"><a id="l03845" name="l03845"></a><span class="lineno"> 3845</span> </div>
-<div class="line"><a id="l03846" name="l03846"></a><span class="lineno"> 3846</span>          <span class="comment">/* Create the semantics */</span></div>
-<div class="line"><a id="l03847" name="l03847"></a><span class="lineno"> 3847</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;extract(</div>
-<div class="line"><a id="l03848" name="l03848"></a><span class="lineno"> 3848</span>                        <a class="code hl_variable" href="group__bitsize.html#gaeac27bd8894e1d2c67be76785611876c">triton::bitsize::dqword</a>-1,</div>
-<div class="line"><a id="l03849" name="l03849"></a><span class="lineno"> 3849</span>                        <a class="code hl_variable" href="group__bitsize.html#gaa65b1d088e8de7b8fe4d4824007a9b30">triton::bitsize::qword</a>,</div>
-<div class="line"><a id="l03850" name="l03850"></a><span class="lineno"> 3850</span>                        this-&gt;astCtxt-&gt;bvmul(</div>
-<div class="line"><a id="l03851" name="l03851"></a><span class="lineno"> 3851</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#gaa65b1d088e8de7b8fe4d4824007a9b30">triton::bitsize::qword</a>, op1),</div>
-<div class="line"><a id="l03852" name="l03852"></a><span class="lineno"> 3852</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#gaa65b1d088e8de7b8fe4d4824007a9b30">triton::bitsize::qword</a>, op2)</div>
-<div class="line"><a id="l03853" name="l03853"></a><span class="lineno"> 3853</span>                        )</div>
-<div class="line"><a id="l03854" name="l03854"></a><span class="lineno"> 3854</span>                      );</div>
+<div class="line"><a id="l03846" name="l03846"></a><span class="lineno"> 3846</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
+<div class="line"><a id="l03847" name="l03847"></a><span class="lineno"> 3847</span>          this-&gt;controlFlow_s(inst);</div>
+<div class="line"><a id="l03848" name="l03848"></a><span class="lineno"> 3848</span>        }</div>
+<div class="line"><a id="l03849" name="l03849"></a><span class="lineno"> 3849</span> </div>
+<div class="line"><a id="l03850" name="l03850"></a><span class="lineno"> 3850</span> </div>
+<div class="line"><a id="l03851" name="l03851"></a><span class="lineno"> 3851</span>        <span class="keywordtype">void</span> AArch64Semantics::umulh_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a id="l03852" name="l03852"></a><span class="lineno"> 3852</span>          <span class="keyword">auto</span>&amp; dst  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
+<div class="line"><a id="l03853" name="l03853"></a><span class="lineno"> 3853</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
+<div class="line"><a id="l03854" name="l03854"></a><span class="lineno"> 3854</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
 <div class="line"><a id="l03855" name="l03855"></a><span class="lineno"> 3855</span> </div>
-<div class="line"><a id="l03856" name="l03856"></a><span class="lineno"> 3856</span>          <span class="comment">/* Create symbolic expression */</span></div>
-<div class="line"><a id="l03857" name="l03857"></a><span class="lineno"> 3857</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UMULH operation&quot;</span>);</div>
-<div class="line"><a id="l03858" name="l03858"></a><span class="lineno"> 3858</span> </div>
-<div class="line"><a id="l03859" name="l03859"></a><span class="lineno"> 3859</span>          <span class="comment">/* Spread taint */</span></div>
-<div class="line"><a id="l03860" name="l03860"></a><span class="lineno"> 3860</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2));</div>
-<div class="line"><a id="l03861" name="l03861"></a><span class="lineno"> 3861</span> </div>
-<div class="line"><a id="l03862" name="l03862"></a><span class="lineno"> 3862</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
-<div class="line"><a id="l03863" name="l03863"></a><span class="lineno"> 3863</span>          this-&gt;controlFlow_s(inst);</div>
-<div class="line"><a id="l03864" name="l03864"></a><span class="lineno"> 3864</span>        }</div>
-<div class="line"><a id="l03865" name="l03865"></a><span class="lineno"> 3865</span> </div>
-<div class="line"><a id="l03866" name="l03866"></a><span class="lineno"> 3866</span> </div>
-<div class="line"><a id="l03867" name="l03867"></a><span class="lineno"> 3867</span>        <span class="keywordtype">void</span> AArch64Semantics::umull_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a id="l03868" name="l03868"></a><span class="lineno"> 3868</span>          <span class="keyword">auto</span>&amp; dst  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
-<div class="line"><a id="l03869" name="l03869"></a><span class="lineno"> 3869</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
-<div class="line"><a id="l03870" name="l03870"></a><span class="lineno"> 3870</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
-<div class="line"><a id="l03871" name="l03871"></a><span class="lineno"> 3871</span> </div>
-<div class="line"><a id="l03872" name="l03872"></a><span class="lineno"> 3872</span>          <span class="comment">/* Create symbolic operands */</span></div>
-<div class="line"><a id="l03873" name="l03873"></a><span class="lineno"> 3873</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
-<div class="line"><a id="l03874" name="l03874"></a><span class="lineno"> 3874</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
+<div class="line"><a id="l03856" name="l03856"></a><span class="lineno"> 3856</span>          <span class="comment">/* Create symbolic operands */</span></div>
+<div class="line"><a id="l03857" name="l03857"></a><span class="lineno"> 3857</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
+<div class="line"><a id="l03858" name="l03858"></a><span class="lineno"> 3858</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
+<div class="line"><a id="l03859" name="l03859"></a><span class="lineno"> 3859</span> </div>
+<div class="line"><a id="l03860" name="l03860"></a><span class="lineno"> 3860</span>          <span class="comment">/* Create the semantics */</span></div>
+<div class="line"><a id="l03861" name="l03861"></a><span class="lineno"> 3861</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;extract(</div>
+<div class="line"><a id="l03862" name="l03862"></a><span class="lineno"> 3862</span>                        <a class="code hl_variable" href="group__bitsize.html#gaeac27bd8894e1d2c67be76785611876c">triton::bitsize::dqword</a>-1,</div>
+<div class="line"><a id="l03863" name="l03863"></a><span class="lineno"> 3863</span>                        <a class="code hl_variable" href="group__bitsize.html#gaa65b1d088e8de7b8fe4d4824007a9b30">triton::bitsize::qword</a>,</div>
+<div class="line"><a id="l03864" name="l03864"></a><span class="lineno"> 3864</span>                        this-&gt;astCtxt-&gt;bvmul(</div>
+<div class="line"><a id="l03865" name="l03865"></a><span class="lineno"> 3865</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#gaa65b1d088e8de7b8fe4d4824007a9b30">triton::bitsize::qword</a>, op1),</div>
+<div class="line"><a id="l03866" name="l03866"></a><span class="lineno"> 3866</span>                          this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#gaa65b1d088e8de7b8fe4d4824007a9b30">triton::bitsize::qword</a>, op2)</div>
+<div class="line"><a id="l03867" name="l03867"></a><span class="lineno"> 3867</span>                        )</div>
+<div class="line"><a id="l03868" name="l03868"></a><span class="lineno"> 3868</span>                      );</div>
+<div class="line"><a id="l03869" name="l03869"></a><span class="lineno"> 3869</span> </div>
+<div class="line"><a id="l03870" name="l03870"></a><span class="lineno"> 3870</span>          <span class="comment">/* Create symbolic expression */</span></div>
+<div class="line"><a id="l03871" name="l03871"></a><span class="lineno"> 3871</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UMULH operation&quot;</span>);</div>
+<div class="line"><a id="l03872" name="l03872"></a><span class="lineno"> 3872</span> </div>
+<div class="line"><a id="l03873" name="l03873"></a><span class="lineno"> 3873</span>          <span class="comment">/* Spread taint */</span></div>
+<div class="line"><a id="l03874" name="l03874"></a><span class="lineno"> 3874</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2));</div>
 <div class="line"><a id="l03875" name="l03875"></a><span class="lineno"> 3875</span> </div>
-<div class="line"><a id="l03876" name="l03876"></a><span class="lineno"> 3876</span>          <span class="comment">/* Create the semantics */</span></div>
-<div class="line"><a id="l03877" name="l03877"></a><span class="lineno"> 3877</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;bvmul(</div>
-<div class="line"><a id="l03878" name="l03878"></a><span class="lineno"> 3878</span>                        this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op1),</div>
-<div class="line"><a id="l03879" name="l03879"></a><span class="lineno"> 3879</span>                        this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op2)</div>
-<div class="line"><a id="l03880" name="l03880"></a><span class="lineno"> 3880</span>                      );</div>
-<div class="line"><a id="l03881" name="l03881"></a><span class="lineno"> 3881</span> </div>
-<div class="line"><a id="l03882" name="l03882"></a><span class="lineno"> 3882</span>          <span class="comment">/* Create symbolic expression */</span></div>
-<div class="line"><a id="l03883" name="l03883"></a><span class="lineno"> 3883</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UMULL operation&quot;</span>);</div>
-<div class="line"><a id="l03884" name="l03884"></a><span class="lineno"> 3884</span> </div>
-<div class="line"><a id="l03885" name="l03885"></a><span class="lineno"> 3885</span>          <span class="comment">/* Spread taint */</span></div>
-<div class="line"><a id="l03886" name="l03886"></a><span class="lineno"> 3886</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2));</div>
-<div class="line"><a id="l03887" name="l03887"></a><span class="lineno"> 3887</span> </div>
-<div class="line"><a id="l03888" name="l03888"></a><span class="lineno"> 3888</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
-<div class="line"><a id="l03889" name="l03889"></a><span class="lineno"> 3889</span>          this-&gt;controlFlow_s(inst);</div>
-<div class="line"><a id="l03890" name="l03890"></a><span class="lineno"> 3890</span>        }</div>
-<div class="line"><a id="l03891" name="l03891"></a><span class="lineno"> 3891</span> </div>
-<div class="line"><a id="l03892" name="l03892"></a><span class="lineno"> 3892</span> </div>
-<div class="line"><a id="l03893" name="l03893"></a><span class="lineno"> 3893</span>        <span class="keywordtype">void</span> AArch64Semantics::uxtb_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a id="l03894" name="l03894"></a><span class="lineno"> 3894</span>          <span class="keyword">auto</span>&amp; dst = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
-<div class="line"><a id="l03895" name="l03895"></a><span class="lineno"> 3895</span>          <span class="keyword">auto</span>&amp; src = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
-<div class="line"><a id="l03896" name="l03896"></a><span class="lineno"> 3896</span> </div>
-<div class="line"><a id="l03897" name="l03897"></a><span class="lineno"> 3897</span>          <span class="comment">/* Create symbolic operands */</span></div>
-<div class="line"><a id="l03898" name="l03898"></a><span class="lineno"> 3898</span>          <span class="keyword">auto</span> op = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src);</div>
-<div class="line"><a id="l03899" name="l03899"></a><span class="lineno"> 3899</span> </div>
-<div class="line"><a id="l03900" name="l03900"></a><span class="lineno"> 3900</span>          <span class="comment">/* Create the semantics */</span></div>
-<div class="line"><a id="l03901" name="l03901"></a><span class="lineno"> 3901</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - 8, this-&gt;astCtxt-&gt;extract(7, 0, op));</div>
-<div class="line"><a id="l03902" name="l03902"></a><span class="lineno"> 3902</span> </div>
-<div class="line"><a id="l03903" name="l03903"></a><span class="lineno"> 3903</span>          <span class="comment">/* Create symbolic expression */</span></div>
-<div class="line"><a id="l03904" name="l03904"></a><span class="lineno"> 3904</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UXTB operation&quot;</span>);</div>
+<div class="line"><a id="l03876" name="l03876"></a><span class="lineno"> 3876</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
+<div class="line"><a id="l03877" name="l03877"></a><span class="lineno"> 3877</span>          this-&gt;controlFlow_s(inst);</div>
+<div class="line"><a id="l03878" name="l03878"></a><span class="lineno"> 3878</span>        }</div>
+<div class="line"><a id="l03879" name="l03879"></a><span class="lineno"> 3879</span> </div>
+<div class="line"><a id="l03880" name="l03880"></a><span class="lineno"> 3880</span> </div>
+<div class="line"><a id="l03881" name="l03881"></a><span class="lineno"> 3881</span>        <span class="keywordtype">void</span> AArch64Semantics::umull_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a id="l03882" name="l03882"></a><span class="lineno"> 3882</span>          <span class="keyword">auto</span>&amp; dst  = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
+<div class="line"><a id="l03883" name="l03883"></a><span class="lineno"> 3883</span>          <span class="keyword">auto</span>&amp; src1 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
+<div class="line"><a id="l03884" name="l03884"></a><span class="lineno"> 3884</span>          <span class="keyword">auto</span>&amp; src2 = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[2];</div>
+<div class="line"><a id="l03885" name="l03885"></a><span class="lineno"> 3885</span> </div>
+<div class="line"><a id="l03886" name="l03886"></a><span class="lineno"> 3886</span>          <span class="comment">/* Create symbolic operands */</span></div>
+<div class="line"><a id="l03887" name="l03887"></a><span class="lineno"> 3887</span>          <span class="keyword">auto</span> op1 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src1);</div>
+<div class="line"><a id="l03888" name="l03888"></a><span class="lineno"> 3888</span>          <span class="keyword">auto</span> op2 = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src2);</div>
+<div class="line"><a id="l03889" name="l03889"></a><span class="lineno"> 3889</span> </div>
+<div class="line"><a id="l03890" name="l03890"></a><span class="lineno"> 3890</span>          <span class="comment">/* Create the semantics */</span></div>
+<div class="line"><a id="l03891" name="l03891"></a><span class="lineno"> 3891</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;bvmul(</div>
+<div class="line"><a id="l03892" name="l03892"></a><span class="lineno"> 3892</span>                        this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op1),</div>
+<div class="line"><a id="l03893" name="l03893"></a><span class="lineno"> 3893</span>                        this-&gt;astCtxt-&gt;zx(<a class="code hl_variable" href="group__bitsize.html#ga51a6a645ef3b3f085fac012f0c82bbc6">triton::bitsize::dword</a>, op2)</div>
+<div class="line"><a id="l03894" name="l03894"></a><span class="lineno"> 3894</span>                      );</div>
+<div class="line"><a id="l03895" name="l03895"></a><span class="lineno"> 3895</span> </div>
+<div class="line"><a id="l03896" name="l03896"></a><span class="lineno"> 3896</span>          <span class="comment">/* Create symbolic expression */</span></div>
+<div class="line"><a id="l03897" name="l03897"></a><span class="lineno"> 3897</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UMULL operation&quot;</span>);</div>
+<div class="line"><a id="l03898" name="l03898"></a><span class="lineno"> 3898</span> </div>
+<div class="line"><a id="l03899" name="l03899"></a><span class="lineno"> 3899</span>          <span class="comment">/* Spread taint */</span></div>
+<div class="line"><a id="l03900" name="l03900"></a><span class="lineno"> 3900</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a21023e0f43b1bca2cedbca2e293b1da5">setTaint</a>(dst, this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a49e4d2976c8302b24557e3549fb52425">isTainted</a>(src1) | this-&gt;taintEngine-&gt;isTainted(src2));</div>
+<div class="line"><a id="l03901" name="l03901"></a><span class="lineno"> 3901</span> </div>
+<div class="line"><a id="l03902" name="l03902"></a><span class="lineno"> 3902</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
+<div class="line"><a id="l03903" name="l03903"></a><span class="lineno"> 3903</span>          this-&gt;controlFlow_s(inst);</div>
+<div class="line"><a id="l03904" name="l03904"></a><span class="lineno"> 3904</span>        }</div>
 <div class="line"><a id="l03905" name="l03905"></a><span class="lineno"> 3905</span> </div>
-<div class="line"><a id="l03906" name="l03906"></a><span class="lineno"> 3906</span>          <span class="comment">/* Spread taint */</span></div>
-<div class="line"><a id="l03907" name="l03907"></a><span class="lineno"> 3907</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a92ece180f5f93775bbdd97b8c456d87e">taintAssignment</a>(dst, src);</div>
-<div class="line"><a id="l03908" name="l03908"></a><span class="lineno"> 3908</span> </div>
-<div class="line"><a id="l03909" name="l03909"></a><span class="lineno"> 3909</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
-<div class="line"><a id="l03910" name="l03910"></a><span class="lineno"> 3910</span>          this-&gt;controlFlow_s(inst);</div>
-<div class="line"><a id="l03911" name="l03911"></a><span class="lineno"> 3911</span>        }</div>
-<div class="line"><a id="l03912" name="l03912"></a><span class="lineno"> 3912</span> </div>
+<div class="line"><a id="l03906" name="l03906"></a><span class="lineno"> 3906</span> </div>
+<div class="line"><a id="l03907" name="l03907"></a><span class="lineno"> 3907</span>        <span class="keywordtype">void</span> AArch64Semantics::uxtb_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a id="l03908" name="l03908"></a><span class="lineno"> 3908</span>          <span class="keyword">auto</span>&amp; dst = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
+<div class="line"><a id="l03909" name="l03909"></a><span class="lineno"> 3909</span>          <span class="keyword">auto</span>&amp; src = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
+<div class="line"><a id="l03910" name="l03910"></a><span class="lineno"> 3910</span> </div>
+<div class="line"><a id="l03911" name="l03911"></a><span class="lineno"> 3911</span>          <span class="comment">/* Create symbolic operands */</span></div>
+<div class="line"><a id="l03912" name="l03912"></a><span class="lineno"> 3912</span>          <span class="keyword">auto</span> op = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src);</div>
 <div class="line"><a id="l03913" name="l03913"></a><span class="lineno"> 3913</span> </div>
-<div class="line"><a id="l03914" name="l03914"></a><span class="lineno"> 3914</span>        <span class="keywordtype">void</span> AArch64Semantics::uxth_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
-<div class="line"><a id="l03915" name="l03915"></a><span class="lineno"> 3915</span>          <span class="keyword">auto</span>&amp; dst = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
-<div class="line"><a id="l03916" name="l03916"></a><span class="lineno"> 3916</span>          <span class="keyword">auto</span>&amp; src = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
-<div class="line"><a id="l03917" name="l03917"></a><span class="lineno"> 3917</span> </div>
-<div class="line"><a id="l03918" name="l03918"></a><span class="lineno"> 3918</span>          <span class="comment">/* Create symbolic operands */</span></div>
-<div class="line"><a id="l03919" name="l03919"></a><span class="lineno"> 3919</span>          <span class="keyword">auto</span> op = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src);</div>
-<div class="line"><a id="l03920" name="l03920"></a><span class="lineno"> 3920</span> </div>
-<div class="line"><a id="l03921" name="l03921"></a><span class="lineno"> 3921</span>          <span class="comment">/* Create the semantics */</span></div>
-<div class="line"><a id="l03922" name="l03922"></a><span class="lineno"> 3922</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - 16, this-&gt;astCtxt-&gt;extract(15, 0, op));</div>
-<div class="line"><a id="l03923" name="l03923"></a><span class="lineno"> 3923</span> </div>
-<div class="line"><a id="l03924" name="l03924"></a><span class="lineno"> 3924</span>          <span class="comment">/* Create symbolic expression */</span></div>
-<div class="line"><a id="l03925" name="l03925"></a><span class="lineno"> 3925</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UXTH operation&quot;</span>);</div>
+<div class="line"><a id="l03914" name="l03914"></a><span class="lineno"> 3914</span>          <span class="comment">/* Create the semantics */</span></div>
+<div class="line"><a id="l03915" name="l03915"></a><span class="lineno"> 3915</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - 8, this-&gt;astCtxt-&gt;extract(7, 0, op));</div>
+<div class="line"><a id="l03916" name="l03916"></a><span class="lineno"> 3916</span> </div>
+<div class="line"><a id="l03917" name="l03917"></a><span class="lineno"> 3917</span>          <span class="comment">/* Create symbolic expression */</span></div>
+<div class="line"><a id="l03918" name="l03918"></a><span class="lineno"> 3918</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UXTB operation&quot;</span>);</div>
+<div class="line"><a id="l03919" name="l03919"></a><span class="lineno"> 3919</span> </div>
+<div class="line"><a id="l03920" name="l03920"></a><span class="lineno"> 3920</span>          <span class="comment">/* Spread taint */</span></div>
+<div class="line"><a id="l03921" name="l03921"></a><span class="lineno"> 3921</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a92ece180f5f93775bbdd97b8c456d87e">taintAssignment</a>(dst, src);</div>
+<div class="line"><a id="l03922" name="l03922"></a><span class="lineno"> 3922</span> </div>
+<div class="line"><a id="l03923" name="l03923"></a><span class="lineno"> 3923</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
+<div class="line"><a id="l03924" name="l03924"></a><span class="lineno"> 3924</span>          this-&gt;controlFlow_s(inst);</div>
+<div class="line"><a id="l03925" name="l03925"></a><span class="lineno"> 3925</span>        }</div>
 <div class="line"><a id="l03926" name="l03926"></a><span class="lineno"> 3926</span> </div>
-<div class="line"><a id="l03927" name="l03927"></a><span class="lineno"> 3927</span>          <span class="comment">/* Spread taint */</span></div>
-<div class="line"><a id="l03928" name="l03928"></a><span class="lineno"> 3928</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a92ece180f5f93775bbdd97b8c456d87e">taintAssignment</a>(dst, src);</div>
-<div class="line"><a id="l03929" name="l03929"></a><span class="lineno"> 3929</span> </div>
-<div class="line"><a id="l03930" name="l03930"></a><span class="lineno"> 3930</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
-<div class="line"><a id="l03931" name="l03931"></a><span class="lineno"> 3931</span>          this-&gt;controlFlow_s(inst);</div>
-<div class="line"><a id="l03932" name="l03932"></a><span class="lineno"> 3932</span>        }</div>
-<div class="line"><a id="l03933" name="l03933"></a><span class="lineno"> 3933</span> </div>
-<div class="line"><a id="l03934" name="l03934"></a><span class="lineno"> 3934</span>      }; <span class="comment">/* aarch64 namespace */</span></div>
-<div class="line"><a id="l03935" name="l03935"></a><span class="lineno"> 3935</span>    }; <span class="comment">/* arm namespace */</span></div>
-<div class="line"><a id="l03936" name="l03936"></a><span class="lineno"> 3936</span>  }; <span class="comment">/* arch namespace */</span></div>
-<div class="line"><a id="l03937" name="l03937"></a><span class="lineno"> 3937</span>}; <span class="comment">/* triton namespace */</span></div>
+<div class="line"><a id="l03927" name="l03927"></a><span class="lineno"> 3927</span> </div>
+<div class="line"><a id="l03928" name="l03928"></a><span class="lineno"> 3928</span>        <span class="keywordtype">void</span> AArch64Semantics::uxth_s(<a class="code hl_class" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a>&amp; inst) {</div>
+<div class="line"><a id="l03929" name="l03929"></a><span class="lineno"> 3929</span>          <span class="keyword">auto</span>&amp; dst = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[0];</div>
+<div class="line"><a id="l03930" name="l03930"></a><span class="lineno"> 3930</span>          <span class="keyword">auto</span>&amp; src = inst.<a class="code hl_variable" href="classtriton_1_1arch_1_1Instruction.html#ab7257793ebd3a4ab4f691eb0213c9261">operands</a>[1];</div>
+<div class="line"><a id="l03931" name="l03931"></a><span class="lineno"> 3931</span> </div>
+<div class="line"><a id="l03932" name="l03932"></a><span class="lineno"> 3932</span>          <span class="comment">/* Create symbolic operands */</span></div>
+<div class="line"><a id="l03933" name="l03933"></a><span class="lineno"> 3933</span>          <span class="keyword">auto</span> op = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af2199cf924958191a67f1a8e40663d24">getOperandAst</a>(inst, src);</div>
+<div class="line"><a id="l03934" name="l03934"></a><span class="lineno"> 3934</span> </div>
+<div class="line"><a id="l03935" name="l03935"></a><span class="lineno"> 3935</span>          <span class="comment">/* Create the semantics */</span></div>
+<div class="line"><a id="l03936" name="l03936"></a><span class="lineno"> 3936</span>          <span class="keyword">auto</span> node = this-&gt;astCtxt-&gt;zx(dst.<a class="code hl_function" href="classtriton_1_1arch_1_1OperandWrapper.html#ad559b23e0e31b013bb375d45687ccbf2">getBitSize</a>() - 16, this-&gt;astCtxt-&gt;extract(15, 0, op));</div>
+<div class="line"><a id="l03937" name="l03937"></a><span class="lineno"> 3937</span> </div>
+<div class="line"><a id="l03938" name="l03938"></a><span class="lineno"> 3938</span>          <span class="comment">/* Create symbolic expression */</span></div>
+<div class="line"><a id="l03939" name="l03939"></a><span class="lineno"> 3939</span>          <span class="keyword">auto</span> expr = this-&gt;symbolicEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a>(inst, node, dst, <span class="stringliteral">&quot;UXTH operation&quot;</span>);</div>
+<div class="line"><a id="l03940" name="l03940"></a><span class="lineno"> 3940</span> </div>
+<div class="line"><a id="l03941" name="l03941"></a><span class="lineno"> 3941</span>          <span class="comment">/* Spread taint */</span></div>
+<div class="line"><a id="l03942" name="l03942"></a><span class="lineno"> 3942</span>          expr-&gt;isTainted = this-&gt;taintEngine-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1taint_1_1TaintEngine.html#a92ece180f5f93775bbdd97b8c456d87e">taintAssignment</a>(dst, src);</div>
+<div class="line"><a id="l03943" name="l03943"></a><span class="lineno"> 3943</span> </div>
+<div class="line"><a id="l03944" name="l03944"></a><span class="lineno"> 3944</span>          <span class="comment">/* Update the symbolic control flow */</span></div>
+<div class="line"><a id="l03945" name="l03945"></a><span class="lineno"> 3945</span>          this-&gt;controlFlow_s(inst);</div>
+<div class="line"><a id="l03946" name="l03946"></a><span class="lineno"> 3946</span>        }</div>
+<div class="line"><a id="l03947" name="l03947"></a><span class="lineno"> 3947</span> </div>
+<div class="line"><a id="l03948" name="l03948"></a><span class="lineno"> 3948</span>      }; <span class="comment">/* aarch64 namespace */</span></div>
+<div class="line"><a id="l03949" name="l03949"></a><span class="lineno"> 3949</span>    }; <span class="comment">/* arm namespace */</span></div>
+<div class="line"><a id="l03950" name="l03950"></a><span class="lineno"> 3950</span>  }; <span class="comment">/* arch namespace */</span></div>
+<div class="line"><a id="l03951" name="l03951"></a><span class="lineno"> 3951</span>}; <span class="comment">/* triton namespace */</span></div>
 <div class="ttc" id="aaarch64Semantics_8hpp_html"><div class="ttname"><a href="aarch64Semantics_8hpp.html">aarch64Semantics.hpp</a></div></div>
 <div class="ttc" id="aaarch64Specifications_8hpp_html"><div class="ttname"><a href="aarch64Specifications_8hpp.html">aarch64Specifications.hpp</a></div></div>
 <div class="ttc" id="aastContext_8hpp_html"><div class="ttname"><a href="astContext_8hpp.html">astContext.hpp</a></div></div>

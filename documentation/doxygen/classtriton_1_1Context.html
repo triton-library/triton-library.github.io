@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1550</span>
+   &#160;<span id="projectnumber">version 1.0 build 1555</span>
    </div>
   </td>
  </tr>
@@ -366,9 +366,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9258871994c2ea68c1515669ff599a4c"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1Context.html#a9258871994c2ea68c1515669ff599a4c">simplify</a> (const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node, bool usingSolver=false, bool usingLLVM=false) const</td></tr>
 <tr class="memdesc:a9258871994c2ea68c1515669ff599a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Processes all recorded AST simplifications, uses solver's simplifications if <code>usingSolver</code> is true or LLVM is <code>usingLLVM</code> is true. Returns the simplified AST.  <a href="classtriton_1_1Context.html#a9258871994c2ea68c1515669ff599a4c">More...</a><br /></td></tr>
 <tr class="separator:a9258871994c2ea68c1515669ff599a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ecdedf5282580b25ed6c05fa92d58d7"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1Context.html#a0ecdedf5282580b25ed6c05fa92d58d7">simplify</a> (const <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block, bool padding=false, bool keepmem=true) const</td></tr>
-<tr class="memdesc:a0ecdedf5282580b25ed6c05fa92d58d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block. If <code>padding</code> is true, keep addresses aligned and padds with NOP instructions. If <code>keepmem</code> is true, do not simplify store accesses.  <a href="classtriton_1_1Context.html#a0ecdedf5282580b25ed6c05fa92d58d7">More...</a><br /></td></tr>
-<tr class="separator:a0ecdedf5282580b25ed6c05fa92d58d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a880a4dfcdba0f42a335470b18eb0ff70"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1Context.html#a880a4dfcdba0f42a335470b18eb0ff70">simplify</a> (const <a class="el" href="classtriton_1_1arch_1_1BasicBlock.html">triton::arch::BasicBlock</a> &amp;block, bool padding=false) const</td></tr>
+<tr class="memdesc:a880a4dfcdba0f42a335470b18eb0ff70"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block. If <code>padding</code> is true, keep addresses aligned and padds with NOP instructions.  <a href="classtriton_1_1Context.html#a880a4dfcdba0f42a335470b18eb0ff70">More...</a><br /></td></tr>
+<tr class="separator:a880a4dfcdba0f42a335470b18eb0ff70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad363781d79fba08748f63317a945ee98"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">triton::engines::symbolic::SharedSymbolicExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1Context.html#ad363781d79fba08748f63317a945ee98">getSymbolicExpression</a> (<a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> symExprId) const</td></tr>
 <tr class="memdesc:ad363781d79fba08748f63317a945ee98"><td class="mdescLeft">&#160;</td><td class="mdescRight">[<b>symbolic api</b>] - Returns the shared symbolic expression corresponding to an id.  <a href="classtriton_1_1Context.html#ad363781d79fba08748f63317a945ee98">More...</a><br /></td></tr>
 <tr class="separator:ad363781d79fba08748f63317a945ee98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4527,8 +4527,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a0ecdedf5282580b25ed6c05fa92d58d7" name="a0ecdedf5282580b25ed6c05fa92d58d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ecdedf5282580b25ed6c05fa92d58d7">&#9670;&nbsp;</a></span>simplify() <span class="overload">[1/2]</span></h2>
+<a id="a880a4dfcdba0f42a335470b18eb0ff70" name="a880a4dfcdba0f42a335470b18eb0ff70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a880a4dfcdba0f42a335470b18eb0ff70">&#9670;&nbsp;</a></span>simplify() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4543,13 +4543,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>padding</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>keepmem</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>padding</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4559,7 +4553,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block. If <code>padding</code> is true, keep addresses aligned and padds with NOP instructions. If <code>keepmem</code> is true, do not simplify store accesses. </p>
+<p>[<b>symbolic api</b>] - Processes a dead store elimination simplification on a given basic block. If <code>padding</code> is true, keep addresses aligned and padds with NOP instructions. </p>
 
 <p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00888">888</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
