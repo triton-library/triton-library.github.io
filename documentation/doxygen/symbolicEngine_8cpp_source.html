@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1555</span>
+   &#160;<span id="projectnumber">version 1.0 build 1556</span>
    </div>
   </td>
  </tr>
@@ -649,9 +649,9 @@ $(function() {
 <div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span> </div>
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>        <span class="comment">/* Record the aligned symbolic variable for a symbolic optimization */</span></div>
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>        <span class="keywordflow">if</span> (this-&gt;modes-&gt;isModeEnabled(<a class="code hl_enumvalue" href="group__modes.html#gga58ef498152df1bde838c96411d13af2fa4e6c085d1db8980d5cc294b37cf32641">triton::modes::ALIGNED_MEMORY</a>)) {</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>          <span class="keyword">const</span> <a class="code hl_typedef" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a>&amp; se = this-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad26ebeddf1e197029a544c97aae647e0">newSymbolicExpression</a>(symVarNode, <a class="code hl_enumvalue" href="group__symbolic.html#gga75473b76e53f754da0affbc706468929a9e72d38056c31f07f2d9b2d653308dac">MEMORY_EXPRESSION</a>, <span class="stringliteral">&quot;aligned Byte reference&quot;</span>);</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>          se-&gt;setOriginMemory(mem);</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>          this-&gt;addAlignedMemory(memAddr, symVarSize, se);</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>          <span class="keyword">const</span> <a class="code hl_typedef" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a>&amp; aligned = this-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad26ebeddf1e197029a544c97aae647e0">newSymbolicExpression</a>(symVarNode, <a class="code hl_enumvalue" href="group__symbolic.html#gga75473b76e53f754da0affbc706468929a9e72d38056c31f07f2d9b2d653308dac">MEMORY_EXPRESSION</a>, <span class="stringliteral">&quot;Aligned optimization&quot;</span>);</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>          aligned-&gt;setOriginMemory(mem);</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>          this-&gt;addAlignedMemory(memAddr, symVarSize, aligned);</div>
 <div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>        }</div>
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span> </div>
 <div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>        <span class="comment">/*  Split expression in bytes */</span></div>
@@ -1001,53 +1001,53 @@ $(function() {
 <div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span> </div>
 <div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>        <span class="comment">/* Record the aligned memory for a symbolic optimization */</span></div>
 <div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>        <span class="keywordflow">if</span> (this-&gt;modes-&gt;isModeEnabled(<a class="code hl_enumvalue" href="group__modes.html#gga58ef498152df1bde838c96411d13af2fa4e6c085d1db8980d5cc294b37cf32641">triton::modes::ALIGNED_MEMORY</a>)) {</div>
-<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>          <span class="keyword">const</span> <a class="code hl_typedef" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a>&amp; aligned = this-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad26ebeddf1e197029a544c97aae647e0">newSymbolicExpression</a>(node, <a class="code hl_enumvalue" href="group__symbolic.html#gga75473b76e53f754da0affbc706468929a9e72d38056c31f07f2d9b2d653308dac">MEMORY_EXPRESSION</a>, <span class="stringliteral">&quot;Aligned Byte reference - &quot;</span> + comment);</div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>          this-&gt;addAlignedMemory(address, writeSize, aligned);</div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>        }</div>
-<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span> </div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>        <span class="comment">/*</span></div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span><span class="comment">         * As the x86&#39;s memory can be accessed without alignment, each byte of the</span></div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span><span class="comment">         * memory must be assigned to an unique reference.</span></div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span><span class="comment">         */</span></div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>        ret.reserve(mem.<a class="code hl_function" href="classtriton_1_1arch_1_1MemoryAccess.html#aa26086b23f46298a0b6e8590a8cda865">getSize</a>());</div>
-<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>        <span class="keywordflow">while</span> (writeSize) {</div>
-<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>          <a class="code hl_typedef" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> high = ((writeSize * <a class="code hl_variable" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">bitsize::byte</a>) - 1);</div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>          <a class="code hl_typedef" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> low  = ((writeSize * <a class="code hl_variable" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">bitsize::byte</a>) - <a class="code hl_variable" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">bitsize::byte</a>);</div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>          <span class="comment">/* Extract each byte of the memory */</span></div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>          tmp = this-&gt;astCtxt-&gt;extract(high, low, node);</div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>          <span class="comment">/* Assign each byte to a new symbolic expression */</span></div>
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>          se = this-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad26ebeddf1e197029a544c97aae647e0">newSymbolicExpression</a>(tmp, <a class="code hl_enumvalue" href="group__symbolic.html#gga75473b76e53f754da0affbc706468929a9e72d38056c31f07f2d9b2d653308dac">MEMORY_EXPRESSION</a>, <span class="stringliteral">&quot;Byte reference - &quot;</span> + comment);</div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>          <span class="comment">/* Set the origin of the symbolic expression */</span></div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>          se-&gt;setOriginMemory(<a class="code hl_class" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a>(((address + writeSize) - 1), <a class="code hl_variable" href="group__size.html#gacb7a2386516a599bab111af220f9589c">triton::size::byte</a>));</div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>          <span class="comment">/* ret is the for the final expression */</span></div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>          ret.push_back(tmp);</div>
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>          <span class="comment">/* Assign memory with little endian */</span></div>
-<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>          this-&gt;addMemoryReference((address + writeSize) - 1, se);</div>
-<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>          <span class="comment">/* continue */</span></div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>          writeSize--;</div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>        }</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span> </div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>        <span class="comment">/* Set implicit read of the base and index registers from an effective address */</span></div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>        this-&gt;setImplicitReadRegisterFromEffectiveAddress(inst, mem);</div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>          <span class="keyword">const</span> <a class="code hl_typedef" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a>&amp; aligned = this-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad26ebeddf1e197029a544c97aae647e0">newSymbolicExpression</a>(node, <a class="code hl_enumvalue" href="group__symbolic.html#gga75473b76e53f754da0affbc706468929a9e72d38056c31f07f2d9b2d653308dac">MEMORY_EXPRESSION</a>, <span class="stringliteral">&quot;Aligned optimization - &quot;</span> + comment);</div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>          aligned-&gt;setOriginMemory(mem);</div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>          this-&gt;addAlignedMemory(address, writeSize, aligned);</div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>          <span class="comment">/* Increment the current id to not link the aligned expression to the instruction */</span></div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>          <span class="keywordtype">id</span>++;</div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>        }</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span> </div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>        <span class="comment">/*</span></div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span><span class="comment">         * As the x86&#39;s memory can be accessed without alignment, each byte of the</span></div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span><span class="comment">         * memory must be assigned to an unique reference.</span></div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span><span class="comment">         */</span></div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>        ret.reserve(mem.<a class="code hl_function" href="classtriton_1_1arch_1_1MemoryAccess.html#aa26086b23f46298a0b6e8590a8cda865">getSize</a>());</div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>        <span class="keywordflow">while</span> (writeSize) {</div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>          <a class="code hl_typedef" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> high = ((writeSize * <a class="code hl_variable" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">bitsize::byte</a>) - 1);</div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>          <a class="code hl_typedef" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> low  = ((writeSize * <a class="code hl_variable" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">bitsize::byte</a>) - <a class="code hl_variable" href="group__bitsize.html#ga02676529149bfbc32ed8367e871d1f5a">bitsize::byte</a>);</div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>          <span class="comment">/* Extract each byte of the memory */</span></div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>          tmp = this-&gt;astCtxt-&gt;extract(high, low, node);</div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>          <span class="comment">/* Assign each byte to a new symbolic expression */</span></div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>          se = this-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad26ebeddf1e197029a544c97aae647e0">newSymbolicExpression</a>(tmp, <a class="code hl_enumvalue" href="group__symbolic.html#gga75473b76e53f754da0affbc706468929a9e72d38056c31f07f2d9b2d653308dac">MEMORY_EXPRESSION</a>, <span class="stringliteral">&quot;Byte reference - &quot;</span> + comment);</div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>          <span class="comment">/* Set the origin of the symbolic expression */</span></div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>          se-&gt;setOriginMemory(<a class="code hl_class" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a>(((address + writeSize) - 1), <a class="code hl_variable" href="group__size.html#gacb7a2386516a599bab111af220f9589c">triton::size::byte</a>));</div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>          <span class="comment">/* ret is the for the final expression */</span></div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>          ret.push_back(tmp);</div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>          <span class="comment">/* Assign memory with little endian */</span></div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>          this-&gt;addMemoryReference((address + writeSize) - 1, se);</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>          <span class="comment">/* continue */</span></div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>          writeSize--;</div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>        }</div>
 <div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span> </div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>        <span class="comment">/* Set explicit write of the memory access */</span></div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>        inst.<a class="code hl_function" href="classtriton_1_1arch_1_1Instruction.html#a58945327cbb4380b4fef78c074177cda">setStoreAccess</a>(mem, node);</div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>        <span class="comment">/* Set implicit read of the base and index registers from an effective address */</span></div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>        this-&gt;setImplicitReadRegisterFromEffectiveAddress(inst, mem);</div>
 <div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span> </div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>        <span class="comment">/* If there is only one reference, we return the symbolic expression */</span></div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>        <span class="keywordflow">if</span> (ret.size() == 1) {</div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>          <span class="comment">/* Synchronize the concrete state */</span></div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>          this-&gt;architecture-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1Architecture.html#a2dc4df6b9d9a2a50cf0850dfeea88351">setConcreteMemoryValue</a>(mem, tmp-&gt;evaluate());</div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>          <span class="keywordflow">return</span> this-&gt;addSymbolicExpressions(inst, <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>        }</div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span> </div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>        <span class="comment">/* Otherwise, we return the concatenation of all symbolic expressions */</span></div>
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>        tmp = this-&gt;astCtxt-&gt;concat(ret);</div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>        <span class="comment">/* Set explicit write of the memory access */</span></div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>        inst.<a class="code hl_function" href="classtriton_1_1arch_1_1Instruction.html#a58945327cbb4380b4fef78c074177cda">setStoreAccess</a>(mem, node);</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span> </div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>        <span class="comment">/* If there is only one reference, we return the symbolic expression */</span></div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>        <span class="keywordflow">if</span> (ret.size() == 1) {</div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>          <span class="comment">/* Synchronize the concrete state */</span></div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>          this-&gt;architecture-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1Architecture.html#a2dc4df6b9d9a2a50cf0850dfeea88351">setConcreteMemoryValue</a>(mem, tmp-&gt;evaluate());</div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>          <span class="keywordflow">return</span> this-&gt;addSymbolicExpressions(inst, <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>        }</div>
 <div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span> </div>
 <div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>        <span class="comment">/* Synchronize the concrete state */</span></div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>        this-&gt;architecture-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1Architecture.html#a2dc4df6b9d9a2a50cf0850dfeea88351">setConcreteMemoryValue</a>(mem, tmp-&gt;evaluate());</div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>        this-&gt;architecture-&gt;<a class="code hl_function" href="classtriton_1_1arch_1_1Architecture.html#a2dc4df6b9d9a2a50cf0850dfeea88351">setConcreteMemoryValue</a>(mem, node-&gt;evaluate());</div>
 <div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span> </div>
-<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>        se = this-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad26ebeddf1e197029a544c97aae647e0">newSymbolicExpression</a>(tmp, <a class="code hl_enumvalue" href="group__symbolic.html#gga75473b76e53f754da0affbc706468929a9e72d38056c31f07f2d9b2d653308dac">MEMORY_EXPRESSION</a>, <span class="stringliteral">&quot;Temporary concatenation reference - &quot;</span> + comment);</div>
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>        se-&gt;setOriginMemory(<a class="code hl_class" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a>(address, mem.<a class="code hl_function" href="classtriton_1_1arch_1_1MemoryAccess.html#aa26086b23f46298a0b6e8590a8cda865">getSize</a>()));</div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>        se = this-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad26ebeddf1e197029a544c97aae647e0">newSymbolicExpression</a>(node, <a class="code hl_enumvalue" href="group__symbolic.html#gga75473b76e53f754da0affbc706468929a9e72d38056c31f07f2d9b2d653308dac">MEMORY_EXPRESSION</a>, <span class="stringliteral">&quot;Original memory access - &quot;</span> + comment);</div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>        se-&gt;setOriginMemory(mem);</div>
 <div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span> </div>
 <div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>        <span class="keywordflow">return</span> this-&gt;addSymbolicExpressions(inst, <span class="keywordtype">id</span>);</div>
 <div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>      }</div>
