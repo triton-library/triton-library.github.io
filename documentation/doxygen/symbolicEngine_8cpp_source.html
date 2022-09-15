@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1556</span>
+   &#160;<span id="projectnumber">version 1.0 build 1558</span>
    </div>
   </td>
  </tr>
@@ -1004,8 +1004,8 @@ $(function() {
 <div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>          <span class="keyword">const</span> <a class="code hl_typedef" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a>&amp; aligned = this-&gt;<a class="code hl_function" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad26ebeddf1e197029a544c97aae647e0">newSymbolicExpression</a>(node, <a class="code hl_enumvalue" href="group__symbolic.html#gga75473b76e53f754da0affbc706468929a9e72d38056c31f07f2d9b2d653308dac">MEMORY_EXPRESSION</a>, <span class="stringliteral">&quot;Aligned optimization - &quot;</span> + comment);</div>
 <div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>          aligned-&gt;setOriginMemory(mem);</div>
 <div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>          this-&gt;addAlignedMemory(address, writeSize, aligned);</div>
-<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>          <span class="comment">/* Increment the current id to not link the aligned expression to the instruction */</span></div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>          <span class="keywordtype">id</span>++;</div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>          <span class="comment">/* Refresh the current id to not link the aligned expression to the instruction */</span></div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>          <span class="keywordtype">id</span> = this-&gt;<a class="code hl_variable" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a0a6ca0a7ef837218bc3e2cb118941d13">uniqueSymExprId</a>;</div>
 <div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>        }</div>
 <div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span> </div>
 <div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>        <span class="comment">/*</span></div>
