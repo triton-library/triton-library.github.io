@@ -78,8 +78,8 @@ $(function() {
 <ul><li class="level1"><a href="#AST_REPRESENTATION_py_description">Description</a></li>
 <li class="level1"><a href="#AST_REPRESENTATION_py_api">Python API - Items of the AST_REPRESENTATION namespace</a></li>
 <li class="level1"><a href="#AST_REPRESENTATION_py_example_smt">Example of SMT representation</a></li>
-<li class="level1"><a href="#AST_REPRESENTATION_py_example_pcode">Example: Example of PCODE representation</a></li>
-<li class="level1"><a href="#AST_REPRESENTATION_py_example_python">Example: Example of PYTHON representation</a></li>
+<li class="level1"><a href="#AST_REPRESENTATION_py_example_pcode">Example of PCODE representation</a></li>
+<li class="level1"><a href="#AST_REPRESENTATION_py_example_python">Example of PYTHON representation</a></li>
 </ul>
 </div>
 <div class="textblock"><p >[<b>python api</b>] All information about the AST_REPRESENTATION Python namespace.</p>
@@ -116,7 +116,7 @@ Example of SMT representation</h1>
 <div class="line">(define-fun ref!7 () (_ BitVec 1) (ite (= ref!2 (_ bv0 64)) (_ bv1 1) (_ bv0 1))) ; Zero flag</div>
 <div class="line">(define-fun ref!8 () (_ BitVec 64) (_ bv3 64)) ; Program Counter</div>
 </div><!-- fragment --><h1><a class="anchor" id="AST_REPRESENTATION_py_example_pcode"></a>
-Example: Example of PCODE representation</h1>
+Example of PCODE representation</h1>
 <hr  />
 <div class="fragment"><div class="line">&gt;&gt;&gt; ctx.setAstRepresentationMode(AST_REPRESENTATION.PCODE)</div>
 <div class="line">&gt;&gt;&gt;</div>
@@ -133,7 +133,7 @@ Example: Example of PCODE representation</h1>
 <div class="line">zf_7 = (0x1 <span class="keywordflow">if</span> (rax_2 == 0x0) <span class="keywordflow">else</span> 0x0) ; Zero flag</div>
 <div class="line">rip_8 = 0x3 ; Program Counter</div>
 </div><!-- fragment --><h1><a class="anchor" id="AST_REPRESENTATION_py_example_python"></a>
-Example: Example of PYTHON representation</h1>
+Example of PYTHON representation</h1>
 <hr  />
 <div class="fragment"><div class="line">&gt;&gt;&gt; ctx.setAstRepresentationMode(AST_REPRESENTATION.SMT)</div>
 <div class="line">&gt;&gt;&gt;</div>
