@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1558</span>
+   &#160;<span id="projectnumber">version 1.0 build 1560</span>
    </div>
   </td>
  </tr>
@@ -75,10 +75,11 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#AST_REPRESENTATION_py_description">Description</a><ul><li class="level2"><a href="#AST_REPRESENTATION_py_example">Example</a></li>
-</ul>
-</li>
+<ul><li class="level1"><a href="#AST_REPRESENTATION_py_description">Description</a></li>
 <li class="level1"><a href="#AST_REPRESENTATION_py_api">Python API - Items of the AST_REPRESENTATION namespace</a></li>
+<li class="level1"><a href="#AST_REPRESENTATION_py_example_smt">Example of SMT representation</a></li>
+<li class="level1"><a href="#AST_REPRESENTATION_py_example_pcode">Example of PCODE representation</a></li>
+<li class="level1"><a href="#AST_REPRESENTATION_py_example_python">Example of PYTHON representation</a></li>
 </ul>
 </div>
 <div class="textblock"><p >[<b>python api</b>] All information about the AST_REPRESENTATION Python namespace.</p>
@@ -86,10 +87,7 @@ $(function() {
 Description</h1>
 <hr  />
 <p >The AST_REPRESENTATION namespace contains all kinds of AST representations.</p>
-<h2><a class="anchor" id="AST_REPRESENTATION_py_example"></a>
-Example</h2>
-<div class="fragment"><div class="line">&gt;&gt;&gt; setAstRepresentationMode(AST_REPRESENTATION.PYTHON)</div>
-</div><!-- fragment --><h1><a class="anchor" id="AST_REPRESENTATION_py_api"></a>
+<h1><a class="anchor" id="AST_REPRESENTATION_py_api"></a>
 Python API - Items of the AST_REPRESENTATION namespace</h1>
 <hr  />
 <ul>
@@ -98,9 +96,60 @@ Python API - Items of the AST_REPRESENTATION namespace</h1>
 <li><b>AST_REPRESENTATION.PCODE</b><br  />
  Enabled, AST expressions will be represented in a pseudo code syntax.</li>
 <li><b>AST_REPRESENTATION.PYTHON</b><br  />
- Enabled, AST expressions will be represented in the Python syntax. </li>
+ Enabled, AST expressions will be represented in the Python syntax.</li>
 </ul>
-</div></div><!-- contents -->
+<h1><a class="anchor" id="AST_REPRESENTATION_py_example_smt"></a>
+Example of SMT representation</h1>
+<hr  />
+<div class="fragment"><div class="line">&gt;&gt;&gt; ctx.setAstRepresentationMode(AST_REPRESENTATION.SMT)</div>
+<div class="line">&gt;&gt;&gt;</div>
+<div class="line">&gt;&gt;  inst = Instruction(b&quot;\x48\x31\xd8&quot;) # xor rax, rbx</div>
+<div class="line">&gt;&gt;&gt; ctx.processing(inst)</div>
+<div class="line">&gt;&gt;&gt; for se in inst.getSymbolicExpressions():</div>
+<div class="line">...     print(se)</div>
+<div class="line">...</div>
+<div class="line">(define-fun ref!2 () (_ BitVec 64) (bvxor ref!0 ref!1)) ; XOR operation</div>
+<div class="line">(define-fun ref!3 () (_ BitVec 1) (_ bv0 1)) ; Clears carry flag</div>
+<div class="line">(define-fun ref!4 () (_ BitVec 1) (_ bv0 1)) ; Clears overflow flag</div>
+<div class="line">(define-fun ref!5 () (_ BitVec 1) (bvxor (bvxor (bvxor (bvxor (bvxor (bvxor (bvxor (bvxor (_ bv1 1) ((_ extract 0 0) ref!2)) ((_ extract 1 1) ref!2)) ((_ extract 2 2) ref!2)) ((_ extract 3 3) ref!2)) ((_ extract 4 4) ref!2)) ((_ extract 5 5) ref!2)) ((_ extract 6 6) ref!2)) ((_ extract 7 7) ref!2))) ; Parity flag</div>
+<div class="line">(define-fun ref!6 () (_ BitVec 1) ((_ extract 63 63) ref!2)) ; Sign flag</div>
+<div class="line">(define-fun ref!7 () (_ BitVec 1) (ite (= ref!2 (_ bv0 64)) (_ bv1 1) (_ bv0 1))) ; Zero flag</div>
+<div class="line">(define-fun ref!8 () (_ BitVec 64) (_ bv3 64)) ; Program Counter</div>
+</div><!-- fragment --><h1><a class="anchor" id="AST_REPRESENTATION_py_example_pcode"></a>
+Example of PCODE representation</h1>
+<hr  />
+<div class="fragment"><div class="line">&gt;&gt;&gt; ctx.setAstRepresentationMode(AST_REPRESENTATION.PCODE)</div>
+<div class="line">&gt;&gt;&gt;</div>
+<div class="line">&gt;&gt;  inst = Instruction(b<span class="stringliteral">&quot;\x48\x31\xd8&quot;</span>) <span class="comment"># xor rax, rbx</span></div>
+<div class="line">&gt;&gt;&gt; ctx.processing(inst)</div>
+<div class="line">&gt;&gt;&gt; <span class="keywordflow">for</span> se <span class="keywordflow">in</span> inst.getSymbolicExpressions():</div>
+<div class="line">...     print(se)</div>
+<div class="line">...</div>
+<div class="line">rax_2 = (rax_0 ^ rbx_1) ; XOR operation</div>
+<div class="line">cf_3 = 0x0 ; Clears carry flag</div>
+<div class="line">of_4 = 0x0 ; Clears overflow flag</div>
+<div class="line">pf_5 = ((((((((0x1 ^ extract(0, 0, rax_2)) ^ extract(1, 1, rax_2)) ^ extract(2, 2, rax_2)) ^ extract(3, 3, rax_2)) ^ extract(4, 4, rax_2)) ^ extract(5, 5, rax_2)) ^ extract(6, 6, rax_2)) ^ extract(7, 7, rax_2)) ; Parity flag</div>
+<div class="line">sf_6 = extract(63, 63, rax_2) ; Sign flag</div>
+<div class="line">zf_7 = (0x1 <span class="keywordflow">if</span> (rax_2 == 0x0) <span class="keywordflow">else</span> 0x0) ; Zero flag</div>
+<div class="line">rip_8 = 0x3 ; Program Counter</div>
+</div><!-- fragment --><h1><a class="anchor" id="AST_REPRESENTATION_py_example_python"></a>
+Example of PYTHON representation</h1>
+<hr  />
+<div class="fragment"><div class="line">&gt;&gt;&gt; ctx.setAstRepresentationMode(AST_REPRESENTATION.SMT)</div>
+<div class="line">&gt;&gt;&gt;</div>
+<div class="line">&gt;&gt;  inst = Instruction(b<span class="stringliteral">&quot;\x48\x31\xd8&quot;</span>) <span class="comment"># xor rax, rbx</span></div>
+<div class="line">&gt;&gt;&gt; ctx.processing(inst)</div>
+<div class="line">&gt;&gt;&gt; <span class="keywordflow">for</span> se <span class="keywordflow">in</span> inst.getSymbolicExpressions():</div>
+<div class="line">...     print(se)</div>
+<div class="line">...</div>
+<div class="line">ref_2 = (ref_0 ^ ref_1) <span class="comment"># XOR operation</span></div>
+<div class="line">ref_3 = 0x0 <span class="comment"># Clears carry flag</span></div>
+<div class="line">ref_4 = 0x0 <span class="comment"># Clears overflow flag</span></div>
+<div class="line">ref_5 = ((((((((0x1 ^ (ref_2 &amp; 0x1)) ^ ((ref_2 &gt;&gt; 1) &amp; 0x1)) ^ ((ref_2 &gt;&gt; 2) &amp; 0x1)) ^ ((ref_2 &gt;&gt; 3) &amp; 0x1)) ^ ((ref_2 &gt;&gt; 4) &amp; 0x1)) ^ ((ref_2 &gt;&gt; 5) &amp; 0x1)) ^ ((ref_2 &gt;&gt; 6) &amp; 0x1)) ^ ((ref_2 &gt;&gt; 7) &amp; 0x1)) <span class="comment"># Parity flag</span></div>
+<div class="line">ref_6 = ((ref_2 &gt;&gt; 63) &amp; 0x1) <span class="comment"># Sign flag</span></div>
+<div class="line">ref_7 = (0x1 <span class="keywordflow">if</span> (ref_2 == 0x0) <span class="keywordflow">else</span> 0x0) <span class="comment"># Zero flag</span></div>
+<div class="line">ref_8 = 0x3 <span class="comment"># Program Counter</span></div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.14-->
 <!-- start footer part -->

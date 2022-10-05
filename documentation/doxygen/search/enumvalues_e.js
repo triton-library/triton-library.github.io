@@ -13,5 +13,7 @@ var searchData=
   ['string_5fnode_10',['STRING_NODE',['../group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa5899f475cfbd2da5ba4124367aff78e3',1,'triton::ast']]],
   ['sx_5fnode_11',['SX_NODE',['../group__ast.html#gga2b93cc7e19032f733c001c96530ef64faec32514f996cdfb18713640a2645c2e7',1,'triton::ast']]],
   ['symbolic_5fsimplification_12',['SYMBOLIC_SIMPLIFICATION',['../group__callbacks.html#ggaed74509a7a62f214740cdc66d247b10fa64ce19808fc172d0b8f78e230a25b4f0',1,'triton::callbacks']]],
-  ['symbolize_5findex_5frotation_13',['SYMBOLIZE_INDEX_ROTATION',['../group__modes.html#gga58ef498152df1bde838c96411d13af2fae28fe8f696058ea75cf17988e6eab6a1',1,'triton::modes']]]
+  ['symbolize_5findex_5frotation_13',['SYMBOLIZE_INDEX_ROTATION',['../group__modes.html#gga58ef498152df1bde838c96411d13af2fae28fe8f696058ea75cf17988e6eab6a1',1,'triton::modes']]],
+  ['symbolize_5fload_14',['SYMBOLIZE_LOAD',['../group__modes.html#gga58ef498152df1bde838c96411d13af2fad4535ba84dbcfbe9e3dc45f663cac5d2',1,'triton::modes']]],
+  ['symbolize_5fstore_15',['SYMBOLIZE_STORE',['../group__modes.html#gga58ef498152df1bde838c96411d13af2fa9750104229f6f38ecec2801a9e0ea03d',1,'triton::modes']]]
 ];

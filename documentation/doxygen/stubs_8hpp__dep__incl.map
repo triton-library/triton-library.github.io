@@ -1,5 +1,7 @@
 <map id="/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/stubs.hpp" name="/home/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/stubs.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="131,5,317,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="368,5,555,61"/>
 <area shape="rect" id="node2" href="$initStubsNamespace_8cpp.html" title=" " alt="" coords="5,109,221,180"/>
-<area shape="rect" id="node3" href="$libc_8cpp.html" title=" " alt="" coords="246,117,423,173"/>
+<area shape="rect" id="node3" href="$i386-systemv-libc_8cpp.html" title=" " alt="" coords="246,117,455,173"/>
+<area shape="rect" id="node4" href="$x8664-ms-libc_8cpp.html" title=" " alt="" coords="479,117,665,173"/>
+<area shape="rect" id="node5" href="$x8664-systemv-libc_8cpp.html" title=" " alt="" coords="689,117,911,173"/>
 </map>

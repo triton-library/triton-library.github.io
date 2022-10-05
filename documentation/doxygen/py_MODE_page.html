@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1558</span>
+   &#160;<span id="projectnumber">version 1.0 build 1560</span>
    </div>
   </td>
  </tr>
@@ -101,6 +101,8 @@ Python API - Items of the MODE namespace</h1>
  Enabled, Triton will concretize every register tagged as undefined (see #750).</li>
 <li><b>MODE.CONSTANT_FOLDING</b><br  />
  Enabled, Triton will perform a constant folding optimization of sub ASTs which do not contain symbolic variables.</li>
+<li><b>MODE.MEMORY_ARRAY</b><br  />
+ Enabled, Triton will use memory symbolic array.</li>
 <li><b>MODE.ONLY_ON_SYMBOLIZED</b><br  />
  Enabled, Triton will perform symbolic execution only on symbolized expressions.</li>
 <li><b>MODE.ONLY_ON_TAINTED</b><br  />
@@ -109,6 +111,10 @@ Python API - Items of the MODE namespace</h1>
  Enabled, Triton will track path constraints only if they are symbolized. This mode is enabled by default.</li>
 <li><b>MODE.SYMBOLIZE_INDEX_ROTATION</b><br  />
  Enabled, Triton will symbolize the index of rotation for <code>bvror</code> and <code>bvrol</code> nodes. This mode increases the complexity of solving.</li>
+<li><b>MODE.SYMBOLIZE_LOAD</b><br  />
+ Enabled, Triton will symbolize memory load if memory array is enabled.</li>
+<li><b>MODE.SYMBOLIZE_STORE</b><br  />
+ Enabled, Triton will symbolize memory store if memory array is enabled.</li>
 <li><b>MODE.TAINT_THROUGH_POINTERS</b><br  />
  Enabled, the taint is spread if an index pointer is already tainted (see #725). </li>
 </ul>

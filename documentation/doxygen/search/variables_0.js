@@ -3,7 +3,7 @@ var searchData=
   ['aarch64isa_0',['aarch64Isa',['../classtriton_1_1arch_1_1IrBuilder.html#a478b360ea2e19e7abcb4a75d6427174e',1,'triton::arch::IrBuilder']]],
   ['address_1',['address',['../classtriton_1_1arch_1_1Instruction.html#ae3906cf872b90251063c798d5e960a8c',1,'triton::arch::Instruction::address()'],['../classtriton_1_1arch_1_1MemoryAccess.html#a1b40f01282851dfb6c39e26a44aefdde',1,'triton::arch::MemoryAccess::address()']]],
   ['alias_2',['alias',['../classtriton_1_1engines_1_1symbolic_1_1SymbolicVariable.html#afb8cdbfa190b01db7f8e424475958b51',1,'triton::engines::symbolic::SymbolicVariable']]],
-  ['alignedmemoryreference_3',['alignedMemoryReference',['../classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a8da460c8ede33ee3ae27f885959022fa',1,'triton::engines::symbolic::SymbolicEngine']]],
+  ['alignedbitvectormemory_3',['alignedBitvectorMemory',['../classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af6f04f0e850c11f9ced08b50cb89bfdf',1,'triton::engines::symbolic::SymbolicEngine']]],
   ['arch_4',['arch',['../classtriton_1_1arch_1_1Architecture.html#ab49986503d449b27119e47ba4e8f55cf',1,'triton::arch::Architecture::arch()'],['../classtriton_1_1Context.html#a5711f6781aa48a2ab143393d6aa51961',1,'triton::Context::arch()'],['../classtriton_1_1arch_1_1Instruction.html#ace5d0b6534f554289bc0b65a45d7eef0',1,'triton::arch::Instruction::arch()']]],
   ['arm32isa_5',['arm32Isa',['../classtriton_1_1arch_1_1IrBuilder.html#a43abc5be50cf6b4360981d5f2d86c632',1,'triton::arch::IrBuilder']]],
   ['array_6',['array',['../classtriton_1_1ast_1_1AbstractNode.html#a916d85190d8147ca3f4cc456cfd457e3',1,'triton::ast::AbstractNode']]],

@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1558</span>
+   &#160;<span id="projectnumber">version 1.0 build 1560</span>
    </div>
   </td>
  </tr>
@@ -108,7 +108,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a39133c35ab6348340a416ef1e068e97f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html" title="The symbolic engine class.">SymbolicEngine</a>.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a39133c35ab6348340a416ef1e068e97f">More...</a><br /></td></tr>
 <tr class="separator:a39133c35ab6348340a416ef1e068e97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad26ebeddf1e197029a544c97aae647e0"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad26ebeddf1e197029a544c97aae647e0">newSymbolicExpression</a> (const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node, <a class="el" href="group__symbolic.html#ga75473b76e53f754da0affbc706468929">triton::engines::symbolic::expression_e</a> type, const std::string &amp;comment=&quot;&quot;)</td></tr>
-<tr class="memdesc:ad26ebeddf1e197029a544c97aae647e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new shared symbolic expression.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad26ebeddf1e197029a544c97aae647e0">More...</a><br /></td></tr>
+<tr class="memdesc:ad26ebeddf1e197029a544c97aae647e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new symbolic expression.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad26ebeddf1e197029a544c97aae647e0">More...</a><br /></td></tr>
 <tr class="separator:ad26ebeddf1e197029a544c97aae647e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8edee9779a90939a2d01289219c8511"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad8edee9779a90939a2d01289219c8511">removeSymbolicExpression</a> (const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &amp;expr)</td></tr>
 <tr class="memdesc:ad8edee9779a90939a2d01289219c8511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the symbolic expression corresponding to the id.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad8edee9779a90939a2d01289219c8511">More...</a><br /></td></tr>
@@ -126,13 +126,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6661783a043fca0409de68cb384e7114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbolic expression corresponding to an id.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a6661783a043fca0409de68cb384e7114">More...</a><br /></td></tr>
 <tr class="separator:a6661783a043fca0409de68cb384e7114"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fd05babe71265cd4c0e8fcade71f8be"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a7fd05babe71265cd4c0e8fcade71f8be">getSymbolicMemory</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr) const</td></tr>
-<tr class="memdesc:a7fd05babe71265cd4c0e8fcade71f8be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shared symbolic expression corresponding to the memory address.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a7fd05babe71265cd4c0e8fcade71f8be">More...</a><br /></td></tr>
+<tr class="memdesc:a7fd05babe71265cd4c0e8fcade71f8be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbolic expression assigned to the memory address.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a7fd05babe71265cd4c0e8fcade71f8be">More...</a><br /></td></tr>
 <tr class="separator:a7fd05babe71265cd4c0e8fcade71f8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a784bc0431417aeea1f635e25a6e6ec95"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT const std::unordered_map&lt; <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>, <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a784bc0431417aeea1f635e25a6e6ec95">getSymbolicMemory</a> (void) const</td></tr>
-<tr class="memdesc:a784bc0431417aeea1f635e25a6e6ec95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the map (addr:expr) of all symbolic memory defined.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a784bc0431417aeea1f635e25a6e6ec95">More...</a><br /></td></tr>
+<tr class="memdesc:a784bc0431417aeea1f635e25a6e6ec95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the map (addr:expr) of all symbolic memory assigned.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a784bc0431417aeea1f635e25a6e6ec95">More...</a><br /></td></tr>
 <tr class="separator:a784bc0431417aeea1f635e25a6e6ec95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5215effa65d491fbd913c1799b9145c"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad5215effa65d491fbd913c1799b9145c">getSymbolicRegister</a> (const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &amp;reg) const</td></tr>
-<tr class="memdesc:ad5215effa65d491fbd913c1799b9145c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shared symbolic expression corresponding to the parent register.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad5215effa65d491fbd913c1799b9145c">More...</a><br /></td></tr>
+<tr class="memdesc:ad5215effa65d491fbd913c1799b9145c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbolic expression assigned to the register.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad5215effa65d491fbd913c1799b9145c">More...</a><br /></td></tr>
 <tr class="separator:ad5215effa65d491fbd913c1799b9145c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b94f1392eac28cf4526ced3d74c891c"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT std::unordered_map&lt; <a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a>, <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a8b94f1392eac28cf4526ced3d74c891c">getSymbolicRegisters</a> (void) const</td></tr>
 <tr class="memdesc:a8b94f1392eac28cf4526ced3d74c891c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the map of symbolic registers defined.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a8b94f1392eac28cf4526ced3d74c891c">More...</a><br /></td></tr>
@@ -177,16 +177,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a54394a3b258314c51f540f6367ec945e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the AST corresponding to the shift operation. Mainly used for Arm32 operands.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a54394a3b258314c51f540f6367ec945e">More...</a><br /></td></tr>
 <tr class="separator:a54394a3b258314c51f540f6367ec945e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad01690411c4b9679d71ec5216ceacd41"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">createSymbolicExpression</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst, const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node, const <a class="el" href="classtriton_1_1arch_1_1OperandWrapper.html">triton::arch::OperandWrapper</a> &amp;dst, const std::string &amp;comment=&quot;&quot;)</td></tr>
-<tr class="memdesc:ad01690411c4b9679d71ec5216ceacd41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the new shared symbolic abstract expression and links this expression to the instruction.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">More...</a><br /></td></tr>
+<tr class="memdesc:ad01690411c4b9679d71ec5216ceacd41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the new symbolic expression and links this expression to the instruction.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ad01690411c4b9679d71ec5216ceacd41">More...</a><br /></td></tr>
 <tr class="separator:ad01690411c4b9679d71ec5216ceacd41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06c50c31d882fb9e625772a572c43a33"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a06c50c31d882fb9e625772a572c43a33">createSymbolicMemoryExpression</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst, const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node, const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem, const std::string &amp;comment=&quot;&quot;)</td></tr>
-<tr class="memdesc:a06c50c31d882fb9e625772a572c43a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the new shared symbolic memory expression expression and links this expression to the instruction.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a06c50c31d882fb9e625772a572c43a33">More...</a><br /></td></tr>
+<tr class="memdesc:a06c50c31d882fb9e625772a572c43a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the new symbolic memory expression expression and links this expression to the instruction.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a06c50c31d882fb9e625772a572c43a33">More...</a><br /></td></tr>
 <tr class="separator:a06c50c31d882fb9e625772a572c43a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a458d4c29fca1680fc40124caed15fb"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a1a458d4c29fca1680fc40124caed15fb">createSymbolicRegisterExpression</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst, const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node, const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &amp;reg, const std::string &amp;comment=&quot;&quot;)</td></tr>
-<tr class="memdesc:a1a458d4c29fca1680fc40124caed15fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the new shared symbolic register expression expression and links this expression to the instruction.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a1a458d4c29fca1680fc40124caed15fb">More...</a><br /></td></tr>
+<tr class="memdesc:a1a458d4c29fca1680fc40124caed15fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the new symbolic register expression expression and links this expression to the instruction.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a1a458d4c29fca1680fc40124caed15fb">More...</a><br /></td></tr>
 <tr class="separator:a1a458d4c29fca1680fc40124caed15fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7041100fdf28994778ea4beeaf471474"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a7041100fdf28994778ea4beeaf471474">createSymbolicVolatileExpression</a> (<a class="el" href="classtriton_1_1arch_1_1Instruction.html">triton::arch::Instruction</a> &amp;inst, const <a class="el" href="group__ast.html#ga2d86ebcc0438b7c3b0e5388efa617a89">triton::ast::SharedAbstractNode</a> &amp;node, const std::string &amp;comment=&quot;&quot;)</td></tr>
-<tr class="memdesc:a7041100fdf28994778ea4beeaf471474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the new shared symbolic volatile expression expression and links this expression to the instruction.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a7041100fdf28994778ea4beeaf471474">More...</a><br /></td></tr>
+<tr class="memdesc:a7041100fdf28994778ea4beeaf471474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the new symbolic volatile expression expression and links this expression to the instruction.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a7041100fdf28994778ea4beeaf471474">More...</a><br /></td></tr>
 <tr class="separator:a7041100fdf28994778ea4beeaf471474"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80473893c8327ea3629d6bda24156d98"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a80473893c8327ea3629d6bda24156d98">assignSymbolicExpressionToRegister</a> (const <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &amp;se, const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &amp;reg)</td></tr>
 <tr class="memdesc:a80473893c8327ea3629d6bda24156d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a symbolic expression to a register.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a80473893c8327ea3629d6bda24156d98">More...</a><br /></td></tr>
@@ -219,19 +219,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3e14f7e28a4640a84315dde1eb8414d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a symbolic register expression to a symbolic variable.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a3e14f7e28a4640a84315dde1eb8414d2">More...</a><br /></td></tr>
 <tr class="separator:a3e14f7e28a4640a84315dde1eb8414d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcc8c28f9fbc3603d6d36382e074b125"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#adcc8c28f9fbc3603d6d36382e074b125">concretizeAllMemory</a> (void)</td></tr>
-<tr class="memdesc:adcc8c28f9fbc3603d6d36382e074b125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concretizes all symbolic memory references.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#adcc8c28f9fbc3603d6d36382e074b125">More...</a><br /></td></tr>
+<tr class="memdesc:adcc8c28f9fbc3603d6d36382e074b125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concretizes all the symbolic memory.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#adcc8c28f9fbc3603d6d36382e074b125">More...</a><br /></td></tr>
 <tr class="separator:adcc8c28f9fbc3603d6d36382e074b125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb02328c99fa692f55b24c8e7edb0a84"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#aeb02328c99fa692f55b24c8e7edb0a84">concretizeAllRegister</a> (void)</td></tr>
-<tr class="memdesc:aeb02328c99fa692f55b24c8e7edb0a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concretizes all symbolic register references.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#aeb02328c99fa692f55b24c8e7edb0a84">More...</a><br /></td></tr>
+<tr class="memdesc:aeb02328c99fa692f55b24c8e7edb0a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concretizes all symbolic registers.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#aeb02328c99fa692f55b24c8e7edb0a84">More...</a><br /></td></tr>
 <tr class="separator:aeb02328c99fa692f55b24c8e7edb0a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe2c8ae1b5d36868df534470f3ee6ce3"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#afe2c8ae1b5d36868df534470f3ee6ce3">concretizeMemory</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem)</td></tr>
-<tr class="memdesc:afe2c8ae1b5d36868df534470f3ee6ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concretizes a specific symbolic memory reference.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#afe2c8ae1b5d36868df534470f3ee6ce3">More...</a><br /></td></tr>
-<tr class="separator:afe2c8ae1b5d36868df534470f3ee6ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5d700048e9f93b5ccce042cce7b482a"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#aa5d700048e9f93b5ccce042cce7b482a">concretizeMemory</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr)</td></tr>
-<tr class="memdesc:aa5d700048e9f93b5ccce042cce7b482a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concretizes a specific symbolic memory reference.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#aa5d700048e9f93b5ccce042cce7b482a">More...</a><br /></td></tr>
-<tr class="separator:aa5d700048e9f93b5ccce042cce7b482a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13b438cc387c5dede50d453624116bf4"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a13b438cc387c5dede50d453624116bf4">concretizeMemory</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem, bool array=true)</td></tr>
+<tr class="memdesc:a13b438cc387c5dede50d453624116bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concretizes specific symbolic memory cells.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a13b438cc387c5dede50d453624116bf4">More...</a><br /></td></tr>
+<tr class="separator:a13b438cc387c5dede50d453624116bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e467bf38e782104172c6ce9936ff19c"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a9e467bf38e782104172c6ce9936ff19c">concretizeMemory</a> (<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a> addr, bool array=true)</td></tr>
+<tr class="memdesc:a9e467bf38e782104172c6ce9936ff19c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concretizes a specific symbolic memory cell.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a9e467bf38e782104172c6ce9936ff19c">More...</a><br /></td></tr>
+<tr class="separator:a9e467bf38e782104172c6ce9936ff19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af157a1cdfdf29392f82ceebfd41b0aba"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af157a1cdfdf29392f82ceebfd41b0aba">concretizeRegister</a> (const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &amp;reg)</td></tr>
-<tr class="memdesc:af157a1cdfdf29392f82ceebfd41b0aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concretizes a specific symbolic register reference.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af157a1cdfdf29392f82ceebfd41b0aba">More...</a><br /></td></tr>
+<tr class="memdesc:af157a1cdfdf29392f82ceebfd41b0aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concretizes a specific symbolic register.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af157a1cdfdf29392f82ceebfd41b0aba">More...</a><br /></td></tr>
 <tr class="separator:af157a1cdfdf29392f82ceebfd41b0aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31990d0571c389ca338055628f093a5b"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a31990d0571c389ca338055628f093a5b">isSymbolicExpressionExists</a> (<a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a> symExprId) const</td></tr>
 <tr class="memdesc:a31990d0571c389ca338055628f093a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the symbolic expression ID exists.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a31990d0571c389ca338055628f093a5b">More...</a><br /></td></tr>
@@ -246,7 +246,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afb2b4118ee6bafe37894e1b0212100ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the register expression contains a symbolic variable.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#afb2b4118ee6bafe37894e1b0212100ad">More...</a><br /></td></tr>
 <tr class="separator:afb2b4118ee6bafe37894e1b0212100ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82ffb8385b8762f173deaa25241c9ae1"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a82ffb8385b8762f173deaa25241c9ae1">initLeaAst</a> (<a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem, bool force=true)</td></tr>
-<tr class="memdesc:a82ffb8385b8762f173deaa25241c9ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the memory access AST (LOAD and STORE).  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a82ffb8385b8762f173deaa25241c9ae1">More...</a><br /></td></tr>
+<tr class="memdesc:a82ffb8385b8762f173deaa25241c9ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the effective address of a memory access.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a82ffb8385b8762f173deaa25241c9ae1">More...</a><br /></td></tr>
 <tr class="separator:a82ffb8385b8762f173deaa25241c9ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7d2c866a3e3977d4c159a335ae1dba0"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680">triton::uint512</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ab7d2c866a3e3977d4c159a335ae1dba0">getConcreteVariableValue</a> (const <a class="el" href="group__symbolic.html#ga64f6b6eedb05ad304d7550f39f71e6b0">SharedSymbolicVariable</a> &amp;symVar) const</td></tr>
 <tr class="memdesc:ab7d2c866a3e3977d4c159a335ae1dba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the concrete value of a symbolic variable.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ab7d2c866a3e3977d4c159a335ae1dba0">More...</a><br /></td></tr>
@@ -326,20 +326,23 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a239ac32e053745e046484a31da21608e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic variables id.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a239ac32e053745e046484a31da21608e">More...</a><br /></td></tr>
 <tr class="separator:a239ac32e053745e046484a31da21608e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adee38bd2fcd7f5ee8eefaca66eac89d6"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a>, <a class="el" href="group__symbolic.html#gaf707da3c344d1e4fa9409f54cbe95df0">WeakSymbolicVariable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#adee38bd2fcd7f5ee8eefaca66eac89d6">symbolicVariables</a></td></tr>
-<tr class="memdesc:adee38bd2fcd7f5ee8eefaca66eac89d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The map of symbolic variables.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#adee38bd2fcd7f5ee8eefaca66eac89d6">More...</a><br /></td></tr>
+<tr class="memdesc:adee38bd2fcd7f5ee8eefaca66eac89d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The map of symbolic variables &lt;id : <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicVariable.html" title="The symbolic variable class.">SymbolicVariable</a>&gt;  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#adee38bd2fcd7f5ee8eefaca66eac89d6">More...</a><br /></td></tr>
 <tr class="separator:adee38bd2fcd7f5ee8eefaca66eac89d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0218bb0379b6b2507f4f7c629ed7025d"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="group__triton.html#ga981108cc1be621a7f4690020ae39814d">triton::usize</a>, <a class="el" href="group__symbolic.html#ga535d64de659f32c4be271aa6ebe79085">WeakSymbolicExpression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a0218bb0379b6b2507f4f7c629ed7025d">symbolicExpressions</a></td></tr>
-<tr class="memdesc:a0218bb0379b6b2507f4f7c629ed7025d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The map of symbolic expressions.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a0218bb0379b6b2507f4f7c629ed7025d">More...</a><br /></td></tr>
+<tr class="memdesc:a0218bb0379b6b2507f4f7c629ed7025d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The map of symbolic expressions &lt;id : <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html" title="The symbolic expression class.">SymbolicExpression</a>&gt;  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a0218bb0379b6b2507f4f7c629ed7025d">More...</a><br /></td></tr>
 <tr class="separator:a0218bb0379b6b2507f4f7c629ed7025d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8da460c8ede33ee3ae27f885959022fa"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::pair&lt; <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>, <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> &gt;, <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a8da460c8ede33ee3ae27f885959022fa">alignedMemoryReference</a></td></tr>
-<tr class="memdesc:a8da460c8ede33ee3ae27f885959022fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">map of &lt;address:size&gt; -&gt; symbolic expression.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a8da460c8ede33ee3ae27f885959022fa">More...</a><br /></td></tr>
-<tr class="separator:a8da460c8ede33ee3ae27f885959022fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1407fd8b64fff9ae799d904e4e927ac1"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>, <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a1407fd8b64fff9ae799d904e4e927ac1">memoryReference</a></td></tr>
-<tr class="memdesc:a1407fd8b64fff9ae799d904e4e927ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">map of address -&gt; symbolic expression  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a1407fd8b64fff9ae799d904e4e927ac1">More...</a><br /></td></tr>
-<tr class="separator:a1407fd8b64fff9ae799d904e4e927ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6f04f0e850c11f9ced08b50cb89bfdf"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::pair&lt; <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>, <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> &gt;, <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af6f04f0e850c11f9ced08b50cb89bfdf">alignedBitvectorMemory</a></td></tr>
+<tr class="memdesc:af6f04f0e850c11f9ced08b50cb89bfdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The map of aligned symbolic expressions (used for symbolic optimizations) &lt;&lt;addr : size&gt; : SharedSymbolicExpression&gt;  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af6f04f0e850c11f9ced08b50cb89bfdf">More...</a><br /></td></tr>
+<tr class="separator:af6f04f0e850c11f9ced08b50cb89bfdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae78f4b6e756ee1309ee6ce76094e13c7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ae78f4b6e756ee1309ee6ce76094e13c7">symbolicReg</a></td></tr>
-<tr class="memdesc:ae78f4b6e756ee1309ee6ce76094e13c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic register state.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ae78f4b6e756ee1309ee6ce76094e13c7">More...</a><br /></td></tr>
+<tr class="memdesc:ae78f4b6e756ee1309ee6ce76094e13c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of all symbolic registers.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#ae78f4b6e756ee1309ee6ce76094e13c7">More...</a><br /></td></tr>
 <tr class="separator:ae78f4b6e756ee1309ee6ce76094e13c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7667be9759a8ef5151dd37de0d9d07b1"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>, <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a7667be9759a8ef5151dd37de0d9d07b1">memoryBitvector</a></td></tr>
+<tr class="memdesc:a7667be9759a8ef5151dd37de0d9d07b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bitvector memory model represented by a map of &lt;address:<a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html" title="The symbolic expression class.">SymbolicExpression</a>&gt;  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a7667be9759a8ef5151dd37de0d9d07b1">More...</a><br /></td></tr>
+<tr class="separator:a7667be9759a8ef5151dd37de0d9d07b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f820f5d144bbc662d01c8d12a47892"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a19f820f5d144bbc662d01c8d12a47892">memoryArray</a></td></tr>
+<tr class="memdesc:a19f820f5d144bbc662d01c8d12a47892"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array memory model.  <a href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a19f820f5d144bbc662d01c8d12a47892">More...</a><br /></td></tr>
+<tr class="separator:a19f820f5d144bbc662d01c8d12a47892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classtriton_1_1engines_1_1symbolic_1_1PathManager"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classtriton_1_1engines_1_1symbolic_1_1PathManager')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathManager.html">triton::engines::symbolic::PathManager</a></td></tr>
 <tr class="memitem:a9b7f5233bfe281a93598f0ae510bc4a2 inherit pro_attribs_classtriton_1_1engines_1_1symbolic_1_1PathManager"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathConstraint.html">triton::engines::symbolic::PathConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1engines_1_1symbolic_1_1PathManager.html#a9b7f5233bfe281a93598f0ae510bc4a2">pathConstraints</a></td></tr>
 <tr class="memdesc:a9b7f5233bfe281a93598f0ae510bc4a2 inherit pro_attribs_classtriton_1_1engines_1_1symbolic_1_1PathManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">The logical conjunction vector of path constraints.  <a href="classtriton_1_1engines_1_1symbolic_1_1PathManager.html#a9b7f5233bfe281a93598f0ae510bc4a2">More...</a><br /></td></tr>
@@ -412,7 +415,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Constructor by copy. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00046">46</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00047">47</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -433,7 +436,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00065">65</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00067">67</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -466,7 +469,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Assigns a symbolic expression to a memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01096">1096</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01156">1156</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -498,7 +501,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Assigns a symbolic expression to a register. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01069">1069</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01129">1129</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -518,9 +521,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Concretizes all symbolic memory references. </p>
+<p>Concretizes all the symbolic memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00142">142</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00154">154</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -540,14 +543,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Concretizes all symbolic register references. </p>
+<p>Concretizes all symbolic registers. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00108">108</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00111">111</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
-<a id="afe2c8ae1b5d36868df534470f3ee6ce3" name="afe2c8ae1b5d36868df534470f3ee6ce3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe2c8ae1b5d36868df534470f3ee6ce3">&#9670;&nbsp;</a></span>concretizeMemory() <span class="overload">[1/2]</span></h2>
+<a id="a13b438cc387c5dede50d453624116bf4" name="a13b438cc387c5dede50d453624116bf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b438cc387c5dede50d453624116bf4">&#9670;&nbsp;</a></span>concretizeMemory() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -556,20 +559,30 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void triton::engines::symbolic::SymbolicEngine::concretizeMemory </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;&#160;</td>
-          <td class="paramname"><em>mem</em></td><td>)</td>
+          <td class="paramname"><em>mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>array</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Concretizes a specific symbolic memory reference. </p>
+<p>Concretizes specific symbolic memory cells. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00120">120</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00123">123</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aa5d700048e9f93b5ccce042cce7b482a" name="aa5d700048e9f93b5ccce042cce7b482a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5d700048e9f93b5ccce042cce7b482a">&#9670;&nbsp;</a></span>concretizeMemory() <span class="overload">[2/2]</span></h2>
+<a id="a9e467bf38e782104172c6ce9936ff19c" name="a9e467bf38e782104172c6ce9936ff19c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e467bf38e782104172c6ce9936ff19c">&#9670;&nbsp;</a></span>concretizeMemory() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -578,15 +591,25 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void triton::engines::symbolic::SymbolicEngine::concretizeMemory </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>&#160;</td>
-          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>array</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Concretizes a specific symbolic memory reference. </p>
+<p>Concretizes a specific symbolic memory cell. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00135">135</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00138">138</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -606,9 +629,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Concretizes a specific symbolic register reference. </p>
+<p>Concretizes a specific symbolic register. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00098">98</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00101">101</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -650,9 +673,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the new shared symbolic abstract expression and links this expression to the instruction. </p>
+<p>Returns the new symbolic expression and links this expression to the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00903">903</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00954">954</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -694,9 +717,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the new shared symbolic memory expression expression and links this expression to the instruction. </p>
+<p>Returns the new symbolic memory expression expression and links this expression to the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00914">914</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00965">965</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -738,9 +761,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the new shared symbolic register expression expression and links this expression to the instruction. </p>
+<p>Returns the new symbolic register expression expression and links this expression to the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01042">1042</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01102">1102</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -776,9 +799,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the new shared symbolic volatile expression expression and links this expression to the instruction. </p>
+<p>Returns the new symbolic volatile expression expression and links this expression to the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01055">1055</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01115">1115</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -800,7 +823,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Gets the concrete value of a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01228">1228</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01297">1297</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -822,7 +845,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the AST corresponding to the immediate. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00794">794</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00829">829</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -854,7 +877,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the AST corresponding to the immediate and defines the immediate as input of the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00807">807</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00842">842</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -876,7 +899,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the AST corresponding to the memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00815">815</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00850">850</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -908,7 +931,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the AST corresponding to the memory and defines the memory as input of the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00854">854</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00905">905</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -930,7 +953,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the AST corresponding to the operand. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00642">642</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00677">677</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -962,7 +985,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the AST corresponding to the operand. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00654">654</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00689">689</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -984,7 +1007,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the AST corresponding to the register. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00868">868</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00919">919</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1016,7 +1039,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the AST corresponding to the register and defines the register as input of the instruction. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00895">895</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00946">946</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1048,7 +1071,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the AST corresponding to the shift operation. Mainly used for Arm32 operands. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00665">665</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00700">700</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1070,7 +1093,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the symbolic expression corresponding to an id. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00423">423</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00450">450</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1092,7 +1115,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns all symbolic expressions. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00439">439</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00466">466</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1112,9 +1135,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the shared symbolic expression corresponding to the memory address. </p>
+<p>Returns the symbolic expression assigned to the memory address. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00209">209</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00226">226</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1134,9 +1157,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the map (addr:expr) of all symbolic memory defined. </p>
+<p>Returns the map (addr:expr) of all symbolic memory assigned. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00520">520</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00547">547</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1168,7 +1191,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the symbolic values of a memory area. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00331">331</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00348">348</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1190,7 +1213,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the symbolic memory value. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00324">324</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00341">341</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1212,7 +1235,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the symbolic memory value. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00317">317</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00334">334</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1232,9 +1255,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the shared symbolic expression corresponding to the parent register. </p>
+<p>Returns the symbolic expression assigned to the register. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00305">305</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00322">322</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1256,7 +1279,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the map of symbolic registers defined. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00506">506</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00533">533</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1278,7 +1301,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the symbolic register value. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00344">344</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00361">361</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1300,7 +1323,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the symbolic variable corresponding to the symbolic variable name. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00234">234</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00251">251</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1322,7 +1345,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the symbolic variable corresponding to the symbolic variable id. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00219">219</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00236">236</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1344,7 +1367,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns all symbolic variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00254">254</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00271">271</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1366,7 +1389,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the vector of the tainted symbolic expressions. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00483">483</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00510">510</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1396,9 +1419,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initializes the memory access AST (LOAD and STORE). </p>
+<p>Initializes the effective address of a memory access. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01179">1179</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01248">1248</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1420,7 +1443,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if memory cell expressions contain symbolic variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01148">1148</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01217">1217</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1452,7 +1475,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if memory cell expressions contain symbolic variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01157">1157</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01226">1226</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1474,7 +1497,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if the register expression contains a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01169">1169</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01238">1238</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1496,7 +1519,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if the symbolic expression ID exists. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01136">1136</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01205">1205</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1532,9 +1555,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a new shared symbolic expression. </p>
+<p>Creates a new symbolic expression. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00366">366</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00393">393</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1578,7 +1601,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Adds a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00628">628</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00663">663</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1600,7 +1623,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Copies a <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html" title="The symbolic engine class.">SymbolicEngine</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00072">72</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00075">75</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1622,7 +1645,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Removes the symbolic expression corresponding to the id. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00402">402</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00429">429</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1654,7 +1677,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Sets the concrete value of a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01233">1233</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l01302">1302</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1676,7 +1699,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Slices all expressions from a given one. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00460">460</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00487">487</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1714,7 +1737,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Converts a symbolic expression to a symbolic variable. <code>symVarSize</code> must be in bits. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00532">532</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00559">559</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1746,7 +1769,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Converts a symbolic memory expression to a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00556">556</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00583">583</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1778,7 +1801,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Converts a symbolic memory area to 8-bits symbolic variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00548">548</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00575">575</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1810,13 +1833,13 @@ Protected Attributes</h2></td></tr>
 
 <p>Converts a symbolic register expression to a symbolic variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00597">597</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8cpp_source.html#l00632">632</a> of file <a class="el" href="symbolicEngine_8cpp_source.html">symbolicEngine.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8da460c8ede33ee3ae27f885959022fa" name="a8da460c8ede33ee3ae27f885959022fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8da460c8ede33ee3ae27f885959022fa">&#9670;&nbsp;</a></span>alignedMemoryReference</h2>
+<a id="af6f04f0e850c11f9ced08b50cb89bfdf" name="af6f04f0e850c11f9ced08b50cb89bfdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6f04f0e850c11f9ced08b50cb89bfdf">&#9670;&nbsp;</a></span>alignedBitvectorMemory</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1825,7 +1848,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;std::pair&lt;<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>, <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&gt;, <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a>&gt; triton::engines::symbolic::SymbolicEngine::alignedMemoryReference</td>
+          <td class="memname">std::map&lt;std::pair&lt;<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>, <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&gt;, <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a>&gt; triton::engines::symbolic::SymbolicEngine::alignedBitvectorMemory</td>
         </tr>
       </table>
   </td>
@@ -1835,16 +1858,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>map of &lt;address:size&gt; -&gt; symbolic expression. </p>
-<p ><b>item1</b>: &lt;addr:size&gt;<br  />
- <b>item2</b>: shared symbolic expression </p>
+<p>The map of aligned symbolic expressions (used for symbolic optimizations) &lt;&lt;addr : size&gt; : SharedSymbolicExpression&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00096">96</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00081">81</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a1407fd8b64fff9ae799d904e4e927ac1" name="a1407fd8b64fff9ae799d904e4e927ac1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1407fd8b64fff9ae799d904e4e927ac1">&#9670;&nbsp;</a></span>memoryReference</h2>
+<a id="a19f820f5d144bbc662d01c8d12a47892" name="a19f820f5d144bbc662d01c8d12a47892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19f820f5d144bbc662d01c8d12a47892">&#9670;&nbsp;</a></span>memoryArray</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1853,7 +1874,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt;<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>, <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a>&gt; triton::engines::symbolic::SymbolicEngine::memoryReference</td>
+          <td class="memname"><a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a> triton::engines::symbolic::SymbolicEngine::memoryArray</td>
         </tr>
       </table>
   </td>
@@ -1863,11 +1884,35 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>map of address -&gt; symbolic expression </p>
-<p ><b>item1</b>: memory address<br  />
- <b>item2</b>: shared symbolic expression </p>
+<p>An array memory model. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00104">104</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00090">90</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7667be9759a8ef5151dd37de0d9d07b1" name="a7667be9759a8ef5151dd37de0d9d07b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7667be9759a8ef5151dd37de0d9d07b1">&#9670;&nbsp;</a></span>memoryBitvector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;<a class="el" href="group__triton.html#gab921adae1cbbf8593719c76088193d55">triton::uint64</a>, <a class="el" href="group__symbolic.html#ga9bc5292713c543c8d58f177037341b6a">SharedSymbolicExpression</a>&gt; triton::engines::symbolic::SymbolicEngine::memoryBitvector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A bitvector memory model represented by a map of &lt;address:<a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html" title="The symbolic expression class.">SymbolicExpression</a>&gt; </p>
+
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00087">87</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>
@@ -1917,11 +1962,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The map of symbolic expressions. </p>
-<p ><b>item1</b>: symbolic reference id<br  />
- <b>item2</b>: symbolic expression </p>
+<p>The map of symbolic expressions &lt;id : <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicExpression.html" title="The symbolic expression class.">SymbolicExpression</a>&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00088">88</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00078">78</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>
@@ -1945,9 +1988,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Symbolic register state. </p>
+<p>The list of all symbolic registers. </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00107">107</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00084">84</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>
@@ -1971,11 +2014,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The map of symbolic variables. </p>
-<p ><b>item1</b>: variable id<br  />
- <b>item2</b>: symbolic variable </p>
+<p>The map of symbolic variables &lt;id : <a class="el" href="classtriton_1_1engines_1_1symbolic_1_1SymbolicVariable.html" title="The symbolic variable class.">SymbolicVariable</a>&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00080">80</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="symbolicEngine_8hpp_source.html#l00075">75</a> of file <a class="el" href="symbolicEngine_8hpp_source.html">symbolicEngine.hpp</a>.</p>
 
 </div>
 </div>

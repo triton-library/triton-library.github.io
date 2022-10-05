@@ -23,7 +23,7 @@ var searchData=
   ['addsymbolicexpression_20',['addSymbolicExpression',['../classtriton_1_1arch_1_1Instruction.html#ac28ebfe78a425b1c68863e6f8561f730',1,'triton::arch::Instruction']]],
   ['alias_21',['alias',['../classtriton_1_1engines_1_1symbolic_1_1SymbolicVariable.html#afb8cdbfa190b01db7f8e424475958b51',1,'triton::engines::symbolic::SymbolicVariable']]],
   ['aligned_5fmemory_22',['ALIGNED_MEMORY',['../group__modes.html#gga58ef498152df1bde838c96411d13af2fa4e6c085d1db8980d5cc294b37cf32641',1,'triton::modes']]],
-  ['alignedmemoryreference_23',['alignedMemoryReference',['../classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#a8da460c8ede33ee3ae27f885959022fa',1,'triton::engines::symbolic::SymbolicEngine']]],
+  ['alignedbitvectormemory_23',['alignedBitvectorMemory',['../classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html#af6f04f0e850c11f9ced08b50cb89bfdf',1,'triton::engines::symbolic::SymbolicEngine']]],
   ['any_5fnode_24',['ANY_NODE',['../group__ast.html#gga2b93cc7e19032f733c001c96530ef64fa30bf9a1e17f752067050fb41dd43b33d',1,'triton::ast']]],
   ['arch_25',['arch',['../classtriton_1_1Context.html#a5711f6781aa48a2ab143393d6aa51961',1,'triton::Context::arch()'],['../classtriton_1_1arch_1_1Instruction.html#ace5d0b6534f554289bc0b65a45d7eef0',1,'triton::arch::Instruction::arch()']]],
   ['arch_26',['Arch',['../group__arch.html',1,'']]],
