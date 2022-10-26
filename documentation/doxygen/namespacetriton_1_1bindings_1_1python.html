@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1561</span>
+   &#160;<span id="projectnumber">version 1.0 build 1562</span>
    </div>
   </td>
  </tr>
@@ -189,6 +189,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga1114ef3643cc4a7aaefa5afd2acc33fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#ga1114ef3643cc4a7aaefa5afd2acc33fa">initSymbolicNamespace</a> (PyObject *symbolicDict)</td></tr>
 <tr class="memdesc:ga1114ef3643cc4a7aaefa5afd2acc33fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the SYMBOLIC python namespace.  <a href="group__python.html#ga1114ef3643cc4a7aaefa5afd2acc33fa">More...</a><br /></td></tr>
 <tr class="separator:ga1114ef3643cc4a7aaefa5afd2acc33fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeddfdc491963908c22c542bc876e3187"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#gaeddfdc491963908c22c542bc876e3187">initVASNamespace</a> (PyObject *vasDict)</td></tr>
+<tr class="memdesc:gaeddfdc491963908c22c542bc876e3187"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the VAS python namespace.  <a href="group__python.html#gaeddfdc491963908c22c542bc876e3187">More...</a><br /></td></tr>
+<tr class="separator:gaeddfdc491963908c22c542bc876e3187"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf3fefb680cf668fb8fc47dd2dcc58b77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__python.html#gaf3fefb680cf668fb8fc47dd2dcc58b77">initVersionNamespace</a> (PyObject *versionDict)</td></tr>
 <tr class="memdesc:gaf3fefb680cf668fb8fc47dd2dcc58b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the VERSION python namespace.  <a href="group__python.html#gaf3fefb680cf668fb8fc47dd2dcc58b77">More...</a><br /></td></tr>
 <tr class="separator:gaf3fefb680cf668fb8fc47dd2dcc58b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -663,7 +666,7 @@ PyTypeObject&#160;</td><td class="memItemRight" valign="bottom"><b>AstContextObj
 
 <p>Register destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="pyRegister_8cpp_source.html#l00143">143</a> of file <a class="el" href="pyRegister_8cpp_source.html">pyRegister.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pyRegister_8cpp_source.html#l00147">147</a> of file <a class="el" href="pyRegister_8cpp_source.html">pyRegister.cpp</a>.</p>
 
 </div>
 </div>
@@ -1011,11 +1014,12 @@ PyTypeObject&#160;</td><td class="memItemRight" valign="bottom"><b>AstContextObj
 <div class="line">        {<span class="stringliteral">&quot;getExtendType&quot;</span>,     Register_getExtendType,     METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
 <div class="line">        {<span class="stringliteral">&quot;getId&quot;</span>,             Register_getId,             METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
 <div class="line">        {<span class="stringliteral">&quot;getName&quot;</span>,           Register_getName,           METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
-<div class="line">        {<span class="stringliteral">&quot;getShiftType&quot;</span>,      Register_getShiftType,      METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
 <div class="line">        {<span class="stringliteral">&quot;getShiftImmediate&quot;</span>, Register_getShiftImmediate, METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
 <div class="line">        {<span class="stringliteral">&quot;getShiftRegister&quot;</span>,  Register_getShiftRegister,  METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
+<div class="line">        {<span class="stringliteral">&quot;getShiftType&quot;</span>,      Register_getShiftType,      METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
 <div class="line">        {<span class="stringliteral">&quot;getSize&quot;</span>,           Register_getSize,           METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
 <div class="line">        {<span class="stringliteral">&quot;getType&quot;</span>,           Register_getType,           METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
+<div class="line">        {<span class="stringliteral">&quot;getVASType&quot;</span>,        Register_getVASType,        METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
 <div class="line">        {<span class="stringliteral">&quot;isMutable&quot;</span>,         Register_isMutable,         METH_NOARGS,    <span class="stringliteral">&quot;&quot;</span>},</div>
 <div class="line">        {<span class="stringliteral">&quot;isOverlapWith&quot;</span>,     Register_isOverlapWith,     METH_O,         <span class="stringliteral">&quot;&quot;</span>},</div>
 <div class="line">        {<span class="keyword">nullptr</span>,             <span class="keyword">nullptr</span>,                    0,              <span class="keyword">nullptr</span>}</div>
@@ -1023,7 +1027,7 @@ PyTypeObject&#160;</td><td class="memItemRight" valign="bottom"><b>AstContextObj
 </div><!-- fragment -->
 <p>Register methods. </p>
 
-<p class="definition">Definition at line <a class="el" href="pyRegister_8cpp_source.html#l00354">354</a> of file <a class="el" href="pyRegister_8cpp_source.html">pyRegister.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pyRegister_8cpp_source.html#l00368">368</a> of file <a class="el" href="pyRegister_8cpp_source.html">pyRegister.cpp</a>.</p>
 
 </div>
 </div>

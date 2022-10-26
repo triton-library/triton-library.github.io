@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1561</span>
+   &#160;<span id="projectnumber">version 1.0 build 1562</span>
    </div>
   </td>
  </tr>
@@ -155,6 +155,9 @@ Python API - Methods of the Register class</h1>
  e.g: <code>8</code></li>
 <li><b><a class="el" href="py_OPERAND_page.html">OPERAND</a> getType(void)</b><br  />
  Returns the type of the register. In this case this function returns <code>OPERAND.REG</code>.</li>
+<li><b><a class="el" href="py_VAS_page.html">VAS</a> getVASType(void)</b><br  />
+ Returns the vector arrangement specifier. Mainly used for AArch64.<br  />
+ e.g: <code>VAS.ARM.8B</code></li>
 <li><b>bool isMutable(void)</b><br  />
  Returns true if this register is mutable. Mainly used in AArch64 to define that some registers like XZR are immutable.</li>
 <li><b>bool isOverlapWith(<a class="el" href="py_Register_page.html">Register</a> other)</b><br  />
