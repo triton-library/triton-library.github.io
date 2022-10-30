@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libTriton
-   &#160;<span id="projectnumber">version 1.0 build 1562</span>
+   &#160;<span id="projectnumber">version 1.0 build 1567</span>
    </div>
   </td>
  </tr>
@@ -116,9 +116,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abc3e703ce43cfaa4138b6ca25a890fb0"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__arm.html#ga8df772e53d033705de9a64c830f4b766">triton::arch::arm::vas_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#abc3e703ce43cfaa4138b6ca25a890fb0">getVASType</a> (void) const</td></tr>
 <tr class="memdesc:abc3e703ce43cfaa4138b6ca25a890fb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector arrangement specifier.  <a href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#abc3e703ce43cfaa4138b6ca25a890fb0">More...</a><br /></td></tr>
 <tr class="separator:abc3e703ce43cfaa4138b6ca25a890fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaef314e49ee4eac378601795bd97aa12"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#aaef314e49ee4eac378601795bd97aa12">getVectorIndex</a> (void) const</td></tr>
+<tr class="memdesc:aaef314e49ee4eac378601795bd97aa12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector index (-1 if irrelevant).  <a href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#aaef314e49ee4eac378601795bd97aa12">More...</a><br /></td></tr>
+<tr class="separator:aaef314e49ee4eac378601795bd97aa12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6104cb780ed6181b02f62a05c99df5bf"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a6104cb780ed6181b02f62a05c99df5bf">getVASName</a> (void) const</td></tr>
 <tr class="memdesc:a6104cb780ed6181b02f62a05c99df5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector arrangement specifier string name.  <a href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a6104cb780ed6181b02f62a05c99df5bf">More...</a><br /></td></tr>
 <tr class="separator:a6104cb780ed6181b02f62a05c99df5bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0a0905b092ffee978cdab74f424fe43"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#ae0a0905b092ffee978cdab74f424fe43">getVASSize</a> (void) const</td></tr>
+<tr class="memdesc:ae0a0905b092ffee978cdab74f424fe43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector arrangement specifier size (64 or 128 bits).  <a href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#ae0a0905b092ffee978cdab74f424fe43">More...</a><br /></td></tr>
+<tr class="separator:ae0a0905b092ffee978cdab74f424fe43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7743207f7ccb4c3a03d2cf5d6d515286"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a7743207f7ccb4c3a03d2cf5d6d515286">getExtendSize</a> (void) const</td></tr>
 <tr class="memdesc:a7743207f7ccb4c3a03d2cf5d6d515286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size (in bits) of the extend.  <a href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a7743207f7ccb4c3a03d2cf5d6d515286">More...</a><br /></td></tr>
 <tr class="separator:a7743207f7ccb4c3a03d2cf5d6d515286"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,6 +149,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5ac39f62ae43ec9253f4007fe46a27e8"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a5ac39f62ae43ec9253f4007fe46a27e8">setExtendedSize</a> (<a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> dstSize)</td></tr>
 <tr class="memdesc:a5ac39f62ae43ec9253f4007fe46a27e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the extended size (in bits) after extension.  <a href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a5ac39f62ae43ec9253f4007fe46a27e8">More...</a><br /></td></tr>
 <tr class="separator:a5ac39f62ae43ec9253f4007fe46a27e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a20bea468a9f0fd94a814464724e9c3"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a0a20bea468a9f0fd94a814464724e9c3">setVectorIndex</a> (<a class="el" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a> index)</td></tr>
+<tr class="memdesc:a0a20bea468a9f0fd94a814464724e9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vector index.  <a href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a0a20bea468a9f0fd94a814464724e9c3">More...</a><br /></td></tr>
+<tr class="separator:a0a20bea468a9f0fd94a814464724e9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a246ba5ff887480341f93c6b8049b88"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a8a246ba5ff887480341f93c6b8049b88">setSubtracted</a> (bool value)</td></tr>
 <tr class="memdesc:a8a246ba5ff887480341f93c6b8049b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets subtracted flag.  <a href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a8a246ba5ff887480341f93c6b8049b88">More...</a><br /></td></tr>
 <tr class="separator:a8a246ba5ff887480341f93c6b8049b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,6 +176,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a3cc19e2481c4f37b30194a60a6fa0710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__arm.html#ga8df772e53d033705de9a64c830f4b766">triton::arch::arm::vas_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a3cc19e2481c4f37b30194a60a6fa0710">vasType</a></td></tr>
 <tr class="memdesc:a3cc19e2481c4f37b30194a60a6fa0710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector arrangement specifier.  <a href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#a3cc19e2481c4f37b30194a60a6fa0710">More...</a><br /></td></tr>
 <tr class="separator:a3cc19e2481c4f37b30194a60a6fa0710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc34e3e1bde7aa97bf4a3a5735516544"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#adc34e3e1bde7aa97bf4a3a5735516544">vectorIndex</a></td></tr>
+<tr class="memdesc:adc34e3e1bde7aa97bf4a3a5735516544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector index (-1 if irrelevant).  <a href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#adc34e3e1bde7aa97bf4a3a5735516544">More...</a><br /></td></tr>
+<tr class="separator:adc34e3e1bde7aa97bf4a3a5735516544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb5cc087ee6d950ced7add3c8dac818c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#adb5cc087ee6d950ced7add3c8dac818c">extendSize</a></td></tr>
 <tr class="memdesc:adb5cc087ee6d950ced7add3c8dac818c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The extend size (in bits).  <a href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html#adb5cc087ee6d950ced7add3c8dac818c">More...</a><br /></td></tr>
 <tr class="separator:adb5cc087ee6d950ced7add3c8dac818c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,7 +208,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00017">17</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00018">18</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -218,7 +230,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Constructor by copy. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00028">28</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00030">30</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +253,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the size (in bits) of the extend. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00091">91</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00115">115</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +275,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the type of the extend. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00066">66</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00070">70</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -285,7 +297,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the value of the shift immediate. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00056">56</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00060">60</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -307,7 +319,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the value of the shift register. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00061">61</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00065">65</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -329,7 +341,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the type of the shift. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00051">51</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00055">55</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -351,7 +363,29 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the vector arrangement specifier string name. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00076">76</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00085">85</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae0a0905b092ffee978cdab74f424fe43" name="ae0a0905b092ffee978cdab74f424fe43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0a0905b092ffee978cdab74f424fe43">&#9670;&nbsp;</a></span>getVASSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a> triton::arch::arm::ArmOperandProperties::getVASSize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the vector arrangement specifier size (64 or 128 bits). </p>
+
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00100">100</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -373,7 +407,29 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the vector arrangement specifier. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00071">71</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00075">75</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aaef314e49ee4eac378601795bd97aa12" name="aaef314e49ee4eac378601795bd97aa12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaef314e49ee4eac378601795bd97aa12">&#9670;&nbsp;</a></span>getVectorIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a> triton::arch::arm::ArmOperandProperties::getVectorIndex </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the vector index (-1 if irrelevant). </p>
+
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00080">80</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -395,7 +451,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if the operand has to be subtracted when computing a memory access. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00096">96</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00120">120</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -417,7 +473,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Copy an <a class="el" href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html" title="This class is used to represent specific properties of an Arm operand.">ArmOperandProperties</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00039">39</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00042">42</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -439,7 +495,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Sets the extended size (in bits) after extension. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00132">132</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00156">156</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -461,7 +517,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Sets the type of the extend. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00118">118</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00142">142</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -483,7 +539,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Sets the type of the shift. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00111">111</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00135">135</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -505,7 +561,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Sets the value of the shift register. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00106">106</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00130">130</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -527,7 +583,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Sets the value of the shift immediate. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00101">101</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00125">125</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -549,7 +605,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Sets subtracted flag. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00166">166</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00190">190</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -571,7 +627,29 @@ Protected Attributes</h2></td></tr>
 
 <p>Sets the type of vector arrangement specifier. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00125">125</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00149">149</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a20bea468a9f0fd94a814464724e9c3" name="a0a20bea468a9f0fd94a814464724e9c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a20bea468a9f0fd94a814464724e9c3">&#9670;&nbsp;</a></span>setVectorIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void triton::arch::arm::ArmOperandProperties::setVectorIndex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vector index. </p>
+
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8cpp_source.html#l00195">195</a> of file <a class="el" href="armOperandProperties_8cpp_source.html">armOperandProperties.cpp</a>.</p>
 
 </div>
 </div>
@@ -598,7 +676,7 @@ Protected Attributes</h2></td></tr>
 
 <p>The extend size (in bits). </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8hpp_source.html#l00063">63</a> of file <a class="el" href="armOperandProperties_8hpp_source.html">armOperandProperties.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8hpp_source.html#l00066">66</a> of file <a class="el" href="armOperandProperties_8hpp_source.html">armOperandProperties.hpp</a>.</p>
 
 </div>
 </div>
@@ -728,7 +806,7 @@ Protected Attributes</h2></td></tr>
 
 <p>The subtracted flag. Used in memory access operands and determines whether this operand has to be added or subtracted to the base register. </p>
 
-<p class="definition">Definition at line <a class="el" href="armOperandProperties_8hpp_source.html#l00066">66</a> of file <a class="el" href="armOperandProperties_8hpp_source.html">armOperandProperties.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8hpp_source.html#l00069">69</a> of file <a class="el" href="armOperandProperties_8hpp_source.html">armOperandProperties.hpp</a>.</p>
 
 </div>
 </div>
@@ -755,6 +833,32 @@ Protected Attributes</h2></td></tr>
 <p>Vector arrangement specifier. </p>
 
 <p class="definition">Definition at line <a class="el" href="armOperandProperties_8hpp_source.html#l00060">60</a> of file <a class="el" href="armOperandProperties_8hpp_source.html">armOperandProperties.hpp</a>.</p>
+
+</div>
+</div>
+<a id="adc34e3e1bde7aa97bf4a3a5735516544" name="adc34e3e1bde7aa97bf4a3a5735516544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc34e3e1bde7aa97bf4a3a5735516544">&#9670;&nbsp;</a></span>vectorIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__triton.html#ga3288b7070d9460c26144c2873cdf287b">triton::sint32</a> triton::arch::arm::ArmOperandProperties::vectorIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector index (-1 if irrelevant). </p>
+
+<p class="definition">Definition at line <a class="el" href="armOperandProperties_8hpp_source.html#l00063">63</a> of file <a class="el" href="armOperandProperties_8hpp_source.html">armOperandProperties.hpp</a>.</p>
 
 </div>
 </div>
