@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['triton_5fsymvar_5fname_0',['TRITON_SYMVAR_NAME',['../symbolicEnums_8hpp.html#a409759752faca164be21a4df0fc7955a',1,'symbolicEnums.hpp']]]
+  ['sys_5freg_5fspec_0',['SYS_REG_SPEC',['../aarch64Cpu_8hpp.html#a1af3ec61c221bec5e1e1b683ec06ed71',1,'aarch64Cpu.hpp']]]
 ];

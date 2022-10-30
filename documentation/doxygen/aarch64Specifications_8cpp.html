@@ -112,8 +112,13 @@ Macros</h2></td></tr>
 <tr class="memitem:a12daeaef0101392d5c911ee1216e8721"><td class="memItemLeft" align="right" valign="top"><a id="a12daeaef0101392d5c911ee1216e8721" name="a12daeaef0101392d5c911ee1216e8721"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_SPEC_NO_CAPSTONE</b>&#160;&#160;&#160;REG_SPEC</td></tr>
 <tr class="separator:a12daeaef0101392d5c911ee1216e8721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ceda1a0c1647f4abe5f3aa0565f3a7"><td class="memItemLeft" align="right" valign="top"><a id="a38ceda1a0c1647f4abe5f3aa0565f3a7" name="a38ceda1a0c1647f4abe5f3aa0565f3a7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_REG_SPEC</b>&#160;&#160;&#160;REG_SPEC</td></tr>
+<tr class="separator:a38ceda1a0c1647f4abe5f3aa0565f3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae548fbf8cfc1ac734fe9fe5c81a5ef20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aarch64Specifications_8cpp.html#ae548fbf8cfc1ac734fe9fe5c81a5ef20">REG_SPEC</a>(UPPER_NAME,  _1,  _2,  _3,  _4,  _5)</td></tr>
 <tr class="separator:ae548fbf8cfc1ac734fe9fe5c81a5ef20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4e065afdffbd5bb82b9929a4fdbc555"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aarch64Specifications_8cpp.html#aa4e065afdffbd5bb82b9929a4fdbc555">SYS_REG_SPEC</a>(UPPER_NAME,  _1,  _2,  _3,  _4,  _5)</td></tr>
+<tr class="separator:aa4e065afdffbd5bb82b9929a4fdbc555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9e93dd813faee7513d1e45e76e6e0bc"><td class="memItemLeft" align="right" valign="top"><a id="aa9e93dd813faee7513d1e45e76e6e0bc" name="aa9e93dd813faee7513d1e45e76e6e0bc"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_SPEC_NO_CAPSTONE</b>(_1,  _2,  _3,  _4,  _5,  _6)</td></tr>
 <tr class="separator:aa9e93dd813faee7513d1e45e76e6e0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,8 +173,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">            <span class="keywordflow">case</span> triton::extlibs::capstone::ARM64_REG_##UPPER_NAME: \</div>
-<div class="line">              tritonId = triton::arch::ID_REG_AARCH64_##UPPER_NAME; \</div>
+<b>Value:</b><div class="fragment"><div class="line">            <span class="keywordflow">case</span> triton::extlibs::capstone::ARM64_REG_##UPPER_NAME:    \</div>
+<div class="line">              tritonId = triton::arch::ID_REG_AARCH64_##UPPER_NAME;    \</div>
 <div class="line">              break;</div>
 </div><!-- fragment -->
 </div>
@@ -233,6 +238,61 @@ Macros</h2></td></tr>
 <div class="line">                                );                                                                          \</div>
 <div class="line">              name2id.emplace(#LOWER_NAME, ID_REG_AARCH64_##UPPER_NAME);</div>
 <div class="ttc" id="aclasstriton_1_1arch_1_1Register_html"><div class="ttname"><a href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a></div><div class="ttdoc">This class is used when an instruction has a register operand.</div><div class="ttdef"><b>Definition:</b> <a href="register_8hpp_source.html#l00044">register.hpp:44</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa4e065afdffbd5bb82b9929a4fdbc555" name="aa4e065afdffbd5bb82b9929a4fdbc555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4e065afdffbd5bb82b9929a4fdbc555">&#9670;&nbsp;</a></span>SYS_REG_SPEC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYS_REG_SPEC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">UPPER_NAME, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_5&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">            <span class="keywordflow">case</span> triton::extlibs::capstone::ARM64_SYSREG_##UPPER_NAME: \</div>
+<div class="line">              tritonId = triton::arch::ID_REG_AARCH64_##UPPER_NAME;    \</div>
+<div class="line">              break;</div>
 </div><!-- fragment -->
 </div>
 </div>
