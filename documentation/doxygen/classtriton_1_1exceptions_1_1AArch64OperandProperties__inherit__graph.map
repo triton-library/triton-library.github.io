@@ -1,0 +1,6 @@
+<map id="triton::exceptions::AArch64OperandProperties" name="triton::exceptions::AArch64OperandProperties">
+<area shape="rect" id="node1" title="The exception class used by shift mode." alt="" coords="5,255,193,295"/>
+<area shape="rect" id="node2" href="$classtriton_1_1exceptions_1_1Architecture.html" title="The exception class used by architectures." alt="" coords="38,167,161,207"/>
+<area shape="rect" id="node3" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="38,79,161,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="47,5,151,31"/>
+</map>

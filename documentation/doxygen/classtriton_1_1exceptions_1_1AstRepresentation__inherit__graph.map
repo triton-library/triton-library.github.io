@@ -1,0 +1,6 @@
+<map id="triton::exceptions::AstRepresentation" name="triton::exceptions::AstRepresentation">
+<area shape="rect" id="node1" title="The exception class used by all AST node representations." alt="" coords="11,240,150,280"/>
+<area shape="rect" id="node2" href="$classtriton_1_1exceptions_1_1Ast.html" title="The exception class used by all AST nodes." alt="" coords="5,167,156,192"/>
+<area shape="rect" id="node3" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="19,79,142,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="29,5,133,31"/>
+</map>

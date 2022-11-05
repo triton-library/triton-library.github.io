@@ -1,0 +1,8 @@
+<map id="triton::exceptions::Cpu" name="triton::exceptions::Cpu">
+<area shape="rect" id="node1" title="The exception class used by all CPUs." alt="" coords="63,255,217,280"/>
+<area shape="rect" id="node5" href="$classtriton_1_1exceptions_1_1Disassembly.html" title="The exception class used by the disassembler." alt="" coords="5,328,128,368"/>
+<area shape="rect" id="node6" href="$classtriton_1_1exceptions_1_1Semantics.html" title="The exception class used by all semantics." alt="" coords="152,328,275,368"/>
+<area shape="rect" id="node2" href="$classtriton_1_1exceptions_1_1Architecture.html" title="The exception class used by architectures." alt="" coords="79,167,201,207"/>
+<area shape="rect" id="node3" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="79,79,201,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="88,5,192,31"/>
+</map>

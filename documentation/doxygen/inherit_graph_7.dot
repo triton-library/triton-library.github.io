@@ -1,9 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
-  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
-  rankdir="LR";
-  Node0 [label="math::wide_integer\l::detail::uint_type\l_helper\< BitCount, typename\l std::enable_if\<(BitCount\l\<=8U)\>::type \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structmath_1_1wide__integer_1_1detail_1_1uint__type__helper_3_01BitCount_00_01typename_01std_1_116568c54b7aa355f5a1c9d468249a350.html",tooltip=" "];
-}

@@ -1,0 +1,7 @@
+<map id="triton::exceptions::SolverEngine" name="triton::exceptions::SolverEngine">
+<area shape="rect" id="node1" title="The exception class used by the solver engine." alt="" coords="5,255,128,295"/>
+<area shape="rect" id="node5" href="$classtriton_1_1exceptions_1_1SolverModel.html" title="The exception class used by solver models." alt="" coords="5,343,128,383"/>
+<area shape="rect" id="node2" href="$classtriton_1_1exceptions_1_1Engines.html" title="The exception class used by all engines." alt="" coords="5,167,128,207"/>
+<area shape="rect" id="node3" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="5,79,128,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="15,5,119,31"/>
+</map>

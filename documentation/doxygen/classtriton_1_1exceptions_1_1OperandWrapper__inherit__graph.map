@@ -1,0 +1,6 @@
+<map id="triton::exceptions::OperandWrapper" name="triton::exceptions::OperandWrapper">
+<area shape="rect" id="node1" title="The exception class used by operand wrappers." alt="" coords="5,255,132,295"/>
+<area shape="rect" id="node2" href="$classtriton_1_1exceptions_1_1Architecture.html" title="The exception class used by architectures." alt="" coords="7,167,130,207"/>
+<area shape="rect" id="node3" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="7,79,130,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="17,5,121,31"/>
+</map>

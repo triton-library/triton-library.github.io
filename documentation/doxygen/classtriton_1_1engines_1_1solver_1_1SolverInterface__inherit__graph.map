@@ -1,0 +1,5 @@
+<map id="triton::engines::solver::SolverInterface" name="triton::engines::solver::SolverInterface">
+<area shape="rect" id="node1" title="This interface is used to interface with solvers." alt="" coords="91,5,237,45"/>
+<area shape="rect" id="node2" href="$classtriton_1_1engines_1_1solver_1_1BitwuzlaSolver.html" title="Solver engine using Bitwuzla." alt="" coords="5,93,152,133"/>
+<area shape="rect" id="node3" href="$classtriton_1_1engines_1_1solver_1_1Z3Solver.html" title="Solver engine using z3." alt="" coords="176,93,323,133"/>
+</map>

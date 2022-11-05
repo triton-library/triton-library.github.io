@@ -1,0 +1,4 @@
+<map id="triton::arch::MemoryAccess" name="triton::arch::MemoryAccess">
+<area shape="rect" id="node1" title="This class is used to represent a memory access." alt="" coords="5,79,188,104"/>
+<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1BitsVector.html" title="This class is used to deal with registers and memory as bits vector." alt="" coords="20,5,173,31"/>
+</map>

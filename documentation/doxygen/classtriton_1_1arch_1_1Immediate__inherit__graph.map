@@ -1,0 +1,5 @@
+<map id="triton::arch::Immediate" name="triton::arch::Immediate">
+<area shape="rect" id="node1" title="This class is used to represent an immediate." alt="" coords="95,93,248,119"/>
+<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1BitsVector.html" title="This class is used to deal with registers and memory as bits vector." alt="" coords="5,13,159,38"/>
+<area shape="rect" id="node3" href="$classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html" title="This class is used to represent specific properties of an Arm operand." alt="" coords="183,5,338,45"/>
+</map>
