@@ -1,7 +1,0 @@
-<map id="triton::exceptions::Semantics" name="triton::exceptions::Semantics">
-<area shape="rect" id="node1" title="The exception class used by all semantics." alt="" coords="22,333,158,375"/>
-<area shape="rect" id="node2" href="$classtriton_1_1exceptions_1_1Cpu.html" title="The exception class used by all CPUs." alt="" coords="5,259,175,285"/>
-<area shape="rect" id="node3" href="$classtriton_1_1exceptions_1_1Architecture.html" title="The exception class used by architectures." alt="" coords="22,169,158,211"/>
-<area shape="rect" id="node4" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="22,80,158,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="33,5,147,32"/>
-</map>
