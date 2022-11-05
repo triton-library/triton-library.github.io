@@ -1,0 +1,18 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [label="triton::arch::arm::\lArmOperandProperties",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html",tooltip="This class is used to represent specific properties of an Arm operand."];
+  Node0 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node1 [label="triton::arch::Immediate",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtriton_1_1arch_1_1Immediate.html",tooltip="This class is used to represent an immediate."];
+  Node0 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="triton::arch::Register",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtriton_1_1arch_1_1Register.html",tooltip="This class is used when an instruction has a register operand."];
+  Node2 [label="triton::arch::BitsVector",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtriton_1_1arch_1_1BitsVector.html",tooltip="This class is used to deal with registers and memory as bits vector."];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="triton::arch::MemoryAccess",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtriton_1_1arch_1_1MemoryAccess.html",tooltip="This class is used to represent a memory access."];
+  Node2 -> Node4 [dir="back",color="steelblue1",style="solid"];
+}

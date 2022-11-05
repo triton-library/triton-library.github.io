@@ -1,0 +1,11 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [label="std::array",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node1 [label="math::wide_integer\l::detail::fixed_static\l_array\< MyType, MySize \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classmath_1_1wide__integer_1_1detail_1_1fixed__static__array.html",tooltip=" "];
+}

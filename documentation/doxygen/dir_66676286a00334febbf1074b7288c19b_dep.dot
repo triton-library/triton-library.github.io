@@ -1,0 +1,14 @@
+digraph "/Users/jonathan/Works/Tools/Triton/src/libtriton/arch/x86"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_438c551635df427b50f3732e2af9bbb8 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="arch", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_438c551635df427b50f3732e2af9bbb8.html",tooltip=""]
+  dir_66676286a00334febbf1074b7288c19b [label="x86", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_66676286a00334febbf1074b7288c19b.html",tooltip=""];
+  }
+  dir_f9d272ec16541780a187e9fc1e6dde2e [label="includes", fillcolor="#edf0f7", color="red", style="filled,dashed", URL="dir_f9d272ec16541780a187e9fc1e6dde2e.html",tooltip=""];
+  dir_66676286a00334febbf1074b7288c19b->dir_f9d272ec16541780a187e9fc1e6dde2e [headlabel="24", labeldistance=1.5 headhref="dir_000032_000011.html" color="steelblue1" fontcolor="steelblue1"];
+}

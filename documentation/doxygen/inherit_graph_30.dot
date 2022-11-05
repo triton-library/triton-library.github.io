@@ -1,0 +1,15 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [label="triton::ast::representations\l::AstRepresentationInterface",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtriton_1_1ast_1_1representations_1_1AstRepresentationInterface.html",tooltip="The AST representation interface."];
+  Node0 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node1 [label="triton::ast::representations\l::AstPcodeRepresentation",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtriton_1_1ast_1_1representations_1_1AstPcodeRepresentation.html",tooltip="Pseudo Code representation."];
+  Node0 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="triton::ast::representations\l::AstPythonRepresentation",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtriton_1_1ast_1_1representations_1_1AstPythonRepresentation.html",tooltip="Python representation."];
+  Node0 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="triton::ast::representations\l::AstSmtRepresentation",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classtriton_1_1ast_1_1representations_1_1AstSmtRepresentation.html",tooltip="SMT representation."];
+}

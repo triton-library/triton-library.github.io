@@ -1,0 +1,12 @@
+digraph "triton::arch::arm::ArmOperandProperties"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="triton::arch::arm::\lArmOperandProperties",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This class is used to represent specific properties of an Arm operand."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="triton::arch::Immediate",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classtriton_1_1arch_1_1Immediate.html",tooltip="This class is used to represent an immediate."];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="triton::arch::Register",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classtriton_1_1arch_1_1Register.html",tooltip="This class is used when an instruction has a register operand."];
+}

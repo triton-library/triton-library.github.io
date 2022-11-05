@@ -1,0 +1,31 @@
+digraph "/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/x86Specifications.hpp"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="/Users/jonathan/Works\l/Tools/Triton/src/libtriton\l/includes/triton/x86Specifications.hpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="/Users/jonathan/Works\l/Tools/Triton/src/libtriton\l/arch/architecture.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$architecture_8cpp.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="/Users/jonathan/Works\l/Tools/Triton/src/libtriton\l/arch/x86/x86Semantics.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$x86Semantics_8cpp.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="/Users/jonathan/Works\l/Tools/Triton/src/libtriton\l/arch/x86/x86Specifications.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$x86Specifications_8cpp.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="/Users/jonathan/Works\l/Tools/Triton/src/libtriton\l/bindings/python/namespaces\l/initOpcodesNamespace.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$initOpcodesNamespace_8cpp.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="/Users/jonathan/Works\l/Tools/Triton/src/libtriton\l/bindings/python/namespaces\l/initPrefixesNamespace.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$initPrefixesNamespace_8cpp.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="/Users/jonathan/Works\l/Tools/Triton/src/libtriton\l/includes/triton/x8664Cpu.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$x8664Cpu_8hpp.html",tooltip=" "];
+  Node7 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node7 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node8 [label="/Users/jonathan/Works\l/Tools/Triton/src/libtriton\l/arch/x86/x8664Cpu.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$x8664Cpu_8cpp.html",tooltip=" "];
+  Node7 -> Node9 [dir="back",color="steelblue1",style="solid"];
+  Node9 [label="/Users/jonathan/Works\l/Tools/Triton/src/libtriton\l/context/context.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$context_8cpp.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="steelblue1",style="solid"];
+  Node10 [label="/Users/jonathan/Works\l/Tools/Triton/src/libtriton\l/includes/triton/x86Cpu.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$x86Cpu_8hpp.html",tooltip=" "];
+  Node10 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node10 -> Node11 [dir="back",color="steelblue1",style="solid"];
+  Node11 [label="/Users/jonathan/Works\l/Tools/Triton/src/libtriton\l/arch/x86/x86Cpu.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$x86Cpu_8cpp.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="steelblue1",style="solid"];
+}

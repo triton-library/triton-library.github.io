@@ -1,0 +1,13 @@
+digraph "util::dynamic_array&lt; ValueType, AllocatorType, SizeType, DiffType &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="util::dynamic_array\l\< ValueType, AllocatorType,\l SizeType, DiffType \>",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="math::wide_integer\l::detail::fixed_dynamic\l_array\< MyType, MySize,\l MyAlloc \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$classmath_1_1wide__integer_1_1detail_1_1fixed__dynamic__array.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="orange",style="dashed",label=" \< MyType, MyAlloc,\l size_t, ptrdiff_t \>" ];
+  Node3 [label="util::dynamic_array\l\< MyType, MyAlloc, size\l_t, ptrdiff_t \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$classutil_1_1dynamic__array.html",tooltip=" "];
+}

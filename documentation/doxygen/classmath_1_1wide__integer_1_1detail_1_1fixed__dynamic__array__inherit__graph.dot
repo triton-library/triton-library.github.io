@@ -1,0 +1,10 @@
+digraph "math::wide_integer::detail::fixed_dynamic_array&lt; MyType, MySize, MyAlloc &gt;"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="math::wide_integer\l::detail::fixed_dynamic\l_array\< MyType, MySize,\l MyAlloc \>",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="util::dynamic_array\l\< ValueType, AllocatorType,\l SizeType, DiffType \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$classutil_1_1dynamic__array.html",tooltip=" "];
+}
