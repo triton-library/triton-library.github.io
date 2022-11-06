@@ -43,7 +43,7 @@ var searchData=
   ['tostring_40',['toString',['../group__utils.html#gaf551c7ab56c2b5feb29d309be7bae0eb',1,'triton::utils']]],
   ['triton_41',['triton',['../namespacetriton.html',1,'']]],
   ['triton_42',['Triton',['../group__triton.html',1,'']]],
-  ['triton_3a_20dynamic_20binary_20analysis_20framework_43',['Triton: Dynamic Binary Analysis Framework',['../index.html',1,'']]],
+  ['triton_3a_20a_20dynamic_20binary_20analysis_20library_43',['Triton: A dynamic binary analysis library',['../index.html',1,'']]],
   ['triton_5fsymvar_5fname_44',['TRITON_SYMVAR_NAME',['../symbolicEnums_8hpp.html#a409759752faca164be21a4df0fc7955a',1,'symbolicEnums.hpp']]],
   ['tritoncallbacks_45',['tritonCallbacks',['../group__python.html#ga83d7634da31659e56137bc9cb93695b6',1,'triton::bindings::python']]],
   ['tritoncallbacks_2ecpp_46',['tritonCallbacks.cpp',['../tritonCallbacks_8cpp.html',1,'']]],
