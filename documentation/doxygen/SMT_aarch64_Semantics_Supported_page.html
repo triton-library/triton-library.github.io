@@ -122,11 +122,15 @@ $(function() {
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">BIC   </td><td class="markdownTableBodyNone">Bitwise Bit Clear    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">BL   </td><td class="markdownTableBodyNone">Branch with Link    </td></tr>
+<td class="markdownTableBodyNone">BICS   </td><td class="markdownTableBodyNone">Bitwise Bit Clear, setting flags    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">BLR   </td><td class="markdownTableBodyNone">Branch with Link to Register    </td></tr>
+<td class="markdownTableBodyNone">BL   </td><td class="markdownTableBodyNone">Branch with Link    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">BLR   </td><td class="markdownTableBodyNone">Branch with Link to Register    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">BR   </td><td class="markdownTableBodyNone">Branch to Register    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">BRK   </td><td class="markdownTableBodyNone">Breakpoint instruction    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">CBNZ   </td><td class="markdownTableBodyNone">Compare and Branch on Nonzero    </td></tr>
 <tr class="markdownTableRowEven">
@@ -152,25 +156,29 @@ $(function() {
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">CMP (shifted register)   </td><td class="markdownTableBodyNone">Compare (shifted register): an alias of SUBS (shifted register)    </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">CNEG   </td><td class="markdownTableBodyNone">Conditional Negate returns: an alias of CSNEG    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">CSEL   </td><td class="markdownTableBodyNone">Conditional Select    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">CSET   </td><td class="markdownTableBodyNone">Conditional Set: an alias of CSINC    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">CSINC   </td><td class="markdownTableBodyNone">Conditional Select Increment    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">CSNEG   </td><td class="markdownTableBodyNone">Conditional Select Negation    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">EON (shifted register)   </td><td class="markdownTableBodyNone">Bitwise Exclusive OR NOT (shifted register)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">EOR (immediate)   </td><td class="markdownTableBodyNone">Bitwise Exclusive OR (immediate)    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">EOR (shifted register)   </td><td class="markdownTableBodyNone">Bitwise Exclusive OR (shifted register)    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">EXTR   </td><td class="markdownTableBodyNone">EXTR: Extract register    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">LD3 (multiple structure)   </td><td class="markdownTableBodyNone">Load multiple 3-element structures to three registers.    </td></tr>
+<td class="markdownTableBodyNone">EXTR   </td><td class="markdownTableBodyNone">EXTR: Extract register    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">LD3 (multiple structure)   </td><td class="markdownTableBodyNone">Load multiple 3-element structures to three registers.    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">LD3R   </td><td class="markdownTableBodyNone">Load single 3-element structure and Replicate to all lanes of three registers.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">LD4R   </td><td class="markdownTableBodyNone">Load single 4-element structure and Replicate to all lanes of four registers.    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">LDAR   </td><td class="markdownTableBodyNone">Load-Acquire Register    </td></tr>
 <tr class="markdownTableRowEven">
@@ -296,86 +304,92 @@ $(function() {
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">RORV   </td><td class="markdownTableBodyNone">Rotate Right Variable    </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">SBC   </td><td class="markdownTableBodyNone">Subtract with Carry    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">SBFX   </td><td class="markdownTableBodyNone">Signed Bitfield Extract: an alias of SBFM    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">SDIV   </td><td class="markdownTableBodyNone">Signed Divide    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">SMADDL   </td><td class="markdownTableBodyNone">Signed Multiply-Add Long    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">SMSUBL   </td><td class="markdownTableBodyNone">Signed Multiply-Subtract Long    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">SMULH   </td><td class="markdownTableBodyNone">Signed Multiply High    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">SMULL   </td><td class="markdownTableBodyNone">Signed Multiply Long: an alias of SMADDL    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">STLR   </td><td class="markdownTableBodyNone">Store-Release Register    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">STLRB   </td><td class="markdownTableBodyNone">Store-Release Register Byte    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">STLRH   </td><td class="markdownTableBodyNone">Store-Release Register Halfword    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">STP   </td><td class="markdownTableBodyNone">Store Pair of Registers    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">STR (immediate)   </td><td class="markdownTableBodyNone">Store Register (immediate)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">STR (register)   </td><td class="markdownTableBodyNone">Store Register (register)    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">STRB (immediate)   </td><td class="markdownTableBodyNone">Store Register Byte (immediate)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">STRB (register)   </td><td class="markdownTableBodyNone">Store Register Byte (register)    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">STRH (immediate)   </td><td class="markdownTableBodyNone">Store Register Halfword (immediate)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">STRH (register)   </td><td class="markdownTableBodyNone">Store Register Halfword (register)    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">STUR   </td><td class="markdownTableBodyNone">Store Register (unscaled)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">STURB   </td><td class="markdownTableBodyNone">Store Register Byte (unscaled)    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">STURH   </td><td class="markdownTableBodyNone">Store Register Halfword (unscaled)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">SUB (extended register)   </td><td class="markdownTableBodyNone">Subtract (extended register)    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">SUB (immediate)   </td><td class="markdownTableBodyNone">Subtract (immediate)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">SUB (shifted register)   </td><td class="markdownTableBodyNone">Subtract (shifted register)    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">SUBS (extended register)   </td><td class="markdownTableBodyNone">Subtract (extended register), setting flags    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">SUBS (immediate)   </td><td class="markdownTableBodyNone">Subtract (immediate), setting flags    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">SUBS (shifted register)   </td><td class="markdownTableBodyNone">Subtract (shifted register), setting flags    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">SVC   </td><td class="markdownTableBodyNone">Supervisor Call    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">SXTB   </td><td class="markdownTableBodyNone">Signed Extend Byte: an alias of SBFM    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">SXTH   </td><td class="markdownTableBodyNone">Sign Extend Halfword: an alias of SBFM    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">SXTW   </td><td class="markdownTableBodyNone">Sign Extend Word: an alias of SBFM    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">TBNZ   </td><td class="markdownTableBodyNone">Test bit and Branch if Nonzero    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">TBZ   </td><td class="markdownTableBodyNone">Test bit and Branch if Zero    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">TST (immediate)   </td><td class="markdownTableBodyNone">Test bits (immediate): an alias of ANDS (immediate)    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">TST (shifted register)   </td><td class="markdownTableBodyNone">Test (shifted register): an alias of ANDS (shifted register)    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">UBFIZ   </td><td class="markdownTableBodyNone">Unsigned Bitfield Insert in Zero: an alias of UBFM    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">UBFX   </td><td class="markdownTableBodyNone">Unsigned Bitfield Extract: an alias of UBFM    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">UDIV   </td><td class="markdownTableBodyNone">Unsigned Divide    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">UMADDL   </td><td class="markdownTableBodyNone">Unsigned Multiply-Add Long    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">UMNEGL   </td><td class="markdownTableBodyNone">Unsigned Multiply-Negate Long: an alias of UMSUBL    </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">UMSUBL   </td><td class="markdownTableBodyNone">Unsigned Multiply-Subtract Long    </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">UMULH   </td><td class="markdownTableBodyNone">Unsigned Multiply High    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">UMULL   </td><td class="markdownTableBodyNone">Unsigned Multiply Long: an alias of UMADDL    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">UXTB   </td><td class="markdownTableBodyNone">Unsigned Extend Byte: an alias of UBFM    </td></tr>
+<td class="markdownTableBodyNone">UMULL   </td><td class="markdownTableBodyNone">Unsigned Multiply Long: an alias of UMADDL    </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">UXTB   </td><td class="markdownTableBodyNone">Unsigned Extend Byte: an alias of UBFM    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">UXTH   </td><td class="markdownTableBodyNone">Unsigned Extend Halfword: an alias of UBFM   </td></tr>
 </table>
 </div></div><!-- contents -->
