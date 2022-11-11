@@ -18,13 +18,12 @@ var searchData=
   ['mode_15',['mode',['../classtriton_1_1ast_1_1representations_1_1AstRepresentation.html#a68dcf7a95360d06ffb7e57cbc3846d33',1,'triton::ast::representations::AstRepresentation']]],
   ['mode_16',['MODE',['../py_MODE_page.html',1,'']]],
   ['mode_5fe_17',['mode_e',['../group__representations.html#ga18af80487be7d16a7a8f9a3071920ff9',1,'triton::ast::representations::mode_e()'],['../group__modes.html#ga58ef498152df1bde838c96411d13af2f',1,'triton::modes::mode_e()']]],
-  ['modes_18',['Modes',['../classtriton_1_1modes_1_1Modes.html#a2118694531d2a6ac2175ea2fde3e94e4',1,'triton::modes::Modes::Modes()'],['../classtriton_1_1modes_1_1Modes.html#af98168894fa6a258a91c9ec01a681ac6',1,'triton::modes::Modes::Modes(const Modes &amp;other)']]],
-  ['modes_19',['modes',['../classtriton_1_1Context.html#a7e68c7bd8fb9d2aa8573d8ab8d89bb8a',1,'triton::Context']]],
-  ['modes_20',['Modes',['../group__modes.html',1,'(Global Namespace)'],['../classtriton_1_1modes_1_1Modes.html',1,'triton::modes::Modes']]],
-  ['modes_2ecpp_21',['modes.cpp',['../modes_8cpp.html',1,'']]],
-  ['modes_2ehpp_22',['modes.hpp',['../modes_8hpp.html',1,'']]],
-  ['modesenums_2ehpp_23',['modesEnums.hpp',['../modesEnums_8hpp.html',1,'']]],
-  ['modularsignextend_24',['modularSignExtend',['../group__ast.html#gae97fad41ce0b97f7711e14e226bbcec0',1,'triton::ast']]],
-  ['mxcsr_25',['mxcsr',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a6ec018704d3d4a28e4a5674b6225140b',1,'triton::arch::x86::x8664Cpu::mxcsr()'],['../classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a2b22a776f8d2bd773a9748e751f61509',1,'triton::arch::x86::x86Cpu::mxcsr()']]],
-  ['mxcsr_5fmask_26',['mxcsr_mask',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a43c8eee5f86a8c4d670b8081bd4bfea2',1,'triton::arch::x86::x8664Cpu::mxcsr_mask()'],['../classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a860afd71ebff039c27a21aa1c3be7e76',1,'triton::arch::x86::x86Cpu::mxcsr_mask()']]]
+  ['modes_18',['modes',['../classtriton_1_1Context.html#a7e68c7bd8fb9d2aa8573d8ab8d89bb8a',1,'triton::Context']]],
+  ['modes_19',['Modes',['../classtriton_1_1modes_1_1Modes.html#a2118694531d2a6ac2175ea2fde3e94e4',1,'triton::modes::Modes::Modes()'],['../classtriton_1_1modes_1_1Modes.html#af98168894fa6a258a91c9ec01a681ac6',1,'triton::modes::Modes::Modes(const Modes &amp;other)'],['../group__modes.html',1,'(Global Namespace)'],['../classtriton_1_1modes_1_1Modes.html',1,'triton::modes::Modes']]],
+  ['modes_2ecpp_20',['modes.cpp',['../modes_8cpp.html',1,'']]],
+  ['modes_2ehpp_21',['modes.hpp',['../modes_8hpp.html',1,'']]],
+  ['modesenums_2ehpp_22',['modesEnums.hpp',['../modesEnums_8hpp.html',1,'']]],
+  ['modularsignextend_23',['modularSignExtend',['../group__ast.html#gae97fad41ce0b97f7711e14e226bbcec0',1,'triton::ast']]],
+  ['mxcsr_24',['mxcsr',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a6ec018704d3d4a28e4a5674b6225140b',1,'triton::arch::x86::x8664Cpu::mxcsr()'],['../classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a2b22a776f8d2bd773a9748e751f61509',1,'triton::arch::x86::x86Cpu::mxcsr()']]],
+  ['mxcsr_5fmask_25',['mxcsr_mask',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a43c8eee5f86a8c4d670b8081bd4bfea2',1,'triton::arch::x86::x8664Cpu::mxcsr_mask()'],['../classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a860afd71ebff039c27a21aa1c3be7e76',1,'triton::arch::x86::x86Cpu::mxcsr_mask()']]]
 ];
