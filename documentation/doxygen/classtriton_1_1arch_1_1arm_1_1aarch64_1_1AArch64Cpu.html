@@ -136,9 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a87565dd34ff51dee2120dae71122ded8"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a87565dd34ff51dee2120dae71122ded8">isThumb</a> (void) const</td></tr>
 <tr class="memdesc:a87565dd34ff51dee2120dae71122ded8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the execution mode is Thumb. Only useful for Arm32.  <a href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a87565dd34ff51dee2120dae71122ded8">More...</a><br /></td></tr>
 <tr class="separator:a87565dd34ff51dee2120dae71122ded8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1833f087f927e633291b71066edf2180"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a1833f087f927e633291b71066edf2180">isMemoryExclusiveAccess</a> (void) const</td></tr>
-<tr class="memdesc:a1833f087f927e633291b71066edf2180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the exclusive memory access flag is set. Only valid for Arm32.  <a href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a1833f087f927e633291b71066edf2180">More...</a><br /></td></tr>
-<tr class="separator:a1833f087f927e633291b71066edf2180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f636c0f836b11de77e8695d2235dc08"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a5f636c0f836b11de77e8695d2235dc08">isMemoryExclusive</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem) const</td></tr>
+<tr class="memdesc:a5f636c0f836b11de77e8695d2235dc08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given memory access is tagged as exclusive. Only valid for Arm32 and AArch64.  <a href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a5f636c0f836b11de77e8695d2235dc08">More...</a><br /></td></tr>
+<tr class="separator:a5f636c0f836b11de77e8695d2235dc08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a563279c7002e7c579ae846ad0bfcdd43"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT const std::unordered_map&lt; <a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a>, const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a563279c7002e7c579ae846ad0bfcdd43">getAllRegisters</a> (void) const</td></tr>
 <tr class="memdesc:a563279c7002e7c579ae846ad0bfcdd43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all registers.  <a href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a563279c7002e7c579ae846ad0bfcdd43">More...</a><br /></td></tr>
 <tr class="separator:a563279c7002e7c579ae846ad0bfcdd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,9 +211,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a969958527104e7bf49725f4ef39e1af3"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a969958527104e7bf49725f4ef39e1af3">setThumb</a> (bool state)</td></tr>
 <tr class="memdesc:a969958527104e7bf49725f4ef39e1af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets CPU state to Thumb mode.  <a href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a969958527104e7bf49725f4ef39e1af3">More...</a><br /></td></tr>
 <tr class="separator:a969958527104e7bf49725f4ef39e1af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae784de9b7a3a108452904b9a4e74c03"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#aae784de9b7a3a108452904b9a4e74c03">setMemoryExclusiveAccess</a> (bool state)</td></tr>
-<tr class="memdesc:aae784de9b7a3a108452904b9a4e74c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets exclusive memory access flag. Only valid for Arm32.  <a href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#aae784de9b7a3a108452904b9a4e74c03">More...</a><br /></td></tr>
-<tr class="separator:aae784de9b7a3a108452904b9a4e74c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7939b6d6fd77b284e6cf1bcc4ee63eb"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#ae7939b6d6fd77b284e6cf1bcc4ee63eb">setMemoryExclusiveTag</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem, bool tag)</td></tr>
+<tr class="memdesc:ae7939b6d6fd77b284e6cf1bcc4ee63eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets exclusive memory access tag. Only valid for Arm32 and AArch64.  <a href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#ae7939b6d6fd77b284e6cf1bcc4ee63eb">More...</a><br /></td></tr>
+<tr class="separator:ae7939b6d6fd77b284e6cf1bcc4ee63eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a996ef2cca4b7d4ffc3f03c57efd5e5a6"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a996ef2cca4b7d4ffc3f03c57efd5e5a6">isConcreteMemoryValueDefined</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem) const</td></tr>
 <tr class="memdesc:a996ef2cca4b7d4ffc3f03c57efd5e5a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if memory cells have a defined concrete value.  <a href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a996ef2cca4b7d4ffc3f03c57efd5e5a6">More...</a><br /></td></tr>
 <tr class="separator:a996ef2cca4b7d4ffc3f03c57efd5e5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -251,12 +251,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a324371b24a21a1438d4268e9ebbe9297 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a324371b24a21a1438d4268e9ebbe9297">setThumb</a> (bool state)=0</td></tr>
 <tr class="memdesc:a324371b24a21a1438d4268e9ebbe9297 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets CPU state to Thumb mode.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a324371b24a21a1438d4268e9ebbe9297">More...</a><br /></td></tr>
 <tr class="separator:a324371b24a21a1438d4268e9ebbe9297 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0812d3f5608f4a70711293159ed699da inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a0812d3f5608f4a70711293159ed699da">isMemoryExclusiveAccess</a> (void) const =0</td></tr>
-<tr class="memdesc:a0812d3f5608f4a70711293159ed699da inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the exclusive memory access flag is set. Only valid for Arm32.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a0812d3f5608f4a70711293159ed699da">More...</a><br /></td></tr>
-<tr class="separator:a0812d3f5608f4a70711293159ed699da inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a583e60863a9bce0c902d07fe4b0af29a inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a583e60863a9bce0c902d07fe4b0af29a">setMemoryExclusiveAccess</a> (bool state)=0</td></tr>
-<tr class="memdesc:a583e60863a9bce0c902d07fe4b0af29a inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets exclusive memory access flag. Only valid for Arm32.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a583e60863a9bce0c902d07fe4b0af29a">More...</a><br /></td></tr>
-<tr class="separator:a583e60863a9bce0c902d07fe4b0af29a inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920e5ebd03485f9fc197317172d4f479 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a920e5ebd03485f9fc197317172d4f479">isMemoryExclusive</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem) const =0</td></tr>
+<tr class="memdesc:a920e5ebd03485f9fc197317172d4f479 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given memory access is tagged as exclusive. Only valid for Arm32 and AArch64.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a920e5ebd03485f9fc197317172d4f479">More...</a><br /></td></tr>
+<tr class="separator:a920e5ebd03485f9fc197317172d4f479 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa791fea412e43cb633eb143a6cf4fb78 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#aa791fea412e43cb633eb143a6cf4fb78">setMemoryExclusiveTag</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem, bool tag)=0</td></tr>
+<tr class="memdesc:aa791fea412e43cb633eb143a6cf4fb78 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets exclusive memory access tag. Only valid for Arm32 and AArch64.  <a href="classtriton_1_1arch_1_1CpuInterface.html#aa791fea412e43cb633eb143a6cf4fb78">More...</a><br /></td></tr>
+<tr class="separator:aa791fea412e43cb633eb143a6cf4fb78 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e29389c5d2302065d175669cf2e4195 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a8e29389c5d2302065d175669cf2e4195">gprSize</a> (void) const =0</td></tr>
 <tr class="memdesc:a8e29389c5d2302065d175669cf2e4195 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bit in byte of the General Purpose Registers.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a8e29389c5d2302065d175669cf2e4195">More...</a><br /></td></tr>
 <tr class="separator:a8e29389c5d2302065d175669cf2e4195 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -676,7 +676,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a821c158cbb04dbe836cf8ac90ea110fa">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00141">141</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00142">142</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -708,7 +708,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a1d2acc27d27e053185e9accf5aaf0eef">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01269">1269</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01286">1286</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -750,7 +750,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a927d8ae4a3b405e5f387b86482e302e5">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01274">1274</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01291">1291</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -782,7 +782,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ab1247326d32d49d1bdecfd389ff02069">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00356">356</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00357">357</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -814,7 +814,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#af7193d093aa8638bb401cc40cdf126a7">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00283">283</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00284">284</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -862,7 +862,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ac211da8bab4f3d086018bfa5ead0d528">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00583">583</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00584">584</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -904,7 +904,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a33bd38c6a9092d9b03b9d23036ed5db1">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00562">562</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00563">563</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -946,7 +946,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ad7e06d969e1eeee1b0741bf857123dae">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00550">550</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00551">551</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -989,7 +989,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#af546439c3915bc2269a582eabd08462a">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00593">593</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00594">594</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1021,7 +1021,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a8f2095be6c5de989ca21d73b0897ffc1">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00228">228</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00229">229</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1053,7 +1053,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a4cca4979b2141eb6f2ed13f70bda6389">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00336">336</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00337">337</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1085,7 +1085,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ab4318dc7fdd36992a994d13c11212b31">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00341">341</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00342">342</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1117,7 +1117,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a6de41d3bdeb2a590417c7f261ae42f3e">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00288">288</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00289">289</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1149,7 +1149,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a5a0fe3b0b96c14f43cc5dc32cdae6aa0">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00346">346</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00347">347</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1181,7 +1181,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#af27c0c557f728b922b5ff304a152974e">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00325">325</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00326">326</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1213,7 +1213,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a68265bb44ac85eba5671a56df5d76303">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00316">316</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00317">317</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1245,7 +1245,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ad75a59d368917735292247ac70288f9e">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00351">351</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00352">352</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1277,7 +1277,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a028f9616a2ab44f3218cd36e5341935b">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00278">278</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00279">279</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1309,7 +1309,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a8e29389c5d2302065d175669cf2e4195">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00273">273</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00274">274</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1341,7 +1341,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a8c7730f098fa7c587016f0ea1b3dead9">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01255">1255</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01272">1272</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1383,7 +1383,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a6aa27e79992ede45d7c3162fb3c2a881">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01260">1260</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01277">1277</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1415,7 +1415,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a7c77c6c4461b0b74a1c7379c20d56f4c">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00233">233</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00234">234</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1437,12 +1437,12 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a GRP. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00248">248</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00249">249</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a1833f087f927e633291b71066edf2180" name="a1833f087f927e633291b71066edf2180"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1833f087f927e633291b71066edf2180">&#9670;&#160;</a></span>isMemoryExclusiveAccess()</h2>
+<a id="a5f636c0f836b11de77e8695d2235dc08" name="a5f636c0f836b11de77e8695d2235dc08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f636c0f836b11de77e8695d2235dc08">&#9670;&#160;</a></span>isMemoryExclusive()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1451,10 +1451,10 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool triton::arch::arm::aarch64::AArch64Cpu::isMemoryExclusiveAccess </td>
+          <td class="memname">bool triton::arch::arm::aarch64::AArch64Cpu::isMemoryExclusive </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;&#160;</td>
+          <td class="paramname"><em>mem</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1465,11 +1465,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns true if the exclusive memory access flag is set. Only valid for Arm32. </p>
+<p>Returns true if the given memory access is tagged as exclusive. Only valid for Arm32 and AArch64. </p>
 
-<p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a0812d3f5608f4a70711293159ed699da">triton::arch::CpuInterface</a>.</p>
+<p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a920e5ebd03485f9fc197317172d4f479">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01244">1244</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01245">1245</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1501,7 +1501,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ab3a2e06c69421580e575a3d4965d9eb8">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00238">238</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00239">239</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1533,7 +1533,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a513052408afd395d7572a52baa93e3f4">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00243">243</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00244">244</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1555,7 +1555,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a scalar register. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00253">253</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00254">254</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1577,7 +1577,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a system register. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00263">263</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00264">264</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1609,7 +1609,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#ab34864c9c42c870ea3b4cabf14fe2258">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01233">1233</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01234">1234</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1631,7 +1631,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if regId is a vector register. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00258">258</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00259">259</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1663,7 +1663,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#af0219fa0b7ca00f0c312c2ed8d42cc31">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00268">268</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00269">269</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1685,7 +1685,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Copies a <a class="el" href="classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html" title="This class is used to describe the ARM (64-bits) spec.">AArch64Cpu</a> class. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00222">222</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00223">223</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1734,7 +1734,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a21df3a0e870f159363b7970296a6a90c">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00908">908</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00909">909</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1789,7 +1789,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a02a525608e3e3d0f2ba208810bf303f5">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00916">916</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00917">917</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1838,7 +1838,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a5b9fc2f4efe2093024d597402e2ffe57">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00887">887</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00888">888</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1887,7 +1887,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a30d5c7bef925a3363047b1369ce1c6c4">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00880">880</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00881">881</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1937,12 +1937,12 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a5ce7844572d39d742bf7aee2e6b4ceef">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00924">924</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l00925">925</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aae784de9b7a3a108452904b9a4e74c03" name="aae784de9b7a3a108452904b9a4e74c03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae784de9b7a3a108452904b9a4e74c03">&#9670;&#160;</a></span>setMemoryExclusiveAccess()</h2>
+<a id="ae7939b6d6fd77b284e6cf1bcc4ee63eb" name="ae7939b6d6fd77b284e6cf1bcc4ee63eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7939b6d6fd77b284e6cf1bcc4ee63eb">&#9670;&#160;</a></span>setMemoryExclusiveTag()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1951,11 +1951,21 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void triton::arch::arm::aarch64::AArch64Cpu::setMemoryExclusiveAccess </td>
+          <td class="memname">void triton::arch::arm::aarch64::AArch64Cpu::setMemoryExclusiveTag </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;&#160;</td>
+          <td class="paramname"><em>mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>tag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1965,11 +1975,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets exclusive memory access flag. Only valid for Arm32. </p>
+<p>Sets exclusive memory access tag. Only valid for Arm32 and AArch64. </p>
 
-<p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a583e60863a9bce0c902d07fe4b0af29a">triton::arch::CpuInterface</a>.</p>
+<p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#aa791fea412e43cb633eb143a6cf4fb78">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01250">1250</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01258">1258</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -2001,7 +2011,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a324371b24a21a1438d4268e9ebbe9297">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01239">1239</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8cpp_source.html#l01240">1240</a> of file <a class="el" href="aarch64Cpu_8cpp_source.html">aarch64Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -2030,7 +2040,7 @@ Protected Attributes</h2></td></tr>
 <p ><b>item1</b>: memory address<br  />
  <b>item2</b>: concrete value </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00087">87</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00090">90</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2056,7 +2066,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of pc. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00218">218</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00221">221</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2082,7 +2092,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q0. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00152">152</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00155">155</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2108,7 +2118,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q1. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00154">154</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00157">157</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2134,7 +2144,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q10. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00172">172</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00175">175</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2160,7 +2170,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q11. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00174">174</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00177">177</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2186,7 +2196,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q12. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00176">176</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00179">179</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2212,7 +2222,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q13. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00178">178</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00181">181</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2238,7 +2248,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q14. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00180">180</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00183">183</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2264,7 +2274,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q15. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00182">182</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00185">185</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2290,7 +2300,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q16. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00184">184</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00187">187</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2316,7 +2326,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q17. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00186">186</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00189">189</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2342,7 +2352,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q18. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00188">188</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00191">191</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2368,7 +2378,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q19. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00190">190</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00193">193</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2394,7 +2404,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q2. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00156">156</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00159">159</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2420,7 +2430,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q20. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00192">192</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00195">195</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2446,7 +2456,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q21. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00194">194</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00197">197</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2472,7 +2482,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q22. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00196">196</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00199">199</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2498,7 +2508,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q23. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00198">198</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00201">201</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2524,7 +2534,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q24. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00200">200</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00203">203</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2550,7 +2560,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q25. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00202">202</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00205">205</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2576,7 +2586,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q26. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00204">204</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00207">207</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2602,7 +2612,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q27. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00206">206</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00209">209</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2628,7 +2638,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q28. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00208">208</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00211">211</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2654,7 +2664,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q29. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00210">210</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00213">213</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2680,7 +2690,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q3. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00158">158</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00161">161</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2706,7 +2716,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q30. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00212">212</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00215">215</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2732,7 +2742,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q31. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00214">214</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00217">217</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2758,7 +2768,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q4. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00160">160</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00163">163</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2784,7 +2794,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q5. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00162">162</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00165">165</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2810,7 +2820,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q6. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00164">164</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00167">167</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2836,7 +2846,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q7. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00166">166</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00169">169</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2862,7 +2872,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q8. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00168">168</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00171">171</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2888,7 +2898,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of q9. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00170">170</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00173">173</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2914,7 +2924,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of sp. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00216">216</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00219">219</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2940,7 +2950,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of spsr. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00220">220</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00223">223</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2966,7 +2976,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x0. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00090">90</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00093">93</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -2992,7 +3002,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x1. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00092">92</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00095">95</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3018,7 +3028,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x10. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00110">110</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00113">113</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3044,7 +3054,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x11. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00112">112</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00115">115</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3070,7 +3080,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x12. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00114">114</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00117">117</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3096,7 +3106,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x13. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00116">116</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00119">119</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3122,7 +3132,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x14. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00118">118</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00121">121</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3148,7 +3158,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x15. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00120">120</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00123">123</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3174,7 +3184,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x16. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00122">122</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00125">125</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3200,7 +3210,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x17. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00124">124</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00127">127</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3226,7 +3236,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x18. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00126">126</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00129">129</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3252,7 +3262,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x19. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00128">128</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00131">131</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3278,7 +3288,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x2. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00094">94</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00097">97</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3304,7 +3314,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x20. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00130">130</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00133">133</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3330,7 +3340,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x21. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00132">132</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00135">135</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3356,7 +3366,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x22. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00134">134</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00137">137</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3382,7 +3392,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x23. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00136">136</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00139">139</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3408,7 +3418,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x24. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00138">138</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00141">141</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3434,7 +3444,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x25. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00140">140</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00143">143</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3460,7 +3470,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x26. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00142">142</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00145">145</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3486,7 +3496,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x27. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00144">144</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00147">147</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3512,7 +3522,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x28. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00146">146</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00149">149</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3538,7 +3548,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x29. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00148">148</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00151">151</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3564,7 +3574,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x3. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00096">96</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00099">99</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3590,7 +3600,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x30. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00150">150</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00153">153</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3616,7 +3626,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x4. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00098">98</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00101">101</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3642,7 +3652,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x5. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00100">100</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00103">103</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3668,7 +3678,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x6. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00102">102</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00105">105</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3694,7 +3704,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x7. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00104">104</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00107">107</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3720,7 +3730,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x8. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00106">106</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00109">109</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>
@@ -3746,7 +3756,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Concrete value of x9. </p>
 
-<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00108">108</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="aarch64Cpu_8hpp_source.html#l00111">111</a> of file <a class="el" href="aarch64Cpu_8hpp_source.html">aarch64Cpu.hpp</a>.</p>
 
 </div>
 </div>

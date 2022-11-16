@@ -127,9 +127,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a70a2162af28bcbc730f0ed9555cca1e1"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a70a2162af28bcbc730f0ed9555cca1e1">isThumb</a> (void) const</td></tr>
 <tr class="memdesc:a70a2162af28bcbc730f0ed9555cca1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the execution mode is Thumb. Only useful for Arm32.  <a href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a70a2162af28bcbc730f0ed9555cca1e1">More...</a><br /></td></tr>
 <tr class="separator:a70a2162af28bcbc730f0ed9555cca1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a828c3bf3838b1b1d7c0d2df941072f4d"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a828c3bf3838b1b1d7c0d2df941072f4d">isMemoryExclusiveAccess</a> (void) const</td></tr>
-<tr class="memdesc:a828c3bf3838b1b1d7c0d2df941072f4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the exclusive memory access flag is set. Only valid for Arm32.  <a href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a828c3bf3838b1b1d7c0d2df941072f4d">More...</a><br /></td></tr>
-<tr class="separator:a828c3bf3838b1b1d7c0d2df941072f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a9b0e8843921b8785abd23fcf29a65"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#ae5a9b0e8843921b8785abd23fcf29a65">isMemoryExclusive</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem) const</td></tr>
+<tr class="memdesc:ae5a9b0e8843921b8785abd23fcf29a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given memory access is tagged as exclusive. Only valid for Arm32 and AArch64.  <a href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#ae5a9b0e8843921b8785abd23fcf29a65">More...</a><br /></td></tr>
+<tr class="separator:ae5a9b0e8843921b8785abd23fcf29a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add372e367434bb113d431779395131f2"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT const std::unordered_map&lt; <a class="el" href="group__arch.html#gaba5d7908cb780b4fee8f99e77384801f">triton::arch::register_e</a>, const <a class="el" href="classtriton_1_1arch_1_1Register.html">triton::arch::Register</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#add372e367434bb113d431779395131f2">getAllRegisters</a> (void) const</td></tr>
 <tr class="memdesc:add372e367434bb113d431779395131f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all registers.  <a href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#add372e367434bb113d431779395131f2">More...</a><br /></td></tr>
 <tr class="separator:add372e367434bb113d431779395131f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,9 +202,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae768f5db354b3fa53866b9e9246dee9c"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#ae768f5db354b3fa53866b9e9246dee9c">setThumb</a> (bool state)</td></tr>
 <tr class="memdesc:ae768f5db354b3fa53866b9e9246dee9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets CPU state to Thumb mode.  <a href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#ae768f5db354b3fa53866b9e9246dee9c">More...</a><br /></td></tr>
 <tr class="separator:ae768f5db354b3fa53866b9e9246dee9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadf55b6a59ee5f7205a4b169a9a58d86"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#aadf55b6a59ee5f7205a4b169a9a58d86">setMemoryExclusiveAccess</a> (bool state)</td></tr>
-<tr class="memdesc:aadf55b6a59ee5f7205a4b169a9a58d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets exclusive memory access flag. Only valid for Arm32.  <a href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#aadf55b6a59ee5f7205a4b169a9a58d86">More...</a><br /></td></tr>
-<tr class="separator:aadf55b6a59ee5f7205a4b169a9a58d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a2f9bd502566689ac9769313030849"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a06a2f9bd502566689ac9769313030849">setMemoryExclusiveTag</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem, bool tag)</td></tr>
+<tr class="memdesc:a06a2f9bd502566689ac9769313030849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets exclusive memory access tag. Only valid for Arm32 and AArch64.  <a href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a06a2f9bd502566689ac9769313030849">More...</a><br /></td></tr>
+<tr class="separator:a06a2f9bd502566689ac9769313030849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56d622ff16aec0308ae04ea1bca91401"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a56d622ff16aec0308ae04ea1bca91401">isConcreteMemoryValueDefined</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem) const</td></tr>
 <tr class="memdesc:a56d622ff16aec0308ae04ea1bca91401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if memory cells have a defined concrete value.  <a href="classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a56d622ff16aec0308ae04ea1bca91401">More...</a><br /></td></tr>
 <tr class="separator:a56d622ff16aec0308ae04ea1bca91401"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,12 +242,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a324371b24a21a1438d4268e9ebbe9297 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a324371b24a21a1438d4268e9ebbe9297">setThumb</a> (bool state)=0</td></tr>
 <tr class="memdesc:a324371b24a21a1438d4268e9ebbe9297 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets CPU state to Thumb mode.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a324371b24a21a1438d4268e9ebbe9297">More...</a><br /></td></tr>
 <tr class="separator:a324371b24a21a1438d4268e9ebbe9297 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0812d3f5608f4a70711293159ed699da inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a0812d3f5608f4a70711293159ed699da">isMemoryExclusiveAccess</a> (void) const =0</td></tr>
-<tr class="memdesc:a0812d3f5608f4a70711293159ed699da inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the exclusive memory access flag is set. Only valid for Arm32.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a0812d3f5608f4a70711293159ed699da">More...</a><br /></td></tr>
-<tr class="separator:a0812d3f5608f4a70711293159ed699da inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a583e60863a9bce0c902d07fe4b0af29a inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a583e60863a9bce0c902d07fe4b0af29a">setMemoryExclusiveAccess</a> (bool state)=0</td></tr>
-<tr class="memdesc:a583e60863a9bce0c902d07fe4b0af29a inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets exclusive memory access flag. Only valid for Arm32.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a583e60863a9bce0c902d07fe4b0af29a">More...</a><br /></td></tr>
-<tr class="separator:a583e60863a9bce0c902d07fe4b0af29a inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920e5ebd03485f9fc197317172d4f479 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a920e5ebd03485f9fc197317172d4f479">isMemoryExclusive</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem) const =0</td></tr>
+<tr class="memdesc:a920e5ebd03485f9fc197317172d4f479 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given memory access is tagged as exclusive. Only valid for Arm32 and AArch64.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a920e5ebd03485f9fc197317172d4f479">More...</a><br /></td></tr>
+<tr class="separator:a920e5ebd03485f9fc197317172d4f479 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa791fea412e43cb633eb143a6cf4fb78 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#aa791fea412e43cb633eb143a6cf4fb78">setMemoryExclusiveTag</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem, bool tag)=0</td></tr>
+<tr class="memdesc:aa791fea412e43cb633eb143a6cf4fb78 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets exclusive memory access tag. Only valid for Arm32 and AArch64.  <a href="classtriton_1_1arch_1_1CpuInterface.html#aa791fea412e43cb633eb143a6cf4fb78">More...</a><br /></td></tr>
+<tr class="separator:aa791fea412e43cb633eb143a6cf4fb78 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e29389c5d2302065d175669cf2e4195 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memItemLeft" align="right" valign="top">virtual TRITON_EXPORT <a class="el" href="group__triton.html#gaf268b500e0439d03342a0e6b369bca7e">triton::uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a8e29389c5d2302065d175669cf2e4195">gprSize</a> (void) const =0</td></tr>
 <tr class="memdesc:a8e29389c5d2302065d175669cf2e4195 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bit in byte of the General Purpose Registers.  <a href="classtriton_1_1arch_1_1CpuInterface.html#a8e29389c5d2302065d175669cf2e4195">More...</a><br /></td></tr>
 <tr class="separator:a8e29389c5d2302065d175669cf2e4195 inherit pub_methods_classtriton_1_1arch_1_1CpuInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -453,7 +453,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00043">43</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00042">42</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -482,7 +482,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00048">48</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00047">47</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -547,7 +547,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a1d2acc27d27e053185e9accf5aaf0eef">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00802">802</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00819">819</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -589,7 +589,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a927d8ae4a3b405e5f387b86482e302e5">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00807">807</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00824">824</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1179,7 +1179,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a8c7730f098fa7c587016f0ea1b3dead9">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00788">788</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00805">805</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1221,7 +1221,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a6aa27e79992ede45d7c3162fb3c2a881">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00793">793</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00810">810</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
 
 </div>
 </div>
@@ -1279,8 +1279,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a828c3bf3838b1b1d7c0d2df941072f4d" name="a828c3bf3838b1b1d7c0d2df941072f4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a828c3bf3838b1b1d7c0d2df941072f4d">&#9670;&#160;</a></span>isMemoryExclusiveAccess()</h2>
+<a id="ae5a9b0e8843921b8785abd23fcf29a65" name="ae5a9b0e8843921b8785abd23fcf29a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a9b0e8843921b8785abd23fcf29a65">&#9670;&#160;</a></span>isMemoryExclusive()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1289,10 +1289,10 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool triton::arch::arm::arm32::Arm32Cpu::isMemoryExclusiveAccess </td>
+          <td class="memname">bool triton::arch::arm::arm32::Arm32Cpu::isMemoryExclusive </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;&#160;</td>
+          <td class="paramname"><em>mem</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1303,9 +1303,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns true if the exclusive memory access flag is set. Only valid for Arm32. </p>
+<p>Returns true if the given memory access is tagged as exclusive. Only valid for Arm32 and AArch64. </p>
 
-<p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a0812d3f5608f4a70711293159ed699da">triton::arch::CpuInterface</a>.</p>
+<p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a920e5ebd03485f9fc197317172d4f479">triton::arch::CpuInterface</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00778">778</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
 
@@ -1712,8 +1712,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aadf55b6a59ee5f7205a4b169a9a58d86" name="aadf55b6a59ee5f7205a4b169a9a58d86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadf55b6a59ee5f7205a4b169a9a58d86">&#9670;&#160;</a></span>setMemoryExclusiveAccess()</h2>
+<a id="a06a2f9bd502566689ac9769313030849" name="a06a2f9bd502566689ac9769313030849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a2f9bd502566689ac9769313030849">&#9670;&#160;</a></span>setMemoryExclusiveTag()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1722,11 +1722,21 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void triton::arch::arm::arm32::Arm32Cpu::setMemoryExclusiveAccess </td>
+          <td class="memname">void triton::arch::arm::arm32::Arm32Cpu::setMemoryExclusiveTag </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;&#160;</td>
+          <td class="paramname"><em>mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>tag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1736,11 +1746,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets exclusive memory access flag. Only valid for Arm32. </p>
+<p>Sets exclusive memory access tag. Only valid for Arm32 and AArch64. </p>
 
-<p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#a583e60863a9bce0c902d07fe4b0af29a">triton::arch::CpuInterface</a>.</p>
+<p>Implements <a class="el" href="classtriton_1_1arch_1_1CpuInterface.html#aa791fea412e43cb633eb143a6cf4fb78">triton::arch::CpuInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00783">783</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="arm32Cpu_8cpp_source.html#l00791">791</a> of file <a class="el" href="arm32Cpu_8cpp_source.html">arm32Cpu.cpp</a>.</p>
 
 </div>
 </div>

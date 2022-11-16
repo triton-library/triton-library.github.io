@@ -125,12 +125,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a06a255b038244ddc21c6d92c6046b20d"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html#a06a255b038244ddc21c6d92c6046b20d">setThumb</a> (bool state)</td></tr>
 <tr class="memdesc:a06a255b038244ddc21c6d92c6046b20d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets CPU state to Thumb mode. Only valid for Arm32.  <a href="classtriton_1_1arch_1_1Architecture.html#a06a255b038244ddc21c6d92c6046b20d">More...</a><br /></td></tr>
 <tr class="separator:a06a255b038244ddc21c6d92c6046b20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08612c62e545059708125a715f5fb231"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html#a08612c62e545059708125a715f5fb231">isMemoryExclusiveAccess</a> (void) const</td></tr>
-<tr class="memdesc:a08612c62e545059708125a715f5fb231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the exclusive memory access flag is set. Only valid for Arm32.  <a href="classtriton_1_1arch_1_1Architecture.html#a08612c62e545059708125a715f5fb231">More...</a><br /></td></tr>
-<tr class="separator:a08612c62e545059708125a715f5fb231"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1db12f2e03d3500f6b77da68d3b7a67"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html#ad1db12f2e03d3500f6b77da68d3b7a67">setMemoryExclusiveAccess</a> (bool state)</td></tr>
-<tr class="memdesc:ad1db12f2e03d3500f6b77da68d3b7a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets exclusive memory access flag. Only valid for Arm32.  <a href="classtriton_1_1arch_1_1Architecture.html#ad1db12f2e03d3500f6b77da68d3b7a67">More...</a><br /></td></tr>
-<tr class="separator:ad1db12f2e03d3500f6b77da68d3b7a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b576f0c78a26c181e6119f62c5f527a"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html#a5b576f0c78a26c181e6119f62c5f527a">isMemoryExclusive</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem) const</td></tr>
+<tr class="memdesc:a5b576f0c78a26c181e6119f62c5f527a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the memory access is tagged as exclusive. Only valid for Arm32 and AArch64.  <a href="classtriton_1_1arch_1_1Architecture.html#a5b576f0c78a26c181e6119f62c5f527a">More...</a><br /></td></tr>
+<tr class="separator:a5b576f0c78a26c181e6119f62c5f527a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a41c5d26454a3446cedc1be6217054"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html#aa8a41c5d26454a3446cedc1be6217054">setMemoryExclusiveTag</a> (const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;mem, bool tag)</td></tr>
+<tr class="memdesc:aa8a41c5d26454a3446cedc1be6217054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets exclusive memory access tag. Only valid for Arm32 and AArch64.  <a href="classtriton_1_1arch_1_1Architecture.html#aa8a41c5d26454a3446cedc1be6217054">More...</a><br /></td></tr>
+<tr class="separator:aa8a41c5d26454a3446cedc1be6217054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae475d23954ee817cb0af63c9e90f4d85"><td class="memItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__arch.html#ga72199f3206aa1c9b09b2688cb8d3e7ab">triton::arch::architecture_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtriton_1_1arch_1_1Architecture.html#ae475d23954ee817cb0af63c9e90f4d85">getArchitecture</a> (void) const</td></tr>
 <tr class="memdesc:ae475d23954ee817cb0af63c9e90f4d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the kind of architecture as <a class="el" href="group__arch.html#ga72199f3206aa1c9b09b2688cb8d3e7ab">triton::arch::architecture_e</a>.  <a href="classtriton_1_1arch_1_1Architecture.html#ae475d23954ee817cb0af63c9e90f4d85">More...</a><br /></td></tr>
 <tr class="separator:ae475d23954ee817cb0af63c9e90f4d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -995,23 +995,23 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a08612c62e545059708125a715f5fb231" name="a08612c62e545059708125a715f5fb231"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08612c62e545059708125a715f5fb231">&#9670;&#160;</a></span>isMemoryExclusiveAccess()</h2>
+<a id="a5b576f0c78a26c181e6119f62c5f527a" name="a5b576f0c78a26c181e6119f62c5f527a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b576f0c78a26c181e6119f62c5f527a">&#9670;&#160;</a></span>isMemoryExclusive()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool triton::arch::Architecture::isMemoryExclusiveAccess </td>
+          <td class="memname">bool triton::arch::Architecture::isMemoryExclusive </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;&#160;</td>
+          <td class="paramname"><em>mem</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns true if the exclusive memory access flag is set. Only valid for Arm32. </p>
+<p>Returns true if the memory access is tagged as exclusive. Only valid for Arm32 and AArch64. </p>
 
 <p class="definition">Definition at line <a class="el" href="architecture_8cpp_source.html#l00134">134</a> of file <a class="el" href="architecture_8cpp_source.html">architecture.cpp</a>.</p>
 
@@ -1394,23 +1394,33 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad1db12f2e03d3500f6b77da68d3b7a67" name="ad1db12f2e03d3500f6b77da68d3b7a67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1db12f2e03d3500f6b77da68d3b7a67">&#9670;&#160;</a></span>setMemoryExclusiveAccess()</h2>
+<a id="aa8a41c5d26454a3446cedc1be6217054" name="aa8a41c5d26454a3446cedc1be6217054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a41c5d26454a3446cedc1be6217054">&#9670;&#160;</a></span>setMemoryExclusiveTag()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void triton::arch::Architecture::setMemoryExclusiveAccess </td>
+          <td class="memname">void triton::arch::Architecture::setMemoryExclusiveTag </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>state</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classtriton_1_1arch_1_1MemoryAccess.html">triton::arch::MemoryAccess</a> &amp;&#160;</td>
+          <td class="paramname"><em>mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>tag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets exclusive memory access flag. Only valid for Arm32. </p>
+<p>Sets exclusive memory access tag. Only valid for Arm32 and AArch64. </p>
 
 <p class="definition">Definition at line <a class="el" href="architecture_8cpp_source.html#l00141">141</a> of file <a class="el" href="architecture_8cpp_source.html">architecture.cpp</a>.</p>
 
