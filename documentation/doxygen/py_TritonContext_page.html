@@ -28,7 +28,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1581</span>
+   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1588</span>
    </div>
   </td>
  </tr>
@@ -166,9 +166,9 @@ Methods</h2>
  Returns the AST corresponding to the <a class="el" href="py_Immediate_page.html">Immediate</a>.</li>
 <li><b><a class="el" href="py_AstNode_page.html">AstNode</a> getMemoryAst(<a class="el" href="py_MemoryAccess_page.html">MemoryAccess</a> mem)</b><br  />
  Returns the AST corresponding to the <a class="el" href="py_MemoryAccess_page.html">MemoryAccess</a> with the SSA form.</li>
-<li><b>dict getModel(<a class="el" href="py_AstNode_page.html">AstNode</a> node, status=False, timeout=0)</b><br  />
+<li><b>dict getModel(<a class="el" href="py_AstNode_page.html">AstNode</a> node, bool status=False, integer timeout=0)</b><br  />
  Computes and returns a model as a dictionary of {integer symVarId : <a class="el" href="py_SolverModel_page.html">SolverModel</a> model} from a symbolic constraint. If status is True, returns a tuple of (dict model, <a class="el" href="py_SOLVER_STATE_page.html">SOLVER_STATE</a> status, integer solvingTime).</li>
-<li><b>[dict, ...] getModels(<a class="el" href="py_AstNode_page.html">AstNode</a> node, integer limit, status=False, timeout=0)</b><br  />
+<li><b>[dict, ...] getModels(<a class="el" href="py_AstNode_page.html">AstNode</a> node, integer limit, bool status=False, integer timeout=0)</b><br  />
  Computes and returns several models from a symbolic constraint. The <code>limit</code> is the number of models returned. If status is True, returns a tuple of ([dict model, ...], <a class="el" href="py_SOLVER_STATE_page.html">SOLVER_STATE</a> status, integer solvingTime).</li>
 <li><b><a class="el" href="py_Register_page.html">Register</a> getParentRegister(<a class="el" href="py_Register_page.html">Register</a> reg)</b><br  />
  Returns the parent <a class="el" href="py_Register_page.html">Register</a> from a <a class="el" href="py_Register_page.html">Register</a>.</li>
