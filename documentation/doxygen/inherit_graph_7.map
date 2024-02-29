@@ -1,3 +1,71 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structmath_1_1wide__integer_1_1detail_1_1uint__type__helper_3_01BitCount_00_01typename_01std_1_116568c54b7aa355f5a1c9d468249a350.html" title=" " alt="" coords="5,5,197,89"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,842,109,868"/>
+<area shape="rect" id="Node000001" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="157,835,278,875"/>
+<area shape="poly" id="edge61_Node000000_Node000001" title=" " alt="" coords="124,852,157,852,157,858,124,858"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1exceptions_1_1Architecture.html" title="The exception class used by architectures." alt="" coords="340,349,461,390"/>
+<area shape="poly" id="edge62_Node000001_Node000002" title=" " alt="" coords="229,819,389,390,394,391,234,821"/>
+<area shape="rect" id="Node000016" href="$classtriton_1_1exceptions_1_1Ast.html" title="The exception class used by all AST nodes." alt="" coords="326,720,475,745"/>
+<area shape="poly" id="edge76_Node000001_Node000016" title=" " alt="" coords="245,821,281,787,325,755,350,743,353,748,327,760,285,791,249,825"/>
+<area shape="rect" id="Node000019" href="$classtriton_1_1exceptions_1_1Bindings.html" title="The exception class used by bindings." alt="" coords="340,769,461,810"/>
+<area shape="poly" id="edge79_Node000001_Node000019" title=" " alt="" coords="289,827,341,808,343,813,291,832"/>
+<area shape="rect" id="Node000020" href="$classtriton_1_1exceptions_1_1Callbacks.html" title="The exception class used by callbacks." alt="" coords="340,835,461,875"/>
+<area shape="poly" id="edge80_Node000001_Node000020" title=" " alt="" coords="293,852,340,852,340,858,293,858"/>
+<area shape="rect" id="Node000021" href="$classtriton_1_1exceptions_1_1Context.html" title="The exception class used by the Triton&#39;s Context." alt="" coords="340,900,461,941"/>
+<area shape="poly" id="edge81_Node000001_Node000021" title=" " alt="" coords="291,878,343,897,341,902,289,883"/>
+<area shape="rect" id="Node000022" href="$classtriton_1_1exceptions_1_1Engines.html" title="The exception class used by all engines." alt="" coords="340,965,461,1006"/>
+<area shape="poly" id="edge82_Node000001_Node000022" title=" " alt="" coords="250,884,286,918,327,950,349,962,346,967,325,955,282,922,246,888"/>
+<area shape="rect" id="Node000034" href="$classtriton_1_1exceptions_1_1PyCallbacks.html" title=" " alt="" coords="340,1031,461,1071"/>
+<area shape="poly" id="edge94_Node000001_Node000034" title=" " alt="" coords="236,888,273,952,298,986,328,1016,346,1028,342,1032,324,1020,294,989,269,955,232,891"/>
+<area shape="rect" id="Node000003" href="$classtriton_1_1exceptions_1_1AArch64OperandProperties.html" title="The exception class used by shift mode." alt="" coords="523,5,711,46"/>
+<area shape="poly" id="edge63_Node000002_Node000003" title=" " alt="" coords="404,333,415,274,436,200,471,124,494,89,522,57,538,45,541,49,525,61,498,92,475,127,441,202,420,275,409,334"/>
+<area shape="rect" id="Node000004" href="$classtriton_1_1exceptions_1_1ArmOperandProperties.html" title="The exception class used by shift mode." alt="" coords="536,71,698,111"/>
+<area shape="poly" id="edge64_Node000002_Node000004" title=" " alt="" coords="408,333,423,286,446,230,478,172,499,146,522,122,540,110,543,114,525,126,503,149,483,175,451,232,428,288,413,335"/>
+<area shape="rect" id="Node000005" href="$classtriton_1_1exceptions_1_1BasicBlock.html" title="The exception class used by a basic block." alt="" coords="556,136,678,177"/>
+<area shape="poly" id="edge65_Node000002_Node000005" title=" " alt="" coords="415,334,456,261,486,221,522,188,555,169,557,174,525,192,490,225,461,263,419,336"/>
+<area shape="rect" id="Node000006" href="$classtriton_1_1exceptions_1_1BitsVector.html" title="The exception class used by bitvectors." alt="" coords="556,201,678,242"/>
+<area shape="poly" id="edge66_Node000002_Node000006" title=" " alt="" coords="427,336,469,292,522,251,555,236,557,241,525,256,472,296,431,339"/>
+<area shape="rect" id="Node000007" href="$classtriton_1_1exceptions_1_1Cpu.html" title="The exception class used by all CPUs." alt="" coords="540,266,694,292"/>
+<area shape="poly" id="edge67_Node000002_Node000007" title=" " alt="" coords="447,339,522,302,558,290,560,295,524,307,450,344"/>
+<area shape="rect" id="Node000010" href="$classtriton_1_1exceptions_1_1Immediate.html" title="The exception class used by immediates." alt="" coords="556,316,678,357"/>
+<area shape="poly" id="edge70_Node000002_Node000010" title=" " alt="" coords="476,355,555,343,556,348,477,361"/>
+<area shape="rect" id="Node000011" href="$classtriton_1_1exceptions_1_1Instruction.html" title="The exception class used by an instruction." alt="" coords="556,381,678,422"/>
+<area shape="poly" id="edge71_Node000002_Node000011" title=" " alt="" coords="477,378,556,390,555,395,476,383"/>
+<area shape="rect" id="Node000012" href="$classtriton_1_1exceptions_1_1IrBuilder.html" title="The exception class used by the IR builder." alt="" coords="556,447,678,487"/>
+<area shape="poly" id="edge72_Node000002_Node000012" title=" " alt="" coords="453,395,524,431,557,444,555,449,522,436,450,400"/>
+<area shape="rect" id="Node000013" href="$classtriton_1_1exceptions_1_1MemoryAccess.html" title="The exception class used by memory access." alt="" coords="556,512,678,553"/>
+<area shape="poly" id="edge73_Node000002_Node000013" title=" " alt="" coords="428,401,470,450,496,475,525,497,557,513,555,518,522,501,493,479,466,454,423,404"/>
+<area shape="rect" id="Node000014" href="$classtriton_1_1exceptions_1_1OperandWrapper.html" title="The exception class used by operand wrappers." alt="" coords="554,577,680,618"/>
+<area shape="poly" id="edge74_Node000002_Node000014" title=" " alt="" coords="418,403,435,440,458,483,488,525,525,562,555,579,552,584,522,566,484,529,454,486,430,443,413,406"/>
+<area shape="rect" id="Node000015" href="$classtriton_1_1exceptions_1_1Register.html" title="The exception class used by register operands." alt="" coords="556,643,678,683"/>
+<area shape="poly" id="edge75_Node000002_Node000015" title=" " alt="" coords="412,405,426,454,448,514,481,575,502,603,525,628,558,647,555,652,522,632,498,606,477,578,444,516,421,456,407,406"/>
+<area shape="rect" id="Node000008" href="$classtriton_1_1exceptions_1_1Disassembly.html" title="The exception class used by the disassembler." alt="" coords="779,227,900,267"/>
+<area shape="poly" id="edge68_Node000007_Node000008" title=" " alt="" coords="709,263,778,253,779,258,709,268"/>
+<area shape="rect" id="Node000009" href="$classtriton_1_1exceptions_1_1Semantics.html" title="The exception class used by all semantics." alt="" coords="779,292,900,333"/>
+<area shape="poly" id="edge69_Node000007_Node000009" title=" " alt="" coords="709,290,779,301,778,306,709,295"/>
+<area shape="rect" id="Node000017" href="$classtriton_1_1exceptions_1_1AstLifting.html" title="The exception class used by all AST lifting (e.g z3 &lt;&#45;&gt; triton)." alt="" coords="556,708,678,749"/>
+<area shape="poly" id="edge77_Node000016_Node000017" title=" " alt="" coords="490,728,556,727,556,732,491,733"/>
+<area shape="rect" id="Node000018" href="$classtriton_1_1exceptions_1_1AstRepresentation.html" title="The exception class used by all AST node representations." alt="" coords="548,773,686,814"/>
+<area shape="poly" id="edge78_Node000016_Node000018" title=" " alt="" coords="464,747,549,772,547,777,463,753"/>
+<area shape="rect" id="Node000023" href="$classtriton_1_1exceptions_1_1LiftingEngine.html" title="The exception class used by the lifting engine." alt="" coords="556,839,678,879"/>
+<area shape="poly" id="edge83_Node000022_Node000023" title=" " alt="" coords="467,955,474,950,488,935,497,921,506,905,522,890,555,873,557,877,525,894,510,909,501,923,492,939,477,954,471,959"/>
+<area shape="rect" id="Node000024" href="$classtriton_1_1exceptions_1_1SolverEngine.html" title="The exception class used by the solver engine." alt="" coords="556,904,678,945"/>
+<area shape="poly" id="edge84_Node000022_Node000024" title=" " alt="" coords="475,962,555,939,556,944,477,967"/>
+<area shape="rect" id="Node000026" href="$classtriton_1_1exceptions_1_1SymbolicEngine.html" title="The exception class used by the symbolic engine." alt="" coords="555,969,679,1010"/>
+<area shape="poly" id="edge86_Node000022_Node000026" title=" " alt="" coords="477,984,555,986,555,991,477,990"/>
+<area shape="rect" id="Node000032" href="$classtriton_1_1exceptions_1_1SynthesizerEngine.html" title="The exception class used by the synthesizer engine." alt="" coords="548,1035,686,1075"/>
+<area shape="poly" id="edge92_Node000022_Node000032" title=" " alt="" coords="477,1007,552,1032,550,1037,475,1012"/>
+<area shape="rect" id="Node000033" href="$classtriton_1_1exceptions_1_1TaintEngine.html" title="The exception class used by the taint engine." alt="" coords="556,1100,678,1141"/>
+<area shape="poly" id="edge93_Node000022_Node000033" title=" " alt="" coords="471,1012,477,1017,493,1035,501,1052,510,1069,525,1085,557,1102,554,1107,522,1089,505,1072,497,1055,488,1038,474,1021,468,1017"/>
+<area shape="rect" id="Node000025" href="$classtriton_1_1exceptions_1_1SolverModel.html" title="The exception class used by solver models." alt="" coords="779,807,900,847"/>
+<area shape="poly" id="edge85_Node000024_Node000025" title=" " alt="" coords="691,897,709,889,733,874,757,858,784,845,786,850,760,863,736,878,712,893,693,902"/>
+<area shape="rect" id="Node000027" href="$classtriton_1_1exceptions_1_1PathConstraint.html" title="The exception class used by path constraints." alt="" coords="779,872,900,913"/>
+<area shape="poly" id="edge87_Node000026_Node000027" title=" " alt="" coords="692,962,709,954,733,939,757,923,784,911,786,916,760,928,736,943,712,959,694,967"/>
+<area shape="rect" id="Node000028" href="$classtriton_1_1exceptions_1_1PathManager.html" title="The exception class used by the path manager." alt="" coords="779,937,900,978"/>
+<area shape="poly" id="edge88_Node000026_Node000028" title=" " alt="" coords="694,976,778,964,779,969,694,981"/>
+<area shape="rect" id="Node000029" href="$classtriton_1_1exceptions_1_1SymbolicExpression.html" title="The exception class used by symbolic expressions." alt="" coords="765,1003,914,1043"/>
+<area shape="poly" id="edge89_Node000026_Node000029" title=" " alt="" coords="694,998,765,1009,764,1015,693,1004"/>
+<area shape="rect" id="Node000030" href="$classtriton_1_1exceptions_1_1SymbolicSimplification.html" title="The exception class used by symbolic simplifications." alt="" coords="759,1068,920,1109"/>
+<area shape="poly" id="edge90_Node000026_Node000030" title=" " alt="" coords="694,1013,712,1021,736,1037,760,1053,786,1065,783,1070,757,1057,733,1041,709,1025,692,1017"/>
+<area shape="rect" id="Node000031" href="$classtriton_1_1exceptions_1_1SymbolicVariable.html" title="The exception class used by symbolic variables." alt="" coords="775,1133,904,1174"/>
+<area shape="poly" id="edge91_Node000026_Node000031" title=" " alt="" coords="694,1008,713,1021,731,1046,738,1071,744,1095,761,1118,777,1131,774,1135,757,1122,739,1097,732,1072,726,1048,709,1025,691,1013"/>
 </map>

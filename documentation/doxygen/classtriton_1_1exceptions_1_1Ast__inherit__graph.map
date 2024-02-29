@@ -1,7 +1,11 @@
 <map id="triton::exceptions::Ast" name="triton::exceptions::Ast">
-<area shape="rect" id="node1" title="The exception class used by all AST nodes." alt="" coords="69,167,219,192"/>
-<area shape="rect" id="node4" href="$classtriton_1_1exceptions_1_1AstLifting.html" title="The exception class used by all AST lifting (e.g z3 &lt;&#45;&gt; triton)." alt="" coords="5,240,128,280"/>
-<area shape="rect" id="node5" href="$classtriton_1_1exceptions_1_1AstRepresentation.html" title="The exception class used by all AST node representations." alt="" coords="152,240,291,280"/>
-<area shape="rect" id="node2" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="83,79,205,119"/>
-<area shape="rect" id="node3" title=" " alt="" coords="92,5,196,31"/>
+<area shape="rect" id="Node000001" title="The exception class used by all AST nodes." alt="" coords="67,168,217,193"/>
+<area shape="rect" id="Node000004" href="$classtriton_1_1exceptions_1_1AstLifting.html" title="The exception class used by all AST lifting (e.g z3 &lt;&#45;&gt; triton)." alt="" coords="5,241,127,282"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="122,207,87,243,83,239,118,203"/>
+<area shape="rect" id="Node000005" href="$classtriton_1_1exceptions_1_1AstRepresentation.html" title="The exception class used by all AST node representations." alt="" coords="151,241,288,282"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="166,202,202,239,198,243,162,206"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="81,79,203,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,135,145,167,139,167,139,135"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="90,5,194,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="145,46,145,79,139,79,139,46"/>
 </map>

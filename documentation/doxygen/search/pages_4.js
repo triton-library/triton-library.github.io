@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['immediate_0',['Immediate',['../py_Immediate_page.html',1,'']]],
-  ['instruction_1',['Instruction',['../py_Instruction_page.html',1,'']]]
+  ['dynamic_20binary_20analysis_20library_0',['Triton: A dynamic binary analysis library',['../index.html',1,'']]]
 ];

@@ -1,3 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structtriton_1_1bindings_1_1python_1_1PathConstraint__Object.html" title="pyPathConstraint object." alt="" coords="5,5,168,45"/>
+<area shape="rect" id="Node000000" href="$classtriton_1_1engines_1_1lifters_1_1LiftingToDot.html" title="The lifting to Dot class." alt="" coords="5,5,149,46"/>
+<area shape="rect" id="Node000001" href="$classtriton_1_1engines_1_1lifters_1_1LiftingEngine.html" title="The lifting engine class." alt="" coords="197,104,340,145"/>
+<area shape="poly" id="edge116_Node000000_Node000001" title=" " alt="" coords="138,51,150,57,232,101,229,106,147,61,136,56"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1engines_1_1lifters_1_1LiftingToLLVM.html" title="The lifting to LLVM class." alt="" coords="5,71,149,111"/>
+<area shape="poly" id="edge117_Node000002_Node000001" title=" " alt="" coords="165,104,197,109,196,114,164,109"/>
+<area shape="rect" id="Node000003" href="$classtriton_1_1engines_1_1lifters_1_1LiftingToPython.html" title="The lifting to Python class." alt="" coords="5,136,149,177"/>
+<area shape="poly" id="edge118_Node000003_Node000001" title=" " alt="" coords="164,139,196,134,197,139,165,144"/>
+<area shape="rect" id="Node000004" href="$classtriton_1_1engines_1_1lifters_1_1LiftingToSMT.html" title="The lifting to SMT class." alt="" coords="5,201,149,242"/>
+<area shape="poly" id="edge119_Node000004_Node000001" title=" " alt="" coords="136,192,147,186,228,143,231,148,150,191,138,197"/>
 </map>

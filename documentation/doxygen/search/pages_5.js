@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['memoryaccess_0',['MemoryAccess',['../py_MemoryAccess_page.html',1,'']]],
-  ['mode_1',['MODE',['../py_MODE_page.html',1,'']]]
+  ['exception_0',['EXCEPTION',['../py_EXCEPTION_page.html',1,'']]],
+  ['extend_1',['EXTEND',['../py_EXTEND_page.html',1,'']]]
 ];

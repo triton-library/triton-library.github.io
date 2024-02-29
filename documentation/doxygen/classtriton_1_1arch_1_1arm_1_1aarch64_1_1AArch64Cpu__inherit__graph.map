@@ -1,5 +1,7 @@
 <map id="triton::arch::arm::aarch64::AArch64Cpu" name="triton::arch::arm::aarch64::AArch64Cpu">
-<area shape="rect" id="node1" title="This class is used to describe the ARM (64&#45;bits) spec." alt="" coords="119,93,269,133"/>
-<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1CpuInterface.html" title="This interface is used as abstract CPU interface. All CPU must use this interface." alt="" coords="5,13,172,38"/>
-<area shape="rect" id="node3" href="$classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Specifications.html" title="The AArch64Specifications class defines specifications about the AArch64 CPU." alt="" coords="197,5,405,45"/>
+<area shape="rect" id="Node000001" title="This class is used to describe the ARM (64&#45;bits) spec." alt="" coords="119,94,269,135"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1arch_1_1CpuInterface.html" title="This interface is used as abstract CPU interface. All CPU must use this interface." alt="" coords="5,13,172,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,47,172,91,168,96,113,51"/>
+<area shape="rect" id="Node000003" href="$classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Specifications.html" title="The AArch64Specifications class defines specifications about the AArch64 CPU." alt="" coords="196,5,403,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="265,58,219,96,216,91,262,54"/>
 </map>

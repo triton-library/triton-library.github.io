@@ -1,5 +1,7 @@
 <map id="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/astPcodeRepresentation.hpp" name="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/astPcodeRepresentation.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="178,5,457,60"/>
-<area shape="rect" id="node2" href="$astPcodeRepresentation_8cpp.html" title=" " alt="" coords="5,108,315,163"/>
-<area shape="rect" id="node3" href="$astRepresentation_8cpp.html" title=" " alt="" coords="339,108,611,163"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="176,5,455,61"/>
+<area shape="rect" id="Node000002" href="$astPcodeRepresentation_8cpp.html" title=" " alt="" coords="5,109,314,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="263,72,203,111,200,106,260,67"/>
+<area shape="rect" id="Node000003" href="$astRepresentation_8cpp.html" title=" " alt="" coords="337,109,609,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="372,67,432,106,429,111,369,72"/>
 </map>

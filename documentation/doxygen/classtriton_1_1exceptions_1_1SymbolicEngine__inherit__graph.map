@@ -1,11 +1,19 @@
 <map id="triton::exceptions::SymbolicEngine" name="triton::exceptions::SymbolicEngine">
-<area shape="rect" id="node1" title="The exception class used by the symbolic engine." alt="" coords="499,133,623,173"/>
-<area shape="rect" id="node5" href="$classtriton_1_1exceptions_1_1PathConstraint.html" title="The exception class used by path constraints." alt="" coords="691,5,813,45"/>
-<area shape="rect" id="node6" href="$classtriton_1_1exceptions_1_1PathManager.html" title="The exception class used by the path manager." alt="" coords="691,69,813,109"/>
-<area shape="rect" id="node7" href="$classtriton_1_1exceptions_1_1SymbolicExpression.html" title="The exception class used by symbolic expressions." alt="" coords="677,133,827,173"/>
-<area shape="rect" id="node8" href="$classtriton_1_1exceptions_1_1SymbolicSimplification.html" title="The exception class used by symbolic simplifications." alt="" coords="671,197,833,237"/>
-<area shape="rect" id="node9" href="$classtriton_1_1exceptions_1_1SymbolicVariable.html" title="The exception class used by symbolic variables." alt="" coords="687,261,817,301"/>
-<area shape="rect" id="node2" href="$classtriton_1_1exceptions_1_1Engines.html" title="The exception class used by all engines." alt="" coords="328,133,451,173"/>
-<area shape="rect" id="node3" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="157,133,280,173"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,141,109,166"/>
+<area shape="rect" id="Node000001" title="The exception class used by the symbolic engine." alt="" coords="495,136,619,177"/>
+<area shape="rect" id="Node000005" href="$classtriton_1_1exceptions_1_1PathConstraint.html" title="The exception class used by path constraints." alt="" coords="687,5,808,46"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="586,123,622,89,665,57,688,44,691,49,668,61,626,93,590,127"/>
+<area shape="rect" id="Node000006" href="$classtriton_1_1exceptions_1_1PathManager.html" title="The exception class used by the path manager." alt="" coords="687,71,808,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="631,128,685,109,687,114,633,133"/>
+<area shape="rect" id="Node000007" href="$classtriton_1_1exceptions_1_1SymbolicExpression.html" title="The exception class used by symbolic expressions." alt="" coords="673,136,822,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="634,154,673,154,673,159,634,159"/>
+<area shape="rect" id="Node000008" href="$classtriton_1_1exceptions_1_1SymbolicSimplification.html" title="The exception class used by symbolic simplifications." alt="" coords="667,201,828,242"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="633,180,687,198,685,203,631,185"/>
+<area shape="rect" id="Node000009" href="$classtriton_1_1exceptions_1_1SymbolicVariable.html" title="The exception class used by symbolic variables." alt="" coords="683,267,812,307"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="590,186,626,220,668,251,691,264,688,268,665,256,622,224,586,190"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1exceptions_1_1Engines.html" title="The exception class used by all engines." alt="" coords="326,136,447,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="463,154,495,154,495,159,463,159"/>
+<area shape="rect" id="Node000003" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="157,136,278,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="293,154,325,154,325,159,293,159"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,144,109,169"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="124,154,157,154,157,159,124,159"/>
 </map>

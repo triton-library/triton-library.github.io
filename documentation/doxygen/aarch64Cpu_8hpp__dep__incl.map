@@ -1,6 +1,9 @@
 <map id="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/aarch64Cpu.hpp" name="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/aarch64Cpu.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="202,5,409,60"/>
-<area shape="rect" id="node2" href="$architecture_8cpp.html" title=" " alt="" coords="5,108,168,163"/>
-<area shape="rect" id="node3" href="$aarch64Cpu_8cpp.html" title=" " alt="" coords="192,108,419,163"/>
-<area shape="rect" id="node4" href="$context_8cpp.html" title=" " alt="" coords="443,108,605,163"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="201,5,406,61"/>
+<area shape="rect" id="Node000002" href="$architecture_8cpp.html" title=" " alt="" coords="5,109,167,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,70,146,111,143,106,230,65"/>
+<area shape="rect" id="Node000003" href="$aarch64Cpu_8cpp.html" title=" " alt="" coords="191,109,416,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="306,77,306,108,301,108,301,77"/>
+<area shape="rect" id="Node000004" href="$context_8cpp.html" title=" " alt="" coords="440,109,601,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="376,65,463,106,461,111,374,70"/>
 </map>

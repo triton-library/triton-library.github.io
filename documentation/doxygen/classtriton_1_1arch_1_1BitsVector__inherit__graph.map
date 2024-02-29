@@ -1,6 +1,9 @@
 <map id="triton::arch::BitsVector" name="triton::arch::BitsVector">
-<area shape="rect" id="node1" title="This class is used to deal with registers and memory as bits vector." alt="" coords="197,5,351,31"/>
-<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1Immediate.html" title="This class is used to represent an immediate." alt="" coords="5,79,159,104"/>
-<area shape="rect" id="node3" href="$classtriton_1_1arch_1_1MemoryAccess.html" title="This class is used to represent a memory access." alt="" coords="183,79,365,104"/>
-<area shape="rect" id="node4" href="$classtriton_1_1arch_1_1Register.html" title="This class is used when an instruction has a register operand." alt="" coords="390,79,531,104"/>
+<area shape="rect" id="Node000001" title="This class is used to deal with registers and memory as bits vector." alt="" coords="197,5,350,31"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1arch_1_1Immediate.html" title="This class is used to represent an immediate." alt="" coords="5,79,158,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,39,115,81,113,76,226,34"/>
+<area shape="rect" id="Node000003" href="$classtriton_1_1arch_1_1MemoryAccess.html" title="This class is used to represent a memory access." alt="" coords="182,79,365,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="276,46,276,79,271,79,271,46"/>
+<area shape="rect" id="Node000004" href="$classtriton_1_1arch_1_1Register.html" title="This class is used when an instruction has a register operand." alt="" coords="389,79,529,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="320,34,428,76,426,81,318,39"/>
 </map>

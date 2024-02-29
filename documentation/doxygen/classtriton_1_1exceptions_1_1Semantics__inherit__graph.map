@@ -1,7 +1,11 @@
 <map id="triton::exceptions::Semantics" name="triton::exceptions::Semantics">
-<area shape="rect" id="node1" title="The exception class used by all semantics." alt="" coords="21,328,144,368"/>
-<area shape="rect" id="node2" href="$classtriton_1_1exceptions_1_1Cpu.html" title="The exception class used by all CPUs." alt="" coords="5,255,160,280"/>
-<area shape="rect" id="node3" href="$classtriton_1_1exceptions_1_1Architecture.html" title="The exception class used by architectures." alt="" coords="21,167,144,207"/>
-<area shape="rect" id="node4" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="21,79,144,119"/>
-<area shape="rect" id="node5" title=" " alt="" coords="31,5,135,31"/>
+<area shape="rect" id="Node000001" title="The exception class used by all semantics." alt="" coords="21,330,143,371"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1exceptions_1_1Cpu.html" title="The exception class used by all CPUs." alt="" coords="5,256,159,282"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,297,85,330,79,330,79,297"/>
+<area shape="rect" id="Node000003" href="$classtriton_1_1exceptions_1_1Architecture.html" title="The exception class used by architectures." alt="" coords="21,168,143,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,224,85,256,79,256,79,224"/>
+<area shape="rect" id="Node000004" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="21,79,143,120"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="85,135,85,167,79,167,79,135"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="30,5,134,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="85,46,85,79,79,79,79,46"/>
 </map>

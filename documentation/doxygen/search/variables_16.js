@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['x_0',['x',['../classtriton_1_1engines_1_1synthesis_1_1UnaryEntry.html#ac5b6a615b6f5eabf769c34bf8cf5b54a',1,'triton::engines::synthesis::UnaryEntry::x()'],['../classtriton_1_1engines_1_1synthesis_1_1BinaryEntry.html#acdd1b3989c11e46b7ca6d11f4fc0e367',1,'triton::engines::synthesis::BinaryEntry::x()']]],
+  ['x_0',['x',['../classtriton_1_1engines_1_1synthesis_1_1UnaryEntry.html#ac5b6a615b6f5eabf769c34bf8cf5b54a',1,'triton::engines::synthesis::UnaryEntry::x'],['../classtriton_1_1engines_1_1synthesis_1_1BinaryEntry.html#acdd1b3989c11e46b7ca6d11f4fc0e367',1,'triton::engines::synthesis::BinaryEntry::x']]],
   ['x0_1',['x0',['../classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a883507312d77af144494506e7578d574',1,'triton::arch::arm::aarch64::AArch64Cpu']]],
   ['x1_2',['x1',['../classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a6c6390ef5c9e3d58551bac126191bc8c',1,'triton::arch::arm::aarch64::AArch64Cpu']]],
   ['x10_3',['x10',['../classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a46249d4c5a3bdb22cc0fe1cf36452d40',1,'triton::arch::arm::aarch64::AArch64Cpu']]],

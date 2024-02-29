@@ -1,7 +1,11 @@
 <map id="triton::arch::CpuInterface" name="triton::arch::CpuInterface">
-<area shape="rect" id="node1" title="This interface is used as abstract CPU interface. All CPU must use this interface." alt="" coords="5,109,172,134"/>
-<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html" title="This class is used to describe the ARM (64&#45;bits) spec." alt="" coords="220,5,371,45"/>
-<area shape="rect" id="node3" href="$classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html" title="This class is used to describe the ARM (32&#45;bits) spec." alt="" coords="231,69,359,109"/>
-<area shape="rect" id="node4" href="$classtriton_1_1arch_1_1x86_1_1x8664Cpu.html" title="This class is used to describe the x86 (64&#45;bits) spec." alt="" coords="235,133,356,173"/>
-<area shape="rect" id="node5" href="$classtriton_1_1arch_1_1x86_1_1x86Cpu.html" title="This class is used to describe the x86 (32&#45;bits) spec." alt="" coords="235,197,356,237"/>
+<area shape="rect" id="Node000001" title="This interface is used as abstract CPU interface. All CPU must use this interface." alt="" coords="5,112,172,137"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html" title="This class is used to describe the ARM (64&#45;bits) spec." alt="" coords="220,5,369,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,102,219,57,245,44,247,49,221,61,130,106"/>
+<area shape="rect" id="Node000003" href="$classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html" title="This class is used to describe the ARM (32&#45;bits) spec." alt="" coords="231,71,358,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,106,230,99,230,104,187,111"/>
+<area shape="rect" id="Node000004" href="$classtriton_1_1arch_1_1x86_1_1x8664Cpu.html" title="This class is used to describe the x86 (64&#45;bits) spec." alt="" coords="234,136,355,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="187,137,234,144,233,150,186,142"/>
+<area shape="rect" id="Node000005" href="$classtriton_1_1arch_1_1x86_1_1x86Cpu.html" title="This class is used to describe the x86 (32&#45;bits) spec." alt="" coords="234,201,355,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="131,142,221,186,247,198,245,203,219,191,129,147"/>
 </map>

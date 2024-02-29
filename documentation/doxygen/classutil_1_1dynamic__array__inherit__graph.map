@@ -1,5 +1,7 @@
 <map id="util::dynamic_array&lt; ValueType, AllocatorType, SizeType, DiffType &gt;" name="util::dynamic_array&lt; ValueType, AllocatorType, SizeType, DiffType &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="5,57,189,111"/>
-<area shape="rect" id="node2" href="$classmath_1_1wide__integer_1_1detail_1_1fixed__dynamic__array.html" title=" " alt="" coords="359,5,531,75"/>
-<area shape="rect" id="node3" href="$classutil_1_1dynamic__array.html" title=" " alt="" coords="361,99,528,154"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,57,189,113"/>
+<area shape="rect" id="Node000002" href="$classmath_1_1wide__integer_1_1detail_1_1fixed__dynamic__array.html" title=" " alt="" coords="358,5,529,76"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,62,212,61,357,45,358,50,213,66,205,67"/>
+<area shape="rect" id="Node000003" href="$classutil_1_1dynamic__array.html" title=" " alt="" coords="360,100,527,155"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,95,360,114,359,120,204,100"/>
 </map>

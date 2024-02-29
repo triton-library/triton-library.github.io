@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['reg_0',['REG',['../py_REG_page.html',1,'']]],
-  ['register_1',['Register',['../py_Register_page.html',1,'']]]
+  ['memoryaccess_0',['MemoryAccess',['../py_MemoryAccess_page.html',1,'']]],
+  ['mode_1',['MODE',['../py_MODE_page.html',1,'']]]
 ];

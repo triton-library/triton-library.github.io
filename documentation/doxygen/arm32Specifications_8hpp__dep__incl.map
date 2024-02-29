@@ -1,11 +1,21 @@
 <map id="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/arm32Specifications.hpp" name="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/arm32Specifications.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="323,5,578,60"/>
-<area shape="rect" id="node2" href="$architecture_8cpp.html" title=" " alt="" coords="5,233,168,287"/>
-<area shape="rect" id="node3" href="$arm32Semantics_8cpp.html" title=" " alt="" coords="193,233,437,287"/>
-<area shape="rect" id="node4" href="$arm32Specifications_8cpp.html" title=" " alt="" coords="573,115,837,170"/>
-<area shape="rect" id="node5" href="$initOpcodesNamespace_8cpp.html" title=" " alt="" coords="861,108,1056,177"/>
-<area shape="rect" id="node6" href="$arm32Cpu_8hpp.html" title=" " alt="" coords="353,115,549,170"/>
-<area shape="rect" id="node7" href="$arm32Cpu_8cpp.html" title=" " alt="" coords="461,233,667,287"/>
-<area shape="rect" id="node8" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="692,225,855,295"/>
-<area shape="rect" id="node9" href="$context_8cpp.html" title=" " alt="" coords="879,233,1041,287"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="321,5,574,61"/>
+<area shape="rect" id="Node000002" href="$architecture_8cpp.html" title=" " alt="" coords="5,235,167,291"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="383,71,311,111,209,178,125,237,122,232,206,173,309,107,380,66"/>
+<area shape="rect" id="Node000003" href="$arm32Semantics_8cpp.html" title=" " alt="" coords="191,235,434,291"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="379,72,358,90,340,110,326,141,318,174,314,235,308,234,312,174,321,139,336,108,354,86,376,68"/>
+<area shape="rect" id="Node000004" href="$arm32Specifications_8cpp.html" title=" " alt="" coords="569,117,832,172"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="526,65,638,113,636,118,524,70"/>
+<area shape="rect" id="Node000005" href="$initOpcodesNamespace_8cpp.html" title=" " alt="" coords="857,109,1051,180"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="590,54,715,77,845,106,857,109,856,115,844,112,714,83,589,60"/>
+<area shape="rect" id="Node000006" href="$arm32Cpu_8hpp.html" title=" " alt="" coords="350,117,545,172"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="450,76,450,116,445,116,445,76"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="341,180,180,230,160,237,158,232,178,225,339,174"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="407,184,346,237,342,232,403,180"/>
+<area shape="rect" id="Node000007" href="$arm32Cpu_8cpp.html" title=" " alt="" coords="458,235,663,291"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="486,181,536,233,532,236,482,185"/>
+<area shape="rect" id="Node000008" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="688,228,850,298"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="538,175,676,225,688,229,686,234,674,230,536,180"/>
+<area shape="rect" id="Node000009" href="$context_8cpp.html" title=" " alt="" coords="873,235,1035,291"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="545,174,557,177,643,193,710,200,777,207,863,225,886,232,884,237,861,230,777,213,709,205,642,198,556,182,544,179"/>
 </map>

@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['basicblock_0',['BasicBlock',['../classtriton_1_1arch_1_1BasicBlock.html',1,'triton::arch::BasicBlock'],['../classtriton_1_1exceptions_1_1BasicBlock.html',1,'triton::exceptions::BasicBlock']]],
+  ['basicblock_0',['basicblock',['../classtriton_1_1arch_1_1BasicBlock.html',1,'triton::arch::BasicBlock'],['../classtriton_1_1exceptions_1_1BasicBlock.html',1,'triton::exceptions::BasicBlock']]],
   ['basicblock_5fobject_1',['BasicBlock_Object',['../structtriton_1_1bindings_1_1python_1_1BasicBlock__Object.html',1,'triton::bindings::python']]],
   ['binaryentry_2',['BinaryEntry',['../classtriton_1_1engines_1_1synthesis_1_1BinaryEntry.html',1,'triton::engines::synthesis']]],
   ['bindings_3',['Bindings',['../classtriton_1_1exceptions_1_1Bindings.html',1,'triton::exceptions']]],
-  ['bitsvector_4',['BitsVector',['../classtriton_1_1arch_1_1BitsVector.html',1,'triton::arch::BitsVector'],['../classtriton_1_1exceptions_1_1BitsVector.html',1,'triton::exceptions::BitsVector']]],
+  ['bitsvector_4',['bitsvector',['../classtriton_1_1arch_1_1BitsVector.html',1,'triton::arch::BitsVector'],['../classtriton_1_1exceptions_1_1BitsVector.html',1,'triton::exceptions::BitsVector']]],
   ['bitsvector_5fobject_5',['BitsVector_Object',['../structtriton_1_1bindings_1_1python_1_1BitsVector__Object.html',1,'triton::bindings::python']]],
   ['bitwuzlasolver_6',['BitwuzlaSolver',['../classtriton_1_1engines_1_1solver_1_1BitwuzlaSolver.html',1,'triton::engines::solver']]],
   ['bswapnode_7',['BswapNode',['../classtriton_1_1ast_1_1BswapNode.html',1,'triton::ast']]],

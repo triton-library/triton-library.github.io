@@ -1,4 +1,5 @@
 <map id="triton::engines::symbolic::SymbolicSimplification" name="triton::engines::symbolic::SymbolicSimplification">
-<area shape="rect" id="node1" title="The symbolic simplification class." alt="" coords="5,5,169,45"/>
-<area shape="rect" id="node2" href="$classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html" title="The symbolic engine class." alt="" coords="5,93,169,133"/>
+<area shape="rect" id="Node000001" title="The symbolic simplification class." alt="" coords="5,5,169,46"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html" title="The symbolic engine class." alt="" coords="5,94,169,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,62,90,94,84,94,84,62"/>
 </map>

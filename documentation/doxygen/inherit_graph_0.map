@@ -1,5 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,45,56,70"/>
-<area shape="rect" id="node2" href="$structstd_1_1hash_3_01triton_1_1arch_1_1register__e_01_4.html" title="Define the hash function for register_e to be use in stl containers like unordered_map." alt="" coords="105,5,230,45"/>
-<area shape="rect" id="node3" href="$structstd_1_1hash_3_01triton_1_1modes_1_1mode__e_01_4.html" title="Define the hash function for mode_e to be use in stl containers like unordered_set." alt="" coords="104,69,231,109"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,46,55,72"/>
+<area shape="rect" id="Node000001" href="$structstd_1_1hash_3_01triton_1_1arch_1_1register__e_01_4.html" title="Define the hash function for register_e to be use in stl containers like unordered_map." alt="" coords="104,5,228,46"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="69,47,103,38,104,44,71,52"/>
+<area shape="rect" id="Node000002" href="$structstd_1_1hash_3_01triton_1_1modes_1_1mode__e_01_4.html" title="Define the hash function for mode_e to be use in stl containers like unordered_set." alt="" coords="103,71,229,111"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="71,66,103,73,101,79,69,71"/>
 </map>

@@ -1,6 +1,9 @@
 <map id="triton::arch::SemanticsInterface" name="triton::arch::SemanticsInterface">
-<area shape="rect" id="node1" title="This interface is used as abstract semantics interface. All ISA semantics must use this interface." alt="" coords="5,77,211,102"/>
-<area shape="rect" id="node2" href="$classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Semantics.html" title="The AArch64 ISA semantics." alt="" coords="259,5,447,45"/>
-<area shape="rect" id="node3" href="$classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Semantics.html" title="The Arm32 ISA semantics." alt="" coords="269,69,436,109"/>
-<area shape="rect" id="node4" href="$classtriton_1_1arch_1_1x86_1_1x86Semantics.html" title="The x86 ISA semantics." alt="" coords="292,133,413,173"/>
+<area shape="rect" id="Node000001" title="This interface is used as abstract semantics interface. All ISA semantics must use this interface." alt="" coords="5,78,210,104"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Semantics.html" title="The AArch64 ISA semantics." alt="" coords="258,5,445,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,71,272,44,273,49,173,76"/>
+<area shape="rect" id="Node000003" href="$classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Semantics.html" title="The Arm32 ISA semantics." alt="" coords="269,71,434,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,88,268,88,268,94,225,94"/>
+<area shape="rect" id="Node000004" href="$classtriton_1_1arch_1_1x86_1_1x86Semantics.html" title="The x86 ISA semantics." alt="" coords="291,136,412,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,106,292,138,290,143,172,111"/>
 </map>

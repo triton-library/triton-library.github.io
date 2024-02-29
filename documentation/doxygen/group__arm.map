@@ -1,6 +1,6 @@
 <map id="Arm" name="Arm">
-<area shape="rect" id="node1" href="$group__aarch64.html" title=" " alt="" coords="197,5,268,31"/>
-<area shape="rect" id="node2" href="$group__arch.html" title=" " alt="" coords="5,31,55,56"/>
-<area shape="rect" id="node3" title=" " alt="" coords="103,31,149,56"/>
-<area shape="rect" id="node4" href="$group__arm32.html" title=" " alt="" coords="203,55,263,80"/>
+<area shape="rect" id="Node000003" href="$group__aarch64.html" title=" " alt="" coords="195,5,264,31"/>
+<area shape="rect" id="Node000002" href="$group__arch.html" title=" " alt="" coords="5,31,54,56"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="102,31,147,56"/>
+<area shape="rect" id="Node000004" href="$group__arm32.html" title=" " alt="" coords="200,55,259,80"/>
 </map>
