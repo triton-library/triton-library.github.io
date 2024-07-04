@@ -1,10 +1,10 @@
 var searchData=
 [
   ['z3_0',['Simplification via Z3',['../SMT_simplification_page.html#SMT_simplification_z3',1,'']]],
-  ['z3solver_1',['z3solver',['../classtriton_1_1engines_1_1solver_1_1Z3Solver.html',1,'triton::engines::solver::Z3Solver'],['../classtriton_1_1engines_1_1solver_1_1Z3Solver.html#a3a6014e57cc396032675e05cfed6b94c',1,'triton::engines::solver::Z3Solver::Z3Solver()']]],
+  ['z3solver_1',['Z3Solver',['../classtriton_1_1engines_1_1solver_1_1Z3Solver.html',1,'triton::engines::solver::Z3Solver'],['../classtriton_1_1engines_1_1solver_1_1Z3Solver.html#a3a6014e57cc396032675e05cfed6b94c',1,'triton::engines::solver::Z3Solver::Z3Solver()']]],
   ['z3solver_2ecpp_2',['z3Solver.cpp',['../z3Solver_8cpp.html',1,'']]],
   ['z3solver_2ehpp_3',['z3Solver.hpp',['../z3Solver_8hpp.html',1,'']]],
-  ['z3totriton_4',['z3totriton',['../classtriton_1_1ast_1_1Z3ToTriton.html',1,'triton::ast::Z3ToTriton'],['../classtriton_1_1ast_1_1Z3ToTriton.html#a0d6441dc198ea1d8f9bfe9fee32b5938',1,'triton::ast::Z3ToTriton::Z3ToTriton()']]],
+  ['z3totriton_4',['Z3ToTriton',['../classtriton_1_1ast_1_1Z3ToTriton.html',1,'triton::ast::Z3ToTriton'],['../classtriton_1_1ast_1_1Z3ToTriton.html#a0d6441dc198ea1d8f9bfe9fee32b5938',1,'triton::ast::Z3ToTriton::Z3ToTriton()']]],
   ['z3totriton_2ecpp_5',['z3ToTriton.cpp',['../z3ToTriton_8cpp.html',1,'']]],
   ['z3totriton_2ehpp_6',['z3ToTriton.hpp',['../z3ToTriton_8hpp.html',1,'']]],
   ['zmm0_7',['zmm0',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a01f8148c2678fb44ef45bb79f8ec8800',1,'triton::arch::x86::x8664Cpu']]],
@@ -41,5 +41,5 @@ var searchData=
   ['zmm9_38',['zmm9',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a33b47c64a3dddb2afd163ce138770889',1,'triton::arch::x86::x8664Cpu']]],
   ['zx_39',['zx',['../classtriton_1_1ast_1_1AstContext.html#a6367cf67ea8db9a488d125b4eea0c1ab',1,'triton::ast::AstContext']]],
   ['zx_5fnode_40',['ZX_NODE',['../group__ast.html#gga2b93cc7e19032f733c001c96530ef64faa604a8d1e790603c116b4e8dd7904b77',1,'triton::ast']]],
-  ['zxnode_41',['zxnode',['../classtriton_1_1ast_1_1ZxNode.html#a0c80f2f4cbf5fbb8fb376a687d28639f',1,'triton::ast::ZxNode::ZxNode()'],['../classtriton_1_1ast_1_1ZxNode.html',1,'triton::ast::ZxNode']]]
+  ['zxnode_41',['ZxNode',['../classtriton_1_1ast_1_1ZxNode.html',1,'triton::ast::ZxNode'],['../classtriton_1_1ast_1_1ZxNode.html#a0c80f2f4cbf5fbb8fb376a687d28639f',1,'triton::ast::ZxNode::ZxNode()']]]
 ];
