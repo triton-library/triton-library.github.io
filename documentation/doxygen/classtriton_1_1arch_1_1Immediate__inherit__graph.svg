@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classtriton_1_1arch_1_1BitsVector.html" target="_top" xlink:title="This class is used to deal with registers and memory as bits vector.">
+<g id="a_Node000002"><a xlink:href="$classtriton_1_1arch_1_1BitsVector.html" xlink:title="This class is used to deal with registers and memory as bits vector.">
 <polygon fill="white" stroke="#666666" points="114.25,-80.12 0,-80.12 0,-60.88 114.25,-60.88 114.25,-80.12"/>
 <text text-anchor="middle" x="57.12" y="-66.62" font-family="Helvetica,sans-Serif" font-size="10.00">triton::arch::BitsVector</text>
 </a>
@@ -38,7 +38,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html" target="_top" xlink:title="This class is used to represent specific properties of an Arm operand.">
+<g id="a_Node000003"><a xlink:href="$classtriton_1_1arch_1_1arm_1_1ArmOperandProperties.html" xlink:title="This class is used to represent specific properties of an Arm operand.">
 <polygon fill="white" stroke="#666666" points="247.62,-85.75 132.62,-85.75 132.62,-55.25 247.62,-55.25 247.62,-85.75"/>
 <text text-anchor="start" x="140.62" y="-72.25" font-family="Helvetica,sans-Serif" font-size="10.00">triton::arch::arm::</text>
 <text text-anchor="middle" x="190.12" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00">ArmOperandProperties</text>

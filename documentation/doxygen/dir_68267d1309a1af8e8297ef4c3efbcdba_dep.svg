@@ -10,7 +10,7 @@
 <title>/Users/jonathan/Works/Tools/Triton/src</title>
 <g id="clust1" class="cluster">
 <title>clusterdir_68267d1309a1af8e8297ef4c3efbcdba</title>
-<g id="a_clust1"><a xlink:href="dir_68267d1309a1af8e8297ef4c3efbcdba.html" target="_top">
+<g id="a_clust1"><a xlink:href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">
 <polygon fill="#edf0f7" stroke="#404040" stroke-width="2" points="8,-8 8,-43.25 120,-43.25 120,-8 8,-8"/>
 </a>
 </g>
@@ -23,7 +23,7 @@
 <!-- dir_6826be0f3781bbf5456339e274d7c653 -->
 <g id="node2" class="node">
 <title>dir_6826be0f3781bbf5456339e274d7c653</title>
-<g id="a_node2"><a xlink:href="dir_6826be0f3781bbf5456339e274d7c653.html" target="_top" xlink:title="libtriton">
+<g id="a_node2"><a xlink:href="dir_6826be0f3781bbf5456339e274d7c653.html" xlink:title="libtriton">
 <polygon fill="#a2b4d6" stroke="#404040" points="111.75,-35.25 64.25,-35.25 64.25,-16 111.75,-16 111.75,-35.25"/>
 <text text-anchor="middle" x="88" y="-21.75" font-family="Helvetica,sans-Serif" font-size="10.00">libtriton</text>
 </a>

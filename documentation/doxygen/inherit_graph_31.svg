@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="classtriton_1_1ast_1_1TritonToBitwuzla.html" target="_top" xlink:title="Converts a Triton&#39;s AST to Bitwuzla&#39;s AST.">
+<g id="a_Node000000"><a xlink:href="$classtriton_1_1ast_1_1TritonToBitwuzla.html" xlink:title="Converts a Triton&#39;s AST to Bitwuzla&#39;s AST.">
 <polygon fill="white" stroke="#666666" points="136,-19.25 0,-19.25 0,0 136,0 136,-19.25"/>
 <text text-anchor="middle" x="68" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">triton::ast::TritonToBitwuzla</text>
 </a>

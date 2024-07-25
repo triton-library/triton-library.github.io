@@ -1,0 +1,7 @@
+<map id="triton::arch::riscv::riscvSpecifications" name="triton::arch::riscv::riscvSpecifications">
+<area shape="rect" id="Node000001" title="The riscvSpecifications class defines specifications about the RV32 and RV64 CPU." alt="" coords="67,5,207,46"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1arch_1_1riscv_1_1riscv32Cpu.html" title="This class is used to describe the RV32 spec." alt="" coords="5,94,125,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,60,83,95,79,92,109,56"/>
+<area shape="rect" id="Node000003" href="$classtriton_1_1arch_1_1riscv_1_1riscv64Cpu.html" title="This class is used to describe the RV64 spec." alt="" coords="149,94,269,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,56,195,92,191,95,161,60"/>
+</map>

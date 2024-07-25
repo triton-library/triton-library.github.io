@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classtriton_1_1arch_1_1Immediate.html" target="_top" xlink:title="This class is used to represent an immediate.">
+<g id="a_Node000002"><a xlink:href="$classtriton_1_1arch_1_1Immediate.html" xlink:title="This class is used to represent an immediate.">
 <polygon fill="white" stroke="#666666" points="114.25,-19.25 0,-19.25 0,0 114.25,0 114.25,-19.25"/>
 <text text-anchor="middle" x="57.12" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">triton::arch::Immediate</text>
 </a>
@@ -39,7 +39,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="classtriton_1_1arch_1_1Register.html" target="_top" xlink:title="This class is used when an instruction has a register operand.">
+<g id="a_Node000003"><a xlink:href="$classtriton_1_1arch_1_1Register.html" xlink:title="This class is used when an instruction has a register operand.">
 <polygon fill="white" stroke="#666666" points="237.75,-19.25 132.5,-19.25 132.5,0 237.75,0 237.75,-19.25"/>
 <text text-anchor="middle" x="185.12" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">triton::arch::Register</text>
 </a>

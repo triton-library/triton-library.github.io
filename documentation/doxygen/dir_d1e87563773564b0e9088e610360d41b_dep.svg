@@ -10,7 +10,7 @@
 <title>/Users/jonathan/Works/Tools/Triton/src/libtriton/bindings/python/namespaces</title>
 <g id="clust1" class="cluster">
 <title>clusterdir_cd620cc27d99cd5acee30f3194b95f5b</title>
-<g id="a_clust1"><a xlink:href="dir_cd620cc27d99cd5acee30f3194b95f5b.html" target="_top" xlink:title="python">
+<g id="a_clust1"><a xlink:href="dir_cd620cc27d99cd5acee30f3194b95f5b.html" xlink:title="python">
 <polygon fill="#edf0f7" stroke="#7f7f7f" stroke-dasharray="5,2" points="8,-47.25 8,-101.75 96,-101.75 96,-47.25 8,-47.25"/>
 <text text-anchor="middle" x="52" y="-88.25" font-family="Helvetica,sans-Serif" font-size="10.00">python</text>
 </a>
@@ -19,7 +19,7 @@
 <!-- dir_d1e87563773564b0e9088e610360d41b -->
 <g id="node1" class="node">
 <title>dir_d1e87563773564b0e9088e610360d41b</title>
-<g id="a_node1"><a xlink:href="dir_d1e87563773564b0e9088e610360d41b.html" target="_top" xlink:title="namespaces">
+<g id="a_node1"><a xlink:href="dir_d1e87563773564b0e9088e610360d41b.html" xlink:title="namespaces">
 <polygon fill="#edf0f7" stroke="#404040" stroke-width="2" points="87.75,-74.5 16.25,-74.5 16.25,-55.25 87.75,-55.25 87.75,-74.5"/>
 <text text-anchor="middle" x="52" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00">namespaces</text>
 </a>
@@ -28,7 +28,7 @@
 <!-- dir_0a436fc82d73b0b9b664d07557632391 -->
 <g id="node2" class="node">
 <title>dir_0a436fc82d73b0b9b664d07557632391</title>
-<g id="a_node2"><a xlink:href="dir_0a436fc82d73b0b9b664d07557632391.html" target="_top" xlink:title="includes">
+<g id="a_node2"><a xlink:href="dir_0a436fc82d73b0b9b664d07557632391.html" xlink:title="includes">
 <polygon fill="#edf0f7" stroke="red" stroke-dasharray="5,2" points="78,-19.25 26,-19.25 26,0 78,0 78,-19.25"/>
 <text text-anchor="middle" x="52" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">includes</text>
 </a>
@@ -37,12 +37,12 @@
 <!-- dir_d1e87563773564b0e9088e610360d41b&#45;&gt;dir_0a436fc82d73b0b9b664d07557632391 -->
 <g id="edge1" class="edge">
 <title>dir_d1e87563773564b0e9088e610360d41b&#45;&gt;dir_0a436fc82d73b0b9b664d07557632391</title>
-<g id="a_edge1"><a xlink:href="dir_000017_000011.html" target="_top">
+<g id="a_edge1"><a xlink:href="dir_000017_000011.html">
 <path fill="none" stroke="#63b8ff" d="M52,-55.08C52,-48.57 52,-39.42 52,-31.12"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="55.5,-31.12 52,-21.12 48.5,-31.12 55.5,-31.12"/>
 </a>
 </g>
-<g id="a_edge1&#45;headlabel"><a xlink:href="dir_000017_000011.html" target="_top" xlink:title="81">
+<g id="a_edge1&#45;headlabel"><a xlink:href="dir_000017_000011.html" xlink:title="81">
 <text text-anchor="middle" x="58.34" y="-29.33" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#63b8ff">81</text>
 </a>
 </g>

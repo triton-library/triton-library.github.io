@@ -10,7 +10,7 @@
 <title>/Users/jonathan/Works/Tools/Triton/src/libtriton/includes</title>
 <g id="clust1" class="cluster">
 <title>clusterdir_6826be0f3781bbf5456339e274d7c653</title>
-<g id="a_clust1"><a xlink:href="dir_6826be0f3781bbf5456339e274d7c653.html" target="_top" xlink:title="libtriton">
+<g id="a_clust1"><a xlink:href="dir_6826be0f3781bbf5456339e274d7c653.html" xlink:title="libtriton">
 <polygon fill="#edf0f7" stroke="#7f7f7f" stroke-dasharray="5,2" points="8,-8 8,-78.5 148,-78.5 148,-8 8,-8"/>
 <text text-anchor="middle" x="78" y="-65" font-family="Helvetica,sans-Serif" font-size="10.00">libtriton</text>
 </a>
@@ -18,7 +18,7 @@
 </g>
 <g id="clust2" class="cluster">
 <title>clusterdir_0a436fc82d73b0b9b664d07557632391</title>
-<g id="a_clust2"><a xlink:href="dir_0a436fc82d73b0b9b664d07557632391.html" target="_top">
+<g id="a_clust2"><a xlink:href="dir_0a436fc82d73b0b9b664d07557632391.html">
 <polygon fill="#edf0f7" stroke="#404040" stroke-width="2" points="16,-16 16,-51.25 140,-51.25 140,-16 16,-16"/>
 </a>
 </g>
@@ -31,7 +31,7 @@
 <!-- dir_bfc2015e50a23296f50c7a4fbc72cfae -->
 <g id="node2" class="node">
 <title>dir_bfc2015e50a23296f50c7a4fbc72cfae</title>
-<g id="a_node2"><a xlink:href="dir_bfc2015e50a23296f50c7a4fbc72cfae.html" target="_top" xlink:title="triton">
+<g id="a_node2"><a xlink:href="dir_bfc2015e50a23296f50c7a4fbc72cfae.html" xlink:title="triton">
 <polygon fill="#a2b4d6" stroke="#404040" points="131.88,-43.25 94.12,-43.25 94.12,-24 131.88,-24 131.88,-43.25"/>
 <text text-anchor="middle" x="113" y="-29.75" font-family="Helvetica,sans-Serif" font-size="10.00">triton</text>
 </a>

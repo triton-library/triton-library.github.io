@@ -21,7 +21,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="classtriton_1_1exceptions_1_1AArch64OperandProperties.html" target="_top" xlink:title="The exception class used by shift mode.">
+<g id="a_Node000004"><a xlink:href="$classtriton_1_1exceptions_1_1AArch64OperandProperties.html" xlink:title="The exception class used by shift mode.">
 <polygon fill="white" stroke="#666666" points="508,-508.5 367.5,-508.5 367.5,-478 508,-478 508,-508.5"/>
 <text text-anchor="start" x="375.5" y="-495" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="437.75" y="-483.75" font-family="Helvetica,sans-Serif" font-size="10.00">::AArch64OperandProperties</text>
@@ -40,7 +40,7 @@
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="classtriton_1_1exceptions_1_1ArmOperandProperties.html" target="_top" xlink:title="The exception class used by shift mode.">
+<g id="a_Node000005"><a xlink:href="$classtriton_1_1exceptions_1_1ArmOperandProperties.html" xlink:title="The exception class used by shift mode.">
 <polygon fill="white" stroke="#666666" points="498.25,-459.5 377.25,-459.5 377.25,-429 498.25,-429 498.25,-459.5"/>
 <text text-anchor="start" x="385.25" y="-446" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="437.75" y="-434.75" font-family="Helvetica,sans-Serif" font-size="10.00">::ArmOperandProperties</text>
@@ -59,7 +59,7 @@
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="classtriton_1_1exceptions_1_1BasicBlock.html" target="_top" xlink:title="The exception class used by a basic block.">
+<g id="a_Node000006"><a xlink:href="$classtriton_1_1exceptions_1_1BasicBlock.html" xlink:title="The exception class used by a basic block.">
 <polygon fill="white" stroke="#666666" points="483.25,-410.5 392.25,-410.5 392.25,-380 483.25,-380 483.25,-410.5"/>
 <text text-anchor="start" x="400.25" y="-397" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="437.75" y="-385.75" font-family="Helvetica,sans-Serif" font-size="10.00">::BasicBlock</text>
@@ -78,7 +78,7 @@
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="classtriton_1_1exceptions_1_1BitsVector.html" target="_top" xlink:title="The exception class used by bitvectors.">
+<g id="a_Node000007"><a xlink:href="$classtriton_1_1exceptions_1_1BitsVector.html" xlink:title="The exception class used by bitvectors.">
 <polygon fill="white" stroke="#666666" points="483.25,-361.5 392.25,-361.5 392.25,-331 483.25,-331 483.25,-361.5"/>
 <text text-anchor="start" x="400.25" y="-348" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="437.75" y="-336.75" font-family="Helvetica,sans-Serif" font-size="10.00">::BitsVector</text>
@@ -97,7 +97,7 @@
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="classtriton_1_1exceptions_1_1Cpu.html" target="_top" xlink:title="The exception class used by all CPUs.">
+<g id="a_Node000008"><a xlink:href="$classtriton_1_1exceptions_1_1Cpu.html" xlink:title="The exception class used by all CPUs.">
 <polygon fill="white" stroke="#666666" points="495.25,-312.88 380.25,-312.88 380.25,-293.62 495.25,-293.62 495.25,-312.88"/>
 <text text-anchor="middle" x="437.75" y="-299.38" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions::Cpu</text>
 </a>
@@ -115,7 +115,7 @@
 <!-- Node11 -->
 <g id="Node000011" class="node">
 <title>Node11</title>
-<g id="a_Node000011"><a xlink:href="classtriton_1_1exceptions_1_1Immediate.html" target="_top" xlink:title="The exception class used by immediates.">
+<g id="a_Node000011"><a xlink:href="$classtriton_1_1exceptions_1_1Immediate.html" xlink:title="The exception class used by immediates.">
 <polygon fill="white" stroke="#666666" points="483.25,-275.5 392.25,-275.5 392.25,-245 483.25,-245 483.25,-275.5"/>
 <text text-anchor="start" x="400.25" y="-262" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="437.75" y="-250.75" font-family="Helvetica,sans-Serif" font-size="10.00">::Immediate</text>
@@ -134,7 +134,7 @@
 <!-- Node12 -->
 <g id="Node000012" class="node">
 <title>Node12</title>
-<g id="a_Node000012"><a xlink:href="classtriton_1_1exceptions_1_1Instruction.html" target="_top" xlink:title="The exception class used by an instruction.">
+<g id="a_Node000012"><a xlink:href="$classtriton_1_1exceptions_1_1Instruction.html" xlink:title="The exception class used by an instruction.">
 <polygon fill="white" stroke="#666666" points="483.25,-226.5 392.25,-226.5 392.25,-196 483.25,-196 483.25,-226.5"/>
 <text text-anchor="start" x="400.25" y="-213" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="437.75" y="-201.75" font-family="Helvetica,sans-Serif" font-size="10.00">::Instruction</text>
@@ -153,7 +153,7 @@
 <!-- Node13 -->
 <g id="Node000013" class="node">
 <title>Node13</title>
-<g id="a_Node000013"><a xlink:href="classtriton_1_1exceptions_1_1IrBuilder.html" target="_top" xlink:title="The exception class used by the IR builder.">
+<g id="a_Node000013"><a xlink:href="$classtriton_1_1exceptions_1_1IrBuilder.html" xlink:title="The exception class used by the IR builder.">
 <polygon fill="white" stroke="#666666" points="483.25,-177.5 392.25,-177.5 392.25,-147 483.25,-147 483.25,-177.5"/>
 <text text-anchor="start" x="400.25" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="437.75" y="-152.75" font-family="Helvetica,sans-Serif" font-size="10.00">::IrBuilder</text>
@@ -172,7 +172,7 @@
 <!-- Node14 -->
 <g id="Node000014" class="node">
 <title>Node14</title>
-<g id="a_Node000014"><a xlink:href="classtriton_1_1exceptions_1_1MemoryAccess.html" target="_top" xlink:title="The exception class used by memory access.">
+<g id="a_Node000014"><a xlink:href="$classtriton_1_1exceptions_1_1MemoryAccess.html" xlink:title="The exception class used by memory access.">
 <polygon fill="white" stroke="#666666" points="483.25,-128.5 392.25,-128.5 392.25,-98 483.25,-98 483.25,-128.5"/>
 <text text-anchor="start" x="400.25" y="-115" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="437.75" y="-103.75" font-family="Helvetica,sans-Serif" font-size="10.00">::MemoryAccess</text>
@@ -191,7 +191,7 @@
 <!-- Node15 -->
 <g id="Node000015" class="node">
 <title>Node15</title>
-<g id="a_Node000015"><a xlink:href="classtriton_1_1exceptions_1_1OperandWrapper.html" target="_top" xlink:title="The exception class used by operand wrappers.">
+<g id="a_Node000015"><a xlink:href="$classtriton_1_1exceptions_1_1OperandWrapper.html" xlink:title="The exception class used by operand wrappers.">
 <polygon fill="white" stroke="#666666" points="485.12,-79.5 390.38,-79.5 390.38,-49 485.12,-49 485.12,-79.5"/>
 <text text-anchor="start" x="398.38" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="437.75" y="-54.75" font-family="Helvetica,sans-Serif" font-size="10.00">::OperandWrapper</text>
@@ -210,7 +210,7 @@
 <!-- Node16 -->
 <g id="Node000016" class="node">
 <title>Node16</title>
-<g id="a_Node000016"><a xlink:href="classtriton_1_1exceptions_1_1Register.html" target="_top" xlink:title="The exception class used by register operands.">
+<g id="a_Node000016"><a xlink:href="$classtriton_1_1exceptions_1_1Register.html" xlink:title="The exception class used by register operands.">
 <polygon fill="white" stroke="#666666" points="483.25,-30.5 392.25,-30.5 392.25,0 483.25,0 483.25,-30.5"/>
 <text text-anchor="start" x="400.25" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="437.75" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">::Register</text>
@@ -229,7 +229,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classtriton_1_1exceptions_1_1Exception.html" target="_top" xlink:title="The root class of all exceptions.">
+<g id="a_Node000002"><a xlink:href="$classtriton_1_1exceptions_1_1Exception.html" xlink:title="The root class of all exceptions.">
 <polygon fill="white" stroke="#666666" points="204.5,-275.5 113.5,-275.5 113.5,-245 204.5,-245 204.5,-275.5"/>
 <text text-anchor="start" x="121.5" y="-262" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="159" y="-250.75" font-family="Helvetica,sans-Serif" font-size="10.00">::Exception</text>
@@ -266,7 +266,7 @@
 <!-- Node9 -->
 <g id="Node000009" class="node">
 <title>Node9</title>
-<g id="a_Node000009"><a xlink:href="classtriton_1_1exceptions_1_1Disassembly.html" target="_top" xlink:title="The exception class used by the disassembler.">
+<g id="a_Node000009"><a xlink:href="$classtriton_1_1exceptions_1_1Disassembly.html" xlink:title="The exception class used by the disassembler.">
 <polygon fill="white" stroke="#666666" points="635,-342.5 544,-342.5 544,-312 635,-312 635,-342.5"/>
 <text text-anchor="start" x="552" y="-329" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="589.5" y="-317.75" font-family="Helvetica,sans-Serif" font-size="10.00">::Disassembly</text>
@@ -285,7 +285,7 @@
 <!-- Node10 -->
 <g id="Node000010" class="node">
 <title>Node10</title>
-<g id="a_Node000010"><a xlink:href="classtriton_1_1exceptions_1_1Semantics.html" target="_top" xlink:title="The exception class used by all semantics.">
+<g id="a_Node000010"><a xlink:href="$classtriton_1_1exceptions_1_1Semantics.html" xlink:title="The exception class used by all semantics.">
 <polygon fill="white" stroke="#666666" points="635,-293.5 544,-293.5 544,-263 635,-263 635,-293.5"/>
 <text text-anchor="start" x="552" y="-280" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="589.5" y="-268.75" font-family="Helvetica,sans-Serif" font-size="10.00">::Semantics</text>

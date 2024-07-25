@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" href="$classtriton_1_1engines_1_1symbolic_1_1PathManager.html" title="The path manager class." alt="" coords="5,5,169,46"/>
 <area shape="rect" id="Node000001" href="$classtriton_1_1engines_1_1symbolic_1_1SymbolicEngine.html" title="The symbolic engine class." alt="" coords="217,39,380,79"/>
-<area shape="poly" id="edge122_Node000000_Node000001" title=" " alt="" coords="184,38,217,43,216,49,184,44"/>
+<area shape="poly" id="edge127_Node000000_Node000001" title=" " alt="" coords="184,38,217,43,216,49,184,44"/>
 <area shape="rect" id="Node000002" href="$classtriton_1_1engines_1_1symbolic_1_1SymbolicSimplification.html" title="The symbolic simplification class." alt="" coords="5,71,169,111"/>
-<area shape="poly" id="edge123_Node000002_Node000001" title=" " alt="" coords="184,74,216,69,217,74,184,79"/>
+<area shape="poly" id="edge128_Node000002_Node000001" title=" " alt="" coords="184,74,216,69,217,74,184,79"/>
 </map>

@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classtriton_1_1engines_1_1solver_1_1SolverInterface.html" target="_top" xlink:title="This interface is used to interface with solvers.">
+<g id="a_Node000002"><a xlink:href="$classtriton_1_1engines_1_1solver_1_1SolverInterface.html" xlink:title="This interface is used to interface with solvers.">
 <polygon fill="white" stroke="#666666" points="109.75,-97 0,-97 0,-66.5 109.75,-66.5 109.75,-97"/>
 <text text-anchor="start" x="8" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::engines::solver</text>
 <text text-anchor="middle" x="54.88" y="-72.25" font-family="Helvetica,sans-Serif" font-size="10.00">::SolverInterface</text>

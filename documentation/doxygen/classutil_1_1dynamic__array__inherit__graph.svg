@@ -22,7 +22,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classmath_1_1wide__integer_1_1detail_1_1fixed__dynamic__array.html" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="$classmath_1_1wide__integer_1_1detail_1_1fixed__dynamic__array.html" xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="392.75,-112.38 264.25,-112.38 264.25,-59.38 392.75,-59.38 392.75,-112.38"/>
 <text text-anchor="start" x="272.25" y="-98.88" font-family="Helvetica,sans-Serif" font-size="10.00">math::wide_integer</text>
 <text text-anchor="start" x="272.25" y="-87.62" font-family="Helvetica,sans-Serif" font-size="10.00">::detail::fixed_dynamic</text>
@@ -43,7 +43,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="classutil_1_1dynamic__array.html" target="_top" xlink:title=" ">
+<g id="a_Node000003"><a xlink:href="$classutil_1_1dynamic__array.html" xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="390.88,-41.75 266.12,-41.75 266.12,0 390.88,0 390.88,-41.75"/>
 <text text-anchor="start" x="274.12" y="-28.25" font-family="Helvetica,sans-Serif" font-size="10.00">util::dynamic_array</text>
 <text text-anchor="start" x="274.12" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; MyType, MyAlloc, size</text>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['max_5fsupported_0',['max_supported',['../group__size.html#gadbe1a11ff7f8139c9c0e1ea10e96537e',1,'triton::size::max_supported'],['../group__bitsize.html#ga1dce025c28d81a437d21103a531a4cc4',1,'triton::bitsize::max_supported']]],
-  ['memory_1',['memory',['../classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a99055b3846f05f63f63e8f6d52d22eb5',1,'triton::arch::arm::aarch64::AArch64Cpu::memory'],['../classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a93f48be83d688a59fff483a4d37209bf',1,'triton::arch::arm::arm32::Arm32Cpu::memory'],['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a38a55299fa6488a08facfb51992fc688',1,'triton::arch::x86::x8664Cpu::memory'],['../classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a9b5dfbd813e0857031acd7f1e47892b2',1,'triton::arch::x86::x86Cpu::memory']]],
+  ['memory_1',['memory',['../classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Cpu.html#a99055b3846f05f63f63e8f6d52d22eb5',1,'triton::arch::arm::aarch64::AArch64Cpu::memory'],['../classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html#a93f48be83d688a59fff483a4d37209bf',1,'triton::arch::arm::arm32::Arm32Cpu::memory'],['../classtriton_1_1arch_1_1riscv_1_1riscv32Cpu.html#a6726bbbb89851a2c19cf3d440ea8f95d',1,'triton::arch::riscv::riscv32Cpu::memory'],['../classtriton_1_1arch_1_1riscv_1_1riscv64Cpu.html#abad8e36f50eab146d4f7cae580f876d6',1,'triton::arch::riscv::riscv64Cpu::memory'],['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a38a55299fa6488a08facfb51992fc688',1,'triton::arch::x86::x8664Cpu::memory'],['../classtriton_1_1arch_1_1x86_1_1x86Cpu.html#a9b5dfbd813e0857031acd7f1e47892b2',1,'triton::arch::x86::x86Cpu::memory']]],
   ['memory_5farray_2',['MEMORY_ARRAY',['../group__modes.html#gga58ef498152df1bde838c96411d13af2fafcbab466648671b4ffa41252d7308c12',1,'triton::modes']]],
   ['memory_5fexpression_3',['MEMORY_EXPRESSION',['../group__symbolic.html#gga75473b76e53f754da0affbc706468929a9e72d38056c31f07f2d9b2d653308dac',1,'triton::engines::symbolic']]],
   ['memory_5fvariable_4',['MEMORY_VARIABLE',['../group__symbolic.html#ggadbf01c67aa57b3840f5e4211c754a87ea70acd7c5bf957538f2a4f13cdc4e0143',1,'triton::engines::symbolic']]],
@@ -35,9 +35,9 @@ var searchData=
   ['mode_32',['MODE',['../py_MODE_page.html',1,'']]],
   ['mode_20namespace_33',['Python API - Items of the MODE namespace',['../py_MODE_page.html#MODE_py_api',1,'']]],
   ['mode_5fe_34',['mode_e',['../group__representations.html#ga18af80487be7d16a7a8f9a3071920ff9',1,'triton::ast::representations::mode_e'],['../group__modes.html#ga58ef498152df1bde838c96411d13af2f',1,'triton::modes::mode_e']]],
-  ['modes_35',['Modes',['../classtriton_1_1modes_1_1Modes.html',1,'triton::modes::Modes'],['../classtriton_1_1modes_1_1Modes.html#a2118694531d2a6ac2175ea2fde3e94e4',1,'triton::modes::Modes::Modes()'],['../classtriton_1_1modes_1_1Modes.html#af98168894fa6a258a91c9ec01a681ac6',1,'triton::modes::Modes::Modes(const Modes &amp;other)']]],
+  ['modes_35',['Modes',['../classtriton_1_1modes_1_1Modes.html',1,'triton::modes']]],
   ['modes_36',['modes',['../classtriton_1_1Context.html#a7e68c7bd8fb9d2aa8573d8ab8d89bb8a',1,'triton::Context']]],
-  ['modes_37',['Modes',['../group__modes.html',1,'']]],
+  ['modes_37',['Modes',['../classtriton_1_1modes_1_1Modes.html#a2118694531d2a6ac2175ea2fde3e94e4',1,'triton::modes::Modes::Modes()'],['../classtriton_1_1modes_1_1Modes.html#af98168894fa6a258a91c9ec01a681ac6',1,'triton::modes::Modes::Modes(const Modes &amp;other)'],['../group__modes.html',1,'Modes']]],
   ['modes_2ecpp_38',['modes.cpp',['../modes_8cpp.html',1,'']]],
   ['modes_2ehpp_39',['modes.hpp',['../modes_8hpp.html',1,'']]],
   ['modesenums_2ehpp_40',['modesEnums.hpp',['../modesEnums_8hpp.html',1,'']]],

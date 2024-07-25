@@ -5,14 +5,21 @@
 <area shape="rect" id="Node000004" href="$classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Specifications.html" title="The Arm32Specifications class defines specifications about the Arm32 CPU." alt="" coords="16,71,202,111"/>
 <area shape="rect" id="Node000003" href="$classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Cpu.html" title="This class is used to describe the ARM (32&#45;bits) spec." alt="" coords="272,71,399,111"/>
 <area shape="poly" id="edge98_Node000004_Node000003" title=" " alt="" coords="217,88,272,88,272,94,217,94"/>
-<area shape="rect" id="Node000002" href="$classtriton_1_1arch_1_1CpuInterface.html" title="This interface is used as abstract CPU interface. All CPU must use this interface." alt="" coords="26,140,192,165"/>
-<area shape="poly" id="edge99_Node000002_Node000001" title=" " alt="" coords="193,131,211,121,227,106,235,91,243,74,259,57,278,44,281,49,262,61,248,77,240,93,231,109,214,125,195,136"/>
-<area shape="poly" id="edge100_Node000002_Node000003" title=" " alt="" coords="173,132,271,106,272,111,175,137"/>
-<area shape="rect" id="Node000005" href="$classtriton_1_1arch_1_1x86_1_1x8664Cpu.html" title="This class is used to describe the x86 (64&#45;bits) spec." alt="" coords="275,136,396,177"/>
-<area shape="poly" id="edge101_Node000002_Node000005" title=" " alt="" coords="207,151,275,153,275,158,207,157"/>
-<area shape="rect" id="Node000007" href="$classtriton_1_1arch_1_1x86_1_1x86Cpu.html" title="This class is used to describe the x86 (32&#45;bits) spec." alt="" coords="275,201,396,242"/>
-<area shape="poly" id="edge102_Node000002_Node000007" title=" " alt="" coords="174,167,213,179,276,199,274,204,212,184,173,173"/>
-<area shape="rect" id="Node000006" href="$classtriton_1_1arch_1_1x86_1_1x86Specifications.html" title="The x86Specifications class defines specifications about the x86 and x86_64 CPU." alt="" coords="47,193,171,234"/>
-<area shape="poly" id="edge103_Node000006_Node000005" title=" " alt="" coords="185,192,274,169,275,174,187,197"/>
-<area shape="poly" id="edge104_Node000006_Node000007" title=" " alt="" coords="187,214,275,217,274,222,186,219"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1arch_1_1CpuInterface.html" title="This interface is used as abstract CPU interface. All CPU must use this interface." alt="" coords="26,208,192,233"/>
+<area shape="poly" id="edge99_Node000002_Node000001" title=" " alt="" coords="201,198,211,190,224,175,231,159,235,127,239,93,246,75,259,57,274,45,277,49,263,61,251,78,244,94,241,127,236,161,229,178,215,194,205,202"/>
+<area shape="poly" id="edge100_Node000002_Node000003" title=" " alt="" coords="196,199,211,190,227,175,235,158,243,140,259,122,278,110,281,114,262,126,248,143,240,160,231,178,214,194,199,204"/>
+<area shape="rect" id="Node000005" href="$classtriton_1_1arch_1_1riscv_1_1riscv32Cpu.html" title="This class is used to describe the RV32 spec." alt="" coords="276,136,395,177"/>
+<area shape="poly" id="edge101_Node000002_Node000005" title=" " alt="" coords="174,200,212,190,275,171,276,177,213,195,176,205"/>
+<area shape="rect" id="Node000007" href="$classtriton_1_1arch_1_1riscv_1_1riscv64Cpu.html" title="This class is used to describe the RV64 spec." alt="" coords="276,201,395,242"/>
+<area shape="poly" id="edge102_Node000002_Node000007" title=" " alt="" coords="207,218,275,219,275,224,207,224"/>
+<area shape="rect" id="Node000008" href="$classtriton_1_1arch_1_1x86_1_1x8664Cpu.html" title="This class is used to describe the x86 (64&#45;bits) spec." alt="" coords="275,267,396,307"/>
+<area shape="poly" id="edge103_Node000002_Node000008" title=" " alt="" coords="171,236,276,267,274,272,169,241"/>
+<area shape="rect" id="Node000010" href="$classtriton_1_1arch_1_1x86_1_1x86Cpu.html" title="This class is used to describe the x86 (32&#45;bits) spec." alt="" coords="275,332,396,373"/>
+<area shape="poly" id="edge104_Node000002_Node000010" title=" " alt="" coords="145,240,214,285,262,317,286,329,284,334,259,321,211,289,142,244"/>
+<area shape="rect" id="Node000006" href="$classtriton_1_1arch_1_1riscv_1_1riscvSpecifications.html" title="The riscvSpecifications class defines specifications about the RV32 and RV64 CPU." alt="" coords="39,140,179,181"/>
+<area shape="poly" id="edge105_Node000006_Node000005" title=" " alt="" coords="194,156,275,155,275,160,194,161"/>
+<area shape="poly" id="edge106_Node000006_Node000007" title=" " alt="" coords="195,181,276,203,274,208,193,186"/>
+<area shape="rect" id="Node000009" href="$classtriton_1_1arch_1_1x86_1_1x86Specifications.html" title="The x86Specifications class defines specifications about the x86 and x86_64 CPU." alt="" coords="47,299,171,339"/>
+<area shape="poly" id="edge107_Node000009_Node000008" title=" " alt="" coords="186,305,274,293,275,298,187,311"/>
+<area shape="poly" id="edge108_Node000009_Node000010" title=" " alt="" coords="187,328,275,341,274,346,186,333"/>
 </map>

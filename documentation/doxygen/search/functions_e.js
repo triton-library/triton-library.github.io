@@ -16,5 +16,9 @@ var searchData=
   ['removeundefinedregister_13',['removeUndefinedRegister',['../classtriton_1_1arch_1_1Instruction.html#a8d8013cfac3fefcaeef4f3c2a8a801f5',1,'triton::arch::Instruction']]],
   ['removewrittenregister_14',['removeWrittenRegister',['../classtriton_1_1arch_1_1Instruction.html#ac258f53539500fdf7997728dbd8f0115',1,'triton::arch::Instruction']]],
   ['reset_15',['reset',['../classtriton_1_1Context.html#a4bb2e68c40a7083d61a73752b0ba4918',1,'triton::Context']]],
-  ['rotl_16',['rotl',['../group__ast.html#gafc4e13b0880dc8fcdb3573ac6fcd87ce',1,'triton::ast']]]
+  ['riscv32cpu_16',['riscv32Cpu',['../classtriton_1_1arch_1_1riscv_1_1riscv32Cpu.html#ab5ccb519b3e20134bdcc04fcf31aa092',1,'triton::arch::riscv::riscv32Cpu::riscv32Cpu(triton::callbacks::Callbacks *callbacks=nullptr)'],['../classtriton_1_1arch_1_1riscv_1_1riscv32Cpu.html#ada4e933792bbec3cdb4af1a9a4b6b4b0',1,'triton::arch::riscv::riscv32Cpu::riscv32Cpu(const riscv32Cpu &amp;other)']]],
+  ['riscv64cpu_17',['riscv64Cpu',['../classtriton_1_1arch_1_1riscv_1_1riscv64Cpu.html#a19e8f39b3511f12885a6bb974dd5716e',1,'triton::arch::riscv::riscv64Cpu::riscv64Cpu(triton::callbacks::Callbacks *callbacks=nullptr)'],['../classtriton_1_1arch_1_1riscv_1_1riscv64Cpu.html#ae5b439ddd6798b66c27e5b1a22ffc570',1,'triton::arch::riscv::riscv64Cpu::riscv64Cpu(const riscv64Cpu &amp;other)']]],
+  ['riscvsemantics_18',['riscvSemantics',['../classtriton_1_1arch_1_1riscv_1_1riscvSemantics.html#a862d50bebffa54b49aa2c78c7ca3beb9',1,'triton::arch::riscv::riscvSemantics']]],
+  ['riscvspecifications_19',['riscvSpecifications',['../classtriton_1_1arch_1_1riscv_1_1riscvSpecifications.html#ac2d75d5006b94462d19f4bf2c2361aad',1,'triton::arch::riscv::riscvSpecifications']]],
+  ['rotl_20',['rotl',['../group__ast.html#gafc4e13b0880dc8fcdb3573ac6fcd87ce',1,'triton::ast']]]
 ];

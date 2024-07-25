@@ -22,7 +22,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="pyTritonContext_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="$pyTritonContext_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="121.75,-130.75 0,-130.75 0,-77.75 121.75,-77.75 121.75,-130.75"/>
 <text text-anchor="start" x="8" y="-117.25" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="8" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -43,7 +43,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="callbacks_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000003"><a xlink:href="$callbacks_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="263.5,-125.12 140.25,-125.12 140.25,-83.38 263.5,-83.38 263.5,-125.12"/>
 <text text-anchor="start" x="148.25" y="-111.62" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="148.25" y="-100.38" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -63,7 +63,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="context_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000004"><a xlink:href="$context_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="402.38,-125.12 281.38,-125.12 281.38,-83.38 402.38,-83.38 402.38,-125.12"/>
 <text text-anchor="start" x="289.38" y="-111.62" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="289.38" y="-100.38" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -83,7 +83,7 @@
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="symbolicSimplification_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000005"><a xlink:href="$symbolicSimplification_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="634.88,-125.12 420.88,-125.12 420.88,-83.38 634.88,-83.38 634.88,-125.12"/>
 <text text-anchor="start" x="428.88" y="-111.62" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="428.88" y="-100.38" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -103,7 +103,7 @@
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="llvmToTriton_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000006"><a xlink:href="$llvmToTriton_8hpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="807.25,-125.12 652.5,-125.12 652.5,-83.38 807.25,-83.38 807.25,-125.12"/>
 <text text-anchor="start" x="660.5" y="-111.62" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="660.5" y="-100.38" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -123,7 +123,7 @@
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="llvmToTriton_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000007"><a xlink:href="$llvmToTriton_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="713.12,-41.75 584.62,-41.75 584.62,0 713.12,0 713.12,-41.75"/>
 <text text-anchor="start" x="592.62" y="-28.25" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="592.62" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -143,7 +143,7 @@
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="liftingToLLVM_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000008"><a xlink:href="$liftingToLLVM_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="890.88,-41.75 730.88,-41.75 730.88,0 890.88,0 890.88,-41.75"/>
 <text text-anchor="start" x="738.88" y="-28.25" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="738.88" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>

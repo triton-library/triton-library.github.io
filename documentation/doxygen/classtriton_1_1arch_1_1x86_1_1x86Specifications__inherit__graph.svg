@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classtriton_1_1arch_1_1x86_1_1x8664Cpu.html" target="_top" xlink:title="This class is used to describe the x86 (64&#45;bits) spec.">
+<g id="a_Node000002"><a xlink:href="$classtriton_1_1arch_1_1x86_1_1x8664Cpu.html" xlink:title="This class is used to describe the x86 (64&#45;bits) spec.">
 <polygon fill="white" stroke="#666666" points="90.25,-30.5 0,-30.5 0,0 90.25,0 90.25,-30.5"/>
 <text text-anchor="start" x="8" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">triton::arch::x86::</text>
 <text text-anchor="middle" x="45.12" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">x8664Cpu</text>
@@ -40,7 +40,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="classtriton_1_1arch_1_1x86_1_1x86Cpu.html" target="_top" xlink:title="This class is used to describe the x86 (32&#45;bits) spec.">
+<g id="a_Node000003"><a xlink:href="$classtriton_1_1arch_1_1x86_1_1x86Cpu.html" xlink:title="This class is used to describe the x86 (32&#45;bits) spec.">
 <polygon fill="white" stroke="#666666" points="198.25,-30.5 108,-30.5 108,0 198.25,0 198.25,-30.5"/>
 <text text-anchor="start" x="116" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">triton::arch::x86::</text>
 <text text-anchor="middle" x="153.12" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">x86Cpu</text>

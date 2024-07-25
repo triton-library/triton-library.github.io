@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classtriton_1_1exceptions_1_1Cpu.html" target="_top" xlink:title="The exception class used by all CPUs.">
+<g id="a_Node000002"><a xlink:href="$classtriton_1_1exceptions_1_1Cpu.html" xlink:title="The exception class used by all CPUs.">
 <polygon fill="white" stroke="#666666" points="115,-85.75 0,-85.75 0,-66.5 115,-66.5 115,-85.75"/>
 <text text-anchor="middle" x="57.5" y="-72.25" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions::Cpu</text>
 </a>
@@ -39,7 +39,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="classtriton_1_1exceptions_1_1Architecture.html" target="_top" xlink:title="The exception class used by architectures.">
+<g id="a_Node000003"><a xlink:href="$classtriton_1_1exceptions_1_1Architecture.html" xlink:title="The exception class used by architectures.">
 <polygon fill="white" stroke="#666666" points="103,-152.25 12,-152.25 12,-121.75 103,-121.75 103,-152.25"/>
 <text text-anchor="start" x="20" y="-138.75" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="57.5" y="-127.5" font-family="Helvetica,sans-Serif" font-size="10.00">::Architecture</text>
@@ -58,7 +58,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="classtriton_1_1exceptions_1_1Exception.html" target="_top" xlink:title="The root class of all exceptions.">
+<g id="a_Node000004"><a xlink:href="$classtriton_1_1exceptions_1_1Exception.html" xlink:title="The root class of all exceptions.">
 <polygon fill="white" stroke="#666666" points="103,-218.75 12,-218.75 12,-188.25 103,-188.25 103,-218.75"/>
 <text text-anchor="start" x="20" y="-205.25" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="57.5" y="-194" font-family="Helvetica,sans-Serif" font-size="10.00">::Exception</text>

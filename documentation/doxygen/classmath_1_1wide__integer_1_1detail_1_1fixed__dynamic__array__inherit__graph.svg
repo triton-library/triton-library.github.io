@@ -23,7 +23,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classutil_1_1dynamic__array.html" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="$classutil_1_1dynamic__array.html" xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="137.5,-130.75 0,-130.75 0,-89 137.5,-89 137.5,-130.75"/>
 <text text-anchor="start" x="8" y="-117.25" font-family="Helvetica,sans-Serif" font-size="10.00">util::dynamic_array</text>
 <text text-anchor="start" x="8" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; ValueType, AllocatorType,</text>

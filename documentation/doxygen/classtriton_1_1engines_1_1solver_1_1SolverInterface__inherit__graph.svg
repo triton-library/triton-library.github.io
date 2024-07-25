@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classtriton_1_1engines_1_1solver_1_1BitwuzlaSolver.html" target="_top" xlink:title="Solver engine using Bitwuzla.">
+<g id="a_Node000002"><a xlink:href="$classtriton_1_1engines_1_1solver_1_1BitwuzlaSolver.html" xlink:title="Solver engine using Bitwuzla.">
 <polygon fill="white" stroke="#666666" points="109.75,-30.5 0,-30.5 0,0 109.75,0 109.75,-30.5"/>
 <text text-anchor="start" x="8" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">triton::engines::solver</text>
 <text text-anchor="middle" x="54.88" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">::BitwuzlaSolver</text>
@@ -40,7 +40,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="classtriton_1_1engines_1_1solver_1_1Z3Solver.html" target="_top" xlink:title="Solver engine using z3.">
+<g id="a_Node000003"><a xlink:href="$classtriton_1_1engines_1_1solver_1_1Z3Solver.html" xlink:title="Solver engine using z3.">
 <polygon fill="white" stroke="#666666" points="237.75,-30.5 128,-30.5 128,0 237.75,0 237.75,-30.5"/>
 <text text-anchor="start" x="136" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">triton::engines::solver</text>
 <text text-anchor="middle" x="182.88" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">::Z3Solver</text>

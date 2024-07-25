@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classtriton_1_1ast_1_1representations_1_1AstPcodeRepresentation.html" target="_top" xlink:title="Pseudo Code representation.">
+<g id="a_Node000002"><a xlink:href="$classtriton_1_1ast_1_1representations_1_1AstPcodeRepresentation.html" xlink:title="Pseudo Code representation.">
 <polygon fill="white" stroke="#666666" points="309.5,-128.5 178.75,-128.5 178.75,-98 309.5,-98 309.5,-128.5"/>
 <text text-anchor="start" x="186.75" y="-115" font-family="Helvetica,sans-Serif" font-size="10.00">triton::ast::representations</text>
 <text text-anchor="middle" x="244.12" y="-103.75" font-family="Helvetica,sans-Serif" font-size="10.00">::AstPcodeRepresentation</text>
@@ -40,7 +40,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="classtriton_1_1ast_1_1representations_1_1AstPythonRepresentation.html" target="_top" xlink:title="Python representation.">
+<g id="a_Node000003"><a xlink:href="$classtriton_1_1ast_1_1representations_1_1AstPythonRepresentation.html" xlink:title="Python representation.">
 <polygon fill="white" stroke="#666666" points="311,-79.5 177.25,-79.5 177.25,-49 311,-49 311,-79.5"/>
 <text text-anchor="start" x="185.25" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">triton::ast::representations</text>
 <text text-anchor="middle" x="244.12" y="-54.75" font-family="Helvetica,sans-Serif" font-size="10.00">::AstPythonRepresentation</text>
@@ -59,7 +59,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="classtriton_1_1ast_1_1representations_1_1AstSmtRepresentation.html" target="_top" xlink:title="SMT representation.">
+<g id="a_Node000004"><a xlink:href="$classtriton_1_1ast_1_1representations_1_1AstSmtRepresentation.html" xlink:title="SMT representation.">
 <polygon fill="white" stroke="#666666" points="309.12,-30.5 179.12,-30.5 179.12,0 309.12,0 309.12,-30.5"/>
 <text text-anchor="start" x="187.12" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">triton::ast::representations</text>
 <text text-anchor="middle" x="244.12" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">::AstSmtRepresentation</text>

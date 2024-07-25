@@ -22,7 +22,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="architecture_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="$architecture_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="121,-47.38 0,-47.38 0,-5.62 121,-5.62 121,-47.38"/>
 <text text-anchor="start" x="8" y="-33.88" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="8" y="-22.62" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -42,7 +42,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="arm32Semantics_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000003"><a xlink:href="$arm32Semantics_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="321.75,-47.38 139.25,-47.38 139.25,-5.62 321.75,-5.62 321.75,-47.38"/>
 <text text-anchor="start" x="147.25" y="-33.88" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="147.25" y="-22.62" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -62,7 +62,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="arm32Specifications_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000004"><a xlink:href="$arm32Specifications_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="620.25,-136.38 422.75,-136.38 422.75,-94.62 620.25,-94.62 620.25,-136.38"/>
 <text text-anchor="start" x="430.75" y="-122.88" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="430.75" y="-111.62" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -82,7 +82,7 @@
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="initOpcodesNamespace_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000005"><a xlink:href="$initOpcodesNamespace_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="784.38,-142 638.62,-142 638.62,-89 784.38,-89 784.38,-142"/>
 <text text-anchor="start" x="646.62" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="646.62" y="-117.25" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -103,7 +103,7 @@
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="arm32Cpu_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000006"><a xlink:href="$arm32Cpu_8hpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="404.75,-136.38 258.25,-136.38 258.25,-94.62 404.75,-94.62 404.75,-136.38"/>
 <text text-anchor="start" x="266.25" y="-122.88" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="266.25" y="-111.62" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -141,7 +141,7 @@
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="arm32Cpu_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000007"><a xlink:href="$arm32Cpu_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="493.5,-47.38 339.5,-47.38 339.5,-5.62 493.5,-5.62 493.5,-47.38"/>
 <text text-anchor="start" x="347.5" y="-33.88" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="347.5" y="-22.62" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -161,7 +161,7 @@
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="pyTritonContext_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000008"><a xlink:href="$pyTritonContext_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="633.38,-53 511.62,-53 511.62,0 633.38,0 633.38,-53"/>
 <text text-anchor="start" x="519.62" y="-39.5" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="519.62" y="-28.25" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>
@@ -182,7 +182,7 @@
 <!-- Node9 -->
 <g id="Node000009" class="node">
 <title>Node9</title>
-<g id="a_Node000009"><a xlink:href="context_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000009"><a xlink:href="$context_8cpp.html" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="772,-47.38 651,-47.38 651,-5.62 772,-5.62 772,-47.38"/>
 <text text-anchor="start" x="659" y="-33.88" font-family="Helvetica,sans-Serif" font-size="10.00">/Users/jonathan/Works</text>
 <text text-anchor="start" x="659" y="-22.62" font-family="Helvetica,sans-Serif" font-size="10.00">/Tools/Triton/src/libtriton</text>

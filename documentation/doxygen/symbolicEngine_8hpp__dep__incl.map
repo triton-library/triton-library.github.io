@@ -1,29 +1,31 @@
 <map id="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/symbolicEngine.hpp" name="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/symbolicEngine.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="1138,5,1365,61"/>
-<area shape="rect" id="Node000002" href="$symbolicEngine_8cpp.html" title=" " alt="" coords="464,109,711,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1123,54,731,112,712,115,711,110,730,106,1123,49"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1270,5,1497,61"/>
+<area shape="rect" id="Node000002" href="$symbolicEngine_8cpp.html" title=" " alt="" coords="581,109,829,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1255,53,848,112,829,115,829,109,847,106,1254,48"/>
 <area shape="rect" id="Node000003" href="$aarch64Semantics_8hpp.html" title=" " alt="" coords="30,213,273,268"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1123,46,1024,56,922,70,831,88,796,99,769,111,755,124,748,138,740,153,725,167,685,182,633,193,509,204,383,208,285,215,274,217,273,212,285,210,382,203,508,198,632,187,683,177,722,162,736,150,743,136,751,121,766,107,794,94,830,83,921,65,1023,51,1122,41"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1255,46,1152,55,1046,69,951,88,914,99,886,111,873,124,866,138,858,154,842,167,791,185,726,197,650,204,568,207,408,209,340,211,285,215,274,217,273,212,285,210,340,205,408,203,568,202,649,198,725,192,790,180,840,162,854,150,861,136,868,121,884,107,912,94,950,83,1045,64,1152,50,1254,40"/>
 <area shape="rect" id="Node000006" href="$arm32Semantics_8hpp.html" title=" " alt="" coords="298,213,531,268"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1123,50,950,75,873,92,820,111,804,124,795,138,786,153,769,167,532,218,531,212,766,162,782,149,791,135,800,120,817,107,872,87,949,70,1122,45"/>
-<area shape="rect" id="Node000008" href="$context_8hpp.html" title=" " alt="" coords="1195,316,1373,372"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1259,76,1284,316,1278,316,1253,77"/>
-<area shape="rect" id="Node000016" href="$irBuilder_8hpp.html" title=" " alt="" coords="1065,213,1246,268"/>
-<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="1235,76,1171,214,1166,211,1230,74"/>
-<area shape="rect" id="Node000017" href="$liftingEngine_8hpp.html" title=" " alt="" coords="1547,213,1754,268"/>
-<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="1382,49,1461,71,1500,87,1537,107,1630,211,1626,214,1534,111,1498,92,1459,76,1380,54"/>
-<area shape="rect" id="Node000018" href="$liftingToDot_8hpp.html" title=" " alt="" coords="1322,109,1523,165"/>
-<area shape="poly" id="edge21_Node000001_Node000018" title=" " alt="" coords="1312,67,1378,106,1375,111,1309,72"/>
-<area shape="rect" id="Node000020" href="$liftingToPython_8hpp.html" title=" " alt="" coords="1598,109,1820,165"/>
-<area shape="poly" id="edge24_Node000001_Node000020" title=" " alt="" coords="1381,60,1598,108,1597,114,1380,66"/>
-<area shape="rect" id="Node000022" href="$liftingToSMT_8hpp.html" title=" " alt="" coords="1843,109,2050,165"/>
-<area shape="poly" id="edge27_Node000001_Node000022" title=" " alt="" coords="1381,45,1593,70,1832,106,1843,108,1842,114,1831,112,1592,75,1380,50"/>
-<area shape="rect" id="Node000024" href="$synthesizer_8hpp.html" title=" " alt="" coords="2164,109,2366,165"/>
-<area shape="poly" id="edge30_Node000001_Node000024" title=" " alt="" coords="1381,42,1691,69,2061,106,2164,119,2164,124,2061,112,1691,75,1381,48"/>
-<area shape="rect" id="Node000026" href="$taintEngine_8hpp.html" title=" " alt="" coords="888,109,1088,165"/>
-<area shape="poly" id="edge33_Node000001_Node000026" title=" " alt="" coords="1168,69,1060,111,1058,106,1166,64"/>
-<area shape="rect" id="Node000028" href="$x86Semantics_8hpp.html" title=" " alt="" coords="555,213,773,268"/>
-<area shape="poly" id="edge42_Node000001_Node000028" title=" " alt="" coords="1123,44,1063,53,1000,66,937,85,877,111,859,124,848,137,837,152,820,167,777,193,733,214,731,210,774,188,817,163,833,148,844,134,856,120,874,107,935,80,999,61,1062,48,1122,39"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1255,49,1073,74,993,91,937,111,922,124,913,138,903,153,886,167,838,189,796,201,757,207,720,208,641,207,595,209,543,215,532,217,531,212,542,210,595,203,641,202,719,203,757,202,795,196,837,184,884,162,899,150,908,136,918,120,934,107,992,86,1073,69,1254,44"/>
+<area shape="rect" id="Node000008" href="$context_8hpp.html" title=" " alt="" coords="1476,316,1654,372"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1513,35,1748,43,2034,56,2306,77,2418,91,2503,106,2578,121,2640,132,2667,142,2693,158,2718,180,2742,211,2750,227,2754,241,2751,256,2741,270,2725,278,2694,285,2592,298,2284,319,1932,334,1654,343,1654,338,1932,329,2283,314,2592,293,2693,280,2723,273,2738,266,2746,254,2748,242,2745,229,2737,214,2714,183,2690,162,2665,147,2639,138,2577,126,2502,112,2417,96,2305,82,2033,62,1748,48,1513,40"/>
+<area shape="rect" id="Node000016" href="$irBuilder_8hpp.html" title=" " alt="" coords="1014,213,1196,268"/>
+<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="1341,73,1219,167,1149,215,1146,210,1215,163,1338,68"/>
+<area shape="rect" id="Node000017" href="$liftingEngine_8hpp.html" title=" " alt="" coords="2047,213,2254,268"/>
+<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="1513,38,1638,46,1772,60,1893,80,1941,92,1978,107,1996,119,2006,133,2015,148,2029,163,2064,188,2100,210,2097,214,2061,192,2026,167,2011,151,2002,136,1992,123,1976,111,1940,97,1892,85,1771,65,1637,52,1512,43"/>
+<area shape="rect" id="Node000018" href="$liftingToDot_8hpp.html" title=" " alt="" coords="1763,109,1964,165"/>
+<area shape="poly" id="edge21_Node000001_Node000018" title=" " alt="" coords="1513,59,1763,112,1762,117,1512,64"/>
+<area shape="rect" id="Node000020" href="$liftingToPython_8hpp.html" title=" " alt="" coords="2040,109,2261,165"/>
+<area shape="poly" id="edge24_Node000001_Node000020" title=" " alt="" coords="1513,44,1750,69,2021,106,2040,109,2039,115,2021,112,1749,74,1512,49"/>
+<area shape="rect" id="Node000022" href="$liftingToSMT_8hpp.html" title=" " alt="" coords="2285,109,2491,165"/>
+<area shape="poly" id="edge27_Node000001_Node000022" title=" " alt="" coords="1513,37,1858,59,2066,79,2273,106,2284,108,2284,113,2273,112,2065,84,1857,64,1513,42"/>
+<area shape="rect" id="Node000024" href="$riscvSemantics_8hpp.html" title=" " alt="" coords="1271,213,1496,268"/>
+<area shape="poly" id="edge30_Node000001_Node000024" title=" " alt="" coords="1386,76,1386,212,1381,212,1381,76"/>
+<area shape="rect" id="Node000026" href="$synthesizer_8hpp.html" title=" " alt="" coords="1434,109,1635,165"/>
+<area shape="poly" id="edge32_Node000001_Node000026" title=" " alt="" coords="1438,68,1495,106,1492,111,1435,72"/>
+<area shape="rect" id="Node000028" href="$taintEngine_8hpp.html" title=" " alt="" coords="1005,109,1205,165"/>
+<area shape="poly" id="edge35_Node000001_Node000028" title=" " alt="" coords="1295,69,1181,111,1179,106,1294,64"/>
+<area shape="rect" id="Node000030" href="$x86Semantics_8hpp.html" title=" " alt="" coords="555,213,773,268"/>
+<area shape="poly" id="edge45_Node000001_Node000030" title=" " alt="" coords="1255,43,1192,51,1125,65,1058,84,994,111,977,124,966,138,955,153,937,167,868,193,774,218,773,212,867,188,934,162,951,149,962,135,973,120,992,107,1056,79,1124,59,1191,46,1254,38"/>
 <area shape="rect" id="Node000004" href="$aarch64Semantics_8cpp.html" title=" " alt="" coords="5,316,269,372"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="148,284,144,316,138,315,143,284"/>
 <area shape="rect" id="Node000005" href="$irBuilder_8cpp.html" title=" " alt="" coords="560,316,722,372"/>
@@ -31,43 +33,46 @@
 <area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="490,273,581,313,579,318,488,277"/>
 <area shape="rect" id="Node000007" href="$arm32Semantics_8cpp.html" title=" " alt="" coords="293,316,536,372"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="417,284,417,316,412,316,412,284"/>
-<area shape="rect" id="Node000009" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="828,420,990,491"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="1180,373,1003,423,992,426,990,421,1002,417,1179,368"/>
-<area shape="rect" id="Node000010" href="$callbacks_8cpp.html" title=" " alt="" coords="1015,428,1179,483"/>
-<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="1225,383,1145,429,1142,425,1223,378"/>
-<area shape="rect" id="Node000011" href="$context_8cpp.html" title=" " alt="" coords="1203,428,1364,483"/>
-<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="1286,387,1286,427,1281,427,1281,387"/>
-<area shape="rect" id="Node000012" href="$symbolicSimplification_8cpp.html" title=" " alt="" coords="1389,428,1674,483"/>
-<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="1360,376,1471,424,1469,429,1358,381"/>
-<area shape="rect" id="Node000013" href="$llvmToTriton_8hpp.html" title=" " alt="" coords="1698,428,1904,483"/>
-<area shape="poly" id="edge13_Node000008_Node000013" title=" " alt="" coords="1389,359,1531,384,1687,417,1714,424,1712,429,1686,423,1530,389,1388,364"/>
-<area shape="rect" id="Node000014" href="$llvmToTriton_8cpp.html" title=" " alt="" coords="1607,539,1779,594"/>
-<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="1766,496,1722,540,1718,536,1762,492"/>
-<area shape="rect" id="Node000015" href="$liftingToLLVM_8cpp.html" title=" " alt="" coords="1802,539,2016,594"/>
-<area shape="poly" id="edge15_Node000013_Node000015" title=" " alt="" coords="1840,492,1884,536,1880,540,1836,496"/>
-<area shape="poly" id="edge17_Node000016_Node000005" title=" " alt="" coords="1050,263,735,319,723,322,722,317,734,314,1049,258"/>
-<area shape="poly" id="edge18_Node000016_Node000008" title=" " alt="" coords="1203,276,1251,314,1248,318,1200,280"/>
-<area shape="poly" id="edge20_Node000017_Node000008" title=" " alt="" coords="1538,275,1374,321,1373,316,1537,270"/>
-<area shape="poly" id="edge23_Node000018_Node000017" title=" " alt="" coords="1498,169,1590,210,1588,214,1496,174"/>
-<area shape="rect" id="Node000019" href="$liftingToDot_8cpp.html" title=" " alt="" coords="1322,213,1523,268"/>
-<area shape="poly" id="edge22_Node000018_Node000019" title=" " alt="" coords="1425,180,1425,212,1420,212,1420,180"/>
-<area shape="poly" id="edge26_Node000020_Node000017" title=" " alt="" coords="1688,180,1668,213,1664,211,1683,177"/>
-<area shape="rect" id="Node000021" href="$liftingToPython_8cpp.html" title=" " alt="" coords="1777,213,1998,268"/>
-<area shape="poly" id="edge25_Node000020_Node000021" title=" " alt="" coords="1771,170,1841,210,1838,214,1769,175"/>
-<area shape="poly" id="edge29_Node000022_Node000017" title=" " alt="" coords="1854,173,1731,215,1729,210,1852,168"/>
-<area shape="rect" id="Node000023" href="$liftingToSMT_8cpp.html" title=" " alt="" coords="2022,213,2228,268"/>
-<area shape="poly" id="edge28_Node000022_Node000023" title=" " alt="" coords="2009,170,2078,210,2076,214,2006,175"/>
-<area shape="poly" id="edge32_Node000024_Node000008" title=" " alt="" coords="2272,181,2266,228,2257,251,2241,270,2223,281,2194,290,2109,306,1997,318,1867,328,1595,340,1373,345,1373,339,1595,334,1867,323,1997,313,2109,301,2193,285,2221,276,2238,266,2252,248,2261,227,2266,180"/>
-<area shape="rect" id="Node000025" href="$synthesizer_8cpp.html" title=" " alt="" coords="2303,213,2528,268"/>
-<area shape="poly" id="edge31_Node000024_Node000025" title=" " alt="" coords="2319,171,2377,210,2374,214,2317,176"/>
-<area shape="poly" id="edge35_Node000026_Node000003" title=" " alt="" coords="872,155,768,167,526,188,421,198,285,215,274,217,273,212,285,210,420,192,526,183,767,162,871,150"/>
-<area shape="poly" id="edge36_Node000026_Node000006" title=" " alt="" coords="873,159,543,215,532,217,531,212,542,210,872,154"/>
-<area shape="poly" id="edge37_Node000026_Node000008" title=" " alt="" coords="1001,178,1022,225,1037,247,1055,266,1086,289,1122,306,1195,328,1193,333,1120,311,1084,293,1051,270,1032,250,1017,227,997,181"/>
-<area shape="poly" id="edge38_Node000026_Node000016" title=" " alt="" coords="1047,171,1112,210,1109,214,1044,175"/>
-<area shape="rect" id="Node000027" href="$taintEngine_8cpp.html" title=" " alt="" coords="796,213,990,268"/>
-<area shape="poly" id="edge34_Node000026_Node000027" title=" " alt="" coords="954,178,920,214,916,210,950,174"/>
-<area shape="poly" id="edge39_Node000026_Node000028" title=" " alt="" coords="887,172,752,215,750,209,886,167"/>
-<area shape="poly" id="edge40_Node000028_Node000005" title=" " alt="" coords="657,284,650,316,644,315,652,283"/>
-<area shape="rect" id="Node000029" href="$x86Semantics_8cpp.html" title=" " alt="" coords="746,316,933,372"/>
-<area shape="poly" id="edge41_Node000028_Node000029" title=" " alt="" coords="725,274,794,313,791,318,722,279"/>
+<area shape="rect" id="Node000009" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="1109,420,1272,491"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="1461,376,1371,398,1284,423,1273,426,1271,421,1283,417,1370,393,1460,371"/>
+<area shape="rect" id="Node000010" href="$callbacks_8cpp.html" title=" " alt="" coords="1296,428,1461,483"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="1507,383,1426,429,1424,425,1504,378"/>
+<area shape="rect" id="Node000011" href="$context_8cpp.html" title=" " alt="" coords="1484,428,1646,483"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="1568,387,1568,427,1562,427,1562,387"/>
+<area shape="rect" id="Node000012" href="$symbolicSimplification_8cpp.html" title=" " alt="" coords="1670,428,1956,483"/>
+<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="1642,376,1752,424,1750,429,1640,381"/>
+<area shape="rect" id="Node000013" href="$llvmToTriton_8hpp.html" title=" " alt="" coords="1979,428,2186,483"/>
+<area shape="poly" id="edge13_Node000008_Node000013" title=" " alt="" coords="1670,359,1812,384,1968,417,1995,424,1994,429,1967,423,1811,389,1669,364"/>
+<area shape="rect" id="Node000014" href="$llvmToTriton_8cpp.html" title=" " alt="" coords="1889,539,2060,594"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="2047,496,2003,540,1999,536,2043,492"/>
+<area shape="rect" id="Node000015" href="$liftingToLLVM_8cpp.html" title=" " alt="" coords="2084,539,2297,594"/>
+<area shape="poly" id="edge15_Node000013_Node000015" title=" " alt="" coords="2122,492,2165,536,2162,540,2118,496"/>
+<area shape="poly" id="edge17_Node000016_Node000005" title=" " alt="" coords="1000,272,866,295,735,319,723,322,722,317,734,314,865,290,999,266"/>
+<area shape="poly" id="edge18_Node000016_Node000008" title=" " alt="" coords="1212,265,1215,266,1340,289,1466,314,1476,316,1475,321,1464,319,1339,295,1214,271,1210,270"/>
+<area shape="poly" id="edge20_Node000017_Node000008" title=" " alt="" coords="2032,272,1826,307,1655,333,1654,328,1825,302,2031,266"/>
+<area shape="poly" id="edge23_Node000018_Node000017" title=" " alt="" coords="1956,168,2074,210,2072,215,1954,173"/>
+<area shape="rect" id="Node000019" href="$liftingToDot_8cpp.html" title=" " alt="" coords="1822,213,2023,268"/>
+<area shape="poly" id="edge22_Node000018_Node000019" title=" " alt="" coords="1889,177,1909,211,1904,213,1885,180"/>
+<area shape="poly" id="edge26_Node000020_Node000017" title=" " alt="" coords="2153,180,2153,212,2148,212,2148,180"/>
+<area shape="rect" id="Node000021" href="$liftingToPython_8cpp.html" title=" " alt="" coords="2277,213,2498,268"/>
+<area shape="poly" id="edge25_Node000020_Node000021" title=" " alt="" coords="2229,169,2325,210,2323,214,2227,174"/>
+<area shape="poly" id="edge29_Node000022_Node000017" title=" " alt="" coords="2311,174,2215,214,2213,210,2309,169"/>
+<area shape="rect" id="Node000023" href="$liftingToSMT_8cpp.html" title=" " alt="" coords="2522,213,2728,268"/>
+<area shape="poly" id="edge28_Node000022_Node000023" title=" " alt="" coords="2466,169,2562,210,2560,214,2464,174"/>
+<area shape="rect" id="Node000025" href="$riscvSemantics_8cpp.html" title=" " alt="" coords="1251,316,1452,372"/>
+<area shape="poly" id="edge31_Node000024_Node000025" title=" " alt="" coords="1373,284,1363,316,1358,315,1368,282"/>
+<area shape="poly" id="edge34_Node000026_Node000008" title=" " alt="" coords="1543,180,1564,316,1558,316,1538,180"/>
+<area shape="rect" id="Node000027" href="$synthesizer_8cpp.html" title=" " alt="" coords="1572,213,1798,268"/>
+<area shape="poly" id="edge33_Node000026_Node000027" title=" " alt="" coords="1589,171,1646,210,1643,214,1586,176"/>
+<area shape="poly" id="edge37_Node000028_Node000003" title=" " alt="" coords="989,156,885,167,716,181,585,188,453,196,285,215,274,217,274,212,285,210,453,191,584,182,716,176,885,162,989,150"/>
+<area shape="poly" id="edge38_Node000028_Node000006" title=" " alt="" coords="990,159,936,167,739,190,653,199,543,215,532,217,531,212,542,210,652,194,738,184,935,162,989,154"/>
+<area shape="poly" id="edge39_Node000028_Node000008" title=" " alt="" coords="1160,172,1209,211,1224,227,1234,241,1245,254,1261,266,1314,290,1359,299,1406,303,1466,314,1476,316,1475,322,1464,319,1406,309,1358,304,1312,295,1258,271,1241,258,1230,244,1220,230,1206,215,1156,176"/>
+<area shape="poly" id="edge40_Node000028_Node000016" title=" " alt="" coords="1108,180,1108,212,1102,212,1102,180"/>
+<area shape="poly" id="edge41_Node000028_Node000024" title=" " alt="" coords="1195,168,1310,210,1308,215,1193,173"/>
+<area shape="rect" id="Node000029" href="$taintEngine_8cpp.html" title=" " alt="" coords="796,213,990,268"/>
+<area shape="poly" id="edge36_Node000028_Node000029" title=" " alt="" coords="1036,174,951,214,949,210,1033,169"/>
+<area shape="poly" id="edge42_Node000028_Node000030" title=" " alt="" coords="990,167,774,217,773,211,989,162"/>
+<area shape="poly" id="edge43_Node000030_Node000005" title=" " alt="" coords="657,284,650,316,644,315,652,283"/>
+<area shape="rect" id="Node000031" href="$x86Semantics_8cpp.html" title=" " alt="" coords="746,316,933,372"/>
+<area shape="poly" id="edge44_Node000030_Node000031" title=" " alt="" coords="725,274,794,313,791,318,722,279"/>
 </map>

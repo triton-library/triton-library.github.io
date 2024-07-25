@@ -1,9 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classtriton_1_1arch_1_1SemanticsInterface.html" title="This interface is used as abstract semantics interface. All ISA semantics must use this interface." alt="" coords="5,78,210,104"/>
+<area shape="rect" id="Node000000" href="$classtriton_1_1arch_1_1SemanticsInterface.html" title="This interface is used as abstract semantics interface. All ISA semantics must use this interface." alt="" coords="5,112,210,137"/>
 <area shape="rect" id="Node000001" href="$classtriton_1_1arch_1_1arm_1_1aarch64_1_1AArch64Semantics.html" title="The AArch64 ISA semantics." alt="" coords="258,5,445,46"/>
-<area shape="poly" id="edge110_Node000000_Node000001" title=" " alt="" coords="172,71,272,44,273,49,173,76"/>
+<area shape="poly" id="edge114_Node000000_Node000001" title=" " alt="" coords="150,102,257,57,289,44,291,49,259,61,152,107"/>
 <area shape="rect" id="Node000002" href="$classtriton_1_1arch_1_1arm_1_1arm32_1_1Arm32Semantics.html" title="The Arm32 ISA semantics." alt="" coords="269,71,434,111"/>
-<area shape="poly" id="edge111_Node000000_Node000002" title=" " alt="" coords="225,88,268,88,268,94,225,94"/>
-<area shape="rect" id="Node000003" href="$classtriton_1_1arch_1_1x86_1_1x86Semantics.html" title="The x86 ISA semantics." alt="" coords="291,136,412,177"/>
-<area shape="poly" id="edge112_Node000000_Node000003" title=" " alt="" coords="173,106,292,138,290,143,172,111"/>
+<area shape="poly" id="edge115_Node000000_Node000002" title=" " alt="" coords="221,106,268,100,268,105,222,111"/>
+<area shape="rect" id="Node000003" href="$classtriton_1_1arch_1_1riscv_1_1riscvSemantics.html" title="The RISCV ISA semantics." alt="" coords="292,136,411,177"/>
+<area shape="poly" id="edge116_Node000000_Node000003" title=" " alt="" coords="225,137,291,146,291,151,225,142"/>
+<area shape="rect" id="Node000004" href="$classtriton_1_1arch_1_1x86_1_1x86Semantics.html" title="The x86 ISA semantics." alt="" coords="291,201,412,242"/>
+<area shape="poly" id="edge117_Node000000_Node000004" title=" " alt="" coords="153,141,259,186,292,198,290,203,257,191,151,146"/>
 </map>

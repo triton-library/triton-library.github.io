@@ -21,7 +21,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="classtriton_1_1exceptions_1_1LiftingEngine.html" target="_top" xlink:title="The exception class used by the lifting engine.">
+<g id="a_Node000004"><a xlink:href="$classtriton_1_1exceptions_1_1LiftingEngine.html" xlink:title="The exception class used by the lifting engine.">
 <polygon fill="white" stroke="#666666" points="464.88,-250.5 373.88,-250.5 373.88,-220 464.88,-220 464.88,-250.5"/>
 <text text-anchor="start" x="381.88" y="-237" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="419.38" y="-225.75" font-family="Helvetica,sans-Serif" font-size="10.00">::LiftingEngine</text>
@@ -40,7 +40,7 @@
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="classtriton_1_1exceptions_1_1SolverEngine.html" target="_top" xlink:title="The exception class used by the solver engine.">
+<g id="a_Node000005"><a xlink:href="$classtriton_1_1exceptions_1_1SolverEngine.html" xlink:title="The exception class used by the solver engine.">
 <polygon fill="white" stroke="#666666" points="464.88,-201.5 373.88,-201.5 373.88,-171 464.88,-171 464.88,-201.5"/>
 <text text-anchor="start" x="381.88" y="-188" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="419.38" y="-176.75" font-family="Helvetica,sans-Serif" font-size="10.00">::SolverEngine</text>
@@ -59,7 +59,7 @@
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="classtriton_1_1exceptions_1_1SymbolicEngine.html" target="_top" xlink:title="The exception class used by the symbolic engine.">
+<g id="a_Node000007"><a xlink:href="$classtriton_1_1exceptions_1_1SymbolicEngine.html" xlink:title="The exception class used by the symbolic engine.">
 <polygon fill="white" stroke="#666666" points="465.62,-152.5 373.12,-152.5 373.12,-122 465.62,-122 465.62,-152.5"/>
 <text text-anchor="start" x="381.12" y="-139" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="419.38" y="-127.75" font-family="Helvetica,sans-Serif" font-size="10.00">::SymbolicEngine</text>
@@ -78,7 +78,7 @@
 <!-- Node13 -->
 <g id="Node000013" class="node">
 <title>Node13</title>
-<g id="a_Node000013"><a xlink:href="classtriton_1_1exceptions_1_1SynthesizerEngine.html" target="_top" xlink:title="The exception class used by the synthesizer engine.">
+<g id="a_Node000013"><a xlink:href="$classtriton_1_1exceptions_1_1SynthesizerEngine.html" xlink:title="The exception class used by the synthesizer engine.">
 <polygon fill="white" stroke="#666666" points="471.25,-103.5 367.5,-103.5 367.5,-73 471.25,-73 471.25,-103.5"/>
 <text text-anchor="start" x="375.5" y="-90" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="419.38" y="-78.75" font-family="Helvetica,sans-Serif" font-size="10.00">::SynthesizerEngine</text>
@@ -97,7 +97,7 @@
 <!-- Node14 -->
 <g id="Node000014" class="node">
 <title>Node14</title>
-<g id="a_Node000014"><a xlink:href="classtriton_1_1exceptions_1_1TaintEngine.html" target="_top" xlink:title="The exception class used by the taint engine.">
+<g id="a_Node000014"><a xlink:href="$classtriton_1_1exceptions_1_1TaintEngine.html" xlink:title="The exception class used by the taint engine.">
 <polygon fill="white" stroke="#666666" points="464.88,-54.5 373.88,-54.5 373.88,-24 464.88,-24 464.88,-54.5"/>
 <text text-anchor="start" x="381.88" y="-41" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="419.38" y="-29.75" font-family="Helvetica,sans-Serif" font-size="10.00">::TaintEngine</text>
@@ -116,7 +116,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classtriton_1_1exceptions_1_1Exception.html" target="_top" xlink:title="The root class of all exceptions.">
+<g id="a_Node000002"><a xlink:href="$classtriton_1_1exceptions_1_1Exception.html" xlink:title="The root class of all exceptions.">
 <polygon fill="white" stroke="#666666" points="204.5,-152.5 113.5,-152.5 113.5,-122 204.5,-122 204.5,-152.5"/>
 <text text-anchor="start" x="121.5" y="-139" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="159" y="-127.75" font-family="Helvetica,sans-Serif" font-size="10.00">::Exception</text>
@@ -153,7 +153,7 @@
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="classtriton_1_1exceptions_1_1SolverModel.html" target="_top" xlink:title="The exception class used by solver models.">
+<g id="a_Node000006"><a xlink:href="$classtriton_1_1exceptions_1_1SolverModel.html" xlink:title="The exception class used by solver models.">
 <polygon fill="white" stroke="#666666" points="613.25,-275.5 522.25,-275.5 522.25,-245 613.25,-245 613.25,-275.5"/>
 <text text-anchor="start" x="530.25" y="-262" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="567.75" y="-250.75" font-family="Helvetica,sans-Serif" font-size="10.00">::SolverModel</text>
@@ -172,7 +172,7 @@
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:href="classtriton_1_1exceptions_1_1PathConstraint.html" target="_top" xlink:title="The exception class used by path constraints.">
+<g id="a_Node000008"><a xlink:href="$classtriton_1_1exceptions_1_1PathConstraint.html" xlink:title="The exception class used by path constraints.">
 <polygon fill="white" stroke="#666666" points="613.25,-226.5 522.25,-226.5 522.25,-196 613.25,-196 613.25,-226.5"/>
 <text text-anchor="start" x="530.25" y="-213" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="567.75" y="-201.75" font-family="Helvetica,sans-Serif" font-size="10.00">::PathConstraint</text>
@@ -191,7 +191,7 @@
 <!-- Node9 -->
 <g id="Node000009" class="node">
 <title>Node9</title>
-<g id="a_Node000009"><a xlink:href="classtriton_1_1exceptions_1_1PathManager.html" target="_top" xlink:title="The exception class used by the path manager.">
+<g id="a_Node000009"><a xlink:href="$classtriton_1_1exceptions_1_1PathManager.html" xlink:title="The exception class used by the path manager.">
 <polygon fill="white" stroke="#666666" points="613.25,-177.5 522.25,-177.5 522.25,-147 613.25,-147 613.25,-177.5"/>
 <text text-anchor="start" x="530.25" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="567.75" y="-152.75" font-family="Helvetica,sans-Serif" font-size="10.00">::PathManager</text>
@@ -210,7 +210,7 @@
 <!-- Node10 -->
 <g id="Node000010" class="node">
 <title>Node10</title>
-<g id="a_Node000010"><a xlink:href="classtriton_1_1exceptions_1_1SymbolicExpression.html" target="_top" xlink:title="The exception class used by symbolic expressions.">
+<g id="a_Node000010"><a xlink:href="$classtriton_1_1exceptions_1_1SymbolicExpression.html" xlink:title="The exception class used by symbolic expressions.">
 <polygon fill="white" stroke="#666666" points="623.38,-128.5 512.12,-128.5 512.12,-98 623.38,-98 623.38,-128.5"/>
 <text text-anchor="start" x="520.12" y="-115" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="567.75" y="-103.75" font-family="Helvetica,sans-Serif" font-size="10.00">::SymbolicExpression</text>
@@ -229,7 +229,7 @@
 <!-- Node11 -->
 <g id="Node000011" class="node">
 <title>Node11</title>
-<g id="a_Node000011"><a xlink:href="classtriton_1_1exceptions_1_1SymbolicSimplification.html" target="_top" xlink:title="The exception class used by symbolic simplifications.">
+<g id="a_Node000011"><a xlink:href="$classtriton_1_1exceptions_1_1SymbolicSimplification.html" xlink:title="The exception class used by symbolic simplifications.">
 <polygon fill="white" stroke="#666666" points="628.25,-79.5 507.25,-79.5 507.25,-49 628.25,-49 628.25,-79.5"/>
 <text text-anchor="start" x="515.25" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="567.75" y="-54.75" font-family="Helvetica,sans-Serif" font-size="10.00">::SymbolicSimplification</text>
@@ -248,7 +248,7 @@
 <!-- Node12 -->
 <g id="Node000012" class="node">
 <title>Node12</title>
-<g id="a_Node000012"><a xlink:href="classtriton_1_1exceptions_1_1SymbolicVariable.html" target="_top" xlink:title="The exception class used by symbolic variables.">
+<g id="a_Node000012"><a xlink:href="$classtriton_1_1exceptions_1_1SymbolicVariable.html" xlink:title="The exception class used by symbolic variables.">
 <polygon fill="white" stroke="#666666" points="616.25,-30.5 519.25,-30.5 519.25,0 616.25,0 616.25,-30.5"/>
 <text text-anchor="start" x="527.25" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="567.75" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">::SymbolicVariable</text>

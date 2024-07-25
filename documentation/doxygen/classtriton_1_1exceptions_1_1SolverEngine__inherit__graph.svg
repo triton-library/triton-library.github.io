@@ -21,7 +21,7 @@
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="classtriton_1_1exceptions_1_1SolverModel.html" target="_top" xlink:title="The exception class used by solver models.">
+<g id="a_Node000005"><a xlink:href="$classtriton_1_1exceptions_1_1SolverModel.html" xlink:title="The exception class used by solver models.">
 <polygon fill="white" stroke="#666666" points="91,-30.5 0,-30.5 0,0 91,0 91,-30.5"/>
 <text text-anchor="start" x="8" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="45.5" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">::SolverModel</text>
@@ -40,7 +40,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classtriton_1_1exceptions_1_1Engines.html" target="_top" xlink:title="The exception class used by all engines.">
+<g id="a_Node000002"><a xlink:href="$classtriton_1_1exceptions_1_1Engines.html" xlink:title="The exception class used by all engines.">
 <polygon fill="white" stroke="#666666" points="91,-163.5 0,-163.5 0,-133 91,-133 91,-163.5"/>
 <text text-anchor="start" x="8" y="-150" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="45.5" y="-138.75" font-family="Helvetica,sans-Serif" font-size="10.00">::Engines</text>
@@ -59,7 +59,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="classtriton_1_1exceptions_1_1Exception.html" target="_top" xlink:title="The root class of all exceptions.">
+<g id="a_Node000003"><a xlink:href="$classtriton_1_1exceptions_1_1Exception.html" xlink:title="The root class of all exceptions.">
 <polygon fill="white" stroke="#666666" points="91,-230 0,-230 0,-199.5 91,-199.5 91,-230"/>
 <text text-anchor="start" x="8" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00">triton::exceptions</text>
 <text text-anchor="middle" x="45.5" y="-205.25" font-family="Helvetica,sans-Serif" font-size="10.00">::Exception</text>

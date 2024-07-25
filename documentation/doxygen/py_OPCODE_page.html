@@ -86,6 +86,8 @@ $(function() {
 <li class="level1"><a href="#OPCODE_py_api">Python API - Items of the OPCODE namespace</a><ul><li class="level2"><a href="#OPCODE_x86_py_api">x86 and x86_64</a></li>
 <li class="level2"><a href="#OPCODE_arm32_py_api">ARM32</a></li>
 <li class="level2"><a href="#OPCODE_aarch64_py_api">AArch64</a></li>
+<li class="level2"><a href="#OPCODE_riscv64_py_api">RV64</a></li>
+<li class="level2"><a href="#OPCODE_riscv32_py_api">RV32</a></li>
 </ul>
 </li>
 </ul>
@@ -4394,6 +4396,350 @@ AArch64</h2>
 <li><b>OPCODE.AARCH64.ZIP1</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.ZIP2</b><br  />
+</li>
+</ul>
+<h2><a class="anchor" id="OPCODE_riscv64_py_api"></a>
+RV64</h2>
+<ul>
+<li><b>OPCODE.RV64.ADD</b><br  />
+</li>
+<li><b>OPCODE.RV64.ADDI</b><br  />
+</li>
+<li><b>OPCODE.RV64.ADDIW</b><br  />
+</li>
+<li><b>OPCODE.RV64.ADDW</b><br  />
+</li>
+<li><b>OPCODE.RV64.AND</b><br  />
+</li>
+<li><b>OPCODE.RV64.ANDI</b><br  />
+</li>
+<li><b>OPCODE.RV64.AND</b><br  />
+</li>
+<li><b>OPCODE.RV64.AUIPC</b><br  />
+</li>
+<li><b>OPCODE.RV64.BEQ</b><br  />
+</li>
+<li><b>OPCODE.RV64.BGE</b><br  />
+</li>
+<li><b>OPCODE.RV64.BGEU</b><br  />
+</li>
+<li><b>OPCODE.RV64.BLT</b><br  />
+</li>
+<li><b>OPCODE.RV64.BLTU</b><br  />
+</li>
+<li><b>OPCODE.RV64.BNE</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_ADD</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_ADDI</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_ADDI16SP</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_ADDI4SPN</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_ADDIW</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_ADDW</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_AND</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_ANDI</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_BEQZ</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_BNEZ</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_J</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_JALR</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_JR</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_LD</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_LDSP</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_LI</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_LUI</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_LW</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_LWSP</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_MV</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_NOP</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_OR</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_SD</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_SDSP</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_SLLI</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_SRAI</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_SRLI</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_SUB</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_SUBW</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_SW</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_SWSP</b><br  />
+</li>
+<li><b>OPCODE.RV64.C_XOR</b><br  />
+</li>
+<li><b>OPCODE.RV64.DIV</b><br  />
+</li>
+<li><b>OPCODE.RV64.DIVU</b><br  />
+</li>
+<li><b>OPCODE.RV64.DIVUW</b><br  />
+</li>
+<li><b>OPCODE.RV64.DIVW</b><br  />
+</li>
+<li><b>OPCODE.RV64.JAL</b><br  />
+</li>
+<li><b>OPCODE.RV64.JALR</b><br  />
+</li>
+<li><b>OPCODE.RV64.LB</b><br  />
+</li>
+<li><b>OPCODE.RV64.LBU</b><br  />
+</li>
+<li><b>OPCODE.RV64.LD</b><br  />
+</li>
+<li><b>OPCODE.RV64.LH</b><br  />
+</li>
+<li><b>OPCODE.RV64.LHU</b><br  />
+</li>
+<li><b>OPCODE.RV64.LUI</b><br  />
+</li>
+<li><b>OPCODE.RV64.LW</b><br  />
+</li>
+<li><b>OPCODE.RV64.LWU</b><br  />
+</li>
+<li><b>OPCODE.RV64.MUL</b><br  />
+</li>
+<li><b>OPCODE.RV64.MULH</b><br  />
+</li>
+<li><b>OPCODE.RV64.MULHSU</b><br  />
+</li>
+<li><b>OPCODE.RV64.MULHU</b><br  />
+</li>
+<li><b>OPCODE.RV64.MULW</b><br  />
+</li>
+<li><b>OPCODE.RV64.OR</b><br  />
+</li>
+<li><b>OPCODE.RV64.ORI</b><br  />
+</li>
+<li><b>OPCODE.RV64.REM</b><br  />
+</li>
+<li><b>OPCODE.RV64.REMU</b><br  />
+</li>
+<li><b>OPCODE.RV64.REMUW</b><br  />
+</li>
+<li><b>OPCODE.RV64.REMW</b><br  />
+</li>
+<li><b>OPCODE.RV64.SB</b><br  />
+</li>
+<li><b>OPCODE.RV64.SD</b><br  />
+</li>
+<li><b>OPCODE.RV64.SH</b><br  />
+</li>
+<li><b>OPCODE.RV64.SLL</b><br  />
+</li>
+<li><b>OPCODE.RV64.SLLI</b><br  />
+</li>
+<li><b>OPCODE.RV64.SLLIW</b><br  />
+</li>
+<li><b>OPCODE.RV64.SLLW</b><br  />
+</li>
+<li><b>OPCODE.RV64.SLT</b><br  />
+</li>
+<li><b>OPCODE.RV64.SLTI</b><br  />
+</li>
+<li><b>OPCODE.RV64.SLTIU</b><br  />
+</li>
+<li><b>OPCODE.RV64.SLTU</b><br  />
+</li>
+<li><b>OPCODE.RV64.SRA</b><br  />
+</li>
+<li><b>OPCODE.RV64.SRAI</b><br  />
+</li>
+<li><b>OPCODE.RV64.SRAIW</b><br  />
+</li>
+<li><b>OPCODE.RV64.SRAW</b><br  />
+</li>
+<li><b>OPCODE.RV64.SRL</b><br  />
+</li>
+<li><b>OPCODE.RV64.SRLI</b><br  />
+</li>
+<li><b>OPCODE.RV64.SRLIW</b><br  />
+</li>
+<li><b>OPCODE.RV64.SRLW</b><br  />
+</li>
+<li><b>OPCODE.RV64.SUB</b><br  />
+</li>
+<li><b>OPCODE.RV64.SUBW</b><br  />
+</li>
+<li><b>OPCODE.RV64.SW</b><br  />
+</li>
+<li><b>OPCODE.RV64.XOR</b><br  />
+</li>
+<li><b>OPCODE.RV64.XORI</b><br  />
+</li>
+</ul>
+<h2><a class="anchor" id="OPCODE_riscv32_py_api"></a>
+RV32</h2>
+<ul>
+<li><b>OPCODE.RV32.ADD</b><br  />
+</li>
+<li><b>OPCODE.RV32.ADDI</b><br  />
+</li>
+<li><b>OPCODE.RV32.AND</b><br  />
+</li>
+<li><b>OPCODE.RV32.ANDI</b><br  />
+</li>
+<li><b>OPCODE.RV32.AND</b><br  />
+</li>
+<li><b>OPCODE.RV32.AUIPC</b><br  />
+</li>
+<li><b>OPCODE.RV32.BEQ</b><br  />
+</li>
+<li><b>OPCODE.RV32.BGE</b><br  />
+</li>
+<li><b>OPCODE.RV32.BGEU</b><br  />
+</li>
+<li><b>OPCODE.RV32.BLT</b><br  />
+</li>
+<li><b>OPCODE.RV32.BLTU</b><br  />
+</li>
+<li><b>OPCODE.RV32.BNE</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_ADD</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_ADDI</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_ADDI16SP</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_ADDI4SPN</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_AND</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_ANDI</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_BEQZ</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_BNEZ</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_J</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_JAL</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_JALR</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_JR</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_LI</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_LUI</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_LW</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_LWSP</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_MV</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_NOP</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_OR</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_SLLI</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_SRAI</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_SRLI</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_SUB</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_SW</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_SWSP</b><br  />
+</li>
+<li><b>OPCODE.RV32.C_XOR</b><br  />
+</li>
+<li><b>OPCODE.RV32.DIV</b><br  />
+</li>
+<li><b>OPCODE.RV32.DIVU</b><br  />
+</li>
+<li><b>OPCODE.RV32.JAL</b><br  />
+</li>
+<li><b>OPCODE.RV32.JALR</b><br  />
+</li>
+<li><b>OPCODE.RV32.LB</b><br  />
+</li>
+<li><b>OPCODE.RV32.LBU</b><br  />
+</li>
+<li><b>OPCODE.RV32.LD</b><br  />
+</li>
+<li><b>OPCODE.RV32.LH</b><br  />
+</li>
+<li><b>OPCODE.RV32.LHU</b><br  />
+</li>
+<li><b>OPCODE.RV32.LUI</b><br  />
+</li>
+<li><b>OPCODE.RV32.LW</b><br  />
+</li>
+<li><b>OPCODE.RV32.MUL</b><br  />
+</li>
+<li><b>OPCODE.RV32.MULH</b><br  />
+</li>
+<li><b>OPCODE.RV32.MULHS</b><br  />
+</li>
+<li><b>OPCODE.RV32.MULHU</b><br  />
+</li>
+<li><b>OPCODE.RV32.OR</b><br  />
+</li>
+<li><b>OPCODE.RV32.ORI</b><br  />
+</li>
+<li><b>OPCODE.RV32.REM</b><br  />
+</li>
+<li><b>OPCODE.RV32.REMU</b><br  />
+</li>
+<li><b>OPCODE.RV32.SB</b><br  />
+</li>
+<li><b>OPCODE.RV32.SH</b><br  />
+</li>
+<li><b>OPCODE.RV32.SLL</b><br  />
+</li>
+<li><b>OPCODE.RV32.SLLI</b><br  />
+</li>
+<li><b>OPCODE.RV32.SLT</b><br  />
+</li>
+<li><b>OPCODE.RV32.SLTI</b><br  />
+</li>
+<li><b>OPCODE.RV32.SLTIU</b><br  />
+</li>
+<li><b>OPCODE.RV32.SLTU</b><br  />
+</li>
+<li><b>OPCODE.RV32.SRA</b><br  />
+</li>
+<li><b>OPCODE.RV32.SRAI</b><br  />
+</li>
+<li><b>OPCODE.RV32.SRL</b><br  />
+</li>
+<li><b>OPCODE.RV32.SRLI</b><br  />
+</li>
+<li><b>OPCODE.RV32.SUB</b><br  />
+</li>
+<li><b>OPCODE.RV32.SW</b><br  />
+</li>
+<li><b>OPCODE.RV32.XOR</b><br  />
+</li>
+<li><b>OPCODE.RV32.XORI</b><br  />
  </li>
 </ul>
 </div></div><!-- contents -->
