@@ -1,45 +1,46 @@
 <map id="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/taintEngine.hpp" name="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/taintEngine.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="757,5,957,61"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="760,5,961,61"/>
 <area shape="rect" id="Node000002" href="$taintEngine_8cpp.html" title=" " alt="" coords="5,109,199,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="741,46,497,71,354,89,212,112,200,114,199,109,211,106,353,84,496,65,741,41"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="745,46,499,71,355,89,212,112,200,114,199,109,211,106,354,84,498,65,745,41"/>
 <area shape="rect" id="Node000003" href="$aarch64Semantics_8hpp.html" title=" " alt="" coords="223,109,466,165"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="742,60,467,114,466,109,741,55"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="746,60,480,112,467,114,466,109,479,106,745,54"/>
 <area shape="rect" id="Node000006" href="$arm32Semantics_8hpp.html" title=" " alt="" coords="491,109,724,165"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="777,70,675,111,673,106,775,65"/>
-<area shape="rect" id="Node000008" href="$context_8hpp.html" title=" " alt="" coords="1104,213,1282,268"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="973,44,1037,54,1099,67,1151,85,1171,95,1185,107,1199,132,1205,160,1205,188,1202,213,1197,212,1200,188,1200,161,1194,134,1181,111,1168,100,1149,90,1098,72,1036,59,972,49"/>
-<area shape="rect" id="Node000016" href="$irBuilder_8hpp.html" title=" " alt="" coords="990,109,1171,165"/>
-<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="932,65,1022,106,1019,111,930,70"/>
-<area shape="rect" id="Node000017" href="$riscvSemantics_8hpp.html" title=" " alt="" coords="1277,109,1503,165"/>
-<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="972,54,1277,111,1276,117,971,59"/>
-<area shape="rect" id="Node000019" href="$x86Semantics_8hpp.html" title=" " alt="" coords="748,109,966,165"/>
-<area shape="poly" id="edge21_Node000001_Node000019" title=" " alt="" coords="859,77,859,108,854,108,854,77"/>
-<area shape="rect" id="Node000004" href="$aarch64Semantics_8cpp.html" title=" " alt="" coords="152,213,415,268"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="323,179,302,213,298,211,318,177"/>
-<area shape="rect" id="Node000005" href="$irBuilder_8cpp.html" title=" " alt="" coords="707,213,868,268"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="482,163,695,210,707,213,706,218,693,215,481,168"/>
-<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="670,170,740,210,738,214,667,175"/>
-<area shape="rect" id="Node000007" href="$arm32Semantics_8cpp.html" title=" " alt="" coords="439,213,682,268"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="591,180,576,213,571,211,586,178"/>
-<area shape="rect" id="Node000009" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="737,316,899,387"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="1089,272,912,319,901,323,899,318,911,314,1088,267"/>
-<area shape="rect" id="Node000010" href="$callbacks_8cpp.html" title=" " alt="" coords="924,324,1088,380"/>
-<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="1134,279,1054,326,1051,321,1132,274"/>
-<area shape="rect" id="Node000011" href="$context_8cpp.html" title=" " alt="" coords="1112,324,1273,380"/>
-<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="1195,284,1195,323,1190,323,1190,284"/>
-<area shape="rect" id="Node000012" href="$symbolicSimplification_8cpp.html" title=" " alt="" coords="1298,324,1583,380"/>
-<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="1269,272,1380,321,1378,326,1267,277"/>
-<area shape="rect" id="Node000013" href="$llvmToTriton_8hpp.html" title=" " alt="" coords="1607,324,1813,380"/>
-<area shape="poly" id="edge13_Node000008_Node000013" title=" " alt="" coords="1297,266,1382,281,1448,289,1514,298,1596,314,1624,321,1623,326,1595,319,1513,303,1448,294,1381,286,1296,271"/>
-<area shape="rect" id="Node000014" href="$llvmToTriton_8cpp.html" title=" " alt="" coords="1516,435,1688,491"/>
-<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="1675,392,1631,436,1627,433,1671,389"/>
-<area shape="rect" id="Node000015" href="$liftingToLLVM_8cpp.html" title=" " alt="" coords="1711,435,1925,491"/>
-<area shape="poly" id="edge15_Node000013_Node000015" title=" " alt="" coords="1749,389,1793,433,1789,436,1745,392"/>
-<area shape="poly" id="edge17_Node000016_Node000005" title=" " alt="" coords="989,173,867,215,865,210,987,168"/>
-<area shape="poly" id="edge18_Node000016_Node000008" title=" " alt="" coords="1123,173,1164,210,1161,214,1120,177"/>
-<area shape="rect" id="Node000018" href="$riscvSemantics_8cpp.html" title=" " alt="" coords="1305,213,1507,268"/>
-<area shape="poly" id="edge20_Node000017_Node000018" title=" " alt="" coords="1399,180,1404,212,1399,212,1394,181"/>
-<area shape="poly" id="edge22_Node000019_Node000005" title=" " alt="" coords="832,179,808,214,804,211,827,176"/>
-<area shape="rect" id="Node000020" href="$x86Semantics_8cpp.html" title=" " alt="" coords="892,213,1080,268"/>
-<area shape="poly" id="edge23_Node000019_Node000020" title=" " alt="" coords="905,172,953,210,950,214,901,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="780,70,676,111,674,106,778,65"/>
+<area shape="rect" id="Node000008" href="$context_8hpp.html" title=" " alt="" coords="1369,213,1547,268"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="976,31,1101,36,1236,47,1300,57,1356,70,1402,86,1435,107,1452,131,1461,159,1464,187,1464,212,1458,212,1459,188,1455,160,1447,133,1431,111,1400,91,1354,75,1299,62,1236,52,1101,41,976,37"/>
+<area shape="rect" id="Node000016" href="$irBuilder_8hpp.html" title=" " alt="" coords="1239,109,1421,165"/>
+<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="977,54,1228,106,1239,109,1238,114,1227,112,975,59"/>
+<area shape="rect" id="Node000017" href="$riscvSemantics_8hpp.html" title=" " alt="" coords="748,109,973,165"/>
+<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="863,77,863,108,858,108,858,77"/>
+<area shape="rect" id="Node000019" href="$x86Semantics_8hpp.html" title=" " alt="" coords="997,109,1215,165"/>
+<area shape="poly" id="edge22_Node000001_Node000019" title=" " alt="" coords="941,65,1041,106,1039,111,939,70"/>
+<area shape="rect" id="Node000004" href="$aarch64Semantics_8cpp.html" title=" " alt="" coords="192,213,455,268"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="338,181,332,213,326,211,333,179"/>
+<area shape="rect" id="Node000005" href="$irBuilder_8cpp.html" title=" " alt="" coords="747,213,908,268"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="482,162,611,185,735,210,747,213,745,218,733,215,610,190,481,168"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="681,169,769,210,767,214,679,174"/>
+<area shape="rect" id="Node000007" href="$arm32Semantics_8cpp.html" title=" " alt="" coords="479,213,722,268"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="607,181,605,212,600,212,602,180"/>
+<area shape="rect" id="Node000009" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="1002,316,1164,387"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="1354,272,1177,319,1166,323,1164,318,1176,314,1353,267"/>
+<area shape="rect" id="Node000010" href="$callbacks_8cpp.html" title=" " alt="" coords="1189,324,1354,380"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="1400,279,1319,326,1317,321,1397,274"/>
+<area shape="rect" id="Node000011" href="$context_8cpp.html" title=" " alt="" coords="1377,324,1539,380"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="1461,284,1461,323,1455,323,1455,284"/>
+<area shape="rect" id="Node000012" href="$symbolicSimplification_8cpp.html" title=" " alt="" coords="1563,324,1849,380"/>
+<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="1535,272,1645,321,1643,326,1533,277"/>
+<area shape="rect" id="Node000013" href="$llvmToTriton_8hpp.html" title=" " alt="" coords="1872,324,2078,380"/>
+<area shape="poly" id="edge13_Node000008_Node000013" title=" " alt="" coords="1563,255,1705,281,1861,314,1888,321,1887,326,1860,319,1704,286,1562,261"/>
+<area shape="rect" id="Node000014" href="$llvmToTriton_8cpp.html" title=" " alt="" coords="1782,435,1953,491"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="1940,392,1896,436,1892,433,1936,389"/>
+<area shape="rect" id="Node000015" href="$liftingToLLVM_8cpp.html" title=" " alt="" coords="1977,435,2190,491"/>
+<area shape="poly" id="edge15_Node000013_Node000015" title=" " alt="" coords="2015,389,2058,433,2055,436,2011,392"/>
+<area shape="poly" id="edge17_Node000016_Node000005" title=" " alt="" coords="1225,168,1139,183,1071,191,1004,200,921,215,909,218,908,213,920,210,1004,194,1070,186,1138,177,1224,163"/>
+<area shape="poly" id="edge18_Node000016_Node000008" title=" " alt="" coords="1378,172,1425,210,1422,214,1374,177"/>
+<area shape="poly" id="edge20_Node000017_Node000005" title=" " alt="" coords="850,180,839,213,834,211,844,179"/>
+<area shape="rect" id="Node000018" href="$riscvSemantics_8cpp.html" title=" " alt="" coords="932,213,1133,268"/>
+<area shape="poly" id="edge21_Node000017_Node000018" title=" " alt="" coords="921,171,988,210,985,214,919,175"/>
+<area shape="poly" id="edge23_Node000019_Node000005" title=" " alt="" coords="1018,173,903,215,901,210,1016,168"/>
+<area shape="rect" id="Node000020" href="$x86Semantics_8cpp.html" title=" " alt="" coords="1158,213,1345,268"/>
+<area shape="poly" id="edge24_Node000019_Node000020" title=" " alt="" coords="1159,171,1214,210,1211,214,1156,176"/>
 </map>

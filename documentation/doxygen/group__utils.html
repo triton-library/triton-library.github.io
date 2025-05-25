@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1592</span>
+   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1599</span>
    </div>
   </td>
  </tr>
@@ -113,9 +113,33 @@ Functions</h2></td></tr>
 <tr class="memitem:gab80530fdc9c33401c823a61c92ea64eb"><td class="memTemplItemLeft" align="right" valign="top">TRITON_EXPORT <a class="el" href="group__triton.html#gab32dc67ba8eed51e8f559a85549cd99d">triton::uint80</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gab80530fdc9c33401c823a61c92ea64eb">triton::utils::cast</a> (const <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680">triton::uint512</a> &amp;value)</td></tr>
 <tr class="memdesc:gab80530fdc9c33401c823a61c92ea64eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast an uint512 to an uint80 according to the multiprecision library.  <br /></td></tr>
 <tr class="separator:gab80530fdc9c33401c823a61c92ea64eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac75ba40a1414a7afcbeb2ba2080734ed" id="r_gac75ba40a1414a7afcbeb2ba2080734ed"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gac75ba40a1414a7afcbeb2ba2080734ed"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_unsigned_v&lt; T &gt;, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gac75ba40a1414a7afcbeb2ba2080734ed">triton::utils::byteswap</a> (T value)</td></tr>
+<tr class="separator:gac75ba40a1414a7afcbeb2ba2080734ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gac75ba40a1414a7afcbeb2ba2080734ed" name="gac75ba40a1414a7afcbeb2ba2080734ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac75ba40a1414a7afcbeb2ba2080734ed">&#9670;&#160;</a></span>byteswap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_unsigned_v&lt; T &gt;, T &gt; triton::utils::byteswap </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="coreUtils_8hpp_source.html#l00086">86</a> of file <a class="el" href="coreUtils_8hpp_source.html">coreUtils.hpp</a>.</p>
+
+</div>
+</div>
 <a id="gaf266698124032edf17dffa85f48a8d2c" name="gaf266698124032edf17dffa85f48a8d2c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf266698124032edf17dffa85f48a8d2c">&#9670;&#160;</a></span>cast() <span class="overload">[1/4]</span></h2>
 
@@ -144,7 +168,7 @@ template&lt;typename T &gt; </div>
 <p>Casts an <a class="el" href="group__triton.html#gac3b9c0d23b5fc2863c0dab7d13ce7680" title="unsigned 512-bits">triton::uint512</a> to T. </p>
 <p>Casts an <a class="el" href="group__triton.html#gab32dc67ba8eed51e8f559a85549cd99d" title="unsigned 80-bits">triton::uint80</a> to T. </p>
 
-<p class="definition">Definition at line <a class="el" href="coreUtils_8hpp_source.html#l00058">58</a> of file <a class="el" href="coreUtils_8hpp_source.html">coreUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coreUtils_8hpp_source.html#l00059">59</a> of file <a class="el" href="coreUtils_8hpp_source.html">coreUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -191,7 +215,7 @@ template&lt;typename T &gt; </div>
 
 <p>Returns the value located into the buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="coreUtils_8hpp_source.html#l00069">69</a> of file <a class="el" href="coreUtils_8hpp_source.html">coreUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coreUtils_8hpp_source.html#l00070">70</a> of file <a class="el" href="coreUtils_8hpp_source.html">coreUtils.hpp</a>.</p>
 
 </div>
 </div>
@@ -271,7 +295,7 @@ template&lt;typename T &gt; </div>
 
 <p>Converts an object to a string. </p>
 
-<p class="definition">Definition at line <a class="el" href="coreUtils_8hpp_source.html#l00038">38</a> of file <a class="el" href="coreUtils_8hpp_source.html">coreUtils.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="coreUtils_8hpp_source.html#l00039">39</a> of file <a class="el" href="coreUtils_8hpp_source.html">coreUtils.hpp</a>.</p>
 
 </div>
 </div>

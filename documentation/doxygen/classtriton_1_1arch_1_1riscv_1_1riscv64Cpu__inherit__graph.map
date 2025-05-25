@@ -1,6 +1,6 @@
 <map id="triton::arch::riscv::riscv64Cpu" name="triton::arch::riscv::riscv64Cpu">
 <area shape="rect" id="Node000001" title="This class is used to describe the RV64 spec." alt="" coords="117,94,236,135"/>
-<area shape="rect" id="Node000002" href="$classtriton_1_1arch_1_1CpuInterface.html" title="This interface is used as abstract CPU interface. All CPU must use this interface." alt="" coords="5,13,172,39"/>
+<area shape="rect" id="Node000002" href="$classtriton_1_1arch_1_1CpuInterface.html" title="This interface is used as abstract CPU interface. All CPU must use this interface." alt="" coords="5,13,172,38"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,48,159,92,155,96,110,51"/>
 <area shape="rect" id="Node000003" href="$classtriton_1_1arch_1_1riscv_1_1riscvSpecifications.html" title="The riscvSpecifications class defines specifications about the RV32 and RV64 CPU." alt="" coords="196,5,336,46"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,59,199,95,195,92,233,55"/>

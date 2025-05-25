@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1592</span>
+   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1599</span>
    </div>
   </td>
  </tr>
@@ -102,57 +102,53 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;ostream&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="ast_8hpp.html">triton/ast.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="dllexport_8hpp.html">triton/dllexport.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;llvm/IR/IRBuilder.h&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;llvm/IR/LLVMContext.h&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;llvm/IR/LegacyPassManager.h&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;llvm/IR/Module.h&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;llvm/Transforms/IPO/PassManagerBuilder.h&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacetriton.html">triton</a> {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keyword">namespace </span>ast {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="foldopen" id="foldopen00045" data-start="{" data-end="};">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classtriton_1_1ast_1_1TritonToLLVM.html">   45</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classtriton_1_1ast_1_1TritonToLLVM.html">TritonToLLVM</a> {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        llvm::LLVMContext&amp; llvmContext;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        std::shared_ptr&lt;llvm::Module&gt; llvmModule;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        llvm::IRBuilder&lt;&gt; llvmIR;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        std::map&lt;triton::ast::SharedAbstractNode, llvm::Value*&gt; llvmVars;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> createFunction(<span class="keyword">const</span> <a class="code hl_typedef" href="group__ast.html#ga9e9f77f35c9811583a4971a9d34c7884">triton::ast::SharedAbstractNode</a>&amp; node, <span class="keyword">const</span> <span class="keywordtype">char</span>* fname);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        llvm::Value* do_convert(<span class="keyword">const</span> <a class="code hl_typedef" href="group__ast.html#ga9e9f77f35c9811583a4971a9d34c7884">triton::ast::SharedAbstractNode</a>&amp; node, std::unordered_map&lt;triton::ast::SharedAbstractNode, llvm::Value*&gt;* results);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="ast_8hpp.html">triton/ast.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="dllexport_8hpp.html">triton/dllexport.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;llvm/IR/IRBuilder.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;llvm/IR/LLVMContext.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;llvm/IR/Module.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacetriton.html">triton</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keyword">namespace </span>ast {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classtriton_1_1ast_1_1TritonToLLVM.html">   41</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classtriton_1_1ast_1_1TritonToLLVM.html">TritonToLLVM</a> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        llvm::LLVMContext&amp; llvmContext;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        std::shared_ptr&lt;llvm::Module&gt; llvmModule;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        llvm::IRBuilder&lt;&gt; llvmIR;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        std::map&lt;triton::ast::SharedAbstractNode, llvm::Value*&gt; llvmVars;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">void</span> createFunction(<span class="keyword">const</span> <a class="code hl_typedef" href="group__ast.html#ga9e9f77f35c9811583a4971a9d34c7884">triton::ast::SharedAbstractNode</a>&amp; node, <span class="keyword">const</span> <span class="keywordtype">char</span>* fname);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        llvm::Value* do_convert(<span class="keyword">const</span> <a class="code hl_typedef" href="group__ast.html#ga9e9f77f35c9811583a4971a9d34c7884">triton::ast::SharedAbstractNode</a>&amp; node, std::unordered_map&lt;triton::ast::SharedAbstractNode, llvm::Value*&gt;* results);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        TRITON_EXPORT <a class="code hl_function" href="classtriton_1_1ast_1_1TritonToLLVM.html#ae2d884830dd5ea2aa0e451168b46ed3b">TritonToLLVM</a>(llvm::LLVMContext&amp; llvmContext);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        TRITON_EXPORT <a class="code hl_function" href="classtriton_1_1ast_1_1TritonToLLVM.html#ae2d884830dd5ea2aa0e451168b46ed3b">TritonToLLVM</a>(llvm::LLVMContext&amp; llvmContext);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        TRITON_EXPORT std::shared_ptr&lt;llvm::Module&gt; <a class="code hl_function" href="classtriton_1_1ast_1_1TritonToLLVM.html#a1e7d0241d316e92156e1d1bf2ea1625a">convert</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="group__ast.html#ga9e9f77f35c9811583a4971a9d34c7884">triton::ast::SharedAbstractNode</a>&amp; node, <span class="keyword">const</span> <span class="keywordtype">char</span>* fname=<span class="stringliteral">&quot;__triton&quot;</span>, <span class="keywordtype">bool</span> optimize=<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    };</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        TRITON_EXPORT std::shared_ptr&lt;llvm::Module&gt; <a class="code hl_function" href="classtriton_1_1ast_1_1TritonToLLVM.html#a1e7d0241d316e92156e1d1bf2ea1625a">convert</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="group__ast.html#ga9e9f77f35c9811583a4971a9d34c7884">triton::ast::SharedAbstractNode</a>&amp; node, <span class="keyword">const</span> <span class="keywordtype">char</span>* fname=<span class="stringliteral">&quot;__triton&quot;</span>, <span class="keywordtype">bool</span> optimize=<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    };</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  };</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>};</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif </span><span class="comment">/* TRITON_TRITONTOLLVM_HPP */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  };</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif </span><span class="comment">/* TRITON_TRITONTOLLVM_HPP */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aast_8hpp_html"><div class="ttname"><a href="ast_8hpp.html">ast.hpp</a></div></div>
-<div class="ttc" id="aclasstriton_1_1ast_1_1TritonToLLVM_html"><div class="ttname"><a href="classtriton_1_1ast_1_1TritonToLLVM.html">triton::ast::TritonToLLVM</a></div><div class="ttdoc">Converts a Triton's AST to LVM IR.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">tritonToLLVM.hpp:45</a></div></div>
-<div class="ttc" id="aclasstriton_1_1ast_1_1TritonToLLVM_html_a1e7d0241d316e92156e1d1bf2ea1625a"><div class="ttname"><a href="classtriton_1_1ast_1_1TritonToLLVM.html#a1e7d0241d316e92156e1d1bf2ea1625a">triton::ast::TritonToLLVM::convert</a></div><div class="ttdeci">TRITON_EXPORT std::shared_ptr&lt; llvm::Module &gt; convert(const triton::ast::SharedAbstractNode &amp;node, const char *fname=&quot;__triton&quot;, bool optimize=false)</div><div class="ttdoc">Lifts a symbolic expression and all its references to LLVM format. fname represents the name of the L...</div><div class="ttdef"><b>Definition</b> <a href="tritonToLLVM_8cpp_source.html#l00084">tritonToLLVM.cpp:84</a></div></div>
-<div class="ttc" id="aclasstriton_1_1ast_1_1TritonToLLVM_html_ae2d884830dd5ea2aa0e451168b46ed3b"><div class="ttname"><a href="classtriton_1_1ast_1_1TritonToLLVM.html#ae2d884830dd5ea2aa0e451168b46ed3b">triton::ast::TritonToLLVM::TritonToLLVM</a></div><div class="ttdeci">TRITON_EXPORT TritonToLLVM(llvm::LLVMContext &amp;llvmContext)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="tritonToLLVM_8cpp_source.html#l00025">tritonToLLVM.cpp:25</a></div></div>
+<div class="ttc" id="aclasstriton_1_1ast_1_1TritonToLLVM_html"><div class="ttname"><a href="classtriton_1_1ast_1_1TritonToLLVM.html">triton::ast::TritonToLLVM</a></div><div class="ttdoc">Converts a Triton's AST to LVM IR.</div><div class="ttdef"><b>Definition</b> <a href="#l00041">tritonToLLVM.hpp:41</a></div></div>
+<div class="ttc" id="aclasstriton_1_1ast_1_1TritonToLLVM_html_a1e7d0241d316e92156e1d1bf2ea1625a"><div class="ttname"><a href="classtriton_1_1ast_1_1TritonToLLVM.html#a1e7d0241d316e92156e1d1bf2ea1625a">triton::ast::TritonToLLVM::convert</a></div><div class="ttdeci">TRITON_EXPORT std::shared_ptr&lt; llvm::Module &gt; convert(const triton::ast::SharedAbstractNode &amp;node, const char *fname=&quot;__triton&quot;, bool optimize=false)</div><div class="ttdoc">Lifts a symbolic expression and all its references to LLVM format. fname represents the name of the L...</div><div class="ttdef"><b>Definition</b> <a href="tritonToLLVM_8cpp_source.html#l00091">tritonToLLVM.cpp:91</a></div></div>
+<div class="ttc" id="aclasstriton_1_1ast_1_1TritonToLLVM_html_ae2d884830dd5ea2aa0e451168b46ed3b"><div class="ttname"><a href="classtriton_1_1ast_1_1TritonToLLVM.html#ae2d884830dd5ea2aa0e451168b46ed3b">triton::ast::TritonToLLVM::TritonToLLVM</a></div><div class="ttdeci">TRITON_EXPORT TritonToLLVM(llvm::LLVMContext &amp;llvmContext)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> <a href="tritonToLLVM_8cpp_source.html#l00028">tritonToLLVM.cpp:28</a></div></div>
 <div class="ttc" id="adllexport_8hpp_html"><div class="ttname"><a href="dllexport_8hpp.html">dllexport.hpp</a></div></div>
 <div class="ttc" id="agroup__ast_html_ga9e9f77f35c9811583a4971a9d34c7884"><div class="ttname"><a href="group__ast.html#ga9e9f77f35c9811583a4971a9d34c7884">triton::ast::SharedAbstractNode</a></div><div class="ttdeci">std::shared_ptr&lt; triton::ast::AbstractNode &gt; SharedAbstractNode</div><div class="ttdoc">Shared Abstract Node.</div><div class="ttdef"><b>Definition</b> <a href="ast_8hpp_source.html#l00059">ast.hpp:59</a></div></div>
-<div class="ttc" id="anamespacetriton_html"><div class="ttname"><a href="namespacetriton.html">triton</a></div><div class="ttdoc">The Triton namespace.</div><div class="ttdef"><b>Definition</b> <a href="architecture_8cpp_source.html#l00027">architecture.cpp:27</a></div></div>
+<div class="ttc" id="anamespacetriton_html"><div class="ttname"><a href="namespacetriton.html">triton</a></div><div class="ttdoc">The Triton namespace.</div><div class="ttdef"><b>Definition</b> <a href="architecture_8cpp_source.html#l00025">architecture.cpp:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

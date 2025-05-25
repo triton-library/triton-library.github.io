@@ -24,6 +24,7 @@ var searchData=
   ['triton_3a_3aextlibs_21',['extlibs',['../namespacetriton_1_1extlibs.html',1,'triton']]],
   ['triton_3a_3aextlibs_3a_3acapstone_22',['capstone',['../namespacetriton_1_1extlibs_1_1capstone.html',1,'triton::extlibs']]],
   ['triton_3a_3amodes_23',['modes',['../namespacetriton_1_1modes.html',1,'triton']]],
-  ['triton_3a_3asize_24',['size',['../namespacetriton_1_1size.html',1,'triton']]],
-  ['triton_3a_3autils_25',['utils',['../namespacetriton_1_1utils.html',1,'triton']]]
+  ['triton_3a_3asf_24',['sf',['../namespacetriton_1_1sf.html',1,'triton']]],
+  ['triton_3a_3asize_25',['size',['../namespacetriton_1_1size.html',1,'triton']]],
+  ['triton_3a_3autils_26',['utils',['../namespacetriton_1_1utils.html',1,'triton']]]
 ];

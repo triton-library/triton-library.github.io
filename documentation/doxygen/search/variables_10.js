@@ -32,6 +32,7 @@ var searchData=
   ['registers_29',['registers',['../classtriton_1_1Context.html#a28b74dd529c4e6c62d56500d2280b256',1,'triton::Context']]],
   ['representations_30',['representations',['../classtriton_1_1ast_1_1representations_1_1AstRepresentation.html#aab5a729c30b67cae79d8c8c233ce7a0d',1,'triton::ast::representations::AstRepresentation']]],
   ['rip_31',['rip',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a4402e3782b4cb353734a729ccf50f889',1,'triton::arch::x86::x8664Cpu']]],
-  ['rsi_32',['rsi',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a7ed7fb79feb647a10188bb09220407c5',1,'triton::arch::x86::x8664Cpu']]],
-  ['rsp_33',['rsp',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#ae3968257df1adbf1709c8fcac4de1fbc',1,'triton::arch::x86::x8664Cpu']]]
+  ['riscvisa_32',['riscvIsa',['../classtriton_1_1arch_1_1IrBuilder.html#aa4369ab9bea89ab93e4e289f0fe56dd1',1,'triton::arch::IrBuilder']]],
+  ['rsi_33',['rsi',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#a7ed7fb79feb647a10188bb09220407c5',1,'triton::arch::x86::x8664Cpu']]],
+  ['rsp_34',['rsp',['../classtriton_1_1arch_1_1x86_1_1x8664Cpu.html#ae3968257df1adbf1709c8fcac4de1fbc',1,'triton::arch::x86::x8664Cpu']]]
 ];

@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1592</span>
+   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1599</span>
    </div>
   </td>
  </tr>
@@ -88,7 +88,6 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;list&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;<a class="el" href="astEnums_8hpp_source.html">triton/astEnums.hpp</a>&gt;</code><br />
@@ -97,6 +96,10 @@ $(function() {
 <code>#include &lt;<a class="el" href="symbolicVariable_8hpp_source.html">triton/symbolicVariable.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="tritonToLLVM_8hpp_source.html">triton/tritonToLLVM.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="tritonTypes_8hpp_source.html">triton/tritonTypes.hpp</a>&gt;</code><br />
+<code>#include &lt;llvm/IR/PassManager.h&gt;</code><br />
+<code>#include &lt;llvm/Analysis/LoopAnalysisManager.h&gt;</code><br />
+<code>#include &lt;llvm/Analysis/CGSCCPassManager.h&gt;</code><br />
+<code>#include &lt;llvm/Passes/PassBuilder.h&gt;</code><br />
 </div>
 <p><a href="tritonToLLVM_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">

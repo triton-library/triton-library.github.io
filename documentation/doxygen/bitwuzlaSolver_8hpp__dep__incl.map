@@ -1,24 +1,24 @@
 <map id="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/bitwuzlaSolver.hpp" name="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/bitwuzlaSolver.hpp">
 <area shape="rect" id="Node000001" title=" " alt="" coords="246,5,466,61"/>
-<area shape="rect" id="Node000002" href="$bitwuzlaSolver_8cpp.html" title=" " alt="" coords="171,109,333,180"/>
+<area shape="rect" id="Node000002" href="$bitwuzlaSolver_8cpp.html" title=" " alt="" coords="171,109,332,180"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="322,74,287,111,283,107,318,70"/>
-<area shape="rect" id="Node000003" href="$solverEngine_8hpp.html" title=" " alt="" coords="356,117,566,172"/>
+<area shape="rect" id="Node000003" href="$solverEngine_8hpp.html" title=" " alt="" coords="356,116,566,172"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="394,70,437,114,433,118,390,74"/>
-<area shape="rect" id="Node000004" href="$solverEngine_8cpp.html" title=" " alt="" coords="211,228,424,283"/>
+<area shape="rect" id="Node000004" href="$solverEngine_8cpp.html" title=" " alt="" coords="210,228,424,283"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="415,184,355,229,352,225,412,180"/>
 <area shape="rect" id="Node000005" href="$context_8hpp.html" title=" " alt="" coords="372,331,550,387"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="464,188,464,331,459,331,459,188"/>
-<area shape="rect" id="Node000013" href="$synthesizer_8hpp.html" title=" " alt="" coords="499,228,701,283"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="464,188,464,331,458,331,458,188"/>
+<area shape="rect" id="Node000013" href="$synthesizer_8hpp.html" title=" " alt="" coords="499,228,700,283"/>
 <area shape="poly" id="edge12_Node000003_Node000013" title=" " alt="" coords="509,180,567,225,564,229,506,184"/>
 <area shape="rect" id="Node000006" href="$pyTritonContext_8cpp.html" title=" " alt="" coords="5,435,168,506"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="358,388,181,438,169,441,167,436,179,432,356,383"/>
-<area shape="rect" id="Node000007" href="$callbacks_8cpp.html" title=" " alt="" coords="192,443,357,498"/>
+<area shape="rect" id="Node000007" href="$callbacks_8cpp.html" title=" " alt="" coords="192,442,357,498"/>
 <area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="403,398,323,444,320,440,400,393"/>
-<area shape="rect" id="Node000008" href="$context_8cpp.html" title=" " alt="" coords="381,443,542,498"/>
-<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="464,402,464,442,459,442,459,402"/>
-<area shape="rect" id="Node000009" href="$symbolicSimplification_8cpp.html" title=" " alt="" coords="567,443,852,498"/>
+<area shape="rect" id="Node000008" href="$context_8cpp.html" title=" " alt="" coords="380,442,542,498"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="464,402,464,442,458,442,458,402"/>
+<area shape="rect" id="Node000009" href="$symbolicSimplification_8cpp.html" title=" " alt="" coords="566,442,852,498"/>
 <area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="538,391,648,439,646,444,536,396"/>
-<area shape="rect" id="Node000010" href="$llvmToTriton_8hpp.html" title=" " alt="" coords="875,443,1082,498"/>
+<area shape="rect" id="Node000010" href="$llvmToTriton_8hpp.html" title=" " alt="" coords="875,442,1082,498"/>
 <area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="566,385,650,399,717,408,782,416,864,432,892,439,891,445,863,438,782,422,716,413,650,405,565,390"/>
 <area shape="rect" id="Node000011" href="$llvmToTriton_8cpp.html" title=" " alt="" coords="785,554,956,609"/>
 <area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="943,511,899,555,895,551,939,507"/>

@@ -12,7 +12,7 @@
 <area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="420,219,456,253,497,285,518,297,515,302,494,289,452,257,416,223"/>
 <area shape="rect" id="Node000002" href="$classtriton_1_1exceptions_1_1Exception.html" title="The root class of all exceptions." alt="" coords="157,169,278,210"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="293,187,325,187,325,192,293,192"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,177,109,203"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,177,109,202"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="124,187,157,187,157,192,124,192"/>
 <area shape="rect" id="Node000006" href="$classtriton_1_1exceptions_1_1SolverModel.html" title="The exception class used by solver models." alt="" coords="702,5,823,46"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="622,94,632,89,680,57,706,44,709,49,683,61,635,93,625,99"/>
@@ -20,7 +20,7 @@
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="622,160,632,154,680,122,706,109,709,114,683,127,635,159,625,164"/>
 <area shape="rect" id="Node000009" href="$classtriton_1_1exceptions_1_1PathManager.html" title="The exception class used by the path manager." alt="" coords="702,136,823,177"/>
 <area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="641,174,701,164,701,169,642,179"/>
-<area shape="rect" id="Node000010" href="$classtriton_1_1exceptions_1_1SymbolicExpression.html" title="The exception class used by symbolic expressions." alt="" coords="688,201,837,242"/>
+<area shape="rect" id="Node000010" href="$classtriton_1_1exceptions_1_1SymbolicExpression.html" title="The exception class used by symbolic expressions." alt="" coords="688,201,836,242"/>
 <area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="642,199,688,207,687,212,641,205"/>
 <area shape="rect" id="Node000011" href="$classtriton_1_1exceptions_1_1SymbolicSimplification.html" title="The exception class used by symbolic simplifications." alt="" coords="682,267,843,307"/>
 <area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="625,215,635,221,683,251,709,264,707,269,680,256,632,225,622,220"/>

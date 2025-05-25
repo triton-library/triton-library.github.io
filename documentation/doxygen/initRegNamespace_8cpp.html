@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1592</span>
+   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1599</span>
    </div>
   </td>
  </tr>
@@ -96,6 +96,8 @@ $(function() {
 <code>#include &quot;triton/x86.spec&quot;</code><br />
 <code>#include &quot;triton/aarch64.spec&quot;</code><br />
 <code>#include &quot;triton/arm32.spec&quot;</code><br />
+<code>#include &quot;triton/riscv64.spec&quot;</code><br />
+<code>#include &quot;triton/riscv32.spec&quot;</code><br />
 </div>
 <p><a href="initRegNamespace_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -139,6 +141,24 @@ Macros</h2></td></tr>
 <tr class="memitem:a12daeaef0101392d5c911ee1216e8721" id="r_a12daeaef0101392d5c911ee1216e8721"><td class="memItemLeft" align="right" valign="top"><a id="a12daeaef0101392d5c911ee1216e8721" name="a12daeaef0101392d5c911ee1216e8721"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_SPEC_NO_CAPSTONE</b>&#160;&#160;&#160;REG_SPEC</td></tr>
 <tr class="separator:a12daeaef0101392d5c911ee1216e8721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ba8636dad099d3660a7bba552526140" id="r_a3ba8636dad099d3660a7bba552526140"><td class="memItemLeft" align="right" valign="top"><a id="a3ba8636dad099d3660a7bba552526140" name="a3ba8636dad099d3660a7bba552526140"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_SPEC</b>(_0,  UPPER_NAME,  _1,  _2,  _3,  _4,  _5)&#160;&#160;&#160;          xPyDict_SetItemString(riscv64RegistersDict, #UPPER_NAME, PyLong_FromUint32(triton::arch::ID_REG_RV64_##UPPER_NAME));</td></tr>
+<tr class="separator:a3ba8636dad099d3660a7bba552526140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12daeaef0101392d5c911ee1216e8721" id="r_a12daeaef0101392d5c911ee1216e8721"><td class="memItemLeft" align="right" valign="top"><a id="a12daeaef0101392d5c911ee1216e8721" name="a12daeaef0101392d5c911ee1216e8721"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_SPEC_NO_CAPSTONE</b>&#160;&#160;&#160;REG_SPEC</td></tr>
+<tr class="separator:a12daeaef0101392d5c911ee1216e8721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ceda1a0c1647f4abe5f3aa0565f3a7" id="r_a38ceda1a0c1647f4abe5f3aa0565f3a7"><td class="memItemLeft" align="right" valign="top"><a id="a38ceda1a0c1647f4abe5f3aa0565f3a7" name="a38ceda1a0c1647f4abe5f3aa0565f3a7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_REG_SPEC</b>&#160;&#160;&#160;REG_SPEC</td></tr>
+<tr class="separator:a38ceda1a0c1647f4abe5f3aa0565f3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ba8636dad099d3660a7bba552526140" id="r_a3ba8636dad099d3660a7bba552526140"><td class="memItemLeft" align="right" valign="top"><a id="a3ba8636dad099d3660a7bba552526140" name="a3ba8636dad099d3660a7bba552526140"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_SPEC</b>(_0,  UPPER_NAME,  _1,  _2,  _3,  _4,  _5)&#160;&#160;&#160;          xPyDict_SetItemString(riscv32RegistersDict, #UPPER_NAME, PyLong_FromUint32(triton::arch::ID_REG_RV32_##UPPER_NAME));</td></tr>
+<tr class="separator:a3ba8636dad099d3660a7bba552526140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12daeaef0101392d5c911ee1216e8721" id="r_a12daeaef0101392d5c911ee1216e8721"><td class="memItemLeft" align="right" valign="top"><a id="a12daeaef0101392d5c911ee1216e8721" name="a12daeaef0101392d5c911ee1216e8721"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_SPEC_NO_CAPSTONE</b>&#160;&#160;&#160;REG_SPEC</td></tr>
+<tr class="separator:a12daeaef0101392d5c911ee1216e8721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ceda1a0c1647f4abe5f3aa0565f3a7" id="r_a38ceda1a0c1647f4abe5f3aa0565f3a7"><td class="memItemLeft" align="right" valign="top"><a id="a38ceda1a0c1647f4abe5f3aa0565f3a7" name="a38ceda1a0c1647f4abe5f3aa0565f3a7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYS_REG_SPEC</b>&#160;&#160;&#160;REG_SPEC</td></tr>
+<tr class="separator:a38ceda1a0c1647f4abe5f3aa0565f3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>

@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1592</span>
+   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1599</span>
    </div>
   </td>
  </tr>
@@ -95,10 +95,12 @@ $(function() {
 <code>#include &quot;triton/x86.spec&quot;</code><br />
 <code>#include &quot;triton/aarch64.spec&quot;</code><br />
 <code>#include &quot;triton/arm32.spec&quot;</code><br />
+<code>#include &quot;triton/riscv64.spec&quot;</code><br />
+<code>#include &quot;triton/riscv32.spec&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="archEnums_8hpp__dep__incl.svg" width="6274" height="1148"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="archEnums_8hpp__dep__incl.svg" width="6531" height="1148"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="archEnums_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -123,6 +125,9 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacetriton_1_1arch_1_1arm" id="r_namespacetriton_1_1arch_1_1arm"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetriton_1_1arch_1_1arm.html">triton::arch::arm</a></td></tr>
 <tr class="memdesc:namespacetriton_1_1arch_1_1arm"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ARM namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacetriton_1_1arch_1_1riscv" id="r_namespacetriton_1_1arch_1_1riscv"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetriton_1_1arch_1_1riscv.html">triton::arch::riscv</a></td></tr>
+<tr class="memdesc:namespacetriton_1_1arch_1_1riscv"><td class="mdescLeft">&#160;</td><td class="mdescRight">The riscv namespace. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -140,6 +145,14 @@ Macros</h2></td></tr>
 <tr class="separator:ae548fbf8cfc1ac734fe9fe5c81a5ef20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12daeaef0101392d5c911ee1216e8721" id="r_a12daeaef0101392d5c911ee1216e8721"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12daeaef0101392d5c911ee1216e8721">REG_SPEC_NO_CAPSTONE</a>&#160;&#160;&#160;REG_SPEC</td></tr>
 <tr class="separator:a12daeaef0101392d5c911ee1216e8721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59defb3ef0e0bf9695b7114a55a5aafe" id="r_a59defb3ef0e0bf9695b7114a55a5aafe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59defb3ef0e0bf9695b7114a55a5aafe">REG_SPEC</a>(_1,  UPPER_NAME,  _2,  _3,  _4,  _5,  _6)&#160;&#160;&#160;      ID_REG_RV64_##UPPER_NAME,</td></tr>
+<tr class="separator:a59defb3ef0e0bf9695b7114a55a5aafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12daeaef0101392d5c911ee1216e8721" id="r_a12daeaef0101392d5c911ee1216e8721"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12daeaef0101392d5c911ee1216e8721">REG_SPEC_NO_CAPSTONE</a>&#160;&#160;&#160;REG_SPEC</td></tr>
+<tr class="separator:a12daeaef0101392d5c911ee1216e8721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59defb3ef0e0bf9695b7114a55a5aafe" id="r_a59defb3ef0e0bf9695b7114a55a5aafe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59defb3ef0e0bf9695b7114a55a5aafe">REG_SPEC</a>(_1,  UPPER_NAME,  _2,  _3,  _4,  _5,  _6)&#160;&#160;&#160;      ID_REG_RV32_##UPPER_NAME,</td></tr>
+<tr class="separator:a59defb3ef0e0bf9695b7114a55a5aafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12daeaef0101392d5c911ee1216e8721" id="r_a12daeaef0101392d5c911ee1216e8721"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12daeaef0101392d5c911ee1216e8721">REG_SPEC_NO_CAPSTONE</a>&#160;&#160;&#160;REG_SPEC</td></tr>
+<tr class="separator:a12daeaef0101392d5c911ee1216e8721"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -147,9 +160,11 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba0128222a49ca35296d494e80ddcad079">triton::arch::ARCH_INVALID</a> = 0
 , <a class="el" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba191636225c9d04d95c978f6924c738c0">triton::arch::ARCH_AARCH64</a>
 , <a class="el" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba3c564763da6fd94a92890df943576b92">triton::arch::ARCH_ARM32</a>
-, <a class="el" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba10e18912ade0655b8c7478604c2f7978">triton::arch::ARCH_X86</a>
+, <a class="el" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba3b377bc47e2761d0c93c226652cf10c6">triton::arch::ARCH_RV32</a>
 , <br />
-&#160;&#160;<a class="el" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7abab393aeaa6839546f2eb6fee0e961a8d1">triton::arch::ARCH_X86_64</a>
+&#160;&#160;<a class="el" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7abab0fa2e3af676996c467acc59f541a24f">triton::arch::ARCH_RV64</a>
+, <a class="el" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7aba10e18912ade0655b8c7478604c2f7978">triton::arch::ARCH_X86</a>
+, <a class="el" href="group__arch.html#gga72199f3206aa1c9b09b2688cb8d3e7abab393aeaa6839546f2eb6fee0e961a8d1">triton::arch::ARCH_X86_64</a>
 <br />
  }</td></tr>
 <tr class="separator:ga72199f3206aa1c9b09b2688cb8d3e7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,10 +291,130 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga8df772e53d033705de9a64c830f4b766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector arrangement specifier.  <a href="group__arm.html#ga8df772e53d033705de9a64c830f4b766">More...</a><br /></td></tr>
 <tr class="separator:ga8df772e53d033705de9a64c830f4b766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb5789e296354dce0c081f990bfbfd43" id="r_gacb5789e296354dce0c081f990bfbfd43"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__riscv.html#gacb5789e296354dce0c081f990bfbfd43">triton::arch::riscv::insn_group_e</a> { <br />
+&#160;&#160;<a class="el" href="group__riscv.html#ggacb5789e296354dce0c081f990bfbfd43a2947700936a9b12b636c3b0204abcfd1">triton::arch::riscv::ID_GRP_INVALID</a> = 0
+, <a class="el" href="group__riscv.html#ggacb5789e296354dce0c081f990bfbfd43a1fa818cace043e740f59e63bd2255d0b">triton::arch::riscv::ID_GRP_JUMP</a>
+, <a class="el" href="group__riscv.html#ggacb5789e296354dce0c081f990bfbfd43a8cb750de43359f2dd888fc7c293ce781">triton::arch::riscv::ID_GRP_CALL</a>
+, <a class="el" href="group__riscv.html#ggacb5789e296354dce0c081f990bfbfd43a8b8b49b8d941f05a578d6659437a2545">triton::arch::riscv::ID_GRP_RET</a>
+, <br />
+&#160;&#160;<a class="el" href="group__riscv.html#ggacb5789e296354dce0c081f990bfbfd43ace191f75cd1b99cc532f491d6786e346">triton::arch::riscv::ID_GRP_INT</a>
+, <a class="el" href="group__riscv.html#ggacb5789e296354dce0c081f990bfbfd43ab151ca52c0c3c9f15ef75e6729061217">triton::arch::riscv::ID_GRP_IRET</a>
+, <a class="el" href="group__riscv.html#ggacb5789e296354dce0c081f990bfbfd43afa5bc87080e1858ade09b5bb54b91e98">triton::arch::riscv::ID_GRP_PRIVILEGE</a>
+, <a class="el" href="group__riscv.html#ggacb5789e296354dce0c081f990bfbfd43ab66c5e2a6fcc9856c699a9453ca80ed4">triton::arch::riscv::ID_GRP_BRANCH_RELATIVE</a>
+, <br />
+&#160;&#160;<b>ID_GRP_ISRV32</b>
+, <b>ID_GRP_ISRV64</b>
+, <b>ID_GRP_HASSTDEXTA</b>
+, <b>ID_GRP_HASSTDEXTC</b>
+, <br />
+&#160;&#160;<b>ID_GRP_HASSTDEXTD</b>
+, <b>ID_GRP_HASSTDEXTF</b>
+, <b>ID_GRP_HASSTDEXTM</b>
+, <a class="el" href="group__riscv.html#ggacb5789e296354dce0c081f990bfbfd43a1d36b8c3fb43a1eb5ad3411fa4606b51">triton::arch::riscv::ID_GRP_ENDING</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gacb5789e296354dce0c081f990bfbfd43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Groups of RISCV instructions. *&zwj;/.  <a href="group__riscv.html#gacb5789e296354dce0c081f990bfbfd43">More...</a><br /></td></tr>
+<tr class="separator:gacb5789e296354dce0c081f990bfbfd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a59defb3ef0e0bf9695b7114a55a5aafe" name="a59defb3ef0e0bf9695b7114a55a5aafe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59defb3ef0e0bf9695b7114a55a5aafe">&#9670;&#160;</a></span>REG_SPEC <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REG_SPEC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_1, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">UPPER_NAME, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_2, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_3, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_4, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_5, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_6</span>&#160;)&#160;&#160;&#160;      ID_REG_RV64_##UPPER_NAME,</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00069">69</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a59defb3ef0e0bf9695b7114a55a5aafe" name="a59defb3ef0e0bf9695b7114a55a5aafe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59defb3ef0e0bf9695b7114a55a5aafe">&#9670;&#160;</a></span>REG_SPEC <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REG_SPEC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_1, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">UPPER_NAME, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_2, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_3, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_4, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_5, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">_6</span>&#160;)&#160;&#160;&#160;      ID_REG_RV32_##UPPER_NAME,</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00069">69</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
+
+</div>
+</div>
 <a id="ae548fbf8cfc1ac734fe9fe5c81a5ef20" name="ae548fbf8cfc1ac734fe9fe5c81a5ef20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae548fbf8cfc1ac734fe9fe5c81a5ef20">&#9670;&#160;</a></span>REG_SPEC <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae548fbf8cfc1ac734fe9fe5c81a5ef20">&#9670;&#160;</a></span>REG_SPEC <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,12 +452,12 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00071">71</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00069">69</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
 
 </div>
 </div>
 <a id="ae548fbf8cfc1ac734fe9fe5c81a5ef20" name="ae548fbf8cfc1ac734fe9fe5c81a5ef20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae548fbf8cfc1ac734fe9fe5c81a5ef20">&#9670;&#160;</a></span>REG_SPEC <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae548fbf8cfc1ac734fe9fe5c81a5ef20">&#9670;&#160;</a></span>REG_SPEC <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -360,12 +495,12 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00071">71</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00069">69</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
 
 </div>
 </div>
 <a id="aa6a039622f34bf8b1fc4080bc569ac6a" name="aa6a039622f34bf8b1fc4080bc569ac6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6a039622f34bf8b1fc4080bc569ac6a">&#9670;&#160;</a></span>REG_SPEC <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a039622f34bf8b1fc4080bc569ac6a">&#9670;&#160;</a></span>REG_SPEC <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -418,12 +553,28 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00069">69</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a12daeaef0101392d5c911ee1216e8721" name="a12daeaef0101392d5c911ee1216e8721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12daeaef0101392d5c911ee1216e8721">&#9670;&#160;</a></span>REG_SPEC_NO_CAPSTONE <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REG_SPEC_NO_CAPSTONE&#160;&#160;&#160;REG_SPEC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00071">71</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a12daeaef0101392d5c911ee1216e8721" name="a12daeaef0101392d5c911ee1216e8721"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12daeaef0101392d5c911ee1216e8721">&#9670;&#160;</a></span>REG_SPEC_NO_CAPSTONE <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a12daeaef0101392d5c911ee1216e8721">&#9670;&#160;</a></span>REG_SPEC_NO_CAPSTONE <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -434,12 +585,12 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00073">73</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00071">71</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a12daeaef0101392d5c911ee1216e8721" name="a12daeaef0101392d5c911ee1216e8721"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12daeaef0101392d5c911ee1216e8721">&#9670;&#160;</a></span>REG_SPEC_NO_CAPSTONE <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a12daeaef0101392d5c911ee1216e8721">&#9670;&#160;</a></span>REG_SPEC_NO_CAPSTONE <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -450,12 +601,12 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00073">73</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00071">71</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a12daeaef0101392d5c911ee1216e8721" name="a12daeaef0101392d5c911ee1216e8721"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12daeaef0101392d5c911ee1216e8721">&#9670;&#160;</a></span>REG_SPEC_NO_CAPSTONE <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a12daeaef0101392d5c911ee1216e8721">&#9670;&#160;</a></span>REG_SPEC_NO_CAPSTONE <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -466,7 +617,23 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00073">73</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00071">71</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a12daeaef0101392d5c911ee1216e8721" name="a12daeaef0101392d5c911ee1216e8721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12daeaef0101392d5c911ee1216e8721">&#9670;&#160;</a></span>REG_SPEC_NO_CAPSTONE <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REG_SPEC_NO_CAPSTONE&#160;&#160;&#160;REG_SPEC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00071">71</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
 
 </div>
 </div>
@@ -482,7 +649,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00079">79</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="archEnums_8hpp_source.html#l00077">77</a> of file <a class="el" href="archEnums_8hpp_source.html">archEnums.hpp</a>.</p>
 
 </div>
 </div>

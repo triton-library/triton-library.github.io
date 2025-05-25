@@ -1,5 +1,7 @@
 <map id="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/riscvSemantics.hpp" name="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/riscvSemantics.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,231,61"/>
-<area shape="rect" id="Node000002" href="$riscvSemantics_8cpp.html" title=" " alt="" coords="17,109,219,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,77,121,108,115,108,115,77"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="76,5,301,61"/>
+<area shape="rect" id="Node000002" href="$irBuilder_8cpp.html" title=" " alt="" coords="5,109,167,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,74,115,110,112,106,148,70"/>
+<area shape="rect" id="Node000003" href="$riscvSemantics_8cpp.html" title=" " alt="" coords="191,109,392,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,70,266,106,262,110,225,74"/>
 </map>

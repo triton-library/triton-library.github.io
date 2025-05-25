@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1592</span>
+   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1599</span>
    </div>
   </td>
  </tr>
@@ -222,6 +222,8 @@ Methods</h2>
  Returns the list of all tainted registers.</li>
 <li><b>[<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a>, ...] getTaintedSymbolicExpressions(void)</b><br  />
  Returns the list of all tainted symbolic expressions.</li>
+<li><b>void initLeaAst(<a class="el" href="py_MemoryAccess_page.html">MemoryAccess</a> mem)</b><br  />
+ Initializes the load effective address of a given memory access.</li>
 <li><b>bool isArchitectureValid(void)</b><br  />
  Returns true if the architecture is valid.</li>
 <li><b>bool isConcreteMemoryValueDefined(<a class="el" href="py_MemoryAccess_page.html">MemoryAccess</a> mem)</b><br  />
@@ -266,9 +268,9 @@ Methods</h2>
  Lifts a symbolic expression and all its references to Python format. If <code>icomment</code> is true, then print instructions assembly in expression comments.</li>
 <li><b>string liftToSMT(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr, bool assert_=False, bool icomment=False)</b><br  />
  Lifts a symbolic expression and all its references to SMT format. If <code>assert_</code> is true, then (assert &lt;expr&gt;). If <code>icomment</code> is true, then print instructions assembly in expression comments.</li>
-<li><b><a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> newSymbolicExpression(<a class="el" href="py_AstNode_page.html">AstNode</a> node, string comment)</b><br  />
+<li><b><a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> newSymbolicExpression(<a class="el" href="py_AstNode_page.html">AstNode</a> node, string comment="")</b><br  />
  Returns a new symbolic expression. Note that if there are simplification passes recorded, simplifications will be applied.</li>
-<li><b><a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> newSymbolicVariable(integer varSize, string alias)</b><br  />
+<li><b><a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> newSymbolicVariable(integer varSize, string alias="")</b><br  />
  Returns a new symbolic variable.</li>
 <li><b>void popPathConstraint(void)</b><br  />
  Pops the last constraints added to the path predicate.</li>
@@ -318,11 +320,11 @@ Methods</h2>
  Performs a dead store elimination simplification on a given block. If <code>padding</code> is true, keep addresses aligned and padds with NOP instructions.</li>
 <li><b>dict sliceExpressions(<a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr)</b><br  />
  Slices expressions from a given one (backward slicing) and returns all symbolic expressions as a dictionary of {integer SymExprId : <a class="el" href="py_SymbolicExpression_page.html">SymbolicExpression</a> expr}.</li>
-<li><b><a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> symbolizeExpression(integer symExprId, integer symVarSize, string symVarAlias)</b><br  />
+<li><b><a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> symbolizeExpression(integer symExprId, integer symVarSize, string symVarAlias="")</b><br  />
  Converts a symbolic expression to a symbolic variable. <code>symVarSize</code> must be in bits. This function returns the new symbolic variable created.</li>
-<li><b><a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> symbolizeMemory(<a class="el" href="py_MemoryAccess_page.html">MemoryAccess</a> mem, string symVarAlias)</b><br  />
+<li><b><a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> symbolizeMemory(<a class="el" href="py_MemoryAccess_page.html">MemoryAccess</a> mem, string symVarAlias="")</b><br  />
  Converts a symbolic memory expression to a symbolic variable. This function returns the new symbolic variable created.</li>
-<li><b><a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> symbolizeRegister(<a class="el" href="py_Register_page.html">Register</a> reg, string symVarAlias)</b><br  />
+<li><b><a class="el" href="py_SymbolicVariable_page.html">SymbolicVariable</a> symbolizeRegister(<a class="el" href="py_Register_page.html">Register</a> reg, string symVarAlias="")</b><br  />
  Converts a symbolic register expression to a symbolic variable. This function returns the new symbolic variable created.</li>
 <li><b><a class="el" href="py_AstNode_page.html">AstNode</a> synthesize(<a class="el" href="py_AstNode_page.html">AstNode</a> node, bool constant=True, bool subexpr=True, bool opaque=False)</b><br  />
  Synthesizes a given node. If <code>constant</code> is defined to True, performs a constant synthesis. If <code>opaque</code> is true, perform opaque constant synthesis. If <code>subexpr</code> is defined to True, performs synthesis on sub-expressions.</li>

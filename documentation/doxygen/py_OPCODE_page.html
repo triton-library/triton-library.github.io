@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1592</span>
+   <div id="projectname">libTriton<span id="projectnumber">&#160;version 1.0 build 1599</span>
    </div>
   </td>
  </tr>
@@ -3569,13 +3569,13 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.ADC</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.ADD</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.ADDHN</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.ADDHN2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.ADDP</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.ADD</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.ADDV</b><br  />
 </li>
@@ -3595,9 +3595,15 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.ASR</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.AT</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.B</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.BFI</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.BFM</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.BFXIL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.BIC</b><br  />
 </li>
@@ -3623,6 +3629,10 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.CCMP</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.CINC</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.CINV</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.CLREX</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.CLS</b><br  />
@@ -3643,11 +3653,15 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.CMLT</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.CMN</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.CMP</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.CMTST</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.CNT</b><br  />
+<li><b>OPCODE.AARCH64.CNEG</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.MOV</b><br  />
+<li><b>OPCODE.AARCH64.CNT</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.CRC32B</b><br  />
 </li>
@@ -3667,11 +3681,17 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.CSEL</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.CSET</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.CSETM</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.CSINC</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.CSINV</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.CSNEG</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.DC</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.DCPS1</b><br  />
 </li>
@@ -3693,9 +3713,9 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.ERET</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.EXTR</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.EXT</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.EXTR</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.FABD</b><br  />
 </li>
@@ -3729,11 +3749,11 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.FCSEL</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.FCVT</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.FCVTAS</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.FCVTAU</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.FCVT</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.FCVTL</b><br  />
 </li>
@@ -3743,13 +3763,13 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.FCVTMU</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.FCVTNS</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.FCVTNU</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.FCVTN</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.FCVTN2</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.FCVTNS</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.FCVTNU</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.FCVTPS</b><br  />
 </li>
@@ -3845,6 +3865,8 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.HVC</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.IC</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.INS</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.ISB</b><br  />
@@ -3853,31 +3875,31 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.LD1R</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.LD2R</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.LD2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.LD3R</b><br  />
+<li><b>OPCODE.AARCH64.LD2R</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LD3</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.LD3R</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LD4</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LD4R</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.LDAR</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.LDARB</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LDARH</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.LDAR</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.LDAXP</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.LDAXR</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LDAXRB</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LDAXRH</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.LDAXR</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LDNP</b><br  />
 </li>
@@ -3885,9 +3907,9 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.LDPSW</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.LDRB</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.LDR</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.LDRB</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LDRH</b><br  />
 </li>
@@ -3896,6 +3918,8 @@ AArch64</h2>
 <li><b>OPCODE.AARCH64.LDRSH</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LDRSW</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.LDTR</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LDTRB</b><br  />
 </li>
@@ -3907,11 +3931,9 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.LDTRSW</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.LDTR</b><br  />
+<li><b>OPCODE.AARCH64.LDUR</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LDURB</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.LDUR</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LDURH</b><br  />
 </li>
@@ -3923,11 +3945,11 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.LDXP</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.LDXR</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.LDXRB</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LDXRH</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.LDXR</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.LSL</b><br  />
 </li>
@@ -3938,6 +3960,10 @@ AArch64</h2>
 <li><b>OPCODE.AARCH64.MLA</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.MLS</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.MNEG</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.MOV</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.MOVI</b><br  />
 </li>
@@ -3955,9 +3981,15 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.MUL</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.MVN</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.MVNI</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.NEG</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.NGC</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.NOP</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.NOT</b><br  />
 </li>
@@ -3965,11 +3997,11 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.ORR</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.PMULL2</b><br  />
+<li><b>OPCODE.AARCH64.PMUL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.PMULL</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.PMUL</b><br  />
+<li><b>OPCODE.AARCH64.PMULL2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.PRFM</b><br  />
 </li>
@@ -3983,57 +4015,65 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.RET</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.REV</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.REV16</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.REV32</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.REV64</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.REV</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.ROR</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.RSHRN2</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.RSHRN</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.RSHRN2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.RSUBHN</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.RSUBHN2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SABAL2</b><br  />
+<li><b>OPCODE.AARCH64.SABA</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SABAL</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SABA</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.SABDL2</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.SABDL</b><br  />
+<li><b>OPCODE.AARCH64.SABAL2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SABD</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.SABDL</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SABDL2</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.SADALP</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SADDL</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SADDL2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SADDLP</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SADDLV</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SADDL2</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.SADDL</b><br  />
+<li><b>OPCODE.AARCH64.SADDW</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SADDW2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SADDW</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.SBC</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.SBFIZ</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.SBFM</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SBFX</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SCVTF</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SDIV</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SEV</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SEVL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SHA1C</b><br  />
 </li>
@@ -4047,9 +4087,9 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.SHA1SU1</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SHA256H2</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.SHA256H</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SHA256H2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SHA256SU0</b><br  />
 </li>
@@ -4057,15 +4097,15 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.SHADD</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SHLL2</b><br  />
+<li><b>OPCODE.AARCH64.SHL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SHLL</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SHL</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.SHRN2</b><br  />
+<li><b>OPCODE.AARCH64.SHLL2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SHRN</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SHRN2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SHSUB</b><br  />
 </li>
@@ -4073,27 +4113,29 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.SMADDL</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.SMAX</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.SMAXP</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SMAXV</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SMAX</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.SMC</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SMIN</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SMINP</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SMINV</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SMIN</b><br  />
+<li><b>OPCODE.AARCH64.SMLAL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SMLAL2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SMLAL</b><br  />
+<li><b>OPCODE.AARCH64.SMLSL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SMLSL2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SMLSL</b><br  />
+<li><b>OPCODE.AARCH64.SMNEGL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SMOV</b><br  />
 </li>
@@ -4101,9 +4143,9 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.SMULH</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SMULL2</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.SMULL</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SMULL2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SQABS</b><br  />
 </li>
@@ -4137,9 +4179,9 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.SQRSHRUN2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SQSHLU</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.SQSHL</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SQSHLU</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SQSHRN</b><br  />
 </li>
@@ -4151,13 +4193,13 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.SQSUB</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SQXTN2</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.SQXTN</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SQXTUN2</b><br  />
+<li><b>OPCODE.AARCH64.SQXTN2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SQXTUN</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SQXTUN2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SRHADD</b><br  />
 </li>
@@ -4169,23 +4211,23 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.SRSRA</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SSHLL2</b><br  />
+<li><b>OPCODE.AARCH64.SSHL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SSHLL</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SSHL</b><br  />
+<li><b>OPCODE.AARCH64.SSHLL2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SSHR</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SSRA</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SSUBL2</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.SSUBL</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SSUBW2</b><br  />
+<li><b>OPCODE.AARCH64.SSUBL2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SSUBW</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SSUBW2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.ST1</b><br  />
 </li>
@@ -4195,63 +4237,69 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.ST4</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.STLR</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.STLRB</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.STLRH</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.STLR</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.STLXP</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.STLXR</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.STLXRB</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.STLXRH</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.STLXR</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.STNP</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.STP</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.STRB</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.STR</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.STRB</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.STRH</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.STTR</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.STTRB</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.STTRH</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.STTR</b><br  />
+<li><b>OPCODE.AARCH64.STUR</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.STURB</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.STUR</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.STURH</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.STXP</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.STXR</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.STXRB</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.STXRH</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.STXR</b><br  />
+<li><b>OPCODE.AARCH64.SUB</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SUBHN</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SUBHN2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SUB</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.SUQADD</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SVC</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.SYSL</b><br  />
+<li><b>OPCODE.AARCH64.SXTB</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SXTH</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SXTW</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.SYS</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.SYSL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.TBL</b><br  />
 </li>
@@ -4261,37 +4309,45 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.TBZ</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.TLBI</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.TRN1</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.TRN2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.UABAL2</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.UABAL</b><br  />
+<li><b>OPCODE.AARCH64.TST</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UABA</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.UABDL2</b><br  />
+<li><b>OPCODE.AARCH64.UABAL</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.UABDL</b><br  />
+<li><b>OPCODE.AARCH64.UABAL2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UABD</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.UABDL</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.UABDL2</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.UADALP</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.UADDL</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.UADDL2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UADDLP</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UADDLV</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.UADDL2</b><br  />
-</li>
-<li><b>OPCODE.AARCH64.UADDL</b><br  />
+<li><b>OPCODE.AARCH64.UADDW</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UADDW2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.UADDW</b><br  />
+<li><b>OPCODE.AARCH64.UBFIZ</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UBFM</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.UBFX</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UCVTF</b><br  />
 </li>
@@ -4303,25 +4359,27 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.UMADDL</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.UMAX</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.UMAXP</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UMAXV</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.UMAX</b><br  />
+<li><b>OPCODE.AARCH64.UMIN</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UMINP</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UMINV</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.UMIN</b><br  />
+<li><b>OPCODE.AARCH64.UMLAL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UMLAL2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.UMLAL</b><br  />
+<li><b>OPCODE.AARCH64.UMLSL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UMLSL2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.UMLSL</b><br  />
+<li><b>OPCODE.AARCH64.UMNEGL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UMOV</b><br  />
 </li>
@@ -4329,9 +4387,9 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.UMULH</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.UMULL2</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.UMULL</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.UMULL2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UQADD</b><br  />
 </li>
@@ -4349,9 +4407,9 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.UQSUB</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.UQXTN2</b><br  />
-</li>
 <li><b>OPCODE.AARCH64.UQXTN</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.UQXTN2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.URECPE</b><br  />
 </li>
@@ -4365,11 +4423,11 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.URSRA</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.USHLL2</b><br  />
+<li><b>OPCODE.AARCH64.USHL</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.USHLL</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.USHL</b><br  />
+<li><b>OPCODE.AARCH64.USHLL2</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.USHR</b><br  />
 </li>
@@ -4377,21 +4435,33 @@ AArch64</h2>
 </li>
 <li><b>OPCODE.AARCH64.USRA</b><br  />
 </li>
+<li><b>OPCODE.AARCH64.USUBL</b><br  />
+</li>
 <li><b>OPCODE.AARCH64.USUBL2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.USUBL</b><br  />
+<li><b>OPCODE.AARCH64.USUBW</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.USUBW2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.USUBW</b><br  />
+<li><b>OPCODE.AARCH64.UXTB</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.UXTH</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.UXTW</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UZP1</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.UZP2</b><br  />
 </li>
-<li><b>OPCODE.AARCH64.XTN2</b><br  />
+<li><b>OPCODE.AARCH64.WFE</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.WFI</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.XTN</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.XTN2</b><br  />
+</li>
+<li><b>OPCODE.AARCH64.YIELD</b><br  />
 </li>
 <li><b>OPCODE.AARCH64.ZIP1</b><br  />
 </li>
@@ -4412,8 +4482,6 @@ RV64</h2>
 <li><b>OPCODE.RV64.AND</b><br  />
 </li>
 <li><b>OPCODE.RV64.ANDI</b><br  />
-</li>
-<li><b>OPCODE.RV64.AND</b><br  />
 </li>
 <li><b>OPCODE.RV64.AUIPC</b><br  />
 </li>
@@ -4602,8 +4670,6 @@ RV32</h2>
 <li><b>OPCODE.RV32.AND</b><br  />
 </li>
 <li><b>OPCODE.RV32.ANDI</b><br  />
-</li>
-<li><b>OPCODE.RV32.AND</b><br  />
 </li>
 <li><b>OPCODE.RV32.AUIPC</b><br  />
 </li>

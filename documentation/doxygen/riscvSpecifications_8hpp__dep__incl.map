@@ -1,15 +1,24 @@
 <map id="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/riscvSpecifications.hpp" name="/Users/jonathan/Works/Tools/Triton/src/libtriton/includes/triton/riscvSpecifications.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="337,5,582,61"/>
-<area shape="rect" id="Node000002" href="$riscvSemantics_8cpp.html" title=" " alt="" coords="5,109,207,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="351,68,202,111,200,106,349,63"/>
-<area shape="rect" id="Node000003" href="$riscvSpecifications_8cpp.html" title=" " alt="" coords="231,109,453,165"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="418,74,375,110,372,106,415,69"/>
-<area shape="rect" id="Node000004" href="$riscv32Cpu_8hpp.html" title=" " alt="" coords="477,109,679,165"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="505,69,548,106,544,110,501,74"/>
-<area shape="rect" id="Node000006" href="$riscv64Cpu_8hpp.html" title=" " alt="" coords="703,109,904,165"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="566,63,712,106,710,111,565,68"/>
-<area shape="rect" id="Node000005" href="$riscv32Cpu_8cpp.html" title=" " alt="" coords="489,213,667,268"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="581,180,581,212,575,212,575,180"/>
-<area shape="rect" id="Node000007" href="$riscv64Cpu_8cpp.html" title=" " alt="" coords="715,213,892,268"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="806,180,806,212,801,212,801,180"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="462,5,707,61"/>
+<area shape="rect" id="Node000002" href="$architecture_8cpp.html" title=" " alt="" coords="5,228,167,283"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="447,45,357,53,266,67,188,86,158,98,137,111,116,137,102,168,94,199,90,227,85,227,88,198,97,166,111,134,134,107,156,93,186,81,265,62,356,48,446,39"/>
+<area shape="rect" id="Node000003" href="$riscvSemantics_8cpp.html" title=" " alt="" coords="597,116,799,172"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="625,70,672,114,668,118,622,73"/>
+<area shape="rect" id="Node000004" href="$riscvSpecifications_8cpp.html" title=" " alt="" coords="823,116,1045,172"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="687,63,847,113,846,118,685,69"/>
+<area shape="rect" id="Node000005" href="$initOpcodesNamespace_8cpp.html" title=" " alt="" coords="1069,109,1263,180"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="723,48,884,72,1057,106,1069,109,1068,114,1056,112,883,78,722,54"/>
+<area shape="rect" id="Node000006" href="$riscv32Cpu_8hpp.html" title=" " alt="" coords="147,116,348,172"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="487,69,332,118,331,113,485,64"/>
+<area shape="rect" id="Node000009" href="$riscv64Cpu_8hpp.html" title=" " alt="" coords="372,116,573,172"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="548,74,502,118,499,114,544,70"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="196,183,128,229,125,225,193,179"/>
+<area shape="rect" id="Node000007" href="$riscv32Cpu_8cpp.html" title=" " alt="" coords="191,228,368,283"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="262,186,274,227,269,228,257,188"/>
+<area shape="rect" id="Node000008" href="$context_8cpp.html" title=" " alt="" coords="392,228,553,283"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="319,177,417,225,415,229,316,182"/>
+<area shape="poly" id="edge10_Node000009_Node000002" title=" " alt="" coords="371,179,361,182,180,230,168,234,166,229,179,225,360,177,370,174"/>
+<area shape="poly" id="edge12_Node000009_Node000008" title=" " alt="" coords="475,187,475,227,470,227,470,187"/>
+<area shape="rect" id="Node000010" href="$riscv64Cpu_8cpp.html" title=" " alt="" coords="577,228,755,283"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="536,178,619,225,616,229,533,183"/>
 </map>
